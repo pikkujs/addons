@@ -1,0 +1,45 @@
+{
+  "name": "@pikku/addon-imap",
+  "version": "0.0.1",
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/src/index.d.ts",
+      "import": "./dist/src/index.js"
+    },
+    "./.pikku/*": "./.pikku/*",
+    "./.pikku/pikku-metadata.gen.json": "./.pikku/pikku-metadata.gen.json",
+    "./.pikku/rpc/pikku-rpc-wirings-map.internal.gen.js": {
+      "types": "./.pikku/rpc/pikku-rpc-wirings-map.internal.gen.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    ".pikku"
+  ],
+  "scripts": {
+    "prebuild": "pikku all",
+    "build": "tsc && cp -r .pikku dist/",
+    "pikku": "pikku all",
+    "ncu": "npx npm-check-updates",
+    "test": "tsc --noEmit"
+  },
+  "dependencies": {
+    "imapflow": "^1.0.171",
+    "mailparser": "^3.7.2"
+  },
+  "peerDependencies": {
+    "@pikku/core": "*",
+    "zod": "^4"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@pikku/core": "*",
+    "@types/mailparser": "^3.4.5",
+    "typescript": "^5.7.2",
+    "zod": "^4"
+  }
+}

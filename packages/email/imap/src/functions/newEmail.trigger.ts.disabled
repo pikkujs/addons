@@ -1,0 +1,91 @@
+import { z } from 'zod'
+import { ImapFlow } from 'imapflow'
+import { wireForgeNode } from '@pikku/core'
+import { pikkuTriggerFunc } from '#pikku'
+
+export const NewEmailConfig = z.object({
+  mailbox: z.string().default('INBOX').describe('Mailbox to watch for new emails'),
+  markAsRead: z.boolean().default(false).describe('Mark emails as read after triggering'),
+})
+
+export const NewEmailOutput = z.object({
+  uid: z.number(),
+  seq: z.number(),
+  from: z.string().optional(),
+  to: z.string().optional(),
+  subject: z.string().optional(),
+  date: z.string().optional(),
+})
+
+export const newEmail = pikkuTriggerFunc({
+  title: 'New Email Trigger',
+  description: 'Triggers when a new email arrives in the mailbox',
+  input: NewEmailConfig,
+  output: NewEmailOutput,
+  func: async ({ imap, logger }, { mailbox = 'INBOX', markAsRead = false }, { trigger }) => {
+    const client = await imap.connect()
+
+    const processNewEmails = async () => {
+      try {
+        const searchResult = await client.search({ seen: false })
+        const uids = Array.isArray(searchResult) ? searchResult : []
+
+        if (uids.length === 0) return
+
+        for await (const message of client.fetch(uids, {
+          uid: true,
+          envelope: true,
+          flags: true,
+        })) {
+          const result = {
+            uid: message.uid,
+            seq: message.seq,
+            from: message.envelope?.from?.[0]?.address,
+            to: message.envelope?.to?.[0]?.address,
+            subject: message.envelope?.subject,
+            date: message.envelope?.date?.toISOString(),
+          }
+
+          trigger.invoke(result as any)
+
+          if (markAsRead) {
+            await client.messageFlagsAdd(message.uid, ['\\Seen'])
+          }
+        }
+      } catch (error) {
+        logger.error('Error processing new emails', { error })
+      }
+    }
+
+    // Handle new mail notifications
+    client.on('exists', async () => {
+      logger.debug('New mail exists notification')
+      await processNewEmails()
+    })
+
+    client.on('error', (error: Error) => {
+      logger.error('IMAP client error', { error: error.message })
+    })
+
+    // Open mailbox and enable IDLE
+    const lock = await client.getMailboxLock(mailbox)
+
+    // Process any existing unseen emails
+    await processNewEmails()
+
+    // Return teardown function
+    return async () => {
+      lock.release()
+      await client.logout()
+    }
+  },
+})
+
+wireForgeNode({
+  name: 'newEmail',
+  displayName: 'New Email',
+  category: 'Email',
+  type: 'trigger',
+  rpc: 'newEmail',
+  description: 'Triggers when a new email arrives',
+})
