@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": ["src", "types"],
+  "outDir": "./.pikku",
+  "addon": true,
+  "forge": {
+    "node": {
+      "displayName": "AssemblyAI",
+      "description": "Speech-to-text transcription and audio intelligence",
+      "categories": ["File", "Transcript", "Streaming"],
+      "iconsDir": "./icons",
+      "icon": "assemblyai.svg"
+    }
+  }
+}
