@@ -1,3 +1,17 @@
+.DS_Store
+
+# Pikku generated
+*.gen.ts
+.pikku
+cli.schema.json
+
+# Build output
+*.js.map
+*.js
+meta.json
+.dist
+dist
+
 # Logs
 logs
 *.log
