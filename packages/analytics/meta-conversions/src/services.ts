@@ -1,8 +1,8 @@
 import { MetaConversionsService } from './meta-conversions-api.service.js'
 import type { MetaConversionsSecrets } from './meta-conversions.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {

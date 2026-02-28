@@ -1,8 +1,8 @@
 import { DeeplService } from './deepl-api.service.js'
 import type { DeeplSecrets } from './deepl.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (config, { secrets }) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const creds = await secrets.getSecretJSON<DeeplSecrets>('DEEPL_CREDENTIALS')
   const deepl = new DeeplService(creds)
 

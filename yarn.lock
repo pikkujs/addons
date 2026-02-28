@@ -419,9 +419,219 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-airtable@workspace:packages/database/airtable":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-airtable@workspace:packages/database/airtable"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-assemblyai@workspace:packages/ai/assemblyai":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-assemblyai@workspace:packages/ai/assemblyai"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-bitbucket@workspace:packages/devops/bitbucket":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-bitbucket@workspace:packages/devops/bitbucket"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-circleci@workspace:packages/devops/circleci":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-circleci@workspace:packages/devops/circleci"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-cloudflare@workspace:packages/infrastructure/cloudflare":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-cloudflare@workspace:packages/infrastructure/cloudflare"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-deepl@workspace:packages/ai/deepl":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-deepl@workspace:packages/ai/deepl"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-discord@workspace:packages/communication/discord":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-discord@workspace:packages/communication/discord"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-docraptor@workspace:packages/documents/docraptor":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-docraptor@workspace:packages/documents/docraptor"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-formstack@workspace:packages/forms/formstack":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-formstack@workspace:packages/forms/formstack"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-github@workspace:packages/devops/github":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-github@workspace:packages/devops/github"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-gitlab@workspace:packages/devops/gitlab":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-gitlab@workspace:packages/devops/gitlab"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-gmail@workspace:*, @pikku/addon-gmail@workspace:packages/email/gmail":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-gmail@workspace:packages/email/gmail"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-google-analytics@workspace:packages/analytics/google-analytics":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-google-analytics@workspace:packages/analytics/google-analytics"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-google-cloud-storage@workspace:packages/cloud/google-cloud-storage":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-google-cloud-storage@workspace:packages/cloud/google-cloud-storage"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-grafana@workspace:*, @pikku/addon-grafana@workspace:packages/monitoring/grafana":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-grafana@workspace:packages/monitoring/grafana"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-hubspot@workspace:packages/crm/hubspot":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-hubspot@workspace:packages/crm/hubspot"
   dependencies:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
@@ -448,6 +658,107 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-imap@workspace:*, @pikku/addon-imap@workspace:packages/email/imap":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-imap@workspace:packages/email/imap"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@types/mailparser": "npm:^3.4.5"
+    imapflow: "npm:^1.0.171"
+    mailparser: "npm:^3.7.2"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-jenkins@workspace:*, @pikku/addon-jenkins@workspace:packages/devops/jenkins":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-jenkins@workspace:packages/devops/jenkins"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-jotform@workspace:packages/forms/jotform":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-jotform@workspace:packages/forms/jotform"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-mailgun@workspace:packages/email/mailgun":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-mailgun@workspace:packages/email/mailgun"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-mandrill@workspace:packages/email/mandrill":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-mandrill@workspace:packages/email/mandrill"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-meta-conversions@workspace:packages/analytics/meta-conversions":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-meta-conversions@workspace:packages/analytics/meta-conversions"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-metabase@workspace:*, @pikku/addon-metabase@workspace:packages/analytics/metabase":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-metabase@workspace:packages/analytics/metabase"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-mysql@workspace:*, @pikku/addon-mysql@workspace:packages/database/mysql":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mysql@workspace:packages/database/mysql"
@@ -455,6 +766,20 @@ __metadata:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
     mysql2: "npm:^3.11.5"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-netlify@workspace:packages/infrastructure/netlify":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-netlify@workspace:packages/infrastructure/netlify"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -471,6 +796,49 @@ __metadata:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
     ai: "npm:^4"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-openai@workspace:packages/ai/openai":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-openai@workspace:packages/ai/openai"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    openai: "npm:^6.9.1"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-paddle@workspace:packages/payments/paddle":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-paddle@workspace:packages/payments/paddle"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-pagerduty@workspace:packages/monitoring/pagerduty":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-pagerduty@workspace:packages/monitoring/pagerduty"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -509,6 +877,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-posthog@workspace:packages/analytics/posthog":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-posthog@workspace:packages/analytics/posthog"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-redis@workspace:*, @pikku/addon-redis@workspace:packages/cache/redis":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-redis@workspace:packages/cache/redis"
@@ -524,9 +906,65 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-segment@workspace:packages/analytics/segment":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-segment@workspace:packages/analytics/segment"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-sendgrid@workspace:packages/email/sendgrid":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-sendgrid@workspace:packages/email/sendgrid"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-sentry@workspace:packages/monitoring/sentry":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-sentry@workspace:packages/monitoring/sentry"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-shopify@workspace:*, @pikku/addon-shopify@workspace:packages/ecommerce/shopify":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-shopify@workspace:packages/ecommerce/shopify"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-slack@workspace:packages/communication/slack":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-slack@workspace:packages/communication/slack"
   dependencies:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
@@ -553,9 +991,108 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-supabase@workspace:*, @pikku/addon-supabase@workspace:packages/database/supabase":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-supabase@workspace:packages/database/supabase"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@supabase/supabase-js": "npm:^2.47.10"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-survey-monkey@workspace:packages/forms/survey-monkey":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-survey-monkey@workspace:packages/forms/survey-monkey"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-telegram@workspace:*, @pikku/addon-telegram@workspace:packages/communication/telegram":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-telegram@workspace:packages/communication/telegram"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-twilio@workspace:packages/communication/twilio":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-twilio@workspace:packages/communication/twilio"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-typeform@workspace:packages/forms/typeform":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-typeform@workspace:packages/forms/typeform"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-uptimerobot@workspace:packages/monitoring/uptimerobot":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-uptimerobot@workspace:packages/monitoring/uptimerobot"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-whatsapp@workspace:packages/communication/whatsapp":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-whatsapp@workspace:packages/communication/whatsapp"
+  dependencies:
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": "*"
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-zapier@workspace:packages/automation/zapier":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-zapier@workspace:packages/automation/zapier"
   dependencies:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
@@ -633,6 +1170,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/test-grafana@workspace:tests/monitoring/grafana":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-grafana@workspace:tests/monitoring/grafana"
+  dependencies:
+    "@pikku/addon-grafana": "workspace:*"
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@types/node": "npm:^24"
+    testcontainers: "npm:^10"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
 "@pikku/test-human-design@workspace:tests/esoteric/human-design":
   version: 0.0.0-use.local
   resolution: "@pikku/test-human-design@workspace:tests/esoteric/human-design"
@@ -641,6 +1193,51 @@ __metadata:
     "@pikku/cli": "npm:*"
     "@pikku/core": "npm:*"
     "@types/node": "npm:^24"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-imap@workspace:tests/email/imap":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-imap@workspace:tests/email/imap"
+  dependencies:
+    "@pikku/addon-imap": "workspace:*"
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@types/node": "npm:^24"
+    testcontainers: "npm:^10"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-jenkins@workspace:tests/devops/jenkins":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-jenkins@workspace:tests/devops/jenkins"
+  dependencies:
+    "@pikku/addon-jenkins": "workspace:*"
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@types/node": "npm:^24"
+    testcontainers: "npm:^10"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-metabase@workspace:tests/analytics/metabase":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-metabase@workspace:tests/analytics/metabase"
+  dependencies:
+    "@pikku/addon-metabase": "workspace:*"
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@types/node": "npm:^24"
+    testcontainers: "npm:^10"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
     zod: "npm:^4"
@@ -755,6 +1352,23 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/test-supabase@workspace:tests/database/supabase":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-supabase@workspace:tests/database/supabase"
+  dependencies:
+    "@pikku/addon-supabase": "workspace:*"
+    "@pikku/cli": "npm:*"
+    "@pikku/core": "npm:*"
+    "@supabase/supabase-js": "npm:^2"
+    "@types/node": "npm:^24"
+    pg: "npm:^8"
+    testcontainers: "npm:^10"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
 "@pikku/test-telegram@workspace:tests/communication/telegram":
   version: 0.0.0-use.local
   resolution: "@pikku/test-telegram@workspace:tests/communication/telegram"
@@ -783,6 +1397,13 @@ __metadata:
     zod: "npm:^4"
   languageName: unknown
   linkType: soft
+
+"@pinojs/redact@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@pinojs/redact@npm:0.4.0"
+  checksum: 10/2210ffb6b38357853d47239fd0532cc9edb406325270a81c440a35cece22090127c30c2ead3eefa3e608f2244087485308e515c431f4f69b6bd2e16cbd32812b
+  languageName: node
+  linkType: hard
 
 "@pkgjs/parseargs@npm:^0.11.0":
   version: 0.11.0
@@ -864,10 +1485,82 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@selderee/plugin-htmlparser2@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "@selderee/plugin-htmlparser2@npm:0.11.0"
+  dependencies:
+    domhandler: "npm:^5.0.3"
+    selderee: "npm:^0.11.0"
+  checksum: 10/7550108d270e6ea2be4850d55cbf4d58d5a90c109a15b874c3c7c622a1399bd8015359ef3672983a86118432ca8325a6aca1fe79d961b01278fdaeaea8895c5f
+  languageName: node
+  linkType: hard
+
 "@standard-schema/spec@npm:^1.1.0":
   version: 1.1.0
   resolution: "@standard-schema/spec@npm:1.1.0"
   checksum: 10/a209615c9e8b2ea535d7db0a5f6aa0f962fd4ab73ee86a46c100fb78116964af1f55a27c1794d4801e534a196794223daa25ff5135021e03c7828aa3d95e1763
+  languageName: node
+  linkType: hard
+
+"@supabase/auth-js@npm:2.98.0":
+  version: 2.98.0
+  resolution: "@supabase/auth-js@npm:2.98.0"
+  dependencies:
+    tslib: "npm:2.8.1"
+  checksum: 10/aa479f42e173340803f1ff11563831ff13ebda30ff8a2deed674d9c94581b07188efe93882efa0eedcf815cd1c7c096a832e47eddf26f96e359b91ec8003b04b
+  languageName: node
+  linkType: hard
+
+"@supabase/functions-js@npm:2.98.0":
+  version: 2.98.0
+  resolution: "@supabase/functions-js@npm:2.98.0"
+  dependencies:
+    tslib: "npm:2.8.1"
+  checksum: 10/fc16540daccb9727c5583ba999604cc63c0bf92a0144143fc14eafdd01062e24627a2b132be2798f237d14313313ed90b0b860bfbccbb24779615d83b3d6797a
+  languageName: node
+  linkType: hard
+
+"@supabase/postgrest-js@npm:2.98.0":
+  version: 2.98.0
+  resolution: "@supabase/postgrest-js@npm:2.98.0"
+  dependencies:
+    tslib: "npm:2.8.1"
+  checksum: 10/5c7ac377e0540b36b3711f5fe34a811e59f0702c89bf1e06890dc1385bc93ae266cbee4e07c7906a0185195b844e6ad7939e8a7f0c2ae10547445848f426e7f6
+  languageName: node
+  linkType: hard
+
+"@supabase/realtime-js@npm:2.98.0":
+  version: 2.98.0
+  resolution: "@supabase/realtime-js@npm:2.98.0"
+  dependencies:
+    "@types/phoenix": "npm:^1.6.6"
+    "@types/ws": "npm:^8.18.1"
+    tslib: "npm:2.8.1"
+    ws: "npm:^8.18.2"
+  checksum: 10/b46b213155a84fb5cbea2d9a11e0bf3f76500827672e3c962ad1e0c10e3f7ca3ba2fa7ef7baf637901dfcd7e2284166a0a15198d43858020cb5aa15e347d3430
+  languageName: node
+  linkType: hard
+
+"@supabase/storage-js@npm:2.98.0":
+  version: 2.98.0
+  resolution: "@supabase/storage-js@npm:2.98.0"
+  dependencies:
+    iceberg-js: "npm:^0.8.1"
+    tslib: "npm:2.8.1"
+  checksum: 10/afa4451f016b08591756c1fbb9eed82c0584e9e9381eb8c8dd1496371fad5947398cfbde44b03064995dea2c04e15b0d8ff07ed32e2a83ef0578c4abd02f236f
+  languageName: node
+  linkType: hard
+
+"@supabase/supabase-js@npm:^2, @supabase/supabase-js@npm:^2.47.10":
+  version: 2.98.0
+  resolution: "@supabase/supabase-js@npm:2.98.0"
+  dependencies:
+    "@supabase/auth-js": "npm:2.98.0"
+    "@supabase/functions-js": "npm:2.98.0"
+    "@supabase/postgrest-js": "npm:2.98.0"
+    "@supabase/realtime-js": "npm:2.98.0"
+    "@supabase/storage-js": "npm:2.98.0"
+  checksum: 10/680cc0a5214bff5881a368c63fb357330ec603298f0bfc1f0ff261562329567856d3fd5e8b01c62030cc740d6e3fbe226810ac2824832595e472fe30f6df32aa
   languageName: node
   linkType: hard
 
@@ -942,6 +1635,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/mailparser@npm:^3.4.5":
+  version: 3.4.6
+  resolution: "@types/mailparser@npm:3.4.6"
+  dependencies:
+    "@types/node": "npm:*"
+    iconv-lite: "npm:^0.6.3"
+  checksum: 10/9a003d472acb51bcc012a3de560c82394414ffb495223213eb580dc1ecb8bae9443b54aa917ad6475d5a1a22a7cd7290cb81baf26238fc22446cde436cd82404
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*, @types/node@npm:>=13.7.0, @types/node@npm:>=8.1.0":
   version: 25.3.2
   resolution: "@types/node@npm:25.3.2"
@@ -980,6 +1683,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/phoenix@npm:^1.6.6":
+  version: 1.6.7
+  resolution: "@types/phoenix@npm:1.6.7"
+  checksum: 10/768b6ceb1661eae1e276d7af851c91cfee228e21d9ccbdd110c76ccda01e94661fd7bfd6ea93c7acbb30c2bc516608ae960fd0db4bb7e7f8372f4f862efe0900
+  languageName: node
+  linkType: hard
+
 "@types/ssh2-streams@npm:*":
   version: 0.1.13
   resolution: "@types/ssh2-streams@npm:0.1.13"
@@ -1005,6 +1715,26 @@ __metadata:
     "@types/node": "npm:*"
     "@types/ssh2-streams": "npm:*"
   checksum: 10/fc2584af091da49da9d6628dd8a5e851b217bb9b1b732b0361903894f2730ab3fdf8634f954be34c5a513f7eb0b2772d059d64062bcf6b4a0eb73bfc83c4b858
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.18.1":
+  version: 8.18.1
+  resolution: "@types/ws@npm:8.18.1"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/1ce05e3174dcacf28dae0e9b854ef1c9a12da44c7ed73617ab6897c5cbe4fccbb155a20be5508ae9a7dde2f83bd80f5cf3baa386b934fc4b40889ec963e94f3a
+  languageName: node
+  linkType: hard
+
+"@zone-eu/mailsplit@npm:5.4.8":
+  version: 5.4.8
+  resolution: "@zone-eu/mailsplit@npm:5.4.8"
+  dependencies:
+    libbase64: "npm:1.3.0"
+    libmime: "npm:5.3.7"
+    libqp: "npm:2.1.1"
+  checksum: 10/31f78be7aef62df7ca62edf9de2ef426ac979d5a516ae8def9c76eea911bda92d8cd8d36a0e8c203cc975d9e5d25faf4b8056f1883a1d615d550684bb6fd38ae
   languageName: node
   linkType: hard
 
@@ -1152,6 +1882,13 @@ __metadata:
   version: 3.2.6
   resolution: "async@npm:3.2.6"
   checksum: 10/cb6e0561a3c01c4b56a799cc8bab6ea5fef45f069ab32500b6e19508db270ef2dffa55e5aed5865c5526e9907b1f8be61b27530823b411ffafb5e1538c86c368
+  languageName: node
+  linkType: hard
+
+"atomic-sleep@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "atomic-sleep@npm:1.0.0"
+  checksum: 10/3ab6d2cf46b31394b4607e935ec5c1c3c4f60f3e30f0913d35ea74b51b3585e84f590d09e58067f11762eec71c87d25314ce859030983dc0e4397eed21daa12e
   languageName: node
   linkType: hard
 
@@ -1557,6 +2294,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deepmerge@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "deepmerge@npm:4.3.1"
+  checksum: 10/058d9e1b0ff1a154468bf3837aea436abcfea1ba1d165ddaaf48ca93765fdd01a30d33c36173da8fbbed951dd0a267602bc782fe288b0fc4b7e1e7091afc4529
+  languageName: node
+  linkType: hard
+
 "default-browser-id@npm:^5.0.0":
   version: 5.0.1
   resolution: "default-browser-id@npm:5.0.1"
@@ -1638,6 +2382,44 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dom-serializer@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "dom-serializer@npm:2.0.0"
+  dependencies:
+    domelementtype: "npm:^2.3.0"
+    domhandler: "npm:^5.0.2"
+    entities: "npm:^4.2.0"
+  checksum: 10/e3bf9027a64450bca0a72297ecdc1e3abb7a2912268a9f3f5d33a2e29c1e2c3502c6e9f860fc6625940bfe0cfb57a44953262b9e94df76872fdfb8151097eeb3
+  languageName: node
+  linkType: hard
+
+"domelementtype@npm:^2.3.0":
+  version: 2.3.0
+  resolution: "domelementtype@npm:2.3.0"
+  checksum: 10/ee837a318ff702622f383409d1f5b25dd1024b692ef64d3096ff702e26339f8e345820f29a68bcdcea8cfee3531776b3382651232fbeae95612d6f0a75efb4f6
+  languageName: node
+  linkType: hard
+
+"domhandler@npm:^5.0.2, domhandler@npm:^5.0.3":
+  version: 5.0.3
+  resolution: "domhandler@npm:5.0.3"
+  dependencies:
+    domelementtype: "npm:^2.3.0"
+  checksum: 10/809b805a50a9c6884a29f38aec0a4e1b4537f40e1c861950ed47d10b049febe6b79ab72adaeeebb3cc8fc1cd33f34e97048a72a9265103426d93efafa78d3e96
+  languageName: node
+  linkType: hard
+
+"domutils@npm:^3.0.1":
+  version: 3.2.2
+  resolution: "domutils@npm:3.2.2"
+  dependencies:
+    dom-serializer: "npm:^2.0.0"
+    domelementtype: "npm:^2.3.0"
+    domhandler: "npm:^5.0.3"
+  checksum: 10/2e08842151aa406f50fe5e6d494f4ec73c2373199fa00d1f77b56ec604e566b7f226312ae35ab8160bb7f27a27c7285d574c8044779053e499282ca9198be210
+  languageName: node
+  linkType: hard
+
 "dunder-proto@npm:^1.0.1":
   version: 1.0.1
   resolution: "dunder-proto@npm:1.0.1"
@@ -1677,12 +2459,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"encoding-japanese@npm:2.2.0":
+  version: 2.2.0
+  resolution: "encoding-japanese@npm:2.2.0"
+  checksum: 10/e77259312054ed0f3cdbb5b35d56d244ef4a56779d47e279e7b9da96e0f81b71b0ee2a74709eb047b06d1365f857501cfdbe62bd4e782a412123fd5933feda6c
+  languageName: node
+  linkType: hard
+
 "end-of-stream@npm:^1.1.0, end-of-stream@npm:^1.4.1":
   version: 1.4.5
   resolution: "end-of-stream@npm:1.4.5"
   dependencies:
     once: "npm:^1.4.0"
   checksum: 10/1e0cfa6e7f49887544e03314f9dfc56a8cb6dde910cbb445983ecc2ff426fc05946df9d75d8a21a3a64f2cecfe1bf88f773952029f46756b2ed64a24e95b1fb8
+  languageName: node
+  linkType: hard
+
+"entities@npm:^4.2.0, entities@npm:^4.4.0":
+  version: 4.5.0
+  resolution: "entities@npm:4.5.0"
+  checksum: 10/ede2a35c9bce1aeccd055a1b445d41c75a14a2bb1cd22e242f20cf04d236cdcd7f9c859eb83f76885327bfae0c25bf03303665ee1ce3d47c5927b98b0e3e3d48
   languageName: node
   linkType: hard
 
@@ -2047,6 +2843,40 @@ __metadata:
   languageName: node
   linkType: hard
 
+"he@npm:1.2.0":
+  version: 1.2.0
+  resolution: "he@npm:1.2.0"
+  bin:
+    he: bin/he
+  checksum: 10/d09b2243da4e23f53336e8de3093e5c43d2c39f8d0d18817abfa32ce3e9355391b2edb4bb5edc376aea5d4b0b59d6a0482aab4c52bc02ef95751e4b818e847f1
+  languageName: node
+  linkType: hard
+
+"html-to-text@npm:9.0.5":
+  version: 9.0.5
+  resolution: "html-to-text@npm:9.0.5"
+  dependencies:
+    "@selderee/plugin-htmlparser2": "npm:^0.11.0"
+    deepmerge: "npm:^4.3.1"
+    dom-serializer: "npm:^2.0.0"
+    htmlparser2: "npm:^8.0.2"
+    selderee: "npm:^0.11.0"
+  checksum: 10/e5991f9946dd0e5c91c4ed863c71a4feaef3d5ce85cd8684fb0f2fc175b1ccee323bb97a1773b6bebc47ac7963dbbfd1fc81b024adff705ae7c0e08992d1dba5
+  languageName: node
+  linkType: hard
+
+"htmlparser2@npm:^8.0.2":
+  version: 8.0.2
+  resolution: "htmlparser2@npm:8.0.2"
+  dependencies:
+    domelementtype: "npm:^2.3.0"
+    domhandler: "npm:^5.0.3"
+    domutils: "npm:^3.0.1"
+    entities: "npm:^4.4.0"
+  checksum: 10/ea5512956eee06f5835add68b4291d313c745e8407efa63848f4b8a90a2dee45f498a698bca8614e436f1ee0cfdd609938b71d67c693794545982b76e53e6f11
+  languageName: node
+  linkType: hard
+
 "http-cache-semantics@npm:^4.1.1":
   version: 4.2.0
   resolution: "http-cache-semantics@npm:4.2.0"
@@ -2074,7 +2904,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"iconv-lite@npm:^0.7.2":
+"iceberg-js@npm:^0.8.1":
+  version: 0.8.1
+  resolution: "iceberg-js@npm:0.8.1"
+  checksum: 10/9be7b4fe966f33341695e3506ae810bf8fb8800a47819570a0c6930b834c15424b9bbd315c191f3bf5c137b623e144e10630ba898059262dc8244abdbeb0a338
+  languageName: node
+  linkType: hard
+
+"iconv-lite@npm:0.6.3, iconv-lite@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "iconv-lite@npm:0.6.3"
+  dependencies:
+    safer-buffer: "npm:>= 2.1.2 < 3.0.0"
+  checksum: 10/24e3292dd3dadaa81d065c6f8c41b274a47098150d444b96e5f53b4638a9a71482921ea6a91a1f59bb71d9796de25e04afd05919fa64c360347ba65d3766f10f
+  languageName: node
+  linkType: hard
+
+"iconv-lite@npm:0.7.2, iconv-lite@npm:^0.7.2":
   version: 0.7.2
   resolution: "iconv-lite@npm:0.7.2"
   dependencies:
@@ -2087,6 +2933,23 @@ __metadata:
   version: 1.2.1
   resolution: "ieee754@npm:1.2.1"
   checksum: 10/d9f2557a59036f16c282aaeb107832dc957a93d73397d89bbad4eb1130560560eb695060145e8e6b3b498b15ab95510226649a0b8f52ae06583575419fe10fc4
+  languageName: node
+  linkType: hard
+
+"imapflow@npm:^1.0.171":
+  version: 1.2.10
+  resolution: "imapflow@npm:1.2.10"
+  dependencies:
+    "@zone-eu/mailsplit": "npm:5.4.8"
+    encoding-japanese: "npm:2.2.0"
+    iconv-lite: "npm:0.7.2"
+    libbase64: "npm:1.3.0"
+    libmime: "npm:5.3.7"
+    libqp: "npm:2.1.1"
+    nodemailer: "npm:8.0.1"
+    pino: "npm:10.3.1"
+    socks: "npm:2.8.7"
+  checksum: 10/d3f8b58aa2e0317e58777f9c086f2e34ab528f017f9fb3cb2c0f0673c8c21db9d5ef54166de03151f6020aa668941b965727b2fa1d5c05cf0da775c6ae68a679
   languageName: node
   linkType: hard
 
@@ -2270,6 +3133,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"leac@npm:^0.6.0":
+  version: 0.6.0
+  resolution: "leac@npm:0.6.0"
+  checksum: 10/bfe6aa128ca98664f124096f65584778194a8e1ddebf77d315fd9681be849c1619b0a9d9f4743e67aea0298808bd69ef25bd74320cad50a80be6852714627870
+  languageName: node
+  linkType: hard
+
+"libbase64@npm:1.3.0":
+  version: 1.3.0
+  resolution: "libbase64@npm:1.3.0"
+  checksum: 10/e90f06c7c7af754521d254c53ef847bab8ca354ee38f4c5d866c3fc77b4cb7a2ab77aa220c0df433f8d17abd0e884cf322b2771d84c2f65760e22012dfecaa67
+  languageName: node
+  linkType: hard
+
+"libmime@npm:5.3.7":
+  version: 5.3.7
+  resolution: "libmime@npm:5.3.7"
+  dependencies:
+    encoding-japanese: "npm:2.2.0"
+    iconv-lite: "npm:0.6.3"
+    libbase64: "npm:1.3.0"
+    libqp: "npm:2.1.1"
+  checksum: 10/9f148cd94256f604e71af60c159ad08b8914029727220b2a048e1c95957b099a41fb0c8a225dd1af87d5dfd4fa7c26afd7cf83d395894b7214e6827d7e25511b
+  languageName: node
+  linkType: hard
+
+"libqp@npm:2.1.1":
+  version: 2.1.1
+  resolution: "libqp@npm:2.1.1"
+  checksum: 10/cc59bd6ea61604b0505651fa79b722ff69d39b1fc609dad3ad4a20a51c6eb904babc0d1a59699a55a628063f31540232845bab471910d92c8b607120f563089e
+  languageName: node
+  linkType: hard
+
+"linkify-it@npm:5.0.0":
+  version: 5.0.0
+  resolution: "linkify-it@npm:5.0.0"
+  dependencies:
+    uc.micro: "npm:^2.0.0"
+  checksum: 10/ef3b7609dda6ec0c0be8a7b879cea195f0d36387b0011660cd6711bba0ad82137f59b458b7e703ec74f11d88e7c1328e2ad9b855a8500c0ded67461a8c4519e6
+  languageName: node
+  linkType: hard
+
 "lodash.camelcase@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.camelcase@npm:4.3.0"
@@ -2323,6 +3228,24 @@ __metadata:
   version: 1.1.4
   resolution: "lru.min@npm:1.1.4"
   checksum: 10/c7041fb558fa0c39b3e14b8c711716af729a4df96af25e6a2d54f5d60d936a1e33edbabcfa3a71359f73f746763dc51da3fc679d60e2f087aa722f139f56ccd4
+  languageName: node
+  linkType: hard
+
+"mailparser@npm:^3.7.2":
+  version: 3.9.3
+  resolution: "mailparser@npm:3.9.3"
+  dependencies:
+    "@zone-eu/mailsplit": "npm:5.4.8"
+    encoding-japanese: "npm:2.2.0"
+    he: "npm:1.2.0"
+    html-to-text: "npm:9.0.5"
+    iconv-lite: "npm:0.7.2"
+    libmime: "npm:5.3.7"
+    linkify-it: "npm:5.0.0"
+    nodemailer: "npm:7.0.13"
+    punycode.js: "npm:2.3.1"
+    tlds: "npm:1.261.0"
+  checksum: 10/c219aeeaa04e9f5e8af3aa8038eb8777b306672ea03f2f9be336b56b1d900f0b6baed057e47b3a1c239c3cf43adcb5286255ce3bf875076854cbed7e3d55459c
   languageName: node
   linkType: hard
 
@@ -2559,6 +3482,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"nodemailer@npm:7.0.13":
+  version: 7.0.13
+  resolution: "nodemailer@npm:7.0.13"
+  checksum: 10/4ae37bfb6896f1555de150c1098a7c1b28eb1da240a4c7adede81a8af0dcc184298cfbf804930599c076ea574428e0c18c6b28f0dc2072cebb30c1da5fd0b688
+  languageName: node
+  linkType: hard
+
+"nodemailer@npm:8.0.1":
+  version: 8.0.1
+  resolution: "nodemailer@npm:8.0.1"
+  checksum: 10/0e87e1cc9881bb6c934a4923e964d1fa3f7963e3c8b622e70ca1affb3d9743ab779303b1deff714136f95671bea56691ffc44e7a011e82e9600bd9a314ac6e0e
+  languageName: node
+  linkType: hard
+
 "nopt@npm:^9.0.0":
   version: 9.0.0
   resolution: "nopt@npm:9.0.0"
@@ -2584,6 +3521,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"on-exit-leak-free@npm:^2.1.0":
+  version: 2.1.2
+  resolution: "on-exit-leak-free@npm:2.1.2"
+  checksum: 10/f7b4b7200026a08f6e4a17ba6d72e6c5cbb41789ed9cf7deaf9d9e322872c7dc5a7898549a894651ee0ee9ae635d34a678115bf8acdfba8ebd2ba2af688b563c
+  languageName: node
+  linkType: hard
+
 "once@npm:^1.3.1, once@npm:^1.4.0":
   version: 1.4.0
   resolution: "once@npm:1.4.0"
@@ -2605,6 +3549,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"openai@npm:^6.9.1":
+  version: 6.25.0
+  resolution: "openai@npm:6.25.0"
+  peerDependencies:
+    ws: ^8.18.0
+    zod: ^3.25 || ^4.0
+  peerDependenciesMeta:
+    ws:
+      optional: true
+    zod:
+      optional: true
+  bin:
+    openai: bin/cli
+  checksum: 10/c9243b5bb769463c794d7f76e4cd0deee1d3d16e752d0119aad677144f414c5d3f2aaed3f50ab8e8260f7f114140b751563aa48c6d61847c90752f7f39a0cfa2
+  languageName: node
+  linkType: hard
+
 "openapi-types@npm:^12.1.3":
   version: 12.1.3
   resolution: "openapi-types@npm:12.1.3"
@@ -2623,6 +3584,16 @@ __metadata:
   version: 1.0.1
   resolution: "package-json-from-dist@npm:1.0.1"
   checksum: 10/58ee9538f2f762988433da00e26acc788036914d57c71c246bf0be1b60cdbd77dd60b6a3e1a30465f0b248aeb80079e0b34cb6050b1dfa18c06953bb1cbc7602
+  languageName: node
+  linkType: hard
+
+"parseley@npm:^0.12.0":
+  version: 0.12.1
+  resolution: "parseley@npm:0.12.1"
+  dependencies:
+    leac: "npm:^0.6.0"
+    peberminta: "npm:^0.9.0"
+  checksum: 10/64788dbe1fbbc231e0fef235357823e03ca3d915693b2109ad862293aad5d091e902fd7cf6f54763728e758a228d06497c787a9af0dfdacd6a941bc2dbf2019e
   languageName: node
   linkType: hard
 
@@ -2657,6 +3628,13 @@ __metadata:
   version: 8.3.0
   resolution: "path-to-regexp@npm:8.3.0"
   checksum: 10/568f148fc64f5fd1ecebf44d531383b28df924214eabf5f2570dce9587a228e36c37882805ff02d71c6209b080ea3ee6a4d2b712b5df09741b67f1f3cf91e55a
+  languageName: node
+  linkType: hard
+
+"peberminta@npm:^0.9.0":
+  version: 0.9.0
+  resolution: "peberminta@npm:0.9.0"
+  checksum: 10/b396cf8bac836b3cfe9315e6c94747fa02bb68b252a4b176c0f7d6a3fcbdc5e9f23c3523480c91244b42f87be63f200d775587b039abe4b4731915480da2528d
   languageName: node
   linkType: hard
 
@@ -2710,7 +3688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg@npm:^8.13.1":
+"pg@npm:^8, pg@npm:^8.13.1":
   version: 8.19.0
   resolution: "pg@npm:8.19.0"
   dependencies:
@@ -2761,6 +3739,43 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"pino-abstract-transport@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "pino-abstract-transport@npm:3.0.0"
+  dependencies:
+    split2: "npm:^4.0.0"
+  checksum: 10/f42b85b2663c8520839124a55b27801e88c89c65e9569384b49bb4c81b022ae24860020c2375b92a03db699113969007cc155e1fb2dfe53754403920c1cbe18c
+  languageName: node
+  linkType: hard
+
+"pino-std-serializers@npm:^7.0.0":
+  version: 7.1.0
+  resolution: "pino-std-serializers@npm:7.1.0"
+  checksum: 10/6e27f6f885927b6df3b424ddb8a9e0e9854f3b59f4abd51afa74e1c2cf33436a505277b004bb00ce61884a962c8fdfd977391205c7baab885d6afb35fce7396a
+  languageName: node
+  linkType: hard
+
+"pino@npm:10.3.1":
+  version: 10.3.1
+  resolution: "pino@npm:10.3.1"
+  dependencies:
+    "@pinojs/redact": "npm:^0.4.0"
+    atomic-sleep: "npm:^1.0.0"
+    on-exit-leak-free: "npm:^2.1.0"
+    pino-abstract-transport: "npm:^3.0.0"
+    pino-std-serializers: "npm:^7.0.0"
+    process-warning: "npm:^5.0.0"
+    quick-format-unescaped: "npm:^4.0.3"
+    real-require: "npm:^0.2.0"
+    safe-stable-stringify: "npm:^2.3.1"
+    sonic-boom: "npm:^4.0.1"
+    thread-stream: "npm:^4.0.0"
+  bin:
+    pino: bin.js
+  checksum: 10/46cad7bf1859c83a8a9c43af764e5165f44057ce76d44b1b2b4390f2abccb8a579f42abfe742d88b4d8e1d339213afb46ea50fc39c50095dd1f0f9fe26ea1342
+  languageName: node
+  linkType: hard
+
 "postgres-array@npm:~2.0.0":
   version: 2.0.0
   resolution: "postgres-array@npm:2.0.0"
@@ -2802,6 +3817,13 @@ __metadata:
   version: 2.0.1
   resolution: "process-nextick-args@npm:2.0.1"
   checksum: 10/1d38588e520dab7cea67cbbe2efdd86a10cc7a074c09657635e34f035277b59fbb57d09d8638346bf7090f8e8ebc070c96fa5fd183b777fff4f5edff5e9466cf
+  languageName: node
+  linkType: hard
+
+"process-warning@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "process-warning@npm:5.0.0"
+  checksum: 10/10f3e00ac9fc1943ec4566ff41fff2b964e660f853c283e622257719839d340b4616e707d62a02d6aa0038761bb1fa7c56bc7308d602d51bd96f05f9cd305dcd
   languageName: node
   linkType: hard
 
@@ -2862,12 +3884,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"punycode.js@npm:2.3.1":
+  version: 2.3.1
+  resolution: "punycode.js@npm:2.3.1"
+  checksum: 10/f0e946d1edf063f9e3d30a32ca86d8ff90ed13ca40dad9c75d37510a04473340cfc98db23a905cc1e517b1e9deb0f6021dce6f422ace235c60d3c9ac47c5a16a
+  languageName: node
+  linkType: hard
+
 "qs@npm:^6.11.0":
   version: 6.15.0
   resolution: "qs@npm:6.15.0"
   dependencies:
     side-channel: "npm:^1.1.0"
   checksum: 10/a3458f2f389285c3512e0ebc55522ee370ac7cb720ba9f0eff3e30fb2bb07631caf556c08e2a3d4481a371ac14faa9ceb7442a0610c5a7e55b23a5bdee7b701c
+  languageName: node
+  linkType: hard
+
+"quick-format-unescaped@npm:^4.0.3":
+  version: 4.0.4
+  resolution: "quick-format-unescaped@npm:4.0.4"
+  checksum: 10/591eca457509a99368b623db05248c1193aa3cedafc9a077d7acab09495db1231017ba3ad1b5386e5633271edd0a03b312d8640a59ee585b8516a42e15438aa7
   languageName: node
   linkType: hard
 
@@ -2923,6 +3959,13 @@ __metadata:
   version: 4.1.2
   resolution: "readdirp@npm:4.1.2"
   checksum: 10/7b817c265940dba90bb9c94d82920d76c3a35ea2d67f9f9d8bd936adcfe02d50c802b14be3dd2e725e002dddbe2cc1c7a0edfb1bc3a365c9dfd5a61e612eea1e
+  languageName: node
+  linkType: hard
+
+"real-require@npm:^0.2.0":
+  version: 0.2.0
+  resolution: "real-require@npm:0.2.0"
+  checksum: 10/ddf44ee76301c774e9c9f2826da8a3c5c9f8fc87310f4a364e803ef003aa1a43c378b4323051ced212097fff1af459070f4499338b36a7469df1d4f7e8c0ba4c
   languageName: node
   linkType: hard
 
@@ -2991,7 +4034,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-stable-stringify@npm:^2.5.0":
+"safe-stable-stringify@npm:^2.3.1, safe-stable-stringify@npm:^2.5.0":
   version: 2.5.0
   resolution: "safe-stable-stringify@npm:2.5.0"
   checksum: 10/2697fa186c17c38c3ca5309637b4ac6de2f1c3d282da27cd5e1e3c88eca0fb1f9aea568a6aabdf284111592c8782b94ee07176f17126031be72ab1313ed46c5c
@@ -3009,6 +4052,15 @@ __metadata:
   version: 2.7.0
   resolution: "secure-json-parse@npm:2.7.0"
   checksum: 10/974386587060b6fc5b1ac06481b2f9dbbb0d63c860cc73dc7533f27835fdb67b0ef08762dbfef25625c15bc0a0c366899e00076cb0d556af06b71e22f1dede4c
+  languageName: node
+  linkType: hard
+
+"selderee@npm:^0.11.0":
+  version: 0.11.0
+  resolution: "selderee@npm:0.11.0"
+  dependencies:
+    parseley: "npm:^0.12.0"
+  checksum: 10/9f697a00b8270354777a8423e555fd3168abead1304b8d267412877a4b007830624d8aa562eb29a3ec2d9d2f7f977808d17b790b9c210a7d828c12ed9ef0f1f0
   languageName: node
   linkType: hard
 
@@ -3117,13 +4169,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"socks@npm:^2.8.3":
+"socks@npm:2.8.7, socks@npm:^2.8.3":
   version: 2.8.7
   resolution: "socks@npm:2.8.7"
   dependencies:
     ip-address: "npm:^10.0.1"
     smart-buffer: "npm:^4.2.0"
   checksum: 10/d19366c95908c19db154f329bbe94c2317d315dc933a7c2b5101e73f32a555c84fb199b62174e1490082a593a4933d8d5a9b297bde7d1419c14a11a965f51356
+  languageName: node
+  linkType: hard
+
+"sonic-boom@npm:^4.0.1":
+  version: 4.2.1
+  resolution: "sonic-boom@npm:4.2.1"
+  dependencies:
+    atomic-sleep: "npm:^1.0.0"
+  checksum: 10/161af46b3e6debc4ad3865b0db47f37289741a0b3005b8cf056f93a4e0e1a347e24ca1a2d8ccc864f7f19caa6185a766797f8382cdbfd2f3d046a0323d73a542
   languageName: node
   linkType: hard
 
@@ -3134,7 +4195,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"split2@npm:^4.1.0":
+"split2@npm:^4.0.0, split2@npm:^4.1.0":
   version: 4.2.0
   resolution: "split2@npm:4.2.0"
   checksum: 10/09bbefc11bcf03f044584c9764cd31a252d8e52cea29130950b26161287c11f519807c5e54bd9e5804c713b79c02cefe6a98f4688630993386be353e03f534ab
@@ -3410,6 +4471,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"thread-stream@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "thread-stream@npm:4.0.0"
+  dependencies:
+    real-require: "npm:^0.2.0"
+  checksum: 10/698ac8bd104c6cf91dda8421c30790979b867d7b6c878f914ddef18f1b1bc846f8776976d9f0113ed0ee90043f2e9e6554b96f4c1154ff84cd199da657f214fa
+  languageName: node
+  linkType: hard
+
 "throttleit@npm:2.1.0":
   version: 2.1.0
   resolution: "throttleit@npm:2.1.0"
@@ -3424,6 +4494,15 @@ __metadata:
     fdir: "npm:^6.5.0"
     picomatch: "npm:^4.0.3"
   checksum: 10/d72bd826a8b0fa5fa3929e7fe5ba48fceb2ae495df3a231b6c5408cd7d8c00b58ab5a9c2a76ba56a62ee9b5e083626f1f33599734bed1ffc4b792406408f0ca2
+  languageName: node
+  linkType: hard
+
+"tlds@npm:1.261.0":
+  version: 1.261.0
+  resolution: "tlds@npm:1.261.0"
+  bin:
+    tlds: bin.js
+  checksum: 10/2dfb8c7e0c0c1fe8fd9966ead43f71c36c974aa498b4e290fb383ceb3be3b20b9517041560b966993fb30abd451a83bf37119fa8d99809ce01bbf5b21dd6c6d3
   languageName: node
   linkType: hard
 
@@ -3451,7 +4530,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.8.1":
+"tslib@npm:2.8.1, tslib@npm:^2.8.1":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: 10/3e2e043d5c2316461cb54e5c7fe02c30ef6dccb3384717ca22ae5c6b5bc95232a6241df19c622d9c73b809bea33b187f6dbc73030963e29950c2141bc32a79f7
@@ -3498,6 +4577,13 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/696e1b017bc2635f4e0c94eb4435357701008e2f272f553d06e35b494b8ddc60aa221145e286c28ace0c89ee32827a28c2040e3a69bdc108b1a5dc8fb40b72e3
+  languageName: node
+  linkType: hard
+
+"uc.micro@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "uc.micro@npm:2.1.0"
+  checksum: 10/37197358242eb9afe367502d4638ac8c5838b78792ab218eafe48287b0ed28aaca268ec0392cc5729f6c90266744de32c06ae938549aee041fc93b0f9672d6b2
   languageName: node
   linkType: hard
 
@@ -3633,6 +4719,21 @@ __metadata:
   version: 1.0.2
   resolution: "wrappy@npm:1.0.2"
   checksum: 10/159da4805f7e84a3d003d8841557196034155008f817172d4e986bd591f74aa82aa7db55929a54222309e01079a65a92a9e6414da5a6aa4b01ee44a511ac3ee5
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.18.2":
+  version: 8.19.0
+  resolution: "ws@npm:8.19.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10/26e4901e93abaf73af9f26a93707c95b4845e91a7a347ec8c569e6e9be7f9df066f6c2b817b2d685544e208207898a750b78461e6e8d810c11a370771450c31b
   languageName: node
   linkType: hard
 

@@ -7,16 +7,14 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Jenkins",
-      "description": "Automation server",
-      "categories": [
-        "Builds",
-        "Jobs"
-      ],
-      "iconsDir": "./icons",
-      "icon": "jenkins.svg"
-    }
+  "node": {
+    "displayName": "Jenkins",
+    "description": "Automation server",
+    "categories": [
+      "Builds",
+      "Jobs"
+    ],
+    "iconsDir": "./icons",
+    "icon": "jenkins.svg"
   }
 }

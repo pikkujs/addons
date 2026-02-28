@@ -7,15 +7,13 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "WhatsApp",
-      "description": "Messaging",
-      "categories": [
-        "Communication"
-      ],
-      "iconsDir": "./icons",
-      "icon": "whatsapp.svg"
-    }
+  "node": {
+    "displayName": "WhatsApp",
+    "description": "Messaging",
+    "categories": [
+      "Communication"
+    ],
+    "iconsDir": "./icons",
+    "icon": "whatsapp.svg"
   }
 }

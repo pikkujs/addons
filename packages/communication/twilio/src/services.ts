@@ -1,8 +1,8 @@
 import { TwilioService } from './twilio-api.service.js'
 import type { TwilioSecrets } from './twilio.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (config, { secrets }) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const creds = await secrets.getSecretJSON<TwilioSecrets>('TWILIO_CREDENTIALS')
   const twilio = new TwilioService(creds)
 

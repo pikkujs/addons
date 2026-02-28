@@ -7,16 +7,14 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "GitLab",
-      "description": "DevOps platform",
-      "categories": [
-        "Projects",
-        "Issues"
-      ],
-      "iconsDir": "./icons",
-      "icon": "gitlab.svg"
-    }
+  "node": {
+    "displayName": "GitLab",
+    "description": "DevOps platform",
+    "categories": [
+      "Projects",
+      "Issues"
+    ],
+    "iconsDir": "./icons",
+    "icon": "gitlab.svg"
   }
 }

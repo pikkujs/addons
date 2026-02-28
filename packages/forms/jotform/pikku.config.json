@@ -7,15 +7,13 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "JotForm",
-      "description": "Online forms",
-      "categories": [
-        "Forms"
-      ],
-      "iconsDir": "./icons",
-      "icon": "jotform.svg"
-    }
+  "node": {
+    "displayName": "JotForm",
+    "description": "Online forms",
+    "categories": [
+      "Forms"
+    ],
+    "iconsDir": "./icons",
+    "icon": "jotform.svg"
   }
 }

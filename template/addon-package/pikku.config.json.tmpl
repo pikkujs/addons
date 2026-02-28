@@ -3,14 +3,12 @@
   "tsconfig": "./tsconfig.json",
   "srcDirectories": ["src", "types"],
   "outDir": "./.pikku",
-  "externalPackage": true,
-  "forge": {
-    "node": {
-      "displayName": "{{DISPLAY_NAME}}",
-      "description": "{{DESCRIPTION}}",
-      "categories": ["{{CATEGORY}}"],
-      "iconsDir": "./icons",
-      "icon": "{{NODE_NAME}}.svg"
-    }
+  "addon": true,
+  "node": {
+    "displayName": "{{DISPLAY_NAME}}",
+    "description": "{{DESCRIPTION}}",
+    "categories": ["{{CATEGORY}}"],
+    "iconsDir": "./icons",
+    "icon": "{{NODE_NAME}}.svg"
   }
 }

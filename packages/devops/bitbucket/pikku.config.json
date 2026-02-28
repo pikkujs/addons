@@ -7,16 +7,14 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Bitbucket",
-      "description": "Git hosting",
-      "categories": [
-        "Repositories",
-        "PullRequests"
-      ],
-      "iconsDir": "./icons",
-      "icon": "bitbucket.svg"
-    }
+  "node": {
+    "displayName": "Bitbucket",
+    "description": "Git hosting",
+    "categories": [
+      "Repositories",
+      "PullRequests"
+    ],
+    "iconsDir": "./icons",
+    "icon": "bitbucket.svg"
   }
 }

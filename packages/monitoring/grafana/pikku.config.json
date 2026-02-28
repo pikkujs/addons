@@ -7,17 +7,15 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Grafana",
-      "description": "Observability platform",
-      "categories": [
-        "Dashboards",
-        "Alerts",
-        "Datasources"
-      ],
-      "iconsDir": "./icons",
-      "icon": "grafana.svg"
-    }
+  "node": {
+    "displayName": "Grafana",
+    "description": "Observability platform",
+    "categories": [
+      "Dashboards",
+      "Alerts",
+      "Datasources"
+    ],
+    "iconsDir": "./icons",
+    "icon": "grafana.svg"
   }
 }

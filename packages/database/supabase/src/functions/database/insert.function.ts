@@ -32,7 +32,7 @@ export const insertRows = pikkuSessionlessFunc({
     const { data: result, error } = await query
 
     if (error) {
-      throw new Error(`Supabase error: ${error.message}`)
+      throw new Error(`Supabase error: ${error.message ?? error.details ?? error.code ?? JSON.stringify(error)}`)
     }
 
     return {

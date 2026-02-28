@@ -7,16 +7,14 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "UptimeRobot",
-      "description": "Website monitoring",
-      "categories": [
-        "Monitors",
-        "Alerts"
-      ],
-      "iconsDir": "./icons",
-      "icon": "uptimerobot.svg"
-    }
+  "node": {
+    "displayName": "UptimeRobot",
+    "description": "Website monitoring",
+    "categories": [
+      "Monitors",
+      "Alerts"
+    ],
+    "iconsDir": "./icons",
+    "icon": "uptimerobot.svg"
   }
 }

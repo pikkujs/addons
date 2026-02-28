@@ -7,15 +7,13 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Slack",
-      "description": "Team communication platform",
-      "categories": [
-        "Communication"
-      ],
-      "iconsDir": "./icons",
-      "icon": "slack.svg"
-    }
+  "node": {
+    "displayName": "Slack",
+    "description": "Team communication platform",
+    "categories": [
+      "Communication"
+    ],
+    "iconsDir": "./icons",
+    "icon": "slack.svg"
   }
 }

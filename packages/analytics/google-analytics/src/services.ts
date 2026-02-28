@@ -1,9 +1,9 @@
 import { GoogleAnalyticsService } from './google-analytics-api.service.js'
 import { GoogleAnalyticsReportingService } from './google-analytics-reporting.service.js'
 import type { GoogleAnalyticsSecrets } from './google-analytics.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets, variables }
 ) => {

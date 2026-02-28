@@ -1,16 +1,20 @@
 {
   "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
   "tsconfig": "./tsconfig.json",
-  "srcDirectories": ["src", "types"],
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Twilio",
-      "description": "SMS, voice, and messaging platform",
-      "categories": ["SMS", "Call"],
-      "iconsDir": "./icons",
-      "icon": "twilio.svg"
-    }
+  "node": {
+    "displayName": "Twilio",
+    "description": "SMS, voice, and messaging platform",
+    "categories": [
+      "SMS",
+      "Call"
+    ],
+    "iconsDir": "./icons",
+    "icon": "twilio.svg"
   }
 }

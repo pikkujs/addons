@@ -1,7 +1,7 @@
 import { GoogleCloudStorageService } from './google-cloud-storage-api.service.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets, variables }
 ) => {

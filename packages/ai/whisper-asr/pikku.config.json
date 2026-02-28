@@ -1,14 +1,17 @@
 {
   "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
   "tsconfig": "./tsconfig.json",
-  "srcDirectories": ["src", "types"],
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Whisper ASR",
-      "description": "Speech-to-text using Whisper ASR webservice",
-      "categories": ["Speech"]
-    }
+  "node": {
+    "displayName": "Whisper ASR",
+    "description": "Speech-to-text using Whisper ASR webservice",
+    "categories": [
+      "Speech"
+    ]
   }
 }

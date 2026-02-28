@@ -43,6 +43,10 @@ export class JenkinsService {
       throw new Error(`Jenkins API error (${response.status}): ${errorText}`)
     }
 
-    return response.json() as Promise<T>
+    const text = await response.text()
+    if (!text) {
+      return undefined as T
+    }
+    return JSON.parse(text) as T
   }
 }

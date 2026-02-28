@@ -7,17 +7,15 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Paddle",
-      "description": "Payments and subscriptions",
-      "categories": [
-        "Products",
-        "Subscriptions",
-        "Transactions"
-      ],
-      "iconsDir": "./icons",
-      "icon": "paddle.svg"
-    }
+  "node": {
+    "displayName": "Paddle",
+    "description": "Payments and subscriptions",
+    "categories": [
+      "Products",
+      "Subscriptions",
+      "Transactions"
+    ],
+    "iconsDir": "./icons",
+    "icon": "paddle.svg"
   }
 }

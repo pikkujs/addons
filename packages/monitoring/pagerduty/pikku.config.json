@@ -7,17 +7,15 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "PagerDuty",
-      "description": "Incident management",
-      "categories": [
-        "Incidents",
-        "Services",
-        "Users"
-      ],
-      "iconsDir": "./icons",
-      "icon": "pagerduty.svg"
-    }
+  "node": {
+    "displayName": "PagerDuty",
+    "description": "Incident management",
+    "categories": [
+      "Incidents",
+      "Services",
+      "Users"
+    ],
+    "iconsDir": "./icons",
+    "icon": "pagerduty.svg"
   }
 }

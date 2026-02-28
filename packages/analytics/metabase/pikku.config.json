@@ -1,16 +1,19 @@
 {
   "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
   "tsconfig": "./tsconfig.json",
-  "srcDirectories": ["src", "types"],
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Metabase",
-      "description": "Business intelligence",
-      "categories": ["Analytics"],
-      "iconsDir": "./icons",
-      "icon": "metabase.svg"
-    }
+  "node": {
+    "displayName": "Metabase",
+    "description": "Business intelligence",
+    "categories": [
+      "Analytics"
+    ],
+    "iconsDir": "./icons",
+    "icon": "metabase.svg"
   }
 }

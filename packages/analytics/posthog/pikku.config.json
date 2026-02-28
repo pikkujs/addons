@@ -7,15 +7,13 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "PostHog",
-      "description": "Product analytics",
-      "categories": [
-        "Analytics"
-      ],
-      "iconsDir": "./icons",
-      "icon": "posthog.svg"
-    }
+  "node": {
+    "displayName": "PostHog",
+    "description": "Product analytics",
+    "categories": [
+      "Analytics"
+    ],
+    "iconsDir": "./icons",
+    "icon": "posthog.svg"
   }
 }

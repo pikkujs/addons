@@ -21,7 +21,7 @@ export const rpc = pikkuSessionlessFunc({
     const { data, error } = await supabase.rpc(functionName, params)
 
     if (error) {
-      throw new Error(`Supabase RPC error: ${error.message}`)
+      throw new Error(`Supabase RPC error: ${error.message ?? error.details ?? error.code ?? JSON.stringify(error)}`)
     }
 
     return {

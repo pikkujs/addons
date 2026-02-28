@@ -1,8 +1,8 @@
 import { TypeformService } from './typeform-api.service.js'
 import type { TypeformCredentials } from './typeform.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {

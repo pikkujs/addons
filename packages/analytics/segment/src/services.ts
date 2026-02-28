@@ -1,8 +1,8 @@
 import { SegmentService } from './segment-api.service.js'
 import type { SegmentSecrets } from './segment.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {

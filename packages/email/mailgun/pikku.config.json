@@ -7,16 +7,14 @@
   ],
   "outDir": "./.pikku",
   "addon": true,
-  "forge": {
-    "node": {
-      "displayName": "Mailgun",
-      "description": "Email delivery service for developers",
-      "categories": [
-        "Messages",
-        "Domains"
-      ],
-      "iconsDir": "./icons",
-      "icon": "mailgun.svg"
-    }
+  "node": {
+    "displayName": "Mailgun",
+    "description": "Email delivery service for developers",
+    "categories": [
+      "Messages",
+      "Domains"
+    ],
+    "iconsDir": "./icons",
+    "icon": "mailgun.svg"
   }
 }

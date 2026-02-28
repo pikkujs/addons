@@ -53,7 +53,7 @@ export const selectRows = pikkuSessionlessFunc({
     const { data, error } = await query
 
     if (error) {
-      throw new Error(`Supabase error: ${error.message}`)
+      throw new Error(`Supabase error: ${error.message ?? error.details ?? error.code ?? JSON.stringify(error)}`)
     }
 
     return {

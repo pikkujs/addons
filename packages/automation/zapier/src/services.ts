@@ -1,8 +1,8 @@
 import { ZapierService } from './zapier-api.service.js'
 import type { ZapierSecrets } from './zapier.secret.js'
-import { pikkuExternalServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku'
 
-export const createSingletonServices = pikkuExternalServices(async (
+export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
