@@ -1,0 +1,13 @@
+import { {{NodeName}}Service } from './{{node-name}}-api.service.js'
+import type { {{NodeName}}Secrets } from './{{node-name}}.secret.js'
+import { pikkuExternalServices } from '#pikku'
+
+export const createSingletonServices = pikkuExternalServices(async (
+  config,
+  { secrets }
+) => {
+  const creds = await secrets.getSecretJSON<{{NodeName}}Secrets>('{{NODE_NAME_UPPER}}_CREDENTIALS')
+  const {{nodeName}} = new {{NodeName}}Service(creds)
+
+  return { {{nodeName}} }
+})
