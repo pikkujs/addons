@@ -1,0 +1,16 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": ["src", "types"],
+  "outDir": "./.pikku",
+  "addon": true,
+  "forge": {
+    "node": {
+      "displayName": "SendGrid",
+      "description": "Email delivery and marketing platform",
+      "categories": ["Contacts", "Lists", "Mail"],
+      "iconsDir": "./icons",
+      "icon": "sendgrid.svg"
+    }
+  }
+}
