@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": true,
+  "forge": {
+    "node": {
+      "displayName": "Paddle",
+      "description": "Payments and subscriptions",
+      "categories": [
+        "Products",
+        "Subscriptions",
+        "Transactions"
+      ],
+      "iconsDir": "./icons",
+      "icon": "paddle.svg"
+    }
+  }
+}
