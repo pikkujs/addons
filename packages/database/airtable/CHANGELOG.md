@@ -1,0 +1,5 @@
+# @pikku/addon-airtable
+
+## 0.1.0
+
+Initial release.

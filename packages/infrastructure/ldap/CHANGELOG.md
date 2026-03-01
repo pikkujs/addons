@@ -1,0 +1,5 @@
+# @pikku/addon-ldap
+
+## 0.1.0
+
+Initial release.

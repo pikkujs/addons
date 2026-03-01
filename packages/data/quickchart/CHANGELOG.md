@@ -1,0 +1,5 @@
+# @pikku/addon-quickchart
+
+## 0.1.0
+
+Initial release.
