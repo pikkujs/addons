@@ -23,6 +23,14 @@ export class WhatsAppGatewayAdapter implements GatewayAdapter {
     private verifyToken: string
   ) {}
 
+  async init(_onMessage: (data: unknown) => Promise<void>): Promise<void> {
+    // Webhook adapters don't manage their own connection
+  }
+
+  async close(): Promise<void> {
+    // Webhook adapters have no connection to close
+  }
+
   /**
    * Parse a Meta webhook payload into a GatewayInboundMessage.
    * Returns null for non-message events (delivery receipts, status updates, etc.)

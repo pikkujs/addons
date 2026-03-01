@@ -6,7 +6,7 @@
   ],
   "resolutions": {
     "@pikku/cli": "portal:/Users/yasser/git/pikku/pikku/packages/cli",
-    "@pikku/core": "portal:/Users/yasser/git/pikku/pikku/packages/core",
+    "@pikku/core": "portal:/Users/yasser/git/pikku/pikku-gateway/packages/core",
     "@pikku/fetch": "portal:/Users/yasser/git/pikku/pikku/packages/client-fetch",
     "@pikku/websocket": "portal:/Users/yasser/git/pikku/pikku/packages/client-websocket",
     "create-pikku": "portal:/Users/yasser/git/pikku/pikku/packages/create",
