@@ -13,7 +13,6 @@
     "categories": [
       "Forms"
     ],
-    "iconsDir": "./icons",
-    "icon": "typeform.svg"
+    "icon": "./typeform.svg"
   }
 }

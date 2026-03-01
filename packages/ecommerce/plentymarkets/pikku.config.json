@@ -13,7 +13,6 @@
     "categories": [
       "Ecommerce"
     ],
-    "iconsDir": "./icons",
-    "icon": "plentymarkets.svg"
+    "icon": "./plentymarkets.svg"
   }
 }

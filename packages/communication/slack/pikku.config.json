@@ -13,7 +13,6 @@
     "categories": [
       "Communication"
     ],
-    "iconsDir": "./icons",
-    "icon": "slack.svg"
+    "icon": "./slack.svg"
   }
 }

@@ -13,7 +13,6 @@
     "categories": [
       "Database"
     ],
-    "iconsDir": "./icons",
-    "icon": "airtable.svg"
+    "icon": "./airtable.svg"
   }
 }

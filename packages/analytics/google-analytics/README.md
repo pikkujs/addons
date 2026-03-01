@@ -1,43 +1,18 @@
-# Pikku Package Template
+# @pikku/addon-google-analytics
 
-Template files for creating new Pikku external packages.
+Google Analytics 4 event tracking and reporting.
 
-## Usage
+## Functions
 
-Use the create-package script:
+- `eventSend` — send events via Measurement Protocol
+- `eventValidate` — validate events before sending
+- `reportRun` — run Data API reports
+- `metadataGet` — get available report dimensions and metrics
 
-```bash
-./scripts/create-package.sh <node-name> "<Display Name>" "<Description>" "<Category>"
-```
+## Secrets
 
-Example:
+`GOOGLE_ANALYTICS_CREDENTIALS` — fields: measurementId, apiSecret
 
-```bash
-./scripts/create-package.sh sendgrid "SendGrid" "Email delivery service" "Messages"
-```
+## Dependencies
 
-## Placeholders
-
-The script replaces these placeholders:
-
-| Placeholder | Description | Example |
-|-------------|-------------|---------|
-| `{{NODE_NAME}}` | kebab-case package name | `sendgrid` |
-| `{{nodeName}}` | camelCase service name | `sendGrid` |
-| `{{NodeName}}` | PascalCase class name | `SendGrid` |
-| `{{NODE_NAME_UPPER}}` | SCREAMING_SNAKE for secrets | `SENDGRID` |
-| `{{DISPLAY_NAME}}` | Human readable name | `SendGrid` |
-| `{{DESCRIPTION}}` | Package description | `Email delivery service` |
-| `{{CATEGORY}}` | Forge category | `Messages` |
-
-## After Scaffolding
-
-1. Add icon SVG to `icons/{node-name}.svg`
-2. Update secret schema with required fields
-3. Update API service with:
-   - `BASE_URL` for the API
-   - Auth header pattern
-   - Methods for each operation
-4. Create function files for each operation
-5. Export functions in `index.ts`
-6. Build: `yarn install && yarn pikku && yarn build`
+No additional runtime dependencies.

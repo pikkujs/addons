@@ -13,7 +13,6 @@
     "categories": [
       "Forms"
     ],
-    "iconsDir": "./icons",
-    "icon": "jotform.svg"
+    "icon": "./jotform.svg"
   }
 }

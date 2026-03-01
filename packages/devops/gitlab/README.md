@@ -1,43 +1,18 @@
-# Pikku Package Template
+# @pikku/addon-gitlab
 
-Template files for creating new Pikku external packages.
+GitLab projects and issues.
 
-## Usage
+## Functions
 
-Use the create-package script:
+- `projectsList` — list projects
+- `projectsGet` — get project details
+- `issuesList` — list issues
+- `issuesCreate` — create an issue
 
-```bash
-./scripts/create-package.sh <node-name> "<Display Name>" "<Description>" "<Category>"
-```
+## Secrets
 
-Example:
+`GITLAB_CREDENTIALS` — fields: accessToken, server
 
-```bash
-./scripts/create-package.sh sendgrid "SendGrid" "Email delivery service" "Messages"
-```
+## Dependencies
 
-## Placeholders
-
-The script replaces these placeholders:
-
-| Placeholder | Description | Example |
-|-------------|-------------|---------|
-| `{{NODE_NAME}}` | kebab-case package name | `sendgrid` |
-| `{{nodeName}}` | camelCase service name | `sendGrid` |
-| `{{NodeName}}` | PascalCase class name | `SendGrid` |
-| `{{NODE_NAME_UPPER}}` | SCREAMING_SNAKE for secrets | `SENDGRID` |
-| `{{DISPLAY_NAME}}` | Human readable name | `SendGrid` |
-| `{{DESCRIPTION}}` | Package description | `Email delivery service` |
-| `{{CATEGORY}}` | Forge category | `Messages` |
-
-## After Scaffolding
-
-1. Add icon SVG to `icons/{node-name}.svg`
-2. Update secret schema with required fields
-3. Update API service with:
-   - `BASE_URL` for the API
-   - Auth header pattern
-   - Methods for each operation
-4. Create function files for each operation
-5. Export functions in `index.ts`
-6. Build: `yarn install && yarn pikku && yarn build`
+No additional runtime dependencies.

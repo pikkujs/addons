@@ -15,7 +15,6 @@
       "Alerts",
       "Datasources"
     ],
-    "iconsDir": "./icons",
-    "icon": "grafana.svg"
+    "icon": "./grafana.svg"
   }
 }

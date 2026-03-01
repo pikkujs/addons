@@ -13,7 +13,6 @@
     "categories": [
       "Events"
     ],
-    "iconsDir": "./icons",
-    "icon": "meta-conversions.svg"
+    "icon": "./meta-conversions.svg"
   }
 }

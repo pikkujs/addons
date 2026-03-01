@@ -14,7 +14,6 @@
       "Monitors",
       "Alerts"
     ],
-    "iconsDir": "./icons",
-    "icon": "uptimerobot.svg"
+    "icon": "./uptimerobot.svg"
   }
 }

@@ -14,7 +14,6 @@
       "Messages",
       "Domains"
     ],
-    "iconsDir": "./icons",
-    "icon": "mailgun.svg"
+    "icon": "./mailgun.svg"
   }
 }

@@ -1,0 +1,17 @@
+{
+  "name": "@pikku/test-whatsapp-gateway",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-whatsapp": "file:..",
+    "@pikku/core": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^24",
+    "tsx": "^4",
+    "typescript": "^5.9"
+  }
+}

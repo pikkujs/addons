@@ -1,0 +1,26 @@
+{
+  "name": "@pikku/test-whisper-asr",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts",
+    "ncu": "npx npm-check-updates"
+  },
+  "dependencies": {
+    "@pikku/addon-ai-whisper-asr": "file:..",
+    "@pikku/core": "*"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@types/node": "^24",
+    "testcontainers": "^10",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}

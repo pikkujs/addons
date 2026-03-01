@@ -13,7 +13,6 @@
     "categories": [
       "Sites,Deploys,Forms"
     ],
-    "iconsDir": "./icons",
-    "icon": "netlify.svg"
+    "icon": "./netlify.svg"
   }
 }

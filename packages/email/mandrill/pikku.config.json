@@ -13,7 +13,6 @@
     "categories": [
       "Messages"
     ],
-    "iconsDir": "./icons",
-    "icon": "mandrill.svg"
+    "icon": "./mandrill.svg"
   }
 }

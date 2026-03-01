@@ -1,0 +1,26 @@
+{
+  "name": "@pikku/test-mongodb",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-mongodb": "file:..",
+    "@pikku/core": "*"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@testcontainers/mongodb": "^10",
+    "@types/node": "^24",
+    "testcontainers": "^10",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}

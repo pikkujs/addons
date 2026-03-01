@@ -13,7 +13,6 @@
     "categories": [
       "Email"
     ],
-    "iconsDir": "./icons",
-    "icon": "imap.svg"
+    "icon": "./imap.svg"
   }
 }

@@ -13,7 +13,6 @@
     "categories": [
       "Webhooks"
     ],
-    "iconsDir": "./icons",
-    "icon": "zapier.svg"
+    "icon": "./zapier.svg"
   }
 }

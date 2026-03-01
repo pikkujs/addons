@@ -16,7 +16,6 @@
       "Labels",
       "Threads"
     ],
-    "iconsDir": "./icons",
-    "icon": "gmail.svg"
+    "icon": "./gmail.svg"
   }
 }

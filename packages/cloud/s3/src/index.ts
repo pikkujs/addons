@@ -1,0 +1,8 @@
+export { s3ListBuckets } from './functions/list-buckets.function.js'
+export { s3CreateBucket } from './functions/create-bucket.function.js'
+export { s3DeleteBucket } from './functions/delete-bucket.function.js'
+export { s3ListObjects } from './functions/list-objects.function.js'
+export { s3GetObject } from './functions/get-object.function.js'
+export { s3PutObject } from './functions/put-object.function.js'
+export { s3DeleteObject } from './functions/delete-object.function.js'
+export { s3CopyObject } from './functions/copy-object.function.js'

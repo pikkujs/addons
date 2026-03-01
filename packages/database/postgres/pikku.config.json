@@ -13,7 +13,6 @@
     "categories": [
       "Database"
     ],
-    "iconsDir": "./icons",
-    "icon": "postgres.svg"
+    "icon": "./postgres.svg"
   }
 }

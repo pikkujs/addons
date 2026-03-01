@@ -13,7 +13,6 @@
     "categories": [
       "Documents"
     ],
-    "iconsDir": "./icons",
-    "icon": "docraptor.svg"
+    "icon": "./docraptor.svg"
   }
 }

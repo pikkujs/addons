@@ -14,7 +14,6 @@
       "Repos",
       "Issues"
     ],
-    "iconsDir": "./icons",
-    "icon": "github.svg"
+    "icon": "./github.svg"
   }
 }

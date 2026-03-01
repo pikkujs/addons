@@ -13,7 +13,6 @@
     "categories": [
       "Analytics"
     ],
-    "iconsDir": "./icons",
-    "icon": "posthog.svg"
+    "icon": "./posthog.svg"
   }
 }

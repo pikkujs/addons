@@ -1,0 +1,25 @@
+{
+  "name": "@pikku/test-stripe",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "NODE_OPTIONS='--preserve-symlinks' node --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-stripe": "file:..",
+    "@pikku/core": "*"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@types/node": "^24",
+    "testcontainers": "^10",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}

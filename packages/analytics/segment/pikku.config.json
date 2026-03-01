@@ -13,7 +13,6 @@
     "categories": [
       "Analytics"
     ],
-    "iconsDir": "./icons",
-    "icon": "segment.svg"
+    "icon": "./segment.svg"
   }
 }

@@ -17,7 +17,6 @@
       "Lists",
       "PubSub"
     ],
-    "iconsDir": "./icons",
-    "icon": "redis.svg"
+    "icon": "./redis.svg"
   }
 }

@@ -13,7 +13,6 @@
     "categories": [
       "Forms"
     ],
-    "iconsDir": "./icons",
-    "icon": "survey-monkey.svg"
+    "icon": "./survey-monkey.svg"
   }
 }

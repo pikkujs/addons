@@ -13,7 +13,6 @@
     "categories": [
       "Ecommerce"
     ],
-    "iconsDir": "./icons",
-    "icon": "shopify.svg"
+    "icon": "./shopify.svg"
   }
 }

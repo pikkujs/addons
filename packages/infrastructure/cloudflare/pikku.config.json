@@ -13,7 +13,6 @@
     "categories": [
       "Zones,DNS,Workers"
     ],
-    "iconsDir": "./icons",
-    "icon": "cloudflare.svg"
+    "icon": "./cloudflare.svg"
   }
 }

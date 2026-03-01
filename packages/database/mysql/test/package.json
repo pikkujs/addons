@@ -1,0 +1,28 @@
+{
+  "name": "@pikku/test-mysql",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts",
+    "ncu": "npx npm-check-updates"
+  },
+  "dependencies": {
+    "@pikku/addon-mysql": "file:..",
+    "@pikku/core": "*",
+    "mysql2": "^3.11.5"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@testcontainers/mysql": "^10",
+    "@types/node": "^24",
+    "testcontainers": "^10",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}

@@ -1,0 +1,8 @@
+export { imageResize } from './functions/resize.function.js'
+export { imageCrop } from './functions/crop.function.js'
+export { imageRotate } from './functions/rotate.function.js'
+export { imageBlur } from './functions/blur.function.js'
+export { imageFlip } from './functions/flip.function.js'
+export { imageComposite } from './functions/composite.function.js'
+export { imageConvert } from './functions/convert.function.js'
+export { imageMetadata } from './functions/metadata.function.js'

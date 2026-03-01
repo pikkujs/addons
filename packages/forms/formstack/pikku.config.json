@@ -13,7 +13,6 @@
     "categories": [
       "Forms"
     ],
-    "iconsDir": "./icons",
-    "icon": "formstack.svg"
+    "icon": "./formstack.svg"
   }
 }

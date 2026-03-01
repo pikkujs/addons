@@ -13,7 +13,6 @@
     "categories": [
       "Translations"
     ],
-    "iconsDir": "./icons",
-    "icon": "deepl.svg"
+    "icon": "./deepl.svg"
   }
 }

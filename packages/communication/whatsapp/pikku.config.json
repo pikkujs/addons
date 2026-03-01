@@ -13,7 +13,6 @@
     "categories": [
       "Communication"
     ],
-    "iconsDir": "./icons",
-    "icon": "whatsapp.svg"
+    "icon": "./whatsapp.svg"
   }
 }

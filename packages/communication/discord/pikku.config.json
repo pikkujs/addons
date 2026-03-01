@@ -15,7 +15,6 @@
       "Member",
       "Message"
     ],
-    "iconsDir": "./icons",
-    "icon": "discord.svg"
+    "icon": "./discord.svg"
   }
 }

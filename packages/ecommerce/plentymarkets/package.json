@@ -23,7 +23,8 @@
   "scripts": {
     "prebuild": "pikku all",
     "build": "tsc && cp -r .pikku dist/",
-    "pikku": "pikku all"
+    "pikku": "pikku all",
+    "test": "cd test && yarn test"
   },
   "peerDependencies": {
     "@pikku/core": "*",

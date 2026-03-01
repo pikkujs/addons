@@ -15,7 +15,6 @@
       "Lists",
       "Mail"
     ],
-    "iconsDir": "./icons",
-    "icon": "sendgrid.svg"
+    "icon": "./sendgrid.svg"
   }
 }

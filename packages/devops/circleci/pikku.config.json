@@ -14,7 +14,6 @@
       "Pipelines",
       "Jobs"
     ],
-    "iconsDir": "./icons",
-    "icon": "circleci.svg"
+    "icon": "./circleci.svg"
   }
 }

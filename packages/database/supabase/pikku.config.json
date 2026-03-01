@@ -13,7 +13,6 @@
     "categories": [
       "Database"
     ],
-    "iconsDir": "./icons",
-    "icon": "supabase.svg"
+    "icon": "./supabase.svg"
   }
 }

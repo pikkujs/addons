@@ -14,7 +14,6 @@
       "Text",
       "Embeddings"
     ],
-    "iconsDir": "./icons",
-    "icon": "ollama.svg"
+    "icon": "./ollama.svg"
   }
 }

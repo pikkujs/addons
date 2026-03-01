@@ -14,7 +14,6 @@
       "Events",
       "Reports"
     ],
-    "iconsDir": "./icons",
-    "icon": "google-analytics.svg"
+    "icon": "./google-analytics.svg"
   }
 }

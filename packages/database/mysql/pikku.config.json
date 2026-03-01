@@ -13,7 +13,6 @@
     "categories": [
       "Database"
     ],
-    "iconsDir": "./icons",
-    "icon": "mysql.svg"
+    "icon": "./mysql.svg"
   }
 }

@@ -14,7 +14,6 @@
       "Builds",
       "Jobs"
     ],
-    "iconsDir": "./icons",
-    "icon": "jenkins.svg"
+    "icon": "./jenkins.svg"
   }
 }
