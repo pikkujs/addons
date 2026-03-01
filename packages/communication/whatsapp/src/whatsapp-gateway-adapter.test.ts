@@ -1,7 +1,7 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { WhatsAppGatewayAdapter } from '../../../../packages/communication/whatsapp/src/whatsapp-gateway-adapter.js'
-import type { WhatsappService } from '../../../../packages/communication/whatsapp/src/whatsapp-api.service.js'
+import { WhatsAppGatewayAdapter } from './whatsapp-gateway-adapter.js'
+import type { WhatsappService } from './whatsapp-api.service.js'
 
 // Mock WhatsApp service
 const createMockWhatsappService = () => {

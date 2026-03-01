@@ -25,7 +25,7 @@
     "build": "tsc && cp -r .pikku dist/",
     "pikku": "pikku all",
     "ncu": "npx npm-check-updates",
-    "test": "tsc --noEmit"
+    "test": "node --import tsx --test src/**/*.test.ts"
   },
   "peerDependencies": {
     "@pikku/core": "*",
@@ -35,6 +35,7 @@
     "@pikku/cli": "*",
     "@pikku/core": "*",
     "typescript": "^5.7.2",
-    "zod": "^4"
+    "zod": "^4",
+    "tsx": "^4"
   }
 }

@@ -1,7 +1,7 @@
 import { test, describe } from 'node:test'
 import assert from 'node:assert/strict'
-import { SlackGatewayAdapter } from '../../../../packages/communication/slack/src/slack-gateway-adapter.js'
-import type { SlackService } from '../../../../packages/communication/slack/src/slack-api.service.js'
+import { SlackGatewayAdapter } from './slack-gateway-adapter.js'
+import type { SlackService } from './slack-api.service.js'
 
 // Mock Slack service
 const createMockSlackService = () => {
