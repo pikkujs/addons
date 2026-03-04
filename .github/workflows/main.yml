@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 24
           cache: yarn
-      - run: yarn install
+      - run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
       - run: yarn tsc
 
   release:
@@ -34,7 +34,7 @@ jobs:
         with:
           node-version: 24
           cache: yarn
-      - run: yarn install
+      - run: YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn install
 
       - name: Create Release Pull Request
         id: changesets
