@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Ollama",
     "description": "Run large language models locally",
     "categories": [

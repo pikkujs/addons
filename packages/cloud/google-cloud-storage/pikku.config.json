@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Google Cloud Storage",
     "description": "Google Cloud Storage file management",
     "categories": [

@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Edit Image",
     "description": "Image manipulation (resize, crop, rotate, blur)",
     "categories": [

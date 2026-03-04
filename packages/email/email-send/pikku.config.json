@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Email Send",
     "description": "Send emails via SMTP",
     "categories": [

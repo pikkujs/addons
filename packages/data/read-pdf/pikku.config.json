@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Read PDF",
     "description": "Extract text and metadata from PDF files",
     "categories": [

@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Whisper ASR",
     "description": "Speech-to-text using Whisper ASR webservice",
     "categories": [

@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "IMAP Email",
     "description": "Read emails via IMAP protocol",
     "categories": [

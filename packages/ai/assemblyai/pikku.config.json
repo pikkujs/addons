@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "AssemblyAI",
     "description": "Speech-to-text transcription and audio intelligence",
     "categories": [
