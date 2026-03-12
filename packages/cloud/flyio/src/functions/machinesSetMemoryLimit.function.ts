@@ -1,0 +1,24 @@
+// Machines — This site hosts documentation generated from the Fly.io Machines API OpenAPI specification. Visit our complete [Machines API docs](https://fly.io/docs/machines/api/machines-resource/) for details about using the Machines resource.
+
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const MachinesSetMemoryLimitInput = z.object({
+  app_name: z.string().describe("Fly App Name"),
+  machine_id: z.string().describe("Machine ID"),
+  limit_mb: z.number().int().optional(),
+})
+
+export const MachinesSetMemoryLimitOutput = z.object({
+  available_mb: z.number().int().optional(),
+  limit_mb: z.number().int().optional(),
+})
+
+export const machinesSetMemoryLimit = pikkuSessionlessFunc({
+  description: "Set the memory limit for a machine using the balloon device",
+  input: MachinesSetMemoryLimitInput,
+  output: MachinesSetMemoryLimitOutput,
+  func: async ({ flyio }, data) => {
+    return flyio.call('PUT', '/apps/{app_name}/machines/{machine_id}/memory', data) as any
+  },
+})

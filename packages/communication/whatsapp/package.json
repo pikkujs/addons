@@ -39,8 +39,8 @@
     }
   },
   "devDependencies": {
-    "@pikku/cli": "*",
-    "@pikku/core": "*",
+    "@pikku/cli": "^0.12.4",
+    "@pikku/core": "^0.12.4",
     "@types/qrcode-terminal": "^0",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
     "qrcode-terminal": "^0.12.0",
