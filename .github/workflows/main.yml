@@ -17,7 +17,7 @@ jobs:
         shell: bash
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: yarn
       - run: yarn install
       - run: yarn tsc
@@ -32,7 +32,7 @@ jobs:
         shell: bash
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
           cache: yarn
       - run: yarn install
 
