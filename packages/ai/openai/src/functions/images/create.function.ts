@@ -11,7 +11,7 @@ export const ImageCreateInput = z.object({
   style: z.enum(['vivid', 'natural']).optional().describe('The style of the generated images. Must be one of vivid or natural. Vivid causes the model to lean towards generating hyper-real and dramatic images. Natural causes the model to produce more natural, less hyper-real looking images. This param is only supported for dall-e-3.'),
 })
 
-const ImageDataSchema = z.object({
+export const ImageDataSchema = z.object({
   url: z.string().optional().describe('The URL of the generated image, if response_format is url'),
   b64_json: z.string().optional().describe('The base64-encoded JSON of the generated image, if response_format is b64_json'),
   revised_prompt: z.string().optional().describe('The prompt that was used to generate the image, if there was any revision to the prompt'),

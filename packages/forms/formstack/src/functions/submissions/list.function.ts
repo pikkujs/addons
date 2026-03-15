@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SubmissionsListInput = z.object({
   formId: z.string().describe('Form ID'),
   page: z.number().optional().describe('Page number'),
   perPage: z.number().optional().describe('Results per page'),
@@ -11,7 +11,7 @@ const inputSchema = z.object({
   maxTime: z.string().optional().describe('Maximum timestamp (YYYY-MM-DD HH:MM:SS)'),
 })
 
-const outputSchema = z.object({
+export const SubmissionsListOutput = z.object({
   submissions: z.array(z.object({
     id: z.string(),
     timestamp: z.string(),
@@ -27,13 +27,13 @@ const outputSchema = z.object({
   pages: z.number(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SubmissionsListOutput>
 
 export const submissionsList = pikkuSessionlessFunc({
   description: 'List submissions for a form',
   node: { displayName: 'List Submissions', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SubmissionsListInput,
+  output: SubmissionsListOutput,
   func: async ({ formstack }, data) => {
   return await formstack.request('GET', `form/${data.formId}/submission.json`, {
     qs: {

@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const DashboardsGetInput = z.object({
   uid: z.string().describe('Dashboard UID'),
 })
 
-const outputSchema = z.object({
+export const DashboardsGetOutput = z.object({
   dashboard: z.object({
     id: z.number(),
     uid: z.string(),
@@ -23,13 +23,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof DashboardsGetOutput>
 
 export const dashboardsGet = pikkuSessionlessFunc({
   description: 'Get Grafana dashboard by UID',
   node: { displayName: 'Get Dashboard', category: 'Dashboards', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: DashboardsGetInput,
+  output: DashboardsGetOutput,
   func: async ({ grafana }, data) => {
   return await grafana.request('GET', `dashboards/uid/${data.uid}`) as Output
   },

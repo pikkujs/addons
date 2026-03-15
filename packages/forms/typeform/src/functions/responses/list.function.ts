@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const ResponsesListInput = z.object({
   formId: z.string().describe('Form ID'),
   pageSize: z.number().optional().describe('Number of results per page'),
   since: z.string().optional().describe('Responses since date (ISO format)'),
@@ -11,7 +11,7 @@ const inputSchema = z.object({
   completed: z.boolean().optional().describe('Filter by completion status'),
 })
 
-const outputSchema = z.object({
+export const ResponsesListOutput = z.object({
   items: z.array(z.object({
     response_id: z.string(),
     landed_at: z.string(),
@@ -36,13 +36,13 @@ const outputSchema = z.object({
   page_count: z.number(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof ResponsesListOutput>
 
 export const responsesList = pikkuSessionlessFunc({
   description: 'List responses for a Typeform',
   node: { displayName: 'List Responses', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: ResponsesListInput,
+  output: ResponsesListOutput,
   func: async ({ typeform }, data) => {
   return await typeform.request('GET', `forms/${data.formId}/responses`, {
     qs: {

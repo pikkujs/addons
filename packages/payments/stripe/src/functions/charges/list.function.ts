@@ -9,7 +9,7 @@ export const ChargeListInput = z.object({
   ending_before: z.string().optional().describe('A cursor for use in pagination. ending_before is an object ID that defines your place in the list'),
 })
 
-const ChargeItemSchema = z.object({
+export const ChargeItemSchema = z.object({
   id: z.string().describe('Unique identifier for the object'),
   object: z.literal('charge').describe('String representing the object\'s type'),
   amount: z.number().describe('Amount intended to be collected by this payment'),

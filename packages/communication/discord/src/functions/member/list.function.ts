@@ -7,7 +7,7 @@ export const MemberListInput = z.object({
   after: z.string().optional().describe('The highest user ID in the previous page'),
 })
 
-const MemberSchema = z.object({
+export const MemberSchema = z.object({
   user: z.object({
     id: z.string().describe('The user ID'),
     username: z.string().describe('The username'),

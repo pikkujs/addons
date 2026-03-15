@@ -3,7 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 
 export const MetadataGetInput = z.object({})
 
-const MetadataEntrySchema = z.object({
+export const MetadataEntrySchema = z.object({
   apiName: z.string().describe('API name to use in reports (e.g., totalUsers, country)'),
   uiName: z.string().describe('Human-readable display name'),
   description: z.string().describe('Description of the dimension or metric'),

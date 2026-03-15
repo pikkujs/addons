@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const MessageSchema = z.object({
+export const MessageSchema = z.object({
   key: z.string().optional().describe('Message key'),
   value: z.string().describe('Message value'),
   headers: z.record(z.string(), z.string()).optional().describe('Message headers'),

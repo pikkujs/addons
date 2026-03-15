@@ -1,13 +1,13 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const GA4EventSchema = z.object({
+export const GA4EventSchema = z.object({
   name: z.string().describe('Event name (e.g., purchase, page_view, add_to_cart)'),
   params: z.record(z.string(), z.union([z.string(), z.number(), z.boolean()])).optional()
     .describe('Event parameters as key-value pairs'),
 })
 
-const UserPropertyValueSchema = z.object({
+export const UserPropertyValueSchema = z.object({
   value: z.union([z.string(), z.number()]).describe('Property value'),
 })
 
@@ -21,7 +21,7 @@ export const EventValidateInput = z.object({
   events: z.array(GA4EventSchema).min(1).describe('Array of events to validate (max 25 per request)'),
 })
 
-const ValidationMessageSchema = z.object({
+export const ValidationMessageSchema = z.object({
   fieldPath: z.string().describe('Path to the field that has an issue'),
   description: z.string().describe('Description of the validation issue'),
   validationCode: z.string().describe('Validation error code'),

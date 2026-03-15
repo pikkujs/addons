@@ -9,7 +9,7 @@ export const CustomerListInput = z.object({
   ending_before: z.string().optional().describe('A cursor for use in pagination. ending_before is an object ID that defines your place in the list'),
 })
 
-const CustomerItemSchema = z.object({
+export const CustomerItemSchema = z.object({
   id: z.string().describe('Unique identifier for the object'),
   object: z.literal('customer').describe('String representing the object\'s type'),
   name: z.string().nullable().describe('The customer\'s full name or business name'),

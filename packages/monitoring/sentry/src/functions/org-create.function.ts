@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const OrgCreateInput = z.object({
+export const OrgCreateInput = z.object({
   name: z.string().describe('The human readable name for the new organization'),
   slug: z.string().optional().describe('The unique URL slug for this organization'),
   agreeTerms: z
@@ -10,7 +10,7 @@ const OrgCreateInput = z.object({
     .describe('Signifies agreement to the terms of service'),
 })
 
-const OrgCreateOutput = z.object({
+export const OrgCreateOutput = z.object({
   id: z.string(),
   slug: z.string(),
   name: z.string(),

@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const IssueGetInput = z.object({
+export const IssueGetInput = z.object({
   issueId: z.string().describe('The ID of the issue to retrieve'),
 })
 
-const IssueGetOutput = z.object({
+export const IssueGetOutput = z.object({
   id: z.string(),
   shortId: z.string(),
   title: z.string(),

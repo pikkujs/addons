@@ -6,7 +6,7 @@ export const TextModerateInput = z.object({
   model: z.enum(['text-moderation-latest', 'text-moderation-stable']).optional().describe('Two content moderations models are available: text-moderation-stable and text-moderation-latest.'),
 })
 
-const CategoryScoresSchema = z.object({
+export const CategoryScoresSchema = z.object({
   hate: z.number().describe('The score for the category hate'),
   'hate/threatening': z.number().describe('The score for the category hate/threatening'),
   harassment: z.number().describe('The score for the category harassment'),
@@ -20,7 +20,7 @@ const CategoryScoresSchema = z.object({
   'violence/graphic': z.number().describe('The score for the category violence/graphic'),
 })
 
-const CategoriesSchema = z.object({
+export const CategoriesSchema = z.object({
   hate: z.boolean().describe('Content that expresses, incites, or promotes hate based on race, gender, ethnicity, religion, nationality, sexual orientation, disability status, or caste'),
   'hate/threatening': z.boolean().describe('Hateful content that also includes violence or serious harm towards the targeted group'),
   harassment: z.boolean().describe('Content that expresses, incites, or promotes harassing language towards any target'),
@@ -34,7 +34,7 @@ const CategoriesSchema = z.object({
   'violence/graphic': z.boolean().describe('Content that depicts death, violence, or physical injury in graphic detail'),
 })
 
-const ModerationResultSchema = z.object({
+export const ModerationResultSchema = z.object({
   flagged: z.boolean().describe('Whether any of the categories are flagged'),
   categories: CategoriesSchema.describe('A list of the categories along with their boolean value'),
   category_scores: CategoryScoresSchema.describe('A list of the categories along with their scores'),

@@ -7,7 +7,7 @@ export const ThreadGetInput = z.object({
   metadataHeaders: z.array(z.string()).optional(),
 })
 
-const HeaderSchema = z.object({
+export const HeaderSchema = z.object({
   name: z.string(),
   value: z.string(),
 })
@@ -29,7 +29,7 @@ const PartSchema: z.ZodType<any> = z.lazy(() =>
   })
 )
 
-const MessageSchema = z.object({
+export const MessageSchema = z.object({
   id: z.string(),
   threadId: z.string(),
   labelIds: z.array(z.string()).optional(),

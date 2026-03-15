@@ -7,7 +7,7 @@ export const BucketListInput = z.object({
   pageToken: z.string().optional().describe('Page token for pagination'),
 })
 
-const BucketSummarySchema = z.object({
+export const BucketSummarySchema = z.object({
   name: z.string().describe('Bucket name'),
   location: z.string().describe('Bucket location'),
   storageClass: z.string().describe('Storage class'),

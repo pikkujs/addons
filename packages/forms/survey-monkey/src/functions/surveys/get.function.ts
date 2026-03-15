@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SurveysGetInput = z.object({
   surveyId: z.string().describe('Survey ID'),
 })
 
-const outputSchema = z.object({
+export const SurveysGetOutput = z.object({
   id: z.string(),
   title: z.string(),
   nickname: z.string(),
@@ -24,13 +24,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SurveysGetOutput>
 
 export const surveysGet = pikkuSessionlessFunc({
   description: 'Get details of a specific survey',
   node: { displayName: 'Get Survey', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SurveysGetInput,
+  output: SurveysGetOutput,
   func: async ({ surveyMonkey }, data) => {
   return await surveyMonkey.request('GET', `surveys/${data.surveyId}`) as Output
   },

@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const IncidentsListInput = z.object({
   status: z.array(z.string()).optional().describe('Filter by statuses (triggered, acknowledged, resolved)'),
   urgency: z.array(z.string()).optional().describe('Filter by urgencies (high, low)'),
   serviceIds: z.array(z.string()).optional().describe('Filter by service IDs'),
@@ -11,7 +11,7 @@ const inputSchema = z.object({
   offset: z.number().optional().describe('Offset for pagination'),
 })
 
-const outputSchema = z.object({
+export const IncidentsListOutput = z.object({
   incidents: z.array(z.object({
     id: z.string(),
     incident_number: z.number().optional(),
@@ -31,13 +31,13 @@ const outputSchema = z.object({
   more: z.boolean().optional(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof IncidentsListOutput>
 
 export const incidentsList = pikkuSessionlessFunc({
   description: 'List PagerDuty incidents',
   node: { displayName: 'List Incidents', category: 'Incidents', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: IncidentsListInput,
+  output: IncidentsListOutput,
   func: async ({ pagerduty }, data) => {
   const qs: Record<string, string | number | boolean | undefined> = {
     limit: data.limit,

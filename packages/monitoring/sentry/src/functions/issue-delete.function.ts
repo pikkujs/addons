@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const IssueDeleteInput = z.object({
+export const IssueDeleteInput = z.object({
   issueId: z.string().describe('The ID of the issue to delete'),
 })
 
-const IssueDeleteOutput = z.object({
+export const IssueDeleteOutput = z.object({
   success: z.boolean().describe('Whether the deletion was successful'),
 })
 

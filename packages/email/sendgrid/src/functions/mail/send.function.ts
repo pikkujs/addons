@@ -1,24 +1,24 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EmailSchema = z.object({
+export const EmailSchema = z.object({
   email: z.string().describe('Email address'),
   name: z.string().optional().describe('Name of the recipient'),
 })
 
-const ContentSchema = z.object({
+export const ContentSchema = z.object({
   type: z.enum(['text/plain', 'text/html']).describe('The MIME type of the content'),
   value: z.string().describe('The actual content of the message'),
 })
 
-const AttachmentSchema = z.object({
+export const AttachmentSchema = z.object({
   content: z.string().describe('The Base64 encoded content of the attachment'),
   filename: z.string().describe('The filename of the attachment'),
   type: z.string().optional().describe('The MIME type of the attachment'),
   disposition: z.enum(['inline', 'attachment']).optional().describe('How the attachment should be displayed'),
 })
 
-const PersonalizationSchema = z.object({
+export const PersonalizationSchema = z.object({
   to: z.array(EmailSchema).describe('An array of recipients'),
   cc: z.array(EmailSchema).optional().describe('An array of recipients who will receive a copy'),
   bcc: z.array(EmailSchema).optional().describe('An array of recipients who will receive a blind copy'),

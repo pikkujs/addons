@@ -6,7 +6,7 @@ export const DraftGetInput = z.object({
   format: z.enum(['minimal', 'full', 'raw', 'metadata']).optional().default('full'),
 })
 
-const HeaderSchema = z.object({
+export const HeaderSchema = z.object({
   name: z.string(),
   value: z.string(),
 })

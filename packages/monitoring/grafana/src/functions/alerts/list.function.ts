@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const AlertsListInput = z.object({
   dashboardId: z.number().optional().describe('Filter by dashboard ID'),
   panelId: z.number().optional().describe('Filter by panel ID'),
   query: z.string().optional().describe('Search query'),
@@ -9,7 +9,7 @@ const inputSchema = z.object({
   limit: z.number().optional().describe('Max results'),
 })
 
-const outputSchema = z.array(z.object({
+export const AlertsListOutput = z.array(z.object({
   id: z.number(),
   dashboardId: z.number().optional(),
   dashboardUid: z.string().optional(),
@@ -20,13 +20,13 @@ const outputSchema = z.array(z.object({
   url: z.string().optional(),
 }))
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof AlertsListOutput>
 
 export const alertsList = pikkuSessionlessFunc({
   description: 'List Grafana alerts',
   node: { displayName: 'List Alerts', category: 'Alerts', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: AlertsListInput,
+  output: AlertsListOutput,
   func: async ({ grafana }, data) => {
   return await grafana.request('GET', 'alerts', { qs: data as Record<string, string | number | undefined> }) as Output
   },

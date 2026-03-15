@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const IssueGetManyInput = z.object({
+export const IssueGetManyInput = z.object({
   organizationSlug: z
     .string()
     .describe('The slug of the organization the issues belong to'),
@@ -32,7 +32,7 @@ const IssueGetManyInput = z.object({
     .describe('Max number of results to return'),
 })
 
-const SentryIssue = z.object({
+export const SentryIssue = z.object({
   id: z.string(),
   shortId: z.string(),
   title: z.string(),
@@ -53,7 +53,7 @@ const SentryIssue = z.object({
   metadata: z.any(),
 })
 
-const IssueGetManyOutput = z.array(SentryIssue)
+export const IssueGetManyOutput = z.array(SentryIssue)
 
 type OutputItem = z.infer<typeof SentryIssue>
 type Output = z.infer<typeof IssueGetManyOutput>

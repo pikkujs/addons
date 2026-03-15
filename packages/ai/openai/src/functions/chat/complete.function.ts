@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const MessageSchema = z.object({
+export const MessageSchema = z.object({
   role: z.enum(['system', 'user', 'assistant']).describe('The role of the messages author'),
   content: z.string().describe('The contents of the message'),
 })
@@ -17,7 +17,7 @@ export const ChatCompleteInput = z.object({
   top_p: z.number().optional().describe('An alternative to sampling with temperature, called nucleus sampling, where the model considers the results of the tokens with top_p probability mass.'),
 })
 
-const ChoiceSchema = z.object({
+export const ChoiceSchema = z.object({
   index: z.number().describe('The index of the choice in the list of choices'),
   message: z.object({
     role: z.string().describe('The role of the author of this message'),
@@ -26,7 +26,7 @@ const ChoiceSchema = z.object({
   finish_reason: z.string().nullable().describe('The reason the model stopped generating tokens'),
 })
 
-const UsageSchema = z.object({
+export const UsageSchema = z.object({
   prompt_tokens: z.number().describe('Number of tokens in the prompt'),
   completion_tokens: z.number().describe('Number of tokens in the generated completion'),
   total_tokens: z.number().describe('Total number of tokens used in the request'),

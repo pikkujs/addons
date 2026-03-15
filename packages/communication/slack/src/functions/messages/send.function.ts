@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const MessagesSendInput = z.object({
   channel: z.string().describe('Channel ID or name'),
   text: z.string().describe('Message text'),
   threadTs: z.string().optional().describe('Thread timestamp to reply to'),
@@ -10,7 +10,7 @@ const inputSchema = z.object({
   unfurlMedia: z.boolean().optional().describe('Enable media unfurling'),
 })
 
-const outputSchema = z.object({
+export const MessagesSendOutput = z.object({
   ok: z.boolean(),
   channel: z.string(),
   ts: z.string(),
@@ -24,13 +24,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof MessagesSendOutput>
 
 export const messagesSend = pikkuSessionlessFunc({
   description: 'Send a message to a Slack channel',
   node: { displayName: 'Send Message', category: 'Communication', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: MessagesSendInput,
+  output: MessagesSendOutput,
   func: async ({ slack }, data) => {
   return await slack.request('POST', 'chat.postMessage', {
     body: {

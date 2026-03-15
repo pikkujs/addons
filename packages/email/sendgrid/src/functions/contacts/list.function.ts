@@ -5,7 +5,7 @@ export const ContactListInput = z.object({
   query: z.string().optional().describe('SGQL query to filter contacts (e.g., "email LIKE \'%@example.com\'")'),
 })
 
-const ContactSchema = z.object({
+export const ContactSchema = z.object({
   id: z.string().describe('The unique ID of the contact'),
   email: z.string().describe('The contact email address'),
   first_name: z.string().optional().describe('First name of the contact'),

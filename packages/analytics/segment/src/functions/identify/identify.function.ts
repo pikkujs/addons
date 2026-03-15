@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const IdentifyUserInput = z.object({
   userId: z.string().optional().describe('User ID'),
   anonymousId: z.string().optional().describe('Anonymous ID'),
   traits: z.record(z.string(), z.unknown()).optional().describe('User traits'),
@@ -9,18 +9,18 @@ const inputSchema = z.object({
   timestamp: z.string().optional().describe('Timestamp (ISO format)'),
 })
 
-const outputSchema = z.object({
+export const IdentifyUserOutput = z.object({
   success: z.boolean(),
 })
 
-type Input = z.infer<typeof inputSchema>
-type Output = z.infer<typeof outputSchema>
+type Input = z.infer<typeof IdentifyUserInput>
+type Output = z.infer<typeof IdentifyUserOutput>
 
 export const identifyUser = pikkuSessionlessFunc({
   description: 'Identify a user in Segment',
   node: { displayName: 'Identify User', category: 'Analytics', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: IdentifyUserInput,
+  output: IdentifyUserOutput,
   func: async ({ segment }, data) => {
     await segment.request('POST', 'identify', {
       body: {

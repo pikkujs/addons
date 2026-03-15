@@ -1,14 +1,14 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const FormsListInput = z.object({
   page: z.number().optional().describe('Page number'),
   pageSize: z.number().optional().describe('Number of results per page'),
   search: z.string().optional().describe('Search query'),
   workspaceId: z.string().optional().describe('Workspace ID to filter by'),
 })
 
-const outputSchema = z.object({
+export const FormsListOutput = z.object({
   items: z.array(z.object({
     id: z.string(),
     title: z.string(),
@@ -28,13 +28,13 @@ const outputSchema = z.object({
   total_items: z.number(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof FormsListOutput>
 
 export const formsList = pikkuSessionlessFunc({
   description: 'List all Typeform forms',
   node: { displayName: 'List Forms', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: FormsListInput,
+  output: FormsListOutput,
   func: async ({ typeform }, data) => {
   return await typeform.request('GET', 'forms', {
     qs: {

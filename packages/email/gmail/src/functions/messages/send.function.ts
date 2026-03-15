@@ -1,12 +1,12 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EmailAddressSchema = z.object({
+export const EmailAddressSchema = z.object({
   email: z.string().email(),
   name: z.string().optional(),
 })
 
-const AttachmentSchema = z.object({
+export const AttachmentSchema = z.object({
   filename: z.string(),
   content: z.string(),
   mimeType: z.string().optional().default('application/octet-stream'),

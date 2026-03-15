@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EventGetManyInput = z.object({
+export const EventGetManyInput = z.object({
   organizationSlug: z
     .string()
     .describe('The slug of the organization the events belong to'),
@@ -22,7 +22,7 @@ const EventGetManyInput = z.object({
     .describe('Max number of results to return'),
 })
 
-const SentryEvent = z.object({
+export const SentryEvent = z.object({
   eventID: z.string(),
   id: z.string(),
   message: z.string(),
@@ -33,7 +33,7 @@ const SentryEvent = z.object({
   tags: z.array(z.object({ key: z.string(), value: z.string() })).optional(),
 })
 
-const EventGetManyOutput = z.array(SentryEvent)
+export const EventGetManyOutput = z.array(SentryEvent)
 
 type OutputItem = z.infer<typeof SentryEvent>
 type Output = z.infer<typeof EventGetManyOutput>

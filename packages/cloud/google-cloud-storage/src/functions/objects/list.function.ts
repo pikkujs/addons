@@ -9,7 +9,7 @@ export const ObjectListInput = z.object({
   pageToken: z.string().optional().describe('Page token for pagination'),
 })
 
-const ObjectSummarySchema = z.object({
+export const ObjectSummarySchema = z.object({
   name: z.string().describe('Object name'),
   contentType: z.string().describe('Content type'),
   size: z.string().describe('Size in bytes'),

@@ -1,20 +1,20 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const DateRangeSchema = z.object({
+export const DateRangeSchema = z.object({
   startDate: z.string().describe('Start date (YYYY-MM-DD, or relative: today, yesterday, NdaysAgo)'),
   endDate: z.string().describe('End date (YYYY-MM-DD, or relative: today, yesterday, NdaysAgo)'),
 })
 
-const MetricSchema = z.object({
+export const MetricSchema = z.object({
   name: z.string().describe('Metric name (e.g., totalUsers, eventCount, sessions, screenPageViews)'),
 })
 
-const DimensionSchema = z.object({
+export const DimensionSchema = z.object({
   name: z.string().describe('Dimension name (e.g., date, country, city, browser, sourceMedium)'),
 })
 
-const OrderBySchema = z.object({
+export const OrderBySchema = z.object({
   metric: z.object({ metricName: z.string() }).optional().describe('Order by metric'),
   dimension: z.object({
     dimensionName: z.string(),
@@ -35,7 +35,7 @@ export const ReportRunInput = z.object({
   returnPropertyQuota: z.boolean().optional().describe('Include property quota information in response'),
 })
 
-const ReportRowSchema = z.object({
+export const ReportRowSchema = z.object({
   dimensionValues: z.array(z.object({ value: z.string() })).describe('Dimension values for this row'),
   metricValues: z.array(z.object({ value: z.string() })).describe('Metric values for this row'),
 })

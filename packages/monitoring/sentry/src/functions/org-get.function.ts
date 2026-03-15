@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const OrgGetInput = z.object({
+export const OrgGetInput = z.object({
   organizationSlug: z.string().describe('The slug of the organization to retrieve'),
 })
 
-const SentryOrganization = z.object({
+export const SentryOrganization = z.object({
   id: z.string(),
   slug: z.string(),
   name: z.string(),

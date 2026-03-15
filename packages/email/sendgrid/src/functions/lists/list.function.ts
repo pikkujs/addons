@@ -6,7 +6,7 @@ export const ListListInput = z.object({
   page_token: z.string().optional().describe('Token for pagination'),
 })
 
-const ListItemSchema = z.object({
+export const ListItemSchema = z.object({
   id: z.string().describe('The unique ID of the list'),
   name: z.string().describe('The name of the list'),
   contact_count: z.number().describe('The number of contacts in the list'),

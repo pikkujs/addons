@@ -7,7 +7,7 @@ export const TranscribeVerboseInput = z.object({
   language: z.string().optional().describe('Language code (e.g. "en", "es", "fr")'),
 })
 
-const SegmentSchema = z.object({
+export const SegmentSchema = z.object({
   start: z.number().describe('Start time in seconds'),
   end: z.number().describe('End time in seconds'),
   text: z.string().describe('Transcribed text for this segment'),

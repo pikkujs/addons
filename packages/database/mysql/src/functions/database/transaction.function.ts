@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const QueryItem = z.object({
+export const QueryItem = z.object({
   query: z.string().describe('The SQL query to execute'),
   parameters: z.array(z.any()).optional().describe('Query parameters'),
 })
@@ -10,7 +10,7 @@ export const TransactionInput = z.object({
   queries: z.array(QueryItem).describe('Array of queries to execute in a transaction'),
 })
 
-const QueryResult = z.object({
+export const QueryResult = z.object({
   results: z.array(z.record(z.string(), z.any())).describe('Query results'),
   affectedRows: z.number().optional().describe('Number of affected rows'),
   insertId: z.number().optional().describe('Insert ID if applicable'),

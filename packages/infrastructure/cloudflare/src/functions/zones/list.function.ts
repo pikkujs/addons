@@ -7,7 +7,7 @@ export const ZonesListInput = z.object({
   per_page: z.number().optional().describe('Results per page (max 50)'),
 })
 
-const ZoneSchema = z.object({
+export const ZoneSchema = z.object({
   id: z.string().describe('Zone ID'),
   name: z.string().describe('Domain name'),
   status: z.string().describe('Zone status'),

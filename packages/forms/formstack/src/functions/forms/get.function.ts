@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const FormsGetInput = z.object({
   formId: z.string().describe('Form ID'),
 })
 
-const outputSchema = z.object({
+export const FormsGetOutput = z.object({
   id: z.string(),
   name: z.string(),
   views: z.string(),
@@ -24,13 +24,13 @@ const outputSchema = z.object({
   })),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof FormsGetOutput>
 
 export const formsGet = pikkuSessionlessFunc({
   description: 'Get details of a specific form',
   node: { displayName: 'Get Form', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: FormsGetInput,
+  output: FormsGetOutput,
   func: async ({ formstack }, data) => {
   return await formstack.request('GET', `form/${data.formId}.json`) as Output
   },

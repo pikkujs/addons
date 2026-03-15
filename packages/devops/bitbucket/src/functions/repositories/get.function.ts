@@ -1,12 +1,12 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const RepositoriesGetInput = z.object({
   workspace: z.string().describe('Workspace slug or UUID'),
   repoSlug: z.string().describe('Repository slug'),
 })
 
-const outputSchema = z.object({
+export const RepositoriesGetOutput = z.object({
   uuid: z.string(),
   name: z.string(),
   full_name: z.string(),
@@ -26,13 +26,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof RepositoriesGetOutput>
 
 export const repositoriesGet = pikkuSessionlessFunc({
   description: 'Get details of a specific repository',
   node: { displayName: 'Get Repository', category: 'Repositories', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: RepositoriesGetInput,
+  output: RepositoriesGetOutput,
   func: async ({ bitbucket }, data) => {
   return await bitbucket.request('GET', `repositories/${data.workspace}/${data.repoSlug}`) as Output
   },

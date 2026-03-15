@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const MediaItemSchema = z.object({
+export const MediaItemSchema = z.object({
   type: z.enum(['photo', 'video']).describe('Type of the media'),
   media: z.string().describe('File to send. Pass a file_id or HTTP URL'),
   caption: z.string().optional().describe('Caption of the media, 0-1024 characters'),

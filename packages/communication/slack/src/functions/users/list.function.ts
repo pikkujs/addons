@@ -1,13 +1,13 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const UsersListInput = z.object({
   limit: z.number().optional().describe('Maximum number of users to return'),
   cursor: z.string().optional().describe('Pagination cursor'),
   includeLocale: z.boolean().optional().describe('Include locale information'),
 })
 
-const outputSchema = z.object({
+export const UsersListOutput = z.object({
   ok: z.boolean(),
   members: z.array(z.object({
     id: z.string(),
@@ -30,13 +30,13 @@ const outputSchema = z.object({
   }).optional(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof UsersListOutput>
 
 export const usersList = pikkuSessionlessFunc({
   description: 'List Slack workspace users',
   node: { displayName: 'List Users', category: 'Communication', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: UsersListInput,
+  output: UsersListOutput,
   func: async ({ slack }, data) => {
   return await slack.request('GET', 'users.list', {
     qs: {

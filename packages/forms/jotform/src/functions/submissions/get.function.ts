@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SubmissionsGetInput = z.object({
   submissionId: z.string().describe('Submission ID'),
 })
 
-const outputSchema = z.object({
+export const SubmissionsGetOutput = z.object({
   responseCode: z.number(),
   message: z.string(),
   content: z.object({
@@ -26,13 +26,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SubmissionsGetOutput>
 
 export const submissionsGet = pikkuSessionlessFunc({
   description: 'Get details of a specific submission',
   node: { displayName: 'Get Submission', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SubmissionsGetInput,
+  output: SubmissionsGetOutput,
   func: async ({ jotform }, data) => {
   return await jotform.request('GET', `submission/${data.submissionId}`) as Output
   },

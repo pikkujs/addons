@@ -9,7 +9,7 @@ export const DnsRecordsListInput = z.object({
   per_page: z.number().optional().describe('Results per page'),
 })
 
-const DnsRecordSchema = z.object({
+export const DnsRecordSchema = z.object({
   id: z.string().describe('Record ID'),
   type: z.string().describe('Record type'),
   name: z.string().describe('Record name'),

@@ -3,7 +3,7 @@ import { generateObject } from 'ai'
 import { jsonSchema } from 'ai'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const MessageSchema = z.object({
+export const MessageSchema = z.object({
   role: z.enum(['system', 'user', 'assistant']).describe('The role of the message author'),
   content: z.string().describe('The contents of the message'),
 })
@@ -21,7 +21,7 @@ export const OllamaGenerateObjectInput = z.object({
   temperature: z.number().min(0).max(2).optional().describe('Sampling temperature between 0 and 2'),
 })
 
-const UsageSchema = z.object({
+export const UsageSchema = z.object({
   promptTokens: z.number().describe('Number of tokens in the prompt'),
   completionTokens: z.number().describe('Number of tokens in the completion'),
   totalTokens: z.number().describe('Total number of tokens used'),

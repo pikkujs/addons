@@ -7,7 +7,7 @@ import {
   MandrillSendResultSchema,
 } from '../mandrill.types.js'
 
-const MessageSendTemplateInput = z.object({
+export const MessageSendTemplateInput = z.object({
   templateName: z.string().describe('Name of the template to use'),
   templateContent: z.array(MandrillTemplateContentSchema).optional().describe('Content to replace in the template'),
   fromEmail: z.string().describe('Sender email address'),
@@ -23,7 +23,7 @@ const MessageSendTemplateInput = z.object({
   globalMergeVars: z.array(MandrillMergeVarSchema).optional().describe('Global merge variables for template'),
 })
 
-const MessageSendTemplateOutput = z.array(MandrillSendResultSchema)
+export const MessageSendTemplateOutput = z.array(MandrillSendResultSchema)
 
 type Input = z.infer<typeof MessageSendTemplateInput>
 type Output = z.infer<typeof MessageSendTemplateOutput>

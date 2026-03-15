@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { AddressSchema, MetadataSchema } from '../../stripe.types.js'
 
-const ShippingSchema = z.object({
+export const ShippingSchema = z.object({
   name: z.string().describe('Recipient name'),
   address: AddressSchema.describe('Shipping address'),
   carrier: z.string().optional().describe('The delivery service that shipped a physical product, such as Fedex, UPS, USPS, etc.'),

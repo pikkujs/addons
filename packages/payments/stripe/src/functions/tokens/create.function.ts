@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const CardSchema = z.object({
+export const CardSchema = z.object({
   number: z.string().describe('The card number, as a string without any separators'),
   exp_month: z.string().describe('Two-digit number representing the card\'s expiration month'),
   exp_year: z.string().describe('Two- or four-digit number representing the card\'s expiration year'),
@@ -15,7 +15,7 @@ const CardSchema = z.object({
   address_country: z.string().optional().describe('Two-letter country code'),
 })
 
-const BankAccountSchema = z.object({
+export const BankAccountSchema = z.object({
   country: z.string().describe('The country in which the bank account is located'),
   currency: z.string().describe('The currency the bank account is in'),
   account_holder_name: z.string().optional().describe('The name of the person or business that owns the bank account'),

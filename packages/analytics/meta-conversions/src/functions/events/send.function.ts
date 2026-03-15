@@ -1,18 +1,18 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const ActionSourceEnum = z.enum([
+export const ActionSourceEnum = z.enum([
   'website', 'email', 'app', 'phone_call', 'chat',
   'physical_store', 'system_generated', 'other',
 ])
 
-const UserDataSchema = z.record(z.string(), z.union([z.string(), z.array(z.string())]))
+export const UserDataSchema = z.record(z.string(), z.union([z.string(), z.array(z.string())]))
   .describe('Hashed user data for matching (em, ph, fn, ln, ct, st, zp, country, external_id, client_ip_address, client_user_agent, fbc, fbp)')
 
-const CustomDataSchema = z.record(z.string(), z.unknown())
+export const CustomDataSchema = z.record(z.string(), z.unknown())
   .describe('Custom event data (value, currency, content_name, content_ids, contents, num_items, etc.)')
 
-const MetaEventSchema = z.object({
+export const MetaEventSchema = z.object({
   event_name: z.string().describe('Standard or custom event name (e.g., Purchase, Lead, AddToCart, PageView, ViewContent)'),
   event_time: z.number().describe('Unix timestamp in seconds when the event occurred'),
   event_id: z.string().optional().describe('Unique event ID for deduplication with browser pixel events'),

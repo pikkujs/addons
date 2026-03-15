@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const PullRequestsListInput = z.object({
   workspace: z.string().describe('Workspace slug or UUID'),
   repoSlug: z.string().describe('Repository slug'),
   state: z.enum(['OPEN', 'MERGED', 'DECLINED', 'SUPERSEDED']).optional().describe('PR state'),
@@ -9,7 +9,7 @@ const inputSchema = z.object({
   pagelen: z.number().optional().describe('Results per page'),
 })
 
-const outputSchema = z.object({
+export const PullRequestsListOutput = z.object({
   size: z.number(),
   page: z.number(),
   pagelen: z.number(),
@@ -38,13 +38,13 @@ const outputSchema = z.object({
   next: z.string().optional(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof PullRequestsListOutput>
 
 export const pullRequestsList = pikkuSessionlessFunc({
   description: 'List pull requests in a repository',
   node: { displayName: 'List Pull Requests', category: 'PullRequests', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: PullRequestsListInput,
+  output: PullRequestsListOutput,
   func: async ({ bitbucket }, data) => {
   return await bitbucket.request('GET', `repositories/${data.workspace}/${data.repoSlug}/pullrequests`, {
     qs: {

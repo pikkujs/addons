@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const IncidentsGetInput = z.object({
   id: z.string().describe('Incident ID'),
 })
 
-const outputSchema = z.object({
+export const IncidentsGetOutput = z.object({
   incident: z.object({
     id: z.string(),
     incident_number: z.number().optional(),
@@ -29,13 +29,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof IncidentsGetOutput>
 
 export const incidentsGet = pikkuSessionlessFunc({
   description: 'Get PagerDuty incident details',
   node: { displayName: 'Get Incident', category: 'Incidents', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: IncidentsGetInput,
+  output: IncidentsGetOutput,
   func: async ({ pagerduty }, data) => {
   return await pagerduty.request('GET', `incidents/${data.id}`) as Output
   },

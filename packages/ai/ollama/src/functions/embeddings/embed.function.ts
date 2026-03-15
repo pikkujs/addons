@@ -7,7 +7,7 @@ export const OllamaEmbedInput = z.object({
   value: z.string().describe('The text to embed'),
 })
 
-const UsageSchema = z.object({
+export const UsageSchema = z.object({
   tokens: z.number().describe('Number of tokens used'),
 })
 

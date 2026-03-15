@@ -1,14 +1,14 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const ChannelsListInput = z.object({
   limit: z.number().optional().describe('Maximum number of channels to return'),
   cursor: z.string().optional().describe('Pagination cursor'),
   types: z.string().optional().describe('Channel types (comma-separated: public_channel,private_channel,mpim,im)'),
   excludeArchived: z.boolean().optional().describe('Exclude archived channels'),
 })
 
-const outputSchema = z.object({
+export const ChannelsListOutput = z.object({
   ok: z.boolean(),
   channels: z.array(z.object({
     id: z.string(),
@@ -25,13 +25,13 @@ const outputSchema = z.object({
   }).optional(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof ChannelsListOutput>
 
 export const channelsList = pikkuSessionlessFunc({
   description: 'List Slack channels',
   node: { displayName: 'List Channels', category: 'Communication', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: ChannelsListInput,
+  output: ChannelsListOutput,
   func: async ({ slack }, data) => {
   return await slack.request('GET', 'conversations.list', {
     qs: {

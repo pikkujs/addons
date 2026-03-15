@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const RepositoriesListInput = z.object({
   workspace: z.string().describe('Workspace slug or UUID'),
   page: z.number().optional().describe('Page number'),
   pagelen: z.number().optional().describe('Results per page (max 100)'),
@@ -9,7 +9,7 @@ const inputSchema = z.object({
   q: z.string().optional().describe('Query filter'),
 })
 
-const outputSchema = z.object({
+export const RepositoriesListOutput = z.object({
   size: z.number(),
   page: z.number(),
   pagelen: z.number(),
@@ -31,13 +31,13 @@ const outputSchema = z.object({
   previous: z.string().optional(),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof RepositoriesListOutput>
 
 export const repositoriesList = pikkuSessionlessFunc({
   description: 'List repositories in a workspace',
   node: { displayName: 'List Repositories', category: 'Repositories', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: RepositoriesListInput,
+  output: RepositoriesListOutput,
   func: async ({ bitbucket }, data) => {
   return await bitbucket.request('GET', `repositories/${data.workspace}`, {
     qs: {

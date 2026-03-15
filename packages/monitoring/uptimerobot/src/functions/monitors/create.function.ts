@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const MonitorsCreateInput = z.object({
   friendly_name: z.string().describe('Monitor name'),
   url: z.string().describe('URL to monitor'),
   type: z.number().describe('Monitor type (1=HTTP, 2=Keyword, 3=Ping, 4=Port)'),
@@ -10,7 +10,7 @@ const inputSchema = z.object({
   alert_contacts: z.string().optional().describe('Alert contact IDs'),
 })
 
-const outputSchema = z.object({
+export const MonitorsCreateOutput = z.object({
   stat: z.string(),
   monitor: z.object({
     id: z.number(),
@@ -18,13 +18,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof MonitorsCreateOutput>
 
 export const monitorsCreate = pikkuSessionlessFunc({
   description: 'Create an UptimeRobot monitor',
   node: { displayName: 'Create Monitor', category: 'Monitors', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: MonitorsCreateInput,
+  output: MonitorsCreateOutput,
   func: async ({ uptimerobot }, data) => {
   return await uptimerobot.request('newMonitor', { body: data as Record<string, unknown> }) as Output
   },

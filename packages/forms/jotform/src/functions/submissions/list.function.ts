@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SubmissionsListInput = z.object({
   formId: z.string().describe('Form ID'),
   offset: z.number().optional().describe('Start of each result set'),
   limit: z.number().optional().describe('Number of results (max 1000)'),
@@ -9,7 +9,7 @@ const inputSchema = z.object({
   orderBy: z.string().optional().describe('Order results by field'),
 })
 
-const outputSchema = z.object({
+export const SubmissionsListOutput = z.object({
   responseCode: z.number(),
   message: z.string(),
   content: z.array(z.object({
@@ -35,13 +35,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SubmissionsListOutput>
 
 export const submissionsList = pikkuSessionlessFunc({
   description: 'List submissions for a form',
   node: { displayName: 'List Submissions', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SubmissionsListInput,
+  output: SubmissionsListOutput,
   func: async ({ jotform }, data) => {
   return await jotform.request('GET', `form/${data.formId}/submissions`, {
     qs: {

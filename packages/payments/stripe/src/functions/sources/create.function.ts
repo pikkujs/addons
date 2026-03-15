@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { MetadataSchema } from '../../stripe.types.js'
 
-const OwnerSchema = z.object({
+export const OwnerSchema = z.object({
   name: z.string().optional().describe('Owner\'s full name'),
   email: z.string().optional().describe('Owner\'s email address'),
   phone: z.string().optional().describe('Owner\'s phone number'),

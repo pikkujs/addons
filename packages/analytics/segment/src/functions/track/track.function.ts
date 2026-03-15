@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const TrackEventInput = z.object({
   userId: z.string().optional().describe('User ID'),
   anonymousId: z.string().optional().describe('Anonymous ID'),
   event: z.string().describe('Event name'),
@@ -10,18 +10,18 @@ const inputSchema = z.object({
   timestamp: z.string().optional().describe('Timestamp (ISO format)'),
 })
 
-const outputSchema = z.object({
+export const TrackEventOutput = z.object({
   success: z.boolean(),
 })
 
-type Input = z.infer<typeof inputSchema>
-type Output = z.infer<typeof outputSchema>
+type Input = z.infer<typeof TrackEventInput>
+type Output = z.infer<typeof TrackEventOutput>
 
 export const trackEvent = pikkuSessionlessFunc({
   description: 'Track an event in Segment',
   node: { displayName: 'Track Event', category: 'Analytics', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: TrackEventInput,
+  output: TrackEventOutput,
   func: async ({ segment }, data) => {
     await segment.request('POST', 'track', {
       body: {

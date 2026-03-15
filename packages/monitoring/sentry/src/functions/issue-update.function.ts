@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const IssueUpdateInput = z.object({
+export const IssueUpdateInput = z.object({
   issueId: z.string().describe('The ID of the issue to update'),
   status: z
     .enum(['resolved', 'unresolved', 'ignored'])
@@ -17,7 +17,7 @@ const IssueUpdateInput = z.object({
   isPublic: z.boolean().optional().describe('Make the issue public or private'),
 })
 
-const IssueUpdateOutput = z.object({
+export const IssueUpdateOutput = z.object({
   id: z.string(),
   shortId: z.string(),
   title: z.string(),

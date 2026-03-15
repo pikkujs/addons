@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const AttachmentSchema = z.object({
+export const AttachmentSchema = z.object({
   filename: z.string().describe('Attachment filename'),
   contentKey: z.string().describe('Content key for the attachment file'),
   contentType: z.string().optional().describe('MIME type of the attachment'),

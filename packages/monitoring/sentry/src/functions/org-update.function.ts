@@ -1,13 +1,13 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const OrgUpdateInput = z.object({
+export const OrgUpdateInput = z.object({
   organizationSlug: z.string().describe('The slug of the organization to update'),
   name: z.string().optional().describe('The new name for the organization'),
   slug: z.string().optional().describe('The new unique URL slug for this organization'),
 })
 
-const OrgUpdateOutput = z.object({
+export const OrgUpdateOutput = z.object({
   id: z.string(),
   slug: z.string(),
   name: z.string(),

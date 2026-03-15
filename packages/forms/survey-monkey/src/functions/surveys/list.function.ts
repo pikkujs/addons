@@ -1,14 +1,14 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SurveysListInput = z.object({
   page: z.number().optional().describe('Page number'),
   perPage: z.number().optional().describe('Results per page'),
   sortBy: z.enum(['title', 'date_modified']).optional().describe('Sort by field'),
   sortOrder: z.enum(['ASC', 'DESC']).optional().describe('Sort order'),
 })
 
-const outputSchema = z.object({
+export const SurveysListOutput = z.object({
   data: z.array(z.object({
     id: z.string(),
     title: z.string(),
@@ -23,13 +23,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SurveysListOutput>
 
 export const surveysList = pikkuSessionlessFunc({
   description: 'List all surveys',
   node: { displayName: 'List Surveys', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SurveysListInput,
+  output: SurveysListOutput,
   func: async ({ surveyMonkey }, data) => {
   return await surveyMonkey.request('GET', 'surveys', {
     qs: {

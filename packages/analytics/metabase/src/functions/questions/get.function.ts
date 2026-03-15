@@ -1,11 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const QuestionsGetInput = z.object({
   questionId: z.number().describe('Question (card) ID'),
 })
 
-const outputSchema = z.object({
+export const QuestionsGetOutput = z.object({
   id: z.number(),
   name: z.string(),
   description: z.string().nullable(),
@@ -24,14 +24,14 @@ const outputSchema = z.object({
   })).optional(),
 })
 
-type Input = z.infer<typeof inputSchema>
-type Output = z.infer<typeof outputSchema>
+type Input = z.infer<typeof QuestionsGetInput>
+type Output = z.infer<typeof QuestionsGetOutput>
 
 export const questionsGet = pikkuSessionlessFunc({
   description: 'Get details of a specific question (card)',
   node: { displayName: 'Get Question', category: 'Analytics', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: QuestionsGetInput,
+  output: QuestionsGetOutput,
   func: async ({ metabase }, data) => {
     return await metabase.request('GET', `card/${data.questionId}`) as Output
   },

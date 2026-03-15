@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const SubscriptionsListInput = z.object({
   status: z.enum(['active', 'canceled', 'past_due', 'paused', 'trialing']).optional().describe('Filter by status'),
   customer_id: z.string().optional().describe('Filter by customer ID'),
   price_id: z.string().optional().describe('Filter by price ID'),
@@ -9,7 +9,7 @@ const inputSchema = z.object({
   after: z.string().optional().describe('Cursor for pagination'),
 })
 
-const outputSchema = z.object({
+export const SubscriptionsListOutput = z.object({
   data: z.array(z.object({
     id: z.string(),
     status: z.string(),
@@ -33,13 +33,13 @@ const outputSchema = z.object({
   }),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof SubscriptionsListOutput>
 
 export const subscriptionsList = pikkuSessionlessFunc({
   description: 'List Paddle subscriptions',
   node: { displayName: 'List Subscriptions', category: 'Subscriptions', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: SubscriptionsListInput,
+  output: SubscriptionsListOutput,
   func: async ({ paddle }, data) => {
   return await paddle.request('GET', 'subscriptions', { qs: data as Record<string, string | number | boolean | undefined> }) as Output
   },

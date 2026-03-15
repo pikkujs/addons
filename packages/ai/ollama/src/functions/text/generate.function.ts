@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { generateText } from 'ai'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const MessageSchema = z.object({
+export const MessageSchema = z.object({
   role: z.enum(['system', 'user', 'assistant']).describe('The role of the message author'),
   content: z.string().describe('The contents of the message'),
 })
@@ -18,7 +18,7 @@ export const OllamaGenerateTextInput = z.object({
   seed: z.number().optional().describe('Random seed for reproducible results'),
 })
 
-const UsageSchema = z.object({
+export const UsageSchema = z.object({
   promptTokens: z.number().describe('Number of tokens in the prompt'),
   completionTokens: z.number().describe('Number of tokens in the completion'),
   totalTokens: z.number().describe('Total number of tokens used'),

@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EventGetInput = z.object({
+export const EventGetInput = z.object({
   organizationSlug: z
     .string()
     .describe('The slug of the organization the events belong to'),
@@ -15,7 +15,7 @@ const EventGetInput = z.object({
     ),
 })
 
-const EventGetOutput = z.object({
+export const EventGetOutput = z.object({
   eventID: z.string(),
   context: z.any().optional(),
   contexts: z.any().optional(),

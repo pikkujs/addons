@@ -3,13 +3,13 @@ import { pikkuSessionlessFunc } from '#pikku'
 
 export const BalanceGetInput = z.object({})
 
-const SourceTypesSchema = z.object({
+export const SourceTypesSchema = z.object({
   bank_account: z.number().optional().describe('Amount coming from legacy US ACH payments'),
   card: z.number().optional().describe('Amount coming from most payment methods, including cards as well as non-legacy bank debits'),
   fpx: z.number().optional().describe('Amount coming from FPX, a Malaysian payment method'),
 })
 
-const BalanceAmountSchema = z.object({
+export const BalanceAmountSchema = z.object({
   amount: z.number().describe('Balance amount'),
   currency: z.string().describe('Three-letter ISO currency code, in lowercase. Must be a supported currency'),
   source_types: SourceTypesSchema.optional().describe('Breakdown of balance by source type'),

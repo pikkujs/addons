@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EmailAddressSchema = z.object({
+export const EmailAddressSchema = z.object({
   name: z.string().optional(),
   email: z.string().email(),
 })

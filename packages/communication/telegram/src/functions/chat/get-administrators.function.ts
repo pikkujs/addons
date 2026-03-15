@@ -5,7 +5,7 @@ export const ChatGetAdministratorsInput = z.object({
   chat_id: z.union([z.string(), z.number()]).describe('Unique identifier for the target chat or username of the target supergroup or channel'),
 })
 
-const ChatMemberSchema = z.object({
+export const ChatMemberSchema = z.object({
   user: z.object({
     id: z.number().describe('Unique identifier for this user'),
     is_bot: z.boolean().describe('True, if this user is a bot'),

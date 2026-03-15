@@ -1,13 +1,13 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const inputSchema = z.object({
+export const FormsListInput = z.object({
   folders: z.boolean().optional().describe('Include folder information'),
   page: z.number().optional().describe('Page number'),
   perPage: z.number().optional().describe('Results per page'),
 })
 
-const outputSchema = z.object({
+export const FormsListOutput = z.object({
   forms: z.array(z.object({
     id: z.string(),
     name: z.string(),
@@ -20,13 +20,13 @@ const outputSchema = z.object({
   })),
 })
 
-type Output = z.infer<typeof outputSchema>
+type Output = z.infer<typeof FormsListOutput>
 
 export const formsList = pikkuSessionlessFunc({
   description: 'List all Formstack forms',
   node: { displayName: 'List Forms', category: 'Forms', type: 'action' },
-  input: inputSchema,
-  output: outputSchema,
+  input: FormsListInput,
+  output: FormsListOutput,
   func: async ({ formstack }, data) => {
   return await formstack.request('GET', 'form.json', {
     qs: {

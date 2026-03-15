@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { Change, Attribute } from 'ldapts'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const ChangeSchema = z.object({
+export const ChangeSchema = z.object({
   operation: z.enum(['add', 'replace', 'delete']).describe('Type of modification'),
   attribute: z.string().describe('Attribute name'),
   values: z.array(z.string()).optional().describe('Attribute values'),

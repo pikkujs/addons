@@ -7,7 +7,7 @@ export const MessageGetInput = z.object({
   metadataHeaders: z.array(z.string()).optional(),
 })
 
-const HeaderSchema = z.object({
+export const HeaderSchema = z.object({
   name: z.string(),
   value: z.string(),
 })

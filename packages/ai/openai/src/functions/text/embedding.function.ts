@@ -8,13 +8,13 @@ export const TextEmbeddingInput = z.object({
   dimensions: z.number().optional().describe('The number of dimensions the resulting output embeddings should have. Only supported in text-embedding-3 and later models.'),
 })
 
-const EmbeddingSchema = z.object({
+export const EmbeddingSchema = z.object({
   object: z.literal('embedding').describe('The object type, which is always "embedding"'),
   embedding: z.array(z.number()).describe('The embedding vector, which is a list of floats'),
   index: z.number().describe('The index of the embedding in the list of embeddings'),
 })
 
-const UsageSchema = z.object({
+export const UsageSchema = z.object({
   prompt_tokens: z.number().describe('The number of tokens used by the prompt'),
   total_tokens: z.number().describe('The total number of tokens used by the request'),
 })

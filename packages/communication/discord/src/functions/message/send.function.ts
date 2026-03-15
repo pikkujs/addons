@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
-const EmbedSchema = z.object({
+export const EmbedSchema = z.object({
   title: z.string().optional().describe('Title of the embed'),
   description: z.string().optional().describe('Description of the embed'),
   url: z.string().optional().describe('URL of the embed'),
