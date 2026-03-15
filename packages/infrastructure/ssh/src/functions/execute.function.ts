@@ -20,7 +20,7 @@ export const sshExecute = pikkuSessionlessFunc({
   func: async ({ sshClient }, { command, cwd }) => {
     const fullCommand = cwd ? `cd ${cwd} && ${command}` : command
 
-    return new Promise((resolve, reject) => {
+    return new Promise<{ stdout: string; stderr: string; exitCode: number }>((resolve, reject) => {
       sshClient.exec(fullCommand, (err, stream) => {
         if (err) return reject(err)
 

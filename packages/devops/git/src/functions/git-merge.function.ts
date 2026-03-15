@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitMergeInput = z.object({
   directory: z.string().describe('Path to the git repository'),
@@ -29,7 +29,7 @@ export const gitMerge = pikkuSessionlessFunc({
     const result = await git.merge(options)
     return {
       merged: !result.failed,
-      conflicts: result.conflicts,
+      conflicts: result.conflicts.map((c) => c.file ?? String(c)),
     }
   },
 })

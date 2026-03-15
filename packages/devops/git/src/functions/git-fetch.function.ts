@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitFetchInput = z.object({
   directory: z.string().describe('Path to the git repository'),
@@ -24,7 +24,7 @@ export const gitFetch = pikkuSessionlessFunc({
     const options: string[] = []
     if (prune) options.push('--prune')
     if (tags) options.push('--tags')
-    await git.fetch(remote ?? 'origin', branch, options)
+    await git.fetch(remote ?? 'origin', branch ?? '', options)
     return { fetched: true }
   },
 })

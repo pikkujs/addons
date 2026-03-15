@@ -1,4 +1,4 @@
-import { Kafka, type Producer } from 'kafkajs'
+import { Kafka, type Producer, type SASLOptions } from 'kafkajs'
 import type { KafkaSecrets } from './kafka.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
@@ -13,7 +13,7 @@ export const createSingletonServices = pikkuAddonServices(async (_config, { secr
       mechanism: creds.saslMechanism ?? 'plain',
       username: creds.saslUsername,
       password: creds.saslPassword ?? '',
-    } : undefined,
+    } as SASLOptions : undefined,
   })
 
   const kafkaProducer: Producer = kafka.producer()

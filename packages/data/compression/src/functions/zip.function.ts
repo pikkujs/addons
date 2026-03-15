@@ -29,7 +29,7 @@ export const zipCompress = pikkuSessionlessFunc({
       const buffer = await content.readFileAsBuffer(file.contentKey)
       entries[file.fileName] = new Uint8Array(buffer)
     }
-    const compressed = zipSync(entries, { level: level ?? 6 })
+    const compressed = zipSync(entries, { level: (level ?? 6) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 })
     await content.writeFile(outputContentKey, Readable.from(Buffer.from(compressed)))
     return {
       outputContentKey,

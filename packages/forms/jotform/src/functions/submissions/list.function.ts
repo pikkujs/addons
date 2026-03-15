@@ -20,7 +20,7 @@ const outputSchema = z.object({
     updated_at: z.string().nullable(),
     status: z.string(),
     new: z.string(),
-    answers: z.record(z.object({
+    answers: z.record(z.string(), z.object({
       name: z.string(),
       order: z.string(),
       text: z.string(),

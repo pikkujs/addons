@@ -22,7 +22,7 @@ export const deflateCompress = pikkuSessionlessFunc({
   node: { displayName: 'Deflate Compress', category: 'Data', type: 'action' },
   func: async ({ content }, { contentKey, outputContentKey, level }) => {
     const buffer = await content.readFileAsBuffer(contentKey)
-    const compressed = deflateSync(new Uint8Array(buffer), { level: level ?? 6 })
+    const compressed = deflateSync(new Uint8Array(buffer), { level: (level ?? 6) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 })
     await content.writeFile(outputContentKey, Readable.from(Buffer.from(compressed)))
     return {
       outputContentKey,

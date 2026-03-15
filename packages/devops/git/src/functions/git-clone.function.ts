@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitCloneInput = z.object({
   repoUrl: z.string().describe('Repository URL to clone'),

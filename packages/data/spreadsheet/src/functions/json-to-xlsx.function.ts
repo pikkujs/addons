@@ -3,7 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 import * as XLSX from 'xlsx'
 
 export const JsonToXlsxInput = z.object({
-  data: z.array(z.record(z.any())).describe('Array of objects to write'),
+  data: z.array(z.record(z.string(), z.any())).describe('Array of objects to write'),
   sheetName: z.string().optional().describe('Sheet name (default: "Sheet1")'),
   format: z.enum(['xlsx', 'csv', 'ods', 'html']).optional().describe('Output format (default: xlsx)'),
   includeHeader: z.boolean().optional().describe('Include header row (default: true)'),

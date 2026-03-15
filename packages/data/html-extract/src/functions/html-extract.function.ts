@@ -17,7 +17,7 @@ export const HtmlExtractInput = z.object({
 })
 
 export const HtmlExtractOutput = z.object({
-  data: z.record(z.any()).describe('Extracted data keyed by extraction rule names'),
+  data: z.record(z.string(), z.any()).describe('Extracted data keyed by extraction rule names'),
 })
 
 export const htmlExtract = pikkuSessionlessFunc({

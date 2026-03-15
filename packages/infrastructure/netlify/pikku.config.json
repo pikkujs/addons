@@ -10,7 +10,9 @@
     "displayName": "Netlify",
     "description": "Web deployment platform",
     "categories": [
-      "Sites,Deploys,Forms"
+      "Sites",
+      "Deploys",
+      "Forms"
     ],
     "icon": "./netlify.svg"
   }

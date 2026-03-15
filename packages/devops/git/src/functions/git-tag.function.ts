@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitTagListInput = z.object({
   directory: z.string().describe('Path to the git repository'),
@@ -21,7 +21,7 @@ export const gitTagList = pikkuSessionlessFunc({
     const tags = await git.tags()
     return {
       tags: tags.all,
-      latest: tags.latest,
+      latest: tags.latest ?? null,
     }
   },
 })

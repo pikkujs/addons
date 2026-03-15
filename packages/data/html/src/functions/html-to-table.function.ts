@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
 export const HtmlToTableInput = z.object({
-  data: z.array(z.record(z.any())).describe('Array of objects to convert to an HTML table'),
+  data: z.array(z.record(z.string(), z.any())).describe('Array of objects to convert to an HTML table'),
   caption: z.string().optional().describe('Table caption'),
   capitalize: z.boolean().optional().describe('Capitalize header text'),
   tableAttributes: z.string().optional().describe('HTML attributes for the table element'),

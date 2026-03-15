@@ -26,7 +26,8 @@ export const qrCodeRead = pikkuSessionlessFunc({
       .raw()
       .toBuffer({ resolveWithObject: true })
 
-    const result = jsQR(new Uint8ClampedArray(data.buffer), info.width, info.height)
+    const decode = (jsQR as any).default ?? jsQR
+    const result = decode(new Uint8ClampedArray(data.buffer), info.width, info.height)
 
     return {
       data: result?.data ?? null,

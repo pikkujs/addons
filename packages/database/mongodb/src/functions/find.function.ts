@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { stringifyObjectIds } from '../shared.js'
+import type { Sort } from 'mongodb'
 
 export const FindInput = z.object({
   collection: z.string().describe('Collection name'),
@@ -24,7 +25,7 @@ export const mongoFind = pikkuSessionlessFunc({
   func: async ({ mongodb }, { collection, query, projection, sort, limit, skip }) => {
     let cursor = mongodb.collection(collection).find(query ?? {})
     if (projection) cursor = cursor.project(projection)
-    if (sort) cursor = cursor.sort(sort)
+    if (sort) cursor = cursor.sort(sort as Sort)
     if (skip) cursor = cursor.skip(skip)
     if (limit) cursor = cursor.limit(limit)
     const documents = await cursor.toArray()

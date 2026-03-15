@@ -2,7 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
 export const JsonToCsvInput = z.object({
-  data: z.array(z.record(z.any())).describe('Array of objects to convert to CSV'),
+  data: z.array(z.record(z.string(), z.any())).describe('Array of objects to convert to CSV'),
   delimiter: z.string().optional().describe('Column delimiter (default: comma)'),
   includeHeader: z.boolean().optional().describe('Include header row (default: true)'),
 })

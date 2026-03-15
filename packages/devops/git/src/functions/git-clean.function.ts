@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitCleanInput = z.object({
   directory: z.string().describe('Path to the git repository'),
@@ -25,10 +25,10 @@ export const gitClean = pikkuSessionlessFunc({
     if (force) mode += 'f'
     if (directories) mode += 'd'
     if (!mode) mode = 'n' // default to dry run for safety
-    const result = await git.clean(mode as any)
+    const result: any = await git.clean(mode as any)
     const paths = typeof result === 'string'
-      ? result.split('\n').filter((line) => line.trim().length > 0)
-      : (result as any).paths ?? []
+      ? result.split('\n').filter((line: string) => line.trim().length > 0)
+      : result.paths ?? []
     return { paths }
   },
 })

@@ -1979,8 +1979,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ai-whisper-asr@workspace:packages/ai/whisper-asr"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -1993,8 +1993,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-airtable@workspace:packages/database/airtable"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2007,8 +2007,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-assemblyai@workspace:packages/ai/assemblyai"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2021,8 +2021,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-barcode@workspace:packages/data/barcode"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     bwip-js: "npm:^4.8.0"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2036,8 +2036,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-bitbucket@workspace:packages/devops/bitbucket"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2050,8 +2050,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-circleci@workspace:packages/devops/circleci"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2064,8 +2064,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-cloudflare@workspace:packages/infrastructure/cloudflare"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2078,8 +2078,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-coingecko@workspace:packages/crypto/coingecko"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2092,8 +2092,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-compression@workspace:packages/data/compression"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     fflate: "npm:^0.8"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2107,8 +2107,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-deepl@workspace:packages/ai/deepl"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2121,8 +2121,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-discord@workspace:packages/communication/discord"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2135,8 +2135,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-docraptor@workspace:packages/documents/docraptor"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2149,8 +2149,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-edit-image@workspace:packages/data/edit-image"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     sharp: "npm:^0.33"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2164,8 +2164,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-elevenlabs@workspace:packages/ai/elevenlabs"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2178,8 +2178,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-email-send@workspace:packages/email/email-send"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:^6"
     typescript: "npm:^5.7.2"
@@ -2194,8 +2194,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-flyio@workspace:packages/cloud/flyio"
   dependencies:
-    "@pikku/cli": "npm:*"
-    "@pikku/core": "npm:*"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2208,8 +2208,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-formstack@workspace:packages/forms/formstack"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2222,8 +2222,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-git@workspace:packages/devops/git"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     simple-git: "npm:^3"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2237,8 +2237,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-github@workspace:packages/devops/github"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2251,8 +2251,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-gitlab@workspace:packages/devops/gitlab"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2265,8 +2265,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-gmail@workspace:packages/email/gmail"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2279,8 +2279,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-google-analytics@workspace:packages/analytics/google-analytics"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2293,8 +2293,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-google-cloud-storage@workspace:packages/cloud/google-cloud-storage"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2307,8 +2307,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-grafana@workspace:packages/monitoring/grafana"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2321,8 +2321,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-hackernews@workspace:packages/data/hackernews"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2335,8 +2335,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-html-extract@workspace:packages/data/html-extract"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     cheerio: "npm:^1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2350,8 +2350,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-html@workspace:packages/data/html"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     html-to-text: "npm:^9"
     node-html-markdown: "npm:^1"
     typescript: "npm:^5.7.2"
@@ -2366,8 +2366,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-hubspot@workspace:packages/crm/hubspot"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2380,8 +2380,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-human-design@workspace:packages/esoteric/human-design"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     sweph: "npm:^2.10.3-4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2395,8 +2395,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-icalendar@workspace:packages/data/icalendar"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     ical-generator: "npm:^8"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2410,8 +2410,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-imap@workspace:packages/email/imap"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/mailparser": "npm:^3.4.5"
     imapflow: "npm:^1.0.171"
     mailparser: "npm:^3.7.2"
@@ -2427,8 +2427,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-jenkins@workspace:packages/devops/jenkins"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2441,8 +2441,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-jotform@workspace:packages/forms/jotform"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2455,8 +2455,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-kafka@workspace:packages/infrastructure/kafka"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     kafkajs: "npm:^2"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2470,8 +2470,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ldap@workspace:packages/infrastructure/ldap"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     ldapts: "npm:^7"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2485,8 +2485,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mailgun@workspace:packages/email/mailgun"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2499,8 +2499,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mandrill@workspace:packages/email/mandrill"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2513,8 +2513,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-markdown@workspace:packages/data/markdown"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     marked: "npm:^15"
     node-html-markdown: "npm:^1"
     typescript: "npm:^5.7.2"
@@ -2529,8 +2529,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-meta-conversions@workspace:packages/analytics/meta-conversions"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2543,8 +2543,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-metabase@workspace:packages/analytics/metabase"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2557,8 +2557,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mongodb@workspace:packages/database/mongodb"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     mongodb: "npm:^6"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2572,8 +2572,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mysql@workspace:packages/database/mysql"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     mysql2: "npm:^3.11.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2587,8 +2587,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-netlify@workspace:packages/infrastructure/netlify"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2602,8 +2602,8 @@ __metadata:
   resolution: "@pikku/addon-ollama@workspace:packages/ai/ollama"
   dependencies:
     "@ai-sdk/openai": "npm:^1"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     ai: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2617,8 +2617,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-openai@workspace:packages/ai/openai"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     openai: "npm:^6.9.1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2632,8 +2632,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-paddle@workspace:packages/payments/paddle"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2646,8 +2646,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-pagerduty@workspace:packages/monitoring/pagerduty"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2660,8 +2660,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-plentymarkets@workspace:packages/ecommerce/plentymarkets"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2674,8 +2674,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-postgres@workspace:packages/database/postgres"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/pg": "npm:^8.11.10"
     pg: "npm:^8.13.1"
     typescript: "npm:^5.7.2"
@@ -2690,8 +2690,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-posthog@workspace:packages/analytics/posthog"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2704,8 +2704,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-qrcode@workspace:packages/data/qrcode"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/qrcode": "npm:^1.5.6"
     jsqr: "npm:^1.4.0"
     qrcode: "npm:^1.5.4"
@@ -2722,8 +2722,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-quickchart@workspace:packages/data/quickchart"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2736,8 +2736,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-read-pdf@workspace:packages/data/read-pdf"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     pdfjs-dist: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2751,8 +2751,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-redis@workspace:packages/cache/redis"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     ioredis: "npm:^5.8.2"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2766,8 +2766,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-rss-feed@workspace:packages/data/rss-feed"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     rss-parser: "npm:^3"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2782,8 +2782,8 @@ __metadata:
   resolution: "@pikku/addon-s3@workspace:packages/cloud/s3"
   dependencies:
     "@aws-sdk/client-s3": "npm:^3"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2796,8 +2796,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-segment@workspace:packages/analytics/segment"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2810,8 +2810,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-sendgrid@workspace:packages/email/sendgrid"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2824,8 +2824,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-sentry@workspace:packages/monitoring/sentry"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2838,8 +2838,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-shopify@workspace:packages/ecommerce/shopify"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2852,8 +2852,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-slack@workspace:packages/communication/slack"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     tsx: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2867,8 +2867,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-spreadsheet@workspace:packages/data/spreadsheet"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     csv-parse: "npm:^5"
     typescript: "npm:^5.7.2"
     xlsx: "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
@@ -2883,8 +2883,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ssh@workspace:packages/infrastructure/ssh"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/ssh2": "npm:^1"
     ssh2: "npm:^1"
     typescript: "npm:^5.7.2"
@@ -2899,8 +2899,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-stripe@workspace:packages/payments/stripe"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     stripe: "npm:^17.0.0"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2914,8 +2914,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-supabase@workspace:packages/database/supabase"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@supabase/supabase-js": "npm:^2.47.10"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
@@ -2929,8 +2929,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-survey-monkey@workspace:packages/forms/survey-monkey"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2943,8 +2943,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-telegram@workspace:packages/communication/telegram"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2957,8 +2957,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-twilio@workspace:packages/communication/twilio"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2971,8 +2971,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-typeform@workspace:packages/forms/typeform"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2985,8 +2985,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-uptimerobot@workspace:packages/monitoring/uptimerobot"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -2999,8 +2999,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-whatsapp@workspace:packages/communication/whatsapp"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/qrcode-terminal": "npm:^0"
     "@whiskeysockets/baileys": "npm:^7.0.0-rc.9"
     qrcode-terminal: "npm:^0.12.0"
@@ -3022,8 +3022,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-xml@workspace:packages/data/xml"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/xml2js": "npm:^0.4"
     typescript: "npm:^5.7.2"
     xml2js: "npm:^0.6"
@@ -3038,8 +3038,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-zapier@workspace:packages/automation/zapier"
   dependencies:
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -3048,14 +3048,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/cli@npm:*, @pikku/cli@npm:^0.12.4":
-  version: 0.12.4
-  resolution: "@pikku/cli@npm:0.12.4"
+"@pikku/cli@npm:^0.12.6":
+  version: 0.12.6
+  resolution: "@pikku/cli@npm:0.12.6"
   dependencies:
     "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.1"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/core": "npm:^0.12.5"
     "@pikku/inspector": "npm:^0.12.3"
-    "@pikku/openapi-to-zod-schema": "npm:^0.12.2"
+    "@pikku/openapi-to-zod-schema": "npm:^0.12.3"
     "@types/cookie": "npm:^1.0.0"
     "@types/json-schema": "npm:^7.0.15"
     chalk: "npm:^5.6.2"
@@ -3072,11 +3072,11 @@ __metadata:
     zod-to-ts: "npm:^2.0.0"
   bin:
     pikku: dist/bin/pikku.js
-  checksum: 10/84c7db24714fda30cf8a7d7d4be95a23cd995099fab7ee7cc2ce130eba66728160dd3a553d4d62c110827e6b26f2161d05e8e4b9851fdcffb4b8e9a0f9b0abc1
+  checksum: 10/d6be6dde758e78340444f8165dde406d6cc3e25ff33a0d2db4fc3feb3354959f4cba421dbf53242ad13c7157f4190bc24295da9f4f4355ffcb8829b40a0eaa9a
   languageName: node
   linkType: hard
 
-"@pikku/core@npm:*, @pikku/core@npm:^0.12.3, @pikku/core@npm:^0.12.4":
+"@pikku/core@npm:^0.12.3":
   version: 0.12.4
   resolution: "@pikku/core@npm:0.12.4"
   dependencies:
@@ -3085,6 +3085,18 @@ __metadata:
     path-to-regexp: "npm:^8.3.0"
     picoquery: "npm:^2.5.0"
   checksum: 10/11e211720319da54494d9b0df84da787f8e8a6e17d7e69de65c3e9352b8090fe0233df40ff883fd49f3b6b74e3e71366bc53bcb2855a390ff9af49cc66473661
+  languageName: node
+  linkType: hard
+
+"@pikku/core@npm:^0.12.5":
+  version: 0.12.5
+  resolution: "@pikku/core@npm:0.12.5"
+  dependencies:
+    "@standard-schema/spec": "npm:^1.1.0"
+    cookie: "npm:^1.1.1"
+    path-to-regexp: "npm:^8.3.0"
+    picoquery: "npm:^2.5.0"
+  checksum: 10/8635e27e81113d68e14b77e437a225f566f72f87fca341b34e15ecc3c0662e456b80781f6fab82898cf49eb8d1df6dc749cc1827000ab6b1407406f560262569
   languageName: node
   linkType: hard
 
@@ -3104,10 +3116,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/openapi-to-zod-schema@npm:^0.12.2":
-  version: 0.12.2
-  resolution: "@pikku/openapi-to-zod-schema@npm:0.12.2"
-  checksum: 10/192f9eefd128e589d2e90b925c9779b12ea370d0928cca75b3e5014fcb410f2a5e457d754cd288f4801ea1f984ea478375a183b02aabbdc61a2b924e7c7afe17
+"@pikku/openapi-to-zod-schema@npm:^0.12.3":
+  version: 0.12.3
+  resolution: "@pikku/openapi-to-zod-schema@npm:0.12.3"
+  checksum: 10/bcdd28fa936751ddaa140786de17da5433b05bb2ef24bac53225b1259da06055c7144feb55f5b6d6f4a020ca345e1761188798e34ad24d16a6100df994aae403
   languageName: node
   linkType: hard
 
@@ -3116,8 +3128,8 @@ __metadata:
   resolution: "@pikku/test-barcode@workspace:packages/data/barcode/test"
   dependencies:
     "@pikku/addon-barcode": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3130,8 +3142,8 @@ __metadata:
   resolution: "@pikku/test-coingecko@workspace:packages/crypto/coingecko/test"
   dependencies:
     "@pikku/addon-coingecko": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3144,8 +3156,8 @@ __metadata:
   resolution: "@pikku/test-compression@workspace:packages/data/compression/test"
   dependencies:
     "@pikku/addon-compression": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3158,8 +3170,8 @@ __metadata:
   resolution: "@pikku/test-edit-image@workspace:packages/data/edit-image/test"
   dependencies:
     "@pikku/addon-edit-image": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3172,8 +3184,8 @@ __metadata:
   resolution: "@pikku/test-elevenlabs@workspace:packages/ai/elevenlabs/test"
   dependencies:
     "@pikku/addon-elevenlabs": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3186,8 +3198,8 @@ __metadata:
   resolution: "@pikku/test-email-send@workspace:packages/email/email-send/test"
   dependencies:
     "@pikku/addon-email-send": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3201,8 +3213,8 @@ __metadata:
   resolution: "@pikku/test-flyio@workspace:packages/cloud/flyio/test"
   dependencies:
     "@pikku/addon-flyio": "workspace:*"
-    "@pikku/cli": "npm:*"
-    "@pikku/core": "npm:*"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3215,8 +3227,8 @@ __metadata:
   resolution: "@pikku/test-git@workspace:packages/devops/git/test"
   dependencies:
     "@pikku/addon-git": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3229,8 +3241,8 @@ __metadata:
   resolution: "@pikku/test-gmail@workspace:packages/email/gmail/test"
   dependencies:
     "@pikku/addon-gmail": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3243,8 +3255,8 @@ __metadata:
   resolution: "@pikku/test-grafana@workspace:packages/monitoring/grafana/test"
   dependencies:
     "@pikku/addon-grafana": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3258,8 +3270,8 @@ __metadata:
   resolution: "@pikku/test-hackernews@workspace:packages/data/hackernews/test"
   dependencies:
     "@pikku/addon-hackernews": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3272,8 +3284,8 @@ __metadata:
   resolution: "@pikku/test-html-extract@workspace:packages/data/html-extract/test"
   dependencies:
     "@pikku/addon-html-extract": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3286,8 +3298,8 @@ __metadata:
   resolution: "@pikku/test-html@workspace:packages/data/html/test"
   dependencies:
     "@pikku/addon-html": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3300,8 +3312,8 @@ __metadata:
   resolution: "@pikku/test-human-design@workspace:packages/esoteric/human-design/test"
   dependencies:
     "@pikku/addon-human-design": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3314,8 +3326,8 @@ __metadata:
   resolution: "@pikku/test-icalendar@workspace:packages/data/icalendar/test"
   dependencies:
     "@pikku/addon-icalendar": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3328,8 +3340,8 @@ __metadata:
   resolution: "@pikku/test-imap@workspace:packages/email/imap/test"
   dependencies:
     "@pikku/addon-imap": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3343,8 +3355,8 @@ __metadata:
   resolution: "@pikku/test-jenkins@workspace:packages/devops/jenkins/test"
   dependencies:
     "@pikku/addon-jenkins": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3358,8 +3370,8 @@ __metadata:
   resolution: "@pikku/test-kafka@workspace:packages/infrastructure/kafka/test"
   dependencies:
     "@pikku/addon-kafka": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@testcontainers/redpanda": "npm:^11.12.0"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
@@ -3374,8 +3386,8 @@ __metadata:
   resolution: "@pikku/test-ldap@workspace:packages/infrastructure/ldap/test"
   dependencies:
     "@pikku/addon-ldap": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3389,8 +3401,8 @@ __metadata:
   resolution: "@pikku/test-markdown@workspace:packages/data/markdown/test"
   dependencies:
     "@pikku/addon-markdown": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3403,8 +3415,8 @@ __metadata:
   resolution: "@pikku/test-metabase@workspace:packages/analytics/metabase/test"
   dependencies:
     "@pikku/addon-metabase": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3418,8 +3430,8 @@ __metadata:
   resolution: "@pikku/test-mongodb@workspace:packages/database/mongodb/test"
   dependencies:
     "@pikku/addon-mongodb": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@testcontainers/mongodb": "npm:^10"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
@@ -3434,8 +3446,8 @@ __metadata:
   resolution: "@pikku/test-mysql@workspace:packages/database/mysql/test"
   dependencies:
     "@pikku/addon-mysql": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@testcontainers/mysql": "npm:^10"
     "@types/node": "npm:^24"
     mysql2: "npm:^3.11.5"
@@ -3451,8 +3463,8 @@ __metadata:
   resolution: "@pikku/test-ollama@workspace:packages/ai/ollama/test"
   dependencies:
     "@pikku/addon-ollama": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3465,8 +3477,8 @@ __metadata:
   resolution: "@pikku/test-plentymarkets@workspace:packages/ecommerce/plentymarkets/test"
   dependencies:
     "@pikku/addon-plentymarkets": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3479,8 +3491,8 @@ __metadata:
   resolution: "@pikku/test-postgres@workspace:packages/database/postgres/test"
   dependencies:
     "@pikku/addon-postgres": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@testcontainers/postgresql": "npm:^10"
     "@types/node": "npm:^24"
     pg: "npm:^8.13.1"
@@ -3496,8 +3508,8 @@ __metadata:
   resolution: "@pikku/test-qrcode@workspace:packages/data/qrcode/test"
   dependencies:
     "@pikku/addon-qrcode": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3510,8 +3522,8 @@ __metadata:
   resolution: "@pikku/test-quickchart@workspace:packages/data/quickchart/test"
   dependencies:
     "@pikku/addon-quickchart": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3524,8 +3536,8 @@ __metadata:
   resolution: "@pikku/test-read-pdf@workspace:packages/data/read-pdf/test"
   dependencies:
     "@pikku/addon-read-pdf": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     pdfkit: "npm:^0.16"
     tsx: "npm:^4"
@@ -3539,8 +3551,8 @@ __metadata:
   resolution: "@pikku/test-redis@workspace:packages/cache/redis/test"
   dependencies:
     "@pikku/addon-redis": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@testcontainers/redis": "npm:^10"
     "@types/node": "npm:^24"
     ioredis: "npm:^5.8.2"
@@ -3556,8 +3568,8 @@ __metadata:
   resolution: "@pikku/test-rss-feed@workspace:packages/data/rss-feed/test"
   dependencies:
     "@pikku/addon-rss-feed": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3570,8 +3582,8 @@ __metadata:
   resolution: "@pikku/test-s3@workspace:packages/cloud/s3/test"
   dependencies:
     "@pikku/addon-s3": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3585,8 +3597,8 @@ __metadata:
   resolution: "@pikku/test-shopify@workspace:packages/ecommerce/shopify/test"
   dependencies:
     "@pikku/addon-shopify": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3599,8 +3611,8 @@ __metadata:
   resolution: "@pikku/test-spreadsheet@workspace:packages/data/spreadsheet/test"
   dependencies:
     "@pikku/addon-spreadsheet": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3613,8 +3625,8 @@ __metadata:
   resolution: "@pikku/test-ssh@workspace:packages/infrastructure/ssh/test"
   dependencies:
     "@pikku/addon-ssh": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3628,8 +3640,8 @@ __metadata:
   resolution: "@pikku/test-stripe@workspace:packages/payments/stripe/test"
   dependencies:
     "@pikku/addon-stripe": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3643,8 +3655,8 @@ __metadata:
   resolution: "@pikku/test-supabase@workspace:packages/database/supabase/test"
   dependencies:
     "@pikku/addon-supabase": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@supabase/supabase-js": "npm:^2"
     "@types/node": "npm:^24"
     pg: "npm:^8"
@@ -3660,8 +3672,8 @@ __metadata:
   resolution: "@pikku/test-telegram@workspace:packages/communication/telegram/test"
   dependencies:
     "@pikku/addon-telegram": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3674,8 +3686,8 @@ __metadata:
   resolution: "@pikku/test-whisper-asr@workspace:packages/ai/whisper-asr/test"
   dependencies:
     "@pikku/addon-ai-whisper-asr": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3689,8 +3701,8 @@ __metadata:
   resolution: "@pikku/test-xml@workspace:packages/data/xml/test"
   dependencies:
     "@pikku/addon-xml": "workspace:*"
-    "@pikku/cli": "npm:^0.12.4"
-    "@pikku/core": "npm:^0.12.4"
+    "@pikku/cli": "npm:^0.12.6"
+    "@pikku/core": "npm:^0.12.5"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"

@@ -10,7 +10,9 @@
     "displayName": "Cloudflare",
     "description": "Web security and CDN",
     "categories": [
-      "Zones,DNS,Workers"
+      "Zones",
+      "DNS",
+      "Workers"
     ],
     "icon": "./cloudflare.svg"
   }

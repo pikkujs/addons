@@ -1,10 +1,11 @@
-import { OAuth2Client, OAuth2Config } from '@pikku/core/oauth2'
+import { OAuth2Client } from '@pikku/core/oauth2'
+import type { OAuth2CredentialConfig } from '@pikku/core/secret'
 import type { SecretService } from '@pikku/core'
 
 const BASE_URL = 'https://storage.googleapis.com/storage/v1'
 const UPLOAD_URL = 'https://storage.googleapis.com/upload/storage/v1'
 
-export const GCS_OAUTH2_CONFIG: OAuth2Config = {
+export const GCS_OAUTH2_CONFIG: OAuth2CredentialConfig = {
   tokenSecretId: 'GOOGLE_CLOUD_STORAGE_TOKENS',
   authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth',
   tokenUrl: 'https://oauth2.googleapis.com/token',

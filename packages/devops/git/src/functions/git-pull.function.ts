@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitPullInput = z.object({
   directory: z.string().describe('Path to the git repository'),
@@ -32,8 +32,8 @@ export const gitPull = pikkuSessionlessFunc({
     const result = await git.pull(remote, branch, options)
     return {
       files: result.files,
-      insertions: result.insertions,
-      deletions: result.deletions,
+      insertions: Object.values(result.insertions).reduce((a, b) => a + b, 0),
+      deletions: Object.values(result.deletions).reduce((a, b) => a + b, 0),
       summary: {
         changes: result.summary.changes,
         insertions: result.summary.insertions,

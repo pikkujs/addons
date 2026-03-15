@@ -1,9 +1,10 @@
-import { OAuth2Client, OAuth2Config } from '@pikku/core/oauth2'
+import { OAuth2Client } from '@pikku/core/oauth2'
+import type { OAuth2CredentialConfig } from '@pikku/core/secret'
 import type { SecretService } from '@pikku/core'
 
 const DATA_API_URL = 'https://analyticsdata.googleapis.com'
 
-export const GA4_OAUTH2_CONFIG: OAuth2Config = {
+export const GA4_OAUTH2_CONFIG: OAuth2CredentialConfig = {
   tokenSecretId: 'GOOGLE_ANALYTICS_TOKENS',
   authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth',
   tokenUrl: 'https://oauth2.googleapis.com/token',

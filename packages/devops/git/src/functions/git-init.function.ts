@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import simpleGit from 'simple-git'
+import { simpleGit } from 'simple-git'
 
 export const GitInitInput = z.object({
   directory: z.string().describe('Path where the repository should be initialized'),
@@ -18,7 +18,7 @@ export const gitInit = pikkuSessionlessFunc({
   node: { displayName: 'Git Init', category: 'Version Control', type: 'action' },
   func: async (_services, { directory, bare }) => {
     const git = simpleGit(directory)
-    await git.init(bare)
+    await git.init(bare ?? false)
     return { directory }
   },
 })
