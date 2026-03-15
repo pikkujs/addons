@@ -5,9 +5,9 @@
     "packages/**"
   ],
   "scripts": {
-    "pikku": "yarn workspaces foreach -p -A run pikku",
-    "prebuild": "yarn workspaces foreach -A run prebuild",
-    "build": "yarn workspaces foreach -A run build",
+    "pikku": "yarn workspaces foreach -p -A --exclude '@pikku/test-*' run pikku",
+    "prebuild": "yarn workspaces foreach -A --exclude '@pikku/test-*' run prebuild",
+    "build": "yarn workspaces foreach -A --exclude '@pikku/test-*' run build",
     "tsc": "yarn workspaces foreach -A -p run tsc",
     "test": "yarn workspaces foreach -A run test",
     "ncu": "yarn workspaces foreach -p -A run ncu",
