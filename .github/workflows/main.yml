@@ -161,6 +161,7 @@ jobs:
           node-version: 22
           cache: yarn
       - run: yarn install
+      - run: yarn pikku
 
       - name: Create Release Pull Request
         id: changesets
