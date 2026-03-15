@@ -50,9 +50,79 @@ jobs:
           echo "has_addons=$([[ $has_addons -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           echo "Changed addons: $has_addons"
 
+  check-changesets:
+    name: Verify changesets for changed packages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: |
+          # Get changed files in this push
+          changed_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} || git diff --name-only HEAD~1 HEAD)
+
+          # Extract unique package dirs (packages/<category>/<name>)
+          changed_pkgs=$(echo "$changed_files" | grep '^packages/' | sed 's|\(packages/[^/]*/[^/]*\)/.*|\1|' | sort -u)
+
+          if [ -z "$changed_pkgs" ]; then
+            echo "No package changes detected, skipping changeset check"
+            exit 0
+          fi
+
+          # Load changeset ignore list
+          ignored=$(node -e "
+            const cfg = require('./.changeset/config.json');
+            cfg.ignore.forEach(n => console.log(n));
+          ")
+
+          # Load packages covered by changesets
+          covered=$(node -e "
+            const fs = require('fs');
+            const path = require('path');
+            const csDir = '.changeset';
+            const covered = new Set();
+            for (const f of fs.readdirSync(csDir)) {
+              if (!f.endsWith('.md') || f === 'README.md') continue;
+              const content = fs.readFileSync(path.join(csDir, f), 'utf8');
+              const match = content.match(/^---\n([\s\S]*?)\n---/);
+              if (!match) continue;
+              for (const line of match[1].split('\n')) {
+                const m = line.match(/^\"(.+?)\":/);
+                if (m) covered.add(m[1]);
+              }
+            }
+            covered.forEach(n => console.log(n));
+          ")
+
+          missing=""
+          while IFS= read -r pkg_dir; do
+            [ -z "$pkg_dir" ] && continue
+            [ ! -f "$pkg_dir/package.json" ] && continue
+            pkg_name=$(node -p "require('./$pkg_dir/package.json').name")
+
+            # Skip ignored packages (test packages etc.)
+            if echo "$ignored" | grep -qx "$pkg_name"; then
+              continue
+            fi
+
+            # Check if covered by a changeset
+            if ! echo "$covered" | grep -qx "$pkg_name"; then
+              missing="$missing\n  - $pkg_name ($pkg_dir)"
+            fi
+          done <<< "$changed_pkgs"
+
+          if [ -n "$missing" ]; then
+            echo "::error::The following changed packages are missing changesets:$missing"
+            echo ""
+            echo "Run 'npx changeset' to add changesets for these packages."
+            exit 1
+          fi
+
+          echo "All changed packages have changesets ✓"
+
   build:
     name: Build (${{ matrix.addon }})
-    needs: discover
+    needs: [discover, check-changesets]
     if: needs.discover.outputs.has_addons == 'true'
     runs-on: ubuntu-latest
     strategy:
