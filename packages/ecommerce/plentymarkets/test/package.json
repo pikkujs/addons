@@ -12,7 +12,7 @@
     "ncu": "npx npm-check-updates"
   },
   "dependencies": {
-    "@pikku/addon-plentymarkets": "file:..",
+    "@pikku/addon-plentymarkets": "workspace:*",
     "@pikku/core": "^0.12.4"
   },
   "devDependencies": {

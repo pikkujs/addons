@@ -12,7 +12,7 @@
     "ncu": "npx npm-check-updates"
   },
   "dependencies": {
-    "@pikku/addon-gmail": "file:..",
+    "@pikku/addon-gmail": "workspace:*",
     "@pikku/core": "^0.12.4"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-flyio": "file:..",
+    "@pikku/addon-flyio": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

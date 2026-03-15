@@ -11,7 +11,7 @@
     "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-markdown": "file:..",
+    "@pikku/addon-markdown": "workspace:*",
     "@pikku/core": "^0.12.4"
   },
   "devDependencies": {

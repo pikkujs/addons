@@ -8,9 +8,28 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  build:
-    name: Build
+  discover:
+    name: Discover addons
     runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.find.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: find
+        run: |
+          matrix=$(find packages -maxdepth 3 -name pikku.config.json -not -path '*/test/*' -not -path '*/node_modules/*' \
+            | xargs -I{} dirname {} \
+            | sort \
+            | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
+          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+
+  build:
+    name: Build (${{ matrix.addon }})
+    needs: discover
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -20,7 +39,8 @@ jobs:
           node-version: 22
           cache: yarn
       - run: yarn install
-      - run: yarn tsc
+      - run: cd ${{ matrix.addon }} && npx pikku all
+      - run: cd ${{ matrix.addon }} && npx tsc --noEmit
 
   release:
     name: Release
@@ -35,6 +55,8 @@ jobs:
           node-version: 22
           cache: yarn
       - run: yarn install
+      - run: yarn workspaces foreach --all run pikku
+      - run: yarn workspaces foreach --all run build
 
       - name: Create Release Pull Request
         id: changesets
