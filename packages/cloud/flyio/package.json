@@ -21,6 +21,7 @@
     "dist"
   ],
   "scripts": {
+    "prepublishOnly": "yarn build",
     "prebuild": "pikku all",
     "build": "tsc && cp -r .pikku dist/",
     "pikku": "pikku all"

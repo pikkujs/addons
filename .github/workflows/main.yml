@@ -9,23 +9,49 @@ concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   discover:
-    name: Discover addons
+    name: Discover changed addons
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.find.outputs.matrix }}
+      has_addons: ${{ steps.find.outputs.has_addons }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - id: find
         run: |
-          matrix=$(find packages -maxdepth 3 -name pikku.config.json -not -path '*/test/*' -not -path '*/node_modules/*' \
+          # Get all addon directories
+          all_addons=$(find packages -maxdepth 3 -name pikku.config.json -not -path '*/test/*' -not -path '*/node_modules/*' \
             | xargs -I{} dirname {} \
-            | sort \
-            | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
+            | sort)
+
+          # Get changed files since previous commit
+          changed=$(git diff --name-only HEAD~1 2>/dev/null || echo "ALL")
+
+          # If root-level files changed (lockfile, root config), rebuild all
+          if echo "$changed" | grep -qE '^(yarn\.lock|package\.json|tsconfig\.json|\.github/)' || [ "$changed" = "ALL" ]; then
+            addons="$all_addons"
+          else
+            # Filter to only addons with changes
+            addons=""
+            for addon in $all_addons; do
+              if echo "$changed" | grep -q "^${addon}/"; then
+                addons="$addons
+          $addon"
+              fi
+            done
+          fi
+
+          matrix=$(echo "$addons" | grep -v '^$' | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
+          has_addons=$(echo "$addons" | grep -v '^$' | wc -l | tr -d ' ')
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
+          echo "has_addons=$([[ $has_addons -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "Changed addons: $has_addons"
 
   build:
     name: Build (${{ matrix.addon }})
     needs: discover
+    if: needs.discover.outputs.has_addons == 'true'
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
@@ -45,7 +71,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: build
+    needs: [discover, build]
+    if: always() && !failure() && !cancelled()
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -55,8 +82,6 @@ jobs:
           node-version: 22
           cache: yarn
       - run: yarn install
-      - run: yarn workspaces foreach --all run pikku
-      - run: yarn workspaces foreach --all run build
 
       - name: Create Release Pull Request
         id: changesets
