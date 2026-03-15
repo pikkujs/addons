@@ -58,6 +58,13 @@ jobs:
         with:
           fetch-depth: 0
       - run: |
+          # Skip changeset check for "Version Packages" commits (changesets action)
+          commit_msg=$(git log -1 --format=%s)
+          if [[ "$commit_msg" == "Version Packages" ]]; then
+            echo "Version Packages commit, skipping changeset check"
+            exit 0
+          fi
+
           # Get changed files in this push
           changed_files=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} || git diff --name-only HEAD~1 HEAD)
 
