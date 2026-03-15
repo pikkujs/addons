@@ -42,7 +42,7 @@ jobs:
             done
           fi
 
-          matrix=$(echo "$addons" | grep -v '^$' | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
+          matrix=$(echo "$addons" | grep -v '^$' | head -5 | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
           has_addons=$(echo "$addons" | grep -v '^$' | wc -l | tr -d ' ')
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
           echo "has_addons=$([[ $has_addons -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
