@@ -16,33 +16,35 @@ jobs:
       has_addons: ${{ steps.find.outputs.has_addons }}
     steps:
       - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          fetch-depth: 2
+          node-version: 22
+          cache: yarn
+      - run: yarn install
       - id: find
         run: |
-          # Get all addon directories
-          all_addons=$(find packages -maxdepth 3 -name pikku.config.json -not -path '*/test/*' -not -path '*/node_modules/*' \
-            | xargs -I{} dirname {} \
-            | sort)
+          # Get packages with pending changesets
+          npx changeset status --output cs-status.json 2>/dev/null || true
 
-          # Get changed files since previous commit
-          changed=$(git diff --name-only HEAD~1 2>/dev/null || echo "ALL")
+          # Map package names to directories
+          addons=$(node -e "
+            const fs = require('fs');
+            if (!fs.existsSync('cs-status.json')) process.exit(0);
+            const status = JSON.parse(fs.readFileSync('cs-status.json', 'utf8'));
+            const names = new Set(status.releases.map(r => r.name));
+            const { execSync } = require('child_process');
+            const dirs = execSync('find packages -maxdepth 3 -name package.json -not -path \"*/test/*\" -not -path \"*/node_modules/*\"', { encoding: 'utf8' })
+              .trim().split('\n');
+            for (const dir of dirs) {
+              const pkg = JSON.parse(fs.readFileSync(dir, 'utf8'));
+              if (names.has(pkg.name)) {
+                console.log(dir.replace('/package.json', ''));
+              }
+            }
+          ")
 
-          # If root-level files changed (lockfile, root config), rebuild all
-          if echo "$changed" | grep -qE '^(yarn\.lock|package\.json|tsconfig\.json|\.github/)' || [ "$changed" = "ALL" ]; then
-            addons="$all_addons"
-          else
-            # Filter to only addons with changes
-            addons=""
-            for addon in $all_addons; do
-              if echo "$changed" | grep -q "^${addon}/"; then
-                addons="$addons
-          $addon"
-              fi
-            done
-          fi
-
-          matrix=$(echo "$addons" | grep -v '^$' | head -5 | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
+          matrix=$(echo "$addons" | grep -v '^$' | sort | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
           has_addons=$(echo "$addons" | grep -v '^$' | wc -l | tr -d ' ')
           echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
           echo "has_addons=$([[ $has_addons -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
