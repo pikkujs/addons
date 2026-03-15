@@ -10,7 +10,7 @@
     "displayName": "Edit Image",
     "description": "Image manipulation (resize, crop, rotate, blur)",
     "categories": [
-      "Data"
+      "Image"
     ],
     "icon": "./edit-image.svg"
   }
