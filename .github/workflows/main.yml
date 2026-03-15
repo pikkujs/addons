@@ -163,29 +163,29 @@ jobs:
       - run: yarn install
       - run: yarn pikku
 
-      - name: Create Release Pull Request
+      - name: Create Release Pull Request (dry run)
         id: changesets
         uses: changesets/action@v1
         with:
           version: node .github/changeset-version.cjs
-          publish: yarn release
+          # publish: yarn release
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: '0'
 
-      - name: Notify registry of published packages
-        if: steps.changesets.outputs.published == 'true'
-        run: |
-          echo '${{ steps.changesets.outputs.publishedPackages }}' | \
-            node -e "
-              const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
-              for (const pkg of pkgs) {
-                console.log(pkg.name);
-              }
-            " | while read -r name; do
-              bash scripts/notify-registry.sh "$name"
-            done
-        env:
-          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
+      # - name: Notify registry of published packages
+      #   if: steps.changesets.outputs.published == 'true'
+      #   run: |
+      #     echo '${{ steps.changesets.outputs.publishedPackages }}' | \
+      #       node -e "
+      #         const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+      #         for (const pkg of pkgs) {
+      #           console.log(pkg.name);
+      #         }
+      #       " | while read -r name; do
+      #         bash scripts/notify-registry.sh "$name"
+      #       done
+      #   env:
+      #     REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
