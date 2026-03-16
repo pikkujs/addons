@@ -163,12 +163,12 @@ jobs:
       - run: yarn install
       - run: yarn pikku
 
-      - name: Create Release Pull Request (dry run)
+      - name: Create Release Pull Request or Publish
         id: changesets
         uses: changesets/action@v1
         with:
           version: node .github/changeset-version.cjs
-          # publish: yarn release
+          publish: yarn release
           createGithubReleases: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
