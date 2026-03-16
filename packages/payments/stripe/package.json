@@ -7,21 +7,21 @@
   },
   "exports": {
     ".": {
-      "types": "./dist/src/index.d.ts",
-      "import": "./dist/src/index.js"
+      "types": "./src/index.d.ts",
+      "import": "./src/index.js"
     },
-    "./.pikku/*": "./dist/.pikku/*",
-    "./.pikku/pikku-metadata.gen.json": "./dist/.pikku/pikku-metadata.gen.json",
+    "./.pikku/*": "./.pikku/*",
+    "./.pikku/pikku-metadata.gen.json": "./.pikku/pikku-metadata.gen.json",
     "./.pikku/rpc/pikku-rpc-wirings-map.internal.gen.js": {
-      "types": "./dist/.pikku/rpc/pikku-rpc-wirings-map.internal.gen.d.ts"
+      "types": "./.pikku/rpc/pikku-rpc-wirings-map.internal.gen.d.ts"
     }
   },
-  "files": [
-    "dist"
-  ],
+  "publishConfig": {
+    "directory": "dist"
+  },
   "scripts": {
     "prebuild": "pikku all",
-    "build": "tsc && cp -r .pikku dist/",
+    "build": "tsc && cp -r .pikku dist/ && cp package.json dist/",
     "pikku": "pikku all",
     "ncu": "npx npm-check-updates",
     "test": "cd test && yarn test"
