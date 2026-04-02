@@ -136,10 +136,7 @@ async function classifyWithAI(
   spec: any,
   testNote: string
 ) {
-  const apiKey = process.env.ANTHROPIC_API_KEY
-  if (!apiKey) {
-    return { authType: 'unknown' as const, perUser: false }
-  }
+  const { execFileSync } = await import('child_process')
 
   const info = {
     title: spec.info?.title,
@@ -158,7 +155,7 @@ Servers: ${JSON.stringify(info.servers)}
 Sample endpoints: ${JSON.stringify(info.paths)}
 Test result: ${testNote}
 
-Respond with ONLY a JSON object:
+Respond with ONLY a JSON object (no markdown, no explanation):
 {
   "authType": "api_key" | "oauth2" | "basic" | "bearer" | "none" | "unknown",
   "location": "header" | "query" | "cookie" (if api_key),
@@ -168,22 +165,11 @@ Respond with ONLY a JSON object:
 }`
 
   try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': apiKey,
-        'anthropic-version': '2023-06-01',
-      },
-      body: JSON.stringify({
-        model: 'claude-haiku-4-5-20251001',
-        max_tokens: 256,
-        messages: [{ role: 'user', content: prompt }],
-      }),
-    })
+    const text = execFileSync('claude', ['-p', prompt, '--model', 'haiku'], {
+      timeout: 30_000,
+      stdio: ['pipe', 'pipe', 'pipe'],
+    }).toString()
 
-    const json = (await res.json()) as any
-    const text = json.content?.[0]?.text || ''
     const match = text.match(/\{[\s\S]*\}/)
     if (match) {
       return JSON.parse(match[0])
