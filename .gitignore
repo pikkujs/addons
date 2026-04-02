@@ -1,5 +1,11 @@
 .DS_Store
 
+# Auto-generated OpenAPI addons (users generate on demand via pikku new addon --openapi)
+/openapi/
+
+# Downloaded OpenAPI specs
+test-openapi-results/specs/
+
 # Pikku generated
 *.gen.ts
 .pikku
