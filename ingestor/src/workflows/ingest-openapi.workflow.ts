@@ -27,7 +27,7 @@ export const ingestOpenapi = pikkuWorkflowFunc<
       name: api.name,
       title: api.title,
       desc: ((api.description as string) ?? '').slice(0, 100),
-      category: ((api.categories as string[]) ?? ['general'])[0],
+      category: ((api.categories as string[]) ?? [])[0] ?? 'general',
       swaggerUrl: api.swaggerUrl,
       swaggerYamlUrl: (api.swaggerYamlUrl ?? '') as string,
       servers: (api.servers ?? []) as string[],

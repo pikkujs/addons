@@ -2,6 +2,9 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { execFileSync } from 'child_process'
 import { existsSync } from 'fs'
+import { resolve } from 'path'
+
+const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
 
 export const GenerateAddonInput = z.object({
   name: z.string(),
@@ -30,9 +33,11 @@ export const generateAddon = pikkuSessionlessFunc({
       return { success: true, addonDir }
     }
 
+    logger.info(`INGESTOR_BIN: ${INGESTOR_BIN}`)
+
     try {
       const args = [
-        'pikku', 'new', 'addon', data.name,
+        'new', 'addon', data.name,
         '--displayName', data.displayName,
         '--description', data.desc.slice(0, 100),
         '--category', data.category,
@@ -44,7 +49,7 @@ export const generateAddon = pikkuSessionlessFunc({
         args.push('--camelCase')
       }
 
-      execFileSync('npx', args, {
+      execFileSync(`${INGESTOR_BIN}/pikku`, args, {
         timeout: 120_000,
         stdio: 'pipe',
       })

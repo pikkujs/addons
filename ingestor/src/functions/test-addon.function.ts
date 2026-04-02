@@ -1,8 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import { execSync } from 'child_process'
+import { execSync, execFileSync } from 'child_process'
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
-import { join } from 'path'
+import { join, resolve } from 'path'
+
+const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
+const ENV = { ...process.env, PATH: `${INGESTOR_BIN}:${process.env.PATH}` }
 
 export const TestAddonInput = z.object({
   addonDir: z.string(),
@@ -46,7 +49,7 @@ export const testAddon = pikkuSessionlessFunc({
 
     // pikku all for test
     try {
-      execSync('npx pikku all', {
+      execFileSync(`${INGESTOR_BIN}/pikku`, ['all'], {
         cwd: testDir,
         timeout: 120_000,
         stdio: 'pipe',
@@ -70,6 +73,7 @@ export const testAddon = pikkuSessionlessFunc({
           timeout: 30_000,
           stdio: 'pipe',
           env: { ...process.env, ...env },
+          shell: '/bin/zsh',
         }
       )
       const out = result.toString()

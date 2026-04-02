@@ -1,9 +1,13 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import { execSync } from 'child_process'
+import { execFileSync } from 'child_process'
 import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs'
 import { cpSync } from 'fs'
-import { join } from 'path'
+import { join, resolve } from 'path'
+
+// Resolve the ingestor's node_modules/.bin so spawned commands can find pikku/tsc
+const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
+const ENV = { ...process.env, PATH: `${INGESTOR_BIN}:${process.env.PATH}` }
 
 export const BuildAddonInput = z.object({
   addonDir: z.string(),
@@ -22,6 +26,7 @@ export const buildAddon = pikkuSessionlessFunc({
   input: BuildAddonInput,
   output: BuildAddonOutput,
   func: async ({ logger }, data) => {
+    logger.info(`INGESTOR_BIN: ${INGESTOR_BIN}`)
     const start = Date.now()
     const funcsDir = join(data.addonDir, 'src', 'functions')
 
@@ -45,13 +50,15 @@ export const buildAddon = pikkuSessionlessFunc({
 
     // pikku all
     try {
-      execSync('npx pikku all', {
+      execFileSync(`${INGESTOR_BIN}/pikku`, ['all'], {
         cwd: data.addonDir,
         timeout: 300_000,
         stdio: 'pipe',
       })
     } catch (e: any) {
-      return { success: false, stage: 'pikku-all', error: e.message.slice(0, 200) }
+      const err = e.stderr?.toString().slice(-200) || e.message.slice(0, 200)
+      logger.warn(`${data.addonName}: pikku all failed — ${err}`)
+      return { success: false, stage: 'pikku-all', error: err }
     }
 
     // Restore imports
@@ -73,13 +80,15 @@ export const buildAddon = pikkuSessionlessFunc({
 
     // tsc
     try {
-      execSync('npx tsc', {
+      execFileSync(`${INGESTOR_BIN}/tsc`, [], {
         cwd: data.addonDir,
         timeout: 120_000,
         stdio: 'pipe',
       })
     } catch (e: any) {
-      return { success: false, stage: 'tsc', error: e.stderr?.toString().slice(0, 200) || e.message }
+      const err = e.stderr?.toString().slice(-200) || e.message.slice(0, 200)
+      logger.warn(`${data.addonName}: tsc failed — ${err}`)
+      return { success: false, stage: 'tsc', error: err }
     }
 
     // Copy .pikku to dist/.pikku
