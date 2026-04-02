@@ -1,5 +1,0 @@
-export * from './slack.secret.js'
-export * from './slack-api.service.js'
-export * from './functions/messages/send.function.js'
-export * from './functions/channels/list.function.js'
-export * from './functions/users/list.function.js'
