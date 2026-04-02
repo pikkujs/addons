@@ -1,0 +1,37 @@
+{
+  "name": "@pikku/addon-ingestor",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pikku": "pikku",
+    "prebuild": "pikku all",
+    "build": "tsc",
+    "start": "node --import tsx src/run.ts",
+    "ingest": "node --import tsx src/run.ts"
+  },
+  "dependencies": {
+    "@pikku/core": "*",
+    "@pikku/kysely": "*",
+    "@pikku/kysely-sqlite": "*",
+    "@pikku/schema-cfworker": "^0.12.2",
+    "better-sqlite3": "^11",
+    "kysely": "^0.27",
+    "kysely-plugin-serialize": "^0.6",
+    "zod": "^4"
+  },
+  "resolutions": {
+    "kysely": "0.27.6",
+    "@pikku/cli": "portal:/Users/yasser/git/pikku/pikku-openapi-fixes/packages/cli"
+  },
+  "devDependencies": {
+    "@pikku/cli": "0.12.9",
+    "@types/better-sqlite3": "^7",
+    "@types/node": "^24",
+    "tsx": "^4",
+    "typescript": "^5.9"
+  }
+}
