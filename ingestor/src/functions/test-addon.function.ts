@@ -1,11 +1,10 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import { execSync, execFileSync } from 'child_process'
-import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'fs'
+import { execSync } from 'child_process'
+import { existsSync, readFileSync, writeFileSync, mkdirSync, realpathSync } from 'fs'
 import { join, resolve } from 'path'
 
-const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
-const ENV = { ...process.env, PATH: `${INGESTOR_BIN}:${process.env.PATH}` }
+const PIKKU_JS = realpathSync(resolve(import.meta.dirname, '../../node_modules/.bin/pikku'))
 
 export const TestAddonInput = z.object({
   addonDir: z.string(),
@@ -49,7 +48,7 @@ export const testAddon = pikkuSessionlessFunc({
 
     // pikku all for test
     try {
-      execFileSync(`${INGESTOR_BIN}/pikku`, ['all'], {
+      execSync(`node "${PIKKU_JS}" all`, {
         cwd: testDir,
         timeout: 120_000,
         stdio: 'pipe',
@@ -60,23 +59,18 @@ export const testAddon = pikkuSessionlessFunc({
 
     // Run test
     const scream = data.addonName.replace(/-/g, '_').toUpperCase()
-    const env: Record<string, string> = {}
+    const env: Record<string, string> = { ...process.env as any }
     if (data.baseUrl) {
       env[`${scream}_BASE_URL`] = data.baseUrl
     }
 
     try {
-      const result = execSync(
-        "node --preserve-symlinks --import tsx --test 'src/**/*.test.ts'",
-        {
-          cwd: testDir,
-          timeout: 30_000,
-          stdio: 'pipe',
-          env: { ...process.env, ...env },
-          shell: '/bin/zsh',
-        }
-      )
-      const out = result.toString()
+      execSync("node --preserve-symlinks --import tsx --test 'src/**/*.test.ts'", {
+        cwd: testDir,
+        timeout: 30_000,
+        stdio: 'pipe',
+        env,
+      })
       const durationMs = Date.now() - start
       return { success: true, testRan: true, note: 'pass', durationMs }
     } catch (e: any) {
@@ -121,7 +115,6 @@ function ensureRpcWiring(testDir: string, addonName: string) {
   const funcs = JSON.parse(readFileSync(funcMeta, 'utf8'))
   if (!funcs || Object.keys(funcs).length === 0) return
 
-  // Create RPC meta
   const rpcDir = join(testDir, '.pikku', 'rpc')
   mkdirSync(rpcDir, { recursive: true })
 
@@ -132,7 +125,6 @@ function ensureRpcWiring(testDir: string, addonName: string) {
     `import { pikkuState } from '@pikku/core/internal'\nimport metaData from './pikku-rpc-wirings-meta.internal.gen.json' with { type: 'json' }\npikkuState(null, 'rpc', 'meta', metaData as Record<string, string>)\n`
   )
 
-  // Create function registration
   const pascal = addonName.replace(/(?:^|[-_])(.)/g, (_, c) => c.toUpperCase())
   const testFuncName = `test${pascal}`
   const funcDir = join(testDir, '.pikku', 'function')
@@ -141,7 +133,6 @@ function ensureRpcWiring(testDir: string, addonName: string) {
     `import { addFunction } from '@pikku/core'\nimport { ${testFuncName} } from '../../src/${addonName}-tests.function.js'\naddFunction('${testFuncName}', ${testFuncName})\n`
   )
 
-  // Update bootstrap
   const imports = []
   if (!content.includes('pikku-rpc-wirings-meta.internal.gen.js')) {
     imports.push("import './rpc/pikku-rpc-wirings-meta.internal.gen.js'")

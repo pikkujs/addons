@@ -1,13 +1,11 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import { execFileSync } from 'child_process'
-import { existsSync, readdirSync, readFileSync, writeFileSync } from 'fs'
-import { cpSync } from 'fs'
+import { execSync } from 'child_process'
+import { existsSync, readdirSync, readFileSync, writeFileSync, cpSync, realpathSync } from 'fs'
 import { join, resolve } from 'path'
 
-// Resolve the ingestor's node_modules/.bin so spawned commands can find pikku/tsc
-const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
-const ENV = { ...process.env, PATH: `${INGESTOR_BIN}:${process.env.PATH}` }
+const PIKKU_JS = realpathSync(resolve(import.meta.dirname, '../../node_modules/.bin/pikku'))
+const TSC_JS = realpathSync(resolve(import.meta.dirname, '../../node_modules/.bin/tsc'))
 
 export const BuildAddonInput = z.object({
   addonDir: z.string(),
@@ -22,11 +20,10 @@ export const BuildAddonOutput = z.object({
 })
 
 export const buildAddon = pikkuSessionlessFunc({
-  description: 'Build an addon: stub imports → pikku all → restore → tsc → copy .pikku to dist',
+  description: 'Build an addon: stub imports, pikku all, restore, tsc, copy .pikku to dist',
   input: BuildAddonInput,
   output: BuildAddonOutput,
   func: async ({ logger }, data) => {
-    logger.info(`INGESTOR_BIN: ${INGESTOR_BIN}`)
     const start = Date.now()
     const funcsDir = join(data.addonDir, 'src', 'functions')
 
@@ -50,7 +47,7 @@ export const buildAddon = pikkuSessionlessFunc({
 
     // pikku all
     try {
-      execFileSync(`${INGESTOR_BIN}/pikku`, ['all'], {
+      execSync(`node "${PIKKU_JS}" all`, {
         cwd: data.addonDir,
         timeout: 300_000,
         stdio: 'pipe',
@@ -80,7 +77,7 @@ export const buildAddon = pikkuSessionlessFunc({
 
     // tsc
     try {
-      execFileSync(`${INGESTOR_BIN}/tsc`, [], {
+      execSync(`node "${TSC_JS}"`, {
         cwd: data.addonDir,
         timeout: 120_000,
         stdio: 'pipe',

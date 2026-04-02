@@ -1,10 +1,10 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
-import { execFileSync } from 'child_process'
-import { existsSync } from 'fs'
+import { execSync } from 'child_process'
+import { existsSync, realpathSync } from 'fs'
 import { resolve } from 'path'
 
-const INGESTOR_BIN = resolve(import.meta.dirname, '../../node_modules/.bin')
+const PIKKU_JS = realpathSync(resolve(import.meta.dirname, '../../node_modules/.bin/pikku'))
 
 export const GenerateAddonInput = z.object({
   name: z.string(),
@@ -33,23 +33,20 @@ export const generateAddon = pikkuSessionlessFunc({
       return { success: true, addonDir }
     }
 
-    logger.info(`INGESTOR_BIN: ${INGESTOR_BIN}`)
-
     try {
-      const args = [
-        'new', 'addon', data.name,
-        '--displayName', data.displayName,
-        '--description', data.desc.slice(0, 100),
-        '--category', data.category,
-        '--openapi', data.specPath,
-        '--dir', data.outputDir,
-        '--test', 'true',
-      ]
-      if (data.camelCase) {
-        args.push('--camelCase')
-      }
+      const esc = (s: string) => `'${s.replace(/'/g, "'\\''")}'`
+      const parts = [
+        `node "${PIKKU_JS}" new addon ${esc(data.name)}`,
+        `--displayName ${esc(data.displayName)}`,
+        `--description ${esc(data.desc.slice(0, 100))}`,
+        `--category ${esc(data.category)}`,
+        `--openapi ${esc(data.specPath)}`,
+        `--dir ${esc(data.outputDir)}`,
+        '--test true',
+        data.camelCase ? '--camelCase' : '',
+      ].filter(Boolean)
 
-      execFileSync(`${INGESTOR_BIN}/pikku`, args, {
+      execSync(parts.join(' '), {
         timeout: 120_000,
         stdio: 'pipe',
       })
