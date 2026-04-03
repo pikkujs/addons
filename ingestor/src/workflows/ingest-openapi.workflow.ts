@@ -14,6 +14,7 @@ export const ingestOpenapi = pikkuWorkflowFunc<
     specsDir: string
     maxOps: number
     camelCase: boolean
+    limit: number
   },
   void
 >(async ({}, data, { workflow }) => {
@@ -22,7 +23,9 @@ export const ingestOpenapi = pikkuWorkflowFunc<
     limit: 10000,
   })
 
-  for (const api of page.apis) {
+  const sorted = [...page.apis].sort((a: any, b: any) => b.name.localeCompare(a.name))
+  const apis = data.limit > 0 ? sorted.slice(0, data.limit) : sorted
+  for (const api of apis) {
     await workflow.do(`process ${api.name}`, 'processAddon', {
       name: api.name,
       title: api.title,

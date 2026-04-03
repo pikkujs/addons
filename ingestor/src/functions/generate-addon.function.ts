@@ -27,7 +27,10 @@ export const generateAddon = pikkuSessionlessFunc({
   input: GenerateAddonInput,
   output: GenerateAddonOutput,
   func: async ({ logger }, data) => {
-    const addonDir = `${data.outputDir}/${data.name}`
+    // Sanitize name for pikku new addon (requires [a-z0-9_-], no leading digit)
+    let safeName = data.name.replace(/[^a-z0-9_-]/gi, '-').toLowerCase()
+    if (/^\d/.test(safeName)) safeName = `x${safeName}`
+    const addonDir = `${data.outputDir}/${safeName}`
     if (existsSync(`${addonDir}/pikku.config.json`)) {
       logger.info(`${data.name}: already exists`)
       return { success: true, addonDir }
@@ -36,7 +39,7 @@ export const generateAddon = pikkuSessionlessFunc({
     try {
       const esc = (s: string) => `'${s.replace(/'/g, "'\\''")}'`
       const parts = [
-        `node "${PIKKU_JS}" new addon ${esc(data.name)}`,
+        `node "${PIKKU_JS}" new addon ${esc(safeName)}`,
         `--displayName ${esc(data.displayName)}`,
         `--description ${esc(data.desc.slice(0, 100))}`,
         `--category ${esc(data.category)}`,
@@ -50,6 +53,11 @@ export const generateAddon = pikkuSessionlessFunc({
         timeout: 120_000,
         stdio: 'pipe',
       })
+
+      if (!existsSync(addonDir)) {
+        logger.warn(`${data.name}: generated but addonDir not found at ${addonDir}`)
+        return { success: false, error: `addonDir not found after generate: ${addonDir}` }
+      }
 
       logger.info(`${data.name}: generated`)
       return { success: true, addonDir }

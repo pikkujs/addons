@@ -59,18 +59,16 @@ export const processAddon = pikkuWorkflowFunc<
   const test = await workflow.do('test addon', 'testAddon', {
     addonDir: gen.addonDir as string,
     addonName: data.name,
-    baseUrl: data.servers[0],
+    ...(data.servers[0] ? { baseUrl: data.servers[0] } : {}),
   })
 
-  // Classify auth if test indicates auth is needed
+  // Always classify auth
   const testNote = (test.note as string) ?? 'unknown'
-  if (testNote.includes('auth') || testNote.includes('api_error')) {
-    await workflow.do('classify auth', 'classifyAuth', {
-      name: data.name,
-      specPath: spec.specPath as string,
-      testNote,
-    })
-  }
+  await workflow.do('classify auth', 'classifyAuth', {
+    name: data.name,
+    specPath: spec.specPath as string,
+    testNote,
+  })
 
   return {
     status: test.success ? 'pass' : 'skip',

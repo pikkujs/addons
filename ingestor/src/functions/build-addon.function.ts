@@ -25,6 +25,12 @@ export const buildAddon = pikkuSessionlessFunc({
   output: BuildAddonOutput,
   func: async ({ logger }, data) => {
     const start = Date.now()
+
+    if (!existsSync(data.addonDir)) {
+      logger.warn(`${data.addonName}: addonDir does not exist — ${data.addonDir}`)
+      return { success: false, stage: 'pre-check', error: `addonDir not found: ${data.addonDir}` }
+    }
+
     const funcsDir = join(data.addonDir, 'src', 'functions')
 
     // Stub pikkuSessionlessFunc imports for faster cold-start

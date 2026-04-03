@@ -32,6 +32,7 @@ async function main() {
       ),
       maxOps: Number(process.env.MAX_OPS || 500),
       camelCase: process.env.CAMEL_CASE !== 'false',
+      limit: Number(process.env.LIMIT || 0),
     },
     rpc
   )
