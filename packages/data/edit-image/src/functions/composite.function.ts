@@ -4,6 +4,7 @@ import sharp from 'sharp'
 import { Readable } from 'node:stream'
 
 export const CompositeInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the images'),
   contentKey: z.string().describe('Content key of the base image'),
   overlayContentKey: z.string().describe('Content key of the overlay image'),
   outputContentKey: z.string().describe('Content key to write the composited image to'),
@@ -27,9 +28,9 @@ export const imageComposite = pikkuSessionlessFunc({
   input: CompositeInput,
   output: CompositeOutput,
   node: { displayName: 'Composite Image', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey, overlayContentKey, outputContentKey, left, top, gravity, blend, format, quality }) => {
-    const baseBuffer = await content.readFileAsBuffer(contentKey)
-    const overlayBuffer = await content.readFileAsBuffer(overlayContentKey)
+  func: async ({ content }, { bucket, contentKey, overlayContentKey, outputContentKey, left, top, gravity, blend, format, quality }) => {
+    const baseBuffer = await content.readFileAsBuffer({ bucket, key: contentKey })
+    const overlayBuffer = await content.readFileAsBuffer({ bucket, key: overlayContentKey })
 
     const compositeOptions: sharp.OverlayOptions = { input: overlayBuffer }
     if (left !== undefined && top !== undefined) {
@@ -47,7 +48,7 @@ export const imageComposite = pikkuSessionlessFunc({
       pipeline = pipeline.toFormat(format, { quality })
     }
     const output = await pipeline.toBuffer({ resolveWithObject: true })
-    await content.writeFile(outputContentKey, Readable.from(output.data))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(output.data) })
     return {
       outputContentKey,
       width: output.info.width,

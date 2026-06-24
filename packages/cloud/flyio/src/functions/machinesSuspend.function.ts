@@ -8,10 +8,12 @@ export const MachinesSuspendInput = z.object({
   machine_id: z.string().describe("Machine ID"),
 })
 
+export const MachinesSuspendOutput = z.void()
+
 export const machinesSuspend = pikkuSessionlessFunc({
   description: "Suspend a specific Machine within an app. The next start operation will attempt (but is not guaranteed) to resume the Machine from a snapshot taken at suspension time, rather than performing a cold boot.",
   input: MachinesSuspendInput,
-  output: z.void(),
+  output: MachinesSuspendOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/suspend', data)
   },

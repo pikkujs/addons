@@ -4,6 +4,7 @@ import sharp from 'sharp'
 import { Readable } from 'node:stream'
 
 export const BlurInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the image'),
   contentKey: z.string().describe('Content key of the image to blur'),
   outputContentKey: z.string().describe('Content key to write the blurred image to'),
   sigma: z.number().min(0.3).max(1000).describe('Gaussian blur sigma (0.3-1000)'),
@@ -21,14 +22,14 @@ export const imageBlur = pikkuSessionlessFunc({
   input: BlurInput,
   output: BlurOutput,
   node: { displayName: 'Blur Image', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey, sigma, format, quality }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey, sigma, format, quality }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     let pipeline = sharp(buffer).blur(sigma)
     if (format) {
       pipeline = pipeline.toFormat(format, { quality })
     }
     const output = await pipeline.toBuffer({ resolveWithObject: true })
-    await content.writeFile(outputContentKey, Readable.from(output.data))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(output.data) })
     return {
       outputContentKey,
       size: output.info.size,

@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<ZapierSecrets>('ZAPIER_CREDENTIALS')
+  const creds = await secrets.getSecret<ZapierSecrets>('ZAPIER_CREDENTIALS')
   const zapier = new ZapierService(creds)
 
   return { zapier }

@@ -24,8 +24,8 @@ test('telegram external package', async () => {
 
   const variables = new LocalVariablesService({})
   const secrets = new LocalSecretService(variables)
-  await secrets.setSecretJSON('TELEGRAM_BOT_TOKEN', BOT_TOKEN)
-  await secrets.setSecretJSON('TELEGRAM_TEST_CHAT_ID', CHAT_ID)
+  await secrets.setSecret('TELEGRAM_BOT_TOKEN', BOT_TOKEN)
+  await secrets.setSecret('TELEGRAM_TEST_CHAT_ID', CHAT_ID)
 
   const singletonServices = await createSingletonServices({}, { variables, secrets })
   const rpc = rpcService.getContextRPCService(singletonServices as any, {})

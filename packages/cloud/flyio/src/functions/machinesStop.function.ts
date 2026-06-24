@@ -13,10 +13,12 @@ export const MachinesStopInput = z.object({
 }).optional(),
 })
 
+export const MachinesStopOutput = z.void()
+
 export const machinesStop = pikkuSessionlessFunc({
   description: "Stop a specific Machine within an app, with an optional request body to specify signal and timeout.",
   input: MachinesStopInput,
-  output: z.void(),
+  output: MachinesStopOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/stop', data)

@@ -137,7 +137,7 @@ test('supabase addon', async () => {
         const apiKey = createJWT(JWT_SECRET, ANON_ROLE)
 
         const secrets = new LocalSecretService()
-        await secrets.setSecretJSON('SUPABASE_CREDENTIALS', {
+        await secrets.setSecret('SUPABASE_CREDENTIALS', {
           url: supabaseUrl,
           apiKey,
         })

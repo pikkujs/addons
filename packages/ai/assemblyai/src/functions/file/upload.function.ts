@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
 export const FileUploadInput = z.object({
+  bucket: z.string().describe('The storage bucket containing the audio file'),
   contentKey: z.string().describe('The content key for the audio file in the content service'),
   fileName: z.string().describe('The file name with extension (e.g. "audio.mp3")'),
 })
@@ -15,8 +16,8 @@ export const uploadFile = pikkuSessionlessFunc({
   node: { displayName: 'Upload File', category: 'File', type: 'action' },
   input: FileUploadInput,
   output: FileUploadOutput,
-  func: async ({ assemblyai, content }, { contentKey }) => {
-    const stream = await content.readFile(contentKey)
+  func: async ({ assemblyai, content }, { bucket, contentKey }) => {
+    const stream = await content.readFile({ bucket, key: contentKey })
     const chunks: Uint8Array[] = []
     for await (const chunk of stream as AsyncIterable<Uint8Array>) {
       chunks.push(chunk)

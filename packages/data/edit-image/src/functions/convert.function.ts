@@ -4,6 +4,7 @@ import sharp from 'sharp'
 import { Readable } from 'node:stream'
 
 export const ConvertInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the image'),
   contentKey: z.string().describe('Content key of the image to convert'),
   outputContentKey: z.string().describe('Content key to write the converted image to'),
   format: z.enum(['jpeg', 'png', 'webp', 'avif', 'tiff', 'gif']).describe('Target format'),
@@ -21,12 +22,12 @@ export const imageConvert = pikkuSessionlessFunc({
   input: ConvertInput,
   output: ConvertOutput,
   node: { displayName: 'Convert Image', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey, format, quality }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey, format, quality }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     const output = await sharp(buffer)
       .toFormat(format, { quality })
       .toBuffer({ resolveWithObject: true })
-    await content.writeFile(outputContentKey, Readable.from(output.data))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(output.data) })
     return {
       outputContentKey,
       format: output.info.format,

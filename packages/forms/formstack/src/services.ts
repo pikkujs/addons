@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<FormstackCredentials>('FORMSTACK_CREDENTIALS')
+  const creds = await secrets.getSecret<FormstackCredentials>('FORMSTACK_CREDENTIALS')
   const formstack = new FormstackService(creds)
 
   return { formstack }

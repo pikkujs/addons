@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<MetaConversionsSecrets>('META_CONVERSIONS_CREDENTIALS')
+  const creds = await secrets.getSecret<MetaConversionsSecrets>('META_CONVERSIONS_CREDENTIALS')
   const metaConversions = new MetaConversionsService(creds)
 
   return { metaConversions }

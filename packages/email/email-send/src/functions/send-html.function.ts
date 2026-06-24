@@ -3,6 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 
 export const AttachmentSchema = z.object({
   filename: z.string().describe('Attachment filename'),
+  bucket: z.string().describe('Storage bucket holding the attachment file'),
   contentKey: z.string().describe('Content key for the attachment file'),
   contentType: z.string().optional().describe('MIME type of the attachment'),
 })
@@ -34,7 +35,7 @@ export const emailSendHtml = pikkuSessionlessFunc({
       ? await Promise.all(
           attachments.map(async (att) => ({
             filename: att.filename,
-            content: await content.readFileAsBuffer(att.contentKey),
+            content: await content.readFileAsBuffer({ bucket: att.bucket, key: att.contentKey }),
             contentType: att.contentType,
           }))
         )

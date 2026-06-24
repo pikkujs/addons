@@ -9,12 +9,12 @@ export class PostgresService extends pg.Pool {
 }
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { variables, secrets }) => {
-  const params = await variables.getJSON<{ host: string; port: string; database: string; ssl?: string }>('POSTGRES_PARAMS')
+  const params = await variables.get<{ host: string; port: string; database: string; ssl?: string }>('POSTGRES_PARAMS')
   const host = params?.host ?? 'localhost'
   const port = parseInt(params?.port ?? '5432', 10)
   const database = params?.database
   const ssl = params?.ssl === 'true'
-  const creds = await secrets.getSecretJSON<PostgresSecrets>('POSTGRES_CREDENTIALS')
+  const creds = await secrets.getSecret<PostgresSecrets>('POSTGRES_CREDENTIALS')
 
   const poolConfig: pg.PoolConfig = {
     host,

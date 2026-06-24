@@ -4,6 +4,7 @@ import sharp from 'sharp'
 import { Readable } from 'node:stream'
 
 export const CropInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the image'),
   contentKey: z.string().describe('Content key of the image to crop'),
   outputContentKey: z.string().describe('Content key to write the cropped image to'),
   left: z.number().describe('Left offset in pixels'),
@@ -26,14 +27,14 @@ export const imageCrop = pikkuSessionlessFunc({
   input: CropInput,
   output: CropOutput,
   node: { displayName: 'Crop Image', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey, left, top, width, height, format, quality }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey, left, top, width, height, format, quality }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     let pipeline = sharp(buffer).extract({ left, top, width, height })
     if (format) {
       pipeline = pipeline.toFormat(format, { quality })
     }
     const output = await pipeline.toBuffer({ resolveWithObject: true })
-    await content.writeFile(outputContentKey, Readable.from(output.data))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(output.data) })
     return {
       outputContentKey,
       width: output.info.width,

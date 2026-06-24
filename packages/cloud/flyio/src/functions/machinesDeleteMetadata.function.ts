@@ -9,10 +9,12 @@ export const MachinesDeleteMetadataInput = z.object({
   key: z.string().describe("Metadata Key"),
 })
 
+export const MachinesDeleteMetadataOutput = z.void()
+
 export const machinesDeleteMetadata = pikkuSessionlessFunc({
   description: "Delete metadata for a specific Machine within an app by providing a metadata key.",
   input: MachinesDeleteMetadataInput,
-  output: z.void(),
+  output: MachinesDeleteMetadataOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}/machines/{machine_id}/metadata/{key}', data)
   },

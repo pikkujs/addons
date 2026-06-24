@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<WhatsappSecrets>('WHATSAPP_CREDENTIALS')
+  const creds = await secrets.getSecret<WhatsappSecrets>('WHATSAPP_CREDENTIALS')
   const whatsapp = new WhatsappService(creds)
 
   return { whatsapp }

@@ -7,7 +7,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets, variables }
 ) => {
-  const creds = await secrets.getSecretJSON<GoogleAnalyticsSecrets>('GOOGLE_ANALYTICS_CREDENTIALS')
+  const creds = await secrets.getSecret<GoogleAnalyticsSecrets>('GOOGLE_ANALYTICS_CREDENTIALS')
   const googleAnalytics = new GoogleAnalyticsService(creds)
 
   const propertyId = await variables.get('GOOGLE_ANALYTICS_PROPERTY_ID')

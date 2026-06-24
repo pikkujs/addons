@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<SegmentSecrets>('SEGMENT_CREDENTIALS')
+  const creds = await secrets.getSecret<SegmentSecrets>('SEGMENT_CREDENTIALS')
   const segment = new SegmentService(creds)
 
   return { segment }

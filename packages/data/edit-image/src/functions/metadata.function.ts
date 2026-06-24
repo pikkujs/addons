@@ -3,6 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 import sharp from 'sharp'
 
 export const MetadataInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the image'),
   contentKey: z.string().describe('Content key of the image'),
 })
 
@@ -23,8 +24,8 @@ export const imageMetadata = pikkuSessionlessFunc({
   input: MetadataInput,
   output: MetadataOutput,
   node: { displayName: 'Image Metadata', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     const meta = await sharp(buffer).metadata()
     return {
       width: meta.width ?? null,

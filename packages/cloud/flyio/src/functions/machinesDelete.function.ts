@@ -9,10 +9,12 @@ export const MachinesDeleteInput = z.object({
   force: z.boolean().optional().describe("Force kill the machine if it's running"),
 })
 
+export const MachinesDeleteOutput = z.void()
+
 export const machinesDelete = pikkuSessionlessFunc({
   description: "Delete a specific Machine within an app by Machine ID, with an optional force parameter to force kill the Machine if it's running.",
   input: MachinesDeleteInput,
-  output: z.void(),
+  output: MachinesDeleteOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}/machines/{machine_id}', data)
   },

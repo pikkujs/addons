@@ -7,10 +7,11 @@ import { rpcService } from '@pikku/core/rpc'
 import { LocalSecretService } from '@pikku/core/services'
 import { createSingletonServices } from './services.js'
 
-test('flyio addon', async () => {
+const flyioCredentials = process.env.FLYIO_CREDENTIALS
+
+test('flyio addon', { skip: flyioCredentials ? false : 'Requires FLYIO_CREDENTIALS' }, async () => {
   const secrets = new LocalSecretService()
-  // Set up secrets for the service
-  // await secrets.setSecretJSON('FLYIO_CREDENTIALS', { ... })
+  await secrets.setSecret('FLYIO_CREDENTIALS', JSON.parse(flyioCredentials!))
 
   const singletonServices = await createSingletonServices({}, { secrets })
   const rpc = rpcService.getContextRPCService(singletonServices as any, {})

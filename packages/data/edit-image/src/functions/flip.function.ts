@@ -4,6 +4,7 @@ import sharp from 'sharp'
 import { Readable } from 'node:stream'
 
 export const FlipInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the image'),
   contentKey: z.string().describe('Content key of the image'),
   outputContentKey: z.string().describe('Content key to write the flipped image to'),
   direction: z.enum(['horizontal', 'vertical', 'both']).describe('Flip direction'),
@@ -21,8 +22,8 @@ export const imageFlip = pikkuSessionlessFunc({
   input: FlipInput,
   output: FlipOutput,
   node: { displayName: 'Flip Image', category: 'Image', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey, direction, format, quality }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey, direction, format, quality }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     let pipeline = sharp(buffer)
     if (direction === 'vertical' || direction === 'both') {
       pipeline = pipeline.flip()
@@ -34,7 +35,7 @@ export const imageFlip = pikkuSessionlessFunc({
       pipeline = pipeline.toFormat(format, { quality })
     }
     const output = await pipeline.toBuffer({ resolveWithObject: true })
-    await content.writeFile(outputContentKey, Readable.from(output.data))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(output.data) })
     return {
       outputContentKey,
       size: output.info.size,

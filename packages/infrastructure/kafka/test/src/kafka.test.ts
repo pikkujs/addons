@@ -13,7 +13,7 @@ test('kafka addon', { timeout: 180_000 }, async (t) => {
   const brokers = container.getBootstrapServers()
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('KAFKA_CREDENTIALS', {
+  await secrets.setSecret('KAFKA_CREDENTIALS', {
     brokers: [brokers],
     clientId: 'pikku-test',
   })

@@ -45,7 +45,7 @@ export const sentryOrgGetMany = pikkuSessionlessFunc<
   Output
 >({
   description: 'Get many Sentry organizations',
-  node: { displayName: 'Get Organizations', category: 'Organization', type: 'action' },
+  node: { displayName: 'Get Organizations', category: 'Organizations', type: 'action' },
   func: async ({ sentry }, data) => {
     return sentry.requestAllPages<OutputItem>('GET', '/api/0/organizations/', {
       qs: {

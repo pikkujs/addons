@@ -6,12 +6,12 @@ import { pikkuAddonServices } from '#pikku'
 export type MysqlService = Pool & { stop: () => Promise<void> }
 
 export const createSingletonServices = pikkuAddonServices(async (config, { variables, secrets }) => {
-  const params = await variables.getJSON<{ host: string; port: string; database: string; ssl?: string }>('MYSQL_PARAMS')
+  const params = await variables.get<{ host: string; port: string; database: string; ssl?: string }>('MYSQL_PARAMS')
   const host = params?.host ?? 'localhost'
   const port = parseInt(params?.port ?? '3306', 10)
   const database = params?.database
   const ssl = params?.ssl === 'true'
-  const creds = await secrets.getSecretJSON<MysqlSecrets>('MYSQL_CREDENTIALS')
+  const creds = await secrets.getSecret<MysqlSecrets>('MYSQL_CREDENTIALS')
 
   const connectionOptions: mysql.PoolOptions = {
     host,

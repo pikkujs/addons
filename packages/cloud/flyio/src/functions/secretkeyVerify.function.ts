@@ -10,9 +10,11 @@ export const SecretkeyVerifyInput = z.object({
   signature: z.array(z.number().int()).optional(),
 })
 
+export const SecretkeyVerifyOutput = z.void()
+
 export const secretkeyVerify = pikkuSessionlessFunc({
   input: SecretkeyVerifyInput,
-  output: z.void(),
+  output: SecretkeyVerifyOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/secretkeys/{secret_name}/verify', data)

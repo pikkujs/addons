@@ -8,10 +8,12 @@ export const CreateVolumeSnapshotInput = z.object({
   volume_id: z.string().describe("Volume ID"),
 })
 
+export const CreateVolumeSnapshotOutput = z.void()
+
 export const createVolumeSnapshot = pikkuSessionlessFunc({
   description: "Create a snapshot for a specific volume within an app.",
   input: CreateVolumeSnapshotInput,
-  output: z.void(),
+  output: CreateVolumeSnapshotOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/volumes/{volume_id}/snapshots', data)
   },

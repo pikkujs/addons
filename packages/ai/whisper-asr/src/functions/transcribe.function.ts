@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 
 export const TranscribeInput = z.object({
+  bucket: z.string().describe('The storage bucket containing the audio file'),
   contentKey: z.string().describe('The content key for the audio file in the content service'),
   fileName: z.string().describe('The file name with extension (e.g. "audio.wav")'),
   language: z.string().optional().describe('Language code (e.g. "en", "es", "fr")'),
@@ -17,7 +18,7 @@ export const transcribe = pikkuSessionlessFunc({
   input: TranscribeInput,
   output: TranscribeOutput,
   func: async ({ whisperASR, content }, data) => {
-    const stream = await content.readFile(data.contentKey)
+    const stream = await content.readFile({ bucket: data.bucket, key: data.contentKey })
     const chunks: Uint8Array[] = []
     for await (const chunk of stream as AsyncIterable<Uint8Array>) {
       chunks.push(chunk)

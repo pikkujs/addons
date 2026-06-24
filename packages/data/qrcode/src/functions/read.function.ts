@@ -18,7 +18,7 @@ export const qrCodeRead = pikkuSessionlessFunc({
   output: QrCodeReadOutput,
   node: { displayName: 'Read QR Code', category: 'Data', type: 'action' },
   func: async ({ content }, { contentKey }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+    const buffer = await content.readFileAsBuffer({ bucket: '', key: contentKey })
 
     // Convert to raw RGBA pixel data using sharp
     const { data, info } = await sharp(buffer)

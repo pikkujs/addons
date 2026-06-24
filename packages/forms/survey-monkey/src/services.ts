@@ -6,7 +6,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecretJSON<SurveyMonkeyCredentials>('SURVEY_MONKEY_CREDENTIALS')
+  const creds = await secrets.getSecret<SurveyMonkeyCredentials>('SURVEY_MONKEY_CREDENTIALS')
   const surveyMonkey = new SurveyMonkeyService(creds)
 
   return { surveyMonkey }

@@ -3,7 +3,7 @@ import type { S3Secrets } from './s3.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets, content }) => {
-  const creds = await secrets.getSecretJSON<S3Secrets>('S3_CREDENTIALS')
+  const creds = await secrets.getSecret<S3Secrets>('S3_CREDENTIALS')
 
   const s3Client = new S3Client({
     region: creds.region ?? 'us-east-1',

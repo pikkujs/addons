@@ -33,3 +33,21 @@ export { customerCardRemove } from './functions/customer-cards/remove.function.j
 
 // Stripe functions - Meter Events
 export { meterEventCreate } from './functions/meter-events/create.function.js'
+
+// Stripe functions - Subscriptions
+export { subscriptionGet } from './functions/subscriptions/get.function.js'
+export { subscriptionUpdate } from './functions/subscriptions/update.function.js'
+export { subscriptionCancel } from './functions/subscriptions/cancel.function.js'
+
+// Stripe functions - Checkout & Billing Portal
+export { checkoutSessionCreate } from './functions/checkout-sessions/create.function.js'
+export { billingPortalSessionCreate } from './functions/billing-portal-sessions/create.function.js'
+
+// Stripe functions - Payment Intents (off-session top-ups)
+export { paymentIntentCreate } from './functions/payment-intents/create.function.js'
+
+// Stripe functions - Webhooks
+export {
+  stripeWebhookHandler,
+  STRIPE_WEBHOOK_QUEUE,
+} from './functions/webhooks/handle.function.js'

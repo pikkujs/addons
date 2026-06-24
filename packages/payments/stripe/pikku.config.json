@@ -12,12 +12,16 @@
     "categories": [
       "Balance",
       "Charges",
+      "Checkout",
       "Coupons",
       "Customers",
       "Customer Cards",
       "Meter Events",
+      "Payment Intents",
       "Sources",
-      "Tokens"
+      "Subscriptions",
+      "Tokens",
+      "Webhooks"
     ],
     "icon": "./stripe.svg"
   }

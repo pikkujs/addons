@@ -9,9 +9,11 @@ export const AppCertificatesDeleteInput = z.object({
   hostname: z.string().describe("Certificate Hostname"),
 })
 
+export const AppCertificatesDeleteOutput = z.void()
+
 export const appCertificatesDelete = pikkuSessionlessFunc({
   input: AppCertificatesDeleteInput,
-  output: z.void(),
+  output: AppCertificatesDeleteOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}/certificates/{hostname}', data)
   },

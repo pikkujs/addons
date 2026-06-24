@@ -28,7 +28,7 @@ test('s3 addon', { timeout: 120_000 }, async (t) => {
   const port = container.getMappedPort(9000)
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('S3_CREDENTIALS', {
+  await secrets.setSecret('S3_CREDENTIALS', {
     accessKeyId: 'minioadmin',
     secretAccessKey: 'minioadmin',
     region: 'us-east-1',
@@ -57,6 +57,7 @@ test('s3 addon', { timeout: 120_000 }, async (t) => {
       const result = await rpc.invoke('s3:s3PutObject', {
         bucket: 'test-bucket',
         key: 'test-file.txt',
+        contentBucket: '.',
         contentKey: 's3-upload.txt',
         contentType: 'text/plain',
       })
@@ -75,6 +76,7 @@ test('s3 addon', { timeout: 120_000 }, async (t) => {
       await rpc.invoke('s3:s3PutObject', {
         bucket: 'test-bucket',
         key: 'folder/nested.txt',
+        contentBucket: '.',
         contentKey: 's3-upload.txt',
       })
       const result = await rpc.invoke('s3:s3ListObjects', {
@@ -89,6 +91,7 @@ test('s3 addon', { timeout: 120_000 }, async (t) => {
       const result = await rpc.invoke('s3:s3GetObject', {
         bucket: 'test-bucket',
         key: 'test-file.txt',
+        contentBucket: '.',
         outputContentKey: 's3-downloaded.txt',
       })
       assert.equal(result.outputContentKey, 's3-downloaded.txt')

@@ -4,6 +4,7 @@ import { zipSync, unzipSync } from 'fflate'
 import { Readable } from 'node:stream'
 
 export const ZipCompressInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the files'),
   files: z.array(z.object({
     contentKey: z.string().describe('Content key of the file'),
     fileName: z.string().describe('File name inside the zip archive'),
@@ -23,14 +24,14 @@ export const zipCompress = pikkuSessionlessFunc({
   input: ZipCompressInput,
   output: ZipCompressOutput,
   node: { displayName: 'Zip Compress', category: 'Data', type: 'action' },
-  func: async ({ content }, { files, outputContentKey, level }) => {
+  func: async ({ content }, { bucket, files, outputContentKey, level }) => {
     const entries: Record<string, Uint8Array> = {}
     for (const file of files) {
-      const buffer = await content.readFileAsBuffer(file.contentKey)
+      const buffer = await content.readFileAsBuffer({ bucket, key: file.contentKey })
       entries[file.fileName] = new Uint8Array(buffer)
     }
     const compressed = zipSync(entries, { level: (level ?? 6) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 })
-    await content.writeFile(outputContentKey, Readable.from(Buffer.from(compressed)))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(Buffer.from(compressed)) })
     return {
       outputContentKey,
       fileCount: files.length,
@@ -40,6 +41,7 @@ export const zipCompress = pikkuSessionlessFunc({
 })
 
 export const ZipDecompressInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the zip file'),
   contentKey: z.string().describe('Content key of the zip file'),
   outputPrefix: z.string().describe('Content key prefix for extracted files (e.g. "extracted/")'),
 })
@@ -57,8 +59,8 @@ export const zipDecompress = pikkuSessionlessFunc({
   input: ZipDecompressInput,
   output: ZipDecompressOutput,
   node: { displayName: 'Zip Decompress', category: 'Data', type: 'action' },
-  func: async ({ content }, { contentKey, outputPrefix }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputPrefix }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     const entries = unzipSync(new Uint8Array(buffer))
     const files: Array<{ fileName: string; contentKey: string; size: number }> = []
     for (const [fileName, data] of Object.entries(entries)) {
@@ -67,7 +69,7 @@ export const zipDecompress = pikkuSessionlessFunc({
       // Skip directory entries
       if (fileName.endsWith('/')) continue
       const outputKey = `${outputPrefix}${fileName}`
-      await content.writeFile(outputKey, Readable.from(Buffer.from(data)))
+      await content.writeFile({ bucket, key: outputKey, stream: Readable.from(Buffer.from(data)) })
       files.push({ fileName, contentKey: outputKey, size: data.length })
     }
     return { files }

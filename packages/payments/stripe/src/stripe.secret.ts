@@ -12,3 +12,15 @@ wireSecret({
   secretId: 'STRIPE_SECRET_KEY',
   schema: stripeSecretsSchema,
 })
+
+export const stripeWebhookSecretSchema = z.string().describe('Stripe webhook signing secret (starts with whsec_)')
+
+export type StripeWebhookSecret = z.infer<typeof stripeWebhookSecretSchema>
+
+wireSecret({
+  name: 'webhook_secret',
+  displayName: 'Stripe Webhook Signing Secret',
+  description: 'Signing secret used to verify inbound Stripe webhook signatures',
+  secretId: 'STRIPE_WEBHOOK_SECRET',
+  schema: stripeWebhookSecretSchema,
+})

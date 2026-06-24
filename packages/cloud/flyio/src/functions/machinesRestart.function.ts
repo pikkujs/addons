@@ -11,10 +11,12 @@ export const MachinesRestartInput = z.object({
   signal: z.string().optional().describe("Unix signal name"),
 })
 
+export const MachinesRestartOutput = z.void()
+
 export const machinesRestart = pikkuSessionlessFunc({
   description: "Restart a specific Machine within an app, with an optional timeout parameter.",
   input: MachinesRestartInput,
-  output: z.void(),
+  output: MachinesRestartOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/restart', data)

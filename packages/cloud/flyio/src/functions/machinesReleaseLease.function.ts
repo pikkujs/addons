@@ -9,10 +9,12 @@ export const MachinesReleaseLeaseInput = z.object({
   "fly-machine-lease-nonce": z.string().describe("Existing lease nonce"),
 })
 
+export const MachinesReleaseLeaseOutput = z.void()
+
 export const machinesReleaseLease = pikkuSessionlessFunc({
   description: "Release the lease of a specific Machine within an app. Machine leases can be used to obtain an exclusive lock on modifying a Machine.",
   input: MachinesReleaseLeaseInput,
-  output: z.void(),
+  output: MachinesReleaseLeaseOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}/machines/{machine_id}/lease', data)
   },

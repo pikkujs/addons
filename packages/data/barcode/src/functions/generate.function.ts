@@ -40,7 +40,7 @@ export const barcodeGenerate = pikkuSessionlessFunc({
       rotate: rotate ?? 'N',
     })
 
-    await content.writeFile(outputContentKey, Readable.from(buffer))
+    await content.writeFile({ bucket: '', key: outputContentKey, stream: Readable.from(buffer) })
     return {
       outputContentKey,
       size: buffer.length,

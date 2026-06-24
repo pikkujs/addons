@@ -1,9 +1,12 @@
 import { MongoClient } from 'mongodb'
+import type { Db } from 'mongodb'
 import type { MongodbSecrets } from './mongodb.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
+export type MongodbService = Db & { stop: () => Promise<void> }
+
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => {
-  const creds = await secrets.getSecretJSON<MongodbSecrets>('MONGODB_CREDENTIALS')
+  const creds = await secrets.getSecret<MongodbSecrets>('MONGODB_CREDENTIALS')
 
   const tlsOptions: Record<string, unknown> = {}
   if (creds.caCertificate) {
@@ -16,10 +19,11 @@ export const createSingletonServices = pikkuAddonServices(async (_config, { secr
 
   const client = new MongoClient(creds.connectionString, tlsOptions)
   await client.connect()
-  const mongodb = client.db(creds.database)
+  const mongodb = Object.assign(client.db(creds.database), {
+    stop: async () => { await client.close() },
+  }) as MongodbService
 
   return {
     mongodb,
-    stop: async () => { await client.close() },
   }
 })

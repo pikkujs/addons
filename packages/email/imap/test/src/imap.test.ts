@@ -71,7 +71,7 @@ test('imap addon', async () => {
     await sendEmail(host, smtpPort, 'another@test.com', TEST_USER, 'Another Subject', 'Different sender')
 
     const secrets = new LocalSecretService()
-    await secrets.setSecretJSON('IMAP_CREDENTIALS', {
+    await secrets.setSecret('IMAP_CREDENTIALS', {
       user: TEST_USER,
       password: TEST_PASS,
       host,

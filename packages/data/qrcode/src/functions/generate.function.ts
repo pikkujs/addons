@@ -45,7 +45,7 @@ export const qrCodeGenerate = pikkuSessionlessFunc({
       buffer = await QRCode.toBuffer(text, options)
     }
 
-    await content.writeFile(outputContentKey, Readable.from(buffer))
+    await content.writeFile({ bucket: '', key: outputContentKey, stream: Readable.from(buffer) })
     return {
       outputContentKey,
       format: fmt,

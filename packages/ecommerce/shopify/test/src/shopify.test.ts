@@ -17,7 +17,7 @@ if (!SHOPIFY_SHOP_DOMAIN || !SHOPIFY_ACCESS_TOKEN) {
 
 test('shopify external package', async () => {
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('SHOPIFY_CREDENTIALS', {
+  await secrets.setSecret('SHOPIFY_CREDENTIALS', {
     shopDomain: SHOPIFY_SHOP_DOMAIN,
     accessToken: SHOPIFY_ACCESS_TOKEN,
   })

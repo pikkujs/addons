@@ -8,10 +8,12 @@ export const MachinesCordonInput = z.object({
   machine_id: z.string().describe("Machine ID"),
 })
 
+export const MachinesCordonOutput = z.void()
+
 export const machinesCordon = pikkuSessionlessFunc({
   description: "“Cordoning” a Machine refers to disabling its services, so the Fly Proxy won’t route requests to it. In flyctl this is used by blue/green deployments; one set of Machines is started up with services disabled, and when they are all healthy, the services are enabled on the new Machines and disabled on the old ones.",
   input: MachinesCordonInput,
-  output: z.void(),
+  output: MachinesCordonOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/cordon', data)
   },

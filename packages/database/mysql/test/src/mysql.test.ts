@@ -26,7 +26,7 @@ test('mysql external package', async () => {
       }),
     })
     const secrets = new LocalSecretService(variables)
-    await secrets.setSecretJSON('MYSQL_CREDENTIALS', {
+    await secrets.setSecret('MYSQL_CREDENTIALS', {
       user: container.getUsername(),
       password: container.getUserPassword(),
     })

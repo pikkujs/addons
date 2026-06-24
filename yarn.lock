@@ -726,6 +726,127 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@better-auth/core@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/core@npm:1.6.20"
+  dependencies:
+    "@opentelemetry/semantic-conventions": "npm:^1.39.0"
+    "@standard-schema/spec": "npm:^1.1.0"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    "@better-auth/utils": 0.4.2
+    "@better-fetch/fetch": 1.3.1
+    "@cloudflare/workers-types": ">=4"
+    "@opentelemetry/api": ^1.9.0
+    better-call: 1.3.6
+    jose: ^6.1.0
+    kysely: ^0.28.5 || ^0.29.0
+    nanostores: ^1.0.1
+  peerDependenciesMeta:
+    "@cloudflare/workers-types":
+      optional: true
+    "@opentelemetry/api":
+      optional: true
+  checksum: 10/a8c5c3bb86944a60c4908ba01b9622611a2efa15315c52e47111036439d6c35c642ed7022b3c493c1a1169b99dc81aee3e1d0bb6b8c16edd66856acd043ae3f9
+  languageName: node
+  linkType: hard
+
+"@better-auth/drizzle-adapter@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/drizzle-adapter@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+    drizzle-orm: ^0.45.2
+  peerDependenciesMeta:
+    drizzle-orm:
+      optional: true
+  checksum: 10/c430e2fb5e94a8d3018202aa3b0890766417cb41be3b11c04b7cea9b721dd5ba79d6ea1a2eeaf41cd43cc9e25906314a763a6f7ffc60ed0278de9f6ac31fa7ca
+  languageName: node
+  linkType: hard
+
+"@better-auth/kysely-adapter@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/kysely-adapter@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+    kysely: ^0.28.17 || ^0.29.0
+  peerDependenciesMeta:
+    kysely:
+      optional: true
+  checksum: 10/23472d37d06cf7b66a09fdb05c5d101016b691988d2178b03f45ec0690d8ba71b04f596f86f3a5889b60b1645a737c1db6b35427d3ea60196ef2677c2d59270e
+  languageName: node
+  linkType: hard
+
+"@better-auth/memory-adapter@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/memory-adapter@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+  checksum: 10/9ed01bcc5ee411feaca92653c511afbab9ee6dce7f6b8ae70378187f0e131f1246f265bbe2fdcc1661801880b7c07c0fe295f9f6d9f94e3043d57c398917457a
+  languageName: node
+  linkType: hard
+
+"@better-auth/mongo-adapter@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/mongo-adapter@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+    mongodb: ^6.0.0 || ^7.0.0
+  peerDependenciesMeta:
+    mongodb:
+      optional: true
+  checksum: 10/8d2f69c04906bfc546f24ab6fb7d794529239b3e9f8aed01cd8e77c994617c89301d831678e7a8d78efbfcc8a43eb35ad9e2461d7ae2340dfd216b4aa34fd15d
+  languageName: node
+  linkType: hard
+
+"@better-auth/prisma-adapter@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/prisma-adapter@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+    "@prisma/client": ^5.0.0 || ^6.0.0 || ^7.0.0
+    prisma: ^5.0.0 || ^6.0.0 || ^7.0.0
+  peerDependenciesMeta:
+    "@prisma/client":
+      optional: true
+    prisma:
+      optional: true
+  checksum: 10/da0ad733947b89408a52c00a101f8c294a1d356e50564a879997d8e9b0cc6b995727a2655c5868b1bb55d2e9af4486e5939f97f7c50be6efd82e572322ec7c7b
+  languageName: node
+  linkType: hard
+
+"@better-auth/telemetry@npm:1.6.20":
+  version: 1.6.20
+  resolution: "@better-auth/telemetry@npm:1.6.20"
+  peerDependencies:
+    "@better-auth/core": ^1.6.20
+    "@better-auth/utils": 0.4.2
+    "@better-fetch/fetch": 1.3.1
+  checksum: 10/3ef1dcbc9ca1005c27d78307732f4b5cd7c3a272a8653df70068854495079b0ad46407328fb8457acfd4a016c19d3a4a3d3fc29bed3dd837e19f67e8943f49a4
+  languageName: node
+  linkType: hard
+
+"@better-auth/utils@npm:0.4.2, @better-auth/utils@npm:^0.4.0":
+  version: 0.4.2
+  resolution: "@better-auth/utils@npm:0.4.2"
+  dependencies:
+    "@noble/hashes": "npm:^2.0.1"
+  checksum: 10/27c78bcd9ef14c8049681660d459a0c50891b74bcb4899d96d3d535f9be883b1e2d1432da3d2dfd072e8b695fff522f0461c94b021c695f4d81fc26bb41aa1af
+  languageName: node
+  linkType: hard
+
+"@better-fetch/fetch@npm:1.3.1, @better-fetch/fetch@npm:^1.1.21":
+  version: 1.3.1
+  resolution: "@better-fetch/fetch@npm:1.3.1"
+  checksum: 10/9031913794cb23893e63984b00f26780ee2cfb3ba318bbc8e15ca01e5c635c737811eecb6ddcb1c22f93c5b0e693082907d2998ab02fcd199a7d8c381f8002f5
+  languageName: node
+  linkType: hard
+
 "@borewit/text-codec@npm:^0.2.1, @borewit/text-codec@npm:^0.2.2":
   version: 0.2.2
   resolution: "@borewit/text-codec@npm:0.2.2"
@@ -997,6 +1118,13 @@ __metadata:
     human-id: "npm:^4.1.1"
     prettier: "npm:^2.7.1"
   checksum: 10/bcea8431a09e282bdf66adbd8411d5d3cc19b4a2df519a42586c912b23a7b3ef18d1d0765e2d1a27ff175e2dfc9ef4c2df95cfa920dd4dd2972aaaf662afc6b9
+  languageName: node
+  linkType: hard
+
+"@electric-sql/pglite@npm:^0.5.1":
+  version: 0.5.3
+  resolution: "@electric-sql/pglite@npm:0.5.3"
+  checksum: 10/8d23b0fcd9b0acf81f4b6ec203b38c05b858a9f1b73e26ceddb9f6df130468aeb3f010ab76bdd82bef90290b58c2f2ed19d487b0a2a4c8797f8be17aaa51901f
   languageName: node
   linkType: hard
 
@@ -1904,6 +2032,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@noble/ciphers@npm:^2.1.1":
+  version: 2.2.0
+  resolution: "@noble/ciphers@npm:2.2.0"
+  checksum: 10/d75348aa682b41ad3e24cdd0a56c6d9ca033fb629ab93f37d6690be41c4882359b27598a11af0f5439ba82df4f9e3875dea1f875064310f68fef63cf24e3481a
+  languageName: node
+  linkType: hard
+
+"@noble/hashes@npm:^2.0.1":
+  version: 2.2.0
+  resolution: "@noble/hashes@npm:2.2.0"
+  checksum: 10/b1b78bedc2a01394be047429f3d888905015fe8a09f1b7e43e0b5736b54133df62f73dcc73ede43af38e96e86156afb45b86973fdeaa95d9f0880333c3fc0907
+  languageName: node
+  linkType: hard
+
 "@nodelib/fs.scandir@npm:2.1.5":
   version: 2.1.5
   resolution: "@nodelib/fs.scandir@npm:2.1.5"
@@ -1975,16 +2117,33 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/addon-ai-whisper-asr@workspace:*, @pikku/addon-ai-whisper-asr@workspace:packages/ai/whisper-asr":
+"@opentelemetry/semantic-conventions@npm:^1.39.0":
+  version: 1.41.1
+  resolution: "@opentelemetry/semantic-conventions@npm:1.41.1"
+  checksum: 10/3b80fba5b0f28884326966a7b0dfc228c55698531db08834ece2c0ef7537aaaa83cba3f933731c14ffa6b0162b72cc14fee4a0ba68a1858837a590b49be23ee5
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-ai-whisper-asr@file:..::locator=%40pikku%2Ftest-whisper-asr%40workspace%3Apackages%2Fai%2Fwhisper-asr%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-ai-whisper-asr@file:..#..::hash=85d9dd&locator=%40pikku%2Ftest-whisper-asr%40workspace%3Apackages%2Fai%2Fwhisper-asr%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/425da4e2f2eda1c6545d11542e19b4b77c260d2395bb247eb32d72baddf227adc667d0475271af78856defe3f22401aab077b20c33436a1567b281bb75ac6fc1
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-ai-whisper-asr@workspace:packages/ai/whisper-asr":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ai-whisper-asr@workspace:packages/ai/whisper-asr"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -1993,12 +2152,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-airtable@workspace:packages/database/airtable"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2007,27 +2166,39 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-assemblyai@workspace:packages/ai/assemblyai"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-barcode@workspace:*, @pikku/addon-barcode@workspace:packages/data/barcode":
+"@pikku/addon-barcode@file:..::locator=%40pikku%2Ftest-barcode%40workspace%3Apackages%2Fdata%2Fbarcode%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-barcode@file:..#..::hash=dc1725&locator=%40pikku%2Ftest-barcode%40workspace%3Apackages%2Fdata%2Fbarcode%2Ftest"
+  dependencies:
+    bwip-js: "npm:^4.8.0"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/3fda5a4d7492e1be14388ec54f3796f9717971fbb9ff88159aa7acaa3eae372da35c07ccd4aa1a8b784a8d8d242d42391fdc61f5c281221fb35876e5dc0ca3d2
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-barcode@workspace:packages/data/barcode":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-barcode@workspace:packages/data/barcode"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     bwip-js: "npm:^4.8.0"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2036,41 +2207,63 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-cloudflare@workspace:packages/infrastructure/cloudflare"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-coingecko@workspace:*, @pikku/addon-coingecko@workspace:packages/crypto/coingecko":
+"@pikku/addon-coingecko@file:..::locator=%40pikku%2Ftest-coingecko%40workspace%3Apackages%2Fcrypto%2Fcoingecko%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-coingecko@file:..#..::hash=0590cd&locator=%40pikku%2Ftest-coingecko%40workspace%3Apackages%2Fcrypto%2Fcoingecko%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/a31249068c03d88a20e5ddee8c231924714f0e5172c742a4de65a974cb3670717f38fa3aef50d0a20dbd6522145c2eb4c1aa7406f41140901c36063295275343
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-coingecko@workspace:packages/crypto/coingecko":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-coingecko@workspace:packages/crypto/coingecko"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-compression@workspace:*, @pikku/addon-compression@workspace:packages/data/compression":
+"@pikku/addon-compression@file:..::locator=%40pikku%2Ftest-compression%40workspace%3Apackages%2Fdata%2Fcompression%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-compression@file:..#..::hash=078d06&locator=%40pikku%2Ftest-compression%40workspace%3Apackages%2Fdata%2Fcompression%2Ftest"
+  dependencies:
+    fflate: "npm:^0.8"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/54592408713c86fb8b5279083f6d288f5ad773ff07d35bf2ed019a49997fedd885ce28180575fb7382da7f690ec10b9cbe64138568a9f85fd566103c6b28004b
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-compression@workspace:packages/data/compression":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-compression@workspace:packages/data/compression"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     fflate: "npm:^0.8"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2079,12 +2272,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-deepl@workspace:packages/ai/deepl"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2093,12 +2286,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-discord@workspace:packages/communication/discord"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2107,71 +2300,115 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-docraptor@workspace:packages/documents/docraptor"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-edit-image@workspace:*, @pikku/addon-edit-image@workspace:packages/data/edit-image":
+"@pikku/addon-edit-image@file:..::locator=%40pikku%2Ftest-edit-image%40workspace%3Apackages%2Fdata%2Fedit-image%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-edit-image@file:..#..::hash=cde714&locator=%40pikku%2Ftest-edit-image%40workspace%3Apackages%2Fdata%2Fedit-image%2Ftest"
+  dependencies:
+    sharp: "npm:^0.33"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/173dcef7f16df568d1abeb46eed3054cbd8b343d2de56b87c00de8a272296e80c7ed3d7ce4d8194d1a374b66006253ede76851139879a53749a8a97ad0409fa4
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-edit-image@workspace:packages/data/edit-image":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-edit-image@workspace:packages/data/edit-image"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     sharp: "npm:^0.33"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-elevenlabs@workspace:*, @pikku/addon-elevenlabs@workspace:packages/ai/elevenlabs":
+"@pikku/addon-elevenlabs@file:..::locator=%40pikku%2Ftest-elevenlabs%40workspace%3Apackages%2Fai%2Felevenlabs%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-elevenlabs@file:..#..::hash=b1be48&locator=%40pikku%2Ftest-elevenlabs%40workspace%3Apackages%2Fai%2Felevenlabs%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/7a50809438b4f8928a11aa6fedc845861d890ab76f98054b10a937d019af50ece0cad8070ae80fc0279b0d52e4508266e9f4949090bdb74452e381b11fab6269
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-elevenlabs@workspace:packages/ai/elevenlabs":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-elevenlabs@workspace:packages/ai/elevenlabs"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-email-send@workspace:*, @pikku/addon-email-send@workspace:packages/email/email-send":
+"@pikku/addon-email-send@file:..::locator=%40pikku%2Ftest-email-send%40workspace%3Apackages%2Femail%2Femail-send%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-email-send@file:..#..::hash=5e6986&locator=%40pikku%2Ftest-email-send%40workspace%3Apackages%2Femail%2Femail-send%2Ftest"
+  dependencies:
+    nodemailer: "npm:^6"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/1130494765347d84fac04794c82188b8efee3f18c7f069928ea7c1849d1265a9fc10008cf1b2aada37112dd1ce540acd7b3869e10e28af81d0d412269a4be64e
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-email-send@workspace:packages/email/email-send":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-email-send@workspace:packages/email/email-send"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/nodemailer": "npm:^6"
     nodemailer: "npm:^6"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-flyio@workspace:*, @pikku/addon-flyio@workspace:packages/cloud/flyio":
+"@pikku/addon-flyio@file:..::locator=%40pikku%2Ftest-flyio%40workspace%3Apackages%2Fcloud%2Fflyio%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-flyio@file:..#..::hash=673134&locator=%40pikku%2Ftest-flyio%40workspace%3Apackages%2Fcloud%2Fflyio%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/a91089c72dfba4eb97635813a6ec505c83d3c76bacb0e832b7bcc578d04a79d6c2ee7b4395f2e7aabbbb32fdf980b764094098b407903501b3443ef2a24caa35
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-flyio@workspace:packages/cloud/flyio":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-flyio@workspace:packages/cloud/flyio"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2180,41 +2417,63 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-formstack@workspace:packages/forms/formstack"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-git@workspace:*, @pikku/addon-git@workspace:packages/devops/git":
+"@pikku/addon-git@file:..::locator=%40pikku%2Ftest-git%40workspace%3Apackages%2Fdevops%2Fgit%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-git@file:..#..::hash=09f72e&locator=%40pikku%2Ftest-git%40workspace%3Apackages%2Fdevops%2Fgit%2Ftest"
+  dependencies:
+    simple-git: "npm:^3"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/3743765bacdcbad45058f8cbd30a0b8ce7702bdfd86941b8ae4cbdbd46771f80591cc6784277d4180643a0f2383b206f9071c790c7036607492760463a47ff85
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-git@workspace:packages/devops/git":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-git@workspace:packages/devops/git"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     simple-git: "npm:^3"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-gmail@workspace:*, @pikku/addon-gmail@workspace:packages/email/gmail":
+"@pikku/addon-gmail@file:..::locator=%40pikku%2Ftest-gmail%40workspace%3Apackages%2Femail%2Fgmail%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-gmail@file:..#..::hash=4c8cfd&locator=%40pikku%2Ftest-gmail%40workspace%3Apackages%2Femail%2Fgmail%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/6099cd6d3f6749ef7e570176d21cc55b8656b52f4dae5bc4a05a5ea4ec056e8d57975a0071361d1385c76a625adfe606cac9b7e41dc4ed6cfe4ba1986e088a83
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-gmail@workspace:packages/email/gmail":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-gmail@workspace:packages/email/gmail"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2223,12 +2482,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-google-analytics@workspace:packages/analytics/google-analytics"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2237,71 +2496,116 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-google-cloud-storage@workspace:packages/cloud/google-cloud-storage"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-grafana@workspace:*, @pikku/addon-grafana@workspace:packages/monitoring/grafana":
+"@pikku/addon-grafana@file:..::locator=%40pikku%2Ftest-grafana%40workspace%3Apackages%2Fmonitoring%2Fgrafana%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-grafana@file:..#..::hash=004ef5&locator=%40pikku%2Ftest-grafana%40workspace%3Apackages%2Fmonitoring%2Fgrafana%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/ca723e2d5126ab4956f51717d76515bf3df36a61236bae1b4cfa20379b85c840594e23f3047d3f7fe6c618d1ad12a804291d69e865be93a336db798d18ffc3ba
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-grafana@workspace:packages/monitoring/grafana":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-grafana@workspace:packages/monitoring/grafana"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-hackernews@workspace:*, @pikku/addon-hackernews@workspace:packages/data/hackernews":
+"@pikku/addon-hackernews@file:..::locator=%40pikku%2Ftest-hackernews%40workspace%3Apackages%2Fdata%2Fhackernews%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-hackernews@file:..#..::hash=abfa3a&locator=%40pikku%2Ftest-hackernews%40workspace%3Apackages%2Fdata%2Fhackernews%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/68913a7e016a7f254c414b84a2d8d3b3b3c0c64d5dc1b6105b043665db876fc41de2934532cb510c0b0ae93a4c352ecb7b2cc9f0dc5c08ae866850e9764322f5
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-hackernews@workspace:packages/data/hackernews":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-hackernews@workspace:packages/data/hackernews"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-html-extract@workspace:*, @pikku/addon-html-extract@workspace:packages/data/html-extract":
+"@pikku/addon-html-extract@file:..::locator=%40pikku%2Ftest-html-extract%40workspace%3Apackages%2Fdata%2Fhtml-extract%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-html-extract@file:..#..::hash=3e139e&locator=%40pikku%2Ftest-html-extract%40workspace%3Apackages%2Fdata%2Fhtml-extract%2Ftest"
+  dependencies:
+    cheerio: "npm:^1"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/974f7a8a4edd41bc4f00b43962b9012ec4831ecde32c5e42b07b28815a7789cfce13f302fc31557b190f3cc9c63db946406528ed4e70da0ca0b81a24df810e56
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-html-extract@workspace:packages/data/html-extract":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-html-extract@workspace:packages/data/html-extract"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     cheerio: "npm:^1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-html@workspace:*, @pikku/addon-html@workspace:packages/data/html":
+"@pikku/addon-html@file:..::locator=%40pikku%2Ftest-html%40workspace%3Apackages%2Fdata%2Fhtml%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-html@file:..#..::hash=062d70&locator=%40pikku%2Ftest-html%40workspace%3Apackages%2Fdata%2Fhtml%2Ftest"
+  dependencies:
+    html-to-text: "npm:^9"
+    node-html-markdown: "npm:^1"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/304b91b1a81d37e21641396de60a1df5ad7dc6752e7f835a6a7b20efe4b437fdb1a5b34fb463ae6f82a88c5d129522d8a310fcaef416201692d662c955d8b146
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-html@workspace:packages/data/html":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-html@workspace:packages/data/html"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     html-to-text: "npm:^9"
     node-html-markdown: "npm:^1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2310,73 +2614,120 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-hubspot@workspace:packages/crm/hubspot"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-human-design@workspace:*, @pikku/addon-human-design@workspace:packages/esoteric/human-design":
+"@pikku/addon-human-design@file:..::locator=%40pikku%2Ftest-human-design%40workspace%3Apackages%2Fesoteric%2Fhuman-design%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-human-design@file:..#..::hash=13cd37&locator=%40pikku%2Ftest-human-design%40workspace%3Apackages%2Fesoteric%2Fhuman-design%2Ftest"
+  dependencies:
+    sweph: "npm:^2.10.3-4"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/fde2112e8c4bd4134022da303b08a544b50156df6acdb7a33068f26c090a6589db5321a1e17e92399137ac9b8752a9e43c4ee992c6453679b194abfcbea774d7
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-human-design@workspace:packages/esoteric/human-design":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-human-design@workspace:packages/esoteric/human-design"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     sweph: "npm:^2.10.3-4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-icalendar@workspace:*, @pikku/addon-icalendar@workspace:packages/data/icalendar":
+"@pikku/addon-icalendar@file:..::locator=%40pikku%2Ftest-icalendar%40workspace%3Apackages%2Fdata%2Ficalendar%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-icalendar@file:..#..::hash=b4cc0c&locator=%40pikku%2Ftest-icalendar%40workspace%3Apackages%2Fdata%2Ficalendar%2Ftest"
+  dependencies:
+    ical-generator: "npm:^8"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/f0138536a1ea21a87da62e75cc77b7c0ba5317fb7e8920e59aafbf2f021331de807515e434ff21c4ff2149e621a04e9eaf15ae0cf3d19d26d75fa80b1f691a14
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-icalendar@workspace:packages/data/icalendar":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-icalendar@workspace:packages/data/icalendar"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     ical-generator: "npm:^8"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-imap@workspace:*, @pikku/addon-imap@workspace:packages/email/imap":
+"@pikku/addon-imap@file:..::locator=%40pikku%2Ftest-imap%40workspace%3Apackages%2Femail%2Fimap%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-imap@file:..#..::hash=42233f&locator=%40pikku%2Ftest-imap%40workspace%3Apackages%2Femail%2Fimap%2Ftest"
+  dependencies:
+    imapflow: "npm:^1.0.171"
+    mailparser: "npm:^3.7.2"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/ec5fe3d5187a10392de32b887a4ef5f02c000f401ea27bab6d37fe30af324767f4fa17fec6d4db3282f8ecc4a0b94d6b462c5486cf93dc3da69fc8e75e876c75
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-imap@workspace:packages/email/imap":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-imap@workspace:packages/email/imap"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/mailparser": "npm:^3.4.5"
     imapflow: "npm:^1.0.171"
     mailparser: "npm:^3.7.2"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-jenkins@workspace:*, @pikku/addon-jenkins@workspace:packages/devops/jenkins":
+"@pikku/addon-jenkins@file:..::locator=%40pikku%2Ftest-jenkins%40workspace%3Apackages%2Fdevops%2Fjenkins%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-jenkins@file:..#..::hash=beedaf&locator=%40pikku%2Ftest-jenkins%40workspace%3Apackages%2Fdevops%2Fjenkins%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/c651f04b5495bef31fb0350cb9f0a83f1be5aa83c839ab94ceb09912f5dc4ba5a5d27bb59a9eeeb861d7063a2d56e9ec092f1b3bc76acaf10a9e507632b8b18c
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-jenkins@workspace:packages/devops/jenkins":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-jenkins@workspace:packages/devops/jenkins"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2385,42 +2736,66 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-jotform@workspace:packages/forms/jotform"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-kafka@workspace:*, @pikku/addon-kafka@workspace:packages/infrastructure/kafka":
+"@pikku/addon-kafka@file:..::locator=%40pikku%2Ftest-kafka%40workspace%3Apackages%2Finfrastructure%2Fkafka%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-kafka@file:..#..::hash=d5170d&locator=%40pikku%2Ftest-kafka%40workspace%3Apackages%2Finfrastructure%2Fkafka%2Ftest"
+  dependencies:
+    kafkajs: "npm:^2"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/ddeb63525738cef2034363314cf36253e55ff27670ad49d5bcd2aa17a095e45353a2f4153e4bfe579b0308c4296c763d666809c26ea000872725a76dff1ab429
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-kafka@workspace:packages/infrastructure/kafka":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-kafka@workspace:packages/infrastructure/kafka"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     kafkajs: "npm:^2"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-ldap@workspace:*, @pikku/addon-ldap@workspace:packages/infrastructure/ldap":
+"@pikku/addon-ldap@file:..::locator=%40pikku%2Ftest-ldap%40workspace%3Apackages%2Finfrastructure%2Fldap%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-ldap@file:..#..::hash=1746b9&locator=%40pikku%2Ftest-ldap%40workspace%3Apackages%2Finfrastructure%2Fldap%2Ftest"
+  dependencies:
+    ldapts: "npm:^7"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/74207e44f3b9fea349be4c62f0c54d97d23085c6f570e8c6e3368b41284a7b590038da2e4ddf2f6435021e033c8ea8a9431f7fdbd4dab63c0768a888362f7430
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-ldap@workspace:packages/infrastructure/ldap":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ldap@workspace:packages/infrastructure/ldap"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     ldapts: "npm:^7"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2429,12 +2804,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mailgun@workspace:packages/email/mailgun"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2443,28 +2818,41 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mandrill@workspace:packages/email/mandrill"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-markdown@workspace:*, @pikku/addon-markdown@workspace:packages/data/markdown":
+"@pikku/addon-markdown@file:..::locator=%40pikku%2Ftest-markdown%40workspace%3Apackages%2Fdata%2Fmarkdown%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-markdown@file:..#..::hash=b21dd4&locator=%40pikku%2Ftest-markdown%40workspace%3Apackages%2Fdata%2Fmarkdown%2Ftest"
+  dependencies:
+    marked: "npm:^15"
+    node-html-markdown: "npm:^1"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/d75b4d9a2d524f809c2b05f6f879504f9203a652cf8c44f1ca7cdf4aba1f5f5d16f64b2700677f6f19b4d51dcf97ccdedb708f16f4315dafd82d7ea6ad12c4a9
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-markdown@workspace:packages/data/markdown":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-markdown@workspace:packages/data/markdown"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     marked: "npm:^15"
     node-html-markdown: "npm:^1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2473,72 +2861,119 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-meta-conversions@workspace:packages/analytics/meta-conversions"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-metabase@workspace:*, @pikku/addon-metabase@workspace:packages/analytics/metabase":
+"@pikku/addon-metabase@file:..::locator=%40pikku%2Ftest-metabase%40workspace%3Apackages%2Fanalytics%2Fmetabase%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-metabase@file:..#..::hash=c43e4d&locator=%40pikku%2Ftest-metabase%40workspace%3Apackages%2Fanalytics%2Fmetabase%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/2dcdfd11f4dd0eff65500635a259cbfc2d6d829ba4f29e5468c02363fed5868c55fc35882b449dac95b809606fedcf545c2e3bca7bfb1585e808574ef9daf683
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-metabase@workspace:packages/analytics/metabase":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-metabase@workspace:packages/analytics/metabase"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-mongodb@workspace:*, @pikku/addon-mongodb@workspace:packages/database/mongodb":
+"@pikku/addon-mongodb@file:..::locator=%40pikku%2Ftest-mongodb%40workspace%3Apackages%2Fdatabase%2Fmongodb%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-mongodb@file:..#..::hash=4ec3ed&locator=%40pikku%2Ftest-mongodb%40workspace%3Apackages%2Fdatabase%2Fmongodb%2Ftest"
+  dependencies:
+    mongodb: "npm:^6"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/3978342171e9fafdc324f1379bb53698d560539db8e362295bce8b54339dbfebacbbd2285fccd1575ab2dbe1c7f688c47187690e9628a6102c0e3761809a0f08
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-mongodb@workspace:packages/database/mongodb":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mongodb@workspace:packages/database/mongodb"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     mongodb: "npm:^6"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-mysql@workspace:*, @pikku/addon-mysql@workspace:packages/database/mysql":
+"@pikku/addon-mysql@file:..::locator=%40pikku%2Ftest-mysql%40workspace%3Apackages%2Fdatabase%2Fmysql%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-mysql@file:..#..::hash=6db4f6&locator=%40pikku%2Ftest-mysql%40workspace%3Apackages%2Fdatabase%2Fmysql%2Ftest"
+  dependencies:
+    mysql2: "npm:^3.11.5"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/4b67f9820f85f1b298a1f9098299e806868d46b74dcb1bb67013e533d1aacfa0b5860b716b2e37d4064dd36b63d91bbbca182d8027cf74d9216ba08a7dd1471e
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-mysql@workspace:packages/database/mysql":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-mysql@workspace:packages/database/mysql"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     mysql2: "npm:^3.11.5"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-ollama@workspace:*, @pikku/addon-ollama@workspace:packages/ai/ollama":
+"@pikku/addon-ollama@file:..::locator=%40pikku%2Ftest-ollama%40workspace%3Apackages%2Fai%2Follama%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-ollama@file:..#..::hash=7f9af2&locator=%40pikku%2Ftest-ollama%40workspace%3Apackages%2Fai%2Follama%2Ftest"
+  dependencies:
+    "@ai-sdk/openai": "npm:^1"
+    ai: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/8c02a37e19ce98aba7937ddf2604d5236052b1fae9b108a2989f3be0ad58b01a681c22cdb6eb6cdc53db4fe0502daba8e286e84bcde891bf73fb66a5a23bb09f
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-ollama@workspace:packages/ai/ollama":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ollama@workspace:packages/ai/ollama"
   dependencies:
     "@ai-sdk/openai": "npm:^1"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     ai: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2547,13 +2982,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-openai@workspace:packages/ai/openai"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     openai: "npm:^6.9.1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2562,12 +2997,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-paddle@workspace:packages/payments/paddle"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2576,42 +3011,64 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-pagerduty@workspace:packages/monitoring/pagerduty"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-plentymarkets@workspace:*, @pikku/addon-plentymarkets@workspace:packages/ecommerce/plentymarkets":
+"@pikku/addon-plentymarkets@file:..::locator=%40pikku%2Ftest-plentymarkets%40workspace%3Apackages%2Fecommerce%2Fplentymarkets%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-plentymarkets@file:..#..::hash=04ef94&locator=%40pikku%2Ftest-plentymarkets%40workspace%3Apackages%2Fecommerce%2Fplentymarkets%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/4d6fe0115e4695a70b0894be71213fc4a681e929aa81a974391406fd29243d5a343a3a91fb732e447989d9f51f07a24507dc298f79bf282cc47932db1fcef9bf
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-plentymarkets@workspace:packages/ecommerce/plentymarkets":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-plentymarkets@workspace:packages/ecommerce/plentymarkets"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-postgres@workspace:*, @pikku/addon-postgres@workspace:packages/database/postgres":
+"@pikku/addon-postgres@file:..::locator=%40pikku%2Ftest-postgres%40workspace%3Apackages%2Fdatabase%2Fpostgres%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-postgres@file:..#..::hash=1a1fc4&locator=%40pikku%2Ftest-postgres%40workspace%3Apackages%2Fdatabase%2Fpostgres%2Ftest"
+  dependencies:
+    pg: "npm:^8.13.1"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/f1d8e9a897ed7e86962f59563bc563a3a550a00abf5a7f34447715b3f34e00b8e3d00f5a992bd484a407696200fd626b2b82e3bc4b2d7dd515fe1e6023610cc0
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-postgres@workspace:packages/database/postgres":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-postgres@workspace:packages/database/postgres"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/pg": "npm:^8.11.10"
     pg: "npm:^8.13.1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2620,22 +3077,36 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-posthog@workspace:packages/analytics/posthog"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-qrcode@workspace:*, @pikku/addon-qrcode@workspace:packages/data/qrcode":
+"@pikku/addon-qrcode@file:..::locator=%40pikku%2Ftest-qrcode%40workspace%3Apackages%2Fdata%2Fqrcode%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-qrcode@file:..#..::hash=4af96b&locator=%40pikku%2Ftest-qrcode%40workspace%3Apackages%2Fdata%2Fqrcode%2Ftest"
+  dependencies:
+    jsqr: "npm:^1.4.0"
+    qrcode: "npm:^1.5.4"
+    sharp: "npm:^0.34.5"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/d6d438a0b15f8854ad525e16bbe394db61149f07706ae37aec7c48cad316766b4b2b91dfc74c72dfd461cfda16b281e63de5a3b7ae80ed4c5617d2c92fcf5aa5
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-qrcode@workspace:packages/data/qrcode":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-qrcode@workspace:packages/data/qrcode"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/qrcode": "npm:^1.5.6"
     jsqr: "npm:^1.4.0"
     qrcode: "npm:^1.5.4"
@@ -2643,67 +3114,115 @@ __metadata:
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-read-pdf@workspace:*, @pikku/addon-read-pdf@workspace:packages/data/read-pdf":
+"@pikku/addon-read-pdf@file:..::locator=%40pikku%2Ftest-read-pdf%40workspace%3Apackages%2Fdata%2Fread-pdf%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-read-pdf@file:..#..::hash=e35f61&locator=%40pikku%2Ftest-read-pdf%40workspace%3Apackages%2Fdata%2Fread-pdf%2Ftest"
+  dependencies:
+    pdfjs-dist: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/b9807008b3f1185426383f969742cdafca4e4e361210e7cc1170c0df6a0ceb7714aae86f797eb0b68cbce59ec8d06f96e939afba2d53a75dafc2a5f12130fc9e
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-read-pdf@workspace:packages/data/read-pdf":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-read-pdf@workspace:packages/data/read-pdf"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     pdfjs-dist: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-redis@workspace:*, @pikku/addon-redis@workspace:packages/cache/redis":
+"@pikku/addon-redis@file:..::locator=%40pikku%2Ftest-redis%40workspace%3Apackages%2Fcache%2Fredis%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-redis@file:..#..::hash=c44144&locator=%40pikku%2Ftest-redis%40workspace%3Apackages%2Fcache%2Fredis%2Ftest"
+  dependencies:
+    ioredis: "npm:^5.8.2"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/d865446d405957f6a60f60218f2f64a12eaca802b9da8c6cc50ce6cdbda79363b27ae03dbb8fe2379e366d03d7d99a176082a0f997927ecee9f0931febeb2470
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-redis@workspace:packages/cache/redis":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-redis@workspace:packages/cache/redis"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     ioredis: "npm:^5.8.2"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-rss-feed@workspace:*, @pikku/addon-rss-feed@workspace:packages/data/rss-feed":
+"@pikku/addon-rss-feed@file:..::locator=%40pikku%2Ftest-rss-feed%40workspace%3Apackages%2Fdata%2Frss-feed%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-rss-feed@file:..#..::hash=9b6022&locator=%40pikku%2Ftest-rss-feed%40workspace%3Apackages%2Fdata%2Frss-feed%2Ftest"
+  dependencies:
+    rss-parser: "npm:^3"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/13c9abcc6ea566610983578ea3ef846daa5ff100859fa57eb593050afeea3c282c29295564b084442d5531252e2169e5797abbf424a697390a5876e17a0e0b02
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-rss-feed@workspace:packages/data/rss-feed":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-rss-feed@workspace:packages/data/rss-feed"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     rss-parser: "npm:^3"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-s3@workspace:*, @pikku/addon-s3@workspace:packages/cloud/s3":
+"@pikku/addon-s3@file:..::locator=%40pikku%2Ftest-s3%40workspace%3Apackages%2Fcloud%2Fs3%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-s3@file:..#..::hash=60dac0&locator=%40pikku%2Ftest-s3%40workspace%3Apackages%2Fcloud%2Fs3%2Ftest"
+  dependencies:
+    "@aws-sdk/client-s3": "npm:^3"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/fd3cb4f6ccec47ff7ae7c3e42c8a753f29f2ee369ac9b340b0d1b54824bf3fa947b0804acf507534588e47f36e6864ddb3c798cfcdbb9088a6c884f9c8e390ff
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-s3@workspace:packages/cloud/s3":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-s3@workspace:packages/cloud/s3"
   dependencies:
     "@aws-sdk/client-s3": "npm:^3"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2712,12 +3231,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-segment@workspace:packages/analytics/segment"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2726,12 +3245,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-sendgrid@workspace:packages/email/sendgrid"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2740,88 +3259,147 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-sentry@workspace:packages/monitoring/sentry"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-shopify@workspace:*, @pikku/addon-shopify@workspace:packages/ecommerce/shopify":
+"@pikku/addon-shopify@file:..::locator=%40pikku%2Ftest-shopify%40workspace%3Apackages%2Fecommerce%2Fshopify%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-shopify@file:..#..::hash=5cf7f0&locator=%40pikku%2Ftest-shopify%40workspace%3Apackages%2Fecommerce%2Fshopify%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/a1d49a4f33fad82259403d4b930181f23829c1775f3318bb299bb8e92ebdc3ead684a7fee368b61d2fdc4fe9743a8cfd2b2124ee5e2b709fe10c5f172376c1a9
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-shopify@workspace:packages/ecommerce/shopify":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-shopify@workspace:packages/ecommerce/shopify"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-spreadsheet@workspace:*, @pikku/addon-spreadsheet@workspace:packages/data/spreadsheet":
+"@pikku/addon-spreadsheet@file:..::locator=%40pikku%2Ftest-spreadsheet%40workspace%3Apackages%2Fdata%2Fspreadsheet%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-spreadsheet@file:..#..::hash=344454&locator=%40pikku%2Ftest-spreadsheet%40workspace%3Apackages%2Fdata%2Fspreadsheet%2Ftest"
+  dependencies:
+    csv-parse: "npm:^5"
+    xlsx: "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/979df8d9977ae16562d7875262cb98fac10d3af34011a34441d929cbf59b16fda1984c5bdd0ffefd54b4984378eca1bf87a858f90250e413098c0cf951b93b71
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-spreadsheet@workspace:packages/data/spreadsheet":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-spreadsheet@workspace:packages/data/spreadsheet"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     csv-parse: "npm:^5"
     typescript: "npm:^5.7.2"
     xlsx: "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-ssh@workspace:*, @pikku/addon-ssh@workspace:packages/infrastructure/ssh":
+"@pikku/addon-ssh@file:..::locator=%40pikku%2Ftest-ssh%40workspace%3Apackages%2Finfrastructure%2Fssh%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-ssh@file:..#..::hash=f9bed1&locator=%40pikku%2Ftest-ssh%40workspace%3Apackages%2Finfrastructure%2Fssh%2Ftest"
+  dependencies:
+    ssh2: "npm:^1"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/c823be35a2fa94776f8aa77897afc7851471de3292f7eb0c9453cfe9cb553d89cbbab1b11d833de9eb36fa21126deafd4f16837527b1ef7492a57ac37330f6a7
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-ssh@workspace:packages/infrastructure/ssh":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-ssh@workspace:packages/infrastructure/ssh"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/ssh2": "npm:^1"
     ssh2: "npm:^1"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-stripe@workspace:*, @pikku/addon-stripe@workspace:packages/payments/stripe":
+"@pikku/addon-stripe@file:..::locator=%40pikku%2Ftest-stripe%40workspace%3Apackages%2Fpayments%2Fstripe%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-stripe@file:..#..::hash=c31be0&locator=%40pikku%2Ftest-stripe%40workspace%3Apackages%2Fpayments%2Fstripe%2Ftest"
+  dependencies:
+    stripe: "npm:^17.0.0"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/22f41061f2497a5f1e2c0569ab294f7bd99dfe070c7008a612b9e77844fd616b7cfb1329b13d3776e35bac32dd40f15ef3efbe0a5900ecd14d2df7c2109d6ec1
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-stripe@workspace:packages/payments/stripe":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-stripe@workspace:packages/payments/stripe"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     stripe: "npm:^17.0.0"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-supabase@workspace:*, @pikku/addon-supabase@workspace:packages/database/supabase":
+"@pikku/addon-supabase@file:..::locator=%40pikku%2Ftest-supabase%40workspace%3Apackages%2Fdatabase%2Fsupabase%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-supabase@file:..#..::hash=40fe4f&locator=%40pikku%2Ftest-supabase%40workspace%3Apackages%2Fdatabase%2Fsupabase%2Ftest"
+  dependencies:
+    "@supabase/supabase-js": "npm:^2.47.10"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/d2477e654db4c89bee9dec2f9e700fda606573e0319c89423d91164410220eb1103f69fcfe8dff9cd0dca8fcbac6bcab363804b66daf984d1ce319943da097fe
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-supabase@workspace:packages/database/supabase":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-supabase@workspace:packages/database/supabase"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@supabase/supabase-js": "npm:^2.47.10"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2830,26 +3408,36 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-survey-monkey@workspace:packages/forms/survey-monkey"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-telegram@workspace:*, @pikku/addon-telegram@workspace:packages/communication/telegram":
+"@pikku/addon-telegram@file:..::locator=%40pikku%2Ftest-telegram%40workspace%3Apackages%2Fcommunication%2Ftelegram%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-telegram@file:..#..::hash=32f1b2&locator=%40pikku%2Ftest-telegram%40workspace%3Apackages%2Fcommunication%2Ftelegram%2Ftest"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/43e35790d6a95b273bce57316f53d2cca1d084d1cb3930bd3e6b2966e220f837bf954af684ee1f03c83b0750c1c4a4b240883137549c37e470d731e8f1d99c15
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-telegram@workspace:packages/communication/telegram":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-telegram@workspace:packages/communication/telegram"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2858,12 +3446,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-twilio@workspace:packages/communication/twilio"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2872,12 +3460,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-typeform@workspace:packages/forms/typeform"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2886,12 +3474,12 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-uptimerobot@workspace:packages/monitoring/uptimerobot"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2900,8 +3488,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-whatsapp@workspace:packages/communication/whatsapp"
   dependencies:
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/qrcode-terminal": "npm:^0"
     "@whiskeysockets/baileys": "npm:^7.0.0-rc.9"
     qrcode-terminal: "npm:^0.12.0"
@@ -2909,7 +3497,7 @@ __metadata:
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     "@whiskeysockets/baileys": ^7.0.0-rc.9
     qrcode-terminal: ">=0.12"
     zod: ^4
@@ -2919,18 +3507,30 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-xml@workspace:*, @pikku/addon-xml@workspace:packages/data/xml":
+"@pikku/addon-xml@file:..::locator=%40pikku%2Ftest-xml%40workspace%3Apackages%2Fdata%2Fxml%2Ftest":
+  version: 0.1.1
+  resolution: "@pikku/addon-xml@file:..#..::hash=db6942&locator=%40pikku%2Ftest-xml%40workspace%3Apackages%2Fdata%2Fxml%2Ftest"
+  dependencies:
+    xml2js: "npm:^0.6"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    zod: ^4
+  checksum: 10/6db18998ef6a7fa91a83799320d2fdfab483c0648c8ce0ee44f8a7c5e4cf61b2d0c85b778c13472ea6f9b9b723363440f48a5636ae31234303c107680f5f76e0
+  languageName: node
+  linkType: hard
+
+"@pikku/addon-xml@workspace:packages/data/xml":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-xml@workspace:packages/data/xml"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/xml2js": "npm:^0.4"
     typescript: "npm:^5.7.2"
     xml2js: "npm:^0.6"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2939,130 +3539,176 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/addon-zapier@workspace:packages/automation/zapier"
   dependencies:
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": "*"
+    "@pikku/core": ^0.12.36
     zod: ^4
   languageName: unknown
   linkType: soft
 
-"@pikku/cli@npm:0.12.9":
-  version: 0.12.9
-  resolution: "@pikku/cli@npm:0.12.9"
+"@pikku/better-auth@npm:^0.12.10":
+  version: 0.12.10
+  resolution: "@pikku/better-auth@npm:0.12.10"
+  peerDependencies:
+    "@pikku/core": ^0.12.36
+    better-auth: ^1.6.0
+  checksum: 10/991ff66da015c762c773ad00148c503e6f6db2d3b6d5a5e749036f4789c7608ef415c728acfacfc0cdac9079b36e9ffd3196ba7d3dc423d11c32470a29da7f9f
+  languageName: node
+  linkType: hard
+
+"@pikku/cli@npm:^0.12.47":
+  version: 0.12.47
+  resolution: "@pikku/cli@npm:0.12.47"
   dependencies:
+    "@electric-sql/pglite": "npm:^0.5.1"
     "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.1"
-    "@pikku/core": "npm:^0.12.11"
-    "@pikku/inspector": "npm:^0.12.4"
-    "@pikku/openapi-parser": "npm:^0.12.4"
+    "@pikku/better-auth": "npm:^0.12.10"
+    "@pikku/core": "npm:^0.12.36"
+    "@pikku/deploy-cloudflare": "npm:^0.12.4"
+    "@pikku/fetch": "npm:^0.12.4"
+    "@pikku/inspector": "npm:^0.12.24"
+    "@pikku/kysely": "npm:^0.12.16"
+    "@pikku/kysely-node-sqlite": "npm:^0.12.2"
+    "@pikku/node-http-server": "npm:^0.12.2"
+    "@pikku/openapi-parser": "npm:^0.12.10"
+    "@pikku/schedule": "npm:^0.12.0"
+    "@pikku/ws": "npm:^0.12.2"
     "@types/cookie": "npm:^1.0.0"
     "@types/json-schema": "npm:^7.0.15"
     chalk: "npm:^5.6.2"
     chokidar: "npm:^4.0.3"
+    esbuild: "npm:~0.27.0"
     open: "npm:^10.2.0"
     openapi-types: "npm:^12.1.3"
     path-to-regexp: "npm:^8.3.0"
+    pg: "npm:^8.13.0"
     tinyglobby: "npm:^0.2.12"
     ts-json-schema-generator: "npm:^2.5.0"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.9"
+    ws: "npm:^8.18.0"
     yaml: "npm:^2.8.2"
     zod: "npm:^4.3.6"
     zod-to-ts: "npm:^2.0.0"
   bin:
     pikku: dist/bin/pikku.js
-  checksum: 10/36bba360c266eace1305b5f2cc263c1787150c5671cf4de237bec59ce550dc4713135b4156aecbd3e2a0ba98efe12bb5bb9b440f5d6fea409f6b59a959c74c13
+  checksum: 10/8c0d4558ecefc298f256ba00d4b083b4205e954b2ee2123fdb411b4aa4df2be3f2e1889a708b0ad1dfd8f0ee00704a04efb8cd294bbb3dd28ce1c54fcfd50990
   languageName: node
   linkType: hard
 
-"@pikku/cli@npm:^0.12.6":
-  version: 0.12.15
-  resolution: "@pikku/cli@npm:0.12.15"
+"@pikku/core@npm:^0.12.21, @pikku/core@npm:^0.12.35, @pikku/core@npm:^0.12.36":
+  version: 0.12.36
+  resolution: "@pikku/core@npm:0.12.36"
+  dependencies:
+    "@standard-schema/spec": "npm:^1.1.0"
+    cookie: "npm:^1.1.1"
+    json-schema: "npm:^0.4.0"
+    path-to-regexp: "npm:^8.3.0"
+    picoquery: "npm:^2.5.0"
+  checksum: 10/027994aa2cc5e30aff0e28ff9c804e9953446007fd1332e45cf9c60fefc54c3eb817a75c9962c09d1694d14e3831b0ff06f21b115c456b683bc3f944bcd11d49
+  languageName: node
+  linkType: hard
+
+"@pikku/deploy-cloudflare@npm:^0.12.4":
+  version: 0.12.4
+  resolution: "@pikku/deploy-cloudflare@npm:0.12.4"
+  checksum: 10/404a59078b716b8ff235344b7396e3f29b9dd0c46f4a14b17649ccaf5556d99c31ed3c93bc39c44ba610bed4fde875440708bb425d903820df9ec690a58d21b9
+  languageName: node
+  linkType: hard
+
+"@pikku/fetch@npm:^0.12.4":
+  version: 0.12.4
+  resolution: "@pikku/fetch@npm:0.12.4"
+  checksum: 10/d70d8a817fcace00dd0c8915c29718970ab30d5c02a8da931f1b4b1cde220549636b757c11b4fdccc1688cec7e891c265d05fcb390574dde022eb4f366e2df99
+  languageName: node
+  linkType: hard
+
+"@pikku/inspector@npm:^0.12.24":
+  version: 0.12.24
+  resolution: "@pikku/inspector@npm:0.12.24"
   dependencies:
     "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.1"
-    "@pikku/core": "npm:^0.12.14"
-    "@pikku/inspector": "npm:^0.12.7"
-    "@pikku/openapi-parser": "npm:^0.12.9"
-    "@types/cookie": "npm:^1.0.0"
-    "@types/json-schema": "npm:^7.0.15"
-    chalk: "npm:^5.6.2"
-    chokidar: "npm:^4.0.3"
-    open: "npm:^10.2.0"
+    "@pikku/core": "npm:^0.12.35"
     openapi-types: "npm:^12.1.3"
     path-to-regexp: "npm:^8.3.0"
-    tinyglobby: "npm:^0.2.12"
     ts-json-schema-generator: "npm:^2.5.0"
     tsx: "npm:^4.21.0"
     typescript: "npm:^5.9"
-    yaml: "npm:^2.8.2"
     zod: "npm:^4.3.6"
     zod-to-ts: "npm:^2.0.0"
+  checksum: 10/471cbb7e99b36f1afb4d46672df9091f9ee4948678e854b67552d8f0c5e114d43e6861ae561a80dd001d69bbeaece67c76193e10596341f8ea55625d7c620bab
+  languageName: node
+  linkType: hard
+
+"@pikku/kysely-node-sqlite@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@pikku/kysely-node-sqlite@npm:0.12.2"
+  dependencies:
+    "@pikku/kysely": "npm:^0.12.16"
+    "@pikku/kysely-sqlite": "npm:^0.12.6"
+    kysely: "npm:^0.29.0"
+  checksum: 10/ddc0e2dd496c2eb9473a0b74f412d7a1fc748a281999483c5cb07f58fca36291506c5c76c61f7a7e50128b79af786813d8a5607ba1e71378b4a7380fb6b67429
+  languageName: node
+  linkType: hard
+
+"@pikku/kysely-sqlite@npm:^0.12.6":
+  version: 0.12.6
+  resolution: "@pikku/kysely-sqlite@npm:0.12.6"
+  dependencies:
+    "@pikku/core": "npm:^0.12.21"
+    "@pikku/kysely": "npm:^0.12.16"
+    kysely: "npm:^0.29.0"
+  checksum: 10/386c021bf8047c6b47498bfdac95b5a7ef71600692c20c3b9e71713f06e7fdf230a6fb5a3961728964a3d407a6e8e41aae35d76820a8887e4a8fd9f35a8a6fd8
+  languageName: node
+  linkType: hard
+
+"@pikku/kysely@npm:^0.12.16":
+  version: 0.12.16
+  resolution: "@pikku/kysely@npm:0.12.16"
+  dependencies:
+    kysely: "npm:^0.29.0"
+  peerDependencies:
+    "@pikku/core": ^0.12.28
   bin:
-    pikku: dist/bin/pikku.js
-  checksum: 10/933739e2caa405c501235ac06017d7e3b9567c594cfd24cc5304c14871cdd2e257fb20276c5456df5fc69d9cae85137fdfa513a25589bb7b3b7bb69926b68c05
+    pikku-kysely-pure: dist/bin/pikku-kysely-pure.js
+  checksum: 10/f653b388112a829a41764d755d69b62f1059ab7917c362bd646d73189311bc123d3954d659480b8221cfffe14fc95f320bb1340bcc207c3d2004bf01c0befb49
   languageName: node
   linkType: hard
 
-"@pikku/core@npm:0.12.9":
-  version: 0.12.9
-  resolution: "@pikku/core@npm:0.12.9"
-  dependencies:
-    "@standard-schema/spec": "npm:^1.1.0"
-    cookie: "npm:^1.1.1"
-    path-to-regexp: "npm:^8.3.0"
-    picoquery: "npm:^2.5.0"
-  checksum: 10/8825761ccd8c00de410ea2a256186cbb6a4feac51832474a5399835d53ec3c7ff0f4aaa1fc9315f808c65ab5e1d55acab0653497a1c2968b0a275ce51eaade0c
+"@pikku/node-http-server@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@pikku/node-http-server@npm:0.12.2"
+  peerDependencies:
+    "@pikku/core": ^0.12.30
+    "@pikku/modelcontextprotocol": ^0.12.4
+  peerDependenciesMeta:
+    "@pikku/modelcontextprotocol":
+      optional: true
+  checksum: 10/30d64341da4cfae5e349e907bc195edc196e61856d87f5b47d238d6d185f0fe777b1dbe1b06da483109372be2224db1eb0add3a21c6f1f0db5b0bb530f368149
   languageName: node
   linkType: hard
 
-"@pikku/core@npm:^0.12.11, @pikku/core@npm:^0.12.13":
-  version: 0.12.13
-  resolution: "@pikku/core@npm:0.12.13"
-  dependencies:
-    "@standard-schema/spec": "npm:^1.1.0"
-    cookie: "npm:^1.1.1"
-    path-to-regexp: "npm:^8.3.0"
-    picoquery: "npm:^2.5.0"
-  checksum: 10/b1ad4d8d1c129668254a0cf88f3aeb0bb62b65f9c879f1c529f002b25993224a564b32cb87c6c779abda63e0d3033eedad79c1f3bc15889a01680d5e241eaa3d
-  languageName: node
-  linkType: hard
-
-"@pikku/core@npm:^0.12.14, @pikku/core@npm:^0.12.5":
-  version: 0.12.14
-  resolution: "@pikku/core@npm:0.12.14"
-  dependencies:
-    "@standard-schema/spec": "npm:^1.1.0"
-    cookie: "npm:^1.1.1"
-    path-to-regexp: "npm:^8.3.0"
-    picoquery: "npm:^2.5.0"
-  checksum: 10/b675e666bc9204436252ac43e6a5e4ae195946c6d7b02e8bcd57559d10e520494bc0a8cf21467fff056454737c66803cc4b993948b7ce5be8f4dadee794a32b3
-  languageName: node
-  linkType: hard
-
-"@pikku/inspector@npm:^0.12.4, @pikku/inspector@npm:^0.12.7":
-  version: 0.12.7
-  resolution: "@pikku/inspector@npm:0.12.7"
-  dependencies:
-    "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.1"
-    "@pikku/core": "npm:^0.12.13"
-    path-to-regexp: "npm:^8.3.0"
-    ts-json-schema-generator: "npm:^2.5.0"
-    tsx: "npm:^4.21.0"
-    typescript: "npm:^5.9"
-    zod: "npm:^4.3.6"
-    zod-to-ts: "npm:^2.0.0"
-  checksum: 10/15381a355019b83a6f98cea3f6edf390213886d289e1d1383d45a68fb337366841d4d0fd07dac980ccf1453b656605a95a86ce00d12230787164457383da63ad
-  languageName: node
-  linkType: hard
-
-"@pikku/openapi-parser@npm:^0.12.4, @pikku/openapi-parser@npm:^0.12.9":
-  version: 0.12.9
-  resolution: "@pikku/openapi-parser@npm:0.12.9"
+"@pikku/openapi-parser@npm:^0.12.10":
+  version: 0.12.10
+  resolution: "@pikku/openapi-parser@npm:0.12.10"
   dependencies:
     yaml: "npm:^2.7.1"
-  checksum: 10/974001fd31eb278efce4951b889198848a6574f2654038e1f40babf576a3924aa78cba0e962ec1de1ea5efd9680198b9c7b224fed3c3ff40a57d2dce31781e88
+  checksum: 10/a7036fab1f1b43c695aa99133a0075d9efab6c44278fff493c1c0a15616f9e9161c53dbf542aa5bb047da32a8376b58bccba95bbd80b0204dad46c58532193bd
+  languageName: node
+  linkType: hard
+
+"@pikku/schedule@npm:^0.12.0":
+  version: 0.12.2
+  resolution: "@pikku/schedule@npm:0.12.2"
+  dependencies:
+    cron: "npm:^4.4.0"
+    cron-schedule: "npm:^5.0.4"
+  peerDependencies:
+    "@pikku/core": ^0.12.2
+  checksum: 10/3a00e5e46461f1044fd8b33bbfc3ffda8347a9c1b2c00813d40fbfd8ad13dec284a33d043ed09c924da94cb76277f17b394bd8bfdcea7a4537df1e5e2ebf2796
   languageName: node
   linkType: hard
 
@@ -3070,9 +3716,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-barcode@workspace:packages/data/barcode/test"
   dependencies:
-    "@pikku/addon-barcode": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-barcode": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3084,9 +3730,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-coingecko@workspace:packages/crypto/coingecko/test"
   dependencies:
-    "@pikku/addon-coingecko": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-coingecko": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3098,9 +3744,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-compression@workspace:packages/data/compression/test"
   dependencies:
-    "@pikku/addon-compression": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-compression": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3112,9 +3758,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-edit-image@workspace:packages/data/edit-image/test"
   dependencies:
-    "@pikku/addon-edit-image": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-edit-image": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3126,9 +3772,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-elevenlabs@workspace:packages/ai/elevenlabs/test"
   dependencies:
-    "@pikku/addon-elevenlabs": "workspace:*"
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/addon-elevenlabs": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3140,9 +3786,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-email-send@workspace:packages/email/email-send/test"
   dependencies:
-    "@pikku/addon-email-send": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-email-send": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3155,9 +3801,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-flyio@workspace:packages/cloud/flyio/test"
   dependencies:
-    "@pikku/addon-flyio": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-flyio": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3169,9 +3815,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-git@workspace:packages/devops/git/test"
   dependencies:
-    "@pikku/addon-git": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-git": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3183,9 +3829,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-gmail@workspace:packages/email/gmail/test"
   dependencies:
-    "@pikku/addon-gmail": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-gmail": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3197,9 +3843,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-grafana@workspace:packages/monitoring/grafana/test"
   dependencies:
-    "@pikku/addon-grafana": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-grafana": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3212,9 +3858,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-hackernews@workspace:packages/data/hackernews/test"
   dependencies:
-    "@pikku/addon-hackernews": "workspace:*"
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/addon-hackernews": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3226,9 +3872,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-html-extract@workspace:packages/data/html-extract/test"
   dependencies:
-    "@pikku/addon-html-extract": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-html-extract": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3240,9 +3886,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-html@workspace:packages/data/html/test"
   dependencies:
-    "@pikku/addon-html": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-html": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3254,9 +3900,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-human-design@workspace:packages/esoteric/human-design/test"
   dependencies:
-    "@pikku/addon-human-design": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-human-design": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3268,9 +3914,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-icalendar@workspace:packages/data/icalendar/test"
   dependencies:
-    "@pikku/addon-icalendar": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-icalendar": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3282,9 +3928,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-imap@workspace:packages/email/imap/test"
   dependencies:
-    "@pikku/addon-imap": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-imap": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3297,9 +3943,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-jenkins@workspace:packages/devops/jenkins/test"
   dependencies:
-    "@pikku/addon-jenkins": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-jenkins": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3312,9 +3958,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-kafka@workspace:packages/infrastructure/kafka/test"
   dependencies:
-    "@pikku/addon-kafka": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-kafka": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@testcontainers/redpanda": "npm:^11.12.0"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
@@ -3328,9 +3974,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-ldap@workspace:packages/infrastructure/ldap/test"
   dependencies:
-    "@pikku/addon-ldap": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-ldap": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3343,9 +3989,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-markdown@workspace:packages/data/markdown/test"
   dependencies:
-    "@pikku/addon-markdown": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-markdown": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3357,9 +4003,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-metabase@workspace:packages/analytics/metabase/test"
   dependencies:
-    "@pikku/addon-metabase": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-metabase": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3372,9 +4018,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-mongodb@workspace:packages/database/mongodb/test"
   dependencies:
-    "@pikku/addon-mongodb": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-mongodb": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@testcontainers/mongodb": "npm:^10"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
@@ -3388,9 +4034,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-mysql@workspace:packages/database/mysql/test"
   dependencies:
-    "@pikku/addon-mysql": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-mysql": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@testcontainers/mysql": "npm:^10"
     "@types/node": "npm:^24"
     mysql2: "npm:^3.11.5"
@@ -3405,9 +4051,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-ollama@workspace:packages/ai/ollama/test"
   dependencies:
-    "@pikku/addon-ollama": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-ollama": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3419,9 +4065,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-plentymarkets@workspace:packages/ecommerce/plentymarkets/test"
   dependencies:
-    "@pikku/addon-plentymarkets": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-plentymarkets": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3433,9 +4079,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-postgres@workspace:packages/database/postgres/test"
   dependencies:
-    "@pikku/addon-postgres": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-postgres": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@testcontainers/postgresql": "npm:^10"
     "@types/node": "npm:^24"
     pg: "npm:^8.13.1"
@@ -3450,9 +4096,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-qrcode@workspace:packages/data/qrcode/test"
   dependencies:
-    "@pikku/addon-qrcode": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-qrcode": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3464,9 +4110,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-read-pdf@workspace:packages/data/read-pdf/test"
   dependencies:
-    "@pikku/addon-read-pdf": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-read-pdf": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     pdfkit: "npm:^0.16"
     tsx: "npm:^4"
@@ -3479,9 +4125,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-redis@workspace:packages/cache/redis/test"
   dependencies:
-    "@pikku/addon-redis": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-redis": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@testcontainers/redis": "npm:^10"
     "@types/node": "npm:^24"
     ioredis: "npm:^5.8.2"
@@ -3496,9 +4142,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-rss-feed@workspace:packages/data/rss-feed/test"
   dependencies:
-    "@pikku/addon-rss-feed": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-rss-feed": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3510,9 +4156,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-s3@workspace:packages/cloud/s3/test"
   dependencies:
-    "@pikku/addon-s3": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-s3": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3525,9 +4171,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-shopify@workspace:packages/ecommerce/shopify/test"
   dependencies:
-    "@pikku/addon-shopify": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-shopify": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3539,9 +4185,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-spreadsheet@workspace:packages/data/spreadsheet/test"
   dependencies:
-    "@pikku/addon-spreadsheet": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-spreadsheet": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3553,9 +4199,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-ssh@workspace:packages/infrastructure/ssh/test"
   dependencies:
-    "@pikku/addon-ssh": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-ssh": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3568,9 +4214,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-stripe@workspace:packages/payments/stripe/test"
   dependencies:
-    "@pikku/addon-stripe": "workspace:*"
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/addon-stripe": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3583,9 +4229,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-supabase@workspace:packages/database/supabase/test"
   dependencies:
-    "@pikku/addon-supabase": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-supabase": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@supabase/supabase-js": "npm:^2"
     "@types/node": "npm:^24"
     pg: "npm:^8"
@@ -3600,9 +4246,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-telegram@workspace:packages/communication/telegram/test"
   dependencies:
-    "@pikku/addon-telegram": "workspace:*"
-    "@pikku/cli": "npm:^0.12.6"
-    "@pikku/core": "npm:^0.12.5"
+    "@pikku/addon-telegram": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
@@ -3614,9 +4260,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-whisper-asr@workspace:packages/ai/whisper-asr/test"
   dependencies:
-    "@pikku/addon-ai-whisper-asr": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-ai-whisper-asr": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     testcontainers: "npm:^10"
     tsx: "npm:^4"
@@ -3629,15 +4275,27 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@pikku/test-xml@workspace:packages/data/xml/test"
   dependencies:
-    "@pikku/addon-xml": "workspace:*"
-    "@pikku/cli": "npm:0.12.9"
-    "@pikku/core": "npm:0.12.9"
+    "@pikku/addon-xml": "file:.."
+    "@pikku/cli": "npm:^0.12.47"
+    "@pikku/core": "npm:^0.12.36"
     "@types/node": "npm:^24"
     tsx: "npm:^4"
     typescript: "npm:^5.9"
     zod: "npm:^4"
   languageName: unknown
   linkType: soft
+
+"@pikku/ws@npm:^0.12.2":
+  version: 0.12.2
+  resolution: "@pikku/ws@npm:0.12.2"
+  dependencies:
+    cookie: "npm:^1.1.1"
+  peerDependencies:
+    "@pikku/core": ^0.12.9
+    ws: ^8.18.0
+  checksum: 10/03832e200f961c6a3c6f706fcb7b334e0809e70066dd736a72d0c55fd6192dc96b39703fcce4ecde5764974730bf65dc27ee5481364f78752e8e05cba1e0db34
+  languageName: node
+  linkType: hard
 
 "@pinojs/redact@npm:^0.4.0":
   version: 0.4.0
@@ -4556,6 +5214,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/luxon@npm:~3.7.0":
+  version: 3.7.2
+  resolution: "@types/luxon@npm:3.7.2"
+  checksum: 10/6634ebaceeec84d39cbb456d4db358481bc2ba7d05df47890a4f2d235100c29a52f621e1401f016747093093fa86c117bef01446199e0b1af3bcdcee47a57b1f
+  languageName: node
+  linkType: hard
+
 "@types/mailparser@npm:^3.4.5":
   version: 3.4.6
   resolution: "@types/mailparser@npm:3.4.6"
@@ -5077,6 +5742,107 @@ __metadata:
   languageName: node
   linkType: hard
 
+"better-auth@npm:^1.6.0":
+  version: 1.6.20
+  resolution: "better-auth@npm:1.6.20"
+  dependencies:
+    "@better-auth/core": "npm:1.6.20"
+    "@better-auth/drizzle-adapter": "npm:1.6.20"
+    "@better-auth/kysely-adapter": "npm:1.6.20"
+    "@better-auth/memory-adapter": "npm:1.6.20"
+    "@better-auth/mongo-adapter": "npm:1.6.20"
+    "@better-auth/prisma-adapter": "npm:1.6.20"
+    "@better-auth/telemetry": "npm:1.6.20"
+    "@better-auth/utils": "npm:0.4.2"
+    "@better-fetch/fetch": "npm:1.3.1"
+    "@noble/ciphers": "npm:^2.1.1"
+    "@noble/hashes": "npm:^2.0.1"
+    better-call: "npm:1.3.6"
+    defu: "npm:^6.1.4"
+    jose: "npm:^6.1.3"
+    kysely: "npm:^0.28.17 || ^0.29.0"
+    nanostores: "npm:^1.1.1"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    "@lynx-js/react": "*"
+    "@prisma/client": ^5.0.0 || ^6.0.0 || ^7.0.0
+    "@sveltejs/kit": ^2.0.0
+    "@tanstack/react-start": ^1.0.0
+    "@tanstack/solid-start": ^1.0.0
+    better-sqlite3: ^12.0.0
+    drizzle-kit: ">=0.31.4"
+    drizzle-orm: ^0.45.2
+    mongodb: ^6.0.0 || ^7.0.0
+    mysql2: ^3.0.0
+    next: ^14.0.0 || ^15.0.0 || ^16.0.0
+    pg: ^8.0.0
+    prisma: ^5.0.0 || ^6.0.0 || ^7.0.0
+    react: ^18.0.0 || ^19.0.0
+    react-dom: ^18.0.0 || ^19.0.0
+    solid-js: ^1.0.0
+    svelte: ^4.0.0 || ^5.0.0
+    vitest: ^2.0.0 || ^3.0.0 || ^4.0.0
+    vue: ^3.0.0
+  peerDependenciesMeta:
+    "@lynx-js/react":
+      optional: true
+    "@prisma/client":
+      optional: true
+    "@sveltejs/kit":
+      optional: true
+    "@tanstack/react-start":
+      optional: true
+    "@tanstack/solid-start":
+      optional: true
+    better-sqlite3:
+      optional: true
+    drizzle-kit:
+      optional: true
+    drizzle-orm:
+      optional: true
+    mongodb:
+      optional: true
+    mysql2:
+      optional: true
+    next:
+      optional: true
+    pg:
+      optional: true
+    prisma:
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+    solid-js:
+      optional: true
+    svelte:
+      optional: true
+    vitest:
+      optional: true
+    vue:
+      optional: true
+  checksum: 10/02b6c0204aa8d85cb5ccb3202a969f6837818f8afb7dae47dea7a7149d323e2e1ffb72490444d7d8a901b55e7f5ed6fb02d451f72dfc50b5bac9e323a52cfde2
+  languageName: node
+  linkType: hard
+
+"better-call@npm:1.3.6":
+  version: 1.3.6
+  resolution: "better-call@npm:1.3.6"
+  dependencies:
+    "@better-auth/utils": "npm:^0.4.0"
+    "@better-fetch/fetch": "npm:^1.1.21"
+    rou3: "npm:^0.7.12"
+    set-cookie-parser: "npm:^3.0.1"
+  peerDependencies:
+    zod: ^4.0.0
+  peerDependenciesMeta:
+    zod:
+      optional: true
+  checksum: 10/1ce90263a1673f142b85a7ac2506c8f6feae4351ea54a867b184707169c9fb6e13988f79d4d2915cbb066b9616113e6cb86fc1f9c8ffc82a9a8a135b78d4b140
+  languageName: node
+  linkType: hard
+
 "better-path-resolve@npm:1.0.0":
   version: 1.0.0
   resolution: "better-path-resolve@npm:1.0.0"
@@ -5503,6 +6269,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cron-schedule@npm:^5.0.4":
+  version: 5.0.4
+  resolution: "cron-schedule@npm:5.0.4"
+  checksum: 10/0b3fced7464ed8c2f92e9a801972fa1606cf351a32e31871d99fc70774387c87315aea06b40a7cf54ec6b12a2569921a7f570e927866f8408cf082475282cc49
+  languageName: node
+  linkType: hard
+
+"cron@npm:^4.4.0":
+  version: 4.4.0
+  resolution: "cron@npm:4.4.0"
+  dependencies:
+    "@types/luxon": "npm:~3.7.0"
+    luxon: "npm:~3.7.0"
+  checksum: 10/c969fdace813cc2b5898d755eb37a8a7e4192e4b43ef7b1a96c25bf9f54d5bcab016bfe851de297b570b67b4b5a37a2b242bde4a7c839860471ca243cdac79f6
+  languageName: node
+  linkType: hard
+
 "cross-spawn@npm:^7.0.5, cross-spawn@npm:^7.0.6":
   version: 7.0.6
   resolution: "cross-spawn@npm:7.0.6"
@@ -5614,6 +6397,13 @@ __metadata:
   version: 3.0.0
   resolution: "define-lazy-prop@npm:3.0.0"
   checksum: 10/f28421cf9ee86eecaf5f3b8fe875f13d7009c2625e97645bfff7a2a49aca678270b86c39f9c32939e5ca7ab96b551377ed4139558c795e076774287ad3af1aa4
+  languageName: node
+  linkType: hard
+
+"defu@npm:^6.1.4":
+  version: 6.1.7
+  resolution: "defu@npm:6.1.7"
+  checksum: 10/09480a5fbe6318f622f30017f9386df6ae92ed895fb1ccc61e1ff0d5016b28a321c751749fdd52c996ddd4eafc2c95b77dc0c8cc109881a231c23c7fd630deb9
   languageName: node
   linkType: hard
 
@@ -6770,6 +7560,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"jose@npm:^6.1.3":
+  version: 6.2.3
+  resolution: "jose@npm:6.2.3"
+  checksum: 10/876974613c5ee988d43b65a34c96ce440dbf7706a2f07f465b8874af16ee532102e224459a7068d2c6ef044affe49690667d23ca12770c279804baec95a09608
+  languageName: node
+  linkType: hard
+
 "jpeg-exif@npm:^1.1.4":
   version: 1.1.4
   resolution: "jpeg-exif@npm:1.1.4"
@@ -6870,6 +7667,13 @@ __metadata:
   dependencies:
     "@keyv/serialize": "npm:^1.1.1"
   checksum: 10/f1de999fdf635d703d091981a0a3844fb20081e01d45c6743ada7d01f3a6570dc47d1882e10d0a98d31075b342db8e62b4ebe4f5bf473dcd0903064d718709c1
+  languageName: node
+  linkType: hard
+
+"kysely@npm:^0.28.17 || ^0.29.0, kysely@npm:^0.29.0":
+  version: 0.29.2
+  resolution: "kysely@npm:0.29.2"
+  checksum: 10/abe40e648447880e06a7dfdb829717859162e0cc762e0d53d0c9193c51be7bc2fd9f30f58c7fc71679a49f8e95dd3a4ac5c9147434a83decdbf0cfcea8eeae0d
   languageName: node
   linkType: hard
 
@@ -7034,6 +7838,13 @@ __metadata:
   version: 1.1.4
   resolution: "lru.min@npm:1.1.4"
   checksum: 10/c7041fb558fa0c39b3e14b8c711716af729a4df96af25e6a2d54f5d60d936a1e33edbabcfa3a71359f73f746763dc51da3fc679d60e2f087aa722f139f56ccd4
+  languageName: node
+  linkType: hard
+
+"luxon@npm:~3.7.0":
+  version: 3.7.2
+  resolution: "luxon@npm:3.7.2"
+  checksum: 10/b24cd205ed306ce7415991687897dcc4027921ae413c9116590bc33a95f93b86ce52cf74ba72b4f5c5ab1c10090517f54ac8edfb127c049e0bf55b90dc2260be
   languageName: node
   linkType: hard
 
@@ -7374,6 +8185,13 @@ __metadata:
   bin:
     nanoid: bin/nanoid.cjs
   checksum: 10/73b5afe5975a307aaa3c95dfe3334c52cdf9ae71518176895229b8d65ab0d1c0417dd081426134eb7571c055720428ea5d57c645138161e7d10df80815527c48
+  languageName: node
+  linkType: hard
+
+"nanostores@npm:^1.1.1":
+  version: 1.3.0
+  resolution: "nanostores@npm:1.3.0"
+  checksum: 10/272165e23a64e4ee31126fba2bc0d87a3afdde31c68d569b58abed46909b8da20f51c552d7383b17d0cd5c419b2b18fc7315b0112fded54618c1b9683eef2729
   languageName: node
   linkType: hard
 
@@ -7759,17 +8577,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-cloudflare@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "pg-cloudflare@npm:1.3.0"
-  checksum: 10/04007ebbd314bdc8e5983d5d0f71a942f1915d2312ed84894d55475010559665bcbb9941d55523d36be6386cd83490dffb5b1ea98ffbbc82a140ef5dfb68ab8d
+"pg-cloudflare@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "pg-cloudflare@npm:1.4.0"
+  checksum: 10/7b4ad661a5f73e5ed86ae84b18a82434d38acec00ab47e79896ade7321e9d59aeecf4f88c33323cfa0504fda52c39ccfc7add508c1165a866264fd54ac30191e
   languageName: node
   linkType: hard
 
-"pg-connection-string@npm:^2.11.0":
-  version: 2.11.0
-  resolution: "pg-connection-string@npm:2.11.0"
-  checksum: 10/0333bb1b7ddeac6fa5262920f82a983222c600d21ef14fdc5254b0d3cbb1763030d20c1e8e3c20fa767a6eda8f4b4773550954c06f3e072e5288b6fa9e9cae13
+"pg-connection-string@npm:^2.14.0":
+  version: 2.14.0
+  resolution: "pg-connection-string@npm:2.14.0"
+  checksum: 10/9434e5fbb918b9224a18ad8b739c3da83940ec95c113a0e38371dbd3e8f84c6e3cbaf4dbfaf36d02a1281b0e844af290a1bc240b8d865a98cae6864d89ee11a0
   languageName: node
   linkType: hard
 
@@ -7780,19 +8598,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg-pool@npm:^3.12.0":
-  version: 3.12.0
-  resolution: "pg-pool@npm:3.12.0"
+"pg-pool@npm:^3.14.0":
+  version: 3.14.0
+  resolution: "pg-pool@npm:3.14.0"
   peerDependencies:
     pg: ">=8.0"
-  checksum: 10/81a4220b89ba28034c51db0a7e231a8c1555ddb3cf8bacde0acd092fb26473763a335629ffcf5153059dd8f406d39610e384fd9176d34359a3d1498b4c5b95cd
+  checksum: 10/0d90984fa8304fc07c4d06f8324ac5f5f6dcf4fe387b02263fa3f4e1f7bb6e7d8f3a97471836c3d38ca1ee129dae2f1fc28cb53e72bf48cb6515a848729c863a
   languageName: node
   linkType: hard
 
-"pg-protocol@npm:*, pg-protocol@npm:^1.12.0":
+"pg-protocol@npm:*":
   version: 1.12.0
   resolution: "pg-protocol@npm:1.12.0"
   checksum: 10/0f5d8a5dbef39ef4d06686910ad61599b8d26c4505e76af2f6da3a1a1028c312f61678fae5e5012d477fe318b5ebc8507a828c087973b22e5fd4ec1e7394101a
+  languageName: node
+  linkType: hard
+
+"pg-protocol@npm:^1.15.0":
+  version: 1.15.0
+  resolution: "pg-protocol@npm:1.15.0"
+  checksum: 10/be9a534a45cbae8edfa1766f7ee261cb63e8bd136e0e9e216656853ae2ab6acfb281e467c7b362ac0eb5270dad146fd9a553e25ef5c425749114630b79aca8fd
   languageName: node
   linkType: hard
 
@@ -7809,14 +8634,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pg@npm:^8, pg@npm:^8.13.1":
-  version: 8.19.0
-  resolution: "pg@npm:8.19.0"
+"pg@npm:^8, pg@npm:^8.13.0, pg@npm:^8.13.1":
+  version: 8.22.0
+  resolution: "pg@npm:8.22.0"
   dependencies:
-    pg-cloudflare: "npm:^1.3.0"
-    pg-connection-string: "npm:^2.11.0"
-    pg-pool: "npm:^3.12.0"
-    pg-protocol: "npm:^1.12.0"
+    pg-cloudflare: "npm:^1.4.0"
+    pg-connection-string: "npm:^2.14.0"
+    pg-pool: "npm:^3.14.0"
+    pg-protocol: "npm:^1.15.0"
     pg-types: "npm:2.2.0"
     pgpass: "npm:1.0.5"
   peerDependencies:
@@ -7827,7 +8652,7 @@ __metadata:
   peerDependenciesMeta:
     pg-native:
       optional: true
-  checksum: 10/0d552512b6c65c20b4054a203632f8ad51f6c5e60b8aaf65f5dc9f07a698da1e8974ca3918964999ea783c370bda9d230e662d2bab333b3968a28086923934e0
+  checksum: 10/ab2b8d0789bae5c45c8c90aae60a2ae5dc86aec978d40d0bd6d3755a10b58eb32d301f693e4226b48b279f3ac8f221489358ff28360078f2695ee31ac550f0ba
   languageName: node
   linkType: hard
 
@@ -7880,6 +8705,7 @@ __metadata:
   resolution: "pikku-addons@workspace:."
   dependencies:
     "@changesets/cli": "npm:^2.27.9"
+    better-auth: "npm:^1.6.0"
     node-gyp: "npm:^12.2.0"
   languageName: unknown
   linkType: soft
@@ -8337,6 +9163,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"rou3@npm:^0.7.12":
+  version: 0.7.12
+  resolution: "rou3@npm:0.7.12"
+  checksum: 10/567969f8bb5ebcc9a0c5a1b6964d90ca6883a9e17302b0e66a263b415da4291d8a3c421e8f4214fe290386311c13fdd73db2729bc96bbac0e2dd502d41c25980
+  languageName: node
+  linkType: hard
+
 "rss-parser@npm:^3":
   version: 3.13.0
   resolution: "rss-parser@npm:3.13.0"
@@ -8427,6 +9260,13 @@ __metadata:
   version: 2.0.0
   resolution: "set-blocking@npm:2.0.0"
   checksum: 10/8980ebf7ae9eb945bb036b6e283c547ee783a1ad557a82babf758a065e2fb6ea337fd82cac30dd565c1e606e423f30024a19fff7afbf4977d784720c4026a8ef
+  languageName: node
+  linkType: hard
+
+"set-cookie-parser@npm:^3.0.1":
+  version: 3.1.0
+  resolution: "set-cookie-parser@npm:3.1.0"
+  checksum: 10/ff4ddfc1ab9daf7a2ed760b350536012be8063ec6de45afda96e7a0a3671fcafdb70bd31b2ad92c27fb1f9fb2edf9207e5f4ea316ffa83adfd011b505d370df2
   languageName: node
   linkType: hard
 
@@ -9543,6 +10383,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ws@npm:^8.18.0":
+  version: 8.21.0
+  resolution: "ws@npm:8.21.0"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: 10/088411956432c8f876158409d5a285cb9ad1382f593391f51d3a599bd0a5b277f876609ebd00fc3596321c4a4c9064d6fffe1ebad960e8ea7fd9ae25324f35c2
+  languageName: node
+  linkType: hard
+
 "ws@npm:^8.18.2":
   version: 8.19.0
   resolution: "ws@npm:8.19.0"
@@ -9638,21 +10493,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yaml@npm:^2.2.2, yaml@npm:^2.8.2":
-  version: 2.8.2
-  resolution: "yaml@npm:2.8.2"
+"yaml@npm:^2.2.2, yaml@npm:^2.7.1, yaml@npm:^2.8.2":
+  version: 2.9.0
+  resolution: "yaml@npm:2.9.0"
   bin:
     yaml: bin.mjs
-  checksum: 10/4eab0074da6bc5a5bffd25b9b359cf7061b771b95d1b3b571852098380db3b1b8f96e0f1f354b56cc7216aa97cea25163377ccbc33a2e9ce00316fe8d02f4539
-  languageName: node
-  linkType: hard
-
-"yaml@npm:^2.7.1":
-  version: 2.8.3
-  resolution: "yaml@npm:2.8.3"
-  bin:
-    yaml: bin.mjs
-  checksum: 10/ecad41d39d34fae5cc17ea2d4b7f7f55faacd45cbce8983ba22d48d1ed1a92ed242ea49ea813a79ac39a69f75f9c5a03e7b5395fd954d55476f25e21a47c141d
+  checksum: 10/9a95e8e08651c3d292ab6a5befeb5f57b76801caa097c75bb45c9a70ce19c1b11f57e87a6ef84a579ea070ed2c2c8ac541c88c0ae684d544d5f42c7e77d11b7b
   languageName: node
   linkType: hard
 

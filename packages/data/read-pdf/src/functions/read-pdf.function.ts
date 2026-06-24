@@ -3,6 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 
 export const ReadPdfInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the PDF file'),
   assetKey: z.string().describe('Content service asset key for the PDF file'),
   password: z.string().optional().describe('Password for encrypted PDF'),
   maxPages: z.number().optional().describe('Maximum number of pages to extract (0 = all)'),
@@ -19,8 +20,8 @@ export const readPdf = pikkuSessionlessFunc({
   input: ReadPdfInput,
   output: ReadPdfOutput,
   node: { displayName: 'Read PDF', category: 'Parse', type: 'action' },
-  func: async ({ content }, { assetKey, password, maxPages }) => {
-    const buffer = await content!.readFileAsBuffer(assetKey)
+  func: async ({ content }, { bucket, assetKey, password, maxPages }) => {
+    const buffer = await content!.readFileAsBuffer({ bucket, key: assetKey })
     const data = new Uint8Array(buffer)
 
     const loadingTask = getDocument({ data, password: password ?? undefined, useSystemFonts: true })

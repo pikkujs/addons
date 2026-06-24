@@ -23,7 +23,7 @@ test('stripe external package', async () => {
   try {
     const variables = new LocalVariablesService({ STRIPE_API_URL: apiUrl })
     const secrets = new LocalSecretService(variables)
-    await secrets.setSecretJSON('STRIPE_SECRET_KEY', 'sk_test_mock')
+    await secrets.setSecret('STRIPE_SECRET_KEY', 'sk_test_mock')
 
     const singletonServices = await createSingletonServices({}, { variables, secrets })
     const rpc = rpcService.getContextRPCService(singletonServices as any, {})

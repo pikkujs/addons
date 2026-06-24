@@ -5,6 +5,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 export const S3PutObjectInput = z.object({
   bucket: z.string().describe('Bucket name'),
   key: z.string().describe('Object key'),
+  contentBucket: z.string().describe('Storage bucket containing the file to upload'),
   contentKey: z.string().describe('Content key of the file to upload'),
   contentType: z.string().optional().describe('Content type (MIME type)'),
 })
@@ -18,8 +19,8 @@ export const s3PutObject = pikkuSessionlessFunc({
   input: S3PutObjectInput,
   output: S3PutObjectOutput,
   node: { displayName: 'S3 Put Object', category: 'Cloud', type: 'action' },
-  func: async ({ s3Client, content }, { bucket, key, contentKey, contentType }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ s3Client, content }, { bucket, key, contentBucket, contentKey, contentType }) => {
+    const buffer = await content.readFileAsBuffer({ bucket: contentBucket, key: contentKey })
 
     const result = await s3Client.send(new PutObjectCommand({
       Bucket: bucket,

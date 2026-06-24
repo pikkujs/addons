@@ -31,7 +31,7 @@ export const sentryOrgUpdate = pikkuSessionlessFunc<
   Output
 >({
   description: 'Update a Sentry organization',
-  node: { displayName: 'Update Organization', category: 'Organization', type: 'action' },
+  node: { displayName: 'Update Organization', category: 'Organizations', type: 'action' },
   func: async ({ sentry }, data) => {
     const { organizationSlug, ...updateFields } = data
     return sentry.request<Output>('PUT', `/api/0/organizations/${organizationSlug}/`, {

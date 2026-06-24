@@ -14,7 +14,7 @@ test('mongodb addon', { timeout: 120_000 }, async (t) => {
   const connectionString = container.getConnectionString() + '?directConnection=true'
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('MONGODB_CREDENTIALS', {
+  await secrets.setSecret('MONGODB_CREDENTIALS', {
     connectionString,
     database: 'pikku_test',
   })

@@ -7,10 +7,12 @@ export const AppsDeleteInput = z.object({
   app_name: z.string().describe("Fly App Name"),
 })
 
+export const AppsDeleteOutput = z.void()
+
 export const appsDelete = pikkuSessionlessFunc({
   description: "Delete an app by its name.",
   input: AppsDeleteInput,
-  output: z.void(),
+  output: AppsDeleteOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}', data)
   },

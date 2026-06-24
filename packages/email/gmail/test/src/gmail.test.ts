@@ -18,8 +18,8 @@ if (!appCredentials || !tokens) {
 test('gmail external package', async () => {
   const secrets = new LocalSecretService()
 
-  await secrets.setSecretJSON('GMAIL_APP_CREDENTIALS', JSON.parse(appCredentials))
-  await secrets.setSecretJSON('GMAIL_TOKENS', JSON.parse(tokens))
+  await secrets.setSecret('GMAIL_APP_CREDENTIALS', JSON.parse(appCredentials))
+  await secrets.setSecret('GMAIL_TOKENS', JSON.parse(tokens))
 
   const singletonServices = await createSingletonServices({}, { secrets })
   const rpc = rpcService.getContextRPCService(singletonServices as any, {})

@@ -32,7 +32,7 @@ test('ssh addon', { timeout: 120_000 }, async (t) => {
   await new Promise((r) => setTimeout(r, 3000))
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('SSH_CREDENTIALS', {
+  await secrets.setSecret('SSH_CREDENTIALS', {
     host,
     port,
     username: 'pikku',
@@ -75,6 +75,7 @@ test('ssh addon', { timeout: 120_000 }, async (t) => {
 
     await t.test('sshUpload uploads a file', async () => {
       const result = await rpc.invoke('ssh:sshUpload', {
+        bucket: '.',
         contentKey: 'ssh-upload.txt',
         remotePath: '/tmp/uploaded.txt',
       })
@@ -91,6 +92,7 @@ test('ssh addon', { timeout: 120_000 }, async (t) => {
 
     await t.test('sshDownload downloads a file', async () => {
       const result = await rpc.invoke('ssh:sshDownload', {
+        bucket: '.',
         remotePath: '/tmp/uploaded.txt',
         outputContentKey: 'ssh-downloaded.txt',
       })

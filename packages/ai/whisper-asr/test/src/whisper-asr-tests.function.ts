@@ -22,6 +22,7 @@ export const testWhisperASR = pikkuSessionlessFunc<TestWhisperASRInput, TestWhis
 
     await run('transcribe returns expected text', async () => {
       const result = await rpc.invoke('whisperASR:transcribe', {
+        bucket: '.',
         contentKey: 'test-speech.wav',
         fileName: 'test-speech.wav',
       })
@@ -35,6 +36,7 @@ export const testWhisperASR = pikkuSessionlessFunc<TestWhisperASRInput, TestWhis
 
     await run('transcribe-verbose returns segments with expected text', async () => {
       const result = await rpc.invoke('whisperASR:transcribeVerbose', {
+        bucket: '.',
         contentKey: 'test-speech.wav',
         fileName: 'test-speech.wav',
       })
@@ -51,6 +53,7 @@ export const testWhisperASR = pikkuSessionlessFunc<TestWhisperASRInput, TestWhis
 
     await run('translate returns expected text', async () => {
       const result = await rpc.invoke('whisperASR:translate', {
+        bucket: '.',
         contentKey: 'test-speech.wav',
         fileName: 'test-speech.wav',
       })

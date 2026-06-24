@@ -8,10 +8,12 @@ export const MachinesStartInput = z.object({
   machine_id: z.string().describe("Machine ID"),
 })
 
+export const MachinesStartOutput = z.void()
+
 export const machinesStart = pikkuSessionlessFunc({
   description: "Start a specific Machine within an app.",
   input: MachinesStartInput,
-  output: z.void(),
+  output: MachinesStartOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/start', data)
   },

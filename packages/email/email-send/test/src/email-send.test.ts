@@ -17,7 +17,7 @@ test('email-send addon', { timeout: 120_000 }, async (t) => {
   const host = container.getHost()
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('EMAIL_SEND_CREDENTIALS', {
+  await secrets.setSecret('EMAIL_SEND_CREDENTIALS', {
     host,
     port: smtpPort,
     secure: false,

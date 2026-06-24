@@ -8,9 +8,11 @@ export const AppIPAssignmentsDeleteInput = z.object({
   ip: z.string().describe("IP address"),
 })
 
+export const AppIPAssignmentsDeleteOutput = z.void()
+
 export const appIPAssignmentsDelete = pikkuSessionlessFunc({
   input: AppIPAssignmentsDeleteInput,
-  output: z.void(),
+  output: AppIPAssignmentsDeleteOutput,
   func: async ({ flyio }, data) => {
     return flyio.call('DELETE', '/apps/{app_name}/ip_assignments/{ip}', data)
   },

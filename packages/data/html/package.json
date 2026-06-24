@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    ".pikku"
   ],
   "scripts": {
     "prebuild": "pikku all",
@@ -29,7 +30,7 @@
     "test": "cd test && yarn test"
   },
   "peerDependencies": {
-    "@pikku/core": "*",
+    "@pikku/core": "^0.12.36",
     "zod": "^4"
   },
   "dependencies": {
@@ -37,8 +38,8 @@
     "node-html-markdown": "^1"
   },
   "devDependencies": {
-    "@pikku/cli": "0.12.9",
-    "@pikku/core": "0.12.9",
+    "@pikku/cli": "^0.12.47",
+    "@pikku/core": "^0.12.36",
     "typescript": "^5.7.2",
     "zod": "^4"
   }

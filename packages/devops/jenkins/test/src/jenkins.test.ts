@@ -60,7 +60,7 @@ test('jenkins addon', async () => {
 
   try {
     const secrets = new LocalSecretService()
-    await secrets.setSecretJSON('JENKINS_CREDENTIALS', {
+    await secrets.setSecret('JENKINS_CREDENTIALS', {
       username: JENKINS_USER,
       apiKey: JENKINS_PASS,
       baseUrl,

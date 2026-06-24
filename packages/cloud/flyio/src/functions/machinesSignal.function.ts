@@ -10,10 +10,12 @@ export const MachinesSignalInput = z.object({
   signal: z.enum(["SIGABRT", "SIGALRM", "SIGFPE", "SIGHUP", "SIGILL", "SIGINT", "SIGKILL", "SIGPIPE", "SIGQUIT", "SIGSEGV", "SIGTERM", "SIGTRAP", "SIGUSR1"]).optional(),
 })
 
+export const MachinesSignalOutput = z.void()
+
 export const machinesSignal = pikkuSessionlessFunc({
   description: "Send a signal to a specific Machine within an app using the details provided in the request body.",
   input: MachinesSignalInput,
-  output: z.void(),
+  output: MachinesSignalOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/signal', data)

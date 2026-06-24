@@ -20,7 +20,8 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    ".pikku"
   ],
   "scripts": {
     "prebuild": "pikku all",
@@ -32,12 +33,12 @@
     "ssh2": "^1"
   },
   "peerDependencies": {
-    "@pikku/core": "*",
+    "@pikku/core": "^0.12.36",
     "zod": "^4"
   },
   "devDependencies": {
-    "@pikku/cli": "0.12.9",
-    "@pikku/core": "0.12.9",
+    "@pikku/cli": "^0.12.47",
+    "@pikku/core": "^0.12.36",
     "@types/ssh2": "^1",
     "typescript": "^5.7.2",
     "zod": "^4"

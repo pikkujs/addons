@@ -114,7 +114,7 @@ test('metabase addon', { timeout: 360_000 }, async () => {
     assert.ok(dashResp.ok, 'Expected dashboard creation to succeed')
 
     const secrets = new LocalSecretService()
-    await secrets.setSecretJSON('METABASE_CREDENTIALS', {
+    await secrets.setSecret('METABASE_CREDENTIALS', {
       host: baseUrl,
       sessionToken,
     })

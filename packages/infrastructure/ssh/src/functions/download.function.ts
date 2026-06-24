@@ -3,6 +3,7 @@ import { Readable } from 'node:stream'
 import { pikkuSessionlessFunc } from '#pikku'
 
 export const SshDownloadInput = z.object({
+  bucket: z.string().describe('Storage bucket to save the file to'),
   remotePath: z.string().describe('Remote file path to download'),
   outputContentKey: z.string().describe('Content key to save the downloaded file'),
 })
@@ -17,7 +18,7 @@ export const sshDownload = pikkuSessionlessFunc({
   input: SshDownloadInput,
   output: SshDownloadOutput,
   node: { displayName: 'SSH Download', category: 'Infrastructure', type: 'action' },
-  func: async ({ sshClient, content }, { remotePath, outputContentKey }) => {
+  func: async ({ sshClient, content }, { bucket, remotePath, outputContentKey }) => {
     const buffer = await new Promise<Buffer>((resolve, reject) => {
       sshClient.sftp((err, sftp) => {
         if (err) return reject(err)
@@ -36,7 +37,7 @@ export const sshDownload = pikkuSessionlessFunc({
       })
     })
 
-    await content.writeFile(outputContentKey, Readable.from(buffer))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(buffer) })
 
     return { outputContentKey, size: buffer.length }
   },

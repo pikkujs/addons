@@ -12,10 +12,12 @@ export const MachinesUpsertMetadataInput = z.object({
   value: z.string().optional(),
 })
 
+export const MachinesUpsertMetadataOutput = z.void()
+
 export const machinesUpsertMetadata = pikkuSessionlessFunc({
   description: "Update metadata for a specific machine within an app by providing a metadata key.",
   input: MachinesUpsertMetadataInput,
-  output: z.void(),
+  output: MachinesUpsertMetadataOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps/{app_name}/machines/{machine_id}/metadata/{key}', data)

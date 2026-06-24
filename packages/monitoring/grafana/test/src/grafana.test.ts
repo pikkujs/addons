@@ -69,7 +69,7 @@ test('grafana addon', async () => {
     })
 
     const secrets = new LocalSecretService()
-    await secrets.setSecretJSON('GRAFANA_CREDENTIALS', {
+    await secrets.setSecret('GRAFANA_CREDENTIALS', {
       apiKey,
       baseUrl,
     })

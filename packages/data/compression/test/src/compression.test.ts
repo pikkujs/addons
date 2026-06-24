@@ -13,6 +13,7 @@ test('compression addon', async (t) => {
 
   await t.test('gzipCompress compresses a file', async () => {
     const result = await rpc.invoke('compression:gzipCompress', {
+      bucket: '',
       contentKey: 'test.txt',
       outputContentKey: 'test.txt.gz',
     })
@@ -24,6 +25,7 @@ test('compression addon', async (t) => {
 
   await t.test('gzipDecompress decompresses back to original', async () => {
     const result = await rpc.invoke('compression:gzipDecompress', {
+      bucket: '',
       contentKey: 'test.txt.gz',
       outputContentKey: 'test-decompressed.txt',
     })
@@ -35,11 +37,13 @@ test('compression addon', async (t) => {
 
   await t.test('gzipCompress with level 9 produces smaller output', async () => {
     const result9 = await rpc.invoke('compression:gzipCompress', {
+      bucket: '',
       contentKey: 'test.txt',
       outputContentKey: 'test-l9.txt.gz',
       level: 9,
     })
     const result1 = await rpc.invoke('compression:gzipCompress', {
+      bucket: '',
       contentKey: 'test.txt',
       outputContentKey: 'test-l1.txt.gz',
       level: 1,
@@ -49,6 +53,7 @@ test('compression addon', async (t) => {
 
   await t.test('deflateCompress compresses a file', async () => {
     const result = await rpc.invoke('compression:deflateCompress', {
+      bucket: '',
       contentKey: 'test.txt',
       outputContentKey: 'test.deflate',
     })
@@ -59,6 +64,7 @@ test('compression addon', async (t) => {
 
   await t.test('deflateDecompress decompresses back to original', async () => {
     const result = await rpc.invoke('compression:deflateDecompress', {
+      bucket: '',
       contentKey: 'test.deflate',
       outputContentKey: 'test-deflate-decompressed.txt',
     })
@@ -69,6 +75,7 @@ test('compression addon', async (t) => {
 
   await t.test('zipCompress creates a zip with one file', async () => {
     const result = await rpc.invoke('compression:zipCompress', {
+      bucket: '',
       files: [{ contentKey: 'test.txt', fileName: 'test.txt' }],
       outputContentKey: 'test.zip',
     })
@@ -79,6 +86,7 @@ test('compression addon', async (t) => {
 
   await t.test('zipDecompress extracts files from zip', async () => {
     const result = await rpc.invoke('compression:zipDecompress', {
+      bucket: '',
       contentKey: 'test.zip',
       outputPrefix: 'extracted/',
     })
@@ -91,6 +99,7 @@ test('compression addon', async (t) => {
 
   await t.test('zipCompress with multiple files', async () => {
     const result = await rpc.invoke('compression:zipCompress', {
+      bucket: '',
       files: [
         { contentKey: 'test.txt', fileName: 'a.txt' },
         { contentKey: 'test.txt', fileName: 'b.txt' },
@@ -100,6 +109,7 @@ test('compression addon', async (t) => {
     assert.equal(result.fileCount, 2)
 
     const decomp = await rpc.invoke('compression:zipDecompress', {
+      bucket: '',
       contentKey: 'multi.zip',
       outputPrefix: 'multi-extracted/',
     })

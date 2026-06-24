@@ -12,10 +12,12 @@ export const MachinesUpdateMetadataInput = z.object({
   updated_at: z.string().optional(),
 })
 
+export const MachinesUpdateMetadataOutput = z.void()
+
 export const machinesUpdateMetadata = pikkuSessionlessFunc({
   description: "Update multiple metadata keys at once. Null values and empty strings remove keys.\n+ If `machine_version` is provided and no longer matches the current machine version, returns 412 Precondition Failed.",
   input: MachinesUpdateMetadataInput,
-  output: z.void(),
+  output: MachinesUpdateMetadataOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('PUT', '/apps/{app_name}/machines/{machine_id}/metadata', data)

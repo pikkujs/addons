@@ -4,6 +4,7 @@ import { gzipSync, gunzipSync } from 'fflate'
 import { Readable } from 'node:stream'
 
 export const GzipCompressInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the file'),
   contentKey: z.string().describe('Content key of the file to compress'),
   outputContentKey: z.string().describe('Content key to write the compressed file to'),
   level: z.number().min(0).max(9).optional().describe('Compression level (0 none, 1 fast, 9 best). Default 6'),
@@ -20,10 +21,10 @@ export const gzipCompress = pikkuSessionlessFunc({
   input: GzipCompressInput,
   output: GzipCompressOutput,
   node: { displayName: 'Gzip Compress', category: 'Data', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey, level }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey, level }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     const compressed = gzipSync(new Uint8Array(buffer), { level: (level ?? 6) as 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 })
-    await content.writeFile(outputContentKey, Readable.from(Buffer.from(compressed)))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(Buffer.from(compressed)) })
     return {
       outputContentKey,
       originalSize: buffer.length,
@@ -33,6 +34,7 @@ export const gzipCompress = pikkuSessionlessFunc({
 })
 
 export const GzipDecompressInput = z.object({
+  bucket: z.string().describe('Storage bucket containing the file'),
   contentKey: z.string().describe('Content key of the gzip compressed file'),
   outputContentKey: z.string().describe('Content key to write the decompressed file to'),
 })
@@ -47,10 +49,10 @@ export const gzipDecompress = pikkuSessionlessFunc({
   input: GzipDecompressInput,
   output: GzipDecompressOutput,
   node: { displayName: 'Gzip Decompress', category: 'Data', type: 'action' },
-  func: async ({ content }, { contentKey, outputContentKey }) => {
-    const buffer = await content.readFileAsBuffer(contentKey)
+  func: async ({ content }, { bucket, contentKey, outputContentKey }) => {
+    const buffer = await content.readFileAsBuffer({ bucket, key: contentKey })
     const decompressed = gunzipSync(new Uint8Array(buffer))
-    await content.writeFile(outputContentKey, Readable.from(Buffer.from(decompressed)))
+    await content.writeFile({ bucket, key: outputContentKey, stream: Readable.from(Buffer.from(decompressed)) })
     return {
       outputContentKey,
       size: decompressed.length,

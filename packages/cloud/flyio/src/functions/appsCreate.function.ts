@@ -11,10 +11,12 @@ export const AppsCreateInput = z.object({
   org_slug: z.string().optional(),
 })
 
+export const AppsCreateOutput = z.void()
+
 export const appsCreate = pikkuSessionlessFunc({
   description: "Create an app with the specified details in the request body.",
   input: AppsCreateInput,
-  output: z.void(),
+  output: AppsCreateOutput,
   errors: [BadRequestError],
   func: async ({ flyio }, data) => {
     return flyio.call('POST', '/apps', data)

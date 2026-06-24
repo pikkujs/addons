@@ -1,7 +1,0 @@
-node_modules/
-.yarn/
-.pikku/
-dist/
-*.db
-ingestor-auth.json
-

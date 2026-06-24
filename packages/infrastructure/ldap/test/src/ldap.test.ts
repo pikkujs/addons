@@ -22,7 +22,7 @@ test('ldap addon', { timeout: 120_000 }, async (t) => {
   const port = container.getMappedPort(389)
 
   const secrets = new LocalSecretService()
-  await secrets.setSecretJSON('LDAP_CREDENTIALS', {
+  await secrets.setSecret('LDAP_CREDENTIALS', {
     url: `ldap://${host}:${port}`,
     bindDN: 'cn=admin,dc=example,dc=org',
     bindPassword: 'adminpassword',

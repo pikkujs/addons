@@ -25,7 +25,7 @@ test('postgres external package', async () => {
       }),
     })
     const secrets = new LocalSecretService(variables)
-    await secrets.setSecretJSON('POSTGRES_CREDENTIALS', {
+    await secrets.setSecret('POSTGRES_CREDENTIALS', {
       user: container.getUsername(),
       password: container.getPassword(),
     })

@@ -9,6 +9,7 @@ test('read-pdf addon', async () => {
 
   await test('readPdf extracts text from PDF', async () => {
     const result = await rpc.invoke('read-pdf:readPdf', {
+      bucket: '.',
       assetKey: 'sample.pdf',
     })
     assert.ok(result.text.includes('Hello World from Pikku PDF Test'))
@@ -17,6 +18,7 @@ test('read-pdf addon', async () => {
 
   await test('readPdf returns page count', async () => {
     const result = await rpc.invoke('read-pdf:readPdf', {
+      bucket: '.',
       assetKey: 'sample.pdf',
     })
     assert.equal(result.numPages, 2)
@@ -24,6 +26,7 @@ test('read-pdf addon', async () => {
 
   await test('readPdf returns metadata', async () => {
     const result = await rpc.invoke('read-pdf:readPdf', {
+      bucket: '.',
       assetKey: 'sample.pdf',
     })
     assert.equal(result.info.Title, 'Pikku Test PDF')
@@ -32,6 +35,7 @@ test('read-pdf addon', async () => {
 
   await test('readPdf with maxPages limits extraction', async () => {
     const result = await rpc.invoke('read-pdf:readPdf', {
+      bucket: '.',
       assetKey: 'sample.pdf',
       maxPages: 1,
     })

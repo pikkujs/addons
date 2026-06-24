@@ -6,7 +6,7 @@ import http from 'node:http'
 import { stopSingletonServices } from '@pikku/core'
 import { rpcService } from '@pikku/core/rpc'
 import { LocalSecretService } from '@pikku/core/services'
-import { PlentymarketsService } from '../../../../packages/ecommerce/plentymarkets/src/plentymarkets-api.service.js'
+import { PlentymarketsService } from '../../src/plentymarkets-api.service.js'
 import { createSingletonServices } from './services.js'
 
 /**
@@ -339,7 +339,7 @@ test('plentymarkets external package', async () => {
 
   try {
     const secrets = new LocalSecretService()
-    await secrets.setSecretJSON('PLENTYMARKETS_CREDENTIALS', {
+    await secrets.setSecret('PLENTYMARKETS_CREDENTIALS', {
       baseUrl,
       accessToken: 'test-token-12345',
     })

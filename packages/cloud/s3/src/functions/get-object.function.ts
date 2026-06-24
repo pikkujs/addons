@@ -6,6 +6,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 export const S3GetObjectInput = z.object({
   bucket: z.string().describe('Bucket name'),
   key: z.string().describe('Object key'),
+  contentBucket: z.string().describe('Storage bucket to save the downloaded object'),
   outputContentKey: z.string().describe('Content key to save the downloaded object'),
 })
 
@@ -22,14 +23,14 @@ export const s3GetObject = pikkuSessionlessFunc({
   input: S3GetObjectInput,
   output: S3GetObjectOutput,
   node: { displayName: 'S3 Get Object', category: 'Cloud', type: 'action' },
-  func: async ({ s3Client, content }, { bucket, key, outputContentKey }) => {
+  func: async ({ s3Client, content }, { bucket, key, contentBucket, outputContentKey }) => {
     const result = await s3Client.send(new GetObjectCommand({
       Bucket: bucket,
       Key: key,
     }))
 
     const bodyStream = result.Body as Readable
-    await content.writeFile(outputContentKey, bodyStream)
+    await content.writeFile({ bucket: contentBucket, key: outputContentKey, stream: bodyStream })
 
     return {
       outputContentKey,

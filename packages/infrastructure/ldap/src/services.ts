@@ -3,7 +3,7 @@ import type { LdapSecrets } from './ldap.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => {
-  const creds = await secrets.getSecretJSON<LdapSecrets>('LDAP_CREDENTIALS')
+  const creds = await secrets.getSecret<LdapSecrets>('LDAP_CREDENTIALS')
 
   const ldapClient = new Client({
     url: creds.url,

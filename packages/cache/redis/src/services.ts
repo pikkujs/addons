@@ -8,7 +8,7 @@ export class RedisService extends Redis {
 }
 
 export const createSingletonServices = pikkuAddonServices(async (config, { variables, secrets }) => {
-  const params = await variables.getJSON<{ host: string; port: string; database: string; tls?: string }>('REDIS_PARAMS')
+  const params = await variables.get<{ host: string; port: string; database: string; tls?: string }>('REDIS_PARAMS')
   const host = params?.host ?? 'localhost'
   const port = parseInt(params?.port ?? '6379', 10)
   const database = parseInt(params?.database ?? '0', 10)

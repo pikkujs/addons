@@ -13,6 +13,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageMetadata returns image info', async () => {
     const result = await rpc.invoke('edit-image:imageMetadata', {
+      bucket: '.',
       contentKey: 'test.png',
     })
     assert.equal(result.width, 200)
@@ -23,6 +24,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageResize resizes an image', async () => {
     const result = await rpc.invoke('edit-image:imageResize', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'resized.png',
       width: 100,
@@ -36,6 +38,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageResize with fit contain', async () => {
     const result = await rpc.invoke('edit-image:imageResize', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'resized-contain.png',
       width: 100,
@@ -48,6 +51,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageCrop crops a region', async () => {
     const result = await rpc.invoke('edit-image:imageCrop', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'cropped.png',
       left: 10,
@@ -61,6 +65,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageRotate rotates an image', async () => {
     const result = await rpc.invoke('edit-image:imageRotate', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'rotated.png',
       angle: 90,
@@ -71,6 +76,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageBlur applies blur', async () => {
     const result = await rpc.invoke('edit-image:imageBlur', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'blurred.png',
       sigma: 5,
@@ -80,6 +86,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageFlip flips horizontally', async () => {
     const result = await rpc.invoke('edit-image:imageFlip', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'flipped-h.png',
       direction: 'horizontal',
@@ -89,6 +96,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageFlip flips vertically', async () => {
     const result = await rpc.invoke('edit-image:imageFlip', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'flipped-v.png',
       direction: 'vertical',
@@ -98,6 +106,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageConvert converts to jpeg', async () => {
     const result = await rpc.invoke('edit-image:imageConvert', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'converted.jpg',
       format: 'jpeg',
@@ -109,6 +118,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageConvert converts to webp', async () => {
     const result = await rpc.invoke('edit-image:imageConvert', {
+      bucket: '.',
       contentKey: 'test.png',
       outputContentKey: 'converted.webp',
       format: 'webp',
@@ -118,6 +128,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageComposite overlays images', async () => {
     const result = await rpc.invoke('edit-image:imageComposite', {
+      bucket: '.',
       contentKey: 'test.png',
       overlayContentKey: 'overlay.png',
       outputContentKey: 'composited.png',
@@ -131,6 +142,7 @@ test('edit-image addon', async (t) => {
 
   await t.test('imageComposite with gravity', async () => {
     const result = await rpc.invoke('edit-image:imageComposite', {
+      bucket: '.',
       contentKey: 'test.png',
       overlayContentKey: 'overlay.png',
       outputContentKey: 'composited-center.png',

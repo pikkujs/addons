@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { wireSecret } from '@pikku/core/secret'
-import { wireOAuth2Credential } from '@pikku/core/oauth2'
+import { wireCredential } from '@pikku/core/credential'
 
 export const googleAnalyticsSecretsSchema = z.object({
   measurementId: z.string().describe('GA4 Measurement ID (e.g., G-XXXXXXXXXX)'),
@@ -8,6 +8,13 @@ export const googleAnalyticsSecretsSchema = z.object({
 })
 
 export type GoogleAnalyticsSecrets = z.infer<typeof googleAnalyticsSecretsSchema>
+
+export const googleAnalyticsOAuthSchema = z.object({
+  accessToken: z.string().describe('Google OAuth2 access token'),
+  refreshToken: z.string().describe('Google OAuth2 refresh token'),
+})
+
+export type GoogleAnalyticsOAuthTokens = z.infer<typeof googleAnalyticsOAuthSchema>
 
 wireSecret({
   name: 'googleAnalytics',
@@ -17,19 +24,23 @@ wireSecret({
   schema: googleAnalyticsSecretsSchema,
 })
 
-wireOAuth2Credential({
+wireCredential({
   name: 'googleAnalyticsOAuth',
   displayName: 'Google Analytics 4 OAuth2',
   description: 'Google OAuth2 credentials for GA4 Data API (reporting)',
-  secretId: 'GOOGLE_ANALYTICS_APP_CREDENTIALS',
-  tokenSecretId: 'GOOGLE_ANALYTICS_TOKENS',
-  authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth',
-  tokenUrl: 'https://oauth2.googleapis.com/token',
-  scopes: [
-    'https://www.googleapis.com/auth/analytics.readonly',
-  ],
-  additionalParams: {
-    access_type: 'offline',
-    prompt: 'consent',
+  type: 'singleton',
+  schema: googleAnalyticsOAuthSchema,
+  oauth2: {
+    appCredentialSecretId: 'GOOGLE_ANALYTICS_APP_CREDENTIALS',
+    tokenSecretId: 'GOOGLE_ANALYTICS_TOKENS',
+    authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth',
+    tokenUrl: 'https://oauth2.googleapis.com/token',
+    scopes: [
+      'https://www.googleapis.com/auth/analytics.readonly',
+    ],
+    additionalParams: {
+      access_type: 'offline',
+      prompt: 'consent',
+    },
   },
 })
