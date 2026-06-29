@@ -1,9 +1,8 @@
 import { createTransport, type Transporter } from 'nodemailer'
-import type { EmailSendSecrets } from './email-send.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets, content }) => {
-  const creds = await secrets.getSecret<EmailSendSecrets>('EMAIL_SEND_CREDENTIALS')
+  const creds = await secrets.getSecret('EMAIL_SEND_CREDENTIALS')
 
   const emailTransport: Transporter = createTransport({
     host: creds.host,

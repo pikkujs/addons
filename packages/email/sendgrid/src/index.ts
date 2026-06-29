@@ -13,3 +13,6 @@ export { contactUpsert } from './functions/contacts/upsert.function.js'
 export { contactGet } from './functions/contacts/get.function.js'
 export { contactList } from './functions/contacts/list.function.js'
 export { contactDelete } from './functions/contacts/delete.function.js'
+
+// EmailService adapter (for host apps to wire as `emailService`)
+export { SendgridEmailService } from './sendgrid-email.service.js'

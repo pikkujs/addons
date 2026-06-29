@@ -1,5 +1,4 @@
 import pg from 'pg'
-import type { PostgresSecrets } from './postgres.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export class PostgresService extends pg.Pool {
@@ -14,7 +13,7 @@ export const createSingletonServices = pikkuAddonServices(async (_config, { vari
   const port = parseInt(params?.port ?? '5432', 10)
   const database = params?.database
   const ssl = params?.ssl === 'true'
-  const creds = await secrets.getSecret<PostgresSecrets>('POSTGRES_CREDENTIALS')
+  const creds = await secrets.getSecret('POSTGRES_CREDENTIALS')
 
   const poolConfig: pg.PoolConfig = {
     host,

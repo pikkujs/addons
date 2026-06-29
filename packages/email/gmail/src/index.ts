@@ -32,3 +32,6 @@ export { threadUntrash } from './functions/threads/untrash.function.js'
 export { threadAddLabel } from './functions/threads/add-label.function.js'
 export { threadRemoveLabel } from './functions/threads/remove-label.function.js'
 export { threadReply } from './functions/threads/reply.function.js'
+
+// EmailService adapter (for host apps to wire as `emailService`)
+export { GmailEmailService } from './gmail-email.service.js'

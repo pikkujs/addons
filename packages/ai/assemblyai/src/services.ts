@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const apiKey = await secrets.getSecret<string>('ASSEMBLYAI_API_KEY')
+  const apiKey = await secrets.getSecret('ASSEMBLYAI_API_KEY')
   const assemblyai = new AssemblyaiService(apiKey)
 
   return { assemblyai }

@@ -1,9 +1,8 @@
 import { Kafka, type Producer, type SASLOptions } from 'kafkajs'
-import type { KafkaSecrets } from './kafka.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => {
-  const creds = await secrets.getSecret<KafkaSecrets>('KAFKA_CREDENTIALS')
+  const creds = await secrets.getSecret('KAFKA_CREDENTIALS')
 
   const kafka = new Kafka({
     clientId: creds.clientId ?? 'pikku',

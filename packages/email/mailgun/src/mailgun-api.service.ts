@@ -7,9 +7,12 @@ export interface RequestOptions {
 
 export class MailgunService {
   private baseUrl: string
+  /** The Mailgun sending domain (exposed for adapters that build requests). */
+  readonly sendingDomain: string
 
   constructor(private creds: MailgunSecrets) {
     this.baseUrl = `https://${creds.apiDomain}/v3/`
+    this.sendingDomain = creds.emailDomain
   }
 
   async request<T>(

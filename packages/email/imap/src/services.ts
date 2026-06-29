@@ -1,12 +1,11 @@
 import { ImapService } from './imap-api.service.js'
-import type { ImapSecrets } from './imap.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret<ImapSecrets>('IMAP_CREDENTIALS')
+  const creds = await secrets.getSecret('IMAP_CREDENTIALS')
   const imap = new ImapService(creds)
 
   return { imap }

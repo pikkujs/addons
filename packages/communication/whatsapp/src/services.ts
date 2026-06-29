@@ -1,12 +1,11 @@
 import { WhatsappService } from './whatsapp-api.service.js'
-import type { WhatsappSecrets } from './whatsapp.secret.js'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret<WhatsappSecrets>('WHATSAPP_CREDENTIALS')
+  const creds = await secrets.getSecret('WHATSAPP_CREDENTIALS')
   const whatsapp = new WhatsappService(creds)
 
   return { whatsapp }

@@ -2,7 +2,7 @@ import Stripe from 'stripe'
 import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets, variables }) => {
-  const apiKey = await secrets.getSecret<string>('STRIPE_SECRET_KEY')
+  const apiKey = await secrets.getSecret('STRIPE_SECRET_KEY')
   const apiUrl = await variables.get('STRIPE_API_URL') ?? null
 
   const opts: Stripe.StripeConfig = {}
