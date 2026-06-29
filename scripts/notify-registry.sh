@@ -28,16 +28,34 @@ else
   payload="{\"packageName\":\"$name\"}"
 fi
 
-echo -n "Ingesting $name${version:+@$version}... "
-status=$(curl -s -o /dev/null -w "%{http_code}" \
-  -X POST "$REGISTRY_URL/registry/addons/ingest" \
-  -H "Content-Type: application/json" \
-  -H "Authorization: Bearer $REGISTRY_API_KEY" \
-  -d "$payload")
+# npm propagation can lag a few seconds after publish — retry up to 3 times
+# with a short back-off before giving up.
+MAX_RETRIES=3
+RETRY_DELAY=10
 
-if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
-  echo "ok ($status)"
-else
+for attempt in $(seq 1 $MAX_RETRIES); do
+  echo -n "Ingesting $name${version:+@$version} (attempt $attempt/$MAX_RETRIES)... "
+  response=$(curl -s -w "\n%{http_code}" \
+    -X POST "$REGISTRY_URL/registry/addons/ingest" \
+    -H "Content-Type: application/json" \
+    -H "Authorization: Bearer $REGISTRY_API_KEY" \
+    -d "$payload")
+
+  status=$(echo "$response" | tail -n1)
+  body=$(echo "$response" | head -n -1)
+
+  if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
+    echo "ok ($status)"
+    exit 0
+  fi
+
   echo "FAILED ($status)"
-  exit 1
-fi
+  echo "  Response: $body"
+
+  if [ "$attempt" -lt "$MAX_RETRIES" ]; then
+    echo "  Retrying in ${RETRY_DELAY}s..."
+    sleep $RETRY_DELAY
+  fi
+done
+
+exit 1
