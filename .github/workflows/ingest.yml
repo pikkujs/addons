@@ -1,0 +1,32 @@
+name: Ingest Registry Packages
+
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: 'JSON array of {"name":"...","version":"..."} objects to ingest'
+        required: true
+        default: '[]'
+
+env:
+  YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+jobs:
+  ingest:
+    name: Ingest into registry
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Ingest packages
+        run: |
+          echo '${{ github.event.inputs.packages }}' | \
+            node -e "
+              const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+              for (const pkg of pkgs) {
+                console.log(pkg.name + '\t' + pkg.version);
+              }
+            " | while IFS=$'\t' read -r name version; do
+              bash scripts/notify-registry.sh "$name" "$version"
+            done
+        env:
+          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
