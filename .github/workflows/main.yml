@@ -7,6 +7,14 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+# Workspace `file:` test packages produce environment-sensitive lockfile hashes
+# (computed from each addon's on-disk contents), so an immutable install can't
+# reliably match a lock generated elsewhere. Allow CI to reconcile the lock in
+# place — mirrors the fabric repo. The lock drift is cosmetic; published output
+# is unaffected.
+env:
+  YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
 jobs:
   discover:
     name: Discover changed addons
