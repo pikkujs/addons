@@ -175,17 +175,17 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: '0'
 
-      # - name: Notify registry of published packages
-      #   if: steps.changesets.outputs.published == 'true'
-      #   run: |
-      #     echo '${{ steps.changesets.outputs.publishedPackages }}' | \
-      #       node -e "
-      #         const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
-      #         for (const pkg of pkgs) {
-      #           console.log(pkg.name);
-      #         }
-      #       " | while read -r name; do
-      #         bash scripts/notify-registry.sh "$name"
-      #       done
-      #   env:
-      #     REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
+      - name: Notify registry of published packages
+        if: steps.changesets.outputs.published == 'true'
+        run: |
+          echo '${{ steps.changesets.outputs.publishedPackages }}' | \
+            node -e "
+              const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+              for (const pkg of pkgs) {
+                console.log(pkg.name + '\t' + pkg.version);
+              }
+            " | while IFS=$'\t' read -r name version; do
+              bash scripts/notify-registry.sh "$name" "$version"
+            done
+        env:
+          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
