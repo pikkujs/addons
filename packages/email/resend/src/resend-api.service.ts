@@ -1,4 +1,5 @@
-import type { ResendSecrets } from './resend.secret.js'
+import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core'
+import type { TypedSecretService } from '#pikku/secrets/pikku-secrets.gen.js'
 
 const BASE_URL = 'https://api.resend.com'
 
@@ -23,14 +24,23 @@ export interface ResendSendResult {
   id: string
 }
 
-export class ResendService {
-  constructor(private creds: ResendSecrets) {}
+export class ResendService implements EmailService {
+  constructor(
+    private secretsOrApiKey: TypedSecretService | string,
+    private defaultFrom?: string
+  ) {}
+
+  private async getApiKey(): Promise<string> {
+    if (typeof this.secretsOrApiKey === 'string') return this.secretsOrApiKey
+    return (await this.secretsOrApiKey.getSecret('RESEND_CREDENTIALS')).apiKey
+  }
 
   async request<T>(
     method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'PATCH',
     endpoint: string,
     options?: RequestOptions
   ): Promise<T> {
+    const apiKey = await this.getApiKey()
     const url = new URL(endpoint, BASE_URL)
 
     if (options?.qs) {
@@ -45,7 +55,7 @@ export class ResendService {
       method,
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${this.creds.apiKey}`,
+        'Authorization': `Bearer ${apiKey}`,
       },
       body: options?.body ? JSON.stringify(options.body) : undefined,
     })
@@ -62,10 +72,37 @@ export class ResendService {
     return JSON.parse(text) as T
   }
 
-  /**
-   * Send an email via the Resend `/emails` endpoint.
-   */
   async sendEmail(data: ResendSendEmail): Promise<ResendSendResult> {
     return this.request<ResendSendResult>('POST', '/emails', { body: data })
+  }
+
+  async send(input: SendEmailInput): Promise<SendEmailResult> {
+    if ('template' in input && input.template) {
+      throw new Error(
+        'Resend does not support template references via this adapter; provide text or html instead'
+      )
+    }
+
+    const from = input.from ?? this.defaultFrom
+    if (!from) {
+      throw new Error('A "from" address is required to send email via Resend')
+    }
+
+    const text = 'text' in input ? (input.text as string | undefined) : undefined
+    const html = 'html' in input ? (input.html as string | undefined) : undefined
+
+    const result = await this.sendEmail({
+      from,
+      to: input.to,
+      cc: input.cc,
+      bcc: input.bcc,
+      reply_to: input.replyTo,
+      subject: input.subject ?? '',
+      text,
+      html,
+      headers: input.headers,
+    })
+
+    return { messageId: result.id }
   }
 }
