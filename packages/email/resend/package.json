@@ -3,8 +3,8 @@
   "version": "0.0.2",
   "type": "module",
   "imports": {
-    "#pikku": "./.pikku/pikku-types.gen.ts",
-    "#pikku/*": "./.pikku/*"
+    "#pikku": "./dist/.pikku/pikku-types.gen.js",
+    "#pikku/*": "./dist/.pikku/*"
   },
   "exports": {
     ".": {
