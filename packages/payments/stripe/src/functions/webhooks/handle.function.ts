@@ -49,7 +49,7 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
 
     const req = http?.request
     const readHeader = (name: string): string | undefined =>
-      req?.header?.(name) ?? req?.headers?.[name]
+      req?.header(name) ?? req?.headers()[name]
 
     const signature = readHeader('stripe-signature')
     if (!signature) {
