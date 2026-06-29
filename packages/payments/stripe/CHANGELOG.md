@@ -1,5 +1,11 @@
 # @pikku/addon-stripe
 
+## 0.1.2
+
+### Patch Changes
+
+- c9339b7: Fix package publishing to use `publishConfig.directory` so `#pikku` imports resolve correctly when consumed from npm.
+
 ## 0.1.1
 
 ### Patch Changes
