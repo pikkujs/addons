@@ -1,5 +1,15 @@
 # @pikku/addon-gmail
 
+## 0.1.3
+
+### Patch Changes
+
+- 6470d18: Merge email adapter into API service class — each provider service now implements `EmailService` directly. The separate `*EmailService` adapter classes are removed.
+
+  Constructor accepts `TypedSecretService | string` (for string-keyed providers) or `TypedSecretService | MailgunSecrets` (Mailgun), so host apps can pass credentials directly or let the service resolve them lazily from the secret store.
+
+- caa0266: Fix `#pikku` internal package alias to resolve to compiled JS in `dist/.pikku/` instead of the TypeScript source in `.pikku/`. Previously, the `imports` field pointed to `./.pikku/pikku-types.gen.ts`, causing `ERR_MODULE_NOT_FOUND` at runtime in plain Node.js (without tsx) because the re-exported `.gen.js` files only exist in `dist/.pikku/` after compilation.
+
 ## 0.1.2
 
 ### Patch Changes
