@@ -41,13 +41,13 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
     'Verify a Stripe webhook signature against the raw body and enqueue the verified event onto the stripe-webhook-event queue for the consuming app to process.',
   input: StripeWebhookInput,
   output: StripeWebhookOutput,
-  func: async ({ stripe, secrets, queueService, logger }, _payload, wire) => {
+  func: async ({ stripe, secrets, queueService, logger }, _payload, { http }) => {
     if (!queueService) {
       logger.error('stripe webhook: queueService is not configured on the host app')
       throw new Error('queueService is required to process Stripe webhooks')
     }
 
-    const req = (wire as any).http?.request
+    const req = http?.request
     const readHeader = (name: string): string | undefined =>
       req?.header?.(name) ?? req?.headers?.[name]
 

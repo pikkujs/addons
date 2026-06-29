@@ -3,10 +3,7 @@
   "version": "0.1.1",
   "type": "module",
   "imports": {
-    "#pikku": {
-      "types": "./.pikku/pikku-types.gen.ts",
-      "import": "./dist/.pikku/pikku-types.gen.js"
-    }
+    "#pikku": "./.pikku/pikku-types.gen.ts"
   },
   "exports": {
     ".": {
@@ -39,8 +36,8 @@
     "zod": "^4"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.47",
-    "@pikku/core": "^0.12.36",
+    "@pikku/cli": "^0.12.55",
+    "@pikku/core": "^0.12.39",
     "@types/mailparser": "^3.4.5",
     "typescript": "^5.7.2",
     "zod": "^4"
