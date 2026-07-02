@@ -11,6 +11,7 @@
     "description": "Speech-to-text using Whisper ASR webservice",
     "categories": [
       "Speech"
-    ]
+    ],
+    "icon": "./whisper-asr.svg"
   }
 }

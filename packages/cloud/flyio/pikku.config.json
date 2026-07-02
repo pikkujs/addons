@@ -6,8 +6,7 @@
     "types"
   ],
   "outDir": "./.pikku",
-  "addon": true,
-  "node": {
+  "addon": {
     "displayName": "Fly.io",
     "description": "Fly.io integration for Pikku",
     "categories": [
