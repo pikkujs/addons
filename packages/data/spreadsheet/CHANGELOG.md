@@ -1,5 +1,11 @@
 # @pikku/addon-spreadsheet
 
+## 0.1.3
+
+### Patch Changes
+
+- d09095e: Ship complete catalogue metadata: add the missing icon SVGs the configs already referenced, add icon keys where absent, and move flyio/resend's legacy `node:` meta block to `addon:` so displayName/description/categories/icon actually bake into the published addon meta
+
 ## 0.1.2
 
 ### Patch Changes

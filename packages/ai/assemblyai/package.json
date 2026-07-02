@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-assemblyai",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "type": "module",
   "imports": {
     "#pikku": "./dist/.pikku/pikku-types.gen.js"
