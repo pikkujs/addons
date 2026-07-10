@@ -4,6 +4,11 @@ import { wireSecret } from '@pikku/core/secret'
 export const whatsappSecretsSchema = z.object({
   accessToken: z.string().describe('WhatsApp Cloud API access token'),
   phoneNumberId: z.string().describe('WhatsApp Business phone number ID'),
+  verifyToken: z
+    .string()
+    .describe(
+      'Webhook verify token — any string you choose; must match the one entered in the Meta app dashboard webhook config'
+    ),
 })
 
 export type WhatsappSecrets = z.infer<typeof whatsappSecretsSchema>

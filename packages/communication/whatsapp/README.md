@@ -57,7 +57,7 @@ const disconnect = await adapter.connect(
 
 ## Secrets
 
-`WHATSAPP_CREDENTIALS` — fields: accessToken, phoneNumberId (Cloud API only)
+`WHATSAPP_CREDENTIALS` — fields: accessToken, phoneNumberId, verifyToken (Cloud API only). `verifyToken` is any string you choose; enter the same value in the Meta app dashboard webhook config — the adapter echoes the GET challenge only when it matches.
 
 ## Dependencies
 
