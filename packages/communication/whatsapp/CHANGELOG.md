@@ -1,5 +1,11 @@
 # @pikku/addon-whatsapp
 
+## 0.1.3
+
+### Patch Changes
+
+- 10e9d9e: Add `verifyToken` to the `WHATSAPP_CREDENTIALS` secret schema — the Cloud API webhook GET challenge requires it (`WhatsAppGatewayAdapter` constructor arg), so it belongs in the typed secret alongside accessToken/phoneNumberId.
+
 ## 0.1.2
 
 ### Patch Changes
