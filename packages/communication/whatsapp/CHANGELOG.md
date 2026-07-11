@@ -1,5 +1,12 @@
 # @pikku/addon-whatsapp
 
+## 0.1.4
+
+### Patch Changes
+
+- f799ab8: Move the Baileys (personal-tier) adapter to a `@pikku/addon-whatsapp/baileys` subpath export. The main entry eagerly re-exported `baileys-gateway-adapter.js`, whose static `@whiskeysockets/baileys` import crashed every app at boot unless the optional peer was installed — business-tier (Cloud API webhook) users must not need Baileys. Import `BaileysGatewayAdapter`/`BaileysAdapterOptions` from `@pikku/addon-whatsapp/baileys` instead.
+- 7b86350: verifyWebhook now accepts pikku's dot-nested query shape. Pikku's `request.query()` parses `hub.mode=subscribe` into `{ hub: { mode } }` (picoquery nesting), while the adapter only read the flat `query['hub.mode']` — so the Meta GET challenge always failed under a pikku HTTP runner. Both shapes are accepted now.
+
 ## 0.1.3
 
 ### Patch Changes
