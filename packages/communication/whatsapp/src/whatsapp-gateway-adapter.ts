@@ -145,9 +145,12 @@ export class WhatsAppGatewayAdapter implements GatewayAdapter {
     request?: PikkuHTTPRequest
   ): WebhookVerificationResult {
     const query = (request?.query() ?? data ?? {}) as Record<string, any>
-    const mode = query['hub.mode']
-    const token = query['hub.verify_token']
-    const challenge = query['hub.challenge']
+    // Pikku's query() dot-nests params (hub.mode -> { hub: { mode } }); raw
+    // adapters may pass the flat shape — accept both.
+    const hub = (query.hub ?? {}) as Record<string, any>
+    const mode = query['hub.mode'] ?? hub.mode
+    const token = query['hub.verify_token'] ?? hub.verify_token
+    const challenge = query['hub.challenge'] ?? hub.challenge
 
     if (mode === 'subscribe' && token === this.verifyToken) {
       return { verified: true, response: challenge }

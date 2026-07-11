@@ -206,6 +206,24 @@ describe('WhatsAppGatewayAdapter', () => {
       assert.deepEqual(result, { verified: false })
     })
 
+    test('verifies with dot-nested query shape (pikku query())', () => {
+      const { service } = createMockWhatsappService()
+      const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
+
+      const result = adapter.verifyWebhook({
+        hub: {
+          mode: 'subscribe',
+          verify_token: 'my-verify-token',
+          challenge: 'challenge-value-123',
+        },
+      })
+
+      assert.deepEqual(result, {
+        verified: true,
+        response: 'challenge-value-123',
+      })
+    })
+
     test('rejects non-subscribe mode', () => {
       const { service } = createMockWhatsappService()
       const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
