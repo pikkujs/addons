@@ -13,7 +13,7 @@ export class AirtableService {
     endpoint: string,
     options?: RequestOptions
   ): Promise<T> {
-    const url = new URL(endpoint, BASE_URL)
+    const url = new URL(`${BASE_URL}${endpoint}`)
 
     if (options?.qs) {
       for (const [key, value] of Object.entries(options.qs)) {
