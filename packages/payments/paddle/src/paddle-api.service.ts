@@ -19,7 +19,9 @@ export class PaddleService {
     endpoint: string,
     options?: RequestOptions
   ): Promise<T> {
-    const url = new URL(endpoint, this.baseUrl)
+    const url = new URL(
+      `${this.baseUrl.replace(/\/+$/, '')}/${endpoint.replace(/^\/+/, '')}`
+    )
 
     if (options?.qs) {
       for (const [key, value] of Object.entries(options.qs)) {
