@@ -1,0 +1,19 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "displayName": "Mistral AI",
+    "description": "Mistral document OCR, structured extraction, embeddings and speech-to-text",
+    "categories": [
+      "OCR",
+      "Text",
+      "Audio"
+    ],
+    "icon": "./mistral.svg"
+  }
+}
