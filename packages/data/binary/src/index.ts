@@ -1,0 +1,5 @@
+export { extractText } from './functions/extract-text.function.js'
+export { extractJson } from './functions/extract-json.function.js'
+export { toTextFile } from './functions/to-text-file.function.js'
+export { toJsonFile } from './functions/to-json-file.function.js'
+export { moveBinaryData } from './functions/move-binary-data.function.js'

@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "displayName": "Binary",
+    "description": "Convert between binary file data and JSON (text, JSON, and raw binary)",
+    "categories": [
+      "Binary",
+      "Files"
+    ],
+    "icon": "./binary.svg"
+  }
+}
