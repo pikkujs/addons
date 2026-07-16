@@ -21,9 +21,15 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'ZOOM_OAUTH_APP',
     tokenSecretId: 'ZOOM_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://zoom.us/oauth/authorize',
+    tokenUrl: 'https://zoom.us/oauth/token',
+    scopes: [
+      'meeting:read:meeting',
+      'meeting:write:meeting',
+      'meeting:update:meeting',
+      'meeting:delete:meeting',
+      'meeting:read:list_meetings',
+    ],
   },
 })
 

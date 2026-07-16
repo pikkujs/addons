@@ -16,9 +16,22 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'DROPBOX_OAUTH_APP',
     tokenSecretId: 'DROPBOX_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://www.dropbox.com/oauth2/authorize',
+    tokenUrl: 'https://api.dropboxapi.com/oauth2/token',
+    scopes: [
+      'account_info.read',
+      'files.metadata.read',
+      'files.metadata.write',
+      'files.content.read',
+      'files.content.write',
+      'sharing.read',
+      'sharing.write',
+      'file_requests.read',
+      'file_requests.write',
+    ],
+    additionalParams: {
+      token_access_type: 'offline',
+    },
   },
 })
 

@@ -21,9 +21,12 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'MICROSOFT_TO_DO_OAUTH_APP',
     tokenSecretId: 'MICROSOFT_TO_DO_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://login.microsoftonline.com/common/oauth2/v2.0/authorize',
+    tokenUrl: 'https://login.microsoftonline.com/common/oauth2/v2.0/token',
+    scopes: [
+      'Tasks.ReadWrite',
+      'offline_access',
+    ],
   },
 })
 
