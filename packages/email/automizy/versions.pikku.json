@@ -1,0 +1,95 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9d611a8",
+          "outputHash": "8a72fa54"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6cc551b",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2e5251d",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d27c5dad",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94b73670",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7709e152",
+          "outputHash": "58da4749"
+        }
+      }
+    },
+    "listGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8c0da42",
+          "outputHash": "a8b5e619"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68732d5f",
+          "outputHash": "3556e648"
+        }
+      }
+    },
+    "listUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d0e41b5",
+          "outputHash": "873c6907"
+        }
+      }
+    }
+  }
+}

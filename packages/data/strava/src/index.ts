@@ -1,0 +1,8 @@
+export { activityGetAll } from './functions/activityGetAll.function.js'
+export { activityCreate } from './functions/activityCreate.function.js'
+export { activityGet } from './functions/activityGet.function.js'
+export { activityUpdate } from './functions/activityUpdate.function.js'
+export { activityGetComments } from './functions/activityGetComments.function.js'
+export { activityGetKudos } from './functions/activityGetKudos.function.js'
+export { activityGetLaps } from './functions/activityGetLaps.function.js'
+export { activityGetZones } from './functions/activityGetZones.function.js'

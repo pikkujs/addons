@@ -1,0 +1,185 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "agentRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "402a765a",
+          "outputHash": "306b3b2b"
+        }
+      }
+    },
+    "extractionGetPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f604f3c",
+          "outputHash": "e23f50d9"
+        }
+      }
+    },
+    "extractionQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7740d84e",
+          "outputHash": "6d646dc7"
+        }
+      }
+    },
+    "extractionScrape": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e758d45",
+          "outputHash": "9596b683"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06081078",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9a661fc",
+          "outputHash": "1b607422"
+        }
+      }
+    },
+    "fileGetMany": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8e3a465",
+          "outputHash": "72bf5986"
+        }
+      }
+    },
+    "fileLoad": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd6a68a4",
+          "outputHash": "01bfcb98"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59f076d9",
+          "outputHash": "04d6e56e"
+        }
+      }
+    },
+    "interactionClick": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f77086c0",
+          "outputHash": "256d237d"
+        }
+      }
+    },
+    "interactionFill": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3bd17d66",
+          "outputHash": "cc3e7033"
+        }
+      }
+    },
+    "interactionHover": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1e2e12a",
+          "outputHash": "2a15de3e"
+        }
+      }
+    },
+    "interactionType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad2e4d8f",
+          "outputHash": "b4943a88"
+        }
+      }
+    },
+    "sessionCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c940ac21",
+          "outputHash": "40fe0596"
+        }
+      }
+    },
+    "sessionSave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f635e5e",
+          "outputHash": "f7a2ac1c"
+        }
+      }
+    },
+    "sessionTerminate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e048c9ed",
+          "outputHash": "4c3eafe7"
+        }
+      }
+    },
+    "windowClose": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28342b7a",
+          "outputHash": "7e819297"
+        }
+      }
+    },
+    "windowCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b30bcaeb",
+          "outputHash": "77a6f4df"
+        }
+      }
+    },
+    "windowLoad": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d6e80e3",
+          "outputHash": "35bf8dd6"
+        }
+      }
+    },
+    "windowTakeScreenshot": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23677fe8",
+          "outputHash": "2ac5bbf6"
+        }
+      }
+    }
+  }
+}

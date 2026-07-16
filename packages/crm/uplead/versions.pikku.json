@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyEnrich": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f63901bd",
+          "outputHash": "6ced77be"
+        }
+      }
+    },
+    "personEnrich": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "894db764",
+          "outputHash": "0d51b7ef"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "customVerificationEmailCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "293f8327",
+          "outputHash": "a89eb754"
+        }
+      }
+    },
+    "customVerificationEmailDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a581318",
+          "outputHash": "33e09c49"
+        }
+      }
+    },
+    "customVerificationEmailGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6db0a3ca",
+          "outputHash": "bbf74331"
+        }
+      }
+    },
+    "customVerificationEmailGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5bd22af",
+          "outputHash": "0472b9c0"
+        }
+      }
+    },
+    "customVerificationEmailSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8525f310",
+          "outputHash": "c5a56192"
+        }
+      }
+    },
+    "customVerificationEmailUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dabb71b",
+          "outputHash": "10ad952d"
+        }
+      }
+    },
+    "emailSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3716d5c2",
+          "outputHash": "c1073773"
+        }
+      }
+    },
+    "emailSendTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6636a528",
+          "outputHash": "3820f510"
+        }
+      }
+    },
+    "templateCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77a93698",
+          "outputHash": "80710217"
+        }
+      }
+    },
+    "templateDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7c0719c",
+          "outputHash": "c064fae2"
+        }
+      }
+    },
+    "templateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "811e187b",
+          "outputHash": "67377ca0"
+        }
+      }
+    },
+    "templateGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fc511f3",
+          "outputHash": "ff5fc2ac"
+        }
+      }
+    },
+    "templateUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c747b11",
+          "outputHash": "4e4793c4"
+        }
+      }
+    }
+  }
+}

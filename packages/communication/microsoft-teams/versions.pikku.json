@@ -1,0 +1,149 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "channelCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27626b9b",
+          "outputHash": "453f2041"
+        }
+      }
+    },
+    "channelDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdf12ad4",
+          "outputHash": "cee27f5e"
+        }
+      }
+    },
+    "channelGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98ea07ab",
+          "outputHash": "609c2ca6"
+        }
+      }
+    },
+    "channelGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd3e33cc",
+          "outputHash": "15ce3acc"
+        }
+      }
+    },
+    "channelMessageCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "243a1582",
+          "outputHash": "8a9ed0c5"
+        }
+      }
+    },
+    "channelMessageGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcaca6ee",
+          "outputHash": "7c71bc16"
+        }
+      }
+    },
+    "channelUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1280ae1e",
+          "outputHash": "cfc496d4"
+        }
+      }
+    },
+    "chatMessageCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2422703f",
+          "outputHash": "bf84a235"
+        }
+      }
+    },
+    "chatMessageGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc12be79",
+          "outputHash": "c311d392"
+        }
+      }
+    },
+    "chatMessageGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12a9fea9",
+          "outputHash": "f9ff09f8"
+        }
+      }
+    },
+    "chatMessageSendAndWait": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8e00ed0",
+          "outputHash": "0acfafc5"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32754fbc",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cb4a68",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e752f179",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "056a7958",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb46fd59",
+          "outputHash": "dc1d8332"
+        }
+      }
+    }
+  }
+}

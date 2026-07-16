@@ -1,0 +1,24 @@
+{
+  "name": "@pikku/test-google-firebase-realtime-database",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "node --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-google-firebase-realtime-database": "file:..",
+    "@pikku/core": "*"
+  },
+  "devDependencies": {
+    "@pikku/cli": "*",
+    "@types/node": "^24",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}

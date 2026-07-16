@@ -1,0 +1,167 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "fileCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da48157e",
+          "outputHash": "fd12b3a3"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f02cfee",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileEdit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f566ac8e",
+          "outputHash": "7afb2891"
+        }
+      }
+    },
+    "fileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d24c2698",
+          "outputHash": "1b607422"
+        }
+      }
+    },
+    "fileList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84a4c609",
+          "outputHash": "1398a014"
+        }
+      }
+    },
+    "issueCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06eeb598",
+          "outputHash": "4b4b7f40"
+        }
+      }
+    },
+    "issueCreateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d7254121",
+          "outputHash": "3c9cb748"
+        }
+      }
+    },
+    "issueEdit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c54b543",
+          "outputHash": "a7d27e5b"
+        }
+      }
+    },
+    "issueGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b49bf410",
+          "outputHash": "2ede1991"
+        }
+      }
+    },
+    "issueLock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "222fa1c7",
+          "outputHash": "b1fdd3cb"
+        }
+      }
+    },
+    "releaseCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ce938bd",
+          "outputHash": "1da79797"
+        }
+      }
+    },
+    "releaseDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f46877dc",
+          "outputHash": "d063458b"
+        }
+      }
+    },
+    "releaseGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "308f9d5b",
+          "outputHash": "6491702e"
+        }
+      }
+    },
+    "releaseGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95a5ae4e",
+          "outputHash": "e8aa8d3b"
+        }
+      }
+    },
+    "releaseUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae91f62f",
+          "outputHash": "31d67cf2"
+        }
+      }
+    },
+    "repositoryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b23b3a9",
+          "outputHash": "67d872ef"
+        }
+      }
+    },
+    "repositoryGetIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91fa6260",
+          "outputHash": "454c3ec4"
+        }
+      }
+    },
+    "userGetRepositories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d7b0390",
+          "outputHash": "d504c039"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "fileCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e526100c",
+          "outputHash": "46f657cb"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06081078",
+          "outputHash": "6a7b0fc5"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95b64e15",
+          "outputHash": "ccde4bdc"
+        }
+      }
+    },
+    "fileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9a661fc",
+          "outputHash": "1b607422"
+        }
+      }
+    },
+    "fileMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "612d1ef7",
+          "outputHash": "f7b71720"
+        }
+      }
+    },
+    "fileRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e608b50",
+          "outputHash": "eacb9efe"
+        }
+      }
+    },
+    "fileSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c799cbd3",
+          "outputHash": "0d8ec7f2"
+        }
+      }
+    },
+    "fileShare": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33e7ad4e",
+          "outputHash": "5325c5d5"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c4365a8",
+          "outputHash": "04d6e56e"
+        }
+      }
+    },
+    "folderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7babc52b",
+          "outputHash": "0615ed88"
+        }
+      }
+    },
+    "folderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed88464d",
+          "outputHash": "73617dab"
+        }
+      }
+    },
+    "folderGetChildren": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2b651af",
+          "outputHash": "9c832cdc"
+        }
+      }
+    },
+    "folderMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b0e8acd",
+          "outputHash": "4e640af7"
+        }
+      }
+    },
+    "folderRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "331621f4",
+          "outputHash": "e5a8988d"
+        }
+      }
+    },
+    "folderSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4c42c8c",
+          "outputHash": "12ca237f"
+        }
+      }
+    },
+    "folderShare": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "319efbc5",
+          "outputHash": "874af150"
+        }
+      }
+    }
+  }
+}

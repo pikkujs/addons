@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "agentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e04cf43",
+          "outputHash": "e1f2245d"
+        }
+      }
+    },
+    "agentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "631f73a3",
+          "outputHash": "318d881a"
+        }
+      }
+    },
+    "agentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81589c0c",
+          "outputHash": "fe67f576"
+        }
+      }
+    },
+    "agentGetOutput": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ae26018",
+          "outputHash": "699cf834"
+        }
+      }
+    },
+    "agentLaunch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea7ce377",
+          "outputHash": "7047dacf"
+        }
+      }
+    },
+    "agentLaunchSync": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "648ed81a",
+          "outputHash": "66400fa0"
+        }
+      }
+    }
+  }
+}

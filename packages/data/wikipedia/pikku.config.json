@@ -14,5 +14,8 @@
       "Search"
     ],
     "icon": "./wikipedia.svg"
+  },
+  "node": {
+    "icon": "./wikipedia.svg"
   }
 }

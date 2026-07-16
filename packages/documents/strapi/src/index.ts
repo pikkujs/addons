@@ -1,0 +1,5 @@
+export { entryGetAll } from './functions/entryGetAll.function.js'
+export { entryCreate } from './functions/entryCreate.function.js'
+export { entryGet } from './functions/entryGet.function.js'
+export { entryUpdate } from './functions/entryUpdate.function.js'
+export { entryDelete } from './functions/entryDelete.function.js'

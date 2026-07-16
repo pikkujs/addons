@@ -1,0 +1,95 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "fieldGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "115968c6",
+          "outputHash": "e2ace72b"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e5fa3de",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb90ec03",
+          "outputHash": "4efee225"
+        }
+      }
+    },
+    "recordCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f6048ba",
+          "outputHash": "684d0f4e"
+        }
+      }
+    },
+    "recordDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e76ffed",
+          "outputHash": "86e0023f"
+        }
+      }
+    },
+    "recordGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "adc149d1",
+          "outputHash": "4fc4fa9a"
+        }
+      }
+    },
+    "recordUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95feeeea",
+          "outputHash": "b3db9613"
+        }
+      }
+    },
+    "recordUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95b33e74",
+          "outputHash": "b68a2ba5"
+        }
+      }
+    },
+    "reportGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d71781fd",
+          "outputHash": "ce3010e4"
+        }
+      }
+    },
+    "reportRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee5be46b",
+          "outputHash": "c73f1dff"
+        }
+      }
+    }
+  }
+}

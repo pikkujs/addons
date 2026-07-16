@@ -1,0 +1,158 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "tableAppend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0159d908",
+          "outputHash": "e645045b"
+        }
+      }
+    },
+    "tableConvertToRange": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89add14e",
+          "outputHash": "bc620c6d"
+        }
+      }
+    },
+    "tableCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d2a4456",
+          "outputHash": "fb42cf0c"
+        }
+      }
+    },
+    "tableDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f94488c",
+          "outputHash": "d39175e3"
+        }
+      }
+    },
+    "tableGetColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de8b2629",
+          "outputHash": "55b412e9"
+        }
+      }
+    },
+    "tableGetRows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7814f5a6",
+          "outputHash": "0590fd69"
+        }
+      }
+    },
+    "tableLookup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7fcb902",
+          "outputHash": "25f16f56"
+        }
+      }
+    },
+    "workbookAddWorksheet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1dd3cea8",
+          "outputHash": "e8ffa47f"
+        }
+      }
+    },
+    "workbookDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d12b9aa",
+          "outputHash": "7a3af0b5"
+        }
+      }
+    },
+    "workbookGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e5171f2",
+          "outputHash": "f5e9b86d"
+        }
+      }
+    },
+    "worksheetAppend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bff0eeb9",
+          "outputHash": "11ea1031"
+        }
+      }
+    },
+    "worksheetClear": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7b09041",
+          "outputHash": "ebb6b241"
+        }
+      }
+    },
+    "worksheetDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72febace",
+          "outputHash": "2a75348c"
+        }
+      }
+    },
+    "worksheetGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56883f2c",
+          "outputHash": "00d4c432"
+        }
+      }
+    },
+    "worksheetReadRows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "295e9f75",
+          "outputHash": "8e6799ed"
+        }
+      }
+    },
+    "worksheetUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27c74585",
+          "outputHash": "76fcf41e"
+        }
+      }
+    },
+    "worksheetUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b04f98de",
+          "outputHash": "e18258a6"
+        }
+      }
+    }
+  }
+}

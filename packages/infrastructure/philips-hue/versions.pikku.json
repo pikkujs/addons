@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "lightDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0516746",
+          "outputHash": "d0295773"
+        }
+      }
+    },
+    "lightGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c22f21be",
+          "outputHash": "06da0c20"
+        }
+      }
+    },
+    "lightGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c722978",
+          "outputHash": "781b6a53"
+        }
+      }
+    },
+    "lightUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d644a8d6",
+          "outputHash": "a8755363"
+        }
+      }
+    }
+  }
+}

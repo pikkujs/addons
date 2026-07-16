@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "bcb88d56ae014624"
+    }
+  },
+  "node": {
+    "displayName": "Strapi",
+    "description": "Consume the Strapi headless CMS API",
+    "categories": [
+      "documents"
+    ],
+    "icon": "./strapi.svg"
+  }
+}

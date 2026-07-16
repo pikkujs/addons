@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0",
+      "hash": "2b6811619f51fa02"
+    }
+  },
+  "node": {
+    "displayName": "NocoDB",
+    "description": "NocoDB integration for Pikku",
+    "categories": [
+      "Database"
+    ],
+    "icon": "./nocodb.svg"
+  }
+}

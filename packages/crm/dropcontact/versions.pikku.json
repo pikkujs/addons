@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "contactEnrich": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38b05e5c",
+          "outputHash": "42728855"
+        }
+      }
+    },
+    "contactFetchRequest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c73c2bba",
+          "outputHash": "f4f006f9"
+        }
+      }
+    }
+  }
+}

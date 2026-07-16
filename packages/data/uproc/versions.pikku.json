@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "perform": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ee84c0c",
+          "outputHash": "756f413f"
+        }
+      }
+    }
+  }
+}

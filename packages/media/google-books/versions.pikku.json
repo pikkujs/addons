@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "bookshelfGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67821c00",
+          "outputHash": "20820491"
+        }
+      }
+    },
+    "bookshelfGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81dfe3b4",
+          "outputHash": "e497a64a"
+        }
+      }
+    },
+    "bookshelfVolumeAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5958c7a",
+          "outputHash": "8f3ebb97"
+        }
+      }
+    },
+    "bookshelfVolumeClear": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "631e0a6e",
+          "outputHash": "a483a8bf"
+        }
+      }
+    },
+    "bookshelfVolumeGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07b6ef3c",
+          "outputHash": "b72b2514"
+        }
+      }
+    },
+    "bookshelfVolumeMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64b116c9",
+          "outputHash": "640e6db6"
+        }
+      }
+    },
+    "bookshelfVolumeRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7f99433",
+          "outputHash": "304fd176"
+        }
+      }
+    },
+    "volumeGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "481e52d7",
+          "outputHash": "2c90a051"
+        }
+      }
+    },
+    "volumeGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4fb576d",
+          "outputHash": "ec2f18d9"
+        }
+      }
+    }
+  }
+}

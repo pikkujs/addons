@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "storyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ef07eb7",
+          "outputHash": "3dd65627"
+        }
+      }
+    },
+    "storyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d060a9bc",
+          "outputHash": "9fe63eda"
+        }
+      }
+    },
+    "storyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce31110a",
+          "outputHash": "29e63465"
+        }
+      }
+    },
+    "storyPublish": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4b94df2",
+          "outputHash": "2fe45b6a"
+        }
+      }
+    },
+    "storyUnpublish": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8bee8464",
+          "outputHash": "d0d4c3e9"
+        }
+      }
+    }
+  }
+}

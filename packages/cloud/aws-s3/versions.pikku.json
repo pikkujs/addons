@@ -1,0 +1,113 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "bucketCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c57999f",
+          "outputHash": "2c87a302"
+        }
+      }
+    },
+    "bucketDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2158aefc",
+          "outputHash": "57f17d32"
+        }
+      }
+    },
+    "bucketGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8bbf4dd",
+          "outputHash": "b38fcf50"
+        }
+      }
+    },
+    "bucketSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5287190b",
+          "outputHash": "e2dd5314"
+        }
+      }
+    },
+    "fileCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4a395ac",
+          "outputHash": "1e6bffac"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e275794",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8edf904b",
+          "outputHash": "4efee225"
+        }
+      }
+    },
+    "fileGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd776a4f",
+          "outputHash": "c98ef73a"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea854e67",
+          "outputHash": "04d6e56e"
+        }
+      }
+    },
+    "folderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cea67574",
+          "outputHash": "0615ed88"
+        }
+      }
+    },
+    "folderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0c7e91c",
+          "outputHash": "a0d1e4d2"
+        }
+      }
+    },
+    "folderGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a27864f",
+          "outputHash": "b8542e1f"
+        }
+      }
+    }
+  }
+}

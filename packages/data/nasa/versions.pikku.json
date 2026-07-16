@@ -1,0 +1,140 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "asteroidNeoBrowseGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7b3c3b8",
+          "outputHash": "5ff021dc"
+        }
+      }
+    },
+    "asteroidNeoFeedGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a227d59",
+          "outputHash": "999b8836"
+        }
+      }
+    },
+    "asteroidNeoLookupGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32059b80",
+          "outputHash": "5434f474"
+        }
+      }
+    },
+    "astronomyPictureOfTheDayGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfdc6e46",
+          "outputHash": "c8cb53ca"
+        }
+      }
+    },
+    "donkiCoronalMassEjectionGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15bdff0e",
+          "outputHash": "6695ac63"
+        }
+      }
+    },
+    "donkiHighSpeedStreamGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "788ef195",
+          "outputHash": "3753ed40"
+        }
+      }
+    },
+    "donkiInterplanetaryShockGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "010313e4",
+          "outputHash": "4703d828"
+        }
+      }
+    },
+    "donkiMagnetopauseCrossingGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a80e4bd1",
+          "outputHash": "f30cf2c4"
+        }
+      }
+    },
+    "donkiNotificationsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "123f1703",
+          "outputHash": "926c9ded"
+        }
+      }
+    },
+    "donkiRadiationBeltEnhancementGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a186df7f",
+          "outputHash": "09bfee36"
+        }
+      }
+    },
+    "donkiSolarEnergeticParticleGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2375db09",
+          "outputHash": "52028c93"
+        }
+      }
+    },
+    "donkiSolarFlareGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27e51aed",
+          "outputHash": "c723bbe5"
+        }
+      }
+    },
+    "donkiWsaEnlilSimulationGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cddb92ef",
+          "outputHash": "3bafa82a"
+        }
+      }
+    },
+    "earthAssetsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3cf7816e",
+          "outputHash": "d713f0b2"
+        }
+      }
+    },
+    "earthImageryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "097ca2cc",
+          "outputHash": "253b502d"
+        }
+      }
+    }
+  }
+}

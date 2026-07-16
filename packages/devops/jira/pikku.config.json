@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1001.0.0-SNAPSHOT",
+      "hash": "1a178aef46148af8"
+    }
+  },
+  "node": {
+    "displayName": "Jira",
+    "description": "Jira integration for Pikku",
+    "categories": [
+      "Devops"
+    ],
+    "icon": "./jira.svg"
+  }
+}

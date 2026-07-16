@@ -1,0 +1,5315 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "groupCalendarAllowedCalendarSharingRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ba68537",
+          "outputHash": "477188d1"
+        }
+      }
+    },
+    "groupCalendarCalendarPermissionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f835f1b7",
+          "outputHash": "43e3d8ac"
+        }
+      }
+    },
+    "groupCalendarCalendarViewDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0cab1f8f",
+          "outputHash": "3404e38b"
+        }
+      }
+    },
+    "groupCalendarCreateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c42fca7f",
+          "outputHash": "4251aa76"
+        }
+      }
+    },
+    "groupCalendarCreateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0ad7574",
+          "outputHash": "a7953b9d"
+        }
+      }
+    },
+    "groupCalendarDeleteCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "548e0131",
+          "outputHash": "c6768d75"
+        }
+      }
+    },
+    "groupCalendarDeleteEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58956144",
+          "outputHash": "d6b3d3a7"
+        }
+      }
+    },
+    "groupCalendarEventAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81e7c5e5",
+          "outputHash": "8850ebb7"
+        }
+      }
+    },
+    "groupCalendarEventAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95e5ad5b",
+          "outputHash": "be8c97a1"
+        }
+      }
+    },
+    "groupCalendarEventAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c01f79d5",
+          "outputHash": "ec667a87"
+        }
+      }
+    },
+    "groupCalendarEventCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ead61f5c",
+          "outputHash": "f862a140"
+        }
+      }
+    },
+    "groupCalendarEventCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f2c00d1",
+          "outputHash": "951dfcc0"
+        }
+      }
+    },
+    "groupCalendarEventCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c792c6bd",
+          "outputHash": "9b599fcc"
+        }
+      }
+    },
+    "groupCalendarEventDecline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "61f60ba8",
+          "outputHash": "3e35459a"
+        }
+      }
+    },
+    "groupCalendarEventDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "694b84fc",
+          "outputHash": "a7fe8c90"
+        }
+      }
+    },
+    "groupCalendarEventDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ce286ab",
+          "outputHash": "f46dff1a"
+        }
+      }
+    },
+    "groupCalendarEventDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e882363",
+          "outputHash": "e41c86b7"
+        }
+      }
+    },
+    "groupCalendarEventDismissReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "670609ea",
+          "outputHash": "803f6f63"
+        }
+      }
+    },
+    "groupCalendarEventExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a94a3aa",
+          "outputHash": "f2f8ce2c"
+        }
+      }
+    },
+    "groupCalendarEventForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a01ce15",
+          "outputHash": "0e98054e"
+        }
+      }
+    },
+    "groupCalendarEventGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94b90180",
+          "outputHash": "757b7e08"
+        }
+      }
+    },
+    "groupCalendarEventGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bde69d6",
+          "outputHash": "efc5b887"
+        }
+      }
+    },
+    "groupCalendarEventGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "97061a37",
+          "outputHash": "8e2be09e"
+        }
+      }
+    },
+    "groupCalendarEventGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8429a438",
+          "outputHash": "db4f6018"
+        }
+      }
+    },
+    "groupCalendarEventInstanceDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "133200cd",
+          "outputHash": "85af7aae"
+        }
+      }
+    },
+    "groupCalendarEventListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c709901",
+          "outputHash": "c9f17342"
+        }
+      }
+    },
+    "groupCalendarEventListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a96278d",
+          "outputHash": "dbd7dc0b"
+        }
+      }
+    },
+    "groupCalendarEventListInstance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8167168a",
+          "outputHash": "f557b9ab"
+        }
+      }
+    },
+    "groupCalendarEventPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ff508c2",
+          "outputHash": "539df782"
+        }
+      }
+    },
+    "groupCalendarEventSnoozeReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c37a0a5",
+          "outputHash": "170b1bd3"
+        }
+      }
+    },
+    "groupCalendarEventTentativelyAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35da4327",
+          "outputHash": "17963e66"
+        }
+      }
+    },
+    "groupCalendarEventUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d0d0c3c",
+          "outputHash": "fe93ba98"
+        }
+      }
+    },
+    "groupCalendarGetCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68574a89",
+          "outputHash": "33613fe5"
+        }
+      }
+    },
+    "groupCalendarGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64ac72d5",
+          "outputHash": "b53b0e06"
+        }
+      }
+    },
+    "groupCalendarGetSchedule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d17d9e3e",
+          "outputHash": "29bbdbe6"
+        }
+      }
+    },
+    "groupCalendarListCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4206f4a1",
+          "outputHash": "11c662bf"
+        }
+      }
+    },
+    "groupCalendarListCalendarView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83a67ae9",
+          "outputHash": "96e4f171"
+        }
+      }
+    },
+    "groupCalendarListEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be185b41",
+          "outputHash": "b5ac4bdb"
+        }
+      }
+    },
+    "groupCalendarPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b69780aa",
+          "outputHash": "34236f87"
+        }
+      }
+    },
+    "groupCalendarUpdateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f39f6603",
+          "outputHash": "ef1d5a4e"
+        }
+      }
+    },
+    "groupCalendarUpdateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0648c31d",
+          "outputHash": "2ee12577"
+        }
+      }
+    },
+    "groupCalendarViewDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e5acfb2",
+          "outputHash": "3772f781"
+        }
+      }
+    },
+    "groupCreateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb701dfd",
+          "outputHash": "2dbf739d"
+        }
+      }
+    },
+    "groupDeleteEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b73c6fc",
+          "outputHash": "89547eb4"
+        }
+      }
+    },
+    "groupEventAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4438b606",
+          "outputHash": "d6c417ff"
+        }
+      }
+    },
+    "groupEventAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2552f6b",
+          "outputHash": "4f716aa5"
+        }
+      }
+    },
+    "groupEventAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39c058ba",
+          "outputHash": "85134a00"
+        }
+      }
+    },
+    "groupEventCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a33552a",
+          "outputHash": "aca191db"
+        }
+      }
+    },
+    "groupEventCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa7091e6",
+          "outputHash": "7acfefd0"
+        }
+      }
+    },
+    "groupEventCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d90ff47b",
+          "outputHash": "7c6ca08f"
+        }
+      }
+    },
+    "groupEventDecline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e54459b",
+          "outputHash": "0382d2db"
+        }
+      }
+    },
+    "groupEventDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38537a8a",
+          "outputHash": "4bf21052"
+        }
+      }
+    },
+    "groupEventDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bee1da02",
+          "outputHash": "da2fcd13"
+        }
+      }
+    },
+    "groupEventDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8dae733",
+          "outputHash": "e67a1711"
+        }
+      }
+    },
+    "groupEventDismissReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "471bc74d",
+          "outputHash": "ec1bd370"
+        }
+      }
+    },
+    "groupEventExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cab659a7",
+          "outputHash": "48ad38cc"
+        }
+      }
+    },
+    "groupEventForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7eb447c",
+          "outputHash": "232d2721"
+        }
+      }
+    },
+    "groupEventGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d7848d5",
+          "outputHash": "83ab57d5"
+        }
+      }
+    },
+    "groupEventGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32ee0ab9",
+          "outputHash": "e8b06f49"
+        }
+      }
+    },
+    "groupEventGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9007afc",
+          "outputHash": "f1c028c1"
+        }
+      }
+    },
+    "groupEventGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2c6cbf2",
+          "outputHash": "c118f3dc"
+        }
+      }
+    },
+    "groupEventInstanceDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b471470f",
+          "outputHash": "987d3646"
+        }
+      }
+    },
+    "groupEventListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fc5da35",
+          "outputHash": "5cc479b6"
+        }
+      }
+    },
+    "groupEventListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3b15457",
+          "outputHash": "dfcb5a87"
+        }
+      }
+    },
+    "groupEventListInstance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49d5e236",
+          "outputHash": "6338cc62"
+        }
+      }
+    },
+    "groupEventPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d71be1f",
+          "outputHash": "6276caaa"
+        }
+      }
+    },
+    "groupEventSnoozeReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2837ea04",
+          "outputHash": "0a028c8d"
+        }
+      }
+    },
+    "groupEventTentativelyAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dca2bbae",
+          "outputHash": "fa0629c5"
+        }
+      }
+    },
+    "groupEventUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "385d0f9b",
+          "outputHash": "ff396529"
+        }
+      }
+    },
+    "groupGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43c4c712",
+          "outputHash": "d2c4e7c0"
+        }
+      }
+    },
+    "groupGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa92cf40",
+          "outputHash": "f5ea12b2"
+        }
+      }
+    },
+    "groupListCalendarView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11cdd14c",
+          "outputHash": "e8197c7e"
+        }
+      }
+    },
+    "groupListEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c5f4521",
+          "outputHash": "34436275"
+        }
+      }
+    },
+    "groupUpdateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4fd73603",
+          "outputHash": "1bfca5bb"
+        }
+      }
+    },
+    "placeAsBuildingCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82c91b06",
+          "outputHash": "d2e55a06"
+        }
+      }
+    },
+    "placeAsBuildingCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3fc352c",
+          "outputHash": "c0b7c0ea"
+        }
+      }
+    },
+    "placeAsBuildingDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc6ad45f",
+          "outputHash": "d876e55d"
+        }
+      }
+    },
+    "placeAsBuildingDeleteMap": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f59940fd",
+          "outputHash": "29cff4dd"
+        }
+      }
+    },
+    "placeAsBuildingGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45825cc9",
+          "outputHash": "5a955cd6"
+        }
+      }
+    },
+    "placeAsBuildingGetMap": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f0de65e",
+          "outputHash": "556a8400"
+        }
+      }
+    },
+    "placeAsBuildingListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76c188df",
+          "outputHash": "0f7de699"
+        }
+      }
+    },
+    "placeAsBuildingMapCreateFootprint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1781d2b",
+          "outputHash": "f3dbde53"
+        }
+      }
+    },
+    "placeAsBuildingMapCreateLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8620893",
+          "outputHash": "29d359cc"
+        }
+      }
+    },
+    "placeAsBuildingMapDeleteFootprint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f91b95f2",
+          "outputHash": "36eba8d7"
+        }
+      }
+    },
+    "placeAsBuildingMapDeleteLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "146179fd",
+          "outputHash": "5df5dbce"
+        }
+      }
+    },
+    "placeAsBuildingMapFootprintGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94689960",
+          "outputHash": "431ecb39"
+        }
+      }
+    },
+    "placeAsBuildingMapGetFootprint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c072ba9",
+          "outputHash": "6a2f9f73"
+        }
+      }
+    },
+    "placeAsBuildingMapGetLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b47b3e1",
+          "outputHash": "0d5465c6"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelCreateFixture": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3b83dff",
+          "outputHash": "208ab40c"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelCreateSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7344ae63",
+          "outputHash": "f0c76f57"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelCreateUnit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a75dda0",
+          "outputHash": "61a8bab9"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelDeleteFixture": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d174455f",
+          "outputHash": "58933af2"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelDeleteSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "158dbe16",
+          "outputHash": "0c8ed181"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelDeleteUnit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "472ca484",
+          "outputHash": "83fb5630"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelFixtureGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7779ce0f",
+          "outputHash": "55d87362"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be6812e3",
+          "outputHash": "76f183d0"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelGetFixture": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8888b1eb",
+          "outputHash": "74e97860"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelGetSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e69bc450",
+          "outputHash": "dd416d2b"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelGetUnit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c67bc9c",
+          "outputHash": "01d42150"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelListFixture": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7721e1c",
+          "outputHash": "684d2968"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelListSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "930cba6f",
+          "outputHash": "e5070bea"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelListUnit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f272482",
+          "outputHash": "47e11b30"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelSectionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "287c3562",
+          "outputHash": "c71dd671"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelUnitGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ce7e7dc",
+          "outputHash": "8266a072"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelUpdateFixture": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4377b96",
+          "outputHash": "2b2bdd56"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelUpdateSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af483cde",
+          "outputHash": "2bf5bb7f"
+        }
+      }
+    },
+    "placeAsBuildingMapLevelUpdateUnit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b39a9cd",
+          "outputHash": "7f85ac88"
+        }
+      }
+    },
+    "placeAsBuildingMapListFootprint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cc5b66",
+          "outputHash": "2214ceeb"
+        }
+      }
+    },
+    "placeAsBuildingMapListLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d3807fd",
+          "outputHash": "666ced5d"
+        }
+      }
+    },
+    "placeAsBuildingMapUpdateFootprint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea29be4d",
+          "outputHash": "dbc02cc3"
+        }
+      }
+    },
+    "placeAsBuildingMapUpdateLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80362594",
+          "outputHash": "37560c6c"
+        }
+      }
+    },
+    "placeAsBuildingUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "744be621",
+          "outputHash": "1bc021cd"
+        }
+      }
+    },
+    "placeAsBuildingUpdateMap": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e2c03dd",
+          "outputHash": "0bb1a727"
+        }
+      }
+    },
+    "placeAsDeskCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1fdbdf2",
+          "outputHash": "74e41f16"
+        }
+      }
+    },
+    "placeAsDeskCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "263ee4c7",
+          "outputHash": "9b036337"
+        }
+      }
+    },
+    "placeAsDeskDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b22a4a33",
+          "outputHash": "df028d6e"
+        }
+      }
+    },
+    "placeAsDeskGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b495f042",
+          "outputHash": "efd3fe25"
+        }
+      }
+    },
+    "placeAsDeskListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa25f712",
+          "outputHash": "a9fbfa6e"
+        }
+      }
+    },
+    "placeAsDeskUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1aea940",
+          "outputHash": "468f3be7"
+        }
+      }
+    },
+    "placeAsFloorCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9199a35",
+          "outputHash": "be1358ed"
+        }
+      }
+    },
+    "placeAsFloorCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11ecf857",
+          "outputHash": "0b915e66"
+        }
+      }
+    },
+    "placeAsFloorDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfeffb93",
+          "outputHash": "1c5bd8b3"
+        }
+      }
+    },
+    "placeAsFloorGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eeaddc7f",
+          "outputHash": "c302b285"
+        }
+      }
+    },
+    "placeAsFloorListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a0cfab1",
+          "outputHash": "7c51637e"
+        }
+      }
+    },
+    "placeAsFloorUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e041302d",
+          "outputHash": "a0689734"
+        }
+      }
+    },
+    "placeAsRoomCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d1643cf",
+          "outputHash": "75a107ef"
+        }
+      }
+    },
+    "placeAsRoomCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d71f358",
+          "outputHash": "88261ed0"
+        }
+      }
+    },
+    "placeAsRoomDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5cba54a",
+          "outputHash": "fa5068d9"
+        }
+      }
+    },
+    "placeAsRoomGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d505e050",
+          "outputHash": "60f99174"
+        }
+      }
+    },
+    "placeAsRoomListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6791d296",
+          "outputHash": "861db475"
+        }
+      }
+    },
+    "placeAsRoomListCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4f86a54",
+          "outputHash": "529af2f0"
+        }
+      }
+    },
+    "placeAsRoomListCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc2e974a",
+          "outputHash": "6f03803f"
+        }
+      }
+    },
+    "placeAsRoomListCreateRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdb369aa",
+          "outputHash": "79173799"
+        }
+      }
+    },
+    "placeAsRoomListCreateWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a55cf6c8",
+          "outputHash": "eea348e6"
+        }
+      }
+    },
+    "placeAsRoomListDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d3513d9",
+          "outputHash": "bee6da9a"
+        }
+      }
+    },
+    "placeAsRoomListDeleteRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fa24928",
+          "outputHash": "9e2ddb72"
+        }
+      }
+    },
+    "placeAsRoomListDeleteWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f289cb2",
+          "outputHash": "f8f5b161"
+        }
+      }
+    },
+    "placeAsRoomListGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9652aa8d",
+          "outputHash": "a4288fc2"
+        }
+      }
+    },
+    "placeAsRoomListGetRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5549686b",
+          "outputHash": "7b845e6d"
+        }
+      }
+    },
+    "placeAsRoomListGetWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d78798b9",
+          "outputHash": "9ca38019"
+        }
+      }
+    },
+    "placeAsRoomListListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1f27146",
+          "outputHash": "3b48ba80"
+        }
+      }
+    },
+    "placeAsRoomListListRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f08bfa9",
+          "outputHash": "ce6131f9"
+        }
+      }
+    },
+    "placeAsRoomListListWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b25baf8c",
+          "outputHash": "9d3e1d0d"
+        }
+      }
+    },
+    "placeAsRoomListRoomCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e97f4201",
+          "outputHash": "b4fea571"
+        }
+      }
+    },
+    "placeAsRoomListRoomCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c44cceaa",
+          "outputHash": "609d4dbd"
+        }
+      }
+    },
+    "placeAsRoomListRoomDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b385ef4",
+          "outputHash": "148b5d6c"
+        }
+      }
+    },
+    "placeAsRoomListRoomGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abddaae3",
+          "outputHash": "d670e59b"
+        }
+      }
+    },
+    "placeAsRoomListRoomGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "645b4928",
+          "outputHash": "e5f54cbc"
+        }
+      }
+    },
+    "placeAsRoomListRoomListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8709ade4",
+          "outputHash": "85b80048"
+        }
+      }
+    },
+    "placeAsRoomListRoomUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0955ad70",
+          "outputHash": "c5539943"
+        }
+      }
+    },
+    "placeAsRoomListUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d92298c2",
+          "outputHash": "94665565"
+        }
+      }
+    },
+    "placeAsRoomListUpdateRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22fde7d5",
+          "outputHash": "6d9c1f3a"
+        }
+      }
+    },
+    "placeAsRoomListUpdateWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "323da143",
+          "outputHash": "b9a5f6d2"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "588fe476",
+          "outputHash": "35453823"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df51a9a3",
+          "outputHash": "64c992ce"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b9cac3d",
+          "outputHash": "507a28c3"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50c2027d",
+          "outputHash": "cc206ac6"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63b7fea5",
+          "outputHash": "e2d87b3c"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b508b60",
+          "outputHash": "fe102271"
+        }
+      }
+    },
+    "placeAsRoomListWorkspaceUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16908547",
+          "outputHash": "557f7444"
+        }
+      }
+    },
+    "placeAsRoomUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a8d503e",
+          "outputHash": "f7976f55"
+        }
+      }
+    },
+    "placeAsSectionCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e976ecd",
+          "outputHash": "d2c1bb0c"
+        }
+      }
+    },
+    "placeAsSectionCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aff0462b",
+          "outputHash": "17d3efd8"
+        }
+      }
+    },
+    "placeAsSectionDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1ef59b3",
+          "outputHash": "22d12957"
+        }
+      }
+    },
+    "placeAsSectionGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b8378f6",
+          "outputHash": "1bcf5602"
+        }
+      }
+    },
+    "placeAsSectionListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46dda2dd",
+          "outputHash": "c0f4f7d4"
+        }
+      }
+    },
+    "placeAsSectionUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6403d374",
+          "outputHash": "ead49e47"
+        }
+      }
+    },
+    "placeAsWorkspaceCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e9b36125",
+          "outputHash": "cad5d5a1"
+        }
+      }
+    },
+    "placeAsWorkspaceCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "909576c5",
+          "outputHash": "5f28839d"
+        }
+      }
+    },
+    "placeAsWorkspaceDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2ed317e",
+          "outputHash": "d93ad762"
+        }
+      }
+    },
+    "placeAsWorkspaceGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d22b5c35",
+          "outputHash": "592db55e"
+        }
+      }
+    },
+    "placeAsWorkspaceListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3ff6b13",
+          "outputHash": "954b487e"
+        }
+      }
+    },
+    "placeAsWorkspaceUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d61edd7",
+          "outputHash": "53723258"
+        }
+      }
+    },
+    "placeCheckInGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f04cc43",
+          "outputHash": "14a00b67"
+        }
+      }
+    },
+    "placeCreateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f91f56ec",
+          "outputHash": "90b33714"
+        }
+      }
+    },
+    "placeCreatePlace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c1f44ff",
+          "outputHash": "c2aff689"
+        }
+      }
+    },
+    "placeDeleteCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ea82264",
+          "outputHash": "3e046b53"
+        }
+      }
+    },
+    "placeDeletePlace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1eec9eec",
+          "outputHash": "95a5ff3d"
+        }
+      }
+    },
+    "placeDescendant": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75fe600e",
+          "outputHash": "713d9ecb"
+        }
+      }
+    },
+    "placeGetCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ee36bf3",
+          "outputHash": "fff4f030"
+        }
+      }
+    },
+    "placeGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5518e406",
+          "outputHash": "5618e48a"
+        }
+      }
+    },
+    "placeGetCountAsBuilding": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3831f9b",
+          "outputHash": "a6420348"
+        }
+      }
+    },
+    "placeGetCountAsDesk": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8faa51f",
+          "outputHash": "510e2840"
+        }
+      }
+    },
+    "placeGetCountAsFloor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3756429",
+          "outputHash": "bc9fd9f0"
+        }
+      }
+    },
+    "placeGetCountAsRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9bddf1e7",
+          "outputHash": "63b46e65"
+        }
+      }
+    },
+    "placeGetCountAsRoomList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65779064",
+          "outputHash": "2bfa6bd4"
+        }
+      }
+    },
+    "placeGetCountAsSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a79c1928",
+          "outputHash": "a0d32197"
+        }
+      }
+    },
+    "placeGetCountAsWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b353acb0",
+          "outputHash": "454537b8"
+        }
+      }
+    },
+    "placeGetPlaceAsBuilding": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1118bf4f",
+          "outputHash": "be62af07"
+        }
+      }
+    },
+    "placeGetPlaceAsDesk": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1aeb1388",
+          "outputHash": "84d3b75d"
+        }
+      }
+    },
+    "placeGetPlaceAsFloor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd2ae5c5",
+          "outputHash": "5edfc245"
+        }
+      }
+    },
+    "placeGetPlaceAsRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d61eaedd",
+          "outputHash": "1e5505ab"
+        }
+      }
+    },
+    "placeGetPlaceAsRoomList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f669a761",
+          "outputHash": "43bc6081"
+        }
+      }
+    },
+    "placeGetPlaceAsSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32d52d55",
+          "outputHash": "19c07ce5"
+        }
+      }
+    },
+    "placeGetPlaceAsWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be361648",
+          "outputHash": "7e7c644d"
+        }
+      }
+    },
+    "placeListCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d9a6767",
+          "outputHash": "84dafdc3"
+        }
+      }
+    },
+    "placeListPlaceAsBuilding": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92ac37e5",
+          "outputHash": "b4b3dfa6"
+        }
+      }
+    },
+    "placeListPlaceAsDesk": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1683a96b",
+          "outputHash": "5467bcc1"
+        }
+      }
+    },
+    "placeListPlaceAsFloor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a94ae509",
+          "outputHash": "94dac5ce"
+        }
+      }
+    },
+    "placeListPlaceAsRoom": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d2364f6",
+          "outputHash": "72f006e2"
+        }
+      }
+    },
+    "placeListPlaceAsRoomList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abd6083e",
+          "outputHash": "2cc41281"
+        }
+      }
+    },
+    "placeListPlaceAsSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f9d4ff5",
+          "outputHash": "afbaf35b"
+        }
+      }
+    },
+    "placeListPlaceAsWorkspace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "040a367a",
+          "outputHash": "bd21fcd6"
+        }
+      }
+    },
+    "placeUpdateCheckIn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8f42c2c",
+          "outputHash": "aebdb196"
+        }
+      }
+    },
+    "placeUpdatePlace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23caf839",
+          "outputHash": "a532fc8d"
+        }
+      }
+    },
+    "userCalendarAllowedCalendarSharingRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4db943f6",
+          "outputHash": "94df17d7"
+        }
+      }
+    },
+    "userCalendarAllowedCalendarSharingRole2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12b5c411",
+          "outputHash": "0a361fe9"
+        }
+      }
+    },
+    "userCalendarCalendarPermissionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ff2b450",
+          "outputHash": "ec7ecbcd"
+        }
+      }
+    },
+    "userCalendarCalendarPermissionGetCount2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d2fbc2b",
+          "outputHash": "37ed0b4a"
+        }
+      }
+    },
+    "userCalendarCalendarViewDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ee2ccf8",
+          "outputHash": "f78f525d"
+        }
+      }
+    },
+    "userCalendarCalendarViewDelta2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2acf8c07",
+          "outputHash": "ad720445"
+        }
+      }
+    },
+    "userCalendarCreateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f6e2855",
+          "outputHash": "e94f3797"
+        }
+      }
+    },
+    "userCalendarCreateCalendarPermission2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6111847f",
+          "outputHash": "c107976e"
+        }
+      }
+    },
+    "userCalendarCreateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c163b5a5",
+          "outputHash": "41f0a2b9"
+        }
+      }
+    },
+    "userCalendarCreateEvent2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e692af8",
+          "outputHash": "f3f40f53"
+        }
+      }
+    },
+    "userCalendarDeleteCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b508989e",
+          "outputHash": "7c780b55"
+        }
+      }
+    },
+    "userCalendarDeleteCalendarPermission2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ed758d3",
+          "outputHash": "9c10cab0"
+        }
+      }
+    },
+    "userCalendarDeleteEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71f1ff6e",
+          "outputHash": "a7723cae"
+        }
+      }
+    },
+    "userCalendarDeleteEvent2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f58d0aee",
+          "outputHash": "a58b2d61"
+        }
+      }
+    },
+    "userCalendarEventAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "517caf1a",
+          "outputHash": "6d265912"
+        }
+      }
+    },
+    "userCalendarEventAccept2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7837477e",
+          "outputHash": "7574edd3"
+        }
+      }
+    },
+    "userCalendarEventAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "851c1568",
+          "outputHash": "9f543025"
+        }
+      }
+    },
+    "userCalendarEventAttachmentCreateUploadSession2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa3f5a5b",
+          "outputHash": "9b9795bc"
+        }
+      }
+    },
+    "userCalendarEventAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "860a160c",
+          "outputHash": "22a8e612"
+        }
+      }
+    },
+    "userCalendarEventAttachmentGetCount2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e94b599a",
+          "outputHash": "b4659716"
+        }
+      }
+    },
+    "userCalendarEventCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d25dc57",
+          "outputHash": "f5539be2"
+        }
+      }
+    },
+    "userCalendarEventCancel2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "314e1043",
+          "outputHash": "45b5228f"
+        }
+      }
+    },
+    "userCalendarEventCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fb1c7e86",
+          "outputHash": "b3b67555"
+        }
+      }
+    },
+    "userCalendarEventCreateAttachment2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7bd5fe63",
+          "outputHash": "ff2778c3"
+        }
+      }
+    },
+    "userCalendarEventCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f45757c6",
+          "outputHash": "d60f521c"
+        }
+      }
+    },
+    "userCalendarEventCreateExtension2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6edf27aa",
+          "outputHash": "7b59dffe"
+        }
+      }
+    },
+    "userCalendarEventDecline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "729eae67",
+          "outputHash": "9f1c6c96"
+        }
+      }
+    },
+    "userCalendarEventDecline2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03ebedfb",
+          "outputHash": "c1b90f7a"
+        }
+      }
+    },
+    "userCalendarEventDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a787db1d",
+          "outputHash": "0778b135"
+        }
+      }
+    },
+    "userCalendarEventDeleteAttachment2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27ac2dcf",
+          "outputHash": "eab6f85a"
+        }
+      }
+    },
+    "userCalendarEventDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68979a2d",
+          "outputHash": "cc0b3850"
+        }
+      }
+    },
+    "userCalendarEventDeleteExtension2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "293d0fe4",
+          "outputHash": "bcbdd511"
+        }
+      }
+    },
+    "userCalendarEventDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e30ded6d",
+          "outputHash": "abc87579"
+        }
+      }
+    },
+    "userCalendarEventDelta2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cefe1ae8",
+          "outputHash": "28dbc7a4"
+        }
+      }
+    },
+    "userCalendarEventDismissReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5fedd234",
+          "outputHash": "38696cc5"
+        }
+      }
+    },
+    "userCalendarEventDismissReminder2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e975e3b5",
+          "outputHash": "63d8f1fc"
+        }
+      }
+    },
+    "userCalendarEventExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8744e8de",
+          "outputHash": "3752efc3"
+        }
+      }
+    },
+    "userCalendarEventExtensionGetCount2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "905418f1",
+          "outputHash": "be044048"
+        }
+      }
+    },
+    "userCalendarEventForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0be20e0",
+          "outputHash": "cffe1a32"
+        }
+      }
+    },
+    "userCalendarEventForward2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7a47901",
+          "outputHash": "24baf160"
+        }
+      }
+    },
+    "userCalendarEventGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56a6c68f",
+          "outputHash": "fcdeaec6"
+        }
+      }
+    },
+    "userCalendarEventGetAttachment2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f404ac09",
+          "outputHash": "00a6e654"
+        }
+      }
+    },
+    "userCalendarEventGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2d783bf",
+          "outputHash": "cd10caae"
+        }
+      }
+    },
+    "userCalendarEventGetCalendar2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dd0fe4a9",
+          "outputHash": "82909e37"
+        }
+      }
+    },
+    "userCalendarEventGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5086130",
+          "outputHash": "bda94e4e"
+        }
+      }
+    },
+    "userCalendarEventGetCount2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f49de37",
+          "outputHash": "c4ffaef0"
+        }
+      }
+    },
+    "userCalendarEventGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc369a5e",
+          "outputHash": "b93ac741"
+        }
+      }
+    },
+    "userCalendarEventGetExtension2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff68d64b",
+          "outputHash": "502a4045"
+        }
+      }
+    },
+    "userCalendarEventInstanceDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "edeb4ba3",
+          "outputHash": "1e95bdd6"
+        }
+      }
+    },
+    "userCalendarEventInstanceDelta2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e009178",
+          "outputHash": "7b2724e6"
+        }
+      }
+    },
+    "userCalendarEventListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d91b7564",
+          "outputHash": "9dd65b29"
+        }
+      }
+    },
+    "userCalendarEventListAttachment2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd0abf51",
+          "outputHash": "357a503b"
+        }
+      }
+    },
+    "userCalendarEventListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63b91fde",
+          "outputHash": "40f9ca6b"
+        }
+      }
+    },
+    "userCalendarEventListExtension2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a6de6ef",
+          "outputHash": "732f7195"
+        }
+      }
+    },
+    "userCalendarEventListInstance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "073a46d5",
+          "outputHash": "bc8e06a2"
+        }
+      }
+    },
+    "userCalendarEventListInstance2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12ac5f2d",
+          "outputHash": "4cfcc934"
+        }
+      }
+    },
+    "userCalendarEventPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c44f1198",
+          "outputHash": "0bfd7116"
+        }
+      }
+    },
+    "userCalendarEventPermanentDelete2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4018948e",
+          "outputHash": "4c1d7afa"
+        }
+      }
+    },
+    "userCalendarEventSnoozeReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4ff55c9",
+          "outputHash": "91017607"
+        }
+      }
+    },
+    "userCalendarEventSnoozeReminder2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "034da090",
+          "outputHash": "e3207acb"
+        }
+      }
+    },
+    "userCalendarEventTentativelyAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5441c12c",
+          "outputHash": "4abefe0a"
+        }
+      }
+    },
+    "userCalendarEventTentativelyAccept2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88a440b6",
+          "outputHash": "d4278408"
+        }
+      }
+    },
+    "userCalendarEventUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee6ce03f",
+          "outputHash": "e61b110c"
+        }
+      }
+    },
+    "userCalendarEventUpdateExtension2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "801fa974",
+          "outputHash": "128f1119"
+        }
+      }
+    },
+    "userCalendarGetCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf1b0882",
+          "outputHash": "66ded028"
+        }
+      }
+    },
+    "userCalendarGetCalendarPermission2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b059749",
+          "outputHash": "e3684ca9"
+        }
+      }
+    },
+    "userCalendarGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dabb58d",
+          "outputHash": "eddd0288"
+        }
+      }
+    },
+    "userCalendarGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aafe45b9",
+          "outputHash": "f20e3fdb"
+        }
+      }
+    },
+    "userCalendarGetEvent2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "257889d1",
+          "outputHash": "bd1ce5c6"
+        }
+      }
+    },
+    "userCalendarGetSchedule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5576d966",
+          "outputHash": "d85b1d95"
+        }
+      }
+    },
+    "userCalendarGetSchedule2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c24cf369",
+          "outputHash": "6ea10630"
+        }
+      }
+    },
+    "userCalendarGroupCalendarAllowedCalendarSharingRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c892eef",
+          "outputHash": "c95d0981"
+        }
+      }
+    },
+    "userCalendarGroupCalendarCalendarPermissionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22515df6",
+          "outputHash": "662f1d5b"
+        }
+      }
+    },
+    "userCalendarGroupCalendarCalendarViewDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9d4d0b2",
+          "outputHash": "d78a43e9"
+        }
+      }
+    },
+    "userCalendarGroupCalendarCreateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62f913aa",
+          "outputHash": "feb2951f"
+        }
+      }
+    },
+    "userCalendarGroupCalendarCreateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "246cc4ef",
+          "outputHash": "5ef2309a"
+        }
+      }
+    },
+    "userCalendarGroupCalendarDeleteCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45f2e3a6",
+          "outputHash": "5e948ea3"
+        }
+      }
+    },
+    "userCalendarGroupCalendarDeleteEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d56648dd",
+          "outputHash": "b98bcbde"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c292bdb",
+          "outputHash": "1c484fe8"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cbad8f2b",
+          "outputHash": "29aa6519"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e858233d",
+          "outputHash": "82976be0"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75285567",
+          "outputHash": "958dff72"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fae4719",
+          "outputHash": "d6462d53"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8870fc57",
+          "outputHash": "aea18222"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventDecline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29649b95",
+          "outputHash": "b3b41c80"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "398fcfe6",
+          "outputHash": "96a23d03"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14247b0d",
+          "outputHash": "4e0ab019"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65890c55",
+          "outputHash": "e9008bdc"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventDismissReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac48c8d5",
+          "outputHash": "0a4fa3fd"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22253e21",
+          "outputHash": "1b1f50e3"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5887a32b",
+          "outputHash": "da655ffa"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56bb2783",
+          "outputHash": "b87a09f3"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34e6532f",
+          "outputHash": "e3d32c32"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fc7731a",
+          "outputHash": "0d09b730"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75218056",
+          "outputHash": "449961f4"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventInstanceDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "47cd0b6a",
+          "outputHash": "05882ddf"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abee8232",
+          "outputHash": "6ec8f86d"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "577f010b",
+          "outputHash": "00576ca6"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventListInstance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee0817ef",
+          "outputHash": "fc98b1e6"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd565db7",
+          "outputHash": "d2debe3b"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventSnoozeReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a5366ee0",
+          "outputHash": "f688c016"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventTentativelyAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a778de68",
+          "outputHash": "d430cff2"
+        }
+      }
+    },
+    "userCalendarGroupCalendarEventUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c21ad6e",
+          "outputHash": "7508e7e0"
+        }
+      }
+    },
+    "userCalendarGroupCalendarGetCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a984f2c",
+          "outputHash": "542723db"
+        }
+      }
+    },
+    "userCalendarGroupCalendarGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "937b974d",
+          "outputHash": "9b4e8c0b"
+        }
+      }
+    },
+    "userCalendarGroupCalendarGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "779c621f",
+          "outputHash": "74b13072"
+        }
+      }
+    },
+    "userCalendarGroupCalendarGetSchedule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a78d00b",
+          "outputHash": "0cc4c120"
+        }
+      }
+    },
+    "userCalendarGroupCalendarListCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3e906a8",
+          "outputHash": "2e4edc52"
+        }
+      }
+    },
+    "userCalendarGroupCalendarListCalendarView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3e2386b",
+          "outputHash": "6322451e"
+        }
+      }
+    },
+    "userCalendarGroupCalendarListEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "579ea941",
+          "outputHash": "1765b4ad"
+        }
+      }
+    },
+    "userCalendarGroupCalendarPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50e1e7ca",
+          "outputHash": "a3b73b71"
+        }
+      }
+    },
+    "userCalendarGroupCalendarUpdateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f99c899a",
+          "outputHash": "3243696e"
+        }
+      }
+    },
+    "userCalendarGroupCalendarUpdateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "efa87d4d",
+          "outputHash": "623dcef1"
+        }
+      }
+    },
+    "userCalendarGroupCreateCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca998a35",
+          "outputHash": "590cc027"
+        }
+      }
+    },
+    "userCalendarGroupDeleteCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ec99bb2",
+          "outputHash": "688ef992"
+        }
+      }
+    },
+    "userCalendarGroupGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84d662c4",
+          "outputHash": "a8ba3cb0"
+        }
+      }
+    },
+    "userCalendarGroupGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8906c521",
+          "outputHash": "9fbe9efa"
+        }
+      }
+    },
+    "userCalendarGroupListCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b860b50c",
+          "outputHash": "59e0b7b5"
+        }
+      }
+    },
+    "userCalendarGroupUpdateCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "143e5b54",
+          "outputHash": "57a92576"
+        }
+      }
+    },
+    "userCalendarListCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "622a8ba3",
+          "outputHash": "8b8fc5ad"
+        }
+      }
+    },
+    "userCalendarListCalendarPermission2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "480f22c8",
+          "outputHash": "3066f58a"
+        }
+      }
+    },
+    "userCalendarListCalendarView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c639146b",
+          "outputHash": "ee23001d"
+        }
+      }
+    },
+    "userCalendarListCalendarView2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d94d77c",
+          "outputHash": "4bb22e93"
+        }
+      }
+    },
+    "userCalendarListEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1c59dc7",
+          "outputHash": "cbc02d4a"
+        }
+      }
+    },
+    "userCalendarListEvent2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63f4ab12",
+          "outputHash": "d160f928"
+        }
+      }
+    },
+    "userCalendarPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b395555",
+          "outputHash": "cc2e2b87"
+        }
+      }
+    },
+    "userCalendarPermanentDelete2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52e5f212",
+          "outputHash": "5526d539"
+        }
+      }
+    },
+    "userCalendarUpdateCalendarPermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ba97c9c",
+          "outputHash": "807615e7"
+        }
+      }
+    },
+    "userCalendarUpdateCalendarPermission2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e91b2ea",
+          "outputHash": "0df58c04"
+        }
+      }
+    },
+    "userCalendarUpdateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22ef1f4a",
+          "outputHash": "ab1b8a49"
+        }
+      }
+    },
+    "userCalendarUpdateEvent2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9de0a777",
+          "outputHash": "30784643"
+        }
+      }
+    },
+    "userCalendarViewDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79cfd422",
+          "outputHash": "4ab12936"
+        }
+      }
+    },
+    "userContactCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50c308ca",
+          "outputHash": "a429bd6c"
+        }
+      }
+    },
+    "userContactDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92db1b42",
+          "outputHash": "efcc5987"
+        }
+      }
+    },
+    "userContactDeletePhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3f1bd00",
+          "outputHash": "ba8615cf"
+        }
+      }
+    },
+    "userContactDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c401493",
+          "outputHash": "f5328a49"
+        }
+      }
+    },
+    "userContactExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84a4e185",
+          "outputHash": "51270115"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70e3921c",
+          "outputHash": "350bb214"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c72dbaa",
+          "outputHash": "ac9a661a"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactDeletePhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0aa18f59",
+          "outputHash": "005df030"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "44fe78b7",
+          "outputHash": "964f114e"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9fa3e1f5",
+          "outputHash": "9775f39c"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cab6dd40",
+          "outputHash": "7e75c662"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc55e682",
+          "outputHash": "8c2d55f6"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactGetPhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e7f2fd7",
+          "outputHash": "64acb956"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactGetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e620d8c7",
+          "outputHash": "241bfc37"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d2b8125",
+          "outputHash": "dc364cd8"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "379f88b8",
+          "outputHash": "3b601230"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactSetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59bc0a0e",
+          "outputHash": "2ad2b289"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb8a2bf2",
+          "outputHash": "76c160ff"
+        }
+      }
+    },
+    "userContactFolderChildFolderContactUpdatePhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae1c5194",
+          "outputHash": "b6ccbaef"
+        }
+      }
+    },
+    "userContactFolderChildFolderCreateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "450a57e8",
+          "outputHash": "a0261675"
+        }
+      }
+    },
+    "userContactFolderChildFolderDeleteContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "96530951",
+          "outputHash": "821a22c0"
+        }
+      }
+    },
+    "userContactFolderChildFolderDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "868a79f8",
+          "outputHash": "e6af6dca"
+        }
+      }
+    },
+    "userContactFolderChildFolderGetContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4eadd4e8",
+          "outputHash": "49d4090a"
+        }
+      }
+    },
+    "userContactFolderChildFolderGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae4686ee",
+          "outputHash": "fdc9147f"
+        }
+      }
+    },
+    "userContactFolderChildFolderListContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c8264bd",
+          "outputHash": "f3c0d345"
+        }
+      }
+    },
+    "userContactFolderChildFolderPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "505c79d0",
+          "outputHash": "b8441af9"
+        }
+      }
+    },
+    "userContactFolderChildFolderUpdateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6cd871a9",
+          "outputHash": "13566446"
+        }
+      }
+    },
+    "userContactFolderContactCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8897e68",
+          "outputHash": "b95aee5d"
+        }
+      }
+    },
+    "userContactFolderContactDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36e1433d",
+          "outputHash": "0ee89192"
+        }
+      }
+    },
+    "userContactFolderContactDeletePhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2edbf664",
+          "outputHash": "ee22ccaf"
+        }
+      }
+    },
+    "userContactFolderContactDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfc11040",
+          "outputHash": "556d29f6"
+        }
+      }
+    },
+    "userContactFolderContactExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67768d8d",
+          "outputHash": "411299e7"
+        }
+      }
+    },
+    "userContactFolderContactGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1262c66e",
+          "outputHash": "2329dfec"
+        }
+      }
+    },
+    "userContactFolderContactGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "833a61fd",
+          "outputHash": "98037146"
+        }
+      }
+    },
+    "userContactFolderContactGetPhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4ab1c1f",
+          "outputHash": "51dbb38f"
+        }
+      }
+    },
+    "userContactFolderContactGetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8a52e6b",
+          "outputHash": "7802e74f"
+        }
+      }
+    },
+    "userContactFolderContactListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f975f25e",
+          "outputHash": "e9afdadf"
+        }
+      }
+    },
+    "userContactFolderContactPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c27288b",
+          "outputHash": "f2e6bcce"
+        }
+      }
+    },
+    "userContactFolderContactSetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8c5f11b",
+          "outputHash": "9fe688ee"
+        }
+      }
+    },
+    "userContactFolderContactUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0caf68a9",
+          "outputHash": "7b0cf207"
+        }
+      }
+    },
+    "userContactFolderContactUpdatePhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acf49db2",
+          "outputHash": "6d78e7f5"
+        }
+      }
+    },
+    "userContactFolderCreateChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79acb210",
+          "outputHash": "e0a75917"
+        }
+      }
+    },
+    "userContactFolderCreateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dae15e37",
+          "outputHash": "75cd6a7d"
+        }
+      }
+    },
+    "userContactFolderDeleteChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f546404",
+          "outputHash": "f9707980"
+        }
+      }
+    },
+    "userContactFolderDeleteContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2dc125c1",
+          "outputHash": "32ca22e3"
+        }
+      }
+    },
+    "userContactFolderDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "040c5187",
+          "outputHash": "a6c67a81"
+        }
+      }
+    },
+    "userContactFolderGetChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d29e330b",
+          "outputHash": "9a51ff8a"
+        }
+      }
+    },
+    "userContactFolderGetContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c949a2a5",
+          "outputHash": "5ea8d83a"
+        }
+      }
+    },
+    "userContactFolderGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f7edff4",
+          "outputHash": "f004ec13"
+        }
+      }
+    },
+    "userContactFolderListChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d719950",
+          "outputHash": "1ebe36b5"
+        }
+      }
+    },
+    "userContactFolderListContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bd60bc3",
+          "outputHash": "9ba2809b"
+        }
+      }
+    },
+    "userContactFolderPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46ed8999",
+          "outputHash": "25c25ebc"
+        }
+      }
+    },
+    "userContactFolderUpdateChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11bd7508",
+          "outputHash": "487f5e56"
+        }
+      }
+    },
+    "userContactFolderUpdateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2ee9e2e",
+          "outputHash": "5e152492"
+        }
+      }
+    },
+    "userContactGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d1f6807",
+          "outputHash": "698c11cd"
+        }
+      }
+    },
+    "userContactGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "def42c84",
+          "outputHash": "60854d6c"
+        }
+      }
+    },
+    "userContactGetPhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb5a9b1f",
+          "outputHash": "d4306e3c"
+        }
+      }
+    },
+    "userContactGetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "947e15bd",
+          "outputHash": "e9a04098"
+        }
+      }
+    },
+    "userContactListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c68a08e",
+          "outputHash": "60bec7db"
+        }
+      }
+    },
+    "userContactPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7a2c3c3",
+          "outputHash": "ca78e3aa"
+        }
+      }
+    },
+    "userContactSetPhotoContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f78b4530",
+          "outputHash": "76f18a56"
+        }
+      }
+    },
+    "userContactUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6eb4646",
+          "outputHash": "d9a71297"
+        }
+      }
+    },
+    "userContactUpdatePhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ffb9e632",
+          "outputHash": "35f67ebb"
+        }
+      }
+    },
+    "userCreateCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b20c3466",
+          "outputHash": "a9100809"
+        }
+      }
+    },
+    "userCreateCalendarGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "695b8cc5",
+          "outputHash": "f3352dc2"
+        }
+      }
+    },
+    "userCreateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e2dde7e",
+          "outputHash": "a1c409f1"
+        }
+      }
+    },
+    "userCreateContactFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f74b2de7",
+          "outputHash": "0cc7b59c"
+        }
+      }
+    },
+    "userCreateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c23af513",
+          "outputHash": "ef054281"
+        }
+      }
+    },
+    "userCreateMailFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75b39651",
+          "outputHash": "975e3f00"
+        }
+      }
+    },
+    "userCreateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79c90293",
+          "outputHash": "17d9b7c0"
+        }
+      }
+    },
+    "userDeleteCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7fe6304d",
+          "outputHash": "e4c8b400"
+        }
+      }
+    },
+    "userDeleteCalendarGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48c6c24c",
+          "outputHash": "7319cd00"
+        }
+      }
+    },
+    "userDeleteContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbc085d9",
+          "outputHash": "8760524f"
+        }
+      }
+    },
+    "userDeleteContactFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f7b0fba",
+          "outputHash": "1c08ddd3"
+        }
+      }
+    },
+    "userDeleteEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f7d32a2",
+          "outputHash": "ca92a6c4"
+        }
+      }
+    },
+    "userDeleteMailFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b55a540",
+          "outputHash": "3fab6053"
+        }
+      }
+    },
+    "userDeleteMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24754696",
+          "outputHash": "b776d975"
+        }
+      }
+    },
+    "userDeleteMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1570f40c",
+          "outputHash": "496f5328"
+        }
+      }
+    },
+    "userEventAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f73e9d2",
+          "outputHash": "212bd349"
+        }
+      }
+    },
+    "userEventAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab7b5567",
+          "outputHash": "5eab5798"
+        }
+      }
+    },
+    "userEventAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8c405be",
+          "outputHash": "2091679f"
+        }
+      }
+    },
+    "userEventCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80118fa8",
+          "outputHash": "895bbb31"
+        }
+      }
+    },
+    "userEventCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce348986",
+          "outputHash": "f8a47521"
+        }
+      }
+    },
+    "userEventCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d94a8be",
+          "outputHash": "e5f348e9"
+        }
+      }
+    },
+    "userEventDecline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d0cf5f2",
+          "outputHash": "db0a065b"
+        }
+      }
+    },
+    "userEventDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1263a979",
+          "outputHash": "287100e8"
+        }
+      }
+    },
+    "userEventDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a435778",
+          "outputHash": "6d05686a"
+        }
+      }
+    },
+    "userEventDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3de1db34",
+          "outputHash": "9c812945"
+        }
+      }
+    },
+    "userEventDismissReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1dacd33",
+          "outputHash": "16294cea"
+        }
+      }
+    },
+    "userEventExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62c1fade",
+          "outputHash": "5112b10a"
+        }
+      }
+    },
+    "userEventForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b6b2239",
+          "outputHash": "aee235fa"
+        }
+      }
+    },
+    "userEventGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a374c55e",
+          "outputHash": "467f929d"
+        }
+      }
+    },
+    "userEventGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1724cf1",
+          "outputHash": "42b4a4e3"
+        }
+      }
+    },
+    "userEventGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5313f34",
+          "outputHash": "f1a98089"
+        }
+      }
+    },
+    "userEventGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13a32468",
+          "outputHash": "3a13c6cf"
+        }
+      }
+    },
+    "userEventInstanceDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59039ded",
+          "outputHash": "663a3973"
+        }
+      }
+    },
+    "userEventListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5eb9aaba",
+          "outputHash": "f6aea3b7"
+        }
+      }
+    },
+    "userEventListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "895e3502",
+          "outputHash": "0c13efb0"
+        }
+      }
+    },
+    "userEventListInstance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eab08fef",
+          "outputHash": "43799131"
+        }
+      }
+    },
+    "userEventPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "702f3aee",
+          "outputHash": "04f43515"
+        }
+      }
+    },
+    "userEventSnoozeReminder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5bf6a67b",
+          "outputHash": "76ea8ee6"
+        }
+      }
+    },
+    "userEventTentativelyAccept": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d79e923",
+          "outputHash": "fd99042d"
+        }
+      }
+    },
+    "userEventUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14716521",
+          "outputHash": "10e423cd"
+        }
+      }
+    },
+    "userGetCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "47a91c8d",
+          "outputHash": "3572c51e"
+        }
+      }
+    },
+    "userGetCalendar2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbfa1c0d",
+          "outputHash": "eae998d7"
+        }
+      }
+    },
+    "userGetCalendarGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ada012ec",
+          "outputHash": "017c012c"
+        }
+      }
+    },
+    "userGetContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "823a6d5a",
+          "outputHash": "f1d8e3b7"
+        }
+      }
+    },
+    "userGetContactFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24c99ce5",
+          "outputHash": "af0b15df"
+        }
+      }
+    },
+    "userGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dfdd130",
+          "outputHash": "eb531e37"
+        }
+      }
+    },
+    "userGetInferenceClassification": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "51cc746a",
+          "outputHash": "3a917c38"
+        }
+      }
+    },
+    "userGetMailFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb098109",
+          "outputHash": "e1968f7d"
+        }
+      }
+    },
+    "userGetMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9ad5541",
+          "outputHash": "acc10d82"
+        }
+      }
+    },
+    "userGetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d780a27a",
+          "outputHash": "dd3fcab7"
+        }
+      }
+    },
+    "userInferenceClassificationCreateOverride": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7bf190ba",
+          "outputHash": "7eca7c26"
+        }
+      }
+    },
+    "userInferenceClassificationDeleteOverride": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "47ee431a",
+          "outputHash": "60da733a"
+        }
+      }
+    },
+    "userInferenceClassificationGetOverride": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a9a3135",
+          "outputHash": "aa29f365"
+        }
+      }
+    },
+    "userInferenceClassificationListOverride": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7494b159",
+          "outputHash": "0d4a7ca3"
+        }
+      }
+    },
+    "userInferenceClassificationOverrideGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fad1a504",
+          "outputHash": "f8db7fbc"
+        }
+      }
+    },
+    "userInferenceClassificationUpdateOverride": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ed12324",
+          "outputHash": "7a4ed858"
+        }
+      }
+    },
+    "userListCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77a523ce",
+          "outputHash": "fb54d6e9"
+        }
+      }
+    },
+    "userListCalendarGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0cf39b4e",
+          "outputHash": "bd08b240"
+        }
+      }
+    },
+    "userListCalendarView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48ada088",
+          "outputHash": "9d54a3b1"
+        }
+      }
+    },
+    "userListContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae1b1fa4",
+          "outputHash": "8581d5ef"
+        }
+      }
+    },
+    "userListContactFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fcac68b",
+          "outputHash": "d451716d"
+        }
+      }
+    },
+    "userListEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "135c04bf",
+          "outputHash": "9b52b511"
+        }
+      }
+    },
+    "userListMailFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13e18d79",
+          "outputHash": "2867891c"
+        }
+      }
+    },
+    "userListMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b894a0d7",
+          "outputHash": "7ef9f479"
+        }
+      }
+    },
+    "userMailFolderChildFolderCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6dd12b21",
+          "outputHash": "85d6c257"
+        }
+      }
+    },
+    "userMailFolderChildFolderCreateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3fe17bf7",
+          "outputHash": "0a9aaf30"
+        }
+      }
+    },
+    "userMailFolderChildFolderCreateMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e7f2cad",
+          "outputHash": "2437eaa2"
+        }
+      }
+    },
+    "userMailFolderChildFolderDeleteMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "457f17ac",
+          "outputHash": "0b022841"
+        }
+      }
+    },
+    "userMailFolderChildFolderDeleteMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "520657a4",
+          "outputHash": "d02dcd03"
+        }
+      }
+    },
+    "userMailFolderChildFolderDeleteMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbc359cd",
+          "outputHash": "1e5bdb5b"
+        }
+      }
+    },
+    "userMailFolderChildFolderDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f57d9561",
+          "outputHash": "f2472c34"
+        }
+      }
+    },
+    "userMailFolderChildFolderGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "205ac710",
+          "outputHash": "eeb83e56"
+        }
+      }
+    },
+    "userMailFolderChildFolderGetMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecf5bea2",
+          "outputHash": "a8af5a8f"
+        }
+      }
+    },
+    "userMailFolderChildFolderGetMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66b01647",
+          "outputHash": "3bce70a7"
+        }
+      }
+    },
+    "userMailFolderChildFolderGetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4af4ba34",
+          "outputHash": "14e0ece7"
+        }
+      }
+    },
+    "userMailFolderChildFolderListMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7de7e01a",
+          "outputHash": "573a1b9c"
+        }
+      }
+    },
+    "userMailFolderChildFolderListMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c434e53",
+          "outputHash": "5b01e144"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bede1ec8",
+          "outputHash": "dc678ec7"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b92ae37",
+          "outputHash": "823fb3a8"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "061d2f47",
+          "outputHash": "aebb0ac0"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00229390",
+          "outputHash": "e6a50d66"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3e7ac8b",
+          "outputHash": "aaba325c"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCreateForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b91f4cff",
+          "outputHash": "eef1b408"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCreateReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba32a758",
+          "outputHash": "761f8029"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageCreateReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecad6afa",
+          "outputHash": "4731a70d"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "956e7ece",
+          "outputHash": "cdbf0b7e"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "971258f2",
+          "outputHash": "097c5591"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04d9a52e",
+          "outputHash": "8108402e"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84d45185",
+          "outputHash": "49426cd4"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cdc06c67",
+          "outputHash": "34130698"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66835584",
+          "outputHash": "3ec4449e"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7909a8da",
+          "outputHash": "88a8e1a6"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "214c4d2a",
+          "outputHash": "5828445d"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d046ebf",
+          "outputHash": "06c28421"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5317d7c6",
+          "outputHash": "54042133"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "921277f5",
+          "outputHash": "ceb79b91"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessagePermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f74a6f3c",
+          "outputHash": "f9338ec2"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9ed204f",
+          "outputHash": "ceef7f27"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5dceb011",
+          "outputHash": "2de82cc7"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageRuleGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c04394cf",
+          "outputHash": "e3cc58d0"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "18f1c1d2",
+          "outputHash": "adade83d"
+        }
+      }
+    },
+    "userMailFolderChildFolderMessageUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c99195c3",
+          "outputHash": "b6deade2"
+        }
+      }
+    },
+    "userMailFolderChildFolderMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81b51df3",
+          "outputHash": "964ee836"
+        }
+      }
+    },
+    "userMailFolderChildFolderPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bef9cd30",
+          "outputHash": "a73f71a5"
+        }
+      }
+    },
+    "userMailFolderChildFolderSetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cef0e787",
+          "outputHash": "563eaa57"
+        }
+      }
+    },
+    "userMailFolderChildFolderUpdateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0493c68",
+          "outputHash": "5c3b0ba9"
+        }
+      }
+    },
+    "userMailFolderChildFolderUpdateMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "729ac169",
+          "outputHash": "083b1221"
+        }
+      }
+    },
+    "userMailFolderCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbd36ba1",
+          "outputHash": "1e5c516e"
+        }
+      }
+    },
+    "userMailFolderCreateChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b67d1288",
+          "outputHash": "eea87b0f"
+        }
+      }
+    },
+    "userMailFolderCreateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37acf96a",
+          "outputHash": "4a252ceb"
+        }
+      }
+    },
+    "userMailFolderCreateMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03c33580",
+          "outputHash": "43c29847"
+        }
+      }
+    },
+    "userMailFolderDeleteChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f9c2cf5",
+          "outputHash": "e667aa65"
+        }
+      }
+    },
+    "userMailFolderDeleteMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e73b565",
+          "outputHash": "be552336"
+        }
+      }
+    },
+    "userMailFolderDeleteMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb5495ca",
+          "outputHash": "941125fd"
+        }
+      }
+    },
+    "userMailFolderDeleteMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05346262",
+          "outputHash": "c467ea1e"
+        }
+      }
+    },
+    "userMailFolderDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d585426",
+          "outputHash": "06c73823"
+        }
+      }
+    },
+    "userMailFolderGetChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ef6d200",
+          "outputHash": "628134e4"
+        }
+      }
+    },
+    "userMailFolderGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4566ea3",
+          "outputHash": "85f2eaa6"
+        }
+      }
+    },
+    "userMailFolderGetMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ec6cc3c",
+          "outputHash": "f07db852"
+        }
+      }
+    },
+    "userMailFolderGetMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea39ce64",
+          "outputHash": "d2e3a20f"
+        }
+      }
+    },
+    "userMailFolderGetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd0e2704",
+          "outputHash": "9605575f"
+        }
+      }
+    },
+    "userMailFolderListChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad2b791e",
+          "outputHash": "9281d9d9"
+        }
+      }
+    },
+    "userMailFolderListMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b29a7cf",
+          "outputHash": "c13dbf02"
+        }
+      }
+    },
+    "userMailFolderListMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68e1c670",
+          "outputHash": "6a0b8c83"
+        }
+      }
+    },
+    "userMailFolderMessageAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "014b151f",
+          "outputHash": "d1462df3"
+        }
+      }
+    },
+    "userMailFolderMessageAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e03d2e2",
+          "outputHash": "ce0c00e0"
+        }
+      }
+    },
+    "userMailFolderMessageCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c596b7d6",
+          "outputHash": "21612143"
+        }
+      }
+    },
+    "userMailFolderMessageCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81579a34",
+          "outputHash": "9da09a1c"
+        }
+      }
+    },
+    "userMailFolderMessageCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfda2087",
+          "outputHash": "8a19962e"
+        }
+      }
+    },
+    "userMailFolderMessageCreateForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f001d865",
+          "outputHash": "b1db9181"
+        }
+      }
+    },
+    "userMailFolderMessageCreateReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a4a98d3",
+          "outputHash": "92310cf3"
+        }
+      }
+    },
+    "userMailFolderMessageCreateReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "732ea487",
+          "outputHash": "703296de"
+        }
+      }
+    },
+    "userMailFolderMessageDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ad2eac2",
+          "outputHash": "7c4bb0d3"
+        }
+      }
+    },
+    "userMailFolderMessageDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0afde33a",
+          "outputHash": "8aae3320"
+        }
+      }
+    },
+    "userMailFolderMessageDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3254846",
+          "outputHash": "9955ea31"
+        }
+      }
+    },
+    "userMailFolderMessageExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8868e1ea",
+          "outputHash": "041ecfb1"
+        }
+      }
+    },
+    "userMailFolderMessageForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2422d988",
+          "outputHash": "29a90170"
+        }
+      }
+    },
+    "userMailFolderMessageGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f1394dc",
+          "outputHash": "97a5acbf"
+        }
+      }
+    },
+    "userMailFolderMessageGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d84f99a7",
+          "outputHash": "6a0d0cf3"
+        }
+      }
+    },
+    "userMailFolderMessageGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ebf7fbc",
+          "outputHash": "65441cde"
+        }
+      }
+    },
+    "userMailFolderMessageListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8578850",
+          "outputHash": "fea166d7"
+        }
+      }
+    },
+    "userMailFolderMessageListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4ba6e9a",
+          "outputHash": "c97dc04a"
+        }
+      }
+    },
+    "userMailFolderMessageMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0875503d",
+          "outputHash": "0657c08b"
+        }
+      }
+    },
+    "userMailFolderMessagePermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e71002fe",
+          "outputHash": "3d192ef7"
+        }
+      }
+    },
+    "userMailFolderMessageReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63667a67",
+          "outputHash": "d3b44734"
+        }
+      }
+    },
+    "userMailFolderMessageReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32d25e65",
+          "outputHash": "dd89fc37"
+        }
+      }
+    },
+    "userMailFolderMessageRuleGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3702c2fd",
+          "outputHash": "112562e0"
+        }
+      }
+    },
+    "userMailFolderMessageSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11023120",
+          "outputHash": "db3b9454"
+        }
+      }
+    },
+    "userMailFolderMessageUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "962a419c",
+          "outputHash": "4836e3b4"
+        }
+      }
+    },
+    "userMailFolderMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "883b3762",
+          "outputHash": "e25cfa03"
+        }
+      }
+    },
+    "userMailFolderPermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbfa9bbd",
+          "outputHash": "eff407b6"
+        }
+      }
+    },
+    "userMailFolderSetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a1d93d2",
+          "outputHash": "b61ecde8"
+        }
+      }
+    },
+    "userMailFolderUpdateChildFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15152c0e",
+          "outputHash": "ff405265"
+        }
+      }
+    },
+    "userMailFolderUpdateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72544116",
+          "outputHash": "69feae30"
+        }
+      }
+    },
+    "userMailFolderUpdateMessageRule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef902b27",
+          "outputHash": "08a7df9e"
+        }
+      }
+    },
+    "userMessageAttachmentCreateUploadSession": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c40aa03b",
+          "outputHash": "de85d662"
+        }
+      }
+    },
+    "userMessageAttachmentGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4facdf4f",
+          "outputHash": "9ec3d083"
+        }
+      }
+    },
+    "userMessageCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "424f6ea7",
+          "outputHash": "24274da1"
+        }
+      }
+    },
+    "userMessageCreateAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b714f270",
+          "outputHash": "308483f5"
+        }
+      }
+    },
+    "userMessageCreateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a8f4f21",
+          "outputHash": "106490ac"
+        }
+      }
+    },
+    "userMessageCreateForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6989a7da",
+          "outputHash": "fae63215"
+        }
+      }
+    },
+    "userMessageCreateReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86b1f12c",
+          "outputHash": "5af20aff"
+        }
+      }
+    },
+    "userMessageCreateReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fa9a2a3",
+          "outputHash": "79154c08"
+        }
+      }
+    },
+    "userMessageDeleteAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b0d93b6",
+          "outputHash": "6c25c555"
+        }
+      }
+    },
+    "userMessageDeleteExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "091fa737",
+          "outputHash": "af0543ff"
+        }
+      }
+    },
+    "userMessageDelta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f494417",
+          "outputHash": "63bff8d5"
+        }
+      }
+    },
+    "userMessageExtensionGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c7009ba",
+          "outputHash": "4784a554"
+        }
+      }
+    },
+    "userMessageForward": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e04d34f",
+          "outputHash": "2b901fc8"
+        }
+      }
+    },
+    "userMessageGetAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8ebfd05",
+          "outputHash": "60560c87"
+        }
+      }
+    },
+    "userMessageGetCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdfa2395",
+          "outputHash": "cbd9f91c"
+        }
+      }
+    },
+    "userMessageGetExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9cb23ea",
+          "outputHash": "e5b30bb5"
+        }
+      }
+    },
+    "userMessageListAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0e3906d2",
+          "outputHash": "23fdbf44"
+        }
+      }
+    },
+    "userMessageListExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "398fc086",
+          "outputHash": "01c5f502"
+        }
+      }
+    },
+    "userMessageMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ad2c1f5",
+          "outputHash": "d0ce1673"
+        }
+      }
+    },
+    "userMessagePermanentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fce0846e",
+          "outputHash": "460e5a69"
+        }
+      }
+    },
+    "userMessageReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da157ac6",
+          "outputHash": "f0a53e55"
+        }
+      }
+    },
+    "userMessageReplyAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "312ced0b",
+          "outputHash": "39d219e4"
+        }
+      }
+    },
+    "userMessageSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8fd21c6c",
+          "outputHash": "862c6930"
+        }
+      }
+    },
+    "userMessageUpdateExtension": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01d1b307",
+          "outputHash": "aa0e8080"
+        }
+      }
+    },
+    "userSendMail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d961366b",
+          "outputHash": "c02c5c9f"
+        }
+      }
+    },
+    "userSetMessagesContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "727e1e2f",
+          "outputHash": "34b68684"
+        }
+      }
+    },
+    "userUpdateCalendar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02e6a278",
+          "outputHash": "8b7f3313"
+        }
+      }
+    },
+    "userUpdateCalendar2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e62e3281",
+          "outputHash": "29198bbb"
+        }
+      }
+    },
+    "userUpdateCalendarGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "401fea70",
+          "outputHash": "2f733d0a"
+        }
+      }
+    },
+    "userUpdateContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a944677d",
+          "outputHash": "be7b22b1"
+        }
+      }
+    },
+    "userUpdateContactFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7deb2de2",
+          "outputHash": "229d2ffe"
+        }
+      }
+    },
+    "userUpdateEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9872593",
+          "outputHash": "9e6d75bd"
+        }
+      }
+    },
+    "userUpdateInferenceClassification": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "55dc9b21",
+          "outputHash": "e73b5bb8"
+        }
+      }
+    },
+    "userUpdateMailFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48526caf",
+          "outputHash": "d43b10dd"
+        }
+      }
+    },
+    "userUpdateMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9cbba0ef",
+          "outputHash": "456e3a84"
+        }
+      }
+    }
+  }
+}

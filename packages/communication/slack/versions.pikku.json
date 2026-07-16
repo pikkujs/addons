@@ -1,0 +1,1571 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "adminAppsApprove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98c06f5c",
+          "outputHash": "6b69565b"
+        }
+      }
+    },
+    "adminAppsApprovedList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5dfc07e3",
+          "outputHash": "a7774ea3"
+        }
+      }
+    },
+    "adminAppsRequestsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8fbaa05",
+          "outputHash": "ac7dedab"
+        }
+      }
+    },
+    "adminAppsRestrict": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8eb122c3",
+          "outputHash": "90e183ff"
+        }
+      }
+    },
+    "adminAppsRestrictedList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "388652ce",
+          "outputHash": "f5625e19"
+        }
+      }
+    },
+    "adminConversationsArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52883018",
+          "outputHash": "8d4dc70b"
+        }
+      }
+    },
+    "adminConversationsConvertToPrivate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c1202f4",
+          "outputHash": "631c1920"
+        }
+      }
+    },
+    "adminConversationsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4115620",
+          "outputHash": "d1945f79"
+        }
+      }
+    },
+    "adminConversationsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7791c720",
+          "outputHash": "db81a7cc"
+        }
+      }
+    },
+    "adminConversationsDisconnectShared": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d055672f",
+          "outputHash": "11f943d9"
+        }
+      }
+    },
+    "adminConversationsEkmListOriginalConnectedChannelInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "87dec440",
+          "outputHash": "7db412b2"
+        }
+      }
+    },
+    "adminConversationsGetConversationPrefs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab81771b",
+          "outputHash": "d224bcdf"
+        }
+      }
+    },
+    "adminConversationsGetTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "145e610e",
+          "outputHash": "9c90fefe"
+        }
+      }
+    },
+    "adminConversationsInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b67af25",
+          "outputHash": "7a64c666"
+        }
+      }
+    },
+    "adminConversationsRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98d51e38",
+          "outputHash": "4c7c4e08"
+        }
+      }
+    },
+    "adminConversationsRestrictAccessAddGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6205f2ef",
+          "outputHash": "06cd27d6"
+        }
+      }
+    },
+    "adminConversationsRestrictAccessListGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da4d573f",
+          "outputHash": "955a236d"
+        }
+      }
+    },
+    "adminConversationsRestrictAccessRemoveGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77a4c8a8",
+          "outputHash": "887cd8d4"
+        }
+      }
+    },
+    "adminConversationsSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60999539",
+          "outputHash": "298733a4"
+        }
+      }
+    },
+    "adminConversationsSetConversationPrefs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ee59c79",
+          "outputHash": "054e5ee1"
+        }
+      }
+    },
+    "adminConversationsSetTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4907cc70",
+          "outputHash": "5725b160"
+        }
+      }
+    },
+    "adminConversationsUnarchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2603fb99",
+          "outputHash": "4cd8c393"
+        }
+      }
+    },
+    "adminEmojiAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8df0ebf7",
+          "outputHash": "c08b0fb8"
+        }
+      }
+    },
+    "adminEmojiAddAlias": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a72cd29",
+          "outputHash": "afbcf1e4"
+        }
+      }
+    },
+    "adminEmojiList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c753103",
+          "outputHash": "0a8867ae"
+        }
+      }
+    },
+    "adminEmojiRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70447d9f",
+          "outputHash": "590bef5d"
+        }
+      }
+    },
+    "adminEmojiRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2a79ee3",
+          "outputHash": "ca4b833f"
+        }
+      }
+    },
+    "adminInviteRequestsApprove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d36c8b81",
+          "outputHash": "db2721f4"
+        }
+      }
+    },
+    "adminInviteRequestsApprovedList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0539fcc",
+          "outputHash": "9168a3d2"
+        }
+      }
+    },
+    "adminInviteRequestsDeniedList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8fc8877b",
+          "outputHash": "8df2f9ba"
+        }
+      }
+    },
+    "adminInviteRequestsDeny": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de5a70d0",
+          "outputHash": "2d30c16a"
+        }
+      }
+    },
+    "adminInviteRequestsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f0420c0",
+          "outputHash": "6f593420"
+        }
+      }
+    },
+    "adminTeamsAdminsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2281863e",
+          "outputHash": "45bcbaa3"
+        }
+      }
+    },
+    "adminTeamsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34a71c25",
+          "outputHash": "8901da2a"
+        }
+      }
+    },
+    "adminTeamsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7167417",
+          "outputHash": "82877dc8"
+        }
+      }
+    },
+    "adminTeamsOwnersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbe92b2c",
+          "outputHash": "c24124ee"
+        }
+      }
+    },
+    "adminTeamsSettingsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba3d2f01",
+          "outputHash": "043ffdfd"
+        }
+      }
+    },
+    "adminTeamsSettingsSetDefaultChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04b6bee2",
+          "outputHash": "7dd169e4"
+        }
+      }
+    },
+    "adminTeamsSettingsSetDescription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c9b9e21",
+          "outputHash": "f62b868c"
+        }
+      }
+    },
+    "adminTeamsSettingsSetDiscoverability": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d6be416",
+          "outputHash": "42137170"
+        }
+      }
+    },
+    "adminTeamsSettingsSetIcon": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b153d34",
+          "outputHash": "d1debd52"
+        }
+      }
+    },
+    "adminTeamsSettingsSetName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54ff81fb",
+          "outputHash": "dcf1932c"
+        }
+      }
+    },
+    "adminUsergroupsAddChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "463f1d06",
+          "outputHash": "7ef85883"
+        }
+      }
+    },
+    "adminUsergroupsAddTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc337d8b",
+          "outputHash": "55b87cda"
+        }
+      }
+    },
+    "adminUsergroupsListChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42041093",
+          "outputHash": "66d77c72"
+        }
+      }
+    },
+    "adminUsergroupsRemoveChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a8a300a",
+          "outputHash": "ce138624"
+        }
+      }
+    },
+    "adminUsersAssign": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29384b73",
+          "outputHash": "197272ca"
+        }
+      }
+    },
+    "adminUsersInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56d8ce65",
+          "outputHash": "91b1c4ef"
+        }
+      }
+    },
+    "adminUsersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b3c46ac",
+          "outputHash": "3432e186"
+        }
+      }
+    },
+    "adminUsersRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cca26083",
+          "outputHash": "96e7ae4e"
+        }
+      }
+    },
+    "adminUsersSessionInvalidate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3c3ab1d",
+          "outputHash": "d1d440b7"
+        }
+      }
+    },
+    "adminUsersSessionReset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0882f967",
+          "outputHash": "37586c8b"
+        }
+      }
+    },
+    "adminUsersSetAdmin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73ee570c",
+          "outputHash": "302b46d3"
+        }
+      }
+    },
+    "adminUsersSetExpiration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2107206b",
+          "outputHash": "46278724"
+        }
+      }
+    },
+    "adminUsersSetOwner": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e8b423b",
+          "outputHash": "c06314b5"
+        }
+      }
+    },
+    "adminUsersSetRegular": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82617589",
+          "outputHash": "382ff667"
+        }
+      }
+    },
+    "apiTest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5aa0cff7",
+          "outputHash": "d0c6f74b"
+        }
+      }
+    },
+    "appsEventAuthorizationsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa416c8b",
+          "outputHash": "8f8bfd02"
+        }
+      }
+    },
+    "appsPermissionsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2441f508",
+          "outputHash": "17d8e922"
+        }
+      }
+    },
+    "appsPermissionsRequest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0457032",
+          "outputHash": "43779ec3"
+        }
+      }
+    },
+    "appsPermissionsResourcesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a43d7f6",
+          "outputHash": "bd018be5"
+        }
+      }
+    },
+    "appsPermissionsScopesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8062b5d",
+          "outputHash": "6cc1f0e3"
+        }
+      }
+    },
+    "appsPermissionsUsersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "223b3940",
+          "outputHash": "2a6e7fc1"
+        }
+      }
+    },
+    "appsPermissionsUsersRequest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6093d04",
+          "outputHash": "3cb5ed56"
+        }
+      }
+    },
+    "appsUninstall": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9648835a",
+          "outputHash": "73c5a989"
+        }
+      }
+    },
+    "authRevoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e4f2070",
+          "outputHash": "cb24c5ad"
+        }
+      }
+    },
+    "authTest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a5339cdd",
+          "outputHash": "331f8f81"
+        }
+      }
+    },
+    "botsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f737b5b",
+          "outputHash": "7af6017f"
+        }
+      }
+    },
+    "callsAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3b05c1a",
+          "outputHash": "06ced45a"
+        }
+      }
+    },
+    "callsEnd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc097116",
+          "outputHash": "bf62b49b"
+        }
+      }
+    },
+    "callsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c92826c",
+          "outputHash": "32c358a2"
+        }
+      }
+    },
+    "callsParticipantsAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2757963",
+          "outputHash": "da68db0f"
+        }
+      }
+    },
+    "callsParticipantsRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4069149",
+          "outputHash": "ea152856"
+        }
+      }
+    },
+    "callsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6df72d3d",
+          "outputHash": "fc436792"
+        }
+      }
+    },
+    "chatDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5a64275",
+          "outputHash": "fdaea84a"
+        }
+      }
+    },
+    "chatDeleteScheduledMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43488019",
+          "outputHash": "cbeac150"
+        }
+      }
+    },
+    "chatGetPermalink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8741cf3",
+          "outputHash": "fe172aae"
+        }
+      }
+    },
+    "chatMeMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d52629b7",
+          "outputHash": "538e3ba3"
+        }
+      }
+    },
+    "chatPostEphemeral": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7322fe14",
+          "outputHash": "dc5c0b02"
+        }
+      }
+    },
+    "chatPostMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a6f81d8",
+          "outputHash": "1d4d053d"
+        }
+      }
+    },
+    "chatScheduleMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0308472f",
+          "outputHash": "8174d88f"
+        }
+      }
+    },
+    "chatScheduledMessagesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e448719d",
+          "outputHash": "af8a9af5"
+        }
+      }
+    },
+    "chatUnfurl": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65c350a0",
+          "outputHash": "b88eb2bc"
+        }
+      }
+    },
+    "chatUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "254b9b15",
+          "outputHash": "23a12b83"
+        }
+      }
+    },
+    "conversationsArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b88d00e7",
+          "outputHash": "23033cdd"
+        }
+      }
+    },
+    "conversationsClose": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed75a656",
+          "outputHash": "2d4bc2dc"
+        }
+      }
+    },
+    "conversationsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1ac2c0b",
+          "outputHash": "96703a33"
+        }
+      }
+    },
+    "conversationsHistory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d856eec6",
+          "outputHash": "71a873f2"
+        }
+      }
+    },
+    "conversationsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5424e8f",
+          "outputHash": "0f6ce483"
+        }
+      }
+    },
+    "conversationsInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac2ebd9b",
+          "outputHash": "1c102905"
+        }
+      }
+    },
+    "conversationsJoin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7593347b",
+          "outputHash": "820bc0a7"
+        }
+      }
+    },
+    "conversationsKick": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc4fc2d7",
+          "outputHash": "ea2c420e"
+        }
+      }
+    },
+    "conversationsLeave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3482f3df",
+          "outputHash": "f053d809"
+        }
+      }
+    },
+    "conversationsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0da41185",
+          "outputHash": "fcc406f0"
+        }
+      }
+    },
+    "conversationsMark": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05221d57",
+          "outputHash": "bd53780e"
+        }
+      }
+    },
+    "conversationsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7039a588",
+          "outputHash": "33015651"
+        }
+      }
+    },
+    "conversationsOpen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a0e6c23",
+          "outputHash": "bd50ee6e"
+        }
+      }
+    },
+    "conversationsRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc0f166e",
+          "outputHash": "b7611942"
+        }
+      }
+    },
+    "conversationsReplies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a930230",
+          "outputHash": "22f19663"
+        }
+      }
+    },
+    "conversationsSetPurpose": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43f7f44b",
+          "outputHash": "ebf11475"
+        }
+      }
+    },
+    "conversationsSetTopic": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e90fa7f4",
+          "outputHash": "bf586c06"
+        }
+      }
+    },
+    "conversationsUnarchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b51afcb8",
+          "outputHash": "309009f6"
+        }
+      }
+    },
+    "dialogOpen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2aafb9e6",
+          "outputHash": "bc12cce8"
+        }
+      }
+    },
+    "dndEndDnd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d29a9d6b",
+          "outputHash": "1584ce77"
+        }
+      }
+    },
+    "dndEndSnooze": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcbab3ae",
+          "outputHash": "5e898ebb"
+        }
+      }
+    },
+    "dndInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10018857",
+          "outputHash": "501290d6"
+        }
+      }
+    },
+    "dndSetSnooze": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1dd88c26",
+          "outputHash": "fe502020"
+        }
+      }
+    },
+    "dndTeamInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b00bf7aa",
+          "outputHash": "4c250542"
+        }
+      }
+    },
+    "emojiList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d09cf0f2",
+          "outputHash": "08dccd34"
+        }
+      }
+    },
+    "filesCommentsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25c76662",
+          "outputHash": "e53bec63"
+        }
+      }
+    },
+    "filesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9bbece68",
+          "outputHash": "e04451ce"
+        }
+      }
+    },
+    "filesInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f75d899",
+          "outputHash": "ad25221f"
+        }
+      }
+    },
+    "filesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8308494b",
+          "outputHash": "c57155e4"
+        }
+      }
+    },
+    "filesRemoteAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42337bb9",
+          "outputHash": "59f75811"
+        }
+      }
+    },
+    "filesRemoteInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05cfb932",
+          "outputHash": "1eda97ce"
+        }
+      }
+    },
+    "filesRemoteList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e0a8d0a",
+          "outputHash": "68f27254"
+        }
+      }
+    },
+    "filesRemoteRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7685baa1",
+          "outputHash": "cbadf71b"
+        }
+      }
+    },
+    "filesRemoteShare": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23aa49e6",
+          "outputHash": "9bbca09e"
+        }
+      }
+    },
+    "filesRemoteUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72a9d127",
+          "outputHash": "ec2d193a"
+        }
+      }
+    },
+    "filesRevokePublicURL": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5e7c550",
+          "outputHash": "c0c5fdd4"
+        }
+      }
+    },
+    "filesSharedPublicURL": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88e52360",
+          "outputHash": "10321a98"
+        }
+      }
+    },
+    "filesUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db3489ef",
+          "outputHash": "ca199617"
+        }
+      }
+    },
+    "migrationExchange": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70f909df",
+          "outputHash": "36a6fa1c"
+        }
+      }
+    },
+    "oauthAccess": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67266183",
+          "outputHash": "4f85df59"
+        }
+      }
+    },
+    "oauthToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9189b8f8",
+          "outputHash": "e1fdfa8a"
+        }
+      }
+    },
+    "oauthV2Access": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c8a305a",
+          "outputHash": "5b74a15b"
+        }
+      }
+    },
+    "pinsAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d90b8065",
+          "outputHash": "92349b7c"
+        }
+      }
+    },
+    "pinsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a53a7f7c",
+          "outputHash": "c687a5cf"
+        }
+      }
+    },
+    "pinsRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af01945c",
+          "outputHash": "3d004a3b"
+        }
+      }
+    },
+    "reactionsAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "022cb316",
+          "outputHash": "7abc9e26"
+        }
+      }
+    },
+    "reactionsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f9dcbf86",
+          "outputHash": "ecfbae91"
+        }
+      }
+    },
+    "reactionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7f4045e",
+          "outputHash": "16d40fb4"
+        }
+      }
+    },
+    "reactionsRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23fcf49c",
+          "outputHash": "8c204280"
+        }
+      }
+    },
+    "remindersAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b72e2d25",
+          "outputHash": "4805c5c9"
+        }
+      }
+    },
+    "remindersComplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e3f76bd",
+          "outputHash": "6f5a5c27"
+        }
+      }
+    },
+    "remindersDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30753ffa",
+          "outputHash": "36ac8cd7"
+        }
+      }
+    },
+    "remindersInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7fb79a0e",
+          "outputHash": "4e5b1c54"
+        }
+      }
+    },
+    "remindersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c965aeac",
+          "outputHash": "5f162777"
+        }
+      }
+    },
+    "rtmConnect": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "184356ba",
+          "outputHash": "37d3af40"
+        }
+      }
+    },
+    "searchMessages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f294b96",
+          "outputHash": "60b0a317"
+        }
+      }
+    },
+    "starsAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c1d00b7",
+          "outputHash": "cdd653c7"
+        }
+      }
+    },
+    "starsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d025d67",
+          "outputHash": "75b48271"
+        }
+      }
+    },
+    "starsRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "326db055",
+          "outputHash": "ba008824"
+        }
+      }
+    },
+    "teamAccessLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "383d7568",
+          "outputHash": "9bb8037b"
+        }
+      }
+    },
+    "teamBillableInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37a6c206",
+          "outputHash": "921dfbda"
+        }
+      }
+    },
+    "teamInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b066365",
+          "outputHash": "2bd9de2e"
+        }
+      }
+    },
+    "teamIntegrationLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecd16b41",
+          "outputHash": "5f36ce19"
+        }
+      }
+    },
+    "teamProfileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cda5b0e1",
+          "outputHash": "658501c2"
+        }
+      }
+    },
+    "usergroupsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9c0c0a8",
+          "outputHash": "807cbe51"
+        }
+      }
+    },
+    "usergroupsDisable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3510997f",
+          "outputHash": "8143be0e"
+        }
+      }
+    },
+    "usergroupsEnable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2ce9d12e",
+          "outputHash": "a4892a9f"
+        }
+      }
+    },
+    "usergroupsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d8a4a8c",
+          "outputHash": "37b7e7a2"
+        }
+      }
+    },
+    "usergroupsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dad5fa54",
+          "outputHash": "ff9880c2"
+        }
+      }
+    },
+    "usergroupsUsersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4af67578",
+          "outputHash": "cdc06127"
+        }
+      }
+    },
+    "usergroupsUsersUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c53c930f",
+          "outputHash": "84fc20b1"
+        }
+      }
+    },
+    "usersConversations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "942c47e2",
+          "outputHash": "03edbfa4"
+        }
+      }
+    },
+    "usersDeletePhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef238870",
+          "outputHash": "1a243779"
+        }
+      }
+    },
+    "usersGetPresence": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ced983ad",
+          "outputHash": "d75af66c"
+        }
+      }
+    },
+    "usersIdentity": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7aa31887",
+          "outputHash": "24320845"
+        }
+      }
+    },
+    "usersInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fc8d7f4",
+          "outputHash": "215fd6ec"
+        }
+      }
+    },
+    "usersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a37578aa",
+          "outputHash": "d89531ea"
+        }
+      }
+    },
+    "usersLookupByEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13b78d83",
+          "outputHash": "366cc39b"
+        }
+      }
+    },
+    "usersProfileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db644f2d",
+          "outputHash": "c733656d"
+        }
+      }
+    },
+    "usersProfileSet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85bfd5f3",
+          "outputHash": "2f6bdd45"
+        }
+      }
+    },
+    "usersSetActive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60795c9c",
+          "outputHash": "8a3101f0"
+        }
+      }
+    },
+    "usersSetPhoto": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3cd786c",
+          "outputHash": "5e5e22be"
+        }
+      }
+    },
+    "usersSetPresence": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df4ebcd8",
+          "outputHash": "a8ac5469"
+        }
+      }
+    },
+    "viewsOpen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "755c4931",
+          "outputHash": "dad3d465"
+        }
+      }
+    },
+    "viewsPublish": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dbd7a90",
+          "outputHash": "eac91a3b"
+        }
+      }
+    },
+    "viewsPush": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9916db95",
+          "outputHash": "a3258a8e"
+        }
+      }
+    },
+    "viewsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "380ae350",
+          "outputHash": "96cfa24e"
+        }
+      }
+    },
+    "workflowsStepCompleted": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62d527b7",
+          "outputHash": "6b48672c"
+        }
+      }
+    },
+    "workflowsStepFailed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c123b3a0",
+          "outputHash": "633c5fdc"
+        }
+      }
+    },
+    "workflowsUpdateStep": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5d45718",
+          "outputHash": "173d0862"
+        }
+      }
+    }
+  }
+}

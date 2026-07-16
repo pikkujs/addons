@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "documentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5275954",
+          "outputHash": "a3121186"
+        }
+      }
+    },
+    "documentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d732443",
+          "outputHash": "6c60084d"
+        }
+      }
+    },
+    "documentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1165c883",
+          "outputHash": "5ab39518"
+        }
+      }
+    },
+    "documentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "861c3879",
+          "outputHash": "4bd2bae1"
+        }
+      }
+    },
+    "documentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84bff889",
+          "outputHash": "d672d639"
+        }
+      }
+    },
+    "indexCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f351629",
+          "outputHash": "be610bf5"
+        }
+      }
+    },
+    "indexDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "355bbe13",
+          "outputHash": "0f5bbdb5"
+        }
+      }
+    },
+    "indexGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "835132cd",
+          "outputHash": "ccd2404c"
+        }
+      }
+    },
+    "indexGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "622b1dbc",
+          "outputHash": "b76a4080"
+        }
+      }
+    }
+  }
+}

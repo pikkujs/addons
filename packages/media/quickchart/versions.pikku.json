@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "chartCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5350b935",
+          "outputHash": "071dbdfe"
+        }
+      }
+    }
+  }
+}

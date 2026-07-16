@@ -1,0 +1,29 @@
+import assert from 'node:assert/strict'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export type TestZammadInput = {}
+export type TestZammadOutput = { passed: number; failed: string[] }
+
+export const testZammad = pikkuSessionlessFunc<TestZammadInput, TestZammadOutput>({
+  func: async (_services, _data, { rpc }) => {
+    let passed = 0
+    const failed: string[] = []
+
+    const run = async (name: string, fn: () => Promise<void>) => {
+      try {
+        await fn()
+        passed++
+      } catch (e: any) {
+        failed.push(`${name}: ${e.message}`)
+      }
+    }
+
+    // Add test cases here:
+    // await run('test name', async () => {
+    //   const result = await rpc.invoke('zammad:functionName', { ... })
+    //   assert.equal(result.someField, expectedValue)
+    // })
+
+    return { passed, failed }
+  }
+})

@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "aa2bc68e9ef85605"
+    }
+  },
+  "node": {
+    "displayName": "Wekan",
+    "description": "Consume the Wekan kanban API",
+    "categories": [
+      "automation"
+    ],
+    "icon": "./wekan.svg"
+  }
+}

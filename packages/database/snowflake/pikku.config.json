@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "54def1480da74a56"
+    }
+  },
+  "node": {
+    "displayName": "Snowflake",
+    "description": "Run SQL queries, insert and update rows in Snowflake",
+    "categories": [
+      "database"
+    ],
+    "icon": "./snowflake.svg"
+  }
+}

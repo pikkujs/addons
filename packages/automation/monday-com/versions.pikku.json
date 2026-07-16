@@ -1,0 +1,167 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "boardArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fb140234",
+          "outputHash": "60c126c1"
+        }
+      }
+    },
+    "boardColumnCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea40deb0",
+          "outputHash": "3e0ffb73"
+        }
+      }
+    },
+    "boardColumnGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d83c08d1",
+          "outputHash": "b6d39062"
+        }
+      }
+    },
+    "boardCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "925a5764",
+          "outputHash": "05605cc1"
+        }
+      }
+    },
+    "boardGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a7e83f7",
+          "outputHash": "3e4ed932"
+        }
+      }
+    },
+    "boardGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91296500",
+          "outputHash": "d5804541"
+        }
+      }
+    },
+    "boardGroupCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dafccec6",
+          "outputHash": "919f2d7c"
+        }
+      }
+    },
+    "boardGroupDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2681e80a",
+          "outputHash": "907b5d0b"
+        }
+      }
+    },
+    "boardGroupGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2a45b81",
+          "outputHash": "4a54d24b"
+        }
+      }
+    },
+    "boardItemAddUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fadb76c9",
+          "outputHash": "0f9d3a0f"
+        }
+      }
+    },
+    "boardItemChangeColumnValue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e3e4483",
+          "outputHash": "9b3033c7"
+        }
+      }
+    },
+    "boardItemChangeMultipleColumnValues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3376844",
+          "outputHash": "02083a79"
+        }
+      }
+    },
+    "boardItemCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a63b0de",
+          "outputHash": "4974b59c"
+        }
+      }
+    },
+    "boardItemDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "213a41f5",
+          "outputHash": "b3308d65"
+        }
+      }
+    },
+    "boardItemGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8ac3b9c",
+          "outputHash": "ddd8571f"
+        }
+      }
+    },
+    "boardItemGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3375e6b3",
+          "outputHash": "a4a7c62d"
+        }
+      }
+    },
+    "boardItemGetByColumnValue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d830f3d1",
+          "outputHash": "4bd3b707"
+        }
+      }
+    },
+    "boardItemMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4ca4d2b",
+          "outputHash": "2502ea99"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,104 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const YoutubeLiveBroadcastsBindInput = z.object({
+  "$.xgafv": z.enum(["1", "2"]).optional().describe("V1 error format."),
+  access_token: z.string().optional().describe("OAuth access token."),
+  alt: z.enum(["json", "media", "proto"]).optional().describe("Data format for response."),
+  callback: z.string().optional().describe("JSONP"),
+  fields: z.string().optional().describe("Selector specifying which fields to include in a partial response."),
+  key: z.string().optional().describe("API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."),
+  oauth_token: z.string().optional().describe("OAuth 2.0 token for the current user."),
+  prettyPrint: z.boolean().optional().describe("Returns response with indentations and line breaks."),
+  quotaUser: z.string().optional().describe("Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."),
+  upload_protocol: z.string().optional().describe("Upload protocol for media (e.g. \"raw\", \"multipart\")."),
+  uploadType: z.string().optional().describe("Legacy upload protocol for media (e.g. \"media\", \"multipart\")."),
+  id: z.string().describe("Broadcast to bind to the stream"),
+  part: z.array(z.string()).describe("The *part* parameter specifies a comma-separated list of one or more liveBroadcast resource properties that the API response will include. The part names that you can include in the parameter value are id, snippet, contentDetails, and status."),
+  onBehalfOfContentOwner: z.string().optional().describe("*Note:* This parameter is intended exclusively for YouTube content partners. The *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner."),
+  onBehalfOfContentOwnerChannel: z.string().optional().describe("This parameter can only be used in a properly authorized request. *Note:* This parameter is intended exclusively for YouTube content partners. The *onBehalfOfContentOwnerChannel* parameter specifies the YouTube channel ID of the channel to which a video is being added. This parameter is required when a request specifies a value for the onBehalfOfContentOwner parameter, and it can only be used in conjunction with that parameter. In addition, the request must be authorized using a CMS account that is linked to the content owner that the onBehalfOfContentOwner parameter specifies. Finally, the channel that the onBehalfOfContentOwnerChannel parameter value specifies must be linked to the content owner that the onBehalfOfContentOwner parameter specifies. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and perform actions on behalf of the channel specified in the parameter value, without having to provide authentication credentials for each separate channel."),
+  streamId: z.string().optional().describe("Stream to bind, if not set unbind the current one."),
+})
+
+export const YoutubeLiveBroadcastsBindOutput = z.object({
+  contentDetails: z.object({
+    boundStreamId: z.string().optional().describe("This value uniquely identifies the live stream bound to the broadcast."),
+    boundStreamLastUpdateTimeMs: z.string().datetime().optional().describe("The date and time that the live stream referenced by boundStreamId was last updated."),
+    closedCaptionsType: z.enum(["closedCaptionsTypeUnspecified", "closedCaptionsDisabled", "closedCaptionsHttpPost", "closedCaptionsEmbedded"]).optional(),
+    enableAutoStart: z.boolean().optional().describe("This setting indicates whether auto start is enabled for this broadcast. The default value for this property is false. This setting can only be used by Events."),
+    enableAutoStop: z.boolean().optional().describe("This setting indicates whether auto stop is enabled for this broadcast. The default value for this property is false. This setting can only be used by Events."),
+    enableClosedCaptions: z.boolean().optional().describe("This setting indicates whether HTTP POST closed captioning is enabled for this broadcast. The ingestion URL of the closed captions is returned through the liveStreams API. This is mutually exclusive with using the closed_captions_type property, and is equivalent to setting closed_captions_type to CLOSED_CAPTIONS_HTTP_POST."),
+    enableContentEncryption: z.boolean().optional().describe("This setting indicates whether YouTube should enable content encryption for the broadcast."),
+    enableDvr: z.boolean().optional().describe("This setting determines whether viewers can access DVR controls while watching the video. DVR controls enable the viewer to control the video playback experience by pausing, rewinding, or fast forwarding content. The default value for this property is true. *Important:* You must set the value to true and also set the enableArchive property's value to true if you want to make playback available immediately after the broadcast ends."),
+    enableEmbed: z.boolean().optional().describe("This setting indicates whether the broadcast video can be played in an embedded player. If you choose to archive the video (using the enableArchive property), this setting will also apply to the archived video."),
+    enableLowLatency: z.boolean().optional().describe("Indicates whether this broadcast has low latency enabled."),
+    latencyPreference: z.enum(["latencyPreferenceUnspecified", "normal", "low", "ultraLow"]).optional().describe("If both this and enable_low_latency are set, they must match. LATENCY_NORMAL should match enable_low_latency=false LATENCY_LOW should match enable_low_latency=true LATENCY_ULTRA_LOW should have enable_low_latency omitted."),
+    mesh: z.string().optional().describe("The mesh for projecting the video if projection is mesh. The mesh value must be a UTF-8 string containing the base-64 encoding of 3D mesh data that follows the Spherical Video V2 RFC specification for an mshp box, excluding the box size and type but including the following four reserved zero bytes for the version and flags."),
+    monitorStream: z.object({
+      broadcastStreamDelayMs: z.number().int().optional().describe("If you have set the enableMonitorStream property to true, then this property determines the length of the live broadcast delay."),
+      embedHtml: z.string().optional().describe("HTML code that embeds a player that plays the monitor stream."),
+      enableMonitorStream: z.boolean().optional().describe("This value determines whether the monitor stream is enabled for the broadcast. If the monitor stream is enabled, then YouTube will broadcast the event content on a special stream intended only for the broadcaster's consumption. The broadcaster can use the stream to review the event content and also to identify the optimal times to insert cuepoints. You need to set this value to true if you intend to have a broadcast delay for your event. *Note:* This property cannot be updated once the broadcast is in the testing or live state."),
+    }).optional().describe("The monitorStream object contains information about the monitor stream, which the broadcaster can use to review the event content before the broadcast stream is shown publicly."),
+    projection: z.enum(["projectionUnspecified", "rectangular", "360", "mesh"]).optional().describe("The projection format of this broadcast. This defaults to rectangular."),
+    recordFromStart: z.boolean().optional().describe("Automatically start recording after the event goes live. The default value for this property is true. *Important:* You must also set the enableDvr property's value to true if you want the playback to be available immediately after the broadcast ends. If you set this property's value to true but do not also set the enableDvr property to true, there may be a delay of around one day before the archived video will be available for playback."),
+    startWithSlate: z.boolean().optional().describe("This setting indicates whether the broadcast should automatically begin with an in-stream slate when you update the broadcast's status to live. After updating the status, you then need to send a liveCuepoints.insert request that sets the cuepoint's eventState to end to remove the in-stream slate and make your broadcast stream visible to viewers."),
+    stereoLayout: z.enum(["stereoLayoutUnspecified", "mono", "leftRight", "topBottom"]).optional().describe("The 3D stereo layout of this broadcast. This defaults to mono."),
+  }).optional().describe("The contentDetails object contains information about the event's video content, such as whether the content can be shown in an embedded video player or if it will be archived and therefore available for viewing after the event has concluded."),
+  etag: z.string().optional().describe("Etag of this resource."),
+  id: z.string().optional().describe("The ID that YouTube assigns to uniquely identify the broadcast."),
+  kind: z.string().optional().default("youtube#liveBroadcast").describe("Identifies what kind of resource this is. Value: the fixed string \"youtube#liveBroadcast\"."),
+  snippet: z.object({
+    actualEndTime: z.string().datetime().optional().describe("The date and time that the broadcast actually ended. This information is only available once the broadcast's state is complete."),
+    actualStartTime: z.string().datetime().optional().describe("The date and time that the broadcast actually started. This information is only available once the broadcast's state is live."),
+    channelId: z.string().optional().describe("The ID that YouTube uses to uniquely identify the channel that is publishing the broadcast."),
+    description: z.string().optional().describe("The broadcast's description. As with the title, you can set this field by modifying the broadcast resource or by setting the description field of the corresponding video resource."),
+    isDefaultBroadcast: z.boolean().optional().describe("Indicates whether this broadcast is the default broadcast. Internal only."),
+    liveChatId: z.string().optional().describe("The id of the live chat for this broadcast."),
+    publishedAt: z.string().datetime().optional().describe("The date and time that the broadcast was added to YouTube's live broadcast schedule."),
+    scheduledEndTime: z.string().datetime().optional().describe("The date and time that the broadcast is scheduled to end."),
+    scheduledStartTime: z.string().datetime().optional().describe("The date and time that the broadcast is scheduled to start."),
+    thumbnails: z.object({
+      high: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The high quality image for this resource."),
+      maxres: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The maximum resolution quality image for this resource."),
+      medium: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The medium quality image for this resource."),
+      standard: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The standard quality image for this resource."),
+    }).optional().describe("A map of thumbnail images associated with the broadcast. For each nested object in this object, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."),
+    title: z.string().optional().describe("The broadcast's title. Note that the broadcast represents exactly one YouTube video. You can set this field by modifying the broadcast resource or by setting the title field of the corresponding video resource."),
+  }).optional().describe("The snippet object contains basic details about the event, including its title, description, start time, and end time."),
+  statistics: z.object({
+    concurrentViewers: z.string().optional().describe("The number of viewers currently watching the broadcast. The property and its value will be present if the broadcast has current viewers and the broadcast owner has not hidden the viewcount for the video. Note that YouTube stops tracking the number of concurrent viewers for a broadcast when the broadcast ends. So, this property would not identify the number of viewers watching an archived video of a live broadcast that already ended."),
+  }).optional().describe("The statistics object contains info about the event's current stats. These include concurrent viewers and total chat count. Statistics can change (in either direction) during the lifetime of an event. Statistics are only returned while the event is live."),
+  status: z.object({
+    lifeCycleStatus: z.enum(["lifeCycleStatusUnspecified", "created", "ready", "testing", "live", "complete", "revoked", "testStarting", "liveStarting"]).optional().describe("The broadcast's status. The status can be updated using the API's liveBroadcasts.transition method."),
+    liveBroadcastPriority: z.enum(["liveBroadcastPriorityUnspecified", "low", "normal", "high"]).optional().describe("Priority of the live broadcast event (internal state)."),
+    madeForKids: z.boolean().optional().describe("Whether the broadcast is made for kids or not, decided by YouTube instead of the creator. This field is read only."),
+    privacyStatus: z.enum(["public", "unlisted", "private"]).optional().describe("The broadcast's privacy status. Note that the broadcast represents exactly one YouTube video, so the privacy settings are identical to those supported for videos. In addition, you can set this field by modifying the broadcast resource or by setting the privacyStatus field of the corresponding video resource."),
+    recordingStatus: z.enum(["liveBroadcastRecordingStatusUnspecified", "notRecording", "recording", "recorded"]).optional().describe("The broadcast's recording status."),
+    selfDeclaredMadeForKids: z.boolean().optional().describe("This field will be set to True if the creator declares the broadcast to be kids only: go/live-cw-work."),
+  }).optional().describe("The status object contains information about the event's status."),
+}).describe("A *liveBroadcast* resource represents an event that will be streamed, via live video, on YouTube.")
+
+export const youtubeLiveBroadcastsBind = pikkuSessionlessFunc({
+  description: "Bind a broadcast to a stream.",
+  input: YoutubeLiveBroadcastsBindInput,
+  output: YoutubeLiveBroadcastsBindOutput,
+  func: async ({ youtube }, data) => {
+    return youtube.call("POST", "/youtube/v3/liveBroadcasts/bind", data) as any
+  },
+})

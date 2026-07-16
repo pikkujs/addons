@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "9a3302033f733e94"
+    }
+  },
+  "node": {
+    "displayName": "Mailjet",
+    "description": "Send transactional email and SMS via the Mailjet API",
+    "categories": [
+      "email"
+    ],
+    "icon": "./mailjet.svg"
+  }
+}

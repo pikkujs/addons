@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "invoicePredict": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b0c42f2",
+          "outputHash": "23334ded"
+        }
+      }
+    },
+    "receiptPredict": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd0dcd93",
+          "outputHash": "868b469a"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "transcriptionJobCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae5072ee",
+          "outputHash": "25413762"
+        }
+      }
+    },
+    "transcriptionJobDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f756a91",
+          "outputHash": "4676908b"
+        }
+      }
+    },
+    "transcriptionJobGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9de3338",
+          "outputHash": "38cb5775"
+        }
+      }
+    },
+    "transcriptionJobGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "393f611c",
+          "outputHash": "86adc0c7"
+        }
+      }
+    }
+  }
+}

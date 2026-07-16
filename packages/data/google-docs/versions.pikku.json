@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "docsDocumentsBatchUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a814a91",
+          "outputHash": "0cf677f9"
+        }
+      }
+    },
+    "docsDocumentsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71365fed",
+          "outputHash": "c56f3094"
+        }
+      }
+    },
+    "docsDocumentsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76cc6f74",
+          "outputHash": "142e06b8"
+        }
+      }
+    }
+  }
+}

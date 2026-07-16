@@ -1,0 +1,104 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "accountWhoami": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a79ff9d7",
+          "outputHash": "0f28e6ff"
+        }
+      }
+    },
+    "eventGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70b82fcc",
+          "outputHash": "7170c5c7"
+        }
+      }
+    },
+    "mediaUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e153d34e",
+          "outputHash": "e5cf7f1b"
+        }
+      }
+    },
+    "messageGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a4ab2c0",
+          "outputHash": "1b7dea93"
+        }
+      }
+    },
+    "messageSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd0010a0",
+          "outputHash": "b4ab0863"
+        }
+      }
+    },
+    "roomCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "317779c2",
+          "outputHash": "c02b824e"
+        }
+      }
+    },
+    "roomInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4db7d79",
+          "outputHash": "70351913"
+        }
+      }
+    },
+    "roomJoin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca77693e",
+          "outputHash": "5cc474e6"
+        }
+      }
+    },
+    "roomKick": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13ebf5b0",
+          "outputHash": "a714d490"
+        }
+      }
+    },
+    "roomLeave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76ea98a3",
+          "outputHash": "e3c5e8d2"
+        }
+      }
+    },
+    "roomMemberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8c421d0",
+          "outputHash": "d9e1b2ec"
+        }
+      }
+    }
+  }
+}

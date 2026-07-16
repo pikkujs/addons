@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "shipmentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bd0c0b5",
+          "outputHash": "ad918edc"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+export { postGetAll } from './functions/postGetAll.function.js'
+export { postCreate } from './functions/postCreate.function.js'
+export { postGet } from './functions/postGet.function.js'
+export { postUpdate } from './functions/postUpdate.function.js'
+export { postDelete } from './functions/postDelete.function.js'

@@ -1,0 +1,77 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "directMessageCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b033cf1c",
+          "outputHash": "829af33a"
+        }
+      }
+    },
+    "listAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c10206c9",
+          "outputHash": "e1e81291"
+        }
+      }
+    },
+    "tweetCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ab77221",
+          "outputHash": "5504a2ab"
+        }
+      }
+    },
+    "tweetDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58dcc87f",
+          "outputHash": "c0a31da4"
+        }
+      }
+    },
+    "tweetLike": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "263385aa",
+          "outputHash": "223be241"
+        }
+      }
+    },
+    "tweetRetweet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b6e425b",
+          "outputHash": "96478cae"
+        }
+      }
+    },
+    "tweetSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "798c5dd5",
+          "outputHash": "c091ddb0"
+        }
+      }
+    },
+    "userSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52f49a1e",
+          "outputHash": "b0b4855a"
+        }
+      }
+    }
+  }
+}

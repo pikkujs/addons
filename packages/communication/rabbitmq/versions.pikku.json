@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "deleteMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8192ca1",
+          "outputHash": "dadcc355"
+        }
+      }
+    },
+    "sendMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fef2dd71",
+          "outputHash": "859ef501"
+        }
+      }
+    }
+  }
+}

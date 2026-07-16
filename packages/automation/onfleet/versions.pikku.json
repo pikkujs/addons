@@ -1,0 +1,338 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "adminCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0405e66",
+          "outputHash": "efc4d259"
+        }
+      }
+    },
+    "adminDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ce11242",
+          "outputHash": "d2b20797"
+        }
+      }
+    },
+    "adminGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6354f9c5",
+          "outputHash": "cb9e4fee"
+        }
+      }
+    },
+    "adminUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9abfc428",
+          "outputHash": "0f233f7d"
+        }
+      }
+    },
+    "containerAddTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f906d04",
+          "outputHash": "8feadac9"
+        }
+      }
+    },
+    "containerGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67f38486",
+          "outputHash": "6dfea0c5"
+        }
+      }
+    },
+    "containerUpdateTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91127cdd",
+          "outputHash": "603f2539"
+        }
+      }
+    },
+    "destinationCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1c3a3e6",
+          "outputHash": "b3b05cae"
+        }
+      }
+    },
+    "destinationGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ddacb427",
+          "outputHash": "f15b3a4e"
+        }
+      }
+    },
+    "hubCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa41ca99",
+          "outputHash": "0cb68ccf"
+        }
+      }
+    },
+    "hubGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7570a8f6",
+          "outputHash": "2af599cc"
+        }
+      }
+    },
+    "hubUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdf991a2",
+          "outputHash": "352e54e2"
+        }
+      }
+    },
+    "organizationGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "90cf134f",
+          "outputHash": "d322caa0"
+        }
+      }
+    },
+    "organizationGetDelegatee": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0feae90c",
+          "outputHash": "47204122"
+        }
+      }
+    },
+    "recipientCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "100dcee9",
+          "outputHash": "c8359bff"
+        }
+      }
+    },
+    "recipientGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65212c5f",
+          "outputHash": "65f354b7"
+        }
+      }
+    },
+    "recipientUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99b8e83e",
+          "outputHash": "7e46b292"
+        }
+      }
+    },
+    "taskClone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f23eda1d",
+          "outputHash": "9744097e"
+        }
+      }
+    },
+    "taskComplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de79eb0f",
+          "outputHash": "8077f171"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4108b1f1",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cb4a68",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e752f179",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42428105",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a44625e9",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "teamAutoDispatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db6f89ad",
+          "outputHash": "66b31046"
+        }
+      }
+    },
+    "teamCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbf932d7",
+          "outputHash": "6512cb00"
+        }
+      }
+    },
+    "teamDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0fc4669",
+          "outputHash": "6042f09c"
+        }
+      }
+    },
+    "teamGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0623fbf3",
+          "outputHash": "147c9168"
+        }
+      }
+    },
+    "teamGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08c09fb2",
+          "outputHash": "844ec300"
+        }
+      }
+    },
+    "teamGetTimeEstimates": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b789060",
+          "outputHash": "fb0a3f83"
+        }
+      }
+    },
+    "teamUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7f3cdf9",
+          "outputHash": "1aa92ee7"
+        }
+      }
+    },
+    "workerCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f9e656ec",
+          "outputHash": "67cd6ef4"
+        }
+      }
+    },
+    "workerDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "55ee1414",
+          "outputHash": "7d240bcf"
+        }
+      }
+    },
+    "workerGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9a923e2",
+          "outputHash": "aaa76f4a"
+        }
+      }
+    },
+    "workerGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c2edc3f",
+          "outputHash": "f08d300c"
+        }
+      }
+    },
+    "workerGetSchedule": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d02ab231",
+          "outputHash": "7006b90e"
+        }
+      }
+    },
+    "workerUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23bfa2aa",
+          "outputHash": "1ac5d8ab"
+        }
+      }
+    }
+  }
+}

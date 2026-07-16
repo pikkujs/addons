@@ -1,0 +1,122 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "bookmarkCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cbaa8c31",
+          "outputHash": "cc03cda0"
+        }
+      }
+    },
+    "bookmarkDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7d0f77f",
+          "outputHash": "dfb6bf68"
+        }
+      }
+    },
+    "bookmarkGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f04d660",
+          "outputHash": "6d070e1e"
+        }
+      }
+    },
+    "bookmarkGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5be78325",
+          "outputHash": "b013eba1"
+        }
+      }
+    },
+    "bookmarkUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcd709c7",
+          "outputHash": "8b4bf2ba"
+        }
+      }
+    },
+    "collectionCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16d6911a",
+          "outputHash": "245d639c"
+        }
+      }
+    },
+    "collectionDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b7ce943",
+          "outputHash": "66ed9eef"
+        }
+      }
+    },
+    "collectionGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d4db196",
+          "outputHash": "652d6534"
+        }
+      }
+    },
+    "collectionGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1cee0f3",
+          "outputHash": "a6abb985"
+        }
+      }
+    },
+    "collectionUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b38a9825",
+          "outputHash": "42b388a6"
+        }
+      }
+    },
+    "tagDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bccc66aa",
+          "outputHash": "dfdb5746"
+        }
+      }
+    },
+    "tagGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3d1e5a2",
+          "outputHash": "ce671717"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "250c7661",
+          "outputHash": "7f542146"
+        }
+      }
+    }
+  }
+}

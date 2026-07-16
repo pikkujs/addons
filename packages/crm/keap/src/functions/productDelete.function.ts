@@ -1,0 +1,17 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const ProductDeleteInput = z.object({
+  productId: z.string(),
+})
+
+export const ProductDeleteOutput = z.record(z.string(), z.unknown())
+
+export const productDelete = pikkuSessionlessFunc({
+  description: "Delete a product",
+  input: ProductDeleteInput,
+  output: ProductDeleteOutput,
+  func: async ({ keap }, data) => {
+    return keap.call("DELETE", "/products/{productId}", data) as any
+  },
+})

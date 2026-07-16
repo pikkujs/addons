@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "postCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00ef23e8",
+          "outputHash": "9be4ea06"
+        }
+      }
+    },
+    "postDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71294916",
+          "outputHash": "2140cf36"
+        }
+      }
+    },
+    "postGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7810c583",
+          "outputHash": "978f51ea"
+        }
+      }
+    },
+    "postGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a81a4b8",
+          "outputHash": "15a58e52"
+        }
+      }
+    },
+    "postUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "812f5855",
+          "outputHash": "708874ab"
+        }
+      }
+    }
+  }
+}

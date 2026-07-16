@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "messagePush": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2b21d74",
+          "outputHash": "64669c17"
+        }
+      }
+    }
+  }
+}

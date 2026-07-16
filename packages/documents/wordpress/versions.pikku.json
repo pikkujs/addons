@@ -1,0 +1,2012 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "createBlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85791b6a",
+          "outputHash": "5de52cc0"
+        }
+      }
+    },
+    "createBlockRenderer": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7821fad",
+          "outputHash": "4812678b"
+        }
+      }
+    },
+    "createBlocks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63cfc207",
+          "outputHash": "28ea05c3"
+        }
+      }
+    },
+    "createBlocksAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7087408b",
+          "outputHash": "9bbb5038"
+        }
+      }
+    },
+    "createCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78ed97a0",
+          "outputHash": "e98da30b"
+        }
+      }
+    },
+    "createCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db28c4eb",
+          "outputHash": "92f594de"
+        }
+      }
+    },
+    "createComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "111b644b",
+          "outputHash": "1e7b6297"
+        }
+      }
+    },
+    "createComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0e629ed7",
+          "outputHash": "4817fd70"
+        }
+      }
+    },
+    "createFontFamilies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59ac3fef",
+          "outputHash": "99d190da"
+        }
+      }
+    },
+    "createFontFamiliesFontFaces": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7da709af",
+          "outputHash": "79382db9"
+        }
+      }
+    },
+    "createFontFamily": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "132bbc73",
+          "outputHash": "5be50a85"
+        }
+      }
+    },
+    "createGlobalStyle": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbca658f",
+          "outputHash": "94370c3e"
+        }
+      }
+    },
+    "createMedia": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ef94adb",
+          "outputHash": "ab4a4671"
+        }
+      }
+    },
+    "createMedia2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7aa383a",
+          "outputHash": "fadc3f7b"
+        }
+      }
+    },
+    "createMediaEdit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a35b0a7",
+          "outputHash": "ee88ee40"
+        }
+      }
+    },
+    "createMediaPostProcess": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d965c61",
+          "outputHash": "ca6783da"
+        }
+      }
+    },
+    "createMenuItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b933da8",
+          "outputHash": "7fb7acbc"
+        }
+      }
+    },
+    "createMenuItems": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea273007",
+          "outputHash": "b12245fc"
+        }
+      }
+    },
+    "createMenuItemsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f899cc6",
+          "outputHash": "ef761081"
+        }
+      }
+    },
+    "createMenus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6114ec11",
+          "outputHash": "0cb2b792"
+        }
+      }
+    },
+    "createMenus2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1b3e6ba",
+          "outputHash": "ed30156e"
+        }
+      }
+    },
+    "createNavigation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27e8ed63",
+          "outputHash": "c2435165"
+        }
+      }
+    },
+    "createNavigation2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a828f97",
+          "outputHash": "43310423"
+        }
+      }
+    },
+    "createNavigationAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "286d858f",
+          "outputHash": "6b89ca7d"
+        }
+      }
+    },
+    "createPage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b34debd4",
+          "outputHash": "b3cd24ee"
+        }
+      }
+    },
+    "createPages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5c70328",
+          "outputHash": "d3a340ed"
+        }
+      }
+    },
+    "createPagesAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27254d13",
+          "outputHash": "f4450ee3"
+        }
+      }
+    },
+    "createPlugin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d2551a8",
+          "outputHash": "9fe42842"
+        }
+      }
+    },
+    "createPlugins": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58053e69",
+          "outputHash": "03e625d4"
+        }
+      }
+    },
+    "createPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee35bdd7",
+          "outputHash": "c7086593"
+        }
+      }
+    },
+    "createPosts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba92c301",
+          "outputHash": "70ab7b30"
+        }
+      }
+    },
+    "createPostsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9d8008f",
+          "outputHash": "8cf3b414"
+        }
+      }
+    },
+    "createSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82763d43",
+          "outputHash": "7da078f7"
+        }
+      }
+    },
+    "createSidebar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ad369da",
+          "outputHash": "b561e3ff"
+        }
+      }
+    },
+    "createTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1bd20022",
+          "outputHash": "aa6e0f37"
+        }
+      }
+    },
+    "createTags": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84e8932a",
+          "outputHash": "9817beb8"
+        }
+      }
+    },
+    "createTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac5bd993",
+          "outputHash": "27dc13f6"
+        }
+      }
+    },
+    "createTemplatePart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64de5a6a",
+          "outputHash": "f5989250"
+        }
+      }
+    },
+    "createTemplateParts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68544cb8",
+          "outputHash": "a5d3ef69"
+        }
+      }
+    },
+    "createTemplatePartsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3e065e2",
+          "outputHash": "78abc1f5"
+        }
+      }
+    },
+    "createTemplates": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "897d106d",
+          "outputHash": "a0b7e53c"
+        }
+      }
+    },
+    "createTemplatesAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3defa535",
+          "outputHash": "2383915d"
+        }
+      }
+    },
+    "createUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92407151",
+          "outputHash": "35244357"
+        }
+      }
+    },
+    "createUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "011375ba",
+          "outputHash": "a1e28856"
+        }
+      }
+    },
+    "createUsersApplicationPassword": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e441591",
+          "outputHash": "29d0f06a"
+        }
+      }
+    },
+    "createUsersApplicationPasswords": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2488ee3",
+          "outputHash": "30a938e8"
+        }
+      }
+    },
+    "createUsersMe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "93fe7912",
+          "outputHash": "805f45d8"
+        }
+      }
+    },
+    "createWidget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfaeed52",
+          "outputHash": "3fa5ae02"
+        }
+      }
+    },
+    "createWidgetTypesEncode": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cee38569",
+          "outputHash": "6dad5170"
+        }
+      }
+    },
+    "createWidgetTypesRender": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88c9abba",
+          "outputHash": "08f1d4ad"
+        }
+      }
+    },
+    "createWidgets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c037f795",
+          "outputHash": "d116ef51"
+        }
+      }
+    },
+    "createWpPatternCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43fa87fe",
+          "outputHash": "5ec51d7d"
+        }
+      }
+    },
+    "createWpPatternCategory2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0808ca7a",
+          "outputHash": "60628901"
+        }
+      }
+    },
+    "deleteBlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0581b79d",
+          "outputHash": "d89fd907"
+        }
+      }
+    },
+    "deleteBlocksRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcd7c46b",
+          "outputHash": "0678f17a"
+        }
+      }
+    },
+    "deleteCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "833e609e",
+          "outputHash": "336d765d"
+        }
+      }
+    },
+    "deleteComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30ec0f4a",
+          "outputHash": "4ea2e6d6"
+        }
+      }
+    },
+    "deleteFontFamiliesFontFace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5987528f",
+          "outputHash": "be6d4b58"
+        }
+      }
+    },
+    "deleteFontFamily": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1ed9e03",
+          "outputHash": "3fb729c1"
+        }
+      }
+    },
+    "deleteMedia": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a811fe6b",
+          "outputHash": "e7f1de13"
+        }
+      }
+    },
+    "deleteMenuItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28b309c2",
+          "outputHash": "d06961e9"
+        }
+      }
+    },
+    "deleteMenus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5569cb1a",
+          "outputHash": "8b5fd99c"
+        }
+      }
+    },
+    "deleteNavigation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e60ce9e",
+          "outputHash": "0f8fa79d"
+        }
+      }
+    },
+    "deleteNavigationRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88283043",
+          "outputHash": "fb9eccb1"
+        }
+      }
+    },
+    "deletePage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a620f1a5",
+          "outputHash": "718dab6a"
+        }
+      }
+    },
+    "deletePagesRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d98f1ba2",
+          "outputHash": "c96fbdc8"
+        }
+      }
+    },
+    "deletePlugin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac8e8695",
+          "outputHash": "3fe473e7"
+        }
+      }
+    },
+    "deletePost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a2a6ed5",
+          "outputHash": "3aeb5dcb"
+        }
+      }
+    },
+    "deletePostsRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5d0c550",
+          "outputHash": "47578a16"
+        }
+      }
+    },
+    "deleteTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fd573b9",
+          "outputHash": "b2b3fc83"
+        }
+      }
+    },
+    "deleteTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fcc074bd",
+          "outputHash": "dab7ee11"
+        }
+      }
+    },
+    "deleteTemplatePart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3041b711",
+          "outputHash": "482b311b"
+        }
+      }
+    },
+    "deleteTemplatePartsRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d6bb615",
+          "outputHash": "dba329ac"
+        }
+      }
+    },
+    "deleteTemplatesRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83af070c",
+          "outputHash": "fc3a2b50"
+        }
+      }
+    },
+    "deleteUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c2b77f9",
+          "outputHash": "5d284bc6"
+        }
+      }
+    },
+    "deleteUsersApplicationPassword": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50c256f8",
+          "outputHash": "09a5b528"
+        }
+      }
+    },
+    "deleteUsersApplicationPasswords": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae8ac919",
+          "outputHash": "9ba73698"
+        }
+      }
+    },
+    "deleteUsersMe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff3ccc7b",
+          "outputHash": "4541ddfd"
+        }
+      }
+    },
+    "deleteWidget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9b44c8f",
+          "outputHash": "504b9625"
+        }
+      }
+    },
+    "deleteWpPatternCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50684e2a",
+          "outputHash": "1290b7b5"
+        }
+      }
+    },
+    "getBlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6e90656",
+          "outputHash": "ddd7628d"
+        }
+      }
+    },
+    "getBlockRenderer": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f42a9a3f",
+          "outputHash": "2a251957"
+        }
+      }
+    },
+    "getBlockType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2088c157",
+          "outputHash": "8e879b7b"
+        }
+      }
+    },
+    "getBlockType2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab0b618b",
+          "outputHash": "912de3a2"
+        }
+      }
+    },
+    "getBlocksAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28354f05",
+          "outputHash": "1fc631d4"
+        }
+      }
+    },
+    "getBlocksRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8a34af5",
+          "outputHash": "033dd7b4"
+        }
+      }
+    },
+    "getCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b54b0eb",
+          "outputHash": "05698233"
+        }
+      }
+    },
+    "getComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40f17479",
+          "outputHash": "783b2c48"
+        }
+      }
+    },
+    "getFontCollection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5e7072f",
+          "outputHash": "4cc7ff95"
+        }
+      }
+    },
+    "getFontFamiliesFontFace": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d9b6336",
+          "outputHash": "69a2ae72"
+        }
+      }
+    },
+    "getFontFamily": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73270dff",
+          "outputHash": "84667ae3"
+        }
+      }
+    },
+    "getGlobalStyle": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7fc97791",
+          "outputHash": "50557321"
+        }
+      }
+    },
+    "getGlobalStylesRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11bdf042",
+          "outputHash": "ae984229"
+        }
+      }
+    },
+    "getGlobalStylesTheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d7877a05",
+          "outputHash": "e6b2ab07"
+        }
+      }
+    },
+    "getMedia": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23c9a11e",
+          "outputHash": "42b25dd8"
+        }
+      }
+    },
+    "getMenuItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "001160dd",
+          "outputHash": "61c6b28c"
+        }
+      }
+    },
+    "getMenuItemsAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb832b28",
+          "outputHash": "44b74c72"
+        }
+      }
+    },
+    "getMenuLocation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d8ecf8f",
+          "outputHash": "2d68452b"
+        }
+      }
+    },
+    "getMenus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbb756bd",
+          "outputHash": "5b4323c3"
+        }
+      }
+    },
+    "getNavigation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95d31f9b",
+          "outputHash": "2218046f"
+        }
+      }
+    },
+    "getNavigationAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c190483",
+          "outputHash": "ec21a020"
+        }
+      }
+    },
+    "getNavigationRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4778d00",
+          "outputHash": "d8284f2e"
+        }
+      }
+    },
+    "getPage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4dbec066",
+          "outputHash": "9a988784"
+        }
+      }
+    },
+    "getPagesAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa09ea31",
+          "outputHash": "d2a5b093"
+        }
+      }
+    },
+    "getPagesRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfe0f14f",
+          "outputHash": "7dcaaafb"
+        }
+      }
+    },
+    "getPlugin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "417e7977",
+          "outputHash": "7c72b26e"
+        }
+      }
+    },
+    "getPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01dae9d2",
+          "outputHash": "9fc7080a"
+        }
+      }
+    },
+    "getPostsAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2188b9e6",
+          "outputHash": "914dbea9"
+        }
+      }
+    },
+    "getPostsRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2bdb88f2",
+          "outputHash": "883b5383"
+        }
+      }
+    },
+    "getSidebar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c45f3653",
+          "outputHash": "ca4c0fc9"
+        }
+      }
+    },
+    "getStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37cd34a6",
+          "outputHash": "2daa19ff"
+        }
+      }
+    },
+    "getTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4a87d9d",
+          "outputHash": "f8e9eb76"
+        }
+      }
+    },
+    "getTaxonomy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e2ef572",
+          "outputHash": "4ff40b9b"
+        }
+      }
+    },
+    "getTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b07e0a33",
+          "outputHash": "a07b8960"
+        }
+      }
+    },
+    "getTemplatePart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30d29f85",
+          "outputHash": "802f0556"
+        }
+      }
+    },
+    "getTemplatePartsAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84d06f16",
+          "outputHash": "4b1009e1"
+        }
+      }
+    },
+    "getTemplatePartsRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c9908f1",
+          "outputHash": "4bcb326b"
+        }
+      }
+    },
+    "getTemplatesAutosave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56dbbf95",
+          "outputHash": "f16c386f"
+        }
+      }
+    },
+    "getTemplatesRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6d5cc18",
+          "outputHash": "70c86e45"
+        }
+      }
+    },
+    "getTheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a17be22e",
+          "outputHash": "c4d939fc"
+        }
+      }
+    },
+    "getType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3c74c82",
+          "outputHash": "8741aa6a"
+        }
+      }
+    },
+    "getUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e76b7282",
+          "outputHash": "2bcc6cff"
+        }
+      }
+    },
+    "getUsersApplicationPassword": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32d0defe",
+          "outputHash": "ad690bd3"
+        }
+      }
+    },
+    "getWidget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d71b1a5a",
+          "outputHash": "0c95159f"
+        }
+      }
+    },
+    "getWidgetType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6c70758",
+          "outputHash": "5536f030"
+        }
+      }
+    },
+    "getWpPatternCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ebd07fe",
+          "outputHash": "d6f8f738"
+        }
+      }
+    },
+    "listBlockDirectorySearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed11f438",
+          "outputHash": "8d15de46"
+        }
+      }
+    },
+    "listBlockPatternsCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aace0a50",
+          "outputHash": "8a865518"
+        }
+      }
+    },
+    "listBlockPatternsPatterns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3cc17b31",
+          "outputHash": "3c563347"
+        }
+      }
+    },
+    "listBlockTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4669fe09",
+          "outputHash": "f0de5cfa"
+        }
+      }
+    },
+    "listBlocks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae904913",
+          "outputHash": "4614825d"
+        }
+      }
+    },
+    "listBlocksAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21064c45",
+          "outputHash": "cc6f9fb9"
+        }
+      }
+    },
+    "listBlocksRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f63d6768",
+          "outputHash": "89545b90"
+        }
+      }
+    },
+    "listCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "def7317a",
+          "outputHash": "d4a00afd"
+        }
+      }
+    },
+    "listComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59865598",
+          "outputHash": "c57f5287"
+        }
+      }
+    },
+    "listFontCollections": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f07eb09a",
+          "outputHash": "0772d985"
+        }
+      }
+    },
+    "listFontFamilies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "efe75504",
+          "outputHash": "3eae2867"
+        }
+      }
+    },
+    "listFontFamiliesFontFaces": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d28a6f42",
+          "outputHash": "645eadb6"
+        }
+      }
+    },
+    "listGlobalStylesRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "342878f7",
+          "outputHash": "a84e90d5"
+        }
+      }
+    },
+    "listGlobalStylesThemesVariations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75c8df65",
+          "outputHash": "6804a864"
+        }
+      }
+    },
+    "listMedia": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c79e211",
+          "outputHash": "fed8571f"
+        }
+      }
+    },
+    "listMenuItems": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5cfa5a3",
+          "outputHash": "6d1ff9bc"
+        }
+      }
+    },
+    "listMenuItemsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2816bc4",
+          "outputHash": "b8b85a26"
+        }
+      }
+    },
+    "listMenuLocations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "87310454",
+          "outputHash": "53afbe5e"
+        }
+      }
+    },
+    "listMenus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ffe312a",
+          "outputHash": "065da42d"
+        }
+      }
+    },
+    "listNavigation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70ed6a1d",
+          "outputHash": "f9fd0106"
+        }
+      }
+    },
+    "listNavigationAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10b365e7",
+          "outputHash": "4ff4e2c9"
+        }
+      }
+    },
+    "listNavigationRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3ed03f3",
+          "outputHash": "c2191942"
+        }
+      }
+    },
+    "listPages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03d0173b",
+          "outputHash": "cb6ee882"
+        }
+      }
+    },
+    "listPagesAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ddf4a03a",
+          "outputHash": "e27700a2"
+        }
+      }
+    },
+    "listPagesRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e34fe218",
+          "outputHash": "d4eab108"
+        }
+      }
+    },
+    "listPatternDirectoryPatterns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc7e7d1c",
+          "outputHash": "9823fe31"
+        }
+      }
+    },
+    "listPlugins": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36079940",
+          "outputHash": "b835de78"
+        }
+      }
+    },
+    "listPosts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8efd80db",
+          "outputHash": "6fd7bd94"
+        }
+      }
+    },
+    "listPostsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e77e7aa",
+          "outputHash": "980beeb5"
+        }
+      }
+    },
+    "listPostsRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d73b2a2",
+          "outputHash": "6323cad5"
+        }
+      }
+    },
+    "listSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05ee952c",
+          "outputHash": "fd55b719"
+        }
+      }
+    },
+    "listSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd05f673",
+          "outputHash": "fd0ac25f"
+        }
+      }
+    },
+    "listSidebars": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2431cd59",
+          "outputHash": "e3bb280f"
+        }
+      }
+    },
+    "listStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea9748f4",
+          "outputHash": "45f482c2"
+        }
+      }
+    },
+    "listTags": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d94b380a",
+          "outputHash": "e7aa3d25"
+        }
+      }
+    },
+    "listTaxonomies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b811f51a",
+          "outputHash": "e76db0d2"
+        }
+      }
+    },
+    "listTemplateParts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5c17ab5",
+          "outputHash": "8a821f26"
+        }
+      }
+    },
+    "listTemplatePartsAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "140b7d77",
+          "outputHash": "1eddab15"
+        }
+      }
+    },
+    "listTemplatePartsLookup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "712015bb",
+          "outputHash": "601636dc"
+        }
+      }
+    },
+    "listTemplatePartsRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21dd35d8",
+          "outputHash": "443d0724"
+        }
+      }
+    },
+    "listTemplates": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c17e3b52",
+          "outputHash": "302deb6e"
+        }
+      }
+    },
+    "listTemplatesAutosaves": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a85f4462",
+          "outputHash": "0fe28a60"
+        }
+      }
+    },
+    "listTemplatesLookup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28477c3a",
+          "outputHash": "12813176"
+        }
+      }
+    },
+    "listTemplatesRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02b54f05",
+          "outputHash": "e93eda6d"
+        }
+      }
+    },
+    "listThemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5a154bf",
+          "outputHash": "c7155487"
+        }
+      }
+    },
+    "listTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6410c15c",
+          "outputHash": "4e031286"
+        }
+      }
+    },
+    "listUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85edf0d8",
+          "outputHash": "de166dbc"
+        }
+      }
+    },
+    "listUsersApplicationPasswords": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bf1cfe2",
+          "outputHash": "31e1c076"
+        }
+      }
+    },
+    "listUsersApplicationPasswordsIntrospect": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7fed25f",
+          "outputHash": "cf2f5869"
+        }
+      }
+    },
+    "listUsersMe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da02902a",
+          "outputHash": "d3884784"
+        }
+      }
+    },
+    "listWidgetTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d0cf1d7",
+          "outputHash": "552d453b"
+        }
+      }
+    },
+    "listWidgets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9f2a553",
+          "outputHash": "d477a69f"
+        }
+      }
+    },
+    "listWpPatternCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ee7fe07",
+          "outputHash": "1601d942"
+        }
+      }
+    },
+    "updateBlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfaa1ff4",
+          "outputHash": "fa9e7908"
+        }
+      }
+    },
+    "updateBlock2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "121bf21e",
+          "outputHash": "e388ae9e"
+        }
+      }
+    },
+    "updateCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b1f560d",
+          "outputHash": "cd76484f"
+        }
+      }
+    },
+    "updateCategory2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d9a10f7",
+          "outputHash": "47d511d4"
+        }
+      }
+    },
+    "updateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fadee7b",
+          "outputHash": "86f387ff"
+        }
+      }
+    },
+    "updateComment2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86ad7699",
+          "outputHash": "52c374a4"
+        }
+      }
+    },
+    "updateFontFamily": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "695c8945",
+          "outputHash": "9b136c76"
+        }
+      }
+    },
+    "updateFontFamily2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78a82552",
+          "outputHash": "ef934fa2"
+        }
+      }
+    },
+    "updateGlobalStyle": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "962a781d",
+          "outputHash": "ff1a18cf"
+        }
+      }
+    },
+    "updateGlobalStyle2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12de4e48",
+          "outputHash": "b6208913"
+        }
+      }
+    },
+    "updateMedia": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba62da70",
+          "outputHash": "2b84daa7"
+        }
+      }
+    },
+    "updateMedia2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d69339e2",
+          "outputHash": "3ea0c1d5"
+        }
+      }
+    },
+    "updateMenuItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f095118a",
+          "outputHash": "29db822c"
+        }
+      }
+    },
+    "updateMenuItem2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f881750",
+          "outputHash": "6e3ec486"
+        }
+      }
+    },
+    "updateMenus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13caea01",
+          "outputHash": "927896fb"
+        }
+      }
+    },
+    "updateMenus2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1ef4f69",
+          "outputHash": "2825ab9b"
+        }
+      }
+    },
+    "updateNavigation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20c1dc41",
+          "outputHash": "0d4e0b70"
+        }
+      }
+    },
+    "updateNavigation2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f15844ba",
+          "outputHash": "41a941d3"
+        }
+      }
+    },
+    "updatePage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a28cd00e",
+          "outputHash": "8029f365"
+        }
+      }
+    },
+    "updatePage2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4fa951a8",
+          "outputHash": "de3a8aef"
+        }
+      }
+    },
+    "updatePlugin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1b1760b",
+          "outputHash": "b238f3fc"
+        }
+      }
+    },
+    "updatePlugin2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d83bb47e",
+          "outputHash": "2987012a"
+        }
+      }
+    },
+    "updatePost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3490f3a",
+          "outputHash": "3ba7cfd8"
+        }
+      }
+    },
+    "updatePost2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea52968e",
+          "outputHash": "25d3f74f"
+        }
+      }
+    },
+    "updateSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11017f43",
+          "outputHash": "fa5be87b"
+        }
+      }
+    },
+    "updateSettings2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "decb875e",
+          "outputHash": "30ea86f0"
+        }
+      }
+    },
+    "updateSidebar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "09890a71",
+          "outputHash": "6c1e1e06"
+        }
+      }
+    },
+    "updateSidebar2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "242465cf",
+          "outputHash": "e001a2f7"
+        }
+      }
+    },
+    "updateTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8f54ed8",
+          "outputHash": "a5571685"
+        }
+      }
+    },
+    "updateTag2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "93d8248c",
+          "outputHash": "bfe92148"
+        }
+      }
+    },
+    "updateTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80aa895f",
+          "outputHash": "6d1fb24d"
+        }
+      }
+    },
+    "updateTemplate2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bac13f42",
+          "outputHash": "1805dc0c"
+        }
+      }
+    },
+    "updateTemplatePart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "732d75e6",
+          "outputHash": "657f46c7"
+        }
+      }
+    },
+    "updateTemplatePart2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af049c63",
+          "outputHash": "37c9c06b"
+        }
+      }
+    },
+    "updateUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c864c6f",
+          "outputHash": "dab62337"
+        }
+      }
+    },
+    "updateUser2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bed60432",
+          "outputHash": "3b39624f"
+        }
+      }
+    },
+    "updateUsersApplicationPassword": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c8383e9",
+          "outputHash": "af193fc6"
+        }
+      }
+    },
+    "updateUsersApplicationPassword2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a4838a3",
+          "outputHash": "49f8ffad"
+        }
+      }
+    },
+    "updateUsersMe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d63789d",
+          "outputHash": "7aeec188"
+        }
+      }
+    },
+    "updateUsersMe2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c389701a",
+          "outputHash": "31b1a747"
+        }
+      }
+    },
+    "updateWidget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a83c1e5",
+          "outputHash": "bf3f935c"
+        }
+      }
+    },
+    "updateWidget2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d89096d2",
+          "outputHash": "48757555"
+        }
+      }
+    },
+    "updateWpPatternCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af5f8125",
+          "outputHash": "5c52e1db"
+        }
+      }
+    },
+    "updateWpPatternCategory2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c0d4279",
+          "outputHash": "33eda415"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "alertCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f3798b1",
+          "outputHash": "156d918b"
+        }
+      }
+    },
+    "alertCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "842c3874",
+          "outputHash": "a610792f"
+        }
+      }
+    },
+    "alertExecuteResponder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1066241a",
+          "outputHash": "f16fce84"
+        }
+      }
+    },
+    "alertGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2c20810",
+          "outputHash": "f74cb581"
+        }
+      }
+    },
+    "alertGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c707b562",
+          "outputHash": "ec697402"
+        }
+      }
+    },
+    "alertMarkAsRead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9f7e367",
+          "outputHash": "515af19b"
+        }
+      }
+    },
+    "alertMarkAsUnread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "819c3bdf",
+          "outputHash": "aaecad1b"
+        }
+      }
+    },
+    "alertMerge": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0af19107",
+          "outputHash": "af797235"
+        }
+      }
+    },
+    "alertPromote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e77d84e5",
+          "outputHash": "8adf230a"
+        }
+      }
+    },
+    "alertUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "774d5ff9",
+          "outputHash": "cf8ea09c"
+        }
+      }
+    },
+    "caseCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4c7e134",
+          "outputHash": "99b48e1a"
+        }
+      }
+    },
+    "caseCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28e15bff",
+          "outputHash": "dfd08387"
+        }
+      }
+    },
+    "caseExecuteResponder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b3adb72",
+          "outputHash": "86e844e1"
+        }
+      }
+    },
+    "caseGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05972f58",
+          "outputHash": "4c5a4a61"
+        }
+      }
+    },
+    "caseGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "97b41c5f",
+          "outputHash": "8f6240d9"
+        }
+      }
+    },
+    "caseUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b18a217",
+          "outputHash": "4d4763c8"
+        }
+      }
+    },
+    "logCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5572a6fc",
+          "outputHash": "5c1316f9"
+        }
+      }
+    },
+    "logExecuteResponder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0cc123d0",
+          "outputHash": "34d55177"
+        }
+      }
+    },
+    "logGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ab541b3",
+          "outputHash": "6d4a9617"
+        }
+      }
+    },
+    "logGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6656b254",
+          "outputHash": "d82db001"
+        }
+      }
+    },
+    "observableCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5014a8d0",
+          "outputHash": "cc467b3a"
+        }
+      }
+    },
+    "observableCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "522ff116",
+          "outputHash": "ea8317b1"
+        }
+      }
+    },
+    "observableExecuteAnalyzer": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4501ab01",
+          "outputHash": "86cc5234"
+        }
+      }
+    },
+    "observableExecuteResponder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "482b931a",
+          "outputHash": "dd95b589"
+        }
+      }
+    },
+    "observableGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c91a4cac",
+          "outputHash": "249d2634"
+        }
+      }
+    },
+    "observableGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0d10d61",
+          "outputHash": "fb545990"
+        }
+      }
+    },
+    "observableSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5397155",
+          "outputHash": "2646ae12"
+        }
+      }
+    },
+    "observableUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce5560c8",
+          "outputHash": "f4b84232"
+        }
+      }
+    },
+    "taskCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2c81099",
+          "outputHash": "a62ffeca"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99b78870",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskExecuteResponder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac580917",
+          "outputHash": "096aa966"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6678300d",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a25d7a7b",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6281a3eb",
+          "outputHash": "952c0acd"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "249a7a7a",
+          "outputHash": "dc1d8332"
+        }
+      }
+    }
+  }
+}

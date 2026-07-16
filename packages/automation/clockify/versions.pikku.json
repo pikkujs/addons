@@ -1,0 +1,230 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "clientCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad88de7c",
+          "outputHash": "f5f08ca7"
+        }
+      }
+    },
+    "clientDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "55d8d242",
+          "outputHash": "da570a42"
+        }
+      }
+    },
+    "clientGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1af25a5",
+          "outputHash": "af62ce24"
+        }
+      }
+    },
+    "clientGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd532b34",
+          "outputHash": "3e13fcd4"
+        }
+      }
+    },
+    "clientUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c5894ac",
+          "outputHash": "187fd225"
+        }
+      }
+    },
+    "projectCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "465256ab",
+          "outputHash": "c803aa75"
+        }
+      }
+    },
+    "projectDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7455299e",
+          "outputHash": "b19340a2"
+        }
+      }
+    },
+    "projectGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eed33ec3",
+          "outputHash": "cae88529"
+        }
+      }
+    },
+    "projectGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26d9a66e",
+          "outputHash": "60114ef9"
+        }
+      }
+    },
+    "projectUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ebc7c395",
+          "outputHash": "05a54f6e"
+        }
+      }
+    },
+    "tagCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f542dbf",
+          "outputHash": "1ce79691"
+        }
+      }
+    },
+    "tagDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5eef2661",
+          "outputHash": "dfdb5746"
+        }
+      }
+    },
+    "tagGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92e96c66",
+          "outputHash": "ce671717"
+        }
+      }
+    },
+    "tagUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca1b30b7",
+          "outputHash": "f9e7ba00"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae3999f8",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8615bcd9",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0688fcc5",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52c73609",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da192026",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "timeEntryCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d9ba785",
+          "outputHash": "6ea976b2"
+        }
+      }
+    },
+    "timeEntryDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17c9ba3a",
+          "outputHash": "6efa9d3f"
+        }
+      }
+    },
+    "timeEntryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdc75b3f",
+          "outputHash": "a498e887"
+        }
+      }
+    },
+    "timeEntryUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b06a15b3",
+          "outputHash": "e6bcaf3a"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a328f5b6",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "workspaceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8382d05",
+          "outputHash": "a5c891a4"
+        }
+      }
+    }
+  }
+}

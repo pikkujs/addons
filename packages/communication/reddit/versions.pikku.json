@@ -1,0 +1,122 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "postCommentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1387872d",
+          "outputHash": "8637211a"
+        }
+      }
+    },
+    "postCommentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee2a9843",
+          "outputHash": "fc9e14e8"
+        }
+      }
+    },
+    "postCommentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25b41f96",
+          "outputHash": "e118d8bd"
+        }
+      }
+    },
+    "postCommentReply": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38e90057",
+          "outputHash": "23bd61ab"
+        }
+      }
+    },
+    "postCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d409af47",
+          "outputHash": "9be4ea06"
+        }
+      }
+    },
+    "postDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbee7c89",
+          "outputHash": "2140cf36"
+        }
+      }
+    },
+    "postGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c64ec63",
+          "outputHash": "978f51ea"
+        }
+      }
+    },
+    "postGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3aab216",
+          "outputHash": "15a58e52"
+        }
+      }
+    },
+    "postSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b706ad88",
+          "outputHash": "48db6a1b"
+        }
+      }
+    },
+    "profileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f11c9556",
+          "outputHash": "53028dea"
+        }
+      }
+    },
+    "subredditGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0fb0097",
+          "outputHash": "3d8bb0e5"
+        }
+      }
+    },
+    "subredditGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aee7a8e9",
+          "outputHash": "7c8ab2cc"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c208e77",
+          "outputHash": "7f542146"
+        }
+      }
+    }
+  }
+}

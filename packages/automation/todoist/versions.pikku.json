@@ -1,0 +1,257 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "closeTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "561d8b26",
+          "outputHash": "bfa310da"
+        }
+      }
+    },
+    "createComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07aa367c",
+          "outputHash": "1e104594"
+        }
+      }
+    },
+    "createPersonalLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa743c30",
+          "outputHash": "12eb9fbf"
+        }
+      }
+    },
+    "createProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b02e55a6",
+          "outputHash": "0425e231"
+        }
+      }
+    },
+    "createSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2661948d",
+          "outputHash": "1a6eb162"
+        }
+      }
+    },
+    "createTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "782fd84c",
+          "outputHash": "7bc61622"
+        }
+      }
+    },
+    "deleteComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e62387a0",
+          "outputHash": "8cc77aab"
+        }
+      }
+    },
+    "deletePersonalLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d26448f",
+          "outputHash": "ccf9c9e7"
+        }
+      }
+    },
+    "deleteProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5ef696b",
+          "outputHash": "05dcb92a"
+        }
+      }
+    },
+    "deleteSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8a1c843",
+          "outputHash": "0a1f3c11"
+        }
+      }
+    },
+    "deleteTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13f3f208",
+          "outputHash": "e2e684bf"
+        }
+      }
+    },
+    "getActiveTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "727fc282",
+          "outputHash": "6926d6ba"
+        }
+      }
+    },
+    "getActiveTasks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "926a4c1d",
+          "outputHash": "2649e055"
+        }
+      }
+    },
+    "getAllCollaborators": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc25eabc",
+          "outputHash": "1cfe4cdd"
+        }
+      }
+    },
+    "getAllComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9424e5b5",
+          "outputHash": "806fb9e0"
+        }
+      }
+    },
+    "getAllPersonalLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd150bed",
+          "outputHash": "c8dee433"
+        }
+      }
+    },
+    "getAllProjects": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "09f6c728",
+          "outputHash": "95e904ff"
+        }
+      }
+    },
+    "getAllSections": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a6aa5c7",
+          "outputHash": "1780e2d6"
+        }
+      }
+    },
+    "getComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "170354df",
+          "outputHash": "53667b0f"
+        }
+      }
+    },
+    "getPersonalLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95e1e5a1",
+          "outputHash": "1d63266a"
+        }
+      }
+    },
+    "getProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c954a7aa",
+          "outputHash": "f782dcfd"
+        }
+      }
+    },
+    "getSingleSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1980145",
+          "outputHash": "3e627805"
+        }
+      }
+    },
+    "reopenTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a397d90d",
+          "outputHash": "3ef8d481"
+        }
+      }
+    },
+    "updateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc346890",
+          "outputHash": "5de80099"
+        }
+      }
+    },
+    "updatePersonalLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acdbbb6a",
+          "outputHash": "9a2a23a0"
+        }
+      }
+    },
+    "updateProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9a54fe3",
+          "outputHash": "bb15d3f2"
+        }
+      }
+    },
+    "updateSection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10f6ce5e",
+          "outputHash": "67d8202e"
+        }
+      }
+    },
+    "updateTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b7a9dbf",
+          "outputHash": "14ac3959"
+        }
+      }
+    }
+  }
+}

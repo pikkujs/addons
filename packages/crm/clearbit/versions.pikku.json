@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e9ba36fc",
+          "outputHash": "35a793a3"
+        }
+      }
+    },
+    "companyEnrich": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "878b0add",
+          "outputHash": "6ced77be"
+        }
+      }
+    },
+    "personEnrich": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecce4d96",
+          "outputHash": "0d51b7ef"
+        }
+      }
+    }
+  }
+}

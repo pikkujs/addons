@@ -1,0 +1,77 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "certificateDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95937b32",
+          "outputHash": "ac5a67d3"
+        }
+      }
+    },
+    "certificateDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f80f32c4",
+          "outputHash": "28d469cf"
+        }
+      }
+    },
+    "certificateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8271f573",
+          "outputHash": "314bcd6a"
+        }
+      }
+    },
+    "certificateGetMany": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fca4119c",
+          "outputHash": "7dd16f50"
+        }
+      }
+    },
+    "certificateRenew": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "edf16546",
+          "outputHash": "b56c560c"
+        }
+      }
+    },
+    "certificateRequestCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "611a9173",
+          "outputHash": "018df941"
+        }
+      }
+    },
+    "certificateRequestGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dd08c37",
+          "outputHash": "0f733a34"
+        }
+      }
+    },
+    "certificateRequestGetMany": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25e5617a",
+          "outputHash": "d11a7b7d"
+        }
+      }
+    }
+  }
+}

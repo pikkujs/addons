@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13afb0b5",
+          "outputHash": "68f664b4"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "7e6674aa"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d7e3651e",
+          "outputHash": "de6a9e79"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce8698cb",
+          "outputHash": "3cd504b2"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78799abf",
+          "outputHash": "66663af8"
+        }
+      }
+    }
+  }
+}

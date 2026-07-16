@@ -1,0 +1,1220 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "authTokenFromOauth1": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9b8c1c6",
+          "outputHash": "e29fa9cb"
+        }
+      }
+    },
+    "authTokenRevoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c48e3aa3",
+          "outputHash": "ebdc30da"
+        }
+      }
+    },
+    "filePropertiesPropertiesAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c53b309d",
+          "outputHash": "0f407b02"
+        }
+      }
+    },
+    "filePropertiesPropertiesOverwrite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a790054",
+          "outputHash": "019bf5e2"
+        }
+      }
+    },
+    "filePropertiesPropertiesRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc12f2b0",
+          "outputHash": "e28aea28"
+        }
+      }
+    },
+    "filePropertiesPropertiesSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f51eef81",
+          "outputHash": "9a43c50e"
+        }
+      }
+    },
+    "filePropertiesPropertiesSearchContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fffb478e",
+          "outputHash": "b0b1a890"
+        }
+      }
+    },
+    "filePropertiesPropertiesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3adf831",
+          "outputHash": "e0457d09"
+        }
+      }
+    },
+    "filePropertiesTemplatesAddForTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "add8cc1f",
+          "outputHash": "86f68345"
+        }
+      }
+    },
+    "filePropertiesTemplatesAddForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a5351ec2",
+          "outputHash": "05919531"
+        }
+      }
+    },
+    "filePropertiesTemplatesGetForTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f54383f",
+          "outputHash": "8cc39b9c"
+        }
+      }
+    },
+    "filePropertiesTemplatesGetForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0b0134c",
+          "outputHash": "008decf5"
+        }
+      }
+    },
+    "filePropertiesTemplatesListForTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49a890f4",
+          "outputHash": "69056e3f"
+        }
+      }
+    },
+    "filePropertiesTemplatesListForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4369ff0f",
+          "outputHash": "e71abcb8"
+        }
+      }
+    },
+    "filePropertiesTemplatesRemoveForTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1e6910a",
+          "outputHash": "b594ea01"
+        }
+      }
+    },
+    "filePropertiesTemplatesRemoveForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e598a33b",
+          "outputHash": "f9114038"
+        }
+      }
+    },
+    "filePropertiesTemplatesUpdateForTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6962e67",
+          "outputHash": "e2af155e"
+        }
+      }
+    },
+    "filePropertiesTemplatesUpdateForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9803a94",
+          "outputHash": "03cf9756"
+        }
+      }
+    },
+    "fileRequestsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81803ead",
+          "outputHash": "1f470fac"
+        }
+      }
+    },
+    "fileRequestsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f542d8c0",
+          "outputHash": "8b1d59e0"
+        }
+      }
+    },
+    "fileRequestsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b35f689b",
+          "outputHash": "1a3fea02"
+        }
+      }
+    },
+    "fileRequestsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "774e21d0",
+          "outputHash": "b70432b5"
+        }
+      }
+    },
+    "filesAlphaGetMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a9126a1",
+          "outputHash": "464953d4"
+        }
+      }
+    },
+    "filesAlphaUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4180051c",
+          "outputHash": "9042a5c1"
+        }
+      }
+    },
+    "filesCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0137c625",
+          "outputHash": "3d404eb0"
+        }
+      }
+    },
+    "filesCopyBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "949a5147",
+          "outputHash": "3d6d08fb"
+        }
+      }
+    },
+    "filesCopyBatchCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f74b97b0",
+          "outputHash": "77e532fa"
+        }
+      }
+    },
+    "filesCopyReferenceGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "958d17ca",
+          "outputHash": "c7a53a37"
+        }
+      }
+    },
+    "filesCopyReferenceSave": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c678b4e9",
+          "outputHash": "74caacff"
+        }
+      }
+    },
+    "filesCopyV2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02a3ed64",
+          "outputHash": "914f9887"
+        }
+      }
+    },
+    "filesCreateFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03aef16c",
+          "outputHash": "24f648be"
+        }
+      }
+    },
+    "filesCreateFolderBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1418e274",
+          "outputHash": "a347dd03"
+        }
+      }
+    },
+    "filesCreateFolderBatchCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7b9a07e",
+          "outputHash": "9b0bd0d1"
+        }
+      }
+    },
+    "filesCreateFolderV2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f5ac769",
+          "outputHash": "1fc5a459"
+        }
+      }
+    },
+    "filesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6318cbcd",
+          "outputHash": "339983bf"
+        }
+      }
+    },
+    "filesDeleteBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af1d5a9d",
+          "outputHash": "516237d2"
+        }
+      }
+    },
+    "filesDeleteBatchCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4fde74bd",
+          "outputHash": "9d4f0a7f"
+        }
+      }
+    },
+    "filesDeleteV2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a7687e3",
+          "outputHash": "2241dea6"
+        }
+      }
+    },
+    "filesDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "022727d3",
+          "outputHash": "59638af9"
+        }
+      }
+    },
+    "filesDownloadZip": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "644349fc",
+          "outputHash": "4a28ce8f"
+        }
+      }
+    },
+    "filesGetMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22998d59",
+          "outputHash": "93d78092"
+        }
+      }
+    },
+    "filesGetPreview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c750e35",
+          "outputHash": "c483350a"
+        }
+      }
+    },
+    "filesGetTemporaryLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b68ec9dd",
+          "outputHash": "2cdc0b35"
+        }
+      }
+    },
+    "filesGetThumbnail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdad1cba",
+          "outputHash": "0ccc936a"
+        }
+      }
+    },
+    "filesGetThumbnailBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f1fbac4",
+          "outputHash": "0c0e9287"
+        }
+      }
+    },
+    "filesListFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2211630d",
+          "outputHash": "32993cde"
+        }
+      }
+    },
+    "filesListFolderContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a36d57d",
+          "outputHash": "77fab22f"
+        }
+      }
+    },
+    "filesListFolderGetLatestCursor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fcfedabe",
+          "outputHash": "a49c8452"
+        }
+      }
+    },
+    "filesListFolderLongpoll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56f50740",
+          "outputHash": "cb3b1b0c"
+        }
+      }
+    },
+    "filesListRevisions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a6cbed6",
+          "outputHash": "fbcf0e00"
+        }
+      }
+    },
+    "filesMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "afc39377",
+          "outputHash": "a2902435"
+        }
+      }
+    },
+    "filesMoveBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0aa9fbd",
+          "outputHash": "4d615aad"
+        }
+      }
+    },
+    "filesMoveBatchCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "435a8659",
+          "outputHash": "cad93afa"
+        }
+      }
+    },
+    "filesMoveV2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "520134f0",
+          "outputHash": "da9f99ae"
+        }
+      }
+    },
+    "filesPermanentlyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7485e352",
+          "outputHash": "48daf23e"
+        }
+      }
+    },
+    "filesPropertiesAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1bbcb2a",
+          "outputHash": "d9100f8b"
+        }
+      }
+    },
+    "filesPropertiesOverwrite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13258651",
+          "outputHash": "382c0905"
+        }
+      }
+    },
+    "filesPropertiesRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c10f9651",
+          "outputHash": "8fcba5e8"
+        }
+      }
+    },
+    "filesPropertiesTemplateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fdb0ff9",
+          "outputHash": "0b8b2019"
+        }
+      }
+    },
+    "filesPropertiesTemplateList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "009b8089",
+          "outputHash": "ab3faa75"
+        }
+      }
+    },
+    "filesPropertiesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23598612",
+          "outputHash": "3fefee89"
+        }
+      }
+    },
+    "filesRestore": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8c12363",
+          "outputHash": "d1aebf8c"
+        }
+      }
+    },
+    "filesSaveUrl": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b168020",
+          "outputHash": "b613059e"
+        }
+      }
+    },
+    "filesSaveUrlCheckJobStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec7104b7",
+          "outputHash": "7a157f67"
+        }
+      }
+    },
+    "filesSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8078654d",
+          "outputHash": "624ce01d"
+        }
+      }
+    },
+    "filesUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3a5e2bd",
+          "outputHash": "04cd4d91"
+        }
+      }
+    },
+    "filesUploadSessionAppend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d2e669c",
+          "outputHash": "aac2944b"
+        }
+      }
+    },
+    "filesUploadSessionAppendV2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99441d34",
+          "outputHash": "ece6a539"
+        }
+      }
+    },
+    "filesUploadSessionFinish": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cfed13",
+          "outputHash": "1d5b1be0"
+        }
+      }
+    },
+    "filesUploadSessionFinishBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e591f6c2",
+          "outputHash": "7e6f6da2"
+        }
+      }
+    },
+    "filesUploadSessionFinishBatchCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62299df3",
+          "outputHash": "afadb869"
+        }
+      }
+    },
+    "filesUploadSessionStart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c615365",
+          "outputHash": "8010536d"
+        }
+      }
+    },
+    "paperDocsArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8225f10c",
+          "outputHash": "2fe00419"
+        }
+      }
+    },
+    "paperDocsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75ee2c9a",
+          "outputHash": "d30e2abe"
+        }
+      }
+    },
+    "paperDocsDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3495b6ae",
+          "outputHash": "5e3791fd"
+        }
+      }
+    },
+    "paperDocsFolderUsersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce43e2a1",
+          "outputHash": "c42ac4a7"
+        }
+      }
+    },
+    "paperDocsFolderUsersListContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4e0a84f",
+          "outputHash": "912d1938"
+        }
+      }
+    },
+    "paperDocsGetFolderInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbbdb2f7",
+          "outputHash": "360591f5"
+        }
+      }
+    },
+    "paperDocsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79fc9ce5",
+          "outputHash": "cd58cda5"
+        }
+      }
+    },
+    "paperDocsListContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2f9ddf8",
+          "outputHash": "afe583f9"
+        }
+      }
+    },
+    "paperDocsPermanentlyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8acae850",
+          "outputHash": "d018e091"
+        }
+      }
+    },
+    "paperDocsSharingPolicyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d1cfba7",
+          "outputHash": "dd8964fa"
+        }
+      }
+    },
+    "paperDocsSharingPolicySet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6fe927f",
+          "outputHash": "6300239c"
+        }
+      }
+    },
+    "paperDocsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88b85a82",
+          "outputHash": "d15f6cfd"
+        }
+      }
+    },
+    "paperDocsUsersAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4d62187",
+          "outputHash": "5102a04d"
+        }
+      }
+    },
+    "paperDocsUsersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3ea50ba",
+          "outputHash": "de94acf9"
+        }
+      }
+    },
+    "paperDocsUsersListContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c83c4b6f",
+          "outputHash": "c4b6ade3"
+        }
+      }
+    },
+    "paperDocsUsersRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f16bd05c",
+          "outputHash": "ef8bba89"
+        }
+      }
+    },
+    "sharingAddFileMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e9a5f90",
+          "outputHash": "65d9e396"
+        }
+      }
+    },
+    "sharingAddFolderMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb62bd66",
+          "outputHash": "e27ce5d9"
+        }
+      }
+    },
+    "sharingChangeFileMemberAccess": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "996a05ba",
+          "outputHash": "37beba08"
+        }
+      }
+    },
+    "sharingCheckJobStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "747398ee",
+          "outputHash": "4979623f"
+        }
+      }
+    },
+    "sharingCheckRemoveMemberJobStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3e47e68",
+          "outputHash": "4e0dc505"
+        }
+      }
+    },
+    "sharingCheckShareJobStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4c331fc",
+          "outputHash": "84d5074b"
+        }
+      }
+    },
+    "sharingCreateSharedLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3e9ca89",
+          "outputHash": "db81df17"
+        }
+      }
+    },
+    "sharingCreateSharedLinkWithSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "53129ee7",
+          "outputHash": "76ff2c46"
+        }
+      }
+    },
+    "sharingGetFileMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01c6e0de",
+          "outputHash": "bf2a9b76"
+        }
+      }
+    },
+    "sharingGetFileMetadataBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f92cb093",
+          "outputHash": "06c70011"
+        }
+      }
+    },
+    "sharingGetFolderMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2060b21d",
+          "outputHash": "66300b78"
+        }
+      }
+    },
+    "sharingGetSharedLinkFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4f93f48",
+          "outputHash": "918b3e83"
+        }
+      }
+    },
+    "sharingGetSharedLinkMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b457114",
+          "outputHash": "ed70c4b9"
+        }
+      }
+    },
+    "sharingGetSharedLinks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0855dfa6",
+          "outputHash": "9cb7378c"
+        }
+      }
+    },
+    "sharingListFileMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ef240bd",
+          "outputHash": "b97c06f7"
+        }
+      }
+    },
+    "sharingListFileMembersBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48528958",
+          "outputHash": "398c3710"
+        }
+      }
+    },
+    "sharingListFileMembersContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25752046",
+          "outputHash": "6dfa8b35"
+        }
+      }
+    },
+    "sharingListFolderMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23844d21",
+          "outputHash": "4afcded8"
+        }
+      }
+    },
+    "sharingListFolderMembersContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2648e29",
+          "outputHash": "55e1fbc3"
+        }
+      }
+    },
+    "sharingListFolders": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0ac2dc3",
+          "outputHash": "518dbf7c"
+        }
+      }
+    },
+    "sharingListFoldersContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41426fae",
+          "outputHash": "e67f32bf"
+        }
+      }
+    },
+    "sharingListMountableFolders": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "efe181b0",
+          "outputHash": "96ee1bf1"
+        }
+      }
+    },
+    "sharingListMountableFoldersContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3420663d",
+          "outputHash": "8fdbe1c5"
+        }
+      }
+    },
+    "sharingListReceivedFiles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8587509",
+          "outputHash": "d905fc15"
+        }
+      }
+    },
+    "sharingListReceivedFilesContinue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d224ad00",
+          "outputHash": "9a143369"
+        }
+      }
+    },
+    "sharingListSharedLinks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "775b700e",
+          "outputHash": "5552a257"
+        }
+      }
+    },
+    "sharingModifySharedLinkSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16c2a992",
+          "outputHash": "46fe86f8"
+        }
+      }
+    },
+    "sharingMountFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e6e1155",
+          "outputHash": "dffb343f"
+        }
+      }
+    },
+    "sharingRelinquishFileMembership": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d088e92c",
+          "outputHash": "72592961"
+        }
+      }
+    },
+    "sharingRelinquishFolderMembership": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "323867ff",
+          "outputHash": "9688c88c"
+        }
+      }
+    },
+    "sharingRemoveFileMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dd43ffc1",
+          "outputHash": "9ccf6435"
+        }
+      }
+    },
+    "sharingRemoveFileMember2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "058762ac",
+          "outputHash": "c257f0d2"
+        }
+      }
+    },
+    "sharingRemoveFolderMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae6fdee0",
+          "outputHash": "1bd36cc5"
+        }
+      }
+    },
+    "sharingRevokeSharedLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9fcfc58",
+          "outputHash": "3b3273b6"
+        }
+      }
+    },
+    "sharingSetAccessInheritance": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b2547a4",
+          "outputHash": "d3906ff2"
+        }
+      }
+    },
+    "sharingShareFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b1fb8ca",
+          "outputHash": "729e961d"
+        }
+      }
+    },
+    "sharingTransferFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88f5d40e",
+          "outputHash": "c240e22c"
+        }
+      }
+    },
+    "sharingUnmountFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "603a550d",
+          "outputHash": "d54781a8"
+        }
+      }
+    },
+    "sharingUnshareFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7b9c388",
+          "outputHash": "5896d948"
+        }
+      }
+    },
+    "sharingUnshareFolder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e418b3f0",
+          "outputHash": "35926237"
+        }
+      }
+    },
+    "sharingUpdateFileMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf0094c5",
+          "outputHash": "15f9d511"
+        }
+      }
+    },
+    "sharingUpdateFolderMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17d61f5f",
+          "outputHash": "24058e52"
+        }
+      }
+    },
+    "sharingUpdateFolderPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb5f76d2",
+          "outputHash": "5cad9448"
+        }
+      }
+    },
+    "usersGetAccount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5caa1943",
+          "outputHash": "6d3e3095"
+        }
+      }
+    },
+    "usersGetAccountBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4cc45eaf",
+          "outputHash": "6e2c20ee"
+        }
+      }
+    },
+    "usersGetCurrentAccount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ceab91ae",
+          "outputHash": "8f6f5b5a"
+        }
+      }
+    },
+    "usersGetSpaceUsage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2472cb1",
+          "outputHash": "77a644ed"
+        }
+      }
+    }
+  }
+}

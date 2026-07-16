@@ -1,0 +1,230 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "attachmentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c155f7f",
+          "outputHash": "79d7081d"
+        }
+      }
+    },
+    "attachmentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f9022f08",
+          "outputHash": "26b5b78c"
+        }
+      }
+    },
+    "attachmentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40061763",
+          "outputHash": "afcbc32b"
+        }
+      }
+    },
+    "attachmentUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d83c8edb",
+          "outputHash": "cbdc85ce"
+        }
+      }
+    },
+    "businessServiceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e69830cc",
+          "outputHash": "2532703e"
+        }
+      }
+    },
+    "configurationItemGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5140c7fc",
+          "outputHash": "ddfc93e3"
+        }
+      }
+    },
+    "departmentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "51749980",
+          "outputHash": "4055c95a"
+        }
+      }
+    },
+    "dictionaryGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2422818",
+          "outputHash": "7a491d3a"
+        }
+      }
+    },
+    "incidentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3cc07526",
+          "outputHash": "c7d2b203"
+        }
+      }
+    },
+    "incidentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a979e54c",
+          "outputHash": "14a58dc0"
+        }
+      }
+    },
+    "incidentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60e2bb46",
+          "outputHash": "4b0ccdc4"
+        }
+      }
+    },
+    "incidentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7fd94c76",
+          "outputHash": "cd729115"
+        }
+      }
+    },
+    "incidentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "97dd123a",
+          "outputHash": "e6db92a7"
+        }
+      }
+    },
+    "tableRecordCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c66f34f",
+          "outputHash": "8f32a37c"
+        }
+      }
+    },
+    "tableRecordDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e58e5a87",
+          "outputHash": "4e71d217"
+        }
+      }
+    },
+    "tableRecordGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ebf07d71",
+          "outputHash": "681f7dab"
+        }
+      }
+    },
+    "tableRecordGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63d58ff4",
+          "outputHash": "cda202f8"
+        }
+      }
+    },
+    "tableRecordUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38e8aa80",
+          "outputHash": "28ba8148"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d965d334",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "502acb8f",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ffed34df",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b038b50",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "userGroupGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfda63c3",
+          "outputHash": "5f8dafe5"
+        }
+      }
+    },
+    "userRoleGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50e8d534",
+          "outputHash": "5e91f4cf"
+        }
+      }
+    },
+    "userUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3219985",
+          "outputHash": "1bf397be"
+        }
+      }
+    }
+  }
+}

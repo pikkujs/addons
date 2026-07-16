@@ -1,0 +1,7 @@
+export { userCreate } from './functions/userCreate.function.js'
+export { userDelete } from './functions/userDelete.function.js'
+export { userAddTags } from './functions/userAddTags.function.js'
+export { userUnsubscribe } from './functions/userUnsubscribe.function.js'
+export { userResubscribe } from './functions/userResubscribe.function.js'
+export { userAlias } from './functions/userAlias.function.js'
+export { eventTrack } from './functions/eventTrack.function.js'

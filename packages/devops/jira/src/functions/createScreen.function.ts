@@ -1,0 +1,49 @@
+// Screens — This resource represents the screens used to record issue details. Use it to: * get details of all screens. * get details of all the fields available for use on screens. * create screens. * delete screens. * update screens. * add a field to the default screen.
+
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
+
+export const CreateScreenInput = z.object({
+  description: z.string().optional().describe("The description of the screen. The maximum length is 255 characters."),
+  name: z.string().describe("The name of the screen. The name must be unique. The maximum length is 255 characters."),
+})
+
+export const CreateScreenOutput = z.object({
+  description: z.string().optional().describe("The description of the screen."),
+  id: z.number().int().optional().describe("The ID of the screen."),
+  name: z.string().optional().describe("The name of the screen."),
+  scope: z.object({
+    project: z.object({
+      avatarUrls: z.object({
+        "16x16": z.string().url().optional().describe("The URL of the item's 16x16 pixel avatar."),
+        "24x24": z.string().url().optional().describe("The URL of the item's 24x24 pixel avatar."),
+        "32x32": z.string().url().optional().describe("The URL of the item's 32x32 pixel avatar."),
+        "48x48": z.string().url().optional().describe("The URL of the item's 48x48 pixel avatar."),
+      }).optional().describe("The URLs of the project's avatars."),
+      id: z.string().optional().describe("The ID of the project."),
+      key: z.string().optional().describe("The key of the project."),
+      name: z.string().optional().describe("The name of the project."),
+      projectCategory: z.object({
+        description: z.string().optional().describe("The name of the project category."),
+        id: z.string().optional().describe("The ID of the project category."),
+        name: z.string().optional().describe("The description of the project category."),
+        self: z.string().optional().describe("The URL of the project category."),
+      }).optional().describe("The category the project belongs to."),
+      projectTypeKey: z.enum(["software", "service_desk", "business"]).optional().describe("The [project type](https://confluence.atlassian.com/x/GwiiLQ#Jiraapplicationsoverview-Productfeaturesandprojecttypes) of the project."),
+      self: z.string().optional().describe("The URL of the project details."),
+      simplified: z.boolean().optional().describe("Whether or not the project is simplified."),
+    }).optional().describe("The project the item has scope in."),
+    type: z.enum(["PROJECT", "TEMPLATE"]).optional().describe("The type of scope."),
+  }).optional().describe("The scope of the screen."),
+}).describe("A screen.")
+
+export const createScreen = pikkuSessionlessFunc({
+  description: "Creates a screen with a default field tab.\n\n**[Permissions](#permissions) required:** *Administer Jira* [global permission](https://confluence.atlassian.com/x/x4dKLg).",
+  input: CreateScreenInput,
+  output: CreateScreenOutput,
+  errors: [BadRequestError, UnauthorizedError, ForbiddenError],
+  func: async ({ jira }, data) => {
+    return jira.call("POST", "/rest/api/3/screens", data) as any
+  },
+})

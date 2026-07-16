@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "detectDominantLanguage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b8a8e93",
+          "outputHash": "86bade67"
+        }
+      }
+    },
+    "detectEntities": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80767775",
+          "outputHash": "e5d90a78"
+        }
+      }
+    },
+    "detectSentiment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "631f4b32",
+          "outputHash": "9b35983d"
+        }
+      }
+    }
+  }
+}

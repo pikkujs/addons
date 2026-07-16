@@ -1,0 +1,27 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const GroupEventDeclineInput = z.object({
+  "group-id": z.string().describe("The unique identifier of group"),
+  "event-id": z.string().describe("The unique identifier of event"),
+  ProposedNewTime: z.object({
+  end: z.object({
+    dateTime: z.string().optional().describe("A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000)."),
+    timeZone: z.string().nullable().optional().describe("Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values."),
+  }).optional(),
+  start: z.object({
+    dateTime: z.string().optional().describe("A single point of time in a combined date and time representation ({date}T{time}; for example, 2017-08-29T04:00:00.0000000)."),
+    timeZone: z.string().nullable().optional().describe("Represents a time zone, for example, 'Pacific Standard Time'. See below for more possible values."),
+  }).optional(),
+}).optional(),
+  SendResponse: z.boolean().nullable().optional().default(false),
+  Comment: z.string().nullable().optional(),
+})
+
+export const groupEventDecline = pikkuSessionlessFunc({
+  description: "Decline invitation to the specified event in a user calendar. If the event allows proposals for new times, on declining the event, an invitee can choose to suggest an alternative time by including the proposedNewTime parameter. For more information on how to propose a time, and how to receive and accept a new time proposal, see Propose new meeting times.",
+  input: GroupEventDeclineInput,
+  func: async ({ microsoftOutlook }, data) => {
+    return microsoftOutlook.call("POST", "/groups/{group-id}/events/{event-id}/microsoft.graph.decline", data)
+  },
+})

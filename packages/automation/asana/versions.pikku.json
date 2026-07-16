@@ -1,0 +1,203 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "projectCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca033a09",
+          "outputHash": "c803aa75"
+        }
+      }
+    },
+    "projectDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e25ff16c",
+          "outputHash": "b19340a2"
+        }
+      }
+    },
+    "projectGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "803ef82e",
+          "outputHash": "cae88529"
+        }
+      }
+    },
+    "projectGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "777ca5e5",
+          "outputHash": "60114ef9"
+        }
+      }
+    },
+    "projectUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9857e379",
+          "outputHash": "05a54f6e"
+        }
+      }
+    },
+    "subtaskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b10c3945",
+          "outputHash": "39368a6e"
+        }
+      }
+    },
+    "subtaskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca911abb",
+          "outputHash": "08c1547a"
+        }
+      }
+    },
+    "taskCommentAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e0b4b78",
+          "outputHash": "832908b2"
+        }
+      }
+    },
+    "taskCommentRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "652c0937",
+          "outputHash": "1efe99e6"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22aaa4e6",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cb4a68",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e752f179",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "292991e6",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c9f14a1",
+          "outputHash": "3faf1d71"
+        }
+      }
+    },
+    "taskProjectAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "100859be",
+          "outputHash": "2faaf504"
+        }
+      }
+    },
+    "taskProjectRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab716d72",
+          "outputHash": "d2177494"
+        }
+      }
+    },
+    "taskSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ab0738f",
+          "outputHash": "952c0acd"
+        }
+      }
+    },
+    "taskTagAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8231675f",
+          "outputHash": "a946d27e"
+        }
+      }
+    },
+    "taskTagRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c53c3f93",
+          "outputHash": "c4f39a80"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1dab2790",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb91204c",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ec62190",
+          "outputHash": "019ccb2f"
+        }
+      }
+    }
+  }
+}

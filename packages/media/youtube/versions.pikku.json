@@ -1,0 +1,689 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "youtubeAbuseReportsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d246dff",
+          "outputHash": "f93bac3c"
+        }
+      }
+    },
+    "youtubeActivitiesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8790172",
+          "outputHash": "4a6974b9"
+        }
+      }
+    },
+    "youtubeCaptionsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c5ffd21",
+          "outputHash": "d5314242"
+        }
+      }
+    },
+    "youtubeCaptionsDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d74d19ba",
+          "outputHash": "a1abddee"
+        }
+      }
+    },
+    "youtubeCaptionsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "866657ff",
+          "outputHash": "b1682ab0"
+        }
+      }
+    },
+    "youtubeCaptionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c6f2071e",
+          "outputHash": "ef707759"
+        }
+      }
+    },
+    "youtubeCaptionsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70c54165",
+          "outputHash": "09bc0f0b"
+        }
+      }
+    },
+    "youtubeChannelBannersInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b8b8315",
+          "outputHash": "7000deea"
+        }
+      }
+    },
+    "youtubeChannelSectionsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "852ce2fd",
+          "outputHash": "596e956f"
+        }
+      }
+    },
+    "youtubeChannelSectionsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79064854",
+          "outputHash": "a5e4911a"
+        }
+      }
+    },
+    "youtubeChannelSectionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "225f0e26",
+          "outputHash": "77ccdc1f"
+        }
+      }
+    },
+    "youtubeChannelSectionsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "61debd10",
+          "outputHash": "39d48e24"
+        }
+      }
+    },
+    "youtubeChannelsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01cd8c05",
+          "outputHash": "2670abb2"
+        }
+      }
+    },
+    "youtubeChannelsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e9bb73f",
+          "outputHash": "4cbbad6a"
+        }
+      }
+    },
+    "youtubeCommentThreadsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25da9bf6",
+          "outputHash": "8dba948e"
+        }
+      }
+    },
+    "youtubeCommentThreadsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df167c4f",
+          "outputHash": "60dc6a7d"
+        }
+      }
+    },
+    "youtubeCommentsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "997522ea",
+          "outputHash": "cb92ff1d"
+        }
+      }
+    },
+    "youtubeCommentsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "274b4724",
+          "outputHash": "4fd6cbd2"
+        }
+      }
+    },
+    "youtubeCommentsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd7d011a",
+          "outputHash": "59268f7e"
+        }
+      }
+    },
+    "youtubeCommentsMarkAsSpam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c198da4a",
+          "outputHash": "cb889dad"
+        }
+      }
+    },
+    "youtubeCommentsSetModerationStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fe71e36",
+          "outputHash": "a0acbced"
+        }
+      }
+    },
+    "youtubeCommentsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10a011ea",
+          "outputHash": "ad4431ea"
+        }
+      }
+    },
+    "youtubeI18nLanguagesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5cf26edd",
+          "outputHash": "33e66671"
+        }
+      }
+    },
+    "youtubeI18nRegionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e104397",
+          "outputHash": "f86c9a1b"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsBind": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "126ebd88",
+          "outputHash": "9a5071b6"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e42c4bce",
+          "outputHash": "41b0db09"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a2ee002",
+          "outputHash": "2b5a9e4b"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsInsertCuepoint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34794f26",
+          "outputHash": "7bf6c52d"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c607f93",
+          "outputHash": "64da4b0a"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsTransition": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eff635c7",
+          "outputHash": "81a89856"
+        }
+      }
+    },
+    "youtubeLiveBroadcastsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "226638ca",
+          "outputHash": "73c2c353"
+        }
+      }
+    },
+    "youtubeLiveChatBansDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80d1ecaa",
+          "outputHash": "bd59ee23"
+        }
+      }
+    },
+    "youtubeLiveChatBansInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb9cf381",
+          "outputHash": "6f227c88"
+        }
+      }
+    },
+    "youtubeLiveChatMessagesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "748415ed",
+          "outputHash": "4d361e33"
+        }
+      }
+    },
+    "youtubeLiveChatMessagesInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e49fbfa7",
+          "outputHash": "5b73b12b"
+        }
+      }
+    },
+    "youtubeLiveChatMessagesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0700339e",
+          "outputHash": "75cf0a1e"
+        }
+      }
+    },
+    "youtubeLiveChatModeratorsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6dbf48b8",
+          "outputHash": "7db57386"
+        }
+      }
+    },
+    "youtubeLiveChatModeratorsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2f5b5c7",
+          "outputHash": "1e38cda4"
+        }
+      }
+    },
+    "youtubeLiveChatModeratorsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d18ec4f",
+          "outputHash": "c174bd92"
+        }
+      }
+    },
+    "youtubeLiveStreamsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c6bc5d02",
+          "outputHash": "9bca3f9c"
+        }
+      }
+    },
+    "youtubeLiveStreamsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b1aaf7f",
+          "outputHash": "e309fa82"
+        }
+      }
+    },
+    "youtubeLiveStreamsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03f10a25",
+          "outputHash": "3032e2fe"
+        }
+      }
+    },
+    "youtubeLiveStreamsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b030b42",
+          "outputHash": "317a670d"
+        }
+      }
+    },
+    "youtubeMembersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "415cae69",
+          "outputHash": "d34cd13f"
+        }
+      }
+    },
+    "youtubeMembershipsLevelsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7190c73",
+          "outputHash": "088adb1a"
+        }
+      }
+    },
+    "youtubePlaylistItemsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c433e9b9",
+          "outputHash": "48297145"
+        }
+      }
+    },
+    "youtubePlaylistItemsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2537c05a",
+          "outputHash": "6c62f861"
+        }
+      }
+    },
+    "youtubePlaylistItemsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4918011d",
+          "outputHash": "571dd2f7"
+        }
+      }
+    },
+    "youtubePlaylistItemsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "342be025",
+          "outputHash": "b73e858d"
+        }
+      }
+    },
+    "youtubePlaylistsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "624d0b54",
+          "outputHash": "1afcf6c7"
+        }
+      }
+    },
+    "youtubePlaylistsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "baf678f5",
+          "outputHash": "f5633b64"
+        }
+      }
+    },
+    "youtubePlaylistsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c88c6d2",
+          "outputHash": "d54afd9e"
+        }
+      }
+    },
+    "youtubePlaylistsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0dc2b3f0",
+          "outputHash": "77b8ee1f"
+        }
+      }
+    },
+    "youtubeSearchList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38a5d4a9",
+          "outputHash": "8cf0eebe"
+        }
+      }
+    },
+    "youtubeSubscriptionsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f81393dd",
+          "outputHash": "010586bc"
+        }
+      }
+    },
+    "youtubeSubscriptionsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4756ac5",
+          "outputHash": "7dada474"
+        }
+      }
+    },
+    "youtubeSubscriptionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc63e2f8",
+          "outputHash": "fda24f2c"
+        }
+      }
+    },
+    "youtubeSuperChatEventsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9a98c1d",
+          "outputHash": "d7712293"
+        }
+      }
+    },
+    "youtubeTestsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "503e59d1",
+          "outputHash": "1c77a4e9"
+        }
+      }
+    },
+    "youtubeThirdPartyLinksDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38e9c497",
+          "outputHash": "5e7f3efd"
+        }
+      }
+    },
+    "youtubeThirdPartyLinksInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e937cb1b",
+          "outputHash": "acb4b91d"
+        }
+      }
+    },
+    "youtubeThirdPartyLinksList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "775fc0b3",
+          "outputHash": "bc1256b1"
+        }
+      }
+    },
+    "youtubeThirdPartyLinksUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba5a74bf",
+          "outputHash": "936e31e0"
+        }
+      }
+    },
+    "youtubeThumbnailsSet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d835f33",
+          "outputHash": "bff9c563"
+        }
+      }
+    },
+    "youtubeVideoAbuseReportReasonsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22b0d78f",
+          "outputHash": "b175bba3"
+        }
+      }
+    },
+    "youtubeVideoCategoriesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b086d755",
+          "outputHash": "b98c36db"
+        }
+      }
+    },
+    "youtubeVideosDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "611529b8",
+          "outputHash": "9c14b7aa"
+        }
+      }
+    },
+    "youtubeVideosGetRating": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4320efce",
+          "outputHash": "aab023e3"
+        }
+      }
+    },
+    "youtubeVideosInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ece3e59",
+          "outputHash": "92263aa3"
+        }
+      }
+    },
+    "youtubeVideosList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95bdbf67",
+          "outputHash": "63089dca"
+        }
+      }
+    },
+    "youtubeVideosRate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a160622",
+          "outputHash": "bd8449ab"
+        }
+      }
+    },
+    "youtubeVideosReportAbuse": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b99e18a",
+          "outputHash": "e55fb5b9"
+        }
+      }
+    },
+    "youtubeVideosUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ebc634d",
+          "outputHash": "0f6ef58c"
+        }
+      }
+    },
+    "youtubeWatermarksSet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6158985f",
+          "outputHash": "96bcc3ad"
+        }
+      }
+    },
+    "youtubeWatermarksUnset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c15b84a8",
+          "outputHash": "30160911"
+        }
+      }
+    },
+    "youtubeYoutubeV3UpdateCommentThreads": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "918c2697",
+          "outputHash": "86ce1816"
+        }
+      }
+    }
+  }
+}

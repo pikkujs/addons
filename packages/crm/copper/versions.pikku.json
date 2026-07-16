@@ -1,0 +1,293 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "760fe196",
+          "outputHash": "6c646a99"
+        }
+      }
+    },
+    "companyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fab01f38",
+          "outputHash": "7c328c1b"
+        }
+      }
+    },
+    "companyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5e1ad33",
+          "outputHash": "5aaa934a"
+        }
+      }
+    },
+    "companyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da97a048",
+          "outputHash": "d838d993"
+        }
+      }
+    },
+    "companyUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0da153d6",
+          "outputHash": "f75bf7c0"
+        }
+      }
+    },
+    "customerSourceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "119bf7e8",
+          "outputHash": "714b21a3"
+        }
+      }
+    },
+    "leadCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72a81141",
+          "outputHash": "a330332c"
+        }
+      }
+    },
+    "leadDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6be688a",
+          "outputHash": "f19ac67f"
+        }
+      }
+    },
+    "leadGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b9944ab",
+          "outputHash": "e62d87d0"
+        }
+      }
+    },
+    "leadGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "587b664b",
+          "outputHash": "efbbb1a2"
+        }
+      }
+    },
+    "leadUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c931bb4",
+          "outputHash": "9721e991"
+        }
+      }
+    },
+    "opportunityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5bfd1676",
+          "outputHash": "617e6fe2"
+        }
+      }
+    },
+    "opportunityDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae46a031",
+          "outputHash": "410ffef4"
+        }
+      }
+    },
+    "opportunityGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52ec4318",
+          "outputHash": "dbfb51ed"
+        }
+      }
+    },
+    "opportunityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b220cf97",
+          "outputHash": "b26bf611"
+        }
+      }
+    },
+    "opportunityUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "922d4015",
+          "outputHash": "579c98ab"
+        }
+      }
+    },
+    "personCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ba4274e",
+          "outputHash": "ccb709ae"
+        }
+      }
+    },
+    "personDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be1602b7",
+          "outputHash": "1d047d53"
+        }
+      }
+    },
+    "personGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f19f8da",
+          "outputHash": "9a19ec4f"
+        }
+      }
+    },
+    "personGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e14db47",
+          "outputHash": "b90a4680"
+        }
+      }
+    },
+    "personUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9292c982",
+          "outputHash": "624baae3"
+        }
+      }
+    },
+    "projectCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64afcdd2",
+          "outputHash": "c803aa75"
+        }
+      }
+    },
+    "projectDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e25ff16c",
+          "outputHash": "b19340a2"
+        }
+      }
+    },
+    "projectGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "803ef82e",
+          "outputHash": "cae88529"
+        }
+      }
+    },
+    "projectGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65ef0ceb",
+          "outputHash": "60114ef9"
+        }
+      }
+    },
+    "projectUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df30bc58",
+          "outputHash": "05a54f6e"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1c2f299",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cb4a68",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e752f179",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a967b22",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd6a4e3e",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f05bcd3f",
+          "outputHash": "019ccb2f"
+        }
+      }
+    }
+  }
+}

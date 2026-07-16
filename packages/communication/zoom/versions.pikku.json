@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "meetingCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5873854e",
+          "outputHash": "a381c255"
+        }
+      }
+    },
+    "meetingDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06c98399",
+          "outputHash": "19fb93b7"
+        }
+      }
+    },
+    "meetingGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e0e1b945",
+          "outputHash": "48974d9f"
+        }
+      }
+    },
+    "meetingGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "009d0e32",
+          "outputHash": "91a3d41b"
+        }
+      }
+    },
+    "meetingUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74205d7f",
+          "outputHash": "7d6a2efe"
+        }
+      }
+    }
+  }
+}

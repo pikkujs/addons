@@ -1,0 +1,284 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "billCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c8dd9eb",
+          "outputHash": "9e3f8e1c"
+        }
+      }
+    },
+    "billGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8923ece",
+          "outputHash": "0fc91835"
+        }
+      }
+    },
+    "billGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b5a6fa4",
+          "outputHash": "49af7f74"
+        }
+      }
+    },
+    "billUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06d6854f",
+          "outputHash": "15f28a91"
+        }
+      }
+    },
+    "customerCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e22090a",
+          "outputHash": "97fb4156"
+        }
+      }
+    },
+    "customerGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43d5ef21",
+          "outputHash": "23dcdb60"
+        }
+      }
+    },
+    "customerGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e15674b",
+          "outputHash": "0431a608"
+        }
+      }
+    },
+    "customerUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7c7a521",
+          "outputHash": "d5f3c154"
+        }
+      }
+    },
+    "employeeCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4036d90f",
+          "outputHash": "0090b207"
+        }
+      }
+    },
+    "employeeGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b670023",
+          "outputHash": "32b352cd"
+        }
+      }
+    },
+    "employeeGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8ed4854",
+          "outputHash": "6f91bfc4"
+        }
+      }
+    },
+    "employeeUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc7f0c37",
+          "outputHash": "28c02c01"
+        }
+      }
+    },
+    "estimateCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e634aef9",
+          "outputHash": "30b2eb56"
+        }
+      }
+    },
+    "estimateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8e916ea",
+          "outputHash": "db816d11"
+        }
+      }
+    },
+    "estimateGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "726a3b5e",
+          "outputHash": "0d19b4e8"
+        }
+      }
+    },
+    "estimateUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd5f23f9",
+          "outputHash": "bc49dea4"
+        }
+      }
+    },
+    "invoiceCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc04ebb8",
+          "outputHash": "244249f4"
+        }
+      }
+    },
+    "invoiceGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "889a7d07",
+          "outputHash": "28fa192e"
+        }
+      }
+    },
+    "invoiceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "305668da",
+          "outputHash": "92502eda"
+        }
+      }
+    },
+    "invoiceUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed7b3528",
+          "outputHash": "37cc5f54"
+        }
+      }
+    },
+    "itemGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb5baec8",
+          "outputHash": "7c578249"
+        }
+      }
+    },
+    "itemGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f55415f",
+          "outputHash": "0fb8787b"
+        }
+      }
+    },
+    "paymentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0abd724f",
+          "outputHash": "e985eb7f"
+        }
+      }
+    },
+    "paymentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc20f9ac",
+          "outputHash": "f93d4d9f"
+        }
+      }
+    },
+    "paymentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4db183cb",
+          "outputHash": "5f56db28"
+        }
+      }
+    },
+    "paymentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3094e3a",
+          "outputHash": "e5b616ac"
+        }
+      }
+    },
+    "transactionGetReport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "308f9c4e",
+          "outputHash": "ce55f018"
+        }
+      }
+    },
+    "vendorCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db45e4af",
+          "outputHash": "3e1797fe"
+        }
+      }
+    },
+    "vendorGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0c7deb3",
+          "outputHash": "901b8e57"
+        }
+      }
+    },
+    "vendorGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa8f6646",
+          "outputHash": "9c3be4f4"
+        }
+      }
+    },
+    "vendorUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e808f273",
+          "outputHash": "d620f851"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyReportGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "361511c6",
+          "outputHash": "7651b73a"
+        }
+      }
+    },
+    "employeeCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e265e15",
+          "outputHash": "0e66b8de"
+        }
+      }
+    },
+    "employeeDocumentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "380fd696",
+          "outputHash": "899234fd"
+        }
+      }
+    },
+    "employeeDocumentDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f0a4854",
+          "outputHash": "6ea19b03"
+        }
+      }
+    },
+    "employeeDocumentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7f38a92",
+          "outputHash": "bb55e290"
+        }
+      }
+    },
+    "employeeDocumentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef6e4927",
+          "outputHash": "faee3273"
+        }
+      }
+    },
+    "employeeDocumentUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "538d3360",
+          "outputHash": "c47394c0"
+        }
+      }
+    },
+    "employeeGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23732dd4",
+          "outputHash": "32b352cd"
+        }
+      }
+    },
+    "employeeGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2cf4138",
+          "outputHash": "6f91bfc4"
+        }
+      }
+    },
+    "employeeUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba71dd56",
+          "outputHash": "5bac6578"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06081078",
+          "outputHash": "6a7b0fc5"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95b64e15",
+          "outputHash": "4efee225"
+        }
+      }
+    },
+    "fileGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af136ce4",
+          "outputHash": "c98ef73a"
+        }
+      }
+    },
+    "fileUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "081fefd6",
+          "outputHash": "edec8969"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b810f8e",
+          "outputHash": "5570fc12"
+        }
+      }
+    }
+  }
+}

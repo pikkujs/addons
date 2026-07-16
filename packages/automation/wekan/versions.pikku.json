@@ -1,0 +1,221 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "boardCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca32ba6e",
+          "outputHash": "c142d7a6"
+        }
+      }
+    },
+    "boardDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "985d6745",
+          "outputHash": "84c67a45"
+        }
+      }
+    },
+    "boardGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8fbfaf5d",
+          "outputHash": "e083396e"
+        }
+      }
+    },
+    "boardGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08f8b632",
+          "outputHash": "acefdb39"
+        }
+      }
+    },
+    "cardCommentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "217de52f",
+          "outputHash": "b1465191"
+        }
+      }
+    },
+    "cardCommentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05ab4e4d",
+          "outputHash": "c2152f1e"
+        }
+      }
+    },
+    "cardCommentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdf9cf0c",
+          "outputHash": "72bb2d3b"
+        }
+      }
+    },
+    "cardCommentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c50bc1e8",
+          "outputHash": "7e48e255"
+        }
+      }
+    },
+    "cardCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88869b1e",
+          "outputHash": "bf9b4567"
+        }
+      }
+    },
+    "cardDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14772429",
+          "outputHash": "5384e01c"
+        }
+      }
+    },
+    "cardGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "beb7dc3b",
+          "outputHash": "094c43d6"
+        }
+      }
+    },
+    "cardGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ef31573",
+          "outputHash": "6710fa7b"
+        }
+      }
+    },
+    "cardUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "629a238c",
+          "outputHash": "e0d5acd2"
+        }
+      }
+    },
+    "checklistCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae3806b6",
+          "outputHash": "298637ce"
+        }
+      }
+    },
+    "checklistDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc2d2247",
+          "outputHash": "be924f95"
+        }
+      }
+    },
+    "checklistGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45828a74",
+          "outputHash": "97bcb8b8"
+        }
+      }
+    },
+    "checklistGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26a91476",
+          "outputHash": "3aba8e52"
+        }
+      }
+    },
+    "checklistItemDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cb2df75",
+          "outputHash": "d49c5562"
+        }
+      }
+    },
+    "checklistItemGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "691b4468",
+          "outputHash": "25776e3b"
+        }
+      }
+    },
+    "checklistItemUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "272fd1e4",
+          "outputHash": "2c5f123c"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74bb5ef3",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79e95622",
+          "outputHash": "58da4749"
+        }
+      }
+    },
+    "listGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "561d27ed",
+          "outputHash": "a8b5e619"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f49fc56",
+          "outputHash": "3556e648"
+        }
+      }
+    }
+  }
+}

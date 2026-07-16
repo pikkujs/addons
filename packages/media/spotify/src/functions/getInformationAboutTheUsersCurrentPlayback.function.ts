@@ -1,0 +1,147 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { UnauthorizedError, ForbiddenError, TooManyRequestsError } from '@pikku/core/errors'
+
+export const GetInformationAboutTheUsersCurrentPlaybackInput = z.object({
+  market: z.string().optional().describe("An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).\n  If a country code is specified, only content that is available in that market will be returned.<br/>\n  If a valid user access token is specified in the request header, the country associated with\n  the user account will take priority over this parameter.<br/>\n  _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>\n  Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).\n"),
+  additional_types: z.string().optional().describe("A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/>\n_**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/>\nIn addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.\n"),
+})
+
+export const GetInformationAboutTheUsersCurrentPlaybackOutput = z.object({
+  actions: z.object({
+    interrupting_playback: z.boolean().optional().describe("Interrupting playback. Optional field."),
+    pausing: z.boolean().optional().describe("Pausing. Optional field."),
+    resuming: z.boolean().optional().describe("Resuming. Optional field."),
+    seeking: z.boolean().optional().describe("Seeking playback location. Optional field."),
+    skipping_next: z.boolean().optional().describe("Skipping to the next context. Optional field."),
+    skipping_prev: z.boolean().optional().describe("Skipping to the previous context. Optional field."),
+    toggling_repeat_context: z.boolean().optional().describe("Toggling repeat context flag. Optional field."),
+    toggling_repeat_track: z.boolean().optional().describe("Toggling repeat track flag. Optional field."),
+    toggling_shuffle: z.boolean().optional().describe("Toggling shuffle flag. Optional field."),
+    transferring_playback: z.boolean().optional().describe("Transfering playback between devices. Optional field."),
+  }).optional().describe("Allows to update the user interface based on which playback actions are available within the current context.\n"),
+  context: z.object({
+    external_urls: z.object({
+      spotify: z.string().optional().describe("The [Spotify URL](/documentation/web-api/#spotify-uris-and-ids) for the object.\n"),
+    }).optional().describe("External URLs for this context."),
+    href: z.string().optional().describe("A link to the Web API endpoint providing full details of the track."),
+    type: z.string().optional().describe("The object type, e.g. \"artist\", \"playlist\", \"album\", \"show\".\n"),
+    uri: z.string().optional().describe("The [Spotify URI](/documentation/web-api/#spotify-uris-and-ids) for the context.\n"),
+  }).optional().describe("A Context Object. Can be `null`."),
+  currently_playing_type: z.string().optional().describe("The object type of the currently playing item. Can be one of `track`, `episode`, `ad` or `unknown`.\n"),
+  device: z.object({
+    id: z.string().nullable().optional().describe("The device ID."),
+    is_active: z.boolean().optional().describe("If this device is the currently active device."),
+    is_private_session: z.boolean().optional().describe("If this device is currently in a private session."),
+    is_restricted: z.boolean().optional().describe("Whether controlling this device is restricted. At present if this is \"true\" then no Web API commands will be accepted by this device."),
+    name: z.string().optional().describe("A human-readable name for the device. Some devices have a name that the user can configure (e.g. \\\"Loudest speaker\\\") and some devices have a generic name associated with the manufacturer or device model."),
+    type: z.string().optional().describe("Device type, such as \"computer\", \"smartphone\" or \"speaker\"."),
+    volume_percent: z.number().int().min(0).max(100).nullable().optional().describe("The current volume in percent."),
+  }).optional().describe("The device that is currently active.\n"),
+  is_playing: z.boolean().optional().describe("If something is currently playing, return `true`."),
+  item: z.union([z.object({
+    album: z.unknown().optional().describe("The album on which the track appears. The album object includes a link in `href` to full information about the album.\n"),
+    artists: z.array(z.object({
+      external_urls: z.object({
+        spotify: z.string().optional().describe("The [Spotify URL](/documentation/web-api/#spotify-uris-and-ids) for the object.\n"),
+      }).optional().describe("Known external URLs for this artist.\n"),
+      followers: z.object({
+        href: z.string().nullable().optional().describe("This will always be set to null, as the Web API does not support it at the moment.\n"),
+        total: z.number().int().optional().describe("The total number of followers.\n"),
+      }).optional().describe("Information about the followers of the artist.\n"),
+      genres: z.array(z.string()).optional().describe("A list of the genres the artist is associated with. If not yet classified, the array is empty.\n"),
+      href: z.string().optional().describe("A link to the Web API endpoint providing full details of the artist.\n"),
+      id: z.string().optional().describe("The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the artist.\n"),
+      images: z.array(z.object({
+        height: z.number().int().nullable().describe("The image height in pixels.\n"),
+        url: z.string().describe("The source URL of the image.\n"),
+        width: z.number().int().nullable().describe("The image width in pixels.\n"),
+      })).optional().describe("Images of the artist in various sizes, widest first.\n"),
+      name: z.string().optional().describe("The name of the artist.\n"),
+      popularity: z.number().int().optional().describe("The popularity of the artist. The value will be between 0 and 100, with 100 being the most popular. The artist's popularity is calculated from the popularity of all the artist's tracks.\n"),
+      type: z.literal("artist").optional().describe("The object type.\n"),
+      uri: z.string().optional().describe("The [Spotify URI](/documentation/web-api/#spotify-uris-and-ids) for the artist.\n"),
+    })).optional().describe("The artists who performed the track. Each artist object includes a link in `href` to more detailed information about the artist.\n"),
+    available_markets: z.array(z.string()).optional().describe("A list of the countries in which the track can be played, identified by their [ISO 3166-1 alpha-2](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) code.\n"),
+    disc_number: z.number().int().optional().describe("The disc number (usually `1` unless the album consists of more than one disc).\n"),
+    duration_ms: z.number().int().optional().describe("The track length in milliseconds.\n"),
+    explicit: z.boolean().optional().describe("Whether or not the track has explicit lyrics ( `true` = yes it does; `false` = no it does not OR unknown).\n"),
+    external_ids: z.object({
+      ean: z.string().optional().describe("[International Article Number](http://en.wikipedia.org/wiki/International_Article_Number_%28EAN%29)\n"),
+      isrc: z.string().optional().describe("[International Standard Recording Code](http://en.wikipedia.org/wiki/International_Standard_Recording_Code)\n"),
+      upc: z.string().optional().describe("[Universal Product Code](http://en.wikipedia.org/wiki/Universal_Product_Code)\n"),
+    }).optional().describe("Known external IDs for the track.\n"),
+    external_urls: z.object({
+      spotify: z.string().optional().describe("The [Spotify URL](/documentation/web-api/#spotify-uris-and-ids) for the object.\n"),
+    }).optional().describe("Known external URLs for this track.\n"),
+    href: z.string().optional().describe("A link to the Web API endpoint providing full details of the track.\n"),
+    id: z.string().optional().describe("The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.\n"),
+    is_local: z.boolean().optional().describe("Whether or not the track is from a local file.\n"),
+    is_playable: z.boolean().optional().describe("Part of the response when [Track Relinking](/documentation/general/guides/track-relinking-guide/) is applied. If `true`, the track is playable in the given market. Otherwise `false`.\n"),
+    linked_from: z.object({
+      external_urls: z.object({
+        spotify: z.string().optional().describe("The [Spotify URL](/documentation/web-api/#spotify-uris-and-ids) for the object.\n"),
+      }).optional().describe("Known external URLs for this track.\n"),
+      href: z.string().optional().describe("A link to the Web API endpoint providing full details of the track.\n"),
+      id: z.string().optional().describe("The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.\n"),
+      type: z.string().optional().describe("The object type: \"track\".\n"),
+      uri: z.string().optional().describe("The [Spotify URI](/documentation/web-api/#spotify-uris-and-ids) for the track.\n"),
+    }).optional().describe("Part of the response when [Track Relinking](/documentation/general/guides/track-relinking-guide/) is applied and is only part of the response if the track linking, in fact, exists. The requested track has been replaced with a different track. The track in the `linked_from` object contains information about the originally requested track."),
+    name: z.string().optional().describe("The name of the track.\n"),
+    popularity: z.number().int().optional().describe("The popularity of the track. The value will be between 0 and 100, with 100 being the most popular.<br/>The popularity of a track is a value between 0 and 100, with 100 being the most popular. The popularity is calculated by algorithm and is based, in the most part, on the total number of plays the track has had and how recent those plays are.<br/>Generally speaking, songs that are being played a lot now will have a higher popularity than songs that were played a lot in the past. Duplicate tracks (e.g. the same track from a single and an album) are rated independently. Artist and album popularity is derived mathematically from track popularity. _**Note**: the popularity value may lag actual popularity by a few days: the value is not updated in real time._\n"),
+    preview_url: z.string().optional().describe("A link to a 30 second preview (MP3 format) of the track. Can be `null`\n"),
+    restrictions: z.object({
+      reason: z.string().optional().describe("The reason for the restriction. Supported values:\n- `market` - The content item is not available in the given market.\n- `product` - The content item is not available for the user's subscription type.\n- `explicit` - The content item is explicit and the user's account is set to not play explicit content.\n\nAdditional reasons may be added in the future.\n**Note**: If you use this field, make sure that your application safely handles unknown values.\n"),
+    }).optional().describe("Included in the response when a content restriction is applied.\n"),
+    track_number: z.number().int().optional().describe("The number of the track. If an album has several discs, the track number is the number on the specified disc.\n"),
+    type: z.literal("track").optional().describe("The object type: \"track\".\n"),
+    uri: z.string().optional().describe("The [Spotify URI](/documentation/web-api/#spotify-uris-and-ids) for the track.\n"),
+  }), z.object({
+    audio_preview_url: z.string().describe("A URL to a 30 second preview (MP3 format) of the episode. `null` if not available.\n"),
+    description: z.string().describe("A description of the episode. HTML tags are stripped away from this field, use `html_description` field in case HTML tags are needed.\n"),
+    duration_ms: z.number().int().describe("The episode length in milliseconds.\n"),
+    explicit: z.boolean().describe("Whether or not the episode has explicit content (true = yes it does; false = no it does not OR unknown).\n"),
+    external_urls: z.object({
+      spotify: z.string().optional().describe("The [Spotify URL](/documentation/web-api/#spotify-uris-and-ids) for the object.\n"),
+    }).describe("External URLs for this episode.\n"),
+    href: z.string().describe("A link to the Web API endpoint providing full details of the episode.\n"),
+    html_description: z.string().describe("A description of the episode. This field may contain HTML tags.\n"),
+    id: z.string().describe("The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the episode.\n"),
+    images: z.array(z.object({
+      height: z.number().int().nullable().describe("The image height in pixels.\n"),
+      url: z.string().describe("The source URL of the image.\n"),
+      width: z.number().int().nullable().describe("The image width in pixels.\n"),
+    })).describe("The cover art for the episode in various sizes, widest first.\n"),
+    is_externally_hosted: z.boolean().describe("True if the episode is hosted outside of Spotify's CDN.\n"),
+    is_playable: z.boolean().describe("True if the episode is playable in the given market. Otherwise false.\n"),
+    language: z.string().optional().describe("The language used in the episode, identified by a [ISO 639](https://en.wikipedia.org/wiki/ISO_639) code. This field is deprecated and might be removed in the future. Please use the `languages` field instead.\n"),
+    languages: z.array(z.string()).describe("A list of the languages used in the episode, identified by their [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639) code.\n"),
+    name: z.string().describe("The name of the episode.\n"),
+    release_date: z.string().describe("The date the episode was first released, for example `\"1981-12-15\"`. Depending on the precision, it might be shown as `\"1981\"` or `\"1981-12\"`.\n"),
+    release_date_precision: z.enum(["year", "month", "day"]).describe("The precision with which `release_date` value is known.\n"),
+    restrictions: z.object({
+      reason: z.string().optional().describe("The reason for the restriction. Supported values:\n- `market` - The content item is not available in the given market.\n- `product` - The content item is not available for the user's subscription type.\n- `explicit` - The content item is explicit and the user's account is set to not play explicit content.\n\nAdditional reasons may be added in the future.\n**Note**: If you use this field, make sure that your application safely handles unknown values.\n"),
+    }).optional().describe("Included in the response when a content restriction is applied.\n"),
+    resume_point: z.object({
+      fully_played: z.boolean().optional().describe("Whether or not the episode has been fully played by the user.\n"),
+      resume_position_ms: z.number().int().optional().describe("The user's most recent position in the episode in milliseconds.\n"),
+    }).describe("The user's most recent position in the episode. Set if the supplied access token is a user token and has the scope 'user-read-playback-position'.\n"),
+    type: z.literal("episode").describe("The object type.\n"),
+    uri: z.string().describe("The [Spotify URI](/documentation/web-api/#spotify-uris-and-ids) for the episode.\n"),
+    show: z.unknown().describe("The show on which the episode belongs.\n"),
+  })]).optional().describe("The currently playing track or episode. Can be `null`."),
+  progress_ms: z.number().int().optional().describe("Progress into the currently playing track or episode. Can be `null`."),
+  repeat_state: z.string().optional().describe("off, track, context"),
+  shuffle_state: z.boolean().optional().describe("If shuffle is on or off."),
+  timestamp: z.number().int().optional().describe("Unix Millisecond Timestamp when data was fetched."),
+})
+
+export const getInformationAboutTheUsersCurrentPlayback = pikkuSessionlessFunc({
+  description: "Get information about the user’s current playback state, including track or episode, progress, and active device.",
+  input: GetInformationAboutTheUsersCurrentPlaybackInput,
+  output: GetInformationAboutTheUsersCurrentPlaybackOutput,
+  errors: [UnauthorizedError, ForbiddenError, TooManyRequestsError],
+  func: async ({ spotify }, data) => {
+    return spotify.call("GET", "/me/player", data) as any
+  },
+})

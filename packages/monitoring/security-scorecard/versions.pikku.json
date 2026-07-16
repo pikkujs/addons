@@ -1,0 +1,176 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyGetFactor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b321eb8",
+          "outputHash": "ed635d2b"
+        }
+      }
+    },
+    "companyGetFactorHistorical": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f58ce28",
+          "outputHash": "e71b1278"
+        }
+      }
+    },
+    "companyGetHistoricalScore": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f8a089e",
+          "outputHash": "fbcfc744"
+        }
+      }
+    },
+    "companyGetScorePlan": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "445da23f",
+          "outputHash": "33b9f22c"
+        }
+      }
+    },
+    "companyGetScorecard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3f2151e",
+          "outputHash": "37406dee"
+        }
+      }
+    },
+    "industryGetFactor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1cac682",
+          "outputHash": "aae30945"
+        }
+      }
+    },
+    "industryGetFactorHistorical": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "711836e3",
+          "outputHash": "b0cd4134"
+        }
+      }
+    },
+    "industryGetScore": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "299b8ef4",
+          "outputHash": "8207563c"
+        }
+      }
+    },
+    "inviteCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "428e47ab",
+          "outputHash": "358fabf8"
+        }
+      }
+    },
+    "portfolioCompanyAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92a2e9e7",
+          "outputHash": "35a6aafd"
+        }
+      }
+    },
+    "portfolioCompanyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb6389c5",
+          "outputHash": "074279c0"
+        }
+      }
+    },
+    "portfolioCompanyRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e45d3968",
+          "outputHash": "4aca9c32"
+        }
+      }
+    },
+    "portfolioCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bca58f3b",
+          "outputHash": "7493b721"
+        }
+      }
+    },
+    "portfolioDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "164a178d",
+          "outputHash": "76d41ac6"
+        }
+      }
+    },
+    "portfolioGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5987422e",
+          "outputHash": "1608961f"
+        }
+      }
+    },
+    "portfolioUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f3cf960",
+          "outputHash": "b4b4adf0"
+        }
+      }
+    },
+    "reportDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "656fd081",
+          "outputHash": "49ffaeb3"
+        }
+      }
+    },
+    "reportGenerate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c590345",
+          "outputHash": "38765b49"
+        }
+      }
+    },
+    "reportGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfe58fd1",
+          "outputHash": "5e615749"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+export { taskGetAll } from './functions/taskGetAll.function.js'
+export { taskCreate } from './functions/taskCreate.function.js'
+export { taskGet } from './functions/taskGet.function.js'
+export { taskUpdate } from './functions/taskUpdate.function.js'
+export { taskDelete } from './functions/taskDelete.function.js'

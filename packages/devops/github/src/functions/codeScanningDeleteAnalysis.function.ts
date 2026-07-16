@@ -1,0 +1,27 @@
+// code-scanning — Retrieve code scanning alerts from a repository.
+
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { BadRequestError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
+
+export const CodeScanningDeleteAnalysisInput = z.object({
+  owner: z.string().describe("The account owner of the repository. The name is not case sensitive."),
+  repo: z.string().describe("The name of the repository. The name is not case sensitive."),
+  analysis_id: z.number().int().describe("The ID of the analysis, as returned from the `GET /repos/{owner}/{repo}/code-scanning/analyses` operation."),
+  confirm_delete: z.string().nullable().optional().describe("Allow deletion if the specified analysis is the last in a set. If you attempt to delete the final analysis in a set without setting this parameter to `true`, you'll get a 400 response with the message: `Analysis is last of its type and deletion may result in the loss of historical alert data. Please specify confirm_delete.`"),
+})
+
+export const CodeScanningDeleteAnalysisOutput = z.object({
+  confirm_delete_url: z.string().url().nullable().describe("Next deletable analysis in chain, with last analysis deletion confirmation"),
+  next_analysis_url: z.string().url().nullable().describe("Next deletable analysis in chain, without last analysis deletion confirmation"),
+}).describe("Successful deletion of a code scanning analysis")
+
+export const codeScanningDeleteAnalysis = pikkuSessionlessFunc({
+  description: "Deletes a specified code scanning analysis from a repository. For\nprivate repositories, you must use an access token with the `repo` scope. For public repositories,\nyou must use an access token with `public_repo` scope.\nGitHub Apps must have the `security_events` write permission to use this endpoint.\n\nYou can delete one analysis at a time.\nTo delete a series of analyses, start with the most recent analysis and work backwards.\nConceptually, the process is similar to the undo function in a text editor.\n\nWhen you list the analyses for a repository,\none or more will be identified as deletable in the response:\n\n```\n\"deletable\": true\n```\n\nAn analysis is deletable when it's the most recent in a set of analyses.\nTypically, a repository will have multiple sets of analyses\nfor each enabled code scanning tool,\nwhere a set is determined by a unique combination of analysis values:\n\n* `ref`\n* `tool`\n* `category`\n\nIf you attempt to delete an analysis that is not the most recent in a set,\nyou'll get a 400 response with the message:\n\n```\nAnalysis specified is not deletable.\n```\n\nThe response from a successful `DELETE` operation provides you with\ntwo alternative URLs for deleting the next analysis in the set:\n`next_analysis_url` and `confirm_delete_url`.\nUse the `next_analysis_url` URL if you want to avoid accidentally deleting the final analysis\nin a set. This is a useful option if you want to preserve at least one analysis\nfor the specified tool in your repository.\nUse the `confirm_delete_url` URL if you are content to remove all analyses for a tool.\nWhen you delete the last analysis in a set, the value of `next_analysis_url` and `confirm_delete_url`\nin the 200 response is `null`.\n\nAs an example of the deletion process,\nlet's imagine that you added a workflow that configured a particular code scanning tool\nto analyze the code in a repository. This tool has added 15 analyses:\n10 on the default branch, and another 5 on a topic branch.\nYou therefore have two separate sets of analyses for this tool.\nYou've now decided that you want to remove all of the analyses for the tool.\nTo do this you must make 15 separate deletion requests.\nTo start, you must find an analysis that's identified as deletable.\nEach set of analyses always has one that's identified as deletable.\nHaving found the deletable analysis for one of the two sets,\ndelete this analysis and then continue deleting the next analysis in the set until they're all deleted.\nThen repeat the process for the second set.\nThe procedure therefore consists of a nested loop:\n\n**Outer loop**:\n* List the analyses for the repository, filtered by tool.\n* Parse this list to find a deletable analysis. If found:\n\n  **Inner loop**:\n  * Delete the identified analysis.\n  * Parse the response for the value of `confirm_delete_url` and, if found, use this in the next iteration.\n\nThe above process assumes that you want to remove all trace of the tool's analyses from the GitHub user interface, for the specified repository, and it therefore uses the `confirm_delete_url` value. Alternatively, you could use the `next_analysis_url` value, which would leave the last analysis in each set undeleted to avoid removing a tool's analysis entirely.",
+  input: CodeScanningDeleteAnalysisInput,
+  output: CodeScanningDeleteAnalysisOutput,
+  errors: [BadRequestError, ForbiddenError, NotFoundError],
+  func: async ({ github }, data) => {
+    return github.call("DELETE", "/repos/{owner}/{repo}/code-scanning/analyses/{analysis_id}", data) as any
+  },
+})

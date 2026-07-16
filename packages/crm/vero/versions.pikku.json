@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "eventTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e2612b3",
+          "outputHash": "3374750c"
+        }
+      }
+    },
+    "userAddTags": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63f9a31c",
+          "outputHash": "d88c0f54"
+        }
+      }
+    },
+    "userAlias": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d7aef5f",
+          "outputHash": "9153a4a7"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2e015a9",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72d95386",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userResubscribe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76a24985",
+          "outputHash": "3515ece3"
+        }
+      }
+    },
+    "userUnsubscribe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ea0dd30",
+          "outputHash": "fb0bc308"
+        }
+      }
+    }
+  }
+}

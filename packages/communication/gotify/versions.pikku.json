@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "messageCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4c38afe",
+          "outputHash": "caeedffb"
+        }
+      }
+    },
+    "messageDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d6b2be2",
+          "outputHash": "634b8027"
+        }
+      }
+    },
+    "messageGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d5a468a",
+          "outputHash": "a6bf0427"
+        }
+      }
+    }
+  }
+}

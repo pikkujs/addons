@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "campaignCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e0d19d4d",
+          "outputHash": "d80f66ca"
+        }
+      }
+    },
+    "subscriberAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54936a21",
+          "outputHash": "0cf605df"
+        }
+      }
+    },
+    "subscriberCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99701d93",
+          "outputHash": "4fcb8222"
+        }
+      }
+    },
+    "subscriberDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07058013",
+          "outputHash": "a9c89a4d"
+        }
+      }
+    },
+    "subscriberRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0f364fd",
+          "outputHash": "cf27406e"
+        }
+      }
+    },
+    "subscriberStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fc77df82",
+          "outputHash": "24c15317"
+        }
+      }
+    }
+  }
+}

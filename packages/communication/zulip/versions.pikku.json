@@ -1,0 +1,149 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "messageDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d6b2be2",
+          "outputHash": "634b8027"
+        }
+      }
+    },
+    "messageGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8835a17",
+          "outputHash": "17980d7a"
+        }
+      }
+    },
+    "messageSendPrivate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de0b51e1",
+          "outputHash": "08de5de0"
+        }
+      }
+    },
+    "messageSendStream": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0e29d33",
+          "outputHash": "339ba86b"
+        }
+      }
+    },
+    "messageUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4570488",
+          "outputHash": "7bd79985"
+        }
+      }
+    },
+    "messageUploadFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "116fb929",
+          "outputHash": "9c1ea838"
+        }
+      }
+    },
+    "streamCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf70650a",
+          "outputHash": "353bb827"
+        }
+      }
+    },
+    "streamDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bde1bcb7",
+          "outputHash": "f8135abd"
+        }
+      }
+    },
+    "streamGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0ff73e3",
+          "outputHash": "cc7c79b1"
+        }
+      }
+    },
+    "streamGetSubscribed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "857acad9",
+          "outputHash": "e9b227fb"
+        }
+      }
+    },
+    "streamUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59b6aae4",
+          "outputHash": "b5cc94cd"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e360242",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDeactivate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e23e1b9a",
+          "outputHash": "81677de0"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b20084b8",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8a1e416",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "userUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "149a5bd2",
+          "outputHash": "1bf397be"
+        }
+      }
+    }
+  }
+}

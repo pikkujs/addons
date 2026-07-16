@@ -1,0 +1,374 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "attachmentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b7641cf",
+          "outputHash": "80ccedc3"
+        }
+      }
+    },
+    "attachmentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81aadd8f",
+          "outputHash": "79d7081d"
+        }
+      }
+    },
+    "attachmentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbf41183",
+          "outputHash": "26b5b78c"
+        }
+      }
+    },
+    "attachmentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62292dd1",
+          "outputHash": "afcbc32b"
+        }
+      }
+    },
+    "boardCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e9615fd",
+          "outputHash": "c142d7a6"
+        }
+      }
+    },
+    "boardDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a19633c3",
+          "outputHash": "84c67a45"
+        }
+      }
+    },
+    "boardGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a339256d",
+          "outputHash": "e083396e"
+        }
+      }
+    },
+    "boardMemberAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5176ac18",
+          "outputHash": "2aaac7ac"
+        }
+      }
+    },
+    "boardMemberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3a67baa",
+          "outputHash": "2c7e9854"
+        }
+      }
+    },
+    "boardMemberInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c40ce97d",
+          "outputHash": "e3f5c704"
+        }
+      }
+    },
+    "boardMemberRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "536d996a",
+          "outputHash": "7278d603"
+        }
+      }
+    },
+    "boardUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74e83f32",
+          "outputHash": "f27fe758"
+        }
+      }
+    },
+    "cardCommentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c558d2ca",
+          "outputHash": "b1465191"
+        }
+      }
+    },
+    "cardCommentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d30e87b3",
+          "outputHash": "c2152f1e"
+        }
+      }
+    },
+    "cardCommentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99b01004",
+          "outputHash": "f4917e06"
+        }
+      }
+    },
+    "cardCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c217796a",
+          "outputHash": "bf9b4567"
+        }
+      }
+    },
+    "cardDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "746f27d2",
+          "outputHash": "5384e01c"
+        }
+      }
+    },
+    "cardGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a74cf50",
+          "outputHash": "094c43d6"
+        }
+      }
+    },
+    "cardUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f483fad",
+          "outputHash": "e0d5acd2"
+        }
+      }
+    },
+    "checklistCompletedCheckItems": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9919224",
+          "outputHash": "18f766b2"
+        }
+      }
+    },
+    "checklistCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ec72a63",
+          "outputHash": "298637ce"
+        }
+      }
+    },
+    "checklistCreateCheckItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32311d6c",
+          "outputHash": "7293a9c9"
+        }
+      }
+    },
+    "checklistDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a75aeb6a",
+          "outputHash": "be924f95"
+        }
+      }
+    },
+    "checklistDeleteCheckItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1c79464",
+          "outputHash": "67e75085"
+        }
+      }
+    },
+    "checklistGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f59d26a6",
+          "outputHash": "97bcb8b8"
+        }
+      }
+    },
+    "checklistGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77e8f258",
+          "outputHash": "3aba8e52"
+        }
+      }
+    },
+    "checklistGetCheckItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e03b318",
+          "outputHash": "5e6ea2c2"
+        }
+      }
+    },
+    "checklistUpdateCheckItem": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcf06e42",
+          "outputHash": "20be9e63"
+        }
+      }
+    },
+    "labelAddLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84253a60",
+          "outputHash": "480385ef"
+        }
+      }
+    },
+    "labelCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5b5a93d",
+          "outputHash": "65ab4a1e"
+        }
+      }
+    },
+    "labelDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20cb7e78",
+          "outputHash": "36a63d37"
+        }
+      }
+    },
+    "labelGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78a429b3",
+          "outputHash": "91a7569f"
+        }
+      }
+    },
+    "labelGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "273dbf7b",
+          "outputHash": "d7fe4c83"
+        }
+      }
+    },
+    "labelRemoveLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f2bbab1",
+          "outputHash": "26860418"
+        }
+      }
+    },
+    "labelUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9ebd479",
+          "outputHash": "0d98c122"
+        }
+      }
+    },
+    "listArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6f956ba",
+          "outputHash": "9d79f610"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e20fb790",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c875323",
+          "outputHash": "a8b5e619"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb6c1453",
+          "outputHash": "3556e648"
+        }
+      }
+    },
+    "listGetCards": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "308f2043",
+          "outputHash": "a1aeb39b"
+        }
+      }
+    },
+    "listUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e529e833",
+          "outputHash": "873c6907"
+        }
+      }
+    }
+  }
+}

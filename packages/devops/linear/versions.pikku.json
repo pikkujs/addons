@@ -1,0 +1,68 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "commentAddComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9800ab94",
+          "outputHash": "ee0f1e71"
+        }
+      }
+    },
+    "issueAddLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2b29ef3",
+          "outputHash": "51cab0d4"
+        }
+      }
+    },
+    "issueCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ceb7e011",
+          "outputHash": "4b4b7f40"
+        }
+      }
+    },
+    "issueDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f7fd923",
+          "outputHash": "d165ee8c"
+        }
+      }
+    },
+    "issueGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4893900",
+          "outputHash": "2ede1991"
+        }
+      }
+    },
+    "issueGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d46257e6",
+          "outputHash": "68ec726f"
+        }
+      }
+    },
+    "issueUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e628a5cb",
+          "outputHash": "4a53c6b0"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const ListTicketFieldOptionsInput = z.object({
+  ticket_field_id: z.number().int().describe("The ID of the ticket field. Example: 34"),
+})
+
+export const ListTicketFieldOptionsOutput = z.object({
+  count: z.number().int().optional().describe("Total count of records retrieved"),
+  custom_field_options: z.array(z.object({
+    allow_solving: z.boolean().optional().describe("Whether selecting this option allows solving the ticket when the field is required to solve"),
+    id: z.number().int().optional().describe("Automatically assigned upon creation"),
+    name: z.string().describe("Name of the dropdown option"),
+    position: z.number().int().optional().describe("Position of the dropdown option"),
+    raw_name: z.string().optional().describe("Raw name of the dropdown option"),
+    url: z.string().optional().describe("URL of the dropdown option"),
+    value: z.string().describe("Value of the dropdown option"),
+  })).optional(),
+  next_page: z.string().nullable().optional().describe("URL of the next page"),
+  previous_page: z.string().nullable().optional().describe("URL of the previous page"),
+})
+
+export const listTicketFieldOptions = pikkuSessionlessFunc({
+  description: "Returns a list of custom ticket field options for the given drop-down ticket field.\n\n#### Allowed For\n\n* Agents\n\n#### Pagination\n\n* Cursor pagination (recommended)\n* Offset pagination\n\nSee [Pagination](/api-reference/introduction/pagination/).",
+  input: ListTicketFieldOptionsInput,
+  output: ListTicketFieldOptionsOutput,
+  func: async ({ zendesk }, data) => {
+    return zendesk.call("GET", "/api/v2/ticket_fields/{ticket_field_id}/options", data) as any
+  },
+})
