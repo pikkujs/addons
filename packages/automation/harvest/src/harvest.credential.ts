@@ -21,9 +21,11 @@ wireCredential({
   oauth2: {
     appCredentialSecretId: 'HARVEST_OAUTH_APP',
     tokenSecretId: 'HARVEST_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://id.getharvest.com/oauth2/authorize',
+    tokenUrl: 'https://id.getharvest.com/api/v2/oauth2/token',
+    scopes: [
+      'harvest:all',
+    ],
   },
 })
 

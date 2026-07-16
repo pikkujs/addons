@@ -21,9 +21,9 @@ wireCredential({
   oauth2: {
     appCredentialSecretId: 'RAINDROP_OAUTH_APP',
     tokenSecretId: 'RAINDROP_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://raindrop.io/oauth/authorize',
+    tokenUrl: 'https://raindrop.io/oauth/access_token',
+    scopes: [],
   },
 })
 

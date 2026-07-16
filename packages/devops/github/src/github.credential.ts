@@ -16,9 +16,21 @@ wireCredential({
   oauth2: {
     appCredentialSecretId: 'GITHUB_OAUTH_APP',
     tokenSecretId: 'GITHUB_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    // NOTE: GitHub OAuth Apps never issue refresh tokens (that is a GitHub
+    // Apps feature), so `refreshToken` is always absent here. OAuth App
+    // tokens do not expire, so no refresh is needed.
+    authorizationUrl: 'https://github.com/login/oauth/authorize',
+    tokenUrl: 'https://github.com/login/oauth/access_token',
+    scopes: [
+      'repo',
+      'read:org',
+      'gist',
+      'user',
+      'workflow',
+      'notifications',
+      'project',
+      'read:packages',
+    ],
   },
 })
 
