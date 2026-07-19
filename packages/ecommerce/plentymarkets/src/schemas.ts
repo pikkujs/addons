@@ -22,6 +22,18 @@ export const PlentyOrderItemSchema = z.object({
   shippingProfileId: z.number().optional(),
 })
 
+// Order reference relations. Populated only when the order is fetched `with`
+// orderReferences / reverseOrderReferences (see getOrder's withRelations option).
+// A credit note points back at its parent order via orderReferences[].originOrderId;
+// a parent order lists its credit notes via reverseOrderReferences[].orderId.
+export const PlentyOrderReferenceSchema = z.object({
+  referenceType: z.string().optional(),
+  referenceOrderId: z.number().optional(),
+  orderId: z.number().optional(),
+  originOrderId: z.number().optional(),
+  referencedOrderId: z.number().optional(),
+})
+
 export const PlentyOrderSchema = z.object({
   id: z.number(),
   typeId: z.number().optional(),
@@ -38,6 +50,8 @@ export const PlentyOrderSchema = z.object({
   orderItems: z.array(PlentyOrderItemSchema).optional(),
   properties: z.array(z.record(z.string(), z.unknown())).optional(),
   addressRelations: z.array(z.record(z.string(), z.unknown())).optional(),
+  orderReferences: z.array(PlentyOrderReferenceSchema).optional(),
+  reverseOrderReferences: z.array(PlentyOrderReferenceSchema).optional(),
 })
 
 // Item schema
@@ -78,6 +92,20 @@ export const PlentyItemSchema = z.object({
   free20: z.string().optional(),
 })
 
+// A single sales-price row on a variation, populated only when the variation is
+// fetched `with: variationSalesPrices,variationSalesPrices.salesPrice`. The currency
+// is either explicit on the row / nested salesPrice, or resolved by looking the
+// salesPriceId up against /items/sales_prices/{id}. `price` is the gross amount.
+export const PlentyVariationSalesPriceSchema = z.object({
+  variationId: z.number().optional(),
+  salesPriceId: z.number().optional(),
+  price: z.number().optional(),
+  currency: z.string().optional(),
+  salesPrice: z
+    .object({ id: z.number().optional(), currency: z.string().optional() })
+    .optional(),
+})
+
 // Variation schema
 export const PlentyVariationSchema = z.object({
   id: z.number(),
@@ -97,8 +125,30 @@ export const PlentyVariationSchema = z.object({
   heightMM: z.number().optional(),
   position: z.number().optional(),
   picking: z.string().optional(),
+  variationSalesPrices: z.array(PlentyVariationSalesPriceSchema).optional(),
   createdAt: z.string().optional(),
   updatedAt: z.string().optional(),
+})
+
+// The distilled per-currency price + availability a catalog resync needs, resolved
+// from a variation's sales prices (see getVariationSyncData). Prices are gross
+// amounts in currency units (not minor units); a null means Plenty had no price for
+// that currency. `availabilityId` maps to a PlentyMarkets availability row.
+export const PlentyVariationSyncDataSchema = z.object({
+  prices: z.object({
+    eur: z.number().nullable(),
+    usd: z.number().nullable(),
+    gbp: z.number().nullable(),
+  }),
+  availabilityId: z.number().nullable(),
+})
+
+// A PlentyMarkets availability (the "ships in N days" catalog dimension). `names` is
+// a language-keyed label map. Fetched from GET /availabilities.
+export const PlentyAvailabilitySchema = z.object({
+  id: z.number(),
+  averageDays: z.number().nullable().optional(),
+  names: z.record(z.string(), z.string()).nullable().optional(),
 })
 
 // Category schemas
@@ -211,6 +261,13 @@ export type PlentyOrderItem = z.infer<typeof PlentyOrderItemSchema>
 export type PlentyOrder = z.infer<typeof PlentyOrderSchema>
 export type PlentyItem = z.infer<typeof PlentyItemSchema>
 export type PlentyVariation = z.infer<typeof PlentyVariationSchema>
+export type PlentyVariationSalesPrice = z.infer<
+  typeof PlentyVariationSalesPriceSchema
+>
+export type PlentyVariationSyncData = z.infer<
+  typeof PlentyVariationSyncDataSchema
+>
+export type PlentyAvailability = z.infer<typeof PlentyAvailabilitySchema>
 export type PlentyCategoryDetail = z.infer<typeof PlentyCategoryDetailSchema>
 export type PlentyCategory = z.infer<typeof PlentyCategorySchema>
 export type PlentyStockEntry = z.infer<typeof PlentyStockEntrySchema>

@@ -5,6 +5,12 @@ import { PlentyOrderSchema } from '../../schemas.js'
 
 export const GetOrderInput = z.object({
   orderId: z.number().describe('Order ID'),
+  withRelations: z
+    .array(z.string())
+    .optional()
+    .describe(
+      'PlentyMarkets `with[]` relations to expand, e.g. ["orderReferences", "reverseOrderReferences", "amounts"].'
+    ),
 })
 
 export const GetOrderOutput = z.object({
@@ -18,8 +24,8 @@ export const getOrder = pikkuSessionlessFunc({
   node: { displayName: 'Get Order', category: 'Ecommerce', type: 'action' },
   input: GetOrderInput,
   output: GetOrderOutput,
-  func: async ({ plentymarkets }, { orderId }) => {
-    const order = await plentymarkets.getOrder(orderId)
+  func: async ({ plentymarkets }, { orderId, withRelations }) => {
+    const order = await plentymarkets.getOrder(orderId, withRelations)
     return { order }
   },
 })
