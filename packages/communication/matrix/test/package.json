@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-matrix": "file:..",
+    "@pikku/addon-matrix": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

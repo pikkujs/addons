@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-nocodb": "file:..",
+    "@pikku/addon-nocodb": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

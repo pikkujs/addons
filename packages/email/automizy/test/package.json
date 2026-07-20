@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-automizy": "file:..",
+    "@pikku/addon-automizy": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

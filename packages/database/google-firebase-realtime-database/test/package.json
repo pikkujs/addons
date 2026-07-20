@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-firebase-realtime-database": "file:..",
+    "@pikku/addon-google-firebase-realtime-database": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

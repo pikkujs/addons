@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-clearbit": "file:..",
+    "@pikku/addon-clearbit": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-strava": "file:..",
+    "@pikku/addon-strava": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

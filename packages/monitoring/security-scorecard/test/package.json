@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-security-scorecard": "file:..",
+    "@pikku/addon-security-scorecard": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

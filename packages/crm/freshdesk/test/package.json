@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-freshdesk": "file:..",
+    "@pikku/addon-freshdesk": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

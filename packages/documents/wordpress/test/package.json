@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-wordpress": "file:..",
+    "@pikku/addon-wordpress": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-servicenow": "file:..",
+    "@pikku/addon-servicenow": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-storyblok": "file:..",
+    "@pikku/addon-storyblok": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

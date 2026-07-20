@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-aws-comprehend": "file:..",
+    "@pikku/addon-aws-comprehend": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

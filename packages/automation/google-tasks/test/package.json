@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-tasks": "file:..",
+    "@pikku/addon-google-tasks": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

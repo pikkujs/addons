@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-agile-crm": "file:..",
+    "@pikku/addon-agile-crm": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

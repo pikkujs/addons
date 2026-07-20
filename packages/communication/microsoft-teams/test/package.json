@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-microsoft-teams": "file:..",
+    "@pikku/addon-microsoft-teams": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

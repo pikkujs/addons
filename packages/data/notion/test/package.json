@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-notion": "file:..",
+    "@pikku/addon-notion": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

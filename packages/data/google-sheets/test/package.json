@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-sheets": "file:..",
+    "@pikku/addon-google-sheets": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

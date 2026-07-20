@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-microsoft-one-drive": "file:..",
+    "@pikku/addon-microsoft-one-drive": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

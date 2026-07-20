@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-salesforce": "file:..",
+    "@pikku/addon-salesforce": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-webflow": "file:..",
+    "@pikku/addon-webflow": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

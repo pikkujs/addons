@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-firebase-cloud-firestore": "file:..",
+    "@pikku/addon-google-firebase-cloud-firestore": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

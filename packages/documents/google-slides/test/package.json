@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-slides": "file:..",
+    "@pikku/addon-google-slides": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

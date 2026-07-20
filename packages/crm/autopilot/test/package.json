@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-autopilot": "file:..",
+    "@pikku/addon-autopilot": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-amqp": "file:..",
+    "@pikku/addon-amqp": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-aws-lambda": "file:..",
+    "@pikku/addon-aws-lambda": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

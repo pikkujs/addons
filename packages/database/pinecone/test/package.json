@@ -11,8 +11,8 @@
     "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-openai": "file:../../../ai/openai",
-    "@pikku/addon-pinecone": "file:..",
+    "@pikku/addon-openai": "workspace:*",
+    "@pikku/addon-pinecone": "workspace:*",
     "@pikku/core": "^0.12.39"
   },
   "devDependencies": {

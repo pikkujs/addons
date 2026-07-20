@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-microsoft-outlook": "file:..",
+    "@pikku/addon-microsoft-outlook": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

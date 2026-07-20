@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-mailer-lite": "file:..",
+    "@pikku/addon-mailer-lite": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

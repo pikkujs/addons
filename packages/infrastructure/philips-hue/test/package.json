@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-philips-hue": "file:..",
+    "@pikku/addon-philips-hue": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

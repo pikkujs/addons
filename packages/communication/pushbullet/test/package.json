@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-pushbullet": "file:..",
+    "@pikku/addon-pushbullet": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

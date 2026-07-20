@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-tapfiliate": "file:..",
+    "@pikku/addon-tapfiliate": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

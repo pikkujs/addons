@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-lingvanex": "file:..",
+    "@pikku/addon-lingvanex": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

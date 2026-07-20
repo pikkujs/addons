@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-sendy": "file:..",
+    "@pikku/addon-sendy": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

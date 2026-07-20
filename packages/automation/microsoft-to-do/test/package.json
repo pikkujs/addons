@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-microsoft-to-do": "file:..",
+    "@pikku/addon-microsoft-to-do": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

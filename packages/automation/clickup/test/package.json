@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-clickup": "file:..",
+    "@pikku/addon-clickup": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

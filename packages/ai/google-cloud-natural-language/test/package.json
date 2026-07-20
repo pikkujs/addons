@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-cloud-natural-language": "file:..",
+    "@pikku/addon-google-cloud-natural-language": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

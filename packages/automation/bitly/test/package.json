@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-bitly": "file:..",
+    "@pikku/addon-bitly": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

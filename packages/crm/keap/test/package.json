@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-keap": "file:..",
+    "@pikku/addon-keap": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

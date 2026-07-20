@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-bamboo-hr": "file:..",
+    "@pikku/addon-bamboo-hr": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,8 +11,8 @@
     "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-openai": "file:../../../ai/openai",
-    "@pikku/addon-qdrant": "file:..",
+    "@pikku/addon-openai": "workspace:*",
+    "@pikku/addon-qdrant": "workspace:*",
     "@pikku/core": "^0.12.39"
   },
   "devDependencies": {

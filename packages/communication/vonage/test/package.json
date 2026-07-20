@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-vonage": "file:..",
+    "@pikku/addon-vonage": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

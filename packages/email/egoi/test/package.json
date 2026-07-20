@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-egoi": "file:..",
+    "@pikku/addon-egoi": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

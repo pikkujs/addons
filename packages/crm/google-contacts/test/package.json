@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-contacts": "file:..",
+    "@pikku/addon-google-contacts": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-venafi-tls-protect-cloud": "file:..",
+    "@pikku/addon-venafi-tls-protect-cloud": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

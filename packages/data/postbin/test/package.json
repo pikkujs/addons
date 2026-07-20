@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-postbin": "file:..",
+    "@pikku/addon-postbin": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

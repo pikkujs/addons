@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-zulip": "file:..",
+    "@pikku/addon-zulip": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

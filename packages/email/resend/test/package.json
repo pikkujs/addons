@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-resend": "file:..",
+    "@pikku/addon-resend": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

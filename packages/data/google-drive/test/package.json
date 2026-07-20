@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-google-drive": "file:..",
+    "@pikku/addon-google-drive": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

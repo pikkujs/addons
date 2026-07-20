@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-monday-com": "file:..",
+    "@pikku/addon-monday-com": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-reddit": "file:..",
+    "@pikku/addon-reddit": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

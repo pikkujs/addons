@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-phantombuster": "file:..",
+    "@pikku/addon-phantombuster": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

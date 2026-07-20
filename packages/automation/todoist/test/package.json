@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-todoist": "file:..",
+    "@pikku/addon-todoist": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

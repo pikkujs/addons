@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-twist": "file:..",
+    "@pikku/addon-twist": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {

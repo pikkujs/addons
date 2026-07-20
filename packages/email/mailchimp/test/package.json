@@ -11,7 +11,7 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "dependencies": {
-    "@pikku/addon-mailchimp": "file:..",
+    "@pikku/addon-mailchimp": "workspace:*",
     "@pikku/core": "*"
   },
   "devDependencies": {
