@@ -26,7 +26,11 @@ describe('WhatsAppGatewayAdapter', () => {
   describe('parse', () => {
     test('parses a text message from WhatsApp webhook', () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       const result = adapter.parse({
         object: 'whatsapp_business_account',
@@ -70,7 +74,11 @@ describe('WhatsAppGatewayAdapter', () => {
 
     test('returns null for status updates (non-message events)', () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       const result = adapter.parse({
         object: 'whatsapp_business_account',
@@ -98,7 +106,11 @@ describe('WhatsAppGatewayAdapter', () => {
 
     test('returns null for non-whatsapp payloads', () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       assert.equal(adapter.parse({ object: 'other' }), null)
       assert.equal(adapter.parse(null), null)
@@ -107,7 +119,11 @@ describe('WhatsAppGatewayAdapter', () => {
 
     test('parses interactive button reply', () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       const result = adapter.parse({
         object: 'whatsapp_business_account',
@@ -146,7 +162,11 @@ describe('WhatsAppGatewayAdapter', () => {
   describe('send', () => {
     test('sends a text message', async () => {
       const { service, sentMessages } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       await adapter.send('491234567890', { text: 'Hello back!' })
 
@@ -160,7 +180,11 @@ describe('WhatsAppGatewayAdapter', () => {
 
     test('sends rich content', async () => {
       const { service, sentMessages } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'verify-token',
+        'app-secret'
+      )
 
       await adapter.send('491234567890', {
         richContent: {
@@ -177,11 +201,15 @@ describe('WhatsAppGatewayAdapter', () => {
   })
 
   describe('verifyWebhook', () => {
-    test('verifies with correct token', () => {
+    test('verifies with correct token', async () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'my-verify-token',
+        'app-secret'
+      )
 
-      const result = adapter.verifyWebhook({
+      const result = await adapter.verifyWebhook({
         'hub.mode': 'subscribe',
         'hub.verify_token': 'my-verify-token',
         'hub.challenge': 'challenge-value-123',
@@ -193,11 +221,15 @@ describe('WhatsAppGatewayAdapter', () => {
       })
     })
 
-    test('rejects with wrong token', () => {
+    test('rejects with wrong token', async () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'my-verify-token',
+        'app-secret'
+      )
 
-      const result = adapter.verifyWebhook({
+      const result = await adapter.verifyWebhook({
         'hub.mode': 'subscribe',
         'hub.verify_token': 'wrong-token',
         'hub.challenge': 'challenge-value',
@@ -206,11 +238,15 @@ describe('WhatsAppGatewayAdapter', () => {
       assert.deepEqual(result, { verified: false })
     })
 
-    test('verifies with dot-nested query shape (pikku query())', () => {
+    test('verifies with dot-nested query shape (pikku query())', async () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'my-verify-token',
+        'app-secret'
+      )
 
-      const result = adapter.verifyWebhook({
+      const result = await adapter.verifyWebhook({
         hub: {
           mode: 'subscribe',
           verify_token: 'my-verify-token',
@@ -224,17 +260,23 @@ describe('WhatsAppGatewayAdapter', () => {
       })
     })
 
-    test('rejects non-subscribe mode', () => {
+    test('rejects a non-subscribe request carrying no signature', async () => {
       const { service } = createMockWhatsappService()
-      const adapter = new WhatsAppGatewayAdapter(service, 'my-verify-token')
+      const adapter = new WhatsAppGatewayAdapter(
+        service,
+        'my-verify-token',
+        'app-secret'
+      )
 
-      const result = adapter.verifyWebhook({
-        'hub.mode': 'unsubscribe',
-        'hub.verify_token': 'my-verify-token',
-        'hub.challenge': 'challenge-value',
-      })
-
-      assert.deepEqual(result, { verified: false })
+      await assert.rejects(
+        () =>
+          adapter.verifyWebhook({
+            'hub.mode': 'unsubscribe',
+            'hub.verify_token': 'my-verify-token',
+            'hub.challenge': 'challenge-value',
+          }),
+        /signature/i
+      )
     })
   })
 })

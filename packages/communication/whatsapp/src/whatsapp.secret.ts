@@ -9,6 +9,9 @@ export const whatsappSecretsSchema = z.object({
     .describe(
       'Webhook verify token — any string you choose; must match the one entered in the Meta app dashboard webhook config'
     ),
+  appSecret: z
+    .string()
+    .describe('Meta app secret, used to verify X-Hub-Signature-256 on webhooks'),
 })
 
 export type WhatsappSecrets = z.infer<typeof whatsappSecretsSchema>
