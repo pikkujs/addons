@@ -116,6 +116,49 @@ export const testSupabase = pikkuSessionlessFunc<TestSupabaseInput, TestSupabase
       assert.equal(check.data.length, 0, 'Expected row to be deleted')
     })
 
+    // -- Vector search --
+    await run('search maps match-function rows to matches', async () => {
+      const result = await rpc.invoke('supabase:search', {
+        vector: [0.1, 0.2, 0.3],
+        topK: 2,
+      })
+      assert.equal(result.matches.length, 2)
+      assert.equal(result.matches[0].id, 1)
+      assert.equal(result.matches[0].score, 0.91)
+      assert.deepEqual(result.matches[0].payload, {
+        content: 'Vacation policy',
+        metadata: { title: 'Handbook' },
+      })
+    })
+
+    await run('query embeds via the aiEmbedding service then searches', async () => {
+      const result = await rpc.invoke('supabase:query', {
+        query: 'how much vacation',
+        topK: 2,
+      })
+      assert.equal(result.query, 'how much vacation')
+      assert.equal(result.matches.length, 2)
+      assert.equal(result.matches[0].id, 1)
+      assert.equal(result.matches[0].score, 0.91)
+    })
+
+    await run('ingest embeds chunks via aiEmbedding and inserts rows', async () => {
+      const result = await rpc.invoke('supabase:ingest', {
+        collection: 'documents',
+        texts: ['alpha', 'beta', 'gamma'],
+      })
+      assert.equal(result.upserted, 3)
+
+      const check = await rpc.invoke('supabase:selectRows', {
+        table: 'documents',
+      })
+      assert.equal(check.data.length, 3)
+      assert.ok(
+        check.data.some((r: any) => r.content === 'alpha'),
+        'expected ingested content'
+      )
+    })
+
     // -- RPC --
     await run('rpc calls a database function', async () => {
       const result = await rpc.invoke('supabase:rpc', {

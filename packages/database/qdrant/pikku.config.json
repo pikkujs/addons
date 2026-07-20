@@ -7,12 +7,11 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "displayName": "Supabase",
-    "description": "Supabase database and auth operations",
+    "displayName": "Qdrant",
+    "description": "Vector search over a Qdrant collection — embed a query and retrieve the nearest matches",
     "categories": [
-      "Database",
-      "Vector"
-    ],
-    "icon": "./supabase.svg"
+      "Search",
+      "Write"
+    ]
   }
 }

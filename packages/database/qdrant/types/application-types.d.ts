@@ -5,14 +5,14 @@ import type {
   CoreSingletonServices,
   CoreUserSession,
 } from '@pikku/core'
-import type { SupabaseClient } from '@supabase/supabase-js'
+import type { QdrantConfig } from '../src/qdrant.js'
 
 export interface Config extends CoreConfig {}
 
 export interface UserSession extends CoreUserSession {}
 
 export interface SingletonServices extends CoreSingletonServices<Config> {
-  supabase: SupabaseClient
+  qdrant: QdrantConfig
   aiEmbedding?: AIEmbeddingService
 }
 

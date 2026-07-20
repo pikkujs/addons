@@ -8,3 +8,8 @@ export { updateRows, UpdateInput, UpdateOutput } from './functions/database/upda
 export { deleteRows, DeleteInput, DeleteOutput } from './functions/database/delete.function.js'
 export { upsertRows, UpsertInput, UpsertOutput } from './functions/database/upsert.function.js'
 export { rpc, RpcInput, RpcOutput } from './functions/database/rpc.function.js'
+
+// Supabase pgvector (vector store) functions
+export { search, VectorSearchInput, VectorSearchOutput } from './functions/vector/search.function.js'
+export { query, VectorQueryInput, VectorQueryOutput } from './functions/vector/query.function.js'
+export { ingest, VectorIngestInput, VectorIngestOutput } from './functions/vector/ingest.function.js'

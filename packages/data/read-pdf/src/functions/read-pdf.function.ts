@@ -3,8 +3,9 @@ import { pikkuSessionlessFunc } from '#pikku'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 
 export const ReadPdfInput = z.object({
-  bucket: z.string().describe('Storage bucket containing the PDF file'),
-  assetKey: z.string().describe('Content service asset key for the PDF file'),
+  bucket: z.string().optional().describe('Storage bucket containing the PDF file'),
+  assetKey: z.string().optional().describe('Content service asset key for the PDF file'),
+  base64: z.string().optional().describe('Base64-encoded PDF bytes, as an alternative to bucket/assetKey'),
   password: z.string().optional().describe('Password for encrypted PDF'),
   maxPages: z.number().optional().describe('Maximum number of pages to extract (0 = all)'),
 })
@@ -20,8 +21,13 @@ export const readPdf = pikkuSessionlessFunc({
   input: ReadPdfInput,
   output: ReadPdfOutput,
   node: { displayName: 'Read PDF', category: 'Parse', type: 'action' },
-  func: async ({ content }, { bucket, assetKey, password, maxPages }) => {
-    const buffer = await content!.readFileAsBuffer({ bucket, key: assetKey })
+  func: async ({ content }, { bucket, assetKey, base64, password, maxPages }) => {
+    if (!base64 && (!bucket || !assetKey)) {
+      throw new Error('read-pdf requires either base64 or bucket + assetKey')
+    }
+    const buffer = base64
+      ? Buffer.from(base64, 'base64')
+      : await content!.readFileAsBuffer({ bucket: bucket!, key: assetKey! })
     const data = new Uint8Array(buffer)
 
     const loadingTask = getDocument({ data, password: password ?? undefined, useSystemFonts: true })

@@ -7,3 +7,6 @@ export { imageCreate } from './functions/images/create.function.js'
 // OpenAI functions - Text
 export { textModerate } from './functions/text/moderate.function.js'
 export { textEmbedding } from './functions/text/embedding.function.js'
+
+// Embedding service (implements @pikku/core AIEmbeddingService)
+export { OpenAIEmbeddingService } from './embedding-service.js'

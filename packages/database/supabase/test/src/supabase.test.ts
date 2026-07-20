@@ -39,6 +39,12 @@ CREATE TABLE public.test_items (
   value INTEGER NOT NULL DEFAULT 0
 );
 
+CREATE TABLE public.documents (
+  id SERIAL PRIMARY KEY,
+  content TEXT NOT NULL,
+  embedding JSONB
+);
+
 GRANT USAGE ON SCHEMA public TO ${ANON_ROLE};
 GRANT ALL ON ALL TABLES IN SCHEMA public TO ${ANON_ROLE};
 GRANT ALL ON ALL SEQUENCES IN SCHEMA public TO ${ANON_ROLE};
@@ -49,6 +55,18 @@ RETURNS INTEGER AS $$
 $$ LANGUAGE SQL SECURITY DEFINER;
 
 GRANT EXECUTE ON FUNCTION public.get_item_count() TO ${ANON_ROLE};
+
+CREATE OR REPLACE FUNCTION public.match_documents(query_embedding jsonb, match_count int)
+RETURNS TABLE(id int, content text, metadata jsonb, similarity float)
+LANGUAGE SQL SECURITY DEFINER AS $$
+  SELECT * FROM (VALUES
+    (1, 'Vacation policy', '{"title":"Handbook"}'::jsonb, 0.91::float),
+    (2, 'Sick leave', '{}'::jsonb, 0.82::float)
+  ) AS t(id, content, metadata, similarity)
+  LIMIT match_count;
+$$;
+
+GRANT EXECUTE ON FUNCTION public.match_documents(jsonb, int) TO ${ANON_ROLE};
 `
 
 // The Supabase JS client appends /rest/v1 to the base URL when making

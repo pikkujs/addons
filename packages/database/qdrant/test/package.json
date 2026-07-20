@@ -1,0 +1,25 @@
+{
+  "name": "@pikku/test-qdrant",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#pikku": "./.pikku/pikku-types.gen.ts",
+    "#pikku/*": "./.pikku/*"
+  },
+  "scripts": {
+    "pretest": "pikku all",
+    "test": "node --preserve-symlinks --import tsx --test src/**/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-openai": "file:../../../ai/openai",
+    "@pikku/addon-qdrant": "file:..",
+    "@pikku/core": "^0.12.39"
+  },
+  "devDependencies": {
+    "@pikku/cli": "^0.12.55",
+    "@types/node": "^24",
+    "tsx": "^4",
+    "typescript": "^5.9",
+    "zod": "^4"
+  }
+}
