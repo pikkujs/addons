@@ -4,7 +4,7 @@ import { pikkuSessionlessFunc } from '#pikku'
 export const BalanceGetInput = z.object({})
 
 export const SourceTypesSchema = z.object({
-  bank_account: z.number().optional().describe('Amount coming from legacy US ACH payments'),
+  bankAccount: z.number().optional().describe('Amount coming from legacy US ACH payments'),
   card: z.number().optional().describe('Amount coming from most payment methods, including cards as well as non-legacy bank debits'),
   fpx: z.number().optional().describe('Amount coming from FPX, a Malaysian payment method'),
 })
@@ -12,7 +12,7 @@ export const SourceTypesSchema = z.object({
 export const BalanceAmountSchema = z.object({
   amount: z.number().describe('Balance amount'),
   currency: z.string().describe('Three-letter ISO currency code, in lowercase. Must be a supported currency'),
-  source_types: SourceTypesSchema.optional().describe('Breakdown of balance by source type'),
+  sourceTypes: SourceTypesSchema.optional().describe('Breakdown of balance by source type'),
 })
 
 export const BalanceGetOutput = z.object({
@@ -22,7 +22,17 @@ export const BalanceGetOutput = z.object({
   livemode: z.boolean().describe('Has the value true if the object exists in live mode or the value false if the object exists in test mode'),
 })
 
-type Output = z.infer<typeof BalanceGetOutput>
+const toBalanceAmount = (amount: { amount: number; currency: string; source_types?: { bank_account?: number; card?: number; fpx?: number } }) => ({
+  amount: amount.amount,
+  currency: amount.currency,
+  sourceTypes: amount.source_types
+    ? {
+        bankAccount: amount.source_types.bank_account,
+        card: amount.source_types.card,
+        fpx: amount.source_types.fpx,
+      }
+    : undefined,
+})
 
 export const balanceGet = pikkuSessionlessFunc({
   description: 'Retrieve the current balance on your Stripe account',
@@ -30,6 +40,12 @@ export const balanceGet = pikkuSessionlessFunc({
   input: BalanceGetInput,
   output: BalanceGetOutput,
   func: async ({ stripe }) => {
-    return await stripe.balance.retrieve() as Output
+    const result = await stripe.balance.retrieve()
+    return BalanceGetOutput.parse({
+      object: result.object,
+      available: result.available.map(toBalanceAmount),
+      pending: result.pending.map(toBalanceAmount),
+      livemode: result.livemode,
+    })
   },
 })
