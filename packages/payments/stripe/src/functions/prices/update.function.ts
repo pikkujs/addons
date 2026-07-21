@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { MetadataSchema, PriceSchema } from '../../stripe.types.js'
+import { fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const PriceUpdateInput = z.object({
   priceId: z.string().describe('The identifier of the price to update (price_...)'),
@@ -11,18 +12,18 @@ export const PriceUpdateInput = z.object({
 
 export const PriceUpdateOutput = PriceSchema
 
-type Output = z.infer<typeof PriceUpdateOutput>
-
 export const priceUpdate = pikkuSessionlessFunc({
   description: 'Update an existing price. The amount and currency are immutable — archive and recreate to change them',
   node: { displayName: 'Update Price', category: 'Prices', type: 'action' },
   input: PriceUpdateInput,
   output: PriceUpdateOutput,
   func: async ({ stripe }, { priceId, ...data }) => {
-    return await stripe.prices.update(priceId, {
+    const result = await stripe.prices.update(priceId, {
       ...(data.active !== undefined ? { active: data.active } : {}),
       ...(data.nickname ? { nickname: data.nickname } : {}),
       ...(data.metadata ? { metadata: data.metadata } : {}),
-    }) as unknown as Output
+    })
+    const camel = fromStripeObject(result)
+    return PriceUpdateOutput.parse({ ...camel, created: epochToIso(result.created) })
   },
 })

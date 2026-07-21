@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { MetadataSchema } from '../../stripe.types.js'
+import { fromStripeObject } from '../../stripe.transform.js'
 
 export const InvoiceItemCreateInput = z.object({
   customer: z.string().describe('The customer the invoice item is for (cus_...)'),
@@ -25,15 +26,13 @@ export const InvoiceItemCreateOutput = z.object({
   metadata: MetadataSchema,
 })
 
-type Output = z.infer<typeof InvoiceItemCreateOutput>
-
 export const invoiceItemCreate = pikkuSessionlessFunc({
   description: 'Add a line item (a charge) to a customer\'s invoice or their next upcoming invoice',
   node: { displayName: 'Create Invoice Item', category: 'Invoices', type: 'action' },
   input: InvoiceItemCreateInput,
   output: InvoiceItemCreateOutput,
   func: async ({ stripe }, data) => {
-    return await stripe.invoiceItems.create({
+    const result = await stripe.invoiceItems.create({
       customer: data.customer,
       ...(data.amount !== undefined ? { amount: data.amount } : {}),
       ...(data.currency ? { currency: data.currency } : {}),
@@ -42,6 +41,7 @@ export const invoiceItemCreate = pikkuSessionlessFunc({
       ...(data.invoice ? { invoice: data.invoice } : {}),
       ...(data.description ? { description: data.description } : {}),
       ...(data.metadata ? { metadata: data.metadata } : {}),
-    }) as unknown as Output
+    })
+    return InvoiceItemCreateOutput.parse(fromStripeObject(result))
   },
 })

@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { ConnectedAccountSchema } from '../../stripe.types.js'
+import { epochToIso } from '../../stripe.transform.js'
 
 export const AccountGetInput = z.object({
   accountId: z.string().describe('The identifier of the connected account to retrieve (acct_...)'),
@@ -8,14 +9,24 @@ export const AccountGetInput = z.object({
 
 export const AccountGetOutput = ConnectedAccountSchema
 
-type Output = z.infer<typeof AccountGetOutput>
-
 export const accountGet = pikkuSessionlessFunc({
-  description: 'Retrieve a Connect account to check onboarding status (charges_enabled, payouts_enabled, details_submitted)',
+  description: 'Retrieve a Connect account to check onboarding status (chargesEnabled, payoutsEnabled, detailsSubmitted)',
   node: { displayName: 'Get Connect Account', category: 'Connect', type: 'action' },
   input: AccountGetInput,
   output: AccountGetOutput,
   func: async ({ stripe }, { accountId }) => {
-    return await stripe.accounts.retrieve(accountId) as unknown as Output
+    const result = await stripe.accounts.retrieve(accountId)
+    return AccountGetOutput.parse({
+      id: result.id,
+      object: result.object,
+      type: result.type,
+      email: result.email,
+      country: result.country,
+      chargesEnabled: result.charges_enabled,
+      payoutsEnabled: result.payouts_enabled,
+      detailsSubmitted: result.details_submitted,
+      created: epochToIso(result.created),
+      metadata: result.metadata,
+    })
   },
 })

@@ -1,17 +1,15 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { ListParamsSchema, RefundSchema, listSchema } from '../../stripe.types.js'
+import { toStripeParams, fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const RefundListInput = z.object({
   charge: z.string().optional().describe('Only return refunds for the charge specified by this charge ID'),
-  payment_intent: z.string().optional().describe('Only return refunds for the payment intent specified by this ID'),
+  paymentIntent: z.string().optional().describe('Only return refunds for the payment intent specified by this ID'),
   ...ListParamsSchema,
 })
 
 export const RefundListOutput = listSchema(RefundSchema)
-
-type Input = z.infer<typeof RefundListInput>
-type Output = z.infer<typeof RefundListOutput>
 
 export const refundList = pikkuSessionlessFunc({
   description: 'Returns a list of refunds you have previously created',
@@ -19,6 +17,15 @@ export const refundList = pikkuSessionlessFunc({
   input: RefundListInput,
   output: RefundListOutput,
   func: async ({ stripe }, data) => {
-    return await stripe.refunds.list(data as Input) as unknown as Output
+    const result = await stripe.refunds.list(toStripeParams(data))
+    return RefundListOutput.parse({
+      object: result.object,
+      hasMore: result.has_more,
+      url: result.url,
+      data: result.data.map((refund) => ({
+        ...fromStripeObject(refund),
+        created: epochToIso(refund.created),
+      })),
+    })
   },
 })

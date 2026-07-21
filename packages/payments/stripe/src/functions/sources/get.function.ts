@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { MetadataSchema } from '../../stripe.types.js'
+import { fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const SourceGetInput = z.object({
   sourceId: z.string().describe('The identifier of the source to be retrieved'),
@@ -15,12 +16,10 @@ export const SourceGetOutput = z.object({
   customer: z.string().optional().describe('The ID of the customer to which this source is attached'),
   status: z.string().describe('The status of the source'),
   usage: z.string().describe('Either reusable or single_use'),
-  created: z.number().describe('Time at which the object was created'),
+  created: z.string().datetime().describe('Time at which the object was created'),
   livemode: z.boolean().describe('Has the value true if the object exists in live mode'),
   metadata: MetadataSchema,
 })
-
-type Output = z.infer<typeof SourceGetOutput>
 
 export const sourceGet = pikkuSessionlessFunc({
   description: 'Retrieves an existing source object',
@@ -28,6 +27,8 @@ export const sourceGet = pikkuSessionlessFunc({
   input: SourceGetInput,
   output: SourceGetOutput,
   func: async ({ stripe }, { sourceId }) => {
-    return await stripe.sources.retrieve(sourceId) as Output
+    const result = await stripe.sources.retrieve(sourceId)
+    const camel = fromStripeObject(result)
+    return SourceGetOutput.parse({ ...camel, created: epochToIso(result.created) })
   },
 })

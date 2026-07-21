@@ -19,8 +19,8 @@ payment intents, setup intents, Connect (marketplaces), and webhook handling.
 **Meter Events:** `meterEventCreate`
 **Subscriptions:** `subscriptionCreate`, `subscriptionGet`, `subscriptionUpdate`, `subscriptionCancel`
 **Invoices:** `invoiceCreate`, `invoiceGet`, `invoiceList`, `invoiceFinalize`, `invoiceSend`, `invoiceVoid`, `invoicePay`, `invoiceItemCreate`
-**Checkout:** `checkoutSessionCreate` (existing `priceId`, or inline `price_data` + `payment_intent_data`/`subscription_data`), `billingPortalSessionCreate`
-**Payment Intents:** `paymentIntentCreate` (off-session charge or client-side Elements — returns `client_secret`), `paymentIntentGet`, `paymentIntentConfirm`, `paymentIntentCapture`, `paymentIntentCancel`
+**Checkout:** `checkoutSessionCreate` (existing `priceId`, or inline `priceData` + `paymentIntentData`/`subscriptionData`), `billingPortalSessionCreate`
+**Payment Intents:** `paymentIntentCreate` (off-session charge or client-side Elements — returns `clientSecret`), `paymentIntentGet`, `paymentIntentConfirm`, `paymentIntentCapture`, `paymentIntentCancel`
 **Setup Intents:** `setupIntentCreate` (save a card without charging), `setupIntentGet`
 **Connect:** `accountCreate`, `accountGet`, `accountLinkCreate`, `transferCreate`, `payoutCreate`
 **Webhooks:** `stripeWebhookHandler`
@@ -48,6 +48,17 @@ wireQueueWorker({ name: STRIPE_WEBHOOK_QUEUE, func: handleStripeEvent })
 
 The host app must provide `queueService` (any pikku queue adapter — pg-boss,
 BullMQ, …) as a singleton service; the handler enqueues onto it.
+
+## Conventions
+
+All function input/output fields are camelCase (e.g. `unitAmount`, `clientSecret`,
+`hasMore`), regardless of the underlying Stripe API's snake_case field names.
+Timestamp fields (`created`, `currentPeriodEnd`, `arrivalDate`, etc.) are ISO-8601
+datetime strings, not raw Unix epoch seconds. The one exception is `metadata`:
+both its key names and its string values are passed through untouched in both
+directions, since a webhook consumer outside this addon reads metadata keys by
+exact match on the Stripe side. Money amounts stay integer minor units (cents),
+unconverted — only field names and dates are normalized.
 
 ## Secrets
 

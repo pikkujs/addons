@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { ListParamsSchema, PriceSchema, listSchema } from '../../stripe.types.js'
+import { toStripeParams, fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const PriceListInput = z.object({
   product: z.string().optional().describe('Only return prices for the given product ID'),
@@ -10,15 +11,21 @@ export const PriceListInput = z.object({
 
 export const PriceListOutput = listSchema(PriceSchema)
 
-type Input = z.infer<typeof PriceListInput>
-type Output = z.infer<typeof PriceListOutput>
-
 export const priceList = pikkuSessionlessFunc({
   description: 'Returns a list of your prices, optionally filtered by product',
   node: { displayName: 'List Prices', category: 'Prices', type: 'action' },
   input: PriceListInput,
   output: PriceListOutput,
   func: async ({ stripe }, data) => {
-    return await stripe.prices.list(data as Input) as unknown as Output
+    const result = await stripe.prices.list(toStripeParams(data))
+    return PriceListOutput.parse({
+      object: result.object,
+      hasMore: result.has_more,
+      url: result.url,
+      data: result.data.map((price) => ({
+        ...fromStripeObject(price),
+        created: epochToIso(price.created),
+      })),
+    })
   },
 })
