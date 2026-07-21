@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
+import { fromStripeObject } from '../../stripe.transform.js'
 
 export const CustomerCardGetInput = z.object({
   customerId: z.string().describe('The ID of the customer whose card to retrieve'),
@@ -11,15 +12,13 @@ export const CustomerCardGetOutput = z.object({
   object: z.string().describe('String representing the object\'s type'),
   brand: z.string().optional().describe('Card brand (e.g., Visa, Mastercard)'),
   last4: z.string().optional().describe('The last four digits of the card'),
-  exp_month: z.number().optional().describe('Two-digit number representing the card\'s expiration month'),
-  exp_year: z.number().optional().describe('Four-digit number representing the card\'s expiration year'),
+  expMonth: z.number().optional().describe('Two-digit number representing the card\'s expiration month'),
+  expYear: z.number().optional().describe('Four-digit number representing the card\'s expiration year'),
   fingerprint: z.string().nullable().optional().describe('Uniquely identifies this particular card number'),
   funding: z.string().optional().describe('Card funding type (credit, debit, prepaid, or unknown)'),
   country: z.string().nullable().optional().describe('Two-letter ISO code representing the country of the card'),
   customer: z.string().nullable().optional().describe('The customer that this card belongs to'),
 })
-
-type Output = z.infer<typeof CustomerCardGetOutput>
 
 export const customerCardGet = pikkuSessionlessFunc({
   description: 'Retrieve a card or source belonging to a customer',
@@ -27,6 +26,7 @@ export const customerCardGet = pikkuSessionlessFunc({
   input: CustomerCardGetInput,
   output: CustomerCardGetOutput,
   func: async ({ stripe }, { customerId, cardId }) => {
-    return await stripe.customers.retrieveSource(customerId, cardId) as Output
+    const result = await stripe.customers.retrieveSource(customerId, cardId)
+    return CustomerCardGetOutput.parse(fromStripeObject(result))
   },
 })

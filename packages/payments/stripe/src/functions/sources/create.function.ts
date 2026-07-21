@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku'
 import { MetadataSchema } from '../../stripe.types.js'
+import { toStripeParams, fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const OwnerSchema = z.object({
   name: z.string().optional().describe('Owner\'s full name'),
@@ -11,7 +12,7 @@ export const OwnerSchema = z.object({
     line2: z.string().optional().describe('Address line 2'),
     city: z.string().optional().describe('City'),
     state: z.string().optional().describe('State'),
-    postal_code: z.string().optional().describe('Postal code'),
+    postalCode: z.string().optional().describe('Postal code'),
     country: z.string().optional().describe('Two-letter country code'),
   }).optional().describe('Owner\'s address'),
 })
@@ -22,7 +23,7 @@ export const SourceCreateInput = z.object({
   currency: z.string().optional().describe('Three-letter ISO code for the currency associated with the source'),
   customer: z.string().optional().describe('The Customer to whom the original source is attached to'),
   owner: OwnerSchema.optional().describe('Information about the owner of the payment instrument'),
-  statement_descriptor: z.string().optional().describe('An arbitrary string to be displayed on your customer\'s statement'),
+  statementDescriptor: z.string().optional().describe('An arbitrary string to be displayed on your customer\'s statement'),
   metadata: MetadataSchema.optional().describe('Set of key-value pairs that you can attach to an object'),
   token: z.string().optional().describe('An optional token used to create the source'),
   usage: z.enum(['reusable', 'single_use']).optional().describe('Whether the source should be reusable or single-use'),
@@ -37,13 +38,10 @@ export const SourceCreateOutput = z.object({
   customer: z.string().optional().describe('The ID of the customer to which this source is attached'),
   status: z.string().describe('The status of the source (canceled, chargeable, consumed, failed, or pending)'),
   usage: z.string().describe('Either reusable or single_use'),
-  created: z.number().describe('Time at which the object was created'),
+  created: z.string().datetime().describe('Time at which the object was created'),
   livemode: z.boolean().describe('Has the value true if the object exists in live mode'),
   metadata: MetadataSchema,
 })
-
-type Input = z.infer<typeof SourceCreateInput>
-type Output = z.infer<typeof SourceCreateOutput>
 
 export const sourceCreate = pikkuSessionlessFunc({
   description: 'Creates a new source object',
@@ -51,6 +49,8 @@ export const sourceCreate = pikkuSessionlessFunc({
   input: SourceCreateInput,
   output: SourceCreateOutput,
   func: async ({ stripe }, data) => {
-    return await stripe.sources.create(data as Input) as Output
+    const result = await stripe.sources.create(toStripeParams(data))
+    const camel = fromStripeObject(result)
+    return SourceCreateOutput.parse({ ...camel, created: epochToIso(result.created) })
   },
 })
