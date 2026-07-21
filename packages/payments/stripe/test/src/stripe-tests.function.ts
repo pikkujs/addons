@@ -233,6 +233,253 @@ export const testStripe = pikkuSessionlessFunc<TestStripeInput, TestStripeOutput
     // Note: stripe-mock may not fully support billing meter events
     // Skipping meterEventCreate as it requires a pre-configured meter
 
+    // -- Products --
+    let productId: string
+
+    await run('productCreate creates a product', async () => {
+      const result = await rpc.invoke('stripe:productCreate', {
+        name: 'Pikku Test Product',
+        description: 'Created by Pikku test harness',
+        metadata: { test: 'true' },
+      })
+      assert.equal(result.object, 'product')
+      assert.ok(result.id, 'Expected product ID')
+      productId = result.id
+    })
+
+    await run('productGet retrieves the product', async () => {
+      const result = await rpc.invoke('stripe:productGet', { productId })
+      assert.equal(result.object, 'product')
+      assert.ok(result.id, 'Expected product ID')
+    })
+
+    await run('productUpdate archives the product', async () => {
+      const result = await rpc.invoke('stripe:productUpdate', { productId, active: false })
+      assert.equal(result.object, 'product')
+    })
+
+    await run('productList returns products', async () => {
+      const result = await rpc.invoke('stripe:productList', { limit: 3 })
+      assert.equal(result.object, 'list')
+      assert.ok(Array.isArray(result.data), 'Expected data to be an array')
+    })
+
+    // -- Prices --
+    let priceId: string
+
+    await run('priceCreate creates a recurring price', async () => {
+      const result = await rpc.invoke('stripe:priceCreate', {
+        product: productId,
+        currency: 'usd',
+        unit_amount: 1500,
+        recurring: { interval: 'month' },
+      })
+      assert.equal(result.object, 'price')
+      assert.ok(result.id, 'Expected price ID')
+      priceId = result.id
+    })
+
+    await run('priceGet retrieves the price', async () => {
+      const result = await rpc.invoke('stripe:priceGet', { priceId })
+      assert.equal(result.object, 'price')
+    })
+
+    await run('priceUpdate archives the price', async () => {
+      const result = await rpc.invoke('stripe:priceUpdate', { priceId, active: false })
+      assert.equal(result.object, 'price')
+    })
+
+    await run('priceList returns prices', async () => {
+      const result = await rpc.invoke('stripe:priceList', { limit: 3 })
+      assert.equal(result.object, 'list')
+      assert.ok(Array.isArray(result.data), 'Expected data to be an array')
+    })
+
+    // -- Payment Intents (client-side Elements flow exposes client_secret) --
+    let paymentIntentId: string
+
+    await run('paymentIntentCreate returns a client_secret for Elements', async () => {
+      const result = await rpc.invoke('stripe:paymentIntentCreate', {
+        amount: 5000,
+        currency: 'usd',
+        automatic_payment_methods: true,
+        metadata: { purpose: 'ai_topup' },
+      })
+      assert.equal(result.object, 'payment_intent')
+      assert.ok(result.id, 'Expected payment intent ID')
+      assert.ok(result.client_secret, 'Expected client_secret for a custom checkout UI')
+      paymentIntentId = result.id
+    })
+
+    await run('paymentIntentGet retrieves the payment intent', async () => {
+      const result = await rpc.invoke('stripe:paymentIntentGet', { paymentIntentId })
+      assert.equal(result.object, 'payment_intent')
+    })
+
+    await run('paymentIntentCancel cancels the payment intent', async () => {
+      const result = await rpc.invoke('stripe:paymentIntentCancel', {
+        paymentIntentId,
+        cancellation_reason: 'requested_by_customer',
+      })
+      assert.equal(result.object, 'payment_intent')
+    })
+
+    // -- Setup Intents (save a card without charging) --
+    let setupIntentId: string
+
+    await run('setupIntentCreate returns a client_secret', async () => {
+      const result = await rpc.invoke('stripe:setupIntentCreate', {
+        usage: 'off_session',
+        automatic_payment_methods: true,
+      })
+      assert.equal(result.object, 'setup_intent')
+      assert.ok(result.client_secret, 'Expected client_secret')
+      setupIntentId = result.id
+    })
+
+    await run('setupIntentGet retrieves the setup intent', async () => {
+      const result = await rpc.invoke('stripe:setupIntentGet', { setupIntentId })
+      assert.equal(result.object, 'setup_intent')
+    })
+
+    // -- Refunds --
+    let refundId: string
+
+    await run('refundCreate refunds a charge', async () => {
+      const result = await rpc.invoke('stripe:refundCreate', {
+        charge: chargeId,
+        reason: 'requested_by_customer',
+        metadata: { test: 'true' },
+      })
+      assert.equal(result.object, 'refund')
+      assert.ok(result.id, 'Expected refund ID')
+      refundId = result.id
+    })
+
+    await run('refundGet retrieves the refund', async () => {
+      const result = await rpc.invoke('stripe:refundGet', { refundId })
+      assert.equal(result.object, 'refund')
+    })
+
+    await run('refundList returns refunds', async () => {
+      const result = await rpc.invoke('stripe:refundList', { limit: 3 })
+      assert.equal(result.object, 'list')
+      assert.ok(Array.isArray(result.data), 'Expected data to be an array')
+    })
+
+    // -- Subscriptions (create) --
+    await run('subscriptionCreate creates a subscription', async () => {
+      const result = await rpc.invoke('stripe:subscriptionCreate', {
+        customer: 'cus_mock',
+        items: [{ price: priceId }],
+        payment_behavior: 'default_incomplete',
+        metadata: { test: 'true' },
+      })
+      assert.equal(result.object, 'subscription')
+      assert.ok(result.id, 'Expected subscription ID')
+    })
+
+    // -- Invoices --
+    let invoiceId: string
+
+    await run('invoiceCreate creates a draft invoice', async () => {
+      const result = await rpc.invoke('stripe:invoiceCreate', {
+        customer: 'cus_mock',
+        collection_method: 'send_invoice',
+        days_until_due: 7,
+      })
+      assert.equal(result.object, 'invoice')
+      assert.ok(result.id, 'Expected invoice ID')
+      invoiceId = result.id
+    })
+
+    await run('invoiceItemCreate adds a line item', async () => {
+      const result = await rpc.invoke('stripe:invoiceItemCreate', {
+        customer: 'cus_mock',
+        amount: 2500,
+        currency: 'usd',
+        description: 'Pikku test line item',
+      })
+      assert.equal(result.object, 'invoiceitem')
+      assert.ok(result.id, 'Expected invoice item ID')
+    })
+
+    await run('invoiceGet retrieves the invoice', async () => {
+      const result = await rpc.invoke('stripe:invoiceGet', { invoiceId })
+      assert.equal(result.object, 'invoice')
+    })
+
+    await run('invoiceList returns invoices', async () => {
+      const result = await rpc.invoke('stripe:invoiceList', { limit: 3 })
+      assert.equal(result.object, 'list')
+      assert.ok(Array.isArray(result.data), 'Expected data to be an array')
+    })
+
+    // -- Connect (marketplaces) --
+    let connectedAccountId: string
+
+    await run('accountCreate creates a connected account', async () => {
+      const result = await rpc.invoke('stripe:accountCreate', {
+        type: 'express',
+        email: 'seller@example.com',
+        capabilities: { card_payments: true, transfers: true },
+      })
+      assert.equal(result.object, 'account')
+      assert.ok(result.id, 'Expected account ID')
+      connectedAccountId = result.id
+    })
+
+    await run('accountGet retrieves the connected account', async () => {
+      const result = await rpc.invoke('stripe:accountGet', { accountId: connectedAccountId })
+      assert.equal(result.object, 'account')
+    })
+
+    await run('accountLinkCreate returns an onboarding url', async () => {
+      const result = await rpc.invoke('stripe:accountLinkCreate', {
+        account: connectedAccountId,
+        refresh_url: 'https://example.com/reauth',
+        return_url: 'https://example.com/return',
+      })
+      assert.equal(result.object, 'account_link')
+      assert.ok(result.url, 'Expected onboarding url')
+    })
+
+    await run('transferCreate transfers to a connected account', async () => {
+      const result = await rpc.invoke('stripe:transferCreate', {
+        amount: 1000,
+        currency: 'usd',
+        destination: connectedAccountId,
+      })
+      assert.equal(result.object, 'transfer')
+      assert.ok(result.id, 'Expected transfer ID')
+    })
+
+    await run('payoutCreate creates a payout', async () => {
+      const result = await rpc.invoke('stripe:payoutCreate', {
+        amount: 1000,
+        currency: 'usd',
+      })
+      assert.equal(result.object, 'payout')
+      assert.ok(result.id, 'Expected payout ID')
+    })
+
+    // -- Checkout with inline price_data + payment_intent_data (wallet top-up) --
+    await run('checkoutSessionCreate supports inline price_data + payment_intent_data', async () => {
+      const result = await rpc.invoke('stripe:checkoutSessionCreate', {
+        mode: 'payment',
+        price_data: {
+          currency: 'usd',
+          unit_amount: 2500,
+          product_name: 'AI credit top-up',
+        },
+        success_url: 'https://example.com/success',
+        cancel_url: 'https://example.com/cancel',
+        payment_intent_data: { metadata: { purpose: 'ai_topup', organizationId: 'org_123' } },
+      })
+      assert.equal(result.object, 'checkout.session')
+      assert.ok(result.id, 'Expected session ID')
+    })
+
     return { passed, failed }
   },
 })

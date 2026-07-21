@@ -1,21 +1,28 @@
 # @pikku/addon-stripe
 
-Stripe payments and subscriptions: charges, customers, coupons, sources, tokens,
-meter events, subscriptions, checkout, payment intents, and webhook handling.
+Stripe payments and subscriptions: charges, refunds, customers, products, prices,
+coupons, sources, tokens, cards, meter events, subscriptions, invoices, checkout,
+payment intents, setup intents, Connect (marketplaces), and webhook handling.
 
 ## Functions
 
 **Balance:** `balanceGet`
 **Charges:** `chargeCreate`, `chargeGet`, `chargeList`, `chargeUpdate`
+**Refunds:** `refundCreate`, `refundGet`, `refundList`
 **Coupons:** `couponCreate`, `couponList`
 **Customers:** `customerCreate`, `customerGet`, `customerDelete`, `customerUpdate`, `customerList`
+**Products:** `productCreate`, `productGet`, `productList`, `productUpdate`
+**Prices:** `priceCreate`, `priceGet`, `priceList`, `priceUpdate`
 **Sources:** `sourceCreate`, `sourceGet`, `sourceDelete`
 **Tokens:** `tokenCreate`
 **Customer Cards:** `customerCardAdd`, `customerCardGet`, `customerCardRemove`
 **Meter Events:** `meterEventCreate`
-**Subscriptions:** `subscriptionGet`, `subscriptionUpdate`, `subscriptionCancel`
-**Checkout:** `checkoutSessionCreate`, `billingPortalSessionCreate`
-**Payment Intents:** `paymentIntentCreate` (off-session top-ups)
+**Subscriptions:** `subscriptionCreate`, `subscriptionGet`, `subscriptionUpdate`, `subscriptionCancel`
+**Invoices:** `invoiceCreate`, `invoiceGet`, `invoiceList`, `invoiceFinalize`, `invoiceSend`, `invoiceVoid`, `invoicePay`, `invoiceItemCreate`
+**Checkout:** `checkoutSessionCreate` (existing `priceId`, or inline `price_data` + `payment_intent_data`/`subscription_data`), `billingPortalSessionCreate`
+**Payment Intents:** `paymentIntentCreate` (off-session charge or client-side Elements — returns `client_secret`), `paymentIntentGet`, `paymentIntentConfirm`, `paymentIntentCapture`, `paymentIntentCancel`
+**Setup Intents:** `setupIntentCreate` (save a card without charging), `setupIntentGet`
+**Connect:** `accountCreate`, `accountGet`, `accountLinkCreate`, `transferCreate`, `payoutCreate`
 **Webhooks:** `stripeWebhookHandler`
 
 ## Webhooks
