@@ -1,0 +1,167 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "batchUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41ade260",
+          "outputHash": "25928705"
+        }
+      }
+    },
+    "create": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d237e23",
+          "outputHash": "b80c6431"
+        }
+      }
+    },
+    "developerMetadataGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4007143",
+          "outputHash": "6ea7243c"
+        }
+      }
+    },
+    "developerMetadataSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf1caa82",
+          "outputHash": "9992af4f"
+        }
+      }
+    },
+    "get": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca338baa",
+          "outputHash": "896b7c8c"
+        }
+      }
+    },
+    "getByDataFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36d8210b",
+          "outputHash": "b561452b"
+        }
+      }
+    },
+    "readRows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0b2075c",
+          "outputHash": "4f686057"
+        }
+      }
+    },
+    "sheetsCopyTo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbf16938",
+          "outputHash": "bb01cb10"
+        }
+      }
+    },
+    "valuesAppend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6068a63c",
+          "outputHash": "d908d1a6"
+        }
+      }
+    },
+    "valuesBatchClear": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a9034fa",
+          "outputHash": "f1a70618"
+        }
+      }
+    },
+    "valuesBatchClearByDataFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c868c57a",
+          "outputHash": "064b51d6"
+        }
+      }
+    },
+    "valuesBatchGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46a56bde",
+          "outputHash": "40db3e65"
+        }
+      }
+    },
+    "valuesBatchGetByDataFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd130eb9",
+          "outputHash": "ce0b9625"
+        }
+      }
+    },
+    "valuesBatchUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6e0aed4",
+          "outputHash": "afc5c1c5"
+        }
+      }
+    },
+    "valuesBatchUpdateByDataFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98c4c12a",
+          "outputHash": "699036d1"
+        }
+      }
+    },
+    "valuesClear": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb9dd921",
+          "outputHash": "c81f3fe9"
+        }
+      }
+    },
+    "valuesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a8b7abf",
+          "outputHash": "6e09c545"
+        }
+      }
+    },
+    "valuesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b7e9cfe",
+          "outputHash": "dcc0da6e"
+        }
+      }
+    }
+  }
+}

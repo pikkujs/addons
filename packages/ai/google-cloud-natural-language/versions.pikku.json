@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "analyzeSentiment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6db63716",
+          "outputHash": "da06609c"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "scanGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48a925ef",
+          "outputHash": "201e1507"
+        }
+      }
+    },
+    "scanGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e28f92d8",
+          "outputHash": "084ecf39"
+        }
+      }
+    },
+    "scanPerform": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9fc81cf",
+          "outputHash": "17fd2f4f"
+        }
+      }
+    }
+  }
+}

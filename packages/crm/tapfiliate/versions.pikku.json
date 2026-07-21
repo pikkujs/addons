@@ -1,0 +1,113 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "affiliateCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfe1d4be",
+          "outputHash": "0ee220ed"
+        }
+      }
+    },
+    "affiliateDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95f274f3",
+          "outputHash": "caa3fcd9"
+        }
+      }
+    },
+    "affiliateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24413a76",
+          "outputHash": "a8cc2418"
+        }
+      }
+    },
+    "affiliateGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "354eb5b4",
+          "outputHash": "975c0ef6"
+        }
+      }
+    },
+    "affiliateMetadataAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86badd3b",
+          "outputHash": "62334654"
+        }
+      }
+    },
+    "affiliateMetadataRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fb72af4d",
+          "outputHash": "2150482b"
+        }
+      }
+    },
+    "affiliateMetadataUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc211b75",
+          "outputHash": "2b34b144"
+        }
+      }
+    },
+    "programAffiliateAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e77cbeac",
+          "outputHash": "8cbc54e8"
+        }
+      }
+    },
+    "programAffiliateApprove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f05bd49c",
+          "outputHash": "d0ac8aba"
+        }
+      }
+    },
+    "programAffiliateDisapprove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b996ea47",
+          "outputHash": "dff739bd"
+        }
+      }
+    },
+    "programAffiliateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d05bfb23",
+          "outputHash": "4a1a9c4d"
+        }
+      }
+    },
+    "programAffiliateGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b94896b8",
+          "outputHash": "0f4ea25b"
+        }
+      }
+    }
+  }
+}

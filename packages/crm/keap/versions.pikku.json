@@ -1,0 +1,266 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e95db56e",
+          "outputHash": "6c646a99"
+        }
+      }
+    },
+    "companyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0bcbc54",
+          "outputHash": "d838d993"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6cc551b",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fae5a373",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactTagCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92cf3431",
+          "outputHash": "0bab7c84"
+        }
+      }
+    },
+    "contactTagDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c900b2f",
+          "outputHash": "a299d4ac"
+        }
+      }
+    },
+    "contactTagGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "801ee42e",
+          "outputHash": "6c458b20"
+        }
+      }
+    },
+    "contactUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fe58b4ca",
+          "outputHash": "e86395ec"
+        }
+      }
+    },
+    "emailCreateRecord": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f96d7bd1",
+          "outputHash": "05608e3e"
+        }
+      }
+    },
+    "emailDeleteRecord": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "207c70d3",
+          "outputHash": "cda43ebd"
+        }
+      }
+    },
+    "emailGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f540ada2",
+          "outputHash": "4165b984"
+        }
+      }
+    },
+    "emailSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "daab7ac6",
+          "outputHash": "c1073773"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06081078",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a402656f",
+          "outputHash": "c98ef73a"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f61dd40a",
+          "outputHash": "04d6e56e"
+        }
+      }
+    },
+    "noteCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "388ccb93",
+          "outputHash": "769736fe"
+        }
+      }
+    },
+    "noteDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81034bae",
+          "outputHash": "f469e16e"
+        }
+      }
+    },
+    "noteGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c783cfa",
+          "outputHash": "99fddc37"
+        }
+      }
+    },
+    "noteGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "920d03d4",
+          "outputHash": "23622890"
+        }
+      }
+    },
+    "noteUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c93e9f42",
+          "outputHash": "77f156e2"
+        }
+      }
+    },
+    "orderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22448cdf",
+          "outputHash": "1b725979"
+        }
+      }
+    },
+    "orderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0ee0345",
+          "outputHash": "07412545"
+        }
+      }
+    },
+    "orderGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1dc76b0",
+          "outputHash": "be0654fd"
+        }
+      }
+    },
+    "orderGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a64937d",
+          "outputHash": "60a7c5ff"
+        }
+      }
+    },
+    "productCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "adb1b389",
+          "outputHash": "f3c38833"
+        }
+      }
+    },
+    "productDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0251627a",
+          "outputHash": "5be64097"
+        }
+      }
+    },
+    "productGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4610725e",
+          "outputHash": "9312d6f1"
+        }
+      }
+    },
+    "productGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91947f7b",
+          "outputHash": "579771bd"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "totpGenerate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a93a043",
+          "outputHash": "fd88181e"
+        }
+      }
+    }
+  }
+}

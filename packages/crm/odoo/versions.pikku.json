@@ -1,0 +1,230 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "activityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec7d9ffe",
+          "outputHash": "88f82f6b"
+        }
+      }
+    },
+    "activityDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f65f4e7",
+          "outputHash": "23282753"
+        }
+      }
+    },
+    "activityGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a36b262",
+          "outputHash": "f4656376"
+        }
+      }
+    },
+    "activityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77050529",
+          "outputHash": "68903a99"
+        }
+      }
+    },
+    "activityUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16deec78",
+          "outputHash": "af53edd2"
+        }
+      }
+    },
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15542239",
+          "outputHash": "8a72fa54"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b694dea1",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f9906309",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab0206bf",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f662fffb",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "customCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80751b5d",
+          "outputHash": "be7017cf"
+        }
+      }
+    },
+    "customDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26378d09",
+          "outputHash": "60e916f0"
+        }
+      }
+    },
+    "customGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35c90158",
+          "outputHash": "a40203b5"
+        }
+      }
+    },
+    "customGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aac667dc",
+          "outputHash": "1a45eb62"
+        }
+      }
+    },
+    "customUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71918815",
+          "outputHash": "edbced36"
+        }
+      }
+    },
+    "noteCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a80e40fd",
+          "outputHash": "769736fe"
+        }
+      }
+    },
+    "noteDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8fd1153e",
+          "outputHash": "f469e16e"
+        }
+      }
+    },
+    "noteGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ccd81d54",
+          "outputHash": "99fddc37"
+        }
+      }
+    },
+    "noteGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dedfee7b",
+          "outputHash": "23622890"
+        }
+      }
+    },
+    "noteUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2630a096",
+          "outputHash": "77f156e2"
+        }
+      }
+    },
+    "opportunityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e87d8e8",
+          "outputHash": "617e6fe2"
+        }
+      }
+    },
+    "opportunityDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41634a0f",
+          "outputHash": "410ffef4"
+        }
+      }
+    },
+    "opportunityGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17708b39",
+          "outputHash": "dbfb51ed"
+        }
+      }
+    },
+    "opportunityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95c036a0",
+          "outputHash": "b26bf611"
+        }
+      }
+    },
+    "opportunityUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f20c438d",
+          "outputHash": "579c98ab"
+        }
+      }
+    }
+  }
+}

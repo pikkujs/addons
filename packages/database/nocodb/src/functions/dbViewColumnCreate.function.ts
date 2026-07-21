@@ -1,0 +1,107 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { BadRequestError } from '@pikku/core/errors'
+
+export const DbViewColumnCreateInput = z.object({
+  viewId: z.string().describe("Unique View ID"),
+  "xc-auth": z.string().describe("Auth Token is a JWT Token generated based on the logged-in user. By default, the token is only valid for 10 hours. However, you can change the value by defining it using environment variable NC_JWT_EXPIRES_IN."),
+  fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+  show: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("View Title"),
+  order: z.number().min(0).optional().describe("The order of the list of views."),
+})
+
+export const DbViewColumnCreateOutput = z.object({
+  ai: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Auto-Increment?"),
+  au: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Auto Update Timestamp"),
+  description: z.union([z.string(), z.unknown()]).optional().describe("Column Description"),
+  source_id: z.string().optional().describe("Source ID that this column belongs to"),
+  cc: z.string().optional().describe("Column Comment"),
+  cdf: z.union([z.string(), z.unknown(), z.boolean(), z.number()]).optional().describe("Column Default"),
+  clen: z.union([z.number().int(), z.unknown(), z.string()]).optional().describe("Character Maximum Length"),
+  colOptions: z.union([z.object({
+    error: z.string().optional().describe("Error Message"),
+    fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+    formula: z.string().optional().describe("Formula with column ID replaced"),
+    formula_raw: z.string().optional().describe("Original Formula inputted in UI"),
+    id: z.string().min(0).max(20).optional().describe("Unique ID"),
+    parsed_tree: z.unknown().optional().describe("Parsed Formula Tree"),
+  }), z.object({
+    deleted: z.string().optional(),
+    dr: z.string().optional(),
+    fk_child_column_id: z.string().optional(),
+    fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+    fk_index_name: z.string().optional(),
+    fk_relation_view_id: z.string().optional(),
+    fk_mm_child_column_id: z.string().optional(),
+    fk_mm_model_id: z.string().optional(),
+    fk_mm_parent_column_id: z.string().optional(),
+    fk_parent_column_id: z.string().optional(),
+    fk_related_model_id: z.string().optional(),
+    id: z.string().min(0).max(20).optional().describe("Unique ID"),
+    order: z.string().optional(),
+    type: z.string().optional(),
+    ur: z.string().optional(),
+    virtual: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Model for Bool"),
+    fk_related_base_id: z.string().optional(),
+    fk_mm_base_id: z.string().optional(),
+    base_id: z.string().optional(),
+    fk_related_source_id: z.string().optional(),
+    fk_mm_source_id: z.string().optional(),
+    version: z.number().optional(),
+  }), z.object({
+    id: z.string().min(0).max(20).optional().describe("Unique ID"),
+    fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+    fk_lookup_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Lookup Column"),
+    fk_relation_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Relation Column"),
+    order: z.number().optional().describe("The order among the list"),
+  }), z.object({
+    id: z.string().min(0).max(20).optional().describe("Unique ID"),
+    fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+    fk_relation_column_id: z.string().min(0).max(20).optional().describe("Foreign to Relation Column"),
+    fk_rollup_column_id: z.string().min(0).max(20).optional().describe("Foreign to Rollup Column"),
+    rollup_function: z.enum(["count", "min", "max", "avg", "sum", "countDistinct", "sumDistinct", "avgDistinct"]).optional().describe("Rollup Function"),
+  }), z.object({
+    options: z.array(z.object({
+      id: z.string().min(0).max(20).optional().describe("Unique ID"),
+      title: z.string().optional().describe("Option Title\n"),
+      fk_column_id: z.string().min(0).max(20).optional().describe("Foreign Key to Column"),
+      color: z.string().optional().describe("Option Color"),
+      order: z.number().optional().describe("The order among the options"),
+    })).describe("Array of select options"),
+  }), z.record(z.string(), z.unknown())]).optional().describe("Column Options"),
+  column_name: z.string().optional().describe("Column Name"),
+  cop: z.string().optional().describe("Column Ordinal Position"),
+  csn: z.union([z.string(), z.unknown()]).optional().describe("Character Set Name"),
+  ct: z.string().optional().describe("Column Type"),
+  deleted: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Deleted?"),
+  dt: z.string().optional().describe("Data Type in DB"),
+  dtx: z.string().optional().describe("Data Type X"),
+  dtxp: z.union([z.unknown(), z.number(), z.string()]).optional().describe("Data Type X Precision"),
+  dtxs: z.union([z.unknown(), z.number(), z.string()]).optional().describe("Data Type X Scale"),
+  fk_model_id: z.string().optional().describe("Model ID that this column belongs to"),
+  id: z.string().min(0).max(20).optional().describe("Unique ID"),
+  meta: z.union([z.unknown(), z.record(z.string(), z.unknown()), z.string()]).optional().describe("Meta Info"),
+  np: z.union([z.number().int(), z.unknown(), z.string()]).optional().describe("Numeric Precision"),
+  ns: z.union([z.number().int(), z.unknown(), z.string()]).optional().describe("Numeric Scale"),
+  order: z.number().optional().describe("The order of the list of columns"),
+  pk: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Primary Key?"),
+  pv: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Primary Value?"),
+  rqd: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Required?"),
+  system: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is System Column?"),
+  title: z.string().optional().describe("Column Title"),
+  uidt: z.enum(["Attachment", "AutoNumber", "Barcode", "Button", "Checkbox", "Collaborator", "Count", "CreatedTime", "Currency", "Date", "DateTime", "Decimal", "Duration", "Email", "Formula", "ForeignKey", "GeoData", "Geometry", "ID", "JSON", "LastModifiedTime", "LongText", "LinkToAnotherRecord", "Lookup", "MultiSelect", "Number", "Percent", "PhoneNumber", "Rating", "Rollup", "SingleLineText", "SingleSelect", "SpecificDBType", "Time", "URL", "Year", "QrCode", "Links", "User", "CreatedBy", "LastModifiedBy", "AI", "Order", "Meta", "Colour", "UUID"]).optional().describe("The data type in UI"),
+  un: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Unsigned?"),
+  unique: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is unique?"),
+  visible: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is Visible?"),
+  readonly: z.union([z.number().int(), z.boolean(), z.unknown()]).optional().describe("Is this column readonly?"),
+}).describe("Model for Column")
+
+export const dbViewColumnCreate = pikkuSessionlessFunc({
+  description: "Create a new column in a given View",
+  input: DbViewColumnCreateInput,
+  output: DbViewColumnCreateOutput,
+  errors: [BadRequestError],
+  func: async ({ nocodb }, data) => {
+    return nocodb.call("POST", "/api/v1/db/meta/views/{viewId}/columns", data) as any
+  },
+})

@@ -1,0 +1,4271 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "addActorUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa83c836",
+          "outputHash": "adf70f42"
+        }
+      }
+    },
+    "addAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa4ea5fc",
+          "outputHash": "b0188b5e"
+        }
+      }
+    },
+    "addComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e83106c",
+          "outputHash": "12150cb3"
+        }
+      }
+    },
+    "addFieldToDefaultScreen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25e9e373",
+          "outputHash": "b742ec46"
+        }
+      }
+    },
+    "addGadget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7de2c006",
+          "outputHash": "9f429552"
+        }
+      }
+    },
+    "addIssueTypesToContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68a2564d",
+          "outputHash": "1010fcb5"
+        }
+      }
+    },
+    "addIssueTypesToIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "898c7ae4",
+          "outputHash": "fb3711b7"
+        }
+      }
+    },
+    "addNotifications": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdf8c2bc",
+          "outputHash": "8073f3b4"
+        }
+      }
+    },
+    "addProjectRoleActorsToRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a69cc3fc",
+          "outputHash": "ce6cfeeb"
+        }
+      }
+    },
+    "addScreenTab": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b864f3b3",
+          "outputHash": "cbfeee8e"
+        }
+      }
+    },
+    "addScreenTabField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c96a775",
+          "outputHash": "1963be26"
+        }
+      }
+    },
+    "addSharePermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5bc1aa76",
+          "outputHash": "025ca0e1"
+        }
+      }
+    },
+    "addUserToGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85e31f69",
+          "outputHash": "2e9403d4"
+        }
+      }
+    },
+    "addVote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e26864e5",
+          "outputHash": "6a761f6d"
+        }
+      }
+    },
+    "addWatcher": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2233597",
+          "outputHash": "b39c86fd"
+        }
+      }
+    },
+    "addWorklog": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8e45cc2",
+          "outputHash": "ce85871d"
+        }
+      }
+    },
+    "addonPropertiesResourceDeleteAddonPropertyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "117eca50",
+          "outputHash": "9bb197b3"
+        }
+      }
+    },
+    "addonPropertiesResourceGetAddonPropertiesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abdbbcf6",
+          "outputHash": "06f01233"
+        }
+      }
+    },
+    "addonPropertiesResourceGetAddonPropertyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2c5fcf4",
+          "outputHash": "9f5b6e71"
+        }
+      }
+    },
+    "addonPropertiesResourcePutAddonPropertyPut": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad9d4cca",
+          "outputHash": "69b28b2f"
+        }
+      }
+    },
+    "analyseExpression": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67b6c19c",
+          "outputHash": "68b1d2ef"
+        }
+      }
+    },
+    "appIssueFieldValueUpdateResourceUpdateIssueFieldsPut": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03b51a79",
+          "outputHash": "70de2a81"
+        }
+      }
+    },
+    "appendMappingsForIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eabf739c",
+          "outputHash": "0ab84cd9"
+        }
+      }
+    },
+    "archiveProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58f1d847",
+          "outputHash": "c3b6015e"
+        }
+      }
+    },
+    "assignFieldConfigurationSchemeToProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e398bf6e",
+          "outputHash": "fa2e595c"
+        }
+      }
+    },
+    "assignIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e273721",
+          "outputHash": "89786757"
+        }
+      }
+    },
+    "assignIssueTypeSchemeToProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7596ebad",
+          "outputHash": "1494329b"
+        }
+      }
+    },
+    "assignIssueTypeScreenSchemeToProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8352b801",
+          "outputHash": "8bb8f45a"
+        }
+      }
+    },
+    "assignPermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65478330",
+          "outputHash": "3bfcbbe5"
+        }
+      }
+    },
+    "assignProjectsToCustomFieldContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c34322ab",
+          "outputHash": "0f39359c"
+        }
+      }
+    },
+    "assignSchemeToProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4264017d",
+          "outputHash": "24ac0ec3"
+        }
+      }
+    },
+    "bulkDeleteIssueProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "150890e6",
+          "outputHash": "63ecbf61"
+        }
+      }
+    },
+    "bulkGetGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad28c767",
+          "outputHash": "665c7e7f"
+        }
+      }
+    },
+    "bulkGetUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f770f43",
+          "outputHash": "284bd814"
+        }
+      }
+    },
+    "bulkGetUsersMigration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34acb765",
+          "outputHash": "4b73c438"
+        }
+      }
+    },
+    "bulkSetIssuePropertiesByIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29cb1746",
+          "outputHash": "9900ac23"
+        }
+      }
+    },
+    "bulkSetIssueProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "781add6b",
+          "outputHash": "a118e2b9"
+        }
+      }
+    },
+    "bulkSetIssuesPropertiesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcda5cfa",
+          "outputHash": "f43df823"
+        }
+      }
+    },
+    "cancelTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9eb2acc",
+          "outputHash": "964003e2"
+        }
+      }
+    },
+    "changeFilterOwner": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52ea3f8d",
+          "outputHash": "3f1fd427"
+        }
+      }
+    },
+    "copyDashboard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70f7d07d",
+          "outputHash": "c2061c0d"
+        }
+      }
+    },
+    "createComponent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c5c1bea",
+          "outputHash": "56b25ce2"
+        }
+      }
+    },
+    "createCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0e8a3af7",
+          "outputHash": "fbecd8ba"
+        }
+      }
+    },
+    "createCustomFieldContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "663eca3e",
+          "outputHash": "522785d9"
+        }
+      }
+    },
+    "createCustomFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "485fa620",
+          "outputHash": "80f9dc95"
+        }
+      }
+    },
+    "createDashboard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67898a4e",
+          "outputHash": "73095ff8"
+        }
+      }
+    },
+    "createFieldConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f4b1ca6",
+          "outputHash": "95317648"
+        }
+      }
+    },
+    "createFieldConfigurationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6022de8b",
+          "outputHash": "ee2e81b4"
+        }
+      }
+    },
+    "createFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "567e4e29",
+          "outputHash": "ac62876c"
+        }
+      }
+    },
+    "createGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39ab38ab",
+          "outputHash": "6cf2c510"
+        }
+      }
+    },
+    "createIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "09907d87",
+          "outputHash": "3ee3f348"
+        }
+      }
+    },
+    "createIssueFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dde01db3",
+          "outputHash": "2a7bd4d8"
+        }
+      }
+    },
+    "createIssueLinkType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfb28d53",
+          "outputHash": "657ec39a"
+        }
+      }
+    },
+    "createIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cab65863",
+          "outputHash": "15f54ca2"
+        }
+      }
+    },
+    "createIssueTypeAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67f85cdc",
+          "outputHash": "a7ef6eb4"
+        }
+      }
+    },
+    "createIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9efbe7f8",
+          "outputHash": "efc084cd"
+        }
+      }
+    },
+    "createIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "289031df",
+          "outputHash": "dfd434da"
+        }
+      }
+    },
+    "createIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4f9153b",
+          "outputHash": "7681a40c"
+        }
+      }
+    },
+    "createNotificationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad5a0279",
+          "outputHash": "4837b086"
+        }
+      }
+    },
+    "createOrUpdateRemoteIssueLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a650677",
+          "outputHash": "853963fb"
+        }
+      }
+    },
+    "createPermissionGrant": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3b6a00b",
+          "outputHash": "d4d8b5e5"
+        }
+      }
+    },
+    "createPermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae9ded69",
+          "outputHash": "a78c5dde"
+        }
+      }
+    },
+    "createPriority": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4dbf3835",
+          "outputHash": "a4799927"
+        }
+      }
+    },
+    "createProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ee49a2c",
+          "outputHash": "48e67390"
+        }
+      }
+    },
+    "createProjectAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22420cbc",
+          "outputHash": "10944d69"
+        }
+      }
+    },
+    "createProjectCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20f558fc",
+          "outputHash": "ded3f9b9"
+        }
+      }
+    },
+    "createProjectRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54350287",
+          "outputHash": "1e5991f7"
+        }
+      }
+    },
+    "createResolution": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04faf41f",
+          "outputHash": "862a20fd"
+        }
+      }
+    },
+    "createScreen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f510a388",
+          "outputHash": "5f14dc64"
+        }
+      }
+    },
+    "createScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a18daab",
+          "outputHash": "2493893d"
+        }
+      }
+    },
+    "createStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0edc8332",
+          "outputHash": "74dc4ac5"
+        }
+      }
+    },
+    "createUiModification": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d5d1b82",
+          "outputHash": "2f4d8f7f"
+        }
+      }
+    },
+    "createUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15a5b754",
+          "outputHash": "efc2ff46"
+        }
+      }
+    },
+    "createVersion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2122446",
+          "outputHash": "b9075c3c"
+        }
+      }
+    },
+    "createWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a4eddd4",
+          "outputHash": "a23601c2"
+        }
+      }
+    },
+    "createWorkflowScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c651f7ae",
+          "outputHash": "8ca9885a"
+        }
+      }
+    },
+    "createWorkflowSchemeDraftFromParent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0e5dfa28",
+          "outputHash": "ad7ff1e5"
+        }
+      }
+    },
+    "createWorkflowTransitionProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d84a507",
+          "outputHash": "32bd65cc"
+        }
+      }
+    },
+    "deleteActor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7467763b",
+          "outputHash": "7d0be0ac"
+        }
+      }
+    },
+    "deleteAndReplaceVersion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73b97d4c",
+          "outputHash": "01a3fe1c"
+        }
+      }
+    },
+    "deleteAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36531901",
+          "outputHash": "c3d82d18"
+        }
+      }
+    },
+    "deleteComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73e86495",
+          "outputHash": "8cc77aab"
+        }
+      }
+    },
+    "deleteCommentProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "18d80c5f",
+          "outputHash": "80137885"
+        }
+      }
+    },
+    "deleteComponent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77dcb1aa",
+          "outputHash": "511576bd"
+        }
+      }
+    },
+    "deleteCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ec1e69c",
+          "outputHash": "a34c6ef3"
+        }
+      }
+    },
+    "deleteCustomFieldContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48c62584",
+          "outputHash": "243aa565"
+        }
+      }
+    },
+    "deleteCustomFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "97a4df4d",
+          "outputHash": "411461cc"
+        }
+      }
+    },
+    "deleteDashboard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99f9ef04",
+          "outputHash": "ef2ae163"
+        }
+      }
+    },
+    "deleteDashboardItemProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b73f5922",
+          "outputHash": "12e6aee7"
+        }
+      }
+    },
+    "deleteDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb623adb",
+          "outputHash": "fd5fb328"
+        }
+      }
+    },
+    "deleteDraftDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38a875d7",
+          "outputHash": "65e5243c"
+        }
+      }
+    },
+    "deleteDraftWorkflowMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2626fa1b",
+          "outputHash": "f358dec0"
+        }
+      }
+    },
+    "deleteFavouriteForFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff749816",
+          "outputHash": "218f5752"
+        }
+      }
+    },
+    "deleteFieldConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f5cdb45",
+          "outputHash": "40ffcaf1"
+        }
+      }
+    },
+    "deleteFieldConfigurationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "091ef3dc",
+          "outputHash": "8b1f0808"
+        }
+      }
+    },
+    "deleteFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ada3294",
+          "outputHash": "6bf159de"
+        }
+      }
+    },
+    "deleteInactiveWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "601632cf",
+          "outputHash": "0352c9f2"
+        }
+      }
+    },
+    "deleteIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2dab14d6",
+          "outputHash": "7ba09c9b"
+        }
+      }
+    },
+    "deleteIssueFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "528126e0",
+          "outputHash": "82a90309"
+        }
+      }
+    },
+    "deleteIssueLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dd7ff63",
+          "outputHash": "22bc8f14"
+        }
+      }
+    },
+    "deleteIssueLinkType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8132a0b",
+          "outputHash": "7df802f2"
+        }
+      }
+    },
+    "deleteIssueProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7863e0ed",
+          "outputHash": "aa2b7d76"
+        }
+      }
+    },
+    "deleteIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c09949fd",
+          "outputHash": "c4c7ffc0"
+        }
+      }
+    },
+    "deleteIssueTypeProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1ec4a65",
+          "outputHash": "a209a2d1"
+        }
+      }
+    },
+    "deleteIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b0a97d2",
+          "outputHash": "759c3f27"
+        }
+      }
+    },
+    "deleteIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a1de4fa",
+          "outputHash": "c41cede4"
+        }
+      }
+    },
+    "deleteNotificationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7cf7fcd5",
+          "outputHash": "1c839a6d"
+        }
+      }
+    },
+    "deletePermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "684865fc",
+          "outputHash": "6dcd13b5"
+        }
+      }
+    },
+    "deletePermissionSchemeEntity": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df6cee97",
+          "outputHash": "444e04d8"
+        }
+      }
+    },
+    "deletePriority": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83a23808",
+          "outputHash": "c7cfb764"
+        }
+      }
+    },
+    "deleteProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fcfdb77f",
+          "outputHash": "05dcb92a"
+        }
+      }
+    },
+    "deleteProjectAsynchronously": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "297eb1f7",
+          "outputHash": "4a2b351f"
+        }
+      }
+    },
+    "deleteProjectAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07e1419f",
+          "outputHash": "0948bb39"
+        }
+      }
+    },
+    "deleteProjectProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22154fb1",
+          "outputHash": "f40b4f81"
+        }
+      }
+    },
+    "deleteProjectRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa20dda4",
+          "outputHash": "03cad2d6"
+        }
+      }
+    },
+    "deleteProjectRoleActorsFromRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8137a7f",
+          "outputHash": "8f3eb1f3"
+        }
+      }
+    },
+    "deleteRemoteIssueLinkByGlobalId": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48070121",
+          "outputHash": "79efd92b"
+        }
+      }
+    },
+    "deleteRemoteIssueLinkById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa7aba62",
+          "outputHash": "cd76c120"
+        }
+      }
+    },
+    "deleteResolution": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6461f6a1",
+          "outputHash": "84f37b6d"
+        }
+      }
+    },
+    "deleteScreen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a82a551b",
+          "outputHash": "7d537a9f"
+        }
+      }
+    },
+    "deleteScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e453bd7",
+          "outputHash": "aa90ffbc"
+        }
+      }
+    },
+    "deleteScreenTab": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a1e542b3",
+          "outputHash": "1f4386ed"
+        }
+      }
+    },
+    "deleteSharePermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "87f5781e",
+          "outputHash": "59ce3cb9"
+        }
+      }
+    },
+    "deleteStatusesById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "078173df",
+          "outputHash": "4facb530"
+        }
+      }
+    },
+    "deleteUiModification": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fe49cf11",
+          "outputHash": "30bee0cb"
+        }
+      }
+    },
+    "deleteUserProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "148e63dd",
+          "outputHash": "6f9366e9"
+        }
+      }
+    },
+    "deleteWebhookById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbd4abaf",
+          "outputHash": "a7453000"
+        }
+      }
+    },
+    "deleteWorkflowMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "557c272f",
+          "outputHash": "caec45f5"
+        }
+      }
+    },
+    "deleteWorkflowScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69d7224e",
+          "outputHash": "03eed824"
+        }
+      }
+    },
+    "deleteWorkflowSchemeDraft": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c1b42bf",
+          "outputHash": "00c66e52"
+        }
+      }
+    },
+    "deleteWorkflowSchemeDraftIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a66cea99",
+          "outputHash": "99265e18"
+        }
+      }
+    },
+    "deleteWorkflowSchemeIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3007032",
+          "outputHash": "a67db3fe"
+        }
+      }
+    },
+    "deleteWorkflowTransitionProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "90c13eb4",
+          "outputHash": "dfa4d93e"
+        }
+      }
+    },
+    "deleteWorkflowTransitionRuleConfigurations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d436954",
+          "outputHash": "99d29655"
+        }
+      }
+    },
+    "deleteWorklog": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c4d453d",
+          "outputHash": "def1a1e6"
+        }
+      }
+    },
+    "deleteWorklogProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "507e6c1e",
+          "outputHash": "5d77c5c2"
+        }
+      }
+    },
+    "doTransition": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4332ac43",
+          "outputHash": "4095c0a1"
+        }
+      }
+    },
+    "dynamicModulesResourceGetModulesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "944efb22",
+          "outputHash": "750a0ba2"
+        }
+      }
+    },
+    "dynamicModulesResourceRegisterModulesPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ace065d",
+          "outputHash": "5fd7b53f"
+        }
+      }
+    },
+    "dynamicModulesResourceRemoveModulesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b185c48",
+          "outputHash": "5196a422"
+        }
+      }
+    },
+    "editIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0ef46ea",
+          "outputHash": "1be9594a"
+        }
+      }
+    },
+    "evaluateJiraExpression": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6d6e8fa",
+          "outputHash": "4ee5c727"
+        }
+      }
+    },
+    "expandAttachmentForHumans": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33e5c18d",
+          "outputHash": "b5f4baa0"
+        }
+      }
+    },
+    "expandAttachmentForMachines": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb2c4533",
+          "outputHash": "533634c5"
+        }
+      }
+    },
+    "findAssignableUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ec85e9b",
+          "outputHash": "fedf708c"
+        }
+      }
+    },
+    "findBulkAssignableUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9731aa40",
+          "outputHash": "631a99a8"
+        }
+      }
+    },
+    "findGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3d6dcf9",
+          "outputHash": "969bf128"
+        }
+      }
+    },
+    "findUserKeysByQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38109b8e",
+          "outputHash": "a44ecd03"
+        }
+      }
+    },
+    "findUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3dcd1052",
+          "outputHash": "1fdb044d"
+        }
+      }
+    },
+    "findUsersAndGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c0a904a",
+          "outputHash": "76625cb6"
+        }
+      }
+    },
+    "findUsersByQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ddb41518",
+          "outputHash": "aa5cce5b"
+        }
+      }
+    },
+    "findUsersForPicker": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c9a60b0",
+          "outputHash": "d3571dd2"
+        }
+      }
+    },
+    "findUsersWithAllPermissions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2f5c2c9",
+          "outputHash": "0bec9c68"
+        }
+      }
+    },
+    "findUsersWithBrowsePermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ac45f11",
+          "outputHash": "f4d76288"
+        }
+      }
+    },
+    "fullyUpdateProjectRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "694c771a",
+          "outputHash": "d1c35b99"
+        }
+      }
+    },
+    "getAccessibleProjectTypeByKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d45b6fb",
+          "outputHash": "8c6e2265"
+        }
+      }
+    },
+    "getAdvancedSettings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81651d23",
+          "outputHash": "b8d87888"
+        }
+      }
+    },
+    "getAllAccessibleProjectTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "09f743e5",
+          "outputHash": "dc85cc4e"
+        }
+      }
+    },
+    "getAllApplicationRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1c9b393",
+          "outputHash": "7c0bb929"
+        }
+      }
+    },
+    "getAllAvailableDashboardGadgets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae5d4185",
+          "outputHash": "8e360665"
+        }
+      }
+    },
+    "getAllDashboards": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c66b308e",
+          "outputHash": "a0814bb6"
+        }
+      }
+    },
+    "getAllFieldConfigurationSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39fb871e",
+          "outputHash": "df07a0ef"
+        }
+      }
+    },
+    "getAllFieldConfigurations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "beb594a1",
+          "outputHash": "3aa22ee5"
+        }
+      }
+    },
+    "getAllGadgets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8381a0a6",
+          "outputHash": "1b258482"
+        }
+      }
+    },
+    "getAllIssueFieldOptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d48c78f1",
+          "outputHash": "3a3db566"
+        }
+      }
+    },
+    "getAllIssueTypeSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc6a23b0",
+          "outputHash": "002bc28e"
+        }
+      }
+    },
+    "getAllLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0689c06b",
+          "outputHash": "3bc38921"
+        }
+      }
+    },
+    "getAllPermissionSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "325f1ac9",
+          "outputHash": "f70bd26c"
+        }
+      }
+    },
+    "getAllPermissions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6aedcee5",
+          "outputHash": "35fb64af"
+        }
+      }
+    },
+    "getAllProjectAvatars": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2054c69",
+          "outputHash": "c0dcfd8b"
+        }
+      }
+    },
+    "getAllProjectCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0335d84e",
+          "outputHash": "77be66d6"
+        }
+      }
+    },
+    "getAllProjectRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcc29f3b",
+          "outputHash": "e6535a9e"
+        }
+      }
+    },
+    "getAllProjectTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecc25ea9",
+          "outputHash": "1b8cb4e3"
+        }
+      }
+    },
+    "getAllScreenTabFields": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fbb03f4",
+          "outputHash": "0c8fc281"
+        }
+      }
+    },
+    "getAllScreenTabs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69ba2cd2",
+          "outputHash": "3a9f28ff"
+        }
+      }
+    },
+    "getAllStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cb9c6b5",
+          "outputHash": "8a505277"
+        }
+      }
+    },
+    "getAllSystemAvatars": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "586187bd",
+          "outputHash": "89103d9a"
+        }
+      }
+    },
+    "getAllUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf8c504c",
+          "outputHash": "8af111a0"
+        }
+      }
+    },
+    "getAllUsersDefault": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ec323c1",
+          "outputHash": "5b8eed6c"
+        }
+      }
+    },
+    "getAllWorkflowSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "782e4abf",
+          "outputHash": "a7c4eb45"
+        }
+      }
+    },
+    "getAlternativeIssueTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e8aa2a4",
+          "outputHash": "e44de651"
+        }
+      }
+    },
+    "getApplicationProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ce1db04",
+          "outputHash": "9ea45256"
+        }
+      }
+    },
+    "getApplicationRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f85f8a80",
+          "outputHash": "8837e689"
+        }
+      }
+    },
+    "getApproximateApplicationLicenseCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b0ce6e7",
+          "outputHash": "bb8ab4b9"
+        }
+      }
+    },
+    "getApproximateLicenseCount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e6094eb",
+          "outputHash": "b134a5e7"
+        }
+      }
+    },
+    "getAssignedPermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8bcfebf",
+          "outputHash": "c341f439"
+        }
+      }
+    },
+    "getAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38261beb",
+          "outputHash": "28d33152"
+        }
+      }
+    },
+    "getAttachmentContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8fc40e4",
+          "outputHash": "47ad7e5e"
+        }
+      }
+    },
+    "getAttachmentMeta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21965f55",
+          "outputHash": "0f3a7766"
+        }
+      }
+    },
+    "getAttachmentThumbnail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8607168f",
+          "outputHash": "fa5df0d0"
+        }
+      }
+    },
+    "getAuditRecords": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6bda82b",
+          "outputHash": "1962ee04"
+        }
+      }
+    },
+    "getAutoComplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10819c9a",
+          "outputHash": "639ca253"
+        }
+      }
+    },
+    "getAutoCompletePost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f9d1902",
+          "outputHash": "121ac2d0"
+        }
+      }
+    },
+    "getAvailableScreenFields": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78e2bc14",
+          "outputHash": "61d1aace"
+        }
+      }
+    },
+    "getAvailableTimeTrackingImplementations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5db87277",
+          "outputHash": "501c9fb2"
+        }
+      }
+    },
+    "getAvatarImageByID": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9c0559f",
+          "outputHash": "2430df2e"
+        }
+      }
+    },
+    "getAvatarImageByOwner": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "161636ce",
+          "outputHash": "ce6abdca"
+        }
+      }
+    },
+    "getAvatarImageByType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eed8eb0c",
+          "outputHash": "c83ff9a7"
+        }
+      }
+    },
+    "getAvatars": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a5b94bba",
+          "outputHash": "1b20d3c4"
+        }
+      }
+    },
+    "getBanner": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3bd6502a",
+          "outputHash": "5bf1b424"
+        }
+      }
+    },
+    "getBulkPermissions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e843a416",
+          "outputHash": "85fafaa7"
+        }
+      }
+    },
+    "getChangeLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7309427",
+          "outputHash": "c09b6b4c"
+        }
+      }
+    },
+    "getChangeLogsByIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33b3cdae",
+          "outputHash": "87bcb33d"
+        }
+      }
+    },
+    "getColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e72b0de1",
+          "outputHash": "54e292d2"
+        }
+      }
+    },
+    "getComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbe9efdc",
+          "outputHash": "7ebe0f55"
+        }
+      }
+    },
+    "getCommentProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7481e201",
+          "outputHash": "3e0aff0e"
+        }
+      }
+    },
+    "getCommentPropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9550dc61",
+          "outputHash": "152d869d"
+        }
+      }
+    },
+    "getComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "278cb7b2",
+          "outputHash": "5eaac3ee"
+        }
+      }
+    },
+    "getCommentsByIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f30469a",
+          "outputHash": "2878799d"
+        }
+      }
+    },
+    "getComponent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a2d1912",
+          "outputHash": "ca26d51d"
+        }
+      }
+    },
+    "getComponentRelatedIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f320a619",
+          "outputHash": "41cd4ffe"
+        }
+      }
+    },
+    "getConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb74eb4a",
+          "outputHash": "fd77ee45"
+        }
+      }
+    },
+    "getContextsForField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "31e69faf",
+          "outputHash": "b064ec04"
+        }
+      }
+    },
+    "getCreateIssueMeta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d383c7bb",
+          "outputHash": "414662bb"
+        }
+      }
+    },
+    "getCurrentUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c74b734",
+          "outputHash": "540114ae"
+        }
+      }
+    },
+    "getCustomFieldConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca27e396",
+          "outputHash": "17b0523c"
+        }
+      }
+    },
+    "getCustomFieldContextsForProjectsAndIssueTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3afd62d5",
+          "outputHash": "002f2b54"
+        }
+      }
+    },
+    "getCustomFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4909168",
+          "outputHash": "12946a53"
+        }
+      }
+    },
+    "getDashboard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8839f5d8",
+          "outputHash": "b4e818de"
+        }
+      }
+    },
+    "getDashboardItemProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d3f5043",
+          "outputHash": "25d28672"
+        }
+      }
+    },
+    "getDashboardItemPropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41157208",
+          "outputHash": "c44fcfad"
+        }
+      }
+    },
+    "getDashboardsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "973b3141",
+          "outputHash": "1b73a7fd"
+        }
+      }
+    },
+    "getDefaultShareScope": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9844483b",
+          "outputHash": "bce11b4f"
+        }
+      }
+    },
+    "getDefaultValues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a86265d4",
+          "outputHash": "202fbf60"
+        }
+      }
+    },
+    "getDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06f1a9c9",
+          "outputHash": "3202f121"
+        }
+      }
+    },
+    "getDraftDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e46b939",
+          "outputHash": "33d81fad"
+        }
+      }
+    },
+    "getDraftWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58574da8",
+          "outputHash": "d25418db"
+        }
+      }
+    },
+    "getDynamicWebhooksForApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40d4da3e",
+          "outputHash": "52e6c8cd"
+        }
+      }
+    },
+    "getEditIssueMeta": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "57c51607",
+          "outputHash": "7354d536"
+        }
+      }
+    },
+    "getEvents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6bc558c4",
+          "outputHash": "93d3e686"
+        }
+      }
+    },
+    "getFailedWebhooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1026decd",
+          "outputHash": "0f42c5d6"
+        }
+      }
+    },
+    "getFavouriteFilters": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7368110",
+          "outputHash": "5ca7327c"
+        }
+      }
+    },
+    "getFeaturesForProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a370a33",
+          "outputHash": "f0014145"
+        }
+      }
+    },
+    "getFieldAutoCompleteForQueryString": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ca09105",
+          "outputHash": "49fe4ad9"
+        }
+      }
+    },
+    "getFieldConfigurationItems": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c06a2575",
+          "outputHash": "0e598790"
+        }
+      }
+    },
+    "getFieldConfigurationSchemeMappings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1cb3f146",
+          "outputHash": "ae80e61f"
+        }
+      }
+    },
+    "getFieldConfigurationSchemeProjectMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5aec64ab",
+          "outputHash": "f10b5aa5"
+        }
+      }
+    },
+    "getFields": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f9a5c861",
+          "outputHash": "7582ced3"
+        }
+      }
+    },
+    "getFieldsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23dc7878",
+          "outputHash": "f2b2695a"
+        }
+      }
+    },
+    "getFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92ccb1a9",
+          "outputHash": "7346e5c7"
+        }
+      }
+    },
+    "getFiltersPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d607fb6",
+          "outputHash": "3d37d079"
+        }
+      }
+    },
+    "getIdsOfWorklogsDeletedSince": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eeacdbd0",
+          "outputHash": "42841775"
+        }
+      }
+    },
+    "getIdsOfWorklogsModifiedSince": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9169f0ea",
+          "outputHash": "daf78f5b"
+        }
+      }
+    },
+    "getIsWatchingIssueBulk": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b1897a2",
+          "outputHash": "470ec0ca"
+        }
+      }
+    },
+    "getIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2d5492e",
+          "outputHash": "d783b849"
+        }
+      }
+    },
+    "getIssueAllTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "484dfa27",
+          "outputHash": "9ec9b8ce"
+        }
+      }
+    },
+    "getIssueFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "471ea85b",
+          "outputHash": "68e0472e"
+        }
+      }
+    },
+    "getIssueLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ba664c9",
+          "outputHash": "38c5ae5b"
+        }
+      }
+    },
+    "getIssueLinkType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83af85ff",
+          "outputHash": "f09377a4"
+        }
+      }
+    },
+    "getIssueLinkTypes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cecb4bb8",
+          "outputHash": "7d028dd3"
+        }
+      }
+    },
+    "getIssueNavigatorDefaultColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f3c4e8a",
+          "outputHash": "723e0013"
+        }
+      }
+    },
+    "getIssuePickerResource": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "831f6f8d",
+          "outputHash": "95c5dfaf"
+        }
+      }
+    },
+    "getIssueProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b04d656",
+          "outputHash": "e37ce04a"
+        }
+      }
+    },
+    "getIssuePropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dab910e4",
+          "outputHash": "3f89c348"
+        }
+      }
+    },
+    "getIssueSecurityLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5fb1b626",
+          "outputHash": "bb9d50cc"
+        }
+      }
+    },
+    "getIssueSecurityLevelMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fae53dfa",
+          "outputHash": "34289089"
+        }
+      }
+    },
+    "getIssueSecurityScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c2dd148",
+          "outputHash": "7f426b16"
+        }
+      }
+    },
+    "getIssueSecuritySchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c260357e",
+          "outputHash": "9975aac6"
+        }
+      }
+    },
+    "getIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "555815fd",
+          "outputHash": "cbb5d383"
+        }
+      }
+    },
+    "getIssueTypeMappingsForContexts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ead5b74c",
+          "outputHash": "3f3507b6"
+        }
+      }
+    },
+    "getIssueTypeProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "823211e7",
+          "outputHash": "82fa75db"
+        }
+      }
+    },
+    "getIssueTypePropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d992c67",
+          "outputHash": "ca6bc36a"
+        }
+      }
+    },
+    "getIssueTypeSchemeForProjects": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "204d118c",
+          "outputHash": "afd050ee"
+        }
+      }
+    },
+    "getIssueTypeSchemesMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e0a1bbbc",
+          "outputHash": "6625945e"
+        }
+      }
+    },
+    "getIssueTypeScreenSchemeMappings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "749d0a91",
+          "outputHash": "74f7e239"
+        }
+      }
+    },
+    "getIssueTypeScreenSchemeProjectAssociations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df91e183",
+          "outputHash": "5c0c7c50"
+        }
+      }
+    },
+    "getIssueTypeScreenSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a9493a42",
+          "outputHash": "2d577d4a"
+        }
+      }
+    },
+    "getIssueTypesForProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e066592",
+          "outputHash": "7bbb899e"
+        }
+      }
+    },
+    "getIssueWatchers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c395f08b",
+          "outputHash": "8f1885e9"
+        }
+      }
+    },
+    "getIssueWorklog": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54f5cf2d",
+          "outputHash": "2b3f94f1"
+        }
+      }
+    },
+    "getLicense": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f6b078f",
+          "outputHash": "61d7828d"
+        }
+      }
+    },
+    "getLocale": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b5b46c2",
+          "outputHash": "ab5e8ace"
+        }
+      }
+    },
+    "getMyFilters": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e89add4",
+          "outputHash": "2b9cc5bb"
+        }
+      }
+    },
+    "getMyPermissions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1314b774",
+          "outputHash": "b669a609"
+        }
+      }
+    },
+    "getNotificationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7076dc22",
+          "outputHash": "4afc3e13"
+        }
+      }
+    },
+    "getNotificationSchemeToProjectMappings": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7906a19",
+          "outputHash": "01b1f4c3"
+        }
+      }
+    },
+    "getNotificationSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5df1b84a",
+          "outputHash": "0d01fa1c"
+        }
+      }
+    },
+    "getOptionsForContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "668fa716",
+          "outputHash": "82c109a9"
+        }
+      }
+    },
+    "getPermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23a02437",
+          "outputHash": "fb8d7b10"
+        }
+      }
+    },
+    "getPermissionSchemeGrant": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98d2cb78",
+          "outputHash": "1495e4b3"
+        }
+      }
+    },
+    "getPermissionSchemeGrants": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "024c23c5",
+          "outputHash": "c20f6897"
+        }
+      }
+    },
+    "getPermittedProjects": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c4ab406",
+          "outputHash": "eec39820"
+        }
+      }
+    },
+    "getPrecomputations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99818861",
+          "outputHash": "a3fa5212"
+        }
+      }
+    },
+    "getPreference": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "630242d2",
+          "outputHash": "fcff6f39"
+        }
+      }
+    },
+    "getPriority": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6cdf5397",
+          "outputHash": "85a11cf3"
+        }
+      }
+    },
+    "getProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "169569f4",
+          "outputHash": "c134db95"
+        }
+      }
+    },
+    "getProjectCategoryById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dce71bb",
+          "outputHash": "b88a5ed9"
+        }
+      }
+    },
+    "getProjectComponents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b9d1e64",
+          "outputHash": "53cd77c0"
+        }
+      }
+    },
+    "getProjectComponentsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfa1a053",
+          "outputHash": "767c6cf3"
+        }
+      }
+    },
+    "getProjectContextMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f4a9c5a",
+          "outputHash": "780fe2c3"
+        }
+      }
+    },
+    "getProjectEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ae6f09d",
+          "outputHash": "fc054461"
+        }
+      }
+    },
+    "getProjectIssueSecurityScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc51e8b4",
+          "outputHash": "596b791d"
+        }
+      }
+    },
+    "getProjectProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c6d7fe92",
+          "outputHash": "6e5c2535"
+        }
+      }
+    },
+    "getProjectPropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08addf66",
+          "outputHash": "a5d1b062"
+        }
+      }
+    },
+    "getProjectRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9ae24ad",
+          "outputHash": "e7840e87"
+        }
+      }
+    },
+    "getProjectRoleActorsForRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfb0f4cb",
+          "outputHash": "3ded2da4"
+        }
+      }
+    },
+    "getProjectRoleById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df3a3190",
+          "outputHash": "04d3fdd3"
+        }
+      }
+    },
+    "getProjectRoleDetails": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec61694e",
+          "outputHash": "8c4dabb2"
+        }
+      }
+    },
+    "getProjectRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "688ab6ac",
+          "outputHash": "40af7878"
+        }
+      }
+    },
+    "getProjectTypeByKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c87da37",
+          "outputHash": "0e9d9ba6"
+        }
+      }
+    },
+    "getProjectVersions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "899aa2a2",
+          "outputHash": "18339e51"
+        }
+      }
+    },
+    "getProjectVersionsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9de24e8f",
+          "outputHash": "a117830b"
+        }
+      }
+    },
+    "getProjectsForIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "253fb7b4",
+          "outputHash": "c246aa6b"
+        }
+      }
+    },
+    "getRecent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a87d853",
+          "outputHash": "e7ab240f"
+        }
+      }
+    },
+    "getRemoteIssueLinkById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3362dbb",
+          "outputHash": "736a47ef"
+        }
+      }
+    },
+    "getRemoteIssueLinks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a41a0bf7",
+          "outputHash": "13c74269"
+        }
+      }
+    },
+    "getResolution": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4d8ba9b",
+          "outputHash": "f863b538"
+        }
+      }
+    },
+    "getScreenSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3cb48f0",
+          "outputHash": "aa0fcc11"
+        }
+      }
+    },
+    "getScreens": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acb6ddf9",
+          "outputHash": "2812001f"
+        }
+      }
+    },
+    "getScreensForField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "687f2e72",
+          "outputHash": "732b2984"
+        }
+      }
+    },
+    "getSecurityLevelsForProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91a1b1b2",
+          "outputHash": "5ee86994"
+        }
+      }
+    },
+    "getSelectableIssueFieldOptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "884b9742",
+          "outputHash": "f6f609c5"
+        }
+      }
+    },
+    "getSelectedTimeTrackingImplementation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8dddae2",
+          "outputHash": "dba5ddc3"
+        }
+      }
+    },
+    "getServerInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cc3b8c5",
+          "outputHash": "5519ccd8"
+        }
+      }
+    },
+    "getSharePermission": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d8d5fb6",
+          "outputHash": "2fa7039e"
+        }
+      }
+    },
+    "getSharePermissions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd683822",
+          "outputHash": "7a89260d"
+        }
+      }
+    },
+    "getSharedTimeTrackingConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec2c508c",
+          "outputHash": "74d64cbd"
+        }
+      }
+    },
+    "getStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de33d381",
+          "outputHash": "1270c172"
+        }
+      }
+    },
+    "getStatusCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a22dcbc",
+          "outputHash": "46e38a7a"
+        }
+      }
+    },
+    "getStatusCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6522c84a",
+          "outputHash": "3f4dc1ed"
+        }
+      }
+    },
+    "getStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee34d7a7",
+          "outputHash": "a81927f3"
+        }
+      }
+    },
+    "getStatusesById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6f07c70",
+          "outputHash": "3a897c6f"
+        }
+      }
+    },
+    "getTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23f39ed6",
+          "outputHash": "299856fc"
+        }
+      }
+    },
+    "getTransitions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae75ed95",
+          "outputHash": "18c7f9fd"
+        }
+      }
+    },
+    "getTrashedFieldsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb4ecf4f",
+          "outputHash": "6fedb8bd"
+        }
+      }
+    },
+    "getUiModifications": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4cb5196",
+          "outputHash": "cd1a3123"
+        }
+      }
+    },
+    "getUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eea829ba",
+          "outputHash": "37a8b0ee"
+        }
+      }
+    },
+    "getUserDefaultColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1462b8ec",
+          "outputHash": "6f049837"
+        }
+      }
+    },
+    "getUserEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42176b82",
+          "outputHash": "54d54b47"
+        }
+      }
+    },
+    "getUserEmailBulk": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d849e728",
+          "outputHash": "d24617cf"
+        }
+      }
+    },
+    "getUserGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ae4df74",
+          "outputHash": "c6b635b8"
+        }
+      }
+    },
+    "getUserProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b93d4ac",
+          "outputHash": "74c87a0a"
+        }
+      }
+    },
+    "getUserPropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9bd20a45",
+          "outputHash": "3f79c894"
+        }
+      }
+    },
+    "getUsersFromGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14912e59",
+          "outputHash": "429fb443"
+        }
+      }
+    },
+    "getValidProjectKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f9a30f2",
+          "outputHash": "23584e37"
+        }
+      }
+    },
+    "getValidProjectName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c53cc142",
+          "outputHash": "42f2c93d"
+        }
+      }
+    },
+    "getVersion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce9f3d9f",
+          "outputHash": "61a068ab"
+        }
+      }
+    },
+    "getVersionRelatedIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95e9f8b8",
+          "outputHash": "ea8c07f3"
+        }
+      }
+    },
+    "getVersionUnresolvedIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "468d1b7e",
+          "outputHash": "f9f560bc"
+        }
+      }
+    },
+    "getVisibleIssueFieldOptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62621de6",
+          "outputHash": "76a9a592"
+        }
+      }
+    },
+    "getVotes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e69a518a",
+          "outputHash": "185b3b53"
+        }
+      }
+    },
+    "getWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dccf10e7",
+          "outputHash": "90c9747c"
+        }
+      }
+    },
+    "getWorkflowScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "825185e1",
+          "outputHash": "8d5d33df"
+        }
+      }
+    },
+    "getWorkflowSchemeDraft": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a250ce51",
+          "outputHash": "cefea48c"
+        }
+      }
+    },
+    "getWorkflowSchemeDraftIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b561fef3",
+          "outputHash": "a146a502"
+        }
+      }
+    },
+    "getWorkflowSchemeIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b82b4f85",
+          "outputHash": "dbc758de"
+        }
+      }
+    },
+    "getWorkflowSchemeProjectAssociations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2953e76a",
+          "outputHash": "21c68795"
+        }
+      }
+    },
+    "getWorkflowTransitionProperties": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c40544ed",
+          "outputHash": "a10c8103"
+        }
+      }
+    },
+    "getWorkflowTransitionRuleConfigurations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ccd74be",
+          "outputHash": "7b2ca3c3"
+        }
+      }
+    },
+    "getWorkflowsPaginated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b8dd47f",
+          "outputHash": "6646d1de"
+        }
+      }
+    },
+    "getWorklog": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcdb39c8",
+          "outputHash": "dd1afa75"
+        }
+      }
+    },
+    "getWorklogProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f3e5c11",
+          "outputHash": "84a3e9c1"
+        }
+      }
+    },
+    "getWorklogPropertyKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ef87e03",
+          "outputHash": "3863e274"
+        }
+      }
+    },
+    "getWorklogsForIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee6d76fa",
+          "outputHash": "835cbf7b"
+        }
+      }
+    },
+    "linkIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa0851b4",
+          "outputHash": "5aebabf9"
+        }
+      }
+    },
+    "matchIssues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acfe1dfc",
+          "outputHash": "b8c5af2b"
+        }
+      }
+    },
+    "mergeVersions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04985738",
+          "outputHash": "1a12f672"
+        }
+      }
+    },
+    "migrateQueries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c36d25e",
+          "outputHash": "d3414fbb"
+        }
+      }
+    },
+    "migrationResourceUpdateEntityPropertiesValuePut": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "44fd2532",
+          "outputHash": "1c265b7c"
+        }
+      }
+    },
+    "migrationResourceWorkflowRuleSearchPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "166fcd52",
+          "outputHash": "01a658c5"
+        }
+      }
+    },
+    "movePriorities": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b422f263",
+          "outputHash": "8a5ab464"
+        }
+      }
+    },
+    "moveResolutions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35476721",
+          "outputHash": "312a2fd7"
+        }
+      }
+    },
+    "moveScreenTab": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01ae9f5a",
+          "outputHash": "07e21b65"
+        }
+      }
+    },
+    "moveScreenTabField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35542170",
+          "outputHash": "80a90eb6"
+        }
+      }
+    },
+    "moveVersion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ac42426",
+          "outputHash": "cbe2e895"
+        }
+      }
+    },
+    "notify": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "949fe81d",
+          "outputHash": "f8eda8e5"
+        }
+      }
+    },
+    "parseJqlQueries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7288a95d",
+          "outputHash": "1c21f281"
+        }
+      }
+    },
+    "partialUpdateProjectRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ae2e8c6",
+          "outputHash": "7e220430"
+        }
+      }
+    },
+    "publishDraftWorkflowScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee80fe16",
+          "outputHash": "1c642111"
+        }
+      }
+    },
+    "refreshWebhooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05a39df3",
+          "outputHash": "01f219bf"
+        }
+      }
+    },
+    "registerDynamicWebhooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3147d072",
+          "outputHash": "3df85863"
+        }
+      }
+    },
+    "removeAttachment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e52ddf39",
+          "outputHash": "55f3569e"
+        }
+      }
+    },
+    "removeCustomFieldContextFromProjects": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b2734a0",
+          "outputHash": "57dfddbe"
+        }
+      }
+    },
+    "removeGadget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1305d033",
+          "outputHash": "18dac2bd"
+        }
+      }
+    },
+    "removeGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62572bfe",
+          "outputHash": "d956d257"
+        }
+      }
+    },
+    "removeIssueTypeFromIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21b5c7ab",
+          "outputHash": "cf5fe90d"
+        }
+      }
+    },
+    "removeIssueTypesFromContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "886e4976",
+          "outputHash": "33a47921"
+        }
+      }
+    },
+    "removeIssueTypesFromGlobalFieldConfigurationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3a0e032",
+          "outputHash": "585fd41a"
+        }
+      }
+    },
+    "removeMappingsFromIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3cc7544",
+          "outputHash": "4d1b519e"
+        }
+      }
+    },
+    "removeNotificationFromNotificationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c18bf2d",
+          "outputHash": "3ac6163e"
+        }
+      }
+    },
+    "removePreference": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60aba777",
+          "outputHash": "bf55eaba"
+        }
+      }
+    },
+    "removeProjectCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c44aeb0",
+          "outputHash": "88376a91"
+        }
+      }
+    },
+    "removeScreenTabField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3fbe1fa",
+          "outputHash": "b2ac9fdf"
+        }
+      }
+    },
+    "removeUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04eea173",
+          "outputHash": "b2c0a93e"
+        }
+      }
+    },
+    "removeUserFromGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "93d26f16",
+          "outputHash": "5714bc57"
+        }
+      }
+    },
+    "removeVote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "016e903a",
+          "outputHash": "0acd1f20"
+        }
+      }
+    },
+    "removeWatcher": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a358b47a",
+          "outputHash": "74c8e48e"
+        }
+      }
+    },
+    "renameScreenTab": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d3a3e5e",
+          "outputHash": "6c246521"
+        }
+      }
+    },
+    "reorderCustomFieldOptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "755d4ba3",
+          "outputHash": "b450e98f"
+        }
+      }
+    },
+    "reorderIssueTypesInIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03bd1889",
+          "outputHash": "013e1529"
+        }
+      }
+    },
+    "replaceIssueFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36f7d071",
+          "outputHash": "153c33a2"
+        }
+      }
+    },
+    "resetColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38d54ebc",
+          "outputHash": "6ba52f49"
+        }
+      }
+    },
+    "resetUserColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "53fe6066",
+          "outputHash": "b4104519"
+        }
+      }
+    },
+    "restore": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c075efc",
+          "outputHash": "86169fcf"
+        }
+      }
+    },
+    "restoreCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c051e5bf",
+          "outputHash": "cf46812c"
+        }
+      }
+    },
+    "sanitiseJqlQueries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54ae3461",
+          "outputHash": "c568065c"
+        }
+      }
+    },
+    "search": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b14f660f",
+          "outputHash": "ec378103"
+        }
+      }
+    },
+    "searchForIssuesUsingJql": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b86c034f",
+          "outputHash": "15ac3fb6"
+        }
+      }
+    },
+    "searchForIssuesUsingJqlPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb94e12c",
+          "outputHash": "8238b7a1"
+        }
+      }
+    },
+    "searchPriorities": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26859d9f",
+          "outputHash": "41697f3c"
+        }
+      }
+    },
+    "searchProjects": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3280a5f2",
+          "outputHash": "ed93934a"
+        }
+      }
+    },
+    "searchResolutions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bee65196",
+          "outputHash": "13785cb7"
+        }
+      }
+    },
+    "selectTimeTrackingImplementation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ca8b1d8",
+          "outputHash": "8635e16a"
+        }
+      }
+    },
+    "setActors": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99bc1446",
+          "outputHash": "5d8a511a"
+        }
+      }
+    },
+    "setApplicationProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24249321",
+          "outputHash": "d2e49fc1"
+        }
+      }
+    },
+    "setBanner": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7218a824",
+          "outputHash": "8b8262f8"
+        }
+      }
+    },
+    "setColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "926a2d40",
+          "outputHash": "4500cec4"
+        }
+      }
+    },
+    "setCommentProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1150b634",
+          "outputHash": "8059bf77"
+        }
+      }
+    },
+    "setDashboardItemProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c09211db",
+          "outputHash": "4a132e5c"
+        }
+      }
+    },
+    "setDefaultPriority": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc9a9acd",
+          "outputHash": "bf73c476"
+        }
+      }
+    },
+    "setDefaultResolution": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ef8afde",
+          "outputHash": "b690987b"
+        }
+      }
+    },
+    "setDefaultShareScope": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b754b1c3",
+          "outputHash": "7405ec8a"
+        }
+      }
+    },
+    "setDefaultValues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd6465c5",
+          "outputHash": "4d0f5267"
+        }
+      }
+    },
+    "setFavouriteForFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "55e197c5",
+          "outputHash": "852d978d"
+        }
+      }
+    },
+    "setFieldConfigurationSchemeMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94053b98",
+          "outputHash": "8cc6f9cd"
+        }
+      }
+    },
+    "setIssueNavigatorDefaultColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10ee9422",
+          "outputHash": "ea5982da"
+        }
+      }
+    },
+    "setIssueProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "90596847",
+          "outputHash": "0e0823a9"
+        }
+      }
+    },
+    "setIssueTypeProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76aaf75f",
+          "outputHash": "0ccb6b40"
+        }
+      }
+    },
+    "setPreference": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4fde6ec",
+          "outputHash": "e788ec58"
+        }
+      }
+    },
+    "setProjectProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8fd200fd",
+          "outputHash": "9088dfca"
+        }
+      }
+    },
+    "setSharedTimeTrackingConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbe676b2",
+          "outputHash": "5c6f2b60"
+        }
+      }
+    },
+    "setUserColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdee3754",
+          "outputHash": "299d2d95"
+        }
+      }
+    },
+    "setUserProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39070822",
+          "outputHash": "3c2167a4"
+        }
+      }
+    },
+    "setWorkflowSchemeDraftIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d79361b",
+          "outputHash": "17a6e6c3"
+        }
+      }
+    },
+    "setWorkflowSchemeIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3d22dd7",
+          "outputHash": "b0a461b7"
+        }
+      }
+    },
+    "setWorklogProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "227e78ff",
+          "outputHash": "ce603827"
+        }
+      }
+    },
+    "storeAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d20a0236",
+          "outputHash": "dad5dae1"
+        }
+      }
+    },
+    "toggleFeatureForProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5c1505f",
+          "outputHash": "efffa425"
+        }
+      }
+    },
+    "trashCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3b99f85",
+          "outputHash": "b189bcea"
+        }
+      }
+    },
+    "updateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6da813e",
+          "outputHash": "280a36d3"
+        }
+      }
+    },
+    "updateComponent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8004a24c",
+          "outputHash": "c6147b25"
+        }
+      }
+    },
+    "updateCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ff927ba",
+          "outputHash": "9af3d0f9"
+        }
+      }
+    },
+    "updateCustomFieldConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8565beb4",
+          "outputHash": "dc8f4928"
+        }
+      }
+    },
+    "updateCustomFieldContext": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d8386e9",
+          "outputHash": "1cde33b8"
+        }
+      }
+    },
+    "updateCustomFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc52264b",
+          "outputHash": "66ecd6a4"
+        }
+      }
+    },
+    "updateCustomFieldValue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aef679ad",
+          "outputHash": "0e3a39b4"
+        }
+      }
+    },
+    "updateDashboard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e157f834",
+          "outputHash": "6b9a2143"
+        }
+      }
+    },
+    "updateDefaultScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24093167",
+          "outputHash": "478aa22f"
+        }
+      }
+    },
+    "updateDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71efe8a2",
+          "outputHash": "e050d7e1"
+        }
+      }
+    },
+    "updateDraftDefaultWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4fb6903",
+          "outputHash": "8f5a74d6"
+        }
+      }
+    },
+    "updateDraftWorkflowMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d37cad50",
+          "outputHash": "e522d080"
+        }
+      }
+    },
+    "updateFieldConfiguration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3982c4be",
+          "outputHash": "fb33bbaf"
+        }
+      }
+    },
+    "updateFieldConfigurationItems": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1302028",
+          "outputHash": "14176919"
+        }
+      }
+    },
+    "updateFieldConfigurationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "904201f7",
+          "outputHash": "149c1687"
+        }
+      }
+    },
+    "updateFilter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7388648d",
+          "outputHash": "903fe804"
+        }
+      }
+    },
+    "updateGadget": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d783670a",
+          "outputHash": "ca198b02"
+        }
+      }
+    },
+    "updateIssueFieldOption": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "001733d9",
+          "outputHash": "a356591c"
+        }
+      }
+    },
+    "updateIssueLinkType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f56515e",
+          "outputHash": "6fdde823"
+        }
+      }
+    },
+    "updateIssueType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37496ea8",
+          "outputHash": "f53b1bde"
+        }
+      }
+    },
+    "updateIssueTypeScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "007094f5",
+          "outputHash": "1fed3853"
+        }
+      }
+    },
+    "updateIssueTypeScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "049681ce",
+          "outputHash": "4657d36e"
+        }
+      }
+    },
+    "updateMultipleCustomFieldValues": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5af1e00",
+          "outputHash": "bdaa368e"
+        }
+      }
+    },
+    "updateNotificationScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b88e16b",
+          "outputHash": "8c743f5f"
+        }
+      }
+    },
+    "updatePermissionScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1caad785",
+          "outputHash": "3f62cdbc"
+        }
+      }
+    },
+    "updatePrecomputations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e2b4c6a",
+          "outputHash": "22b101ca"
+        }
+      }
+    },
+    "updatePriority": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07ad916b",
+          "outputHash": "f3848905"
+        }
+      }
+    },
+    "updateProject": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02ebc6c7",
+          "outputHash": "15348bcf"
+        }
+      }
+    },
+    "updateProjectAvatar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2afba3fa",
+          "outputHash": "5a065efa"
+        }
+      }
+    },
+    "updateProjectCategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "210fd973",
+          "outputHash": "b63107d6"
+        }
+      }
+    },
+    "updateProjectEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84187be1",
+          "outputHash": "860d8448"
+        }
+      }
+    },
+    "updateRemoteIssueLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0cfa7e21",
+          "outputHash": "7ceaad48"
+        }
+      }
+    },
+    "updateResolution": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86ad4ae9",
+          "outputHash": "c4cecd3d"
+        }
+      }
+    },
+    "updateScreen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42d6a852",
+          "outputHash": "3f4958ee"
+        }
+      }
+    },
+    "updateScreenScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c72159d4",
+          "outputHash": "eaa57311"
+        }
+      }
+    },
+    "updateStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d497f55",
+          "outputHash": "dd7469c5"
+        }
+      }
+    },
+    "updateUiModification": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c9b2bf1",
+          "outputHash": "6cdeb00c"
+        }
+      }
+    },
+    "updateVersion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0c22463",
+          "outputHash": "9c3dc8b5"
+        }
+      }
+    },
+    "updateWorkflowMapping": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b8da5c8",
+          "outputHash": "49e713d7"
+        }
+      }
+    },
+    "updateWorkflowScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2ee4685",
+          "outputHash": "635f6279"
+        }
+      }
+    },
+    "updateWorkflowSchemeDraft": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1d3fba0",
+          "outputHash": "8829a041"
+        }
+      }
+    },
+    "updateWorkflowTransitionProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9573a843",
+          "outputHash": "8c2d9a2a"
+        }
+      }
+    },
+    "updateWorkflowTransitionRuleConfigurations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc680e81",
+          "outputHash": "33e5a211"
+        }
+      }
+    },
+    "updateWorklog": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d376c02f",
+          "outputHash": "757ead72"
+        }
+      }
+    },
+    "validateProjectKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28c0852a",
+          "outputHash": "c5da7d9b"
+        }
+      }
+    }
+  }
+}

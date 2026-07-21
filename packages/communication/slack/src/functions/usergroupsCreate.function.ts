@@ -1,0 +1,50 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const UsergroupsCreateInput = z.object({
+  token: z.string().describe("Authentication token. Requires scope: `usergroups:write`"),
+  channels: z.string().optional().describe("A comma separated string of encoded channel IDs for which the User Group uses as a default."),
+  description: z.string().optional().describe("A short description of the User Group."),
+  handle: z.string().optional().describe("A mention handle. Must be unique among channels, users and User Groups."),
+  include_count: z.boolean().optional().describe("Include the number of users in each User Group."),
+  name: z.string().describe("A name for the User Group. Must be unique among User Groups."),
+})
+
+export const UsergroupsCreateOutput = z.object({
+  ok: z.literal(true),
+  usergroup: z.object({
+    auto_provision: z.boolean(),
+    auto_type: z.unknown(),
+    channel_count: z.number().int().optional(),
+    created_by: z.string().regex(new RegExp("^[UW][A-Z0-9]{2,}$")),
+    date_create: z.number().int(),
+    date_delete: z.number().int(),
+    date_update: z.number().int(),
+    deleted_by: z.unknown(),
+    description: z.string(),
+    enterprise_subteam_id: z.string(),
+    handle: z.string(),
+    id: z.string().regex(new RegExp("^S[A-Z0-9]{2,}$")),
+    is_external: z.boolean(),
+    is_subteam: z.boolean(),
+    is_usergroup: z.boolean(),
+    name: z.string(),
+    prefs: z.object({
+      channels: z.array(z.string()),
+      groups: z.array(z.string()),
+    }),
+    team_id: z.string().regex(new RegExp("^[T][A-Z0-9]{2,}$")),
+    updated_by: z.string().regex(new RegExp("^[UW][A-Z0-9]{2,}$")),
+    user_count: z.number().int().optional(),
+    users: z.array(z.string()).optional(),
+  }),
+}).describe("Schema for successful response from usergroups.create method")
+
+export const usergroupsCreate = pikkuSessionlessFunc({
+  description: "Create a User Group",
+  input: UsergroupsCreateInput,
+  output: UsergroupsCreateOutput,
+  func: async ({ slack }, data) => {
+    return slack.call("POST", "/usergroups.create", data) as any
+  },
+})

@@ -1,0 +1,77 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "recordCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14719352",
+          "outputHash": "684d0f4e"
+        }
+      }
+    },
+    "recordDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fdd42726",
+          "outputHash": "86e0023f"
+        }
+      }
+    },
+    "recordDuplicate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f867fcc",
+          "outputHash": "c4950a5e"
+        }
+      }
+    },
+    "recordEdit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b3d00fd",
+          "outputHash": "6190864c"
+        }
+      }
+    },
+    "recordFind": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29424d54",
+          "outputHash": "83b983d3"
+        }
+      }
+    },
+    "recordGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e33d3daf",
+          "outputHash": "4e8fb626"
+        }
+      }
+    },
+    "recordList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bddc3401",
+          "outputHash": "0d89449f"
+        }
+      }
+    },
+    "recordPerformScript": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8277d026",
+          "outputHash": "8569409e"
+        }
+      }
+    }
+  }
+}

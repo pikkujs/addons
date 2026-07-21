@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "publish": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3cb3505",
+          "outputHash": "4ca00ef0"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+// users — Interact with and view information about users and also current user.
+
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
+
+export const UsersCheckPersonIsFollowedByAuthenticatedInput = z.object({
+  username: z.string().describe("The handle for the GitHub user account."),
+})
+
+export const usersCheckPersonIsFollowedByAuthenticated = pikkuSessionlessFunc({
+  input: UsersCheckPersonIsFollowedByAuthenticatedInput,
+  errors: [UnauthorizedError, ForbiddenError, NotFoundError],
+  func: async ({ github }, data) => {
+    return github.call("GET", "/user/following/{username}", data)
+  },
+})

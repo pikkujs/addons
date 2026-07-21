@@ -1,0 +1,2273 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "createActionsDialogsOpen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e50cec5",
+          "outputHash": "a098508c"
+        }
+      }
+    },
+    "createActionsDialogsSubmit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea85d75c",
+          "outputHash": "2315b832"
+        }
+      }
+    },
+    "createBots": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c279d771",
+          "outputHash": "76fa9aff"
+        }
+      }
+    },
+    "createBotsAssign": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fbcb7fb2",
+          "outputHash": "b8e05fb0"
+        }
+      }
+    },
+    "createBotsDisable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e8e061c",
+          "outputHash": "418aa448"
+        }
+      }
+    },
+    "createBotsEnable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "477ce04c",
+          "outputHash": "025b96ab"
+        }
+      }
+    },
+    "createBotsIcon": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89437be4",
+          "outputHash": "99a9815b"
+        }
+      }
+    },
+    "createBrandImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b16501fc",
+          "outputHash": "7153ed6b"
+        }
+      }
+    },
+    "createCachesInvalidate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd900c0d",
+          "outputHash": "587e6e39"
+        }
+      }
+    },
+    "createChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7ba9843",
+          "outputHash": "52e43285"
+        }
+      }
+    },
+    "createChannelsConvert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9fa6c66e",
+          "outputHash": "f65b7a44"
+        }
+      }
+    },
+    "createChannelsDirect": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e61368d",
+          "outputHash": "750e7b9d"
+        }
+      }
+    },
+    "createChannelsGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74710216",
+          "outputHash": "6331ce2d"
+        }
+      }
+    },
+    "createChannelsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "239d27c2",
+          "outputHash": "16a33be6"
+        }
+      }
+    },
+    "createChannelsMembersIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0ca4f74",
+          "outputHash": "d2cb145f"
+        }
+      }
+    },
+    "createChannelsMembersView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1db611b",
+          "outputHash": "d4927c40"
+        }
+      }
+    },
+    "createChannelsRestore": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e33b60b",
+          "outputHash": "2e73925e"
+        }
+      }
+    },
+    "createCommands": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "145a0cbc",
+          "outputHash": "1e5f6969"
+        }
+      }
+    },
+    "createCommandsExecute": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30ac91d6",
+          "outputHash": "3dcacf27"
+        }
+      }
+    },
+    "createComplianceReports": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8fe28a1",
+          "outputHash": "a225b98c"
+        }
+      }
+    },
+    "createConfigReload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "103a252e",
+          "outputHash": "7371e59f"
+        }
+      }
+    },
+    "createDatabaseRecycle": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d6210ec",
+          "outputHash": "b850653d"
+        }
+      }
+    },
+    "createElasticsearchPurgeIndexes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d10830f",
+          "outputHash": "cfd2ab9d"
+        }
+      }
+    },
+    "createElasticsearchTest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "18fed3f4",
+          "outputHash": "b44539f1"
+        }
+      }
+    },
+    "createEmailTest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2856765",
+          "outputHash": "b2a17321"
+        }
+      }
+    },
+    "createEmoji": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1aeec70e",
+          "outputHash": "57c7474b"
+        }
+      }
+    },
+    "createEmojiSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22e41f47",
+          "outputHash": "fa02a2e3"
+        }
+      }
+    },
+    "createFileS3Test": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14cab419",
+          "outputHash": "df74dd8e"
+        }
+      }
+    },
+    "createFiles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89b4d48c",
+          "outputHash": "80a50139"
+        }
+      }
+    },
+    "createGroupSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1719775",
+          "outputHash": "ff20a69f"
+        }
+      }
+    },
+    "createHooksIncoming": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17258e0c",
+          "outputHash": "eca1a4ba"
+        }
+      }
+    },
+    "createHooksOutgoing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed362d61",
+          "outputHash": "28a5c1cb"
+        }
+      }
+    },
+    "createHooksOutgoingRegenToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ac0d500",
+          "outputHash": "667e1836"
+        }
+      }
+    },
+    "createJobs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c27a6474",
+          "outputHash": "f5836530"
+        }
+      }
+    },
+    "createJobsCancel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89487718",
+          "outputHash": "65a7645b"
+        }
+      }
+    },
+    "createLdapSync": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68b6cbd9",
+          "outputHash": "409b46e7"
+        }
+      }
+    },
+    "createLdapTest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33d5edb4",
+          "outputHash": "3c9dd9c6"
+        }
+      }
+    },
+    "createLicense": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bcf51b6",
+          "outputHash": "51d94788"
+        }
+      }
+    },
+    "createLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06c637c4",
+          "outputHash": "5b788f10"
+        }
+      }
+    },
+    "createOauthApps": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a087465e",
+          "outputHash": "63c2aff8"
+        }
+      }
+    },
+    "createOauthAppsRegenSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99465501",
+          "outputHash": "36b24112"
+        }
+      }
+    },
+    "createOpengraph": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e006910",
+          "outputHash": "821c37c0"
+        }
+      }
+    },
+    "createPlugins": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab4cd339",
+          "outputHash": "0b6b561c"
+        }
+      }
+    },
+    "createPluginsDisable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9192031e",
+          "outputHash": "97d07868"
+        }
+      }
+    },
+    "createPluginsEnable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79252b99",
+          "outputHash": "1b63d6f4"
+        }
+      }
+    },
+    "createPosts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8cdb1f29",
+          "outputHash": "d503421b"
+        }
+      }
+    },
+    "createPostsAction": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5dacaaa3",
+          "outputHash": "0c50b3df"
+        }
+      }
+    },
+    "createPostsEphemeral": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01721fef",
+          "outputHash": "9dad04ea"
+        }
+      }
+    },
+    "createPostsIdsReactions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "facf2ac9",
+          "outputHash": "95e2c580"
+        }
+      }
+    },
+    "createPostsPin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d3d5c98",
+          "outputHash": "6d281f54"
+        }
+      }
+    },
+    "createPostsUnpin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5428388e",
+          "outputHash": "7fca81fe"
+        }
+      }
+    },
+    "createReactions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f14e9d8",
+          "outputHash": "3ca4d9f4"
+        }
+      }
+    },
+    "createRolesNames": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77e8e057",
+          "outputHash": "82bf508c"
+        }
+      }
+    },
+    "createSamlCertificateIdp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e96399fa",
+          "outputHash": "d5bb87ec"
+        }
+      }
+    },
+    "createSamlCertificatePrivate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b56f2106",
+          "outputHash": "2fea3f41"
+        }
+      }
+    },
+    "createSamlCertificatePublic": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec05c825",
+          "outputHash": "c6d12378"
+        }
+      }
+    },
+    "createSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46827333",
+          "outputHash": "c09a8589"
+        }
+      }
+    },
+    "createTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0863c572",
+          "outputHash": "624317cb"
+        }
+      }
+    },
+    "createTeamsChannelsIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ec2ff56",
+          "outputHash": "84adaf0f"
+        }
+      }
+    },
+    "createTeamsChannelsSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af10ed3d",
+          "outputHash": "5d0d8704"
+        }
+      }
+    },
+    "createTeamsImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2bab9a5b",
+          "outputHash": "df409bc6"
+        }
+      }
+    },
+    "createTeamsImport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aab6d9fd",
+          "outputHash": "11c183bb"
+        }
+      }
+    },
+    "createTeamsInviteEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3197616e",
+          "outputHash": "ba2a99be"
+        }
+      }
+    },
+    "createTeamsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83057572",
+          "outputHash": "31cf4d75"
+        }
+      }
+    },
+    "createTeamsMembersBatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd04f03a",
+          "outputHash": "b0751f56"
+        }
+      }
+    },
+    "createTeamsMembersIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80fec384",
+          "outputHash": "723d38e2"
+        }
+      }
+    },
+    "createTeamsMembersInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "371d240a",
+          "outputHash": "8e9539be"
+        }
+      }
+    },
+    "createTeamsPostsSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2ee5aac1",
+          "outputHash": "1045c6b3"
+        }
+      }
+    },
+    "createTeamsRegenerateInviteId": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67bdaa3c",
+          "outputHash": "1cbc6df2"
+        }
+      }
+    },
+    "createTeamsSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0640a1fb",
+          "outputHash": "adb25d54"
+        }
+      }
+    },
+    "createUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6770202",
+          "outputHash": "005fbeb5"
+        }
+      }
+    },
+    "createUsersEmailVerify": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c989ad8b",
+          "outputHash": "789aa090"
+        }
+      }
+    },
+    "createUsersEmailVerifySend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e497de83",
+          "outputHash": "a134f790"
+        }
+      }
+    },
+    "createUsersGroupChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4833efe6",
+          "outputHash": "290d5da9"
+        }
+      }
+    },
+    "createUsersIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7018b7e8",
+          "outputHash": "14977de7"
+        }
+      }
+    },
+    "createUsersImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f74c7ead",
+          "outputHash": "a5003555"
+        }
+      }
+    },
+    "createUsersLoginSwitch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "931a5c02",
+          "outputHash": "da99b7d3"
+        }
+      }
+    },
+    "createUsersMfa": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "177795d3",
+          "outputHash": "a5c919f5"
+        }
+      }
+    },
+    "createUsersMfaGenerate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69f645c9",
+          "outputHash": "d8f41503"
+        }
+      }
+    },
+    "createUsersPasswordReset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "370dbeee",
+          "outputHash": "b870de75"
+        }
+      }
+    },
+    "createUsersPasswordResetSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04e601da",
+          "outputHash": "e819ff69"
+        }
+      }
+    },
+    "createUsersPreferencesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e02dbd5",
+          "outputHash": "37d43109"
+        }
+      }
+    },
+    "createUsersSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2adbacd",
+          "outputHash": "bf260a75"
+        }
+      }
+    },
+    "createUsersSessionsRevoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfcabe19",
+          "outputHash": "b774c3a5"
+        }
+      }
+    },
+    "createUsersSessionsRevokeAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c58ac4d5",
+          "outputHash": "ff018afc"
+        }
+      }
+    },
+    "createUsersStatusIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4b37dc3",
+          "outputHash": "79efbca2"
+        }
+      }
+    },
+    "createUsersTermsOfService": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dd8649aa",
+          "outputHash": "ea9d0c94"
+        }
+      }
+    },
+    "createUsersTokens": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee9f34f4",
+          "outputHash": "ec5ea0e1"
+        }
+      }
+    },
+    "createUsersTokensDisable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79f8dcb2",
+          "outputHash": "599fc083"
+        }
+      }
+    },
+    "createUsersTokensEnable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ead04971",
+          "outputHash": "e874544c"
+        }
+      }
+    },
+    "createUsersTokensRevoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f787103a",
+          "outputHash": "cda4e2fd"
+        }
+      }
+    },
+    "createUsersTokensSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0a7999e",
+          "outputHash": "d0fcb309"
+        }
+      }
+    },
+    "createUsersUsernames": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e979246",
+          "outputHash": "b7c32184"
+        }
+      }
+    },
+    "deleteBotsIcon": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8c3fce15",
+          "outputHash": "5620bef3"
+        }
+      }
+    },
+    "deleteBrandImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e19a58ec",
+          "outputHash": "8983ab5c"
+        }
+      }
+    },
+    "deleteChannel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb61fc1d",
+          "outputHash": "db522400"
+        }
+      }
+    },
+    "deleteChannelsMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50e61d86",
+          "outputHash": "ef1bc068"
+        }
+      }
+    },
+    "deleteCommand": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e2aa3ae",
+          "outputHash": "58ef9bba"
+        }
+      }
+    },
+    "deleteEmoji": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1de379e",
+          "outputHash": "58b3e4a3"
+        }
+      }
+    },
+    "deleteHooksOutgoing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33949393",
+          "outputHash": "ce38ca3d"
+        }
+      }
+    },
+    "deleteLicense": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15c56ad9",
+          "outputHash": "cdc49b43"
+        }
+      }
+    },
+    "deleteOauthApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30fbc652",
+          "outputHash": "d361da4c"
+        }
+      }
+    },
+    "deletePlugin": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6e27775",
+          "outputHash": "d4a58732"
+        }
+      }
+    },
+    "deletePost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39d71e18",
+          "outputHash": "4eb1f109"
+        }
+      }
+    },
+    "deleteSamlCertificateIdp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b25a82af",
+          "outputHash": "75b74249"
+        }
+      }
+    },
+    "deleteSamlCertificatePrivate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae9491d5",
+          "outputHash": "9c832ca2"
+        }
+      }
+    },
+    "deleteSamlCertificatePublic": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a1a9713e",
+          "outputHash": "56ce5a14"
+        }
+      }
+    },
+    "deleteScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc0947cd",
+          "outputHash": "508761fc"
+        }
+      }
+    },
+    "deleteTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3213a71a",
+          "outputHash": "5e2239a0"
+        }
+      }
+    },
+    "deleteTeamsImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c122251",
+          "outputHash": "7f1a8d19"
+        }
+      }
+    },
+    "deleteTeamsInvitesEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73230a41",
+          "outputHash": "a4795c11"
+        }
+      }
+    },
+    "deleteTeamsMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a68053fc",
+          "outputHash": "80544245"
+        }
+      }
+    },
+    "deleteUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae913449",
+          "outputHash": "21842875"
+        }
+      }
+    },
+    "deleteUsersImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0028738f",
+          "outputHash": "408bb8bd"
+        }
+      }
+    },
+    "deleteUsersPostsReaction": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9729f34",
+          "outputHash": "58e0ad6e"
+        }
+      }
+    },
+    "getBot": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4bcd4934",
+          "outputHash": "bfbaf09b"
+        }
+      }
+    },
+    "getChannel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6da7817",
+          "outputHash": "76706e16"
+        }
+      }
+    },
+    "getChannelsMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71ba12a0",
+          "outputHash": "99b848e7"
+        }
+      }
+    },
+    "getComplianceReport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d0b333f",
+          "outputHash": "5daf26a1"
+        }
+      }
+    },
+    "getEmoji": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "457b9dc8",
+          "outputHash": "aad6cc44"
+        }
+      }
+    },
+    "getEmojiName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc1b5c3f",
+          "outputHash": "ad5c100a"
+        }
+      }
+    },
+    "getFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7064898d",
+          "outputHash": "46ec485a"
+        }
+      }
+    },
+    "getHooksIncoming": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c17a081b",
+          "outputHash": "ecb44c9a"
+        }
+      }
+    },
+    "getHooksOutgoing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d0b86b1",
+          "outputHash": "ea68f283"
+        }
+      }
+    },
+    "getJob": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c1da5f2",
+          "outputHash": "84659ef7"
+        }
+      }
+    },
+    "getJobsType": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39265411",
+          "outputHash": "0787653f"
+        }
+      }
+    },
+    "getOauthApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5de87df7",
+          "outputHash": "a99a30ad"
+        }
+      }
+    },
+    "getPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "167dc707",
+          "outputHash": "c516aff0"
+        }
+      }
+    },
+    "getRole": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acf02fe8",
+          "outputHash": "6c8a3fd1"
+        }
+      }
+    },
+    "getRolesName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68278129",
+          "outputHash": "5db6c412"
+        }
+      }
+    },
+    "getScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d96540c3",
+          "outputHash": "24c3fe71"
+        }
+      }
+    },
+    "getTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20679f80",
+          "outputHash": "74493166"
+        }
+      }
+    },
+    "getTeamsChannelsName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72885522",
+          "outputHash": "0cf75958"
+        }
+      }
+    },
+    "getTeamsInvite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3bbd43d",
+          "outputHash": "12bb36da"
+        }
+      }
+    },
+    "getTeamsMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c028859",
+          "outputHash": "1a9b9fd8"
+        }
+      }
+    },
+    "getTeamsName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b5f9e78",
+          "outputHash": "c77373e8"
+        }
+      }
+    },
+    "getTeamsNameChannelsName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1d6bab0",
+          "outputHash": "7f43b415"
+        }
+      }
+    },
+    "getUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "53b0f51d",
+          "outputHash": "29f1f3e3"
+        }
+      }
+    },
+    "getUsersEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9021e20",
+          "outputHash": "10ec303b"
+        }
+      }
+    },
+    "getUsersPreference": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00bb89d3",
+          "outputHash": "f87e45af"
+        }
+      }
+    },
+    "getUsersPreferencesName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ac821b1",
+          "outputHash": "9dcf4328"
+        }
+      }
+    },
+    "getUsersToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce0f9abb",
+          "outputHash": "a181cde6"
+        }
+      }
+    },
+    "getUsersUsername": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c712b775",
+          "outputHash": "b6e41276"
+        }
+      }
+    },
+    "listAnalyticsOld": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ad2ffa6",
+          "outputHash": "1b4f306f"
+        }
+      }
+    },
+    "listAudits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ced2328",
+          "outputHash": "3aa9b8ce"
+        }
+      }
+    },
+    "listBots": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f39436fd",
+          "outputHash": "292a08cc"
+        }
+      }
+    },
+    "listBotsIcon": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6fda69b",
+          "outputHash": "6c8f0707"
+        }
+      }
+    },
+    "listBrandImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36d3c34f",
+          "outputHash": "126e8c3a"
+        }
+      }
+    },
+    "listChannelsGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d18062c",
+          "outputHash": "312086a1"
+        }
+      }
+    },
+    "listChannelsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ab68299",
+          "outputHash": "d08dd442"
+        }
+      }
+    },
+    "listChannelsPinned": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02aee25b",
+          "outputHash": "3d9ba7f5"
+        }
+      }
+    },
+    "listChannelsPosts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c306986",
+          "outputHash": "dc459f77"
+        }
+      }
+    },
+    "listChannelsStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5dfd79c4",
+          "outputHash": "91937157"
+        }
+      }
+    },
+    "listChannelsTimezones": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b9267e7",
+          "outputHash": "3a5a6a1e"
+        }
+      }
+    },
+    "listClusterStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fc5a7c65",
+          "outputHash": "feb78bd3"
+        }
+      }
+    },
+    "listCommands": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb4989a5",
+          "outputHash": "212472d9"
+        }
+      }
+    },
+    "listComplianceReports": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2d7303d",
+          "outputHash": "ac6c6d98"
+        }
+      }
+    },
+    "listComplianceReportsDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f8ad8b5",
+          "outputHash": "e7385903"
+        }
+      }
+    },
+    "listConfig": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d96c376a",
+          "outputHash": "1544f146"
+        }
+      }
+    },
+    "listConfigClient": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dad25efb",
+          "outputHash": "6f6483eb"
+        }
+      }
+    },
+    "listConfigEnvironment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "97ade451",
+          "outputHash": "6a8ea813"
+        }
+      }
+    },
+    "listDataRetentionPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45dd7e87",
+          "outputHash": "9a9bb967"
+        }
+      }
+    },
+    "listEmoji": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e17288d",
+          "outputHash": "ff011efe"
+        }
+      }
+    },
+    "listEmojiAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82e240a9",
+          "outputHash": "751e930c"
+        }
+      }
+    },
+    "listEmojiImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e69134d2",
+          "outputHash": "923bd5d3"
+        }
+      }
+    },
+    "listFilesInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ccdef3f8",
+          "outputHash": "e14d8c51"
+        }
+      }
+    },
+    "listFilesLink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b0d0286",
+          "outputHash": "c2b1ed24"
+        }
+      }
+    },
+    "listFilesPreview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38bd75f7",
+          "outputHash": "7d99570b"
+        }
+      }
+    },
+    "listFilesThumbnail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f499d263",
+          "outputHash": "6e86ba52"
+        }
+      }
+    },
+    "listHooksIncoming": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "faa25911",
+          "outputHash": "1fbcebdf"
+        }
+      }
+    },
+    "listHooksOutgoing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a0b48a0",
+          "outputHash": "cb8eceae"
+        }
+      }
+    },
+    "listJobs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aaf76180",
+          "outputHash": "160116a4"
+        }
+      }
+    },
+    "listLicenseClient": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22a93aa1",
+          "outputHash": "897e5a18"
+        }
+      }
+    },
+    "listLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ed5d6b3",
+          "outputHash": "8ae67184"
+        }
+      }
+    },
+    "listOauthApps": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a949adf",
+          "outputHash": "5070efbd"
+        }
+      }
+    },
+    "listOauthAppsInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "859792e7",
+          "outputHash": "5b4ef095"
+        }
+      }
+    },
+    "listPlugins": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ace6d9f",
+          "outputHash": "cab4a794"
+        }
+      }
+    },
+    "listPluginsWebapp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a330f2a3",
+          "outputHash": "b5e6d1cb"
+        }
+      }
+    },
+    "listPostsFilesInfo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "519b1d14",
+          "outputHash": "98f0a2dd"
+        }
+      }
+    },
+    "listPostsReactions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a26829e",
+          "outputHash": "e91280a2"
+        }
+      }
+    },
+    "listPostsThread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39cbc080",
+          "outputHash": "65688151"
+        }
+      }
+    },
+    "listSamlCertificateStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbce9e8c",
+          "outputHash": "5d5d4eb1"
+        }
+      }
+    },
+    "listSamlMetadata": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9dcf66af",
+          "outputHash": "d58700f5"
+        }
+      }
+    },
+    "listSchemes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "893eb220",
+          "outputHash": "ad7a8b59"
+        }
+      }
+    },
+    "listSchemesChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d24aaa45",
+          "outputHash": "e30c0b56"
+        }
+      }
+    },
+    "listSchemesTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7a088ef",
+          "outputHash": "90a9a647"
+        }
+      }
+    },
+    "listSystemPing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e201d09",
+          "outputHash": "b40809ff"
+        }
+      }
+    },
+    "listTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c98f1d1",
+          "outputHash": "cba2a120"
+        }
+      }
+    },
+    "listTeamsChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8d75d15",
+          "outputHash": "23f22d9d"
+        }
+      }
+    },
+    "listTeamsChannelsAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3f6093e",
+          "outputHash": "1f6784ce"
+        }
+      }
+    },
+    "listTeamsChannelsDeleted": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "792441fa",
+          "outputHash": "35f296fb"
+        }
+      }
+    },
+    "listTeamsChannelsSearchAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "843b41dc",
+          "outputHash": "245b416b"
+        }
+      }
+    },
+    "listTeamsCommandsAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8e55e9f",
+          "outputHash": "dcf86c65"
+        }
+      }
+    },
+    "listTeamsGroups": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "124d4540",
+          "outputHash": "5c77ab54"
+        }
+      }
+    },
+    "listTeamsImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "167d3a00",
+          "outputHash": "dc0c381e"
+        }
+      }
+    },
+    "listTeamsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9dd0629a",
+          "outputHash": "09df7560"
+        }
+      }
+    },
+    "listTeamsNameExists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5053827",
+          "outputHash": "c10d0746"
+        }
+      }
+    },
+    "listTeamsStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "662d3b5b",
+          "outputHash": "51f4b818"
+        }
+      }
+    },
+    "listUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3221b7a2",
+          "outputHash": "f11610fa"
+        }
+      }
+    },
+    "listUsersAudits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d03057a",
+          "outputHash": "b642b7a3"
+        }
+      }
+    },
+    "listUsersAutocomplete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4048de5a",
+          "outputHash": "2a66b0d2"
+        }
+      }
+    },
+    "listUsersChannelsPostsUnread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e3a8d80",
+          "outputHash": "fee8e33c"
+        }
+      }
+    },
+    "listUsersChannelsUnread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c85220f3",
+          "outputHash": "961f01cd"
+        }
+      }
+    },
+    "listUsersImage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f12baa3",
+          "outputHash": "28b94bd3"
+        }
+      }
+    },
+    "listUsersImageDefault": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94893ff8",
+          "outputHash": "397496b7"
+        }
+      }
+    },
+    "listUsersOauthAppsAuthorized": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a327b72",
+          "outputHash": "52ccf6f6"
+        }
+      }
+    },
+    "listUsersPostsFlagged": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "814caefd",
+          "outputHash": "50c206ed"
+        }
+      }
+    },
+    "listUsersPreferences": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e4fec66",
+          "outputHash": "ae4d9d35"
+        }
+      }
+    },
+    "listUsersSessions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "51af789c",
+          "outputHash": "beeb0aff"
+        }
+      }
+    },
+    "listUsersStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "389c3ba8",
+          "outputHash": "9d9ca093"
+        }
+      }
+    },
+    "listUsersStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "391c7a6b",
+          "outputHash": "d8d7fcdb"
+        }
+      }
+    },
+    "listUsersTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6743ec57",
+          "outputHash": "0ba7778e"
+        }
+      }
+    },
+    "listUsersTeamsChannels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b788c4ef",
+          "outputHash": "4303bcfa"
+        }
+      }
+    },
+    "listUsersTeamsChannelsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1b9e4ae",
+          "outputHash": "f9bcd3d5"
+        }
+      }
+    },
+    "listUsersTeamsMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1483d7d3",
+          "outputHash": "9c5376ed"
+        }
+      }
+    },
+    "listUsersTeamsUnread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4b42493",
+          "outputHash": "567ed381"
+        }
+      }
+    },
+    "listUsersTeamsUnread2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a65e7193",
+          "outputHash": "41124d16"
+        }
+      }
+    },
+    "listUsersTermsOfService": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b17d9a55",
+          "outputHash": "d89b9564"
+        }
+      }
+    },
+    "listUsersTokens": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef8b5bf6",
+          "outputHash": "eb856dd7"
+        }
+      }
+    },
+    "listUsersTokens2": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46065b8c",
+          "outputHash": "4759cf92"
+        }
+      }
+    },
+    "updateBot": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce54d223",
+          "outputHash": "1b6e9450"
+        }
+      }
+    },
+    "updateChannel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d20463dd",
+          "outputHash": "1ec572d8"
+        }
+      }
+    },
+    "updateChannelsMembersNotifyProps": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e58e431",
+          "outputHash": "60954672"
+        }
+      }
+    },
+    "updateChannelsMembersRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86b49469",
+          "outputHash": "1eef4eaf"
+        }
+      }
+    },
+    "updateChannelsMembersSchemeRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ac10afa",
+          "outputHash": "82fb9a33"
+        }
+      }
+    },
+    "updateChannelsPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bc7c710",
+          "outputHash": "954bece7"
+        }
+      }
+    },
+    "updateChannelsScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "44a21c24",
+          "outputHash": "b2405ed6"
+        }
+      }
+    },
+    "updateCommand": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee7c9b32",
+          "outputHash": "c0d47f18"
+        }
+      }
+    },
+    "updateCommandsRegenToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d7ef0816",
+          "outputHash": "fb032313"
+        }
+      }
+    },
+    "updateConfig": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a634c067",
+          "outputHash": "849e3a2f"
+        }
+      }
+    },
+    "updateHooksIncoming": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d712076",
+          "outputHash": "19a62407"
+        }
+      }
+    },
+    "updateHooksOutgoing": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f96d5d1b",
+          "outputHash": "6fb33a57"
+        }
+      }
+    },
+    "updateOauthApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24f573d2",
+          "outputHash": "d529e9fd"
+        }
+      }
+    },
+    "updatePost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1cf3aa6",
+          "outputHash": "7b054d91"
+        }
+      }
+    },
+    "updatePostsPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6853be7c",
+          "outputHash": "b9cff1a7"
+        }
+      }
+    },
+    "updateRolesPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9424f09b",
+          "outputHash": "cac19f88"
+        }
+      }
+    },
+    "updateSchemesPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c48a514e",
+          "outputHash": "064825a0"
+        }
+      }
+    },
+    "updateTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f377e084",
+          "outputHash": "3b5d60c1"
+        }
+      }
+    },
+    "updateTeamsMembersRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45b6b60f",
+          "outputHash": "668cd311"
+        }
+      }
+    },
+    "updateTeamsMembersSchemeRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bdbfd64",
+          "outputHash": "f42d9717"
+        }
+      }
+    },
+    "updateTeamsPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f9ead52",
+          "outputHash": "b79207f1"
+        }
+      }
+    },
+    "updateTeamsScheme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dff8ad3e",
+          "outputHash": "789dfacc"
+        }
+      }
+    },
+    "updateUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fae4acb",
+          "outputHash": "40308570"
+        }
+      }
+    },
+    "updateUsersActive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e622088",
+          "outputHash": "8734a9ec"
+        }
+      }
+    },
+    "updateUsersAuth": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e50add14",
+          "outputHash": "b8779f07"
+        }
+      }
+    },
+    "updateUsersMfa": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b84aece",
+          "outputHash": "02b1d1a4"
+        }
+      }
+    },
+    "updateUsersPassword": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb487019",
+          "outputHash": "7b630efb"
+        }
+      }
+    },
+    "updateUsersPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff0bd4d5",
+          "outputHash": "b075b82a"
+        }
+      }
+    },
+    "updateUsersPreferences": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af9e042b",
+          "outputHash": "4d9b7199"
+        }
+      }
+    },
+    "updateUsersRoles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77914175",
+          "outputHash": "c288cf76"
+        }
+      }
+    },
+    "updateUsersSessionsDevice": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b144410d",
+          "outputHash": "930a2b5a"
+        }
+      }
+    },
+    "updateUsersStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6af0fe5c",
+          "outputHash": "4ee2392a"
+        }
+      }
+    }
+  }
+}

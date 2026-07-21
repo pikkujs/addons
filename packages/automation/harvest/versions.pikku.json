@@ -1,0 +1,464 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "clientCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5d0f7c5",
+          "outputHash": "f5f08ca7"
+        }
+      }
+    },
+    "clientDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "722837cd",
+          "outputHash": "da570a42"
+        }
+      }
+    },
+    "clientGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "96cea57e",
+          "outputHash": "af62ce24"
+        }
+      }
+    },
+    "clientGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2b63089",
+          "outputHash": "3e13fcd4"
+        }
+      }
+    },
+    "clientUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6349130",
+          "outputHash": "187fd225"
+        }
+      }
+    },
+    "companyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27a53007",
+          "outputHash": "5aaa934a"
+        }
+      }
+    },
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea51e3c3",
+          "outputHash": "8a72fa54"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee859a8f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "402b1e1a",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b573ba74",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be28e88a",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "estimateCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8e15e4d",
+          "outputHash": "30b2eb56"
+        }
+      }
+    },
+    "estimateDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7efa2e5a",
+          "outputHash": "b7259f23"
+        }
+      }
+    },
+    "estimateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d44e70cd",
+          "outputHash": "db816d11"
+        }
+      }
+    },
+    "estimateGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6f3ff36",
+          "outputHash": "0d19b4e8"
+        }
+      }
+    },
+    "estimateUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80009264",
+          "outputHash": "bc49dea4"
+        }
+      }
+    },
+    "expenseCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "420def5d",
+          "outputHash": "14a544b7"
+        }
+      }
+    },
+    "expenseDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2d3a8246",
+          "outputHash": "ac666f8f"
+        }
+      }
+    },
+    "expenseGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "856fdfd2",
+          "outputHash": "2b5f3979"
+        }
+      }
+    },
+    "expenseGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34510697",
+          "outputHash": "68e06c8c"
+        }
+      }
+    },
+    "expenseUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f5def04",
+          "outputHash": "9f156455"
+        }
+      }
+    },
+    "invoiceCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdacd7b9",
+          "outputHash": "244249f4"
+        }
+      }
+    },
+    "invoiceDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c54643de",
+          "outputHash": "5dcbba10"
+        }
+      }
+    },
+    "invoiceGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11ce1365",
+          "outputHash": "28fa192e"
+        }
+      }
+    },
+    "invoiceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "554df9ec",
+          "outputHash": "92502eda"
+        }
+      }
+    },
+    "invoiceUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d09e9a98",
+          "outputHash": "37cc5f54"
+        }
+      }
+    },
+    "projectCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a20c41b7",
+          "outputHash": "c803aa75"
+        }
+      }
+    },
+    "projectDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e383da7",
+          "outputHash": "b19340a2"
+        }
+      }
+    },
+    "projectGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8f3bcd3",
+          "outputHash": "cae88529"
+        }
+      }
+    },
+    "projectGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c70b45c",
+          "outputHash": "60114ef9"
+        }
+      }
+    },
+    "projectUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de5e01f4",
+          "outputHash": "05a54f6e"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "afecd1f7",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12ad3142",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6678300d",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42428105",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "471cdfdf",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "timeEntryCreateByDuration": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07b4e159",
+          "outputHash": "cf3e5235"
+        }
+      }
+    },
+    "timeEntryCreateByStartEnd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec3301a0",
+          "outputHash": "a2f2d684"
+        }
+      }
+    },
+    "timeEntryDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ef0c259",
+          "outputHash": "6efa9d3f"
+        }
+      }
+    },
+    "timeEntryDeleteExternal": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "736c038a",
+          "outputHash": "d570385f"
+        }
+      }
+    },
+    "timeEntryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06c64cd0",
+          "outputHash": "a498e887"
+        }
+      }
+    },
+    "timeEntryGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4d991dc",
+          "outputHash": "227c37e7"
+        }
+      }
+    },
+    "timeEntryRestartTime": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "136558c6",
+          "outputHash": "c1d69dd5"
+        }
+      }
+    },
+    "timeEntryStopTime": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3c5562b",
+          "outputHash": "8b1c7553"
+        }
+      }
+    },
+    "timeEntryUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e68c1db",
+          "outputHash": "e6bcaf3a"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6e7e305",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b698d702",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a076e30",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88998af2",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "userMe": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f504bb53",
+          "outputHash": "eb47942c"
+        }
+      }
+    },
+    "userUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a023b0da",
+          "outputHash": "1bf397be"
+        }
+      }
+    }
+  }
+}

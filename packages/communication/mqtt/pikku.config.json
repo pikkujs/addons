@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "a480b818b3554e0f"
+    }
+  },
+  "node": {
+    "displayName": "MQTT",
+    "description": "Publish messages to an MQTT broker",
+    "categories": [
+      "communication"
+    ],
+    "icon": "./mqtt.svg"
+  }
+}

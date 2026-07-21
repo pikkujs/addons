@@ -1,0 +1,131 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "activityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e19f16ff",
+          "outputHash": "88f82f6b"
+        }
+      }
+    },
+    "activityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af28dc63",
+          "outputHash": "68903a99"
+        }
+      }
+    },
+    "memberDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcfe743d",
+          "outputHash": "9ad79226"
+        }
+      }
+    },
+    "memberGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4208dec5",
+          "outputHash": "8937c2e0"
+        }
+      }
+    },
+    "memberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0abf1504",
+          "outputHash": "807420b1"
+        }
+      }
+    },
+    "memberLookup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27ee0dad",
+          "outputHash": "3db4b5ba"
+        }
+      }
+    },
+    "memberUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10b5a51b",
+          "outputHash": "17fed45e"
+        }
+      }
+    },
+    "memberUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e449a96",
+          "outputHash": "10465933"
+        }
+      }
+    },
+    "noteCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1819ef0",
+          "outputHash": "769736fe"
+        }
+      }
+    },
+    "noteGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2aaf5a47",
+          "outputHash": "23622890"
+        }
+      }
+    },
+    "noteUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88ac606d",
+          "outputHash": "77f156e2"
+        }
+      }
+    },
+    "postCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a958cace",
+          "outputHash": "9be4ea06"
+        }
+      }
+    },
+    "postDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0eb35466",
+          "outputHash": "2140cf36"
+        }
+      }
+    },
+    "postGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcda03a3",
+          "outputHash": "15a58e52"
+        }
+      }
+    }
+  }
+}

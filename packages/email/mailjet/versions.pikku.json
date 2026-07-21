@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "emailSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "269c0189",
+          "outputHash": "0cea7338"
+        }
+      }
+    },
+    "emailSendTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d75e3570",
+          "outputHash": "1f4cb20a"
+        }
+      }
+    },
+    "smsSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed89b0d7",
+          "outputHash": "5500d5a6"
+        }
+      }
+    }
+  }
+}

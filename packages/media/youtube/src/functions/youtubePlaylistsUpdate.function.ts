@@ -1,0 +1,134 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const YoutubePlaylistsUpdateInput = z.object({
+  "$.xgafv": z.enum(["1", "2"]).optional().describe("V1 error format."),
+  access_token: z.string().optional().describe("OAuth access token."),
+  alt: z.enum(["json", "media", "proto"]).optional().describe("Data format for response."),
+  callback: z.string().optional().describe("JSONP"),
+  fields: z.string().optional().describe("Selector specifying which fields to include in a partial response."),
+  key: z.string().optional().describe("API key. Your API key identifies your project and provides you with API access, quota, and reports. Required unless you provide an OAuth 2.0 token."),
+  oauth_token: z.string().optional().describe("OAuth 2.0 token for the current user."),
+  prettyPrint: z.boolean().optional().describe("Returns response with indentations and line breaks."),
+  quotaUser: z.string().optional().describe("Available to use for quota purposes for server-side applications. Can be any arbitrary string assigned to a user, but should not exceed 40 characters."),
+  upload_protocol: z.string().optional().describe("Upload protocol for media (e.g. \"raw\", \"multipart\")."),
+  uploadType: z.string().optional().describe("Legacy upload protocol for media (e.g. \"media\", \"multipart\")."),
+  part: z.array(z.string()).describe("The *part* parameter serves two purposes in this operation. It identifies the properties that the write operation will set as well as the properties that the API response will include. Note that this method will override the existing values for mutable properties that are contained in any parts that the request body specifies. For example, a playlist's description is contained in the snippet part, which must be included in the request body. If the request does not specify a value for the snippet.description property, the playlist's existing description will be deleted."),
+  onBehalfOfContentOwner: z.string().optional().describe("*Note:* This parameter is intended exclusively for YouTube content partners. The *onBehalfOfContentOwner* parameter indicates that the request's authorization credentials identify a YouTube CMS user who is acting on behalf of the content owner specified in the parameter value. This parameter is intended for YouTube content partners that own and manage many different YouTube channels. It allows content owners to authenticate once and get access to all their video and channel data, without having to provide authentication credentials for each individual channel. The CMS account that the user authenticates with must be linked to the specified YouTube content owner."),
+  contentDetails: z.object({
+  itemCount: z.number().int().optional().describe("The number of videos in the playlist."),
+}).optional().describe("The contentDetails object contains information like video count."),
+  etag: z.string().optional().describe("Etag of this resource."),
+  id: z.string().optional().describe("The ID that YouTube uses to uniquely identify the playlist."),
+  kind: z.string().optional().default("youtube#playlist").describe("Identifies what kind of resource this is. Value: the fixed string \"youtube#playlist\"."),
+  localizations: z.record(z.string(), z.object({
+  description: z.string().optional().describe("The localized strings for playlist's description."),
+  title: z.string().optional().describe("The localized strings for playlist's title."),
+}).describe("Playlist localization setting")).optional().describe("Localizations for different languages"),
+  player: z.object({
+  embedHtml: z.string().optional().describe("An <iframe> tag that embeds a player that will play the playlist."),
+}).optional().describe("The player object contains information that you would use to play the playlist in an embedded player."),
+  snippet: z.object({
+  channelId: z.string().optional().describe("The ID that YouTube uses to uniquely identify the channel that published the playlist."),
+  channelTitle: z.string().optional().describe("The channel title of the channel that the video belongs to."),
+  defaultLanguage: z.string().optional().describe("The language of the playlist's default title and description."),
+  description: z.string().optional().describe("The playlist's description."),
+  localized: z.object({
+    description: z.string().optional().describe("The localized strings for playlist's description."),
+    title: z.string().optional().describe("The localized strings for playlist's title."),
+  }).optional().describe("Localized title and description, read-only."),
+  publishedAt: z.string().datetime().optional().describe("The date and time that the playlist was created."),
+  tags: z.array(z.string()).optional().describe("Keyword tags associated with the playlist."),
+  thumbnailVideoId: z.string().optional().describe("Note: if the playlist has a custom thumbnail, this field will not be populated. The video id selected by the user that will be used as the thumbnail of this playlist. This field defaults to the first publicly viewable video in the playlist, if: 1. The user has never selected a video to be the thumbnail of the playlist. 2. The user selects a video to be the thumbnail, and then removes that video from the playlist. 3. The user selects a non-owned video to be the thumbnail, but that video becomes private, or gets deleted."),
+  thumbnails: z.object({
+    high: z.object({
+      height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+      url: z.string().optional().describe("The thumbnail image's URL."),
+      width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+    }).optional().describe("The high quality image for this resource."),
+    maxres: z.object({
+      height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+      url: z.string().optional().describe("The thumbnail image's URL."),
+      width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+    }).optional().describe("The maximum resolution quality image for this resource."),
+    medium: z.object({
+      height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+      url: z.string().optional().describe("The thumbnail image's URL."),
+      width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+    }).optional().describe("The medium quality image for this resource."),
+    standard: z.object({
+      height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+      url: z.string().optional().describe("The thumbnail image's URL."),
+      width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+    }).optional().describe("The standard quality image for this resource."),
+  }).optional().describe("A map of thumbnail images associated with the playlist. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."),
+  title: z.string().optional().describe("The playlist's title."),
+}).optional().describe("The snippet object contains basic details about the playlist, such as its title and description."),
+  status: z.object({
+  privacyStatus: z.enum(["public", "unlisted", "private"]).optional().describe("The playlist's privacy status."),
+}).optional().describe("The status object contains status information for the playlist."),
+})
+
+export const YoutubePlaylistsUpdateOutput = z.object({
+  contentDetails: z.object({
+    itemCount: z.number().int().optional().describe("The number of videos in the playlist."),
+  }).optional().describe("The contentDetails object contains information like video count."),
+  etag: z.string().optional().describe("Etag of this resource."),
+  id: z.string().optional().describe("The ID that YouTube uses to uniquely identify the playlist."),
+  kind: z.string().optional().default("youtube#playlist").describe("Identifies what kind of resource this is. Value: the fixed string \"youtube#playlist\"."),
+  localizations: z.record(z.string(), z.object({
+    description: z.string().optional().describe("The localized strings for playlist's description."),
+    title: z.string().optional().describe("The localized strings for playlist's title."),
+  }).describe("Playlist localization setting")).optional().describe("Localizations for different languages"),
+  player: z.object({
+    embedHtml: z.string().optional().describe("An <iframe> tag that embeds a player that will play the playlist."),
+  }).optional().describe("The player object contains information that you would use to play the playlist in an embedded player."),
+  snippet: z.object({
+    channelId: z.string().optional().describe("The ID that YouTube uses to uniquely identify the channel that published the playlist."),
+    channelTitle: z.string().optional().describe("The channel title of the channel that the video belongs to."),
+    defaultLanguage: z.string().optional().describe("The language of the playlist's default title and description."),
+    description: z.string().optional().describe("The playlist's description."),
+    localized: z.object({
+      description: z.string().optional().describe("The localized strings for playlist's description."),
+      title: z.string().optional().describe("The localized strings for playlist's title."),
+    }).optional().describe("Localized title and description, read-only."),
+    publishedAt: z.string().datetime().optional().describe("The date and time that the playlist was created."),
+    tags: z.array(z.string()).optional().describe("Keyword tags associated with the playlist."),
+    thumbnailVideoId: z.string().optional().describe("Note: if the playlist has a custom thumbnail, this field will not be populated. The video id selected by the user that will be used as the thumbnail of this playlist. This field defaults to the first publicly viewable video in the playlist, if: 1. The user has never selected a video to be the thumbnail of the playlist. 2. The user selects a video to be the thumbnail, and then removes that video from the playlist. 3. The user selects a non-owned video to be the thumbnail, but that video becomes private, or gets deleted."),
+    thumbnails: z.object({
+      high: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The high quality image for this resource."),
+      maxres: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The maximum resolution quality image for this resource."),
+      medium: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The medium quality image for this resource."),
+      standard: z.object({
+        height: z.number().int().optional().describe("(Optional) Height of the thumbnail image."),
+        url: z.string().optional().describe("The thumbnail image's URL."),
+        width: z.number().int().optional().describe("(Optional) Width of the thumbnail image."),
+      }).optional().describe("The standard quality image for this resource."),
+    }).optional().describe("A map of thumbnail images associated with the playlist. For each object in the map, the key is the name of the thumbnail image, and the value is an object that contains other information about the thumbnail."),
+    title: z.string().optional().describe("The playlist's title."),
+  }).optional().describe("The snippet object contains basic details about the playlist, such as its title and description."),
+  status: z.object({
+    privacyStatus: z.enum(["public", "unlisted", "private"]).optional().describe("The playlist's privacy status."),
+  }).optional().describe("The status object contains status information for the playlist."),
+}).describe("A *playlist* resource represents a YouTube playlist. A playlist is a collection of videos that can be viewed sequentially and shared with other users. A playlist can contain up to 200 videos, and YouTube does not limit the number of playlists that each user creates. By default, playlists are publicly visible to other users, but playlists can be public or private. YouTube also uses playlists to identify special collections of videos for a channel, such as: - uploaded videos - favorite videos - positively rated (liked) videos - watch history - watch later To be more specific, these lists are associated with a channel, which is a collection of a person, group, or company's videos, playlists, and other YouTube information. You can retrieve the playlist IDs for each of these lists from the channel resource for a given channel. You can then use the playlistItems.list method to retrieve any of those lists. You can also add or remove items from those lists by calling the playlistItems.insert and playlistItems.delete methods.")
+
+export const youtubePlaylistsUpdate = pikkuSessionlessFunc({
+  description: "Updates an existing resource.",
+  input: YoutubePlaylistsUpdateInput,
+  output: YoutubePlaylistsUpdateOutput,
+  func: async ({ youtube }, data) => {
+    return youtube.call("PUT", "/youtube/v3/playlists", data) as any
+  },
+})

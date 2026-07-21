@@ -1,0 +1,140 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "companyCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f99bb033",
+          "outputHash": "6c646a99"
+        }
+      }
+    },
+    "companyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fab01f38",
+          "outputHash": "7c328c1b"
+        }
+      }
+    },
+    "companyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5e1ad33",
+          "outputHash": "5aaa934a"
+        }
+      }
+    },
+    "companyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "afc90a51",
+          "outputHash": "d838d993"
+        }
+      }
+    },
+    "companyUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b834c4e",
+          "outputHash": "f75bf7c0"
+        }
+      }
+    },
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd87917e",
+          "outputHash": "8a72fa54"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6cc551b",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15111eda",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0c28204",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "dealCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6fa43e3b",
+          "outputHash": "57167aea"
+        }
+      }
+    },
+    "dealDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a2b55d9",
+          "outputHash": "7173ea63"
+        }
+      }
+    },
+    "dealGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c10680b0",
+          "outputHash": "507b11ae"
+        }
+      }
+    },
+    "dealGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a88ed540",
+          "outputHash": "c01d4941"
+        }
+      }
+    },
+    "dealUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "391996de",
+          "outputHash": "b3d9b47e"
+        }
+      }
+    }
+  }
+}

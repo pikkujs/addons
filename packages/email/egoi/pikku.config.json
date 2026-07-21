@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "3fbd1262b34e3b85"
+    }
+  },
+  "node": {
+    "displayName": "E-goi",
+    "description": "Consume the E-goi marketing API (contacts)",
+    "categories": [
+      "email"
+    ],
+    "icon": "./egoi.svg"
+  }
+}

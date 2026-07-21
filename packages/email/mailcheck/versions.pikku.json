@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "emailCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6094985b",
+          "outputHash": "5f5a2388"
+        }
+      }
+    }
+  }
+}

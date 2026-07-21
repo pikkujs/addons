@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.1.4",
+      "hash": "6a0b2d305a1d3187"
+    }
+  },
+  "node": {
+    "displayName": "GitHub",
+    "description": "GitHub integration for Pikku",
+    "categories": [
+      "Devops"
+    ],
+    "icon": "./github.svg"
+  }
+}

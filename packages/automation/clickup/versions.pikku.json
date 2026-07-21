@@ -1,0 +1,401 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "checklistCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8aeecf9c",
+          "outputHash": "298637ce"
+        }
+      }
+    },
+    "checklistDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2aff7e28",
+          "outputHash": "be924f95"
+        }
+      }
+    },
+    "checklistUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a0f03aa",
+          "outputHash": "399c93e2"
+        }
+      }
+    },
+    "commentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27ba2344",
+          "outputHash": "a7e58622"
+        }
+      }
+    },
+    "commentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "258c03b6",
+          "outputHash": "d9640ff8"
+        }
+      }
+    },
+    "commentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea053339",
+          "outputHash": "e0b56e50"
+        }
+      }
+    },
+    "commentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2978016",
+          "outputHash": "01471b7c"
+        }
+      }
+    },
+    "folderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0cc8293",
+          "outputHash": "0615ed88"
+        }
+      }
+    },
+    "folderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed88464d",
+          "outputHash": "a0d1e4d2"
+        }
+      }
+    },
+    "folderGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86a6aee9",
+          "outputHash": "a36bbb67"
+        }
+      }
+    },
+    "folderGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d444c8c",
+          "outputHash": "b8542e1f"
+        }
+      }
+    },
+    "folderUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff08aa80",
+          "outputHash": "b8d527c3"
+        }
+      }
+    },
+    "goalCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5df82666",
+          "outputHash": "46d309b8"
+        }
+      }
+    },
+    "goalDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e0df022",
+          "outputHash": "5e58f74f"
+        }
+      }
+    },
+    "goalGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2681c0e",
+          "outputHash": "77635480"
+        }
+      }
+    },
+    "goalGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "974ed06c",
+          "outputHash": "9e0c694f"
+        }
+      }
+    },
+    "goalUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1625fc7",
+          "outputHash": "2a86bdd7"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98cf29d6",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listCustomFields": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aae3a5d7",
+          "outputHash": "ff622dbf"
+        }
+      }
+    },
+    "listDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7709e152",
+          "outputHash": "58da4749"
+        }
+      }
+    },
+    "listGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8c0da42",
+          "outputHash": "a8b5e619"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d5b7e25",
+          "outputHash": "3556e648"
+        }
+      }
+    },
+    "listMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b186bd3",
+          "outputHash": "01bac02d"
+        }
+      }
+    },
+    "listUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "896bcf8a",
+          "outputHash": "873c6907"
+        }
+      }
+    },
+    "spaceTagCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0141e4ab",
+          "outputHash": "4b610e9d"
+        }
+      }
+    },
+    "spaceTagDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1acc2602",
+          "outputHash": "2167618a"
+        }
+      }
+    },
+    "spaceTagGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12559496",
+          "outputHash": "e0e61dd0"
+        }
+      }
+    },
+    "spaceTagUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79bfcf0e",
+          "outputHash": "23f64549"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "87947ddf",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41cb4a68",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e752f179",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a69f0a36",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aaa54c52",
+          "outputHash": "d624501d"
+        }
+      }
+    },
+    "taskSetCustomField": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf68cccc",
+          "outputHash": "b1a122be"
+        }
+      }
+    },
+    "taskTagAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e84fe78e",
+          "outputHash": "a946d27e"
+        }
+      }
+    },
+    "taskTagRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74edbfd3",
+          "outputHash": "c4f39a80"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e52751bc",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "timeEntryCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "130cc08d",
+          "outputHash": "6ea976b2"
+        }
+      }
+    },
+    "timeEntryDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2d604ec",
+          "outputHash": "6efa9d3f"
+        }
+      }
+    },
+    "timeEntryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee9f8b8d",
+          "outputHash": "a498e887"
+        }
+      }
+    },
+    "timeEntryGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7418cde3",
+          "outputHash": "227c37e7"
+        }
+      }
+    },
+    "timeEntryStart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c58195e",
+          "outputHash": "e2e8d4ad"
+        }
+      }
+    },
+    "timeEntryStop": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "786c7dc0",
+          "outputHash": "e402892c"
+        }
+      }
+    },
+    "timeEntryUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ffd7ccc3",
+          "outputHash": "e6bcaf3a"
+        }
+      }
+    }
+  }
+}

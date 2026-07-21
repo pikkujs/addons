@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "urlExpand": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9cdcd17",
+          "outputHash": "97c297b4"
+        }
+      }
+    },
+    "urlShorten": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5aba3739",
+          "outputHash": "0a504a6f"
+        }
+      }
+    },
+    "urlStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "222d6432",
+          "outputHash": "289a9374"
+        }
+      }
+    }
+  }
+}

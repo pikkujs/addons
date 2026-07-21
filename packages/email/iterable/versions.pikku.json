@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "eventTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aaae0ded",
+          "outputHash": "3374750c"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38ef2ee0",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0c419cd",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userListAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fec865d",
+          "outputHash": "979f0ed9"
+        }
+      }
+    },
+    "userListRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e88ab55a",
+          "outputHash": "b8ad8a0c"
+        }
+      }
+    },
+    "userUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5153e616",
+          "outputHash": "833cbfae"
+        }
+      }
+    }
+  }
+}

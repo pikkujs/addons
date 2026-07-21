@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "groupCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a27a5b3f",
+          "outputHash": "ee82319b"
+        }
+      }
+    },
+    "groupGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92590467",
+          "outputHash": "a9b0c6ca"
+        }
+      }
+    },
+    "subscriberCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2de53a5e",
+          "outputHash": "7b1d978e"
+        }
+      }
+    },
+    "subscriberGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58358d89",
+          "outputHash": "cddb52bb"
+        }
+      }
+    },
+    "subscriberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1da4dcf6",
+          "outputHash": "652c843d"
+        }
+      }
+    },
+    "subscriberUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6681d7f0",
+          "outputHash": "8c67be06"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "getSynonyms": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a936942",
+          "outputHash": "118a9f45"
+        }
+      }
+    }
+  }
+}

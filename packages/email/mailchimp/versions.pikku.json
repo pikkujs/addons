@@ -1,0 +1,131 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "campaignDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d0358a0",
+          "outputHash": "599041d3"
+        }
+      }
+    },
+    "campaignGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f59c2c6",
+          "outputHash": "96ae555f"
+        }
+      }
+    },
+    "campaignGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67bf0e1c",
+          "outputHash": "e3629023"
+        }
+      }
+    },
+    "campaignReplicate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f156cfd5",
+          "outputHash": "62b2482a"
+        }
+      }
+    },
+    "campaignResend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6fc0f251",
+          "outputHash": "c9d17826"
+        }
+      }
+    },
+    "campaignSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c77eecbb",
+          "outputHash": "4926c8d1"
+        }
+      }
+    },
+    "listGroupGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0002a4f2",
+          "outputHash": "83f64ebd"
+        }
+      }
+    },
+    "memberCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "baa1c085",
+          "outputHash": "0e676cbd"
+        }
+      }
+    },
+    "memberDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "264f7107",
+          "outputHash": "9ad79226"
+        }
+      }
+    },
+    "memberGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed1d36cf",
+          "outputHash": "8937c2e0"
+        }
+      }
+    },
+    "memberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46dd9186",
+          "outputHash": "807420b1"
+        }
+      }
+    },
+    "memberTagCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d5a1748",
+          "outputHash": "311f7cac"
+        }
+      }
+    },
+    "memberTagDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41b9e7ad",
+          "outputHash": "1a7a3599"
+        }
+      }
+    },
+    "memberUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77064833",
+          "outputHash": "17fed45e"
+        }
+      }
+    }
+  }
+}

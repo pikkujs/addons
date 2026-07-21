@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "postCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d36acc94",
+          "outputHash": "6ce3785f"
+        }
+      }
+    }
+  }
+}

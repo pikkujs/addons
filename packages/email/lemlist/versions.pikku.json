@@ -1,0 +1,131 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "activityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b872bc5f",
+          "outputHash": "68903a99"
+        }
+      }
+    },
+    "campaignGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b31aad5",
+          "outputHash": "e3629023"
+        }
+      }
+    },
+    "campaignGetStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "926a685a",
+          "outputHash": "f506e3f3"
+        }
+      }
+    },
+    "enrichGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2ab8d77",
+          "outputHash": "7b1d31f0"
+        }
+      }
+    },
+    "enrichLead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d39ac01e",
+          "outputHash": "4ad7ff69"
+        }
+      }
+    },
+    "enrichPerson": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfc8a69d",
+          "outputHash": "b13565cf"
+        }
+      }
+    },
+    "leadCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c158b500",
+          "outputHash": "a330332c"
+        }
+      }
+    },
+    "leadDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fce32f5b",
+          "outputHash": "f19ac67f"
+        }
+      }
+    },
+    "leadGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0d78c35",
+          "outputHash": "e62d87d0"
+        }
+      }
+    },
+    "teamGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b92d6d58",
+          "outputHash": "147c9168"
+        }
+      }
+    },
+    "teamGetCredits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83bc22f2",
+          "outputHash": "fa8828fa"
+        }
+      }
+    },
+    "unsubscribeAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "933044fe",
+          "outputHash": "186c03b0"
+        }
+      }
+    },
+    "unsubscribeDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef244949",
+          "outputHash": "695325f6"
+        }
+      }
+    },
+    "unsubscribeGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b3f64be",
+          "outputHash": "eda4eb14"
+        }
+      }
+    }
+  }
+}

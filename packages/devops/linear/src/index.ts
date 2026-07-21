@@ -1,0 +1,7 @@
+export { issueCreate } from './functions/issueCreate.function.js'
+export { issueGet } from './functions/issueGet.function.js'
+export { issueGetAll } from './functions/issueGetAll.function.js'
+export { issueUpdate } from './functions/issueUpdate.function.js'
+export { issueDelete } from './functions/issueDelete.function.js'
+export { issueAddLink } from './functions/issueAddLink.function.js'
+export { commentAddComment } from './functions/commentAddComment.function.js'

@@ -1,0 +1,437 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "aboutGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7d68812",
+          "outputHash": "e4a89560"
+        }
+      }
+    },
+    "changesGetStartPageToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45cf6818",
+          "outputHash": "0a11c449"
+        }
+      }
+    },
+    "changesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e83a189c",
+          "outputHash": "72376568"
+        }
+      }
+    },
+    "changesWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64cf67d6",
+          "outputHash": "45bb0e98"
+        }
+      }
+    },
+    "channelsStop": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8141accd",
+          "outputHash": "6f9b7e6e"
+        }
+      }
+    },
+    "commentsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8ebf008",
+          "outputHash": "5b558995"
+        }
+      }
+    },
+    "commentsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b1f993d",
+          "outputHash": "2721fad0"
+        }
+      }
+    },
+    "commentsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07671e61",
+          "outputHash": "ffb72610"
+        }
+      }
+    },
+    "commentsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1180eb1",
+          "outputHash": "0f8f0d3b"
+        }
+      }
+    },
+    "commentsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2f92fe7",
+          "outputHash": "e47ca3ea"
+        }
+      }
+    },
+    "drivesCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72768f3e",
+          "outputHash": "71b4daa3"
+        }
+      }
+    },
+    "drivesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "18dd9f80",
+          "outputHash": "94c8381f"
+        }
+      }
+    },
+    "drivesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c30ad28c",
+          "outputHash": "428b7ee0"
+        }
+      }
+    },
+    "drivesHide": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2268ae21",
+          "outputHash": "69fb40db"
+        }
+      }
+    },
+    "drivesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71c39a0e",
+          "outputHash": "cda6470d"
+        }
+      }
+    },
+    "drivesUnhide": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cf95edc",
+          "outputHash": "0d0bd790"
+        }
+      }
+    },
+    "drivesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cf8ae950",
+          "outputHash": "987c04c6"
+        }
+      }
+    },
+    "filesCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d03ea1d",
+          "outputHash": "fb21ce78"
+        }
+      }
+    },
+    "filesCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94fd00bc",
+          "outputHash": "0dfd6afc"
+        }
+      }
+    },
+    "filesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a11ef160",
+          "outputHash": "848c1b1a"
+        }
+      }
+    },
+    "filesEmptyTrash": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c5fb42b",
+          "outputHash": "afacd596"
+        }
+      }
+    },
+    "filesExport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e795166",
+          "outputHash": "db448cd2"
+        }
+      }
+    },
+    "filesGenerateIds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4025bbf3",
+          "outputHash": "393f482e"
+        }
+      }
+    },
+    "filesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8826a86",
+          "outputHash": "c7598660"
+        }
+      }
+    },
+    "filesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b43a47e5",
+          "outputHash": "aaebfb82"
+        }
+      }
+    },
+    "filesListLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b54bb0ee",
+          "outputHash": "c6c40e29"
+        }
+      }
+    },
+    "filesModifyLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c41b825",
+          "outputHash": "d8d08735"
+        }
+      }
+    },
+    "filesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b403d60",
+          "outputHash": "8777fd5c"
+        }
+      }
+    },
+    "filesWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d01b078",
+          "outputHash": "fe328077"
+        }
+      }
+    },
+    "permissionsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f85ea492",
+          "outputHash": "f1bf90c1"
+        }
+      }
+    },
+    "permissionsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3710365",
+          "outputHash": "52ee912d"
+        }
+      }
+    },
+    "permissionsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30a6d5e1",
+          "outputHash": "f641e4f9"
+        }
+      }
+    },
+    "permissionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ec7973b",
+          "outputHash": "09c755c5"
+        }
+      }
+    },
+    "permissionsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b75f1bd1",
+          "outputHash": "15dad022"
+        }
+      }
+    },
+    "repliesCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4cbf859",
+          "outputHash": "1869a009"
+        }
+      }
+    },
+    "repliesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c49bacbf",
+          "outputHash": "77118336"
+        }
+      }
+    },
+    "repliesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be886707",
+          "outputHash": "abd3c831"
+        }
+      }
+    },
+    "repliesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3107acc6",
+          "outputHash": "783affc3"
+        }
+      }
+    },
+    "repliesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "22906530",
+          "outputHash": "0250327d"
+        }
+      }
+    },
+    "revisionsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1c98c0b",
+          "outputHash": "44dcc06e"
+        }
+      }
+    },
+    "revisionsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f7230fc",
+          "outputHash": "702a5bf2"
+        }
+      }
+    },
+    "revisionsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "186e4281",
+          "outputHash": "f65866d9"
+        }
+      }
+    },
+    "revisionsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37e600d3",
+          "outputHash": "40fb769a"
+        }
+      }
+    },
+    "teamdrivesCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b58c263",
+          "outputHash": "e0b046da"
+        }
+      }
+    },
+    "teamdrivesDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4d5f6d4",
+          "outputHash": "07bf48b4"
+        }
+      }
+    },
+    "teamdrivesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80b70755",
+          "outputHash": "24bc4ff7"
+        }
+      }
+    },
+    "teamdrivesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8dc50b2",
+          "outputHash": "be470bb3"
+        }
+      }
+    },
+    "teamdrivesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3941e19",
+          "outputHash": "3b710721"
+        }
+      }
+    }
+  }
+}

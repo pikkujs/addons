@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "v4",
+      "hash": "2d44d47d8373afc8"
+    }
+  },
+  "node": {
+    "displayName": "Google Sheets",
+    "description": "Google Sheets integration for Pikku",
+    "categories": [
+      "Data"
+    ],
+    "icon": "./google-sheets.svg"
+  }
+}

@@ -1,0 +1,5 @@
+export { documentGetAll } from './functions/documentGetAll.function.js'
+export { documentCreate } from './functions/documentCreate.function.js'
+export { documentGet } from './functions/documentGet.function.js'
+export { documentUpdate } from './functions/documentUpdate.function.js'
+export { documentDelete } from './functions/documentDelete.function.js'

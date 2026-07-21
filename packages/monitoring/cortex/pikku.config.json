@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "1dcd1995506c3df1"
+    }
+  },
+  "node": {
+    "displayName": "Cortex",
+    "description": "Run Cortex analyzers and responders on observables and entities",
+    "categories": [
+      "monitoring"
+    ],
+    "icon": "./cortex.svg"
+  }
+}

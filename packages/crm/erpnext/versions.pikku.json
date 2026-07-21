@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "documentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f590ae5a",
+          "outputHash": "a3121186"
+        }
+      }
+    },
+    "documentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "875b510d",
+          "outputHash": "6c60084d"
+        }
+      }
+    },
+    "documentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e5bcc76",
+          "outputHash": "5ab39518"
+        }
+      }
+    },
+    "documentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af2f69d8",
+          "outputHash": "4bd2bae1"
+        }
+      }
+    },
+    "documentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29b11170",
+          "outputHash": "d672d639"
+        }
+      }
+    }
+  }
+}

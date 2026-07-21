@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "invoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3bf41533",
+          "outputHash": "26219834"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,590 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "accountAddNote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91423442",
+          "outputHash": "25ab2ba7"
+        }
+      }
+    },
+    "accountCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f3418e3",
+          "outputHash": "1b8e8fd5"
+        }
+      }
+    },
+    "accountDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "70890cd9",
+          "outputHash": "a18ef403"
+        }
+      }
+    },
+    "accountGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2047485",
+          "outputHash": "a4d2f940"
+        }
+      }
+    },
+    "accountGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d94fe3b5",
+          "outputHash": "06fae9b7"
+        }
+      }
+    },
+    "accountGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca1167c3",
+          "outputHash": "e381068c"
+        }
+      }
+    },
+    "accountUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd6a1657",
+          "outputHash": "c1737518"
+        }
+      }
+    },
+    "accountUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "749c4237",
+          "outputHash": "e10c35e0"
+        }
+      }
+    },
+    "attachmentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58e7913c",
+          "outputHash": "573d6b70"
+        }
+      }
+    },
+    "attachmentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1faf2a29",
+          "outputHash": "79d7081d"
+        }
+      }
+    },
+    "attachmentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bf9e12c",
+          "outputHash": "26b5b78c"
+        }
+      }
+    },
+    "attachmentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ba32e25",
+          "outputHash": "96e120c2"
+        }
+      }
+    },
+    "attachmentGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8217b92",
+          "outputHash": "b3efb487"
+        }
+      }
+    },
+    "attachmentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d15b35ff",
+          "outputHash": "1359b1fc"
+        }
+      }
+    },
+    "caseAddComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46f3f6e7",
+          "outputHash": "7362455f"
+        }
+      }
+    },
+    "caseCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4226dee1",
+          "outputHash": "dbed73aa"
+        }
+      }
+    },
+    "caseDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34223a42",
+          "outputHash": "968aa15d"
+        }
+      }
+    },
+    "caseGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "05972f58",
+          "outputHash": "4c5a4a61"
+        }
+      }
+    },
+    "caseGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8072d59b",
+          "outputHash": "963475b9"
+        }
+      }
+    },
+    "caseGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66bee5ac",
+          "outputHash": "e12ce33e"
+        }
+      }
+    },
+    "caseUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "547672b4",
+          "outputHash": "4d4763c8"
+        }
+      }
+    },
+    "contactAddNote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39b3dcb8",
+          "outputHash": "a5fa2114"
+        }
+      }
+    },
+    "contactAddToCampaign": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cac71270",
+          "outputHash": "a32aab00"
+        }
+      }
+    },
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27f4fbe7",
+          "outputHash": "97ad2eab"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee859a8f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "402b1e1a",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f00a2236",
+          "outputHash": "8e8adc9d"
+        }
+      }
+    },
+    "contactGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3ea1c1e",
+          "outputHash": "1e7800a4"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f362d64",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "contactUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3b0745f",
+          "outputHash": "e86395ec"
+        }
+      }
+    },
+    "customObjectCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2f12ca40",
+          "outputHash": "92328f20"
+        }
+      }
+    },
+    "customObjectDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bba9dade",
+          "outputHash": "51c93cda"
+        }
+      }
+    },
+    "customObjectGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b301834",
+          "outputHash": "526bb9c5"
+        }
+      }
+    },
+    "customObjectGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a35f676",
+          "outputHash": "72ca8bb3"
+        }
+      }
+    },
+    "customObjectUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d2e5d15",
+          "outputHash": "b03d7fb3"
+        }
+      }
+    },
+    "customObjectUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50b0f19a",
+          "outputHash": "54622542"
+        }
+      }
+    },
+    "documentUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "456a6c21",
+          "outputHash": "d857eb7d"
+        }
+      }
+    },
+    "flowGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94de86ac",
+          "outputHash": "04cbfa10"
+        }
+      }
+    },
+    "flowInvoke": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "53cdcbe3",
+          "outputHash": "1895f189"
+        }
+      }
+    },
+    "leadAddNote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fa0b3b38",
+          "outputHash": "d8dfd47f"
+        }
+      }
+    },
+    "leadAddToCampaign": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "259b4c52",
+          "outputHash": "7c7393d8"
+        }
+      }
+    },
+    "leadCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbf99daa",
+          "outputHash": "b3ad301f"
+        }
+      }
+    },
+    "leadDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be6f0989",
+          "outputHash": "f19ac67f"
+        }
+      }
+    },
+    "leadGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4b618b7",
+          "outputHash": "e62d87d0"
+        }
+      }
+    },
+    "leadGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af969f6f",
+          "outputHash": "6b291364"
+        }
+      }
+    },
+    "leadGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8de1aefd",
+          "outputHash": "836eb491"
+        }
+      }
+    },
+    "leadUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fe43c7b",
+          "outputHash": "9721e991"
+        }
+      }
+    },
+    "leadUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "380ebdf2",
+          "outputHash": "8e5c3277"
+        }
+      }
+    },
+    "opportunityAddNote": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfa3f219",
+          "outputHash": "59ccc41f"
+        }
+      }
+    },
+    "opportunityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "460d50eb",
+          "outputHash": "eecb5d26"
+        }
+      }
+    },
+    "opportunityDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3737208c",
+          "outputHash": "410ffef4"
+        }
+      }
+    },
+    "opportunityGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46f06950",
+          "outputHash": "dbfb51ed"
+        }
+      }
+    },
+    "opportunityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd4f2377",
+          "outputHash": "b592ba47"
+        }
+      }
+    },
+    "opportunityGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7edc026",
+          "outputHash": "0d9a324e"
+        }
+      }
+    },
+    "opportunityUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40ba14ff",
+          "outputHash": "579c98ab"
+        }
+      }
+    },
+    "opportunityUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "84b19a37",
+          "outputHash": "6728a997"
+        }
+      }
+    },
+    "searchQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "986d06aa",
+          "outputHash": "b6c96c4c"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "389fac72",
+          "outputHash": "03979313"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12ad3142",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6678300d",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "25399b77",
+          "outputHash": "b5089b3b"
+        }
+      }
+    },
+    "taskGetSummary": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b8d8245",
+          "outputHash": "67d8b212"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "670ac741",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a076e30",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2d20d84",
+          "outputHash": "7a1dd02d"
+        }
+      }
+    }
+  }
+}

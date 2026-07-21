@@ -1,0 +1,140 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "customerCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33e9313f",
+          "outputHash": "9a2ac875"
+        }
+      }
+    },
+    "customerDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78bc9a71",
+          "outputHash": "4fd68e6c"
+        }
+      }
+    },
+    "customerGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc7e2c07",
+          "outputHash": "29c1aeb0"
+        }
+      }
+    },
+    "customerGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85e33daf",
+          "outputHash": "36a6c0ee"
+        }
+      }
+    },
+    "customerUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f3b257a",
+          "outputHash": "d0d0460b"
+        }
+      }
+    },
+    "orderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b07466c0",
+          "outputHash": "d9165bc9"
+        }
+      }
+    },
+    "orderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0ee0345",
+          "outputHash": "2b5471ac"
+        }
+      }
+    },
+    "orderGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1dc76b0",
+          "outputHash": "f52c9970"
+        }
+      }
+    },
+    "orderGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d47420a",
+          "outputHash": "b69ee205"
+        }
+      }
+    },
+    "orderUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60217099",
+          "outputHash": "9f482efe"
+        }
+      }
+    },
+    "productCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4544470e",
+          "outputHash": "a9231e47"
+        }
+      }
+    },
+    "productDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0251627a",
+          "outputHash": "f50c1bdf"
+        }
+      }
+    },
+    "productGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4610725e",
+          "outputHash": "1d180e70"
+        }
+      }
+    },
+    "productGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf547517",
+          "outputHash": "b2abd011"
+        }
+      }
+    },
+    "productUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c8065dd",
+          "outputHash": "d7bbdab0"
+        }
+      }
+    }
+  }
+}

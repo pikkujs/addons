@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "aa9ff5af2104d6e7"
+    }
+  },
+  "node": {
+    "displayName": "OpenWeatherMap",
+    "description": "Gets current and future weather information",
+    "categories": [
+      "data"
+    ],
+    "icon": "./open-weather-map.svg"
+  }
+}

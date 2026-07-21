@@ -1,0 +1,23 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "currentWeather": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d8e1056",
+          "outputHash": "e391e3f6"
+        }
+      }
+    },
+    "fiveDayForecast": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ddb7d39",
+          "outputHash": "a0f3b2b5"
+        }
+      }
+    }
+  }
+}

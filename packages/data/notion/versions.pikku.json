@@ -1,0 +1,437 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "completeFileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abd2d9ce",
+          "outputHash": "18dc1344"
+        }
+      }
+    },
+    "createAComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "209311d4",
+          "outputHash": "31b65740"
+        }
+      }
+    },
+    "createADatabase": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e91b35ef",
+          "outputHash": "81398bf5"
+        }
+      }
+    },
+    "createAToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb044d68",
+          "outputHash": "bceceffd"
+        }
+      }
+    },
+    "createDatabase": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c679b142",
+          "outputHash": "75fa3a2a"
+        }
+      }
+    },
+    "createFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d6890d8",
+          "outputHash": "0e130099"
+        }
+      }
+    },
+    "createView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa4558e0",
+          "outputHash": "51bb2c10"
+        }
+      }
+    },
+    "createViewQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ece95c53",
+          "outputHash": "f46d5956"
+        }
+      }
+    },
+    "deleteABlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db7aca2a",
+          "outputHash": "b8c3169c"
+        }
+      }
+    },
+    "deleteAComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e035d43",
+          "outputHash": "ca29a6b9"
+        }
+      }
+    },
+    "deleteView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69d7ac55",
+          "outputHash": "2983b794"
+        }
+      }
+    },
+    "deleteViewQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "103c0b35",
+          "outputHash": "67559ae1"
+        }
+      }
+    },
+    "getBlockChildren": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "410145c3",
+          "outputHash": "ede8272c"
+        }
+      }
+    },
+    "getSelf": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e0370fd",
+          "outputHash": "0b071f55"
+        }
+      }
+    },
+    "getUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98c1c11f",
+          "outputHash": "c26a4044"
+        }
+      }
+    },
+    "getUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "58a6ac2c",
+          "outputHash": "8cca1159"
+        }
+      }
+    },
+    "getViewQueryResults": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6b5f3bd",
+          "outputHash": "90453425"
+        }
+      }
+    },
+    "introspectToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "86d5f66f",
+          "outputHash": "c5ccc481"
+        }
+      }
+    },
+    "listComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6efca791",
+          "outputHash": "4946b237"
+        }
+      }
+    },
+    "listCustomEmojis": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "514f8d9d",
+          "outputHash": "14220b1a"
+        }
+      }
+    },
+    "listDataSourceTemplates": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "595a5b85",
+          "outputHash": "25f73726"
+        }
+      }
+    },
+    "listFileUploads": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c9a5a05",
+          "outputHash": "493d642e"
+        }
+      }
+    },
+    "listViews": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82ff5bdc",
+          "outputHash": "bd03e033"
+        }
+      }
+    },
+    "movePage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "022b6746",
+          "outputHash": "c19f8d1b"
+        }
+      }
+    },
+    "patchBlockChildren": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fc30e80a",
+          "outputHash": "b2a6828d"
+        }
+      }
+    },
+    "patchPage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9cbafb47",
+          "outputHash": "b74b5c27"
+        }
+      }
+    },
+    "postDatabaseQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c67b570",
+          "outputHash": "89924215"
+        }
+      }
+    },
+    "postPage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d7123256",
+          "outputHash": "1c8d8170"
+        }
+      }
+    },
+    "postSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e3e0c37",
+          "outputHash": "316fe709"
+        }
+      }
+    },
+    "queryMeetingNotes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9bb0114",
+          "outputHash": "ec57cdfe"
+        }
+      }
+    },
+    "retrieveABlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59320040",
+          "outputHash": "5ba42a48"
+        }
+      }
+    },
+    "retrieveADataSource": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6438cd22",
+          "outputHash": "296ba34b"
+        }
+      }
+    },
+    "retrieveAPage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f913bef7",
+          "outputHash": "fa4f7dbf"
+        }
+      }
+    },
+    "retrieveAPageProperty": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3cb4afdf",
+          "outputHash": "65a7e788"
+        }
+      }
+    },
+    "retrieveAView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01bf3b81",
+          "outputHash": "bf0bf402"
+        }
+      }
+    },
+    "retrieveAsyncTask": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b936f8b4",
+          "outputHash": "d306b2e7"
+        }
+      }
+    },
+    "retrieveComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "936128a4",
+          "outputHash": "dfbcff18"
+        }
+      }
+    },
+    "retrieveDatabase": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "607ea9f5",
+          "outputHash": "e5b9263e"
+        }
+      }
+    },
+    "retrieveFileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5c71392",
+          "outputHash": "8386a3b0"
+        }
+      }
+    },
+    "retrievePageMarkdown": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fa45242",
+          "outputHash": "377c7ffe"
+        }
+      }
+    },
+    "revokeToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62e1fe45",
+          "outputHash": "25a2916c"
+        }
+      }
+    },
+    "updateABlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a137ed89",
+          "outputHash": "c14c45d9"
+        }
+      }
+    },
+    "updateAComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6f46282",
+          "outputHash": "74059478"
+        }
+      }
+    },
+    "updateADataSource": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f23758dd",
+          "outputHash": "2c1e64a6"
+        }
+      }
+    },
+    "updateAView": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4275df45",
+          "outputHash": "4217af72"
+        }
+      }
+    },
+    "updateDatabase": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74fd9b7b",
+          "outputHash": "7457880a"
+        }
+      }
+    },
+    "updatePageMarkdown": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ffebef7d",
+          "outputHash": "572f5cdf"
+        }
+      }
+    },
+    "uploadFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0450cb9c",
+          "outputHash": "c0d1ffa5"
+        }
+      }
+    }
+  }
+}

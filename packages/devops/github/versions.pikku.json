@@ -1,0 +1,7304 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "actionsAddCustomLabelsToSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b99f317c",
+          "outputHash": "7de9e226"
+        }
+      }
+    },
+    "actionsAddCustomLabelsToSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e41e1837",
+          "outputHash": "b2c6dc72"
+        }
+      }
+    },
+    "actionsAddSelectedRepoToOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3160f61a",
+          "outputHash": "b7ecb645"
+        }
+      }
+    },
+    "actionsAddSelectedRepoToOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2df0e884",
+          "outputHash": "acc6be22"
+        }
+      }
+    },
+    "actionsAddSelectedRepoToRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3032465",
+          "outputHash": "64fe8129"
+        }
+      }
+    },
+    "actionsApproveWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89dc80fd",
+          "outputHash": "04a39dd8"
+        }
+      }
+    },
+    "actionsCancelWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14edf253",
+          "outputHash": "7252576f"
+        }
+      }
+    },
+    "actionsCreateEnvironmentVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6f74e8b",
+          "outputHash": "b68e2d73"
+        }
+      }
+    },
+    "actionsCreateOrUpdateEnvironmentSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e3b9323e",
+          "outputHash": "52800a57"
+        }
+      }
+    },
+    "actionsCreateOrUpdateOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc654387",
+          "outputHash": "8d1edf33"
+        }
+      }
+    },
+    "actionsCreateOrUpdateRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a893a4c8",
+          "outputHash": "a2e288f9"
+        }
+      }
+    },
+    "actionsCreateOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e9a2dc71",
+          "outputHash": "0539f6c8"
+        }
+      }
+    },
+    "actionsCreateRegistrationTokenForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "55796107",
+          "outputHash": "2bded471"
+        }
+      }
+    },
+    "actionsCreateRegistrationTokenForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26517af7",
+          "outputHash": "47ac501c"
+        }
+      }
+    },
+    "actionsCreateRemoveTokenForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5228d4c5",
+          "outputHash": "2dae34bb"
+        }
+      }
+    },
+    "actionsCreateRemoveTokenForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "72e67871",
+          "outputHash": "6734d6a8"
+        }
+      }
+    },
+    "actionsCreateRepoVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcc75461",
+          "outputHash": "b4436f8e"
+        }
+      }
+    },
+    "actionsCreateRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a767dfa0",
+          "outputHash": "796c05b3"
+        }
+      }
+    },
+    "actionsCreateWorkflowDispatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "954795f7",
+          "outputHash": "441d21e7"
+        }
+      }
+    },
+    "actionsDeleteActionsCacheById": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bc86e85",
+          "outputHash": "6c4e7586"
+        }
+      }
+    },
+    "actionsDeleteActionsCacheByKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fc7fc9db",
+          "outputHash": "6ed6372c"
+        }
+      }
+    },
+    "actionsDeleteArtifact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68093399",
+          "outputHash": "beea7d7c"
+        }
+      }
+    },
+    "actionsDeleteEnvironmentSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de9c8796",
+          "outputHash": "0e45af37"
+        }
+      }
+    },
+    "actionsDeleteEnvironmentVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6692864a",
+          "outputHash": "2da802ae"
+        }
+      }
+    },
+    "actionsDeleteOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bd72c19",
+          "outputHash": "360596ac"
+        }
+      }
+    },
+    "actionsDeleteOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af625674",
+          "outputHash": "a8697bb9"
+        }
+      }
+    },
+    "actionsDeleteRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aac83f79",
+          "outputHash": "9699bf5f"
+        }
+      }
+    },
+    "actionsDeleteRepoVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16bcd055",
+          "outputHash": "e63328aa"
+        }
+      }
+    },
+    "actionsDeleteRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eab5eeca",
+          "outputHash": "c26e02f5"
+        }
+      }
+    },
+    "actionsDeleteSelfHostedRunnerFromOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21279861",
+          "outputHash": "89bbeb5d"
+        }
+      }
+    },
+    "actionsDeleteSelfHostedRunnerFromRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4360d5fe",
+          "outputHash": "50ca3700"
+        }
+      }
+    },
+    "actionsDeleteWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "da99a52a",
+          "outputHash": "e75580c1"
+        }
+      }
+    },
+    "actionsDeleteWorkflowRunLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35194bbd",
+          "outputHash": "bdf289e9"
+        }
+      }
+    },
+    "actionsDisableSelectedRepositoryGithubActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e65583b",
+          "outputHash": "3a7e629e"
+        }
+      }
+    },
+    "actionsDisableWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc3f9323",
+          "outputHash": "59b1205f"
+        }
+      }
+    },
+    "actionsDownloadArtifact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29e3589a",
+          "outputHash": "e5d3657b"
+        }
+      }
+    },
+    "actionsDownloadJobLogsForWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "165070a8",
+          "outputHash": "7a2947a3"
+        }
+      }
+    },
+    "actionsDownloadWorkflowRunAttemptLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e9d2607",
+          "outputHash": "9887d733"
+        }
+      }
+    },
+    "actionsDownloadWorkflowRunLogs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b92da9a5",
+          "outputHash": "12339918"
+        }
+      }
+    },
+    "actionsEnableSelectedRepositoryGithubActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4156c5d",
+          "outputHash": "e06fc588"
+        }
+      }
+    },
+    "actionsEnableWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f80b1352",
+          "outputHash": "f79b1c84"
+        }
+      }
+    },
+    "actionsGetActionsCacheList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "090a9c32",
+          "outputHash": "75a8bc28"
+        }
+      }
+    },
+    "actionsGetActionsCacheUsage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "78db5cc3",
+          "outputHash": "68ef2218"
+        }
+      }
+    },
+    "actionsGetActionsCacheUsageByRepoForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07c98f95",
+          "outputHash": "81be07f1"
+        }
+      }
+    },
+    "actionsGetActionsCacheUsageForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3718bd53",
+          "outputHash": "d91ffa93"
+        }
+      }
+    },
+    "actionsGetAllowedActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0e2013d",
+          "outputHash": "e838e648"
+        }
+      }
+    },
+    "actionsGetAllowedActionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ce65913",
+          "outputHash": "56e034ce"
+        }
+      }
+    },
+    "actionsGetArtifact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7b25b9c",
+          "outputHash": "f570b918"
+        }
+      }
+    },
+    "actionsGetCustomOidcSubClaimForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0202dfe7",
+          "outputHash": "e96426e8"
+        }
+      }
+    },
+    "actionsGetEnvironmentPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce4efeab",
+          "outputHash": "ceb20000"
+        }
+      }
+    },
+    "actionsGetEnvironmentSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "072455b0",
+          "outputHash": "b550b7e5"
+        }
+      }
+    },
+    "actionsGetEnvironmentVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d848726c",
+          "outputHash": "bf990675"
+        }
+      }
+    },
+    "actionsGetGithubActionsDefaultWorkflowPermissionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dfd645e",
+          "outputHash": "73bf44ea"
+        }
+      }
+    },
+    "actionsGetGithubActionsDefaultWorkflowPermissionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a79c3109",
+          "outputHash": "c652950b"
+        }
+      }
+    },
+    "actionsGetGithubActionsPermissionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24f83b6b",
+          "outputHash": "778fc028"
+        }
+      }
+    },
+    "actionsGetGithubActionsPermissionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd6ac70d",
+          "outputHash": "cb58b07a"
+        }
+      }
+    },
+    "actionsGetJobForWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce127f82",
+          "outputHash": "1ad1c766"
+        }
+      }
+    },
+    "actionsGetOrgPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e12b8b5",
+          "outputHash": "05f4ea64"
+        }
+      }
+    },
+    "actionsGetOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1ff0fa0d",
+          "outputHash": "03c90d1a"
+        }
+      }
+    },
+    "actionsGetOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0aca4b92",
+          "outputHash": "2bb6fab6"
+        }
+      }
+    },
+    "actionsGetPendingDeploymentsForRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5bc4dba6",
+          "outputHash": "c83e7c9d"
+        }
+      }
+    },
+    "actionsGetRepoPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3008909d",
+          "outputHash": "64099866"
+        }
+      }
+    },
+    "actionsGetRepoRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d34cb46b",
+          "outputHash": "38623a98"
+        }
+      }
+    },
+    "actionsGetRepoRequiredWorkflowUsage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "755543d0",
+          "outputHash": "365a8dbd"
+        }
+      }
+    },
+    "actionsGetRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "562aba3a",
+          "outputHash": "561f18ac"
+        }
+      }
+    },
+    "actionsGetRepoVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb0d3b0b",
+          "outputHash": "d05c94c4"
+        }
+      }
+    },
+    "actionsGetRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17b0166d",
+          "outputHash": "03efd6ef"
+        }
+      }
+    },
+    "actionsGetReviewsForRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1856b845",
+          "outputHash": "933aa73f"
+        }
+      }
+    },
+    "actionsGetSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b614209a",
+          "outputHash": "ce14273b"
+        }
+      }
+    },
+    "actionsGetSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c01959ae",
+          "outputHash": "3e6a1ce0"
+        }
+      }
+    },
+    "actionsGetWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "708c358d",
+          "outputHash": "649fd21b"
+        }
+      }
+    },
+    "actionsGetWorkflowAccessToRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "833e71a7",
+          "outputHash": "cc2fbef6"
+        }
+      }
+    },
+    "actionsGetWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6795a52",
+          "outputHash": "761f345f"
+        }
+      }
+    },
+    "actionsGetWorkflowRunAttempt": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35219aa2",
+          "outputHash": "06fd2b6f"
+        }
+      }
+    },
+    "actionsGetWorkflowRunUsage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ece11877",
+          "outputHash": "b6714b87"
+        }
+      }
+    },
+    "actionsGetWorkflowUsage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb190968",
+          "outputHash": "6885ddf3"
+        }
+      }
+    },
+    "actionsListArtifactsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9161c286",
+          "outputHash": "d2a6ab95"
+        }
+      }
+    },
+    "actionsListEnvironmentSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "472db35e",
+          "outputHash": "fed19f07"
+        }
+      }
+    },
+    "actionsListEnvironmentVariables": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f226cd9",
+          "outputHash": "779482bb"
+        }
+      }
+    },
+    "actionsListJobsForWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80469e10",
+          "outputHash": "dc04c1a0"
+        }
+      }
+    },
+    "actionsListJobsForWorkflowRunAttempt": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e8254424",
+          "outputHash": "28633541"
+        }
+      }
+    },
+    "actionsListLabelsForSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb2c6aaf",
+          "outputHash": "67eafa7c"
+        }
+      }
+    },
+    "actionsListLabelsForSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49952408",
+          "outputHash": "9ed7b4f8"
+        }
+      }
+    },
+    "actionsListOrgSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5da2bec1",
+          "outputHash": "00e73438"
+        }
+      }
+    },
+    "actionsListOrgVariables": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8ea3301",
+          "outputHash": "04aeda4b"
+        }
+      }
+    },
+    "actionsListRepoRequiredWorkflows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4515e4e9",
+          "outputHash": "4153bffe"
+        }
+      }
+    },
+    "actionsListRepoSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfd7cf87",
+          "outputHash": "9ea69424"
+        }
+      }
+    },
+    "actionsListRepoVariables": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "52f2dd1f",
+          "outputHash": "05d945fe"
+        }
+      }
+    },
+    "actionsListRepoWorkflows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91b9d5cf",
+          "outputHash": "db2c3fda"
+        }
+      }
+    },
+    "actionsListRequiredWorkflowRuns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "57bb6a34",
+          "outputHash": "8d90fcb4"
+        }
+      }
+    },
+    "actionsListRequiredWorkflows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "267a8213",
+          "outputHash": "4215ed74"
+        }
+      }
+    },
+    "actionsListRunnerApplicationsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "597c6cdc",
+          "outputHash": "d537d738"
+        }
+      }
+    },
+    "actionsListRunnerApplicationsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b07aa1d",
+          "outputHash": "4159094f"
+        }
+      }
+    },
+    "actionsListSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38621f09",
+          "outputHash": "0391b5dd"
+        }
+      }
+    },
+    "actionsListSelectedReposForOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dd75f024",
+          "outputHash": "26f92ed6"
+        }
+      }
+    },
+    "actionsListSelectedRepositoriesEnabledGithubActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "348dc490",
+          "outputHash": "0afc1f94"
+        }
+      }
+    },
+    "actionsListSelectedRepositoriesRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "786e684f",
+          "outputHash": "01495346"
+        }
+      }
+    },
+    "actionsListSelfHostedRunnersForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "832a87b3",
+          "outputHash": "1e33b825"
+        }
+      }
+    },
+    "actionsListSelfHostedRunnersForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8bcfd206",
+          "outputHash": "b120c66a"
+        }
+      }
+    },
+    "actionsListWorkflowRunArtifacts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c35cd6d4",
+          "outputHash": "33f4a0c7"
+        }
+      }
+    },
+    "actionsListWorkflowRuns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6acb88d",
+          "outputHash": "194884ac"
+        }
+      }
+    },
+    "actionsListWorkflowRunsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6130cfa",
+          "outputHash": "691c0333"
+        }
+      }
+    },
+    "actionsReRunJobForWorkflowRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b85ba73",
+          "outputHash": "c6e97e2c"
+        }
+      }
+    },
+    "actionsReRunWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7596c375",
+          "outputHash": "1520d37e"
+        }
+      }
+    },
+    "actionsReRunWorkflowFailedJobs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b0a3743",
+          "outputHash": "fb6b99e1"
+        }
+      }
+    },
+    "actionsRemoveAllCustomLabelsFromSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eab6df43",
+          "outputHash": "3299ff2e"
+        }
+      }
+    },
+    "actionsRemoveAllCustomLabelsFromSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e5cb7799",
+          "outputHash": "6fc4f34c"
+        }
+      }
+    },
+    "actionsRemoveCustomLabelFromSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b39c8b89",
+          "outputHash": "92d045b9"
+        }
+      }
+    },
+    "actionsRemoveCustomLabelFromSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cae554de",
+          "outputHash": "a964d3cd"
+        }
+      }
+    },
+    "actionsRemoveSelectedRepoFromOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e7b1538",
+          "outputHash": "1986dcf1"
+        }
+      }
+    },
+    "actionsRemoveSelectedRepoFromOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16dcaf74",
+          "outputHash": "23bd85c8"
+        }
+      }
+    },
+    "actionsRemoveSelectedRepoFromRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc61e7ea",
+          "outputHash": "619180fa"
+        }
+      }
+    },
+    "actionsReviewPendingDeploymentsForRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a204b593",
+          "outputHash": "470f5316"
+        }
+      }
+    },
+    "actionsSetAllowedActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "666e231c",
+          "outputHash": "01ef49f9"
+        }
+      }
+    },
+    "actionsSetAllowedActionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cfc220c0",
+          "outputHash": "4ac40117"
+        }
+      }
+    },
+    "actionsSetCustomLabelsForSelfHostedRunnerForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1559b2d0",
+          "outputHash": "d7eed840"
+        }
+      }
+    },
+    "actionsSetCustomLabelsForSelfHostedRunnerForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a87ddf9",
+          "outputHash": "4aa9ac02"
+        }
+      }
+    },
+    "actionsSetCustomOidcSubClaimForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a18037e8",
+          "outputHash": "27ba2a97"
+        }
+      }
+    },
+    "actionsSetGithubActionsDefaultWorkflowPermissionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c4a2e45",
+          "outputHash": "e41779e6"
+        }
+      }
+    },
+    "actionsSetGithubActionsDefaultWorkflowPermissionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4af2adb",
+          "outputHash": "0a694209"
+        }
+      }
+    },
+    "actionsSetGithubActionsPermissionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "922c70cd",
+          "outputHash": "f6550967"
+        }
+      }
+    },
+    "actionsSetGithubActionsPermissionsRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "467f1862",
+          "outputHash": "5c9979b4"
+        }
+      }
+    },
+    "actionsSetSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28a7b8f6",
+          "outputHash": "7c19c7ca"
+        }
+      }
+    },
+    "actionsSetSelectedReposForOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "541d440c",
+          "outputHash": "2ca2b292"
+        }
+      }
+    },
+    "actionsSetSelectedReposToRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a89ebc6d",
+          "outputHash": "2f95417b"
+        }
+      }
+    },
+    "actionsSetSelectedRepositoriesEnabledGithubActionsOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc25f6b7",
+          "outputHash": "b7e1eaf7"
+        }
+      }
+    },
+    "actionsSetWorkflowAccessToRepository": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8755f09d",
+          "outputHash": "f29132bc"
+        }
+      }
+    },
+    "actionsUpdateEnvironmentVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "19370847",
+          "outputHash": "3e4c9a5e"
+        }
+      }
+    },
+    "actionsUpdateOrgVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42fcc7f8",
+          "outputHash": "9bb5b4eb"
+        }
+      }
+    },
+    "actionsUpdateRepoVariable": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ed93047",
+          "outputHash": "d26e7ea8"
+        }
+      }
+    },
+    "actionsUpdateRequiredWorkflow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c78be3c5",
+          "outputHash": "94890bbb"
+        }
+      }
+    },
+    "activityCheckRepoIsStarredByAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0a7bde7",
+          "outputHash": "8f08b82e"
+        }
+      }
+    },
+    "activityDeleteRepoSubscription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fb6d5c2e",
+          "outputHash": "6fcf3506"
+        }
+      }
+    },
+    "activityDeleteThreadSubscription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "61365bd9",
+          "outputHash": "5573cfac"
+        }
+      }
+    },
+    "activityGetFeeds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91e2a0c5",
+          "outputHash": "bb15e68c"
+        }
+      }
+    },
+    "activityGetRepoSubscription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0403f35f",
+          "outputHash": "bc533408"
+        }
+      }
+    },
+    "activityGetThread": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c926c8d",
+          "outputHash": "368889c3"
+        }
+      }
+    },
+    "activityGetThreadSubscriptionForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "094f163e",
+          "outputHash": "bdcdd94b"
+        }
+      }
+    },
+    "activityListEventsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c891935",
+          "outputHash": "48f7e88c"
+        }
+      }
+    },
+    "activityListNotificationsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e0fcded7",
+          "outputHash": "4403a518"
+        }
+      }
+    },
+    "activityListOrgEventsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f755c1c",
+          "outputHash": "2b8ad1f1"
+        }
+      }
+    },
+    "activityListPublicEvents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6eba4abb",
+          "outputHash": "aa67a963"
+        }
+      }
+    },
+    "activityListPublicEventsForRepoNetwork": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9c85361",
+          "outputHash": "8990b526"
+        }
+      }
+    },
+    "activityListPublicEventsForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b27a2335",
+          "outputHash": "56256e66"
+        }
+      }
+    },
+    "activityListPublicOrgEvents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f8db802",
+          "outputHash": "3cdc613c"
+        }
+      }
+    },
+    "activityListReceivedEventsForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ded5036b",
+          "outputHash": "04c3cf45"
+        }
+      }
+    },
+    "activityListReceivedPublicEventsForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63fad87a",
+          "outputHash": "e76955f3"
+        }
+      }
+    },
+    "activityListRepoEvents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db4ae0e5",
+          "outputHash": "466f5de7"
+        }
+      }
+    },
+    "activityListRepoNotificationsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a4635dd",
+          "outputHash": "cb4edc24"
+        }
+      }
+    },
+    "activityListReposStarredByAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2560a98c",
+          "outputHash": "eef90361"
+        }
+      }
+    },
+    "activityListReposStarredByUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c4668b42",
+          "outputHash": "b2053270"
+        }
+      }
+    },
+    "activityListReposWatchedByUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0ec2027",
+          "outputHash": "7fbe0d27"
+        }
+      }
+    },
+    "activityListStargazersForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63efce07",
+          "outputHash": "99640cd3"
+        }
+      }
+    },
+    "activityListWatchedReposForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecd2030f",
+          "outputHash": "80fbda1f"
+        }
+      }
+    },
+    "activityListWatchersForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73ac200b",
+          "outputHash": "b546a0ba"
+        }
+      }
+    },
+    "activityMarkNotificationsAsRead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e857309",
+          "outputHash": "92e0984c"
+        }
+      }
+    },
+    "activityMarkRepoNotificationsAsRead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff373c5c",
+          "outputHash": "878e4de7"
+        }
+      }
+    },
+    "activityMarkThreadAsRead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68c393fb",
+          "outputHash": "86a149ac"
+        }
+      }
+    },
+    "activitySetRepoSubscription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39c10fea",
+          "outputHash": "3128b4cd"
+        }
+      }
+    },
+    "activitySetThreadSubscription": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac586129",
+          "outputHash": "d8bcb300"
+        }
+      }
+    },
+    "activityStarRepoForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aaf7e3b9",
+          "outputHash": "11b83307"
+        }
+      }
+    },
+    "activityUnstarRepoForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8c1fb6a",
+          "outputHash": "5bb6b95d"
+        }
+      }
+    },
+    "appsAddRepoToInstallationForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "184da096",
+          "outputHash": "80649660"
+        }
+      }
+    },
+    "appsCheckToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c455643",
+          "outputHash": "5a388a14"
+        }
+      }
+    },
+    "appsCreateFromManifest": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75866ae0",
+          "outputHash": "b9fe9eee"
+        }
+      }
+    },
+    "appsCreateInstallationAccessToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4c9d79f",
+          "outputHash": "88400817"
+        }
+      }
+    },
+    "appsDeleteAuthorization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e63812af",
+          "outputHash": "a9102b02"
+        }
+      }
+    },
+    "appsDeleteInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "88aafaa4",
+          "outputHash": "749f80c2"
+        }
+      }
+    },
+    "appsDeleteToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb945e8f",
+          "outputHash": "65c69479"
+        }
+      }
+    },
+    "appsGetAuthenticated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b23d349",
+          "outputHash": "2d40a30e"
+        }
+      }
+    },
+    "appsGetBySlug": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66b30866",
+          "outputHash": "b2f87e5e"
+        }
+      }
+    },
+    "appsGetInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f65034fa",
+          "outputHash": "21c64614"
+        }
+      }
+    },
+    "appsGetOrgInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f390d2d7",
+          "outputHash": "c5c9236e"
+        }
+      }
+    },
+    "appsGetRepoInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9fdad0a",
+          "outputHash": "4d2490e0"
+        }
+      }
+    },
+    "appsGetSubscriptionPlanForAccount": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea549f9a",
+          "outputHash": "111d4489"
+        }
+      }
+    },
+    "appsGetSubscriptionPlanForAccountStubbed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64026ba9",
+          "outputHash": "d521032a"
+        }
+      }
+    },
+    "appsGetUserInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "247b6d48",
+          "outputHash": "771ab27e"
+        }
+      }
+    },
+    "appsGetWebhookConfigForApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "226f72ab",
+          "outputHash": "630c590c"
+        }
+      }
+    },
+    "appsGetWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "309b0f19",
+          "outputHash": "5d42a3fd"
+        }
+      }
+    },
+    "appsListAccountsForPlan": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a0f0d00",
+          "outputHash": "fc2a4b2e"
+        }
+      }
+    },
+    "appsListAccountsForPlanStubbed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "31e178da",
+          "outputHash": "486d3747"
+        }
+      }
+    },
+    "appsListInstallationReposForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "172c7399",
+          "outputHash": "d12379ee"
+        }
+      }
+    },
+    "appsListInstallations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7a658c4f",
+          "outputHash": "883bf489"
+        }
+      }
+    },
+    "appsListInstallationsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7566f39",
+          "outputHash": "61466772"
+        }
+      }
+    },
+    "appsListPlans": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94fad22d",
+          "outputHash": "7f83dd45"
+        }
+      }
+    },
+    "appsListPlansStubbed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9c1866c5",
+          "outputHash": "41265106"
+        }
+      }
+    },
+    "appsListReposAccessibleToInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1413c408",
+          "outputHash": "349c041d"
+        }
+      }
+    },
+    "appsListSubscriptionsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e783917b",
+          "outputHash": "6d625797"
+        }
+      }
+    },
+    "appsListSubscriptionsForAuthenticatedUserStubbed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a1ed2a7",
+          "outputHash": "3e4d8c36"
+        }
+      }
+    },
+    "appsListWebhookDeliveries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d9f2bea",
+          "outputHash": "c9f3b343"
+        }
+      }
+    },
+    "appsRedeliverWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "047f3c72",
+          "outputHash": "f6ecd669"
+        }
+      }
+    },
+    "appsRemoveRepoFromInstallationForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d691c2a",
+          "outputHash": "0093d4ea"
+        }
+      }
+    },
+    "appsResetToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73c0d134",
+          "outputHash": "3e63878a"
+        }
+      }
+    },
+    "appsRevokeInstallationAccessToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "686028ed",
+          "outputHash": "741ba769"
+        }
+      }
+    },
+    "appsScopeToken": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27816390",
+          "outputHash": "7c0d1418"
+        }
+      }
+    },
+    "appsSuspendInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a413fe2b",
+          "outputHash": "78ca0898"
+        }
+      }
+    },
+    "appsUnsuspendInstallation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "427c0100",
+          "outputHash": "55dbf4c9"
+        }
+      }
+    },
+    "appsUpdateWebhookConfigForApp": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bda715aa",
+          "outputHash": "5e548f31"
+        }
+      }
+    },
+    "billingGetGithubActionsBillingOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de2a5c41",
+          "outputHash": "f911ed80"
+        }
+      }
+    },
+    "billingGetGithubActionsBillingUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cac01e40",
+          "outputHash": "74569fbd"
+        }
+      }
+    },
+    "billingGetGithubPackagesBillingOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a2e83ef",
+          "outputHash": "7288e09e"
+        }
+      }
+    },
+    "billingGetGithubPackagesBillingUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eca3fb19",
+          "outputHash": "6968c755"
+        }
+      }
+    },
+    "billingGetSharedStorageBillingOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "efee7dd4",
+          "outputHash": "f854ae53"
+        }
+      }
+    },
+    "billingGetSharedStorageBillingUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ce5736f",
+          "outputHash": "743385e1"
+        }
+      }
+    },
+    "checksCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c71af06",
+          "outputHash": "80238db8"
+        }
+      }
+    },
+    "checksCreateSuite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af57d454",
+          "outputHash": "f467e2af"
+        }
+      }
+    },
+    "checksGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3cf032be",
+          "outputHash": "3ec51aea"
+        }
+      }
+    },
+    "checksGetSuite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fe0f306a",
+          "outputHash": "7f4cf6eb"
+        }
+      }
+    },
+    "checksListAnnotations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fd5397a",
+          "outputHash": "87dd18b1"
+        }
+      }
+    },
+    "checksListForRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af0076d5",
+          "outputHash": "2e5ef3a8"
+        }
+      }
+    },
+    "checksListForSuite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e6968ea",
+          "outputHash": "9fa1767e"
+        }
+      }
+    },
+    "checksListSuitesForRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67b36f95",
+          "outputHash": "249d02a3"
+        }
+      }
+    },
+    "checksRerequestRun": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f3387188",
+          "outputHash": "44c9d386"
+        }
+      }
+    },
+    "checksRerequestSuite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2bce2fbb",
+          "outputHash": "a0c52361"
+        }
+      }
+    },
+    "checksSetSuitesPreferences": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30ea460d",
+          "outputHash": "463e9e99"
+        }
+      }
+    },
+    "checksUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e58c8ec6",
+          "outputHash": "cc4eb4d1"
+        }
+      }
+    },
+    "codeScanningDeleteAnalysis": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ac73f52",
+          "outputHash": "c6060203"
+        }
+      }
+    },
+    "codeScanningGetAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e43e46fa",
+          "outputHash": "fbfbd421"
+        }
+      }
+    },
+    "codeScanningGetAnalysis": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d05faa81",
+          "outputHash": "ba791c42"
+        }
+      }
+    },
+    "codeScanningGetCodeqlDatabase": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c120d2b",
+          "outputHash": "08cde2bf"
+        }
+      }
+    },
+    "codeScanningGetSarif": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f45bf9ae",
+          "outputHash": "d4c9d1cb"
+        }
+      }
+    },
+    "codeScanningListAlertInstances": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "469b2fe1",
+          "outputHash": "e5a7028e"
+        }
+      }
+    },
+    "codeScanningListAlertsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d19c1762",
+          "outputHash": "52aa7096"
+        }
+      }
+    },
+    "codeScanningListAlertsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad7405d6",
+          "outputHash": "a6a3fab2"
+        }
+      }
+    },
+    "codeScanningListCodeqlDatabases": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d332365",
+          "outputHash": "b2f141a7"
+        }
+      }
+    },
+    "codeScanningListRecentAnalyses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d951c0ef",
+          "outputHash": "39a0d231"
+        }
+      }
+    },
+    "codeScanningUpdateAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b487253",
+          "outputHash": "d92a0293"
+        }
+      }
+    },
+    "codeScanningUploadSarif": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9beaac5d",
+          "outputHash": "0194c9d9"
+        }
+      }
+    },
+    "codesOfConductGetAllCodesOfConduct": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9bb1cff4",
+          "outputHash": "11b4aca7"
+        }
+      }
+    },
+    "codesOfConductGetConductCode": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4f935aa",
+          "outputHash": "a361b602"
+        }
+      }
+    },
+    "codespacesAddRepositoryForSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "adcf1369",
+          "outputHash": "a060bc21"
+        }
+      }
+    },
+    "codespacesAddSelectedRepoToOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85767bdd",
+          "outputHash": "030abbba"
+        }
+      }
+    },
+    "codespacesCodespaceMachinesForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4b0c1c6",
+          "outputHash": "e211f4fc"
+        }
+      }
+    },
+    "codespacesCreateForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94520fd8",
+          "outputHash": "5eb434ba"
+        }
+      }
+    },
+    "codespacesCreateOrUpdateOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7019d09b",
+          "outputHash": "372ca207"
+        }
+      }
+    },
+    "codespacesCreateOrUpdateRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b13dbe23",
+          "outputHash": "5440d88c"
+        }
+      }
+    },
+    "codespacesCreateOrUpdateSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1647e782",
+          "outputHash": "402a7754"
+        }
+      }
+    },
+    "codespacesCreateWithPrForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49847193",
+          "outputHash": "2abc6fd4"
+        }
+      }
+    },
+    "codespacesCreateWithRepoForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c049015",
+          "outputHash": "e45bcdb6"
+        }
+      }
+    },
+    "codespacesDeleteCodespacesBillingUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5502a0f",
+          "outputHash": "4a012071"
+        }
+      }
+    },
+    "codespacesDeleteForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9688276",
+          "outputHash": "ba46b019"
+        }
+      }
+    },
+    "codespacesDeleteFromOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "713e52e8",
+          "outputHash": "da06ecb1"
+        }
+      }
+    },
+    "codespacesDeleteOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ddcd117",
+          "outputHash": "9e6094d7"
+        }
+      }
+    },
+    "codespacesDeleteRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7480cd3",
+          "outputHash": "0d973c3b"
+        }
+      }
+    },
+    "codespacesDeleteSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "768517a9",
+          "outputHash": "3a0f1c37"
+        }
+      }
+    },
+    "codespacesExportForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c23efcf",
+          "outputHash": "5e2d04fc"
+        }
+      }
+    },
+    "codespacesGetCodespacesForUserInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "64c32909",
+          "outputHash": "c77c68a0"
+        }
+      }
+    },
+    "codespacesGetExportDetailsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27779767",
+          "outputHash": "a4166dec"
+        }
+      }
+    },
+    "codespacesGetForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "accb3894",
+          "outputHash": "e3726935"
+        }
+      }
+    },
+    "codespacesGetOrgPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "005df48b",
+          "outputHash": "776ecf37"
+        }
+      }
+    },
+    "codespacesGetOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a8fa0f3",
+          "outputHash": "0d15d4d9"
+        }
+      }
+    },
+    "codespacesGetPublicKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0e6951a",
+          "outputHash": "cdffd339"
+        }
+      }
+    },
+    "codespacesGetRepoPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "539e8527",
+          "outputHash": "41dc415a"
+        }
+      }
+    },
+    "codespacesGetRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66b41952",
+          "outputHash": "62824704"
+        }
+      }
+    },
+    "codespacesGetSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c6c26c1",
+          "outputHash": "fac05d79"
+        }
+      }
+    },
+    "codespacesListDevcontainersInRepositoryForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de7dd70e",
+          "outputHash": "4a27ccb2"
+        }
+      }
+    },
+    "codespacesListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02bfe0b2",
+          "outputHash": "f60c8191"
+        }
+      }
+    },
+    "codespacesListInOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d0e43ae",
+          "outputHash": "8f846cb4"
+        }
+      }
+    },
+    "codespacesListInRepositoryForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39814325",
+          "outputHash": "22c86ce9"
+        }
+      }
+    },
+    "codespacesListOrgSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dd4672c4",
+          "outputHash": "62d47b32"
+        }
+      }
+    },
+    "codespacesListRepoSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "790a3b11",
+          "outputHash": "ffaa1d7f"
+        }
+      }
+    },
+    "codespacesListRepositoriesForSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "accf5f88",
+          "outputHash": "f5f62b2f"
+        }
+      }
+    },
+    "codespacesListSecretsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6431d745",
+          "outputHash": "aea9400b"
+        }
+      }
+    },
+    "codespacesListSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0f8a5a98",
+          "outputHash": "ff614eb8"
+        }
+      }
+    },
+    "codespacesPreFlightWithRepoForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a1cdb5a",
+          "outputHash": "abb0f7f3"
+        }
+      }
+    },
+    "codespacesPublishForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08b9d3c6",
+          "outputHash": "1855e03b"
+        }
+      }
+    },
+    "codespacesRemoveRepositoryForSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6126ed0",
+          "outputHash": "b2b704ab"
+        }
+      }
+    },
+    "codespacesRemoveSelectedRepoFromOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d2d8e39",
+          "outputHash": "0eab10cb"
+        }
+      }
+    },
+    "codespacesRepoMachinesForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46ad3c26",
+          "outputHash": "e54d27f4"
+        }
+      }
+    },
+    "codespacesSetCodespacesBilling": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60df73ba",
+          "outputHash": "ef1da8ac"
+        }
+      }
+    },
+    "codespacesSetCodespacesBillingUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f7631433",
+          "outputHash": "ec813b18"
+        }
+      }
+    },
+    "codespacesSetRepositoriesForSecretForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "353b6526",
+          "outputHash": "e5078a3e"
+        }
+      }
+    },
+    "codespacesSetSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a92fffbb",
+          "outputHash": "50446890"
+        }
+      }
+    },
+    "codespacesStartForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5965d7a",
+          "outputHash": "1547e9c0"
+        }
+      }
+    },
+    "codespacesStopForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "74818258",
+          "outputHash": "6ca5c468"
+        }
+      }
+    },
+    "codespacesStopInOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "60c66200",
+          "outputHash": "642b270f"
+        }
+      }
+    },
+    "codespacesUpdateForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b95d92ab",
+          "outputHash": "ae1e7eb4"
+        }
+      }
+    },
+    "dependabotAddSelectedRepoToOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a76023dd",
+          "outputHash": "c6bea79c"
+        }
+      }
+    },
+    "dependabotCreateOrUpdateOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c942957",
+          "outputHash": "3afca2f9"
+        }
+      }
+    },
+    "dependabotCreateOrUpdateRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4c8ce5a",
+          "outputHash": "c4beffca"
+        }
+      }
+    },
+    "dependabotDeleteOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63ea3aec",
+          "outputHash": "f34b7ceb"
+        }
+      }
+    },
+    "dependabotDeleteRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aee9924a",
+          "outputHash": "d355da54"
+        }
+      }
+    },
+    "dependabotGetAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3327086",
+          "outputHash": "858f6286"
+        }
+      }
+    },
+    "dependabotGetOrgPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a73fbf24",
+          "outputHash": "80ad7cf6"
+        }
+      }
+    },
+    "dependabotGetOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c46c0bff",
+          "outputHash": "464ebaa7"
+        }
+      }
+    },
+    "dependabotGetRepoPublicKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "191d71bf",
+          "outputHash": "56fa9b48"
+        }
+      }
+    },
+    "dependabotGetRepoSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43035cba",
+          "outputHash": "2528633a"
+        }
+      }
+    },
+    "dependabotListAlertsForEnterprise": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "731a99ad",
+          "outputHash": "6be5a916"
+        }
+      }
+    },
+    "dependabotListAlertsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c80813f",
+          "outputHash": "173c5f76"
+        }
+      }
+    },
+    "dependabotListAlertsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea05f51c",
+          "outputHash": "bf010f44"
+        }
+      }
+    },
+    "dependabotListOrgSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb80f22a",
+          "outputHash": "3aff3e8b"
+        }
+      }
+    },
+    "dependabotListRepoSecrets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6185472b",
+          "outputHash": "6d3eddbe"
+        }
+      }
+    },
+    "dependabotListSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "79c52c5f",
+          "outputHash": "b3938872"
+        }
+      }
+    },
+    "dependabotRemoveSelectedRepoFromOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b3f3d4a",
+          "outputHash": "b016ffe5"
+        }
+      }
+    },
+    "dependabotSetSelectedReposForOrgSecret": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fca1ca1f",
+          "outputHash": "42c195bd"
+        }
+      }
+    },
+    "dependabotUpdateAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbe14af1",
+          "outputHash": "48a912e9"
+        }
+      }
+    },
+    "dependencyGraphCreateRepositorySnapshot": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4cc49355",
+          "outputHash": "f8412675"
+        }
+      }
+    },
+    "dependencyGraphDiffRange": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e9b96ce",
+          "outputHash": "3b9faa75"
+        }
+      }
+    },
+    "emojisGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdca7130",
+          "outputHash": "0ebc53e3"
+        }
+      }
+    },
+    "gistsCheckIsStarred": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5524c1c5",
+          "outputHash": "629f6de1"
+        }
+      }
+    },
+    "gistsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "51818dd5",
+          "outputHash": "3f4016b7"
+        }
+      }
+    },
+    "gistsCreateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4adf470",
+          "outputHash": "ad7fbd8f"
+        }
+      }
+    },
+    "gistsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "080bfdc7",
+          "outputHash": "632b665e"
+        }
+      }
+    },
+    "gistsDeleteComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "923c3d9c",
+          "outputHash": "a265f439"
+        }
+      }
+    },
+    "gistsFork": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1837be3",
+          "outputHash": "e835c3a9"
+        }
+      }
+    },
+    "gistsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e058fd7",
+          "outputHash": "8ce02063"
+        }
+      }
+    },
+    "gistsGetComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "373e9f82",
+          "outputHash": "bd82c89b"
+        }
+      }
+    },
+    "gistsGetRevision": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c14d504f",
+          "outputHash": "d166c7b0"
+        }
+      }
+    },
+    "gistsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a14cffb6",
+          "outputHash": "701bbeef"
+        }
+      }
+    },
+    "gistsListComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f8e25db",
+          "outputHash": "60e98931"
+        }
+      }
+    },
+    "gistsListCommits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e536234",
+          "outputHash": "289d5fe0"
+        }
+      }
+    },
+    "gistsListForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "201322aa",
+          "outputHash": "a764e9cb"
+        }
+      }
+    },
+    "gistsListForks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b86b2e6",
+          "outputHash": "7c187d57"
+        }
+      }
+    },
+    "gistsListPublic": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4b83712",
+          "outputHash": "f6e98b72"
+        }
+      }
+    },
+    "gistsListStarred": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ac9519a",
+          "outputHash": "8bc6d62b"
+        }
+      }
+    },
+    "gistsStar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a03dcae7",
+          "outputHash": "850b8c14"
+        }
+      }
+    },
+    "gistsUnstar": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69330f7a",
+          "outputHash": "3d75d917"
+        }
+      }
+    },
+    "gistsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85e86f62",
+          "outputHash": "86323b0d"
+        }
+      }
+    },
+    "gistsUpdateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ecfb4c2",
+          "outputHash": "714cd406"
+        }
+      }
+    },
+    "gitCreateBlob": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11dacbbe",
+          "outputHash": "91d7815c"
+        }
+      }
+    },
+    "gitCreateCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9106ebf9",
+          "outputHash": "d273ba2c"
+        }
+      }
+    },
+    "gitCreateRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f632f5b",
+          "outputHash": "34e6a016"
+        }
+      }
+    },
+    "gitCreateTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bab71813",
+          "outputHash": "9c99cb19"
+        }
+      }
+    },
+    "gitCreateTree": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b7b0acc",
+          "outputHash": "9305f177"
+        }
+      }
+    },
+    "gitDeleteRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6fd63eef",
+          "outputHash": "bb12bf9f"
+        }
+      }
+    },
+    "gitGetBlob": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02489a0f",
+          "outputHash": "500a0ff0"
+        }
+      }
+    },
+    "gitGetCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fcf11932",
+          "outputHash": "5647fee8"
+        }
+      }
+    },
+    "gitGetRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "670155ee",
+          "outputHash": "dc6bbcf7"
+        }
+      }
+    },
+    "gitGetTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00a6fdc1",
+          "outputHash": "d3975dbf"
+        }
+      }
+    },
+    "gitGetTree": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ae1ac9f1",
+          "outputHash": "d9344738"
+        }
+      }
+    },
+    "gitListMatchingRefs": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5b27edf",
+          "outputHash": "712617ac"
+        }
+      }
+    },
+    "gitUpdateRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a36c68f",
+          "outputHash": "f4d51a90"
+        }
+      }
+    },
+    "gitignoreGetAllTemplates": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "343d4239",
+          "outputHash": "333f236e"
+        }
+      }
+    },
+    "gitignoreGetTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "44d71040",
+          "outputHash": "5f6524ca"
+        }
+      }
+    },
+    "interactionsGetRestrictionsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b270314",
+          "outputHash": "f1ab7525"
+        }
+      }
+    },
+    "interactionsGetRestrictionsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "82b716e4",
+          "outputHash": "c94c34ff"
+        }
+      }
+    },
+    "interactionsGetRestrictionsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4a91400",
+          "outputHash": "fdab3d70"
+        }
+      }
+    },
+    "interactionsRemoveRestrictionsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ccbe5252",
+          "outputHash": "63c54fcf"
+        }
+      }
+    },
+    "interactionsRemoveRestrictionsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e99729c",
+          "outputHash": "976b7b1f"
+        }
+      }
+    },
+    "interactionsRemoveRestrictionsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d8c0cf9",
+          "outputHash": "0949181d"
+        }
+      }
+    },
+    "interactionsSetRestrictionsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e1c18d6",
+          "outputHash": "e8456087"
+        }
+      }
+    },
+    "interactionsSetRestrictionsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "313f351b",
+          "outputHash": "07c07a76"
+        }
+      }
+    },
+    "interactionsSetRestrictionsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1fa7d513",
+          "outputHash": "f8e3fc67"
+        }
+      }
+    },
+    "issuesAddAssignees": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a8f2f33b",
+          "outputHash": "bbdb1b8c"
+        }
+      }
+    },
+    "issuesAddLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7929fc97",
+          "outputHash": "c8eb9e54"
+        }
+      }
+    },
+    "issuesCheckUserCanBeAssigned": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f429b3e7",
+          "outputHash": "cd38d7f1"
+        }
+      }
+    },
+    "issuesCheckUserCanBeAssignedToIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ecb7020",
+          "outputHash": "4bd1740e"
+        }
+      }
+    },
+    "issuesCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fda478ca",
+          "outputHash": "092eb81a"
+        }
+      }
+    },
+    "issuesCreateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9ad0af5",
+          "outputHash": "8a85296a"
+        }
+      }
+    },
+    "issuesCreateLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d41c88dc",
+          "outputHash": "c6407a73"
+        }
+      }
+    },
+    "issuesCreateMilestone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9f524d37",
+          "outputHash": "a9af995e"
+        }
+      }
+    },
+    "issuesDeleteComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a49358fa",
+          "outputHash": "44d43f70"
+        }
+      }
+    },
+    "issuesDeleteLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bd371663",
+          "outputHash": "08143b06"
+        }
+      }
+    },
+    "issuesDeleteMilestone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7c6a0a2",
+          "outputHash": "d90338b4"
+        }
+      }
+    },
+    "issuesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d8d315d",
+          "outputHash": "d12b111a"
+        }
+      }
+    },
+    "issuesGetComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "35b13439",
+          "outputHash": "2cd5291d"
+        }
+      }
+    },
+    "issuesGetEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d532f0f",
+          "outputHash": "02de7c15"
+        }
+      }
+    },
+    "issuesGetLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fccef505",
+          "outputHash": "51f0e30c"
+        }
+      }
+    },
+    "issuesGetMilestone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5db08c9a",
+          "outputHash": "d9098f93"
+        }
+      }
+    },
+    "issuesList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04128570",
+          "outputHash": "5d44492f"
+        }
+      }
+    },
+    "issuesListAssignees": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4da61e23",
+          "outputHash": "83eb8044"
+        }
+      }
+    },
+    "issuesListComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11a6b5aa",
+          "outputHash": "1e3060dd"
+        }
+      }
+    },
+    "issuesListCommentsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbf1a820",
+          "outputHash": "f65b140f"
+        }
+      }
+    },
+    "issuesListEvents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7cecdd66",
+          "outputHash": "95a49cfb"
+        }
+      }
+    },
+    "issuesListEventsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "318e7de6",
+          "outputHash": "d5262ac8"
+        }
+      }
+    },
+    "issuesListEventsForTimeline": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e846d293",
+          "outputHash": "930100eb"
+        }
+      }
+    },
+    "issuesListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fadbf70b",
+          "outputHash": "bf6a4741"
+        }
+      }
+    },
+    "issuesListForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dcd0ea0c",
+          "outputHash": "acfed45d"
+        }
+      }
+    },
+    "issuesListForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "63811d9a",
+          "outputHash": "6fdb4793"
+        }
+      }
+    },
+    "issuesListLabelsForMilestone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c82a3272",
+          "outputHash": "eb1d2840"
+        }
+      }
+    },
+    "issuesListLabelsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40f20b61",
+          "outputHash": "a567a71f"
+        }
+      }
+    },
+    "issuesListLabelsOnIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92f1db66",
+          "outputHash": "c9e9d684"
+        }
+      }
+    },
+    "issuesListMilestones": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "633fc7d4",
+          "outputHash": "cef266a2"
+        }
+      }
+    },
+    "issuesLock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a804ca5",
+          "outputHash": "ae547470"
+        }
+      }
+    },
+    "issuesRemoveAllLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e97349a",
+          "outputHash": "ee683a5b"
+        }
+      }
+    },
+    "issuesRemoveAssignees": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f553d519",
+          "outputHash": "540ec70f"
+        }
+      }
+    },
+    "issuesRemoveLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c8f117ca",
+          "outputHash": "5329ad3b"
+        }
+      }
+    },
+    "issuesSetLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f3ae298",
+          "outputHash": "954c8ccb"
+        }
+      }
+    },
+    "issuesUnlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "99eb3834",
+          "outputHash": "c68fef04"
+        }
+      }
+    },
+    "issuesUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c9e154b",
+          "outputHash": "e378ad3a"
+        }
+      }
+    },
+    "issuesUpdateComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0487a65",
+          "outputHash": "8ce6c5bf"
+        }
+      }
+    },
+    "issuesUpdateLabel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7e75c28",
+          "outputHash": "2b18f6f7"
+        }
+      }
+    },
+    "issuesUpdateMilestone": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9b175d57",
+          "outputHash": "c6599419"
+        }
+      }
+    },
+    "licensesGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89c90c08",
+          "outputHash": "a49f9066"
+        }
+      }
+    },
+    "licensesGetAllCommonlyUsed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "756a2053",
+          "outputHash": "6986f87e"
+        }
+      }
+    },
+    "licensesGetForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4ae0978b",
+          "outputHash": "fc539f54"
+        }
+      }
+    },
+    "markdownRender": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "819e0558",
+          "outputHash": "71e2f4f6"
+        }
+      }
+    },
+    "markdownRenderRaw": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5e27226",
+          "outputHash": "4cb69cbb"
+        }
+      }
+    },
+    "metaGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7fead9ae",
+          "outputHash": "4f542e3c"
+        }
+      }
+    },
+    "metaGetAllVersions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ceb83bd",
+          "outputHash": "571dfd3f"
+        }
+      }
+    },
+    "metaGetOctocat": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb2069c0",
+          "outputHash": "66f2d0ef"
+        }
+      }
+    },
+    "metaGetZen": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9106c4ef",
+          "outputHash": "8262a310"
+        }
+      }
+    },
+    "metaRoot": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6fa21500",
+          "outputHash": "3fba54f2"
+        }
+      }
+    },
+    "migrationsCancelImport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ba010a3",
+          "outputHash": "814b1c29"
+        }
+      }
+    },
+    "migrationsDeleteArchiveForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7a9e014",
+          "outputHash": "60be940c"
+        }
+      }
+    },
+    "migrationsDeleteArchiveForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3149bcd4",
+          "outputHash": "71e8e98d"
+        }
+      }
+    },
+    "migrationsDownloadArchiveForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e76cd21",
+          "outputHash": "ca3df2c3"
+        }
+      }
+    },
+    "migrationsGetArchiveForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2698db1",
+          "outputHash": "c0f1add5"
+        }
+      }
+    },
+    "migrationsGetCommitAuthors": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f1fd796e",
+          "outputHash": "025e8882"
+        }
+      }
+    },
+    "migrationsGetImportStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0820465f",
+          "outputHash": "799952e4"
+        }
+      }
+    },
+    "migrationsGetLargeFiles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54e6c806",
+          "outputHash": "5da8bca9"
+        }
+      }
+    },
+    "migrationsGetStatusForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c8746da",
+          "outputHash": "ed8678eb"
+        }
+      }
+    },
+    "migrationsGetStatusForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6867319",
+          "outputHash": "f4806900"
+        }
+      }
+    },
+    "migrationsListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0239ce28",
+          "outputHash": "e1bc4544"
+        }
+      }
+    },
+    "migrationsListForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "651c227e",
+          "outputHash": "ad1b4147"
+        }
+      }
+    },
+    "migrationsListReposForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecbd69d8",
+          "outputHash": "f4f99d94"
+        }
+      }
+    },
+    "migrationsListReposForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f234ebbd",
+          "outputHash": "dde49cfc"
+        }
+      }
+    },
+    "migrationsMapCommitAuthor": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10d37531",
+          "outputHash": "fd019c6a"
+        }
+      }
+    },
+    "migrationsSetLfsPreference": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2b11891",
+          "outputHash": "a09d3419"
+        }
+      }
+    },
+    "migrationsStartForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c28e052f",
+          "outputHash": "51676b77"
+        }
+      }
+    },
+    "migrationsStartForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5bf84ae1",
+          "outputHash": "142050a4"
+        }
+      }
+    },
+    "migrationsStartImport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "786db58a",
+          "outputHash": "3ada6a38"
+        }
+      }
+    },
+    "migrationsUnlockRepoForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d3d0c3a7",
+          "outputHash": "ca768246"
+        }
+      }
+    },
+    "migrationsUnlockRepoForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4dfb5b41",
+          "outputHash": "d08d34f3"
+        }
+      }
+    },
+    "migrationsUpdateImport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e9cca35",
+          "outputHash": "088efa17"
+        }
+      }
+    },
+    "oidcGetOidcCustomSubTemplateForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38ada46d",
+          "outputHash": "5f4e542b"
+        }
+      }
+    },
+    "oidcUpdateOidcCustomSubTemplateForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a70d411d",
+          "outputHash": "c463640d"
+        }
+      }
+    },
+    "orgsAddSecurityManagerTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f0376f0",
+          "outputHash": "36a02e61"
+        }
+      }
+    },
+    "orgsBlockUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e207967a",
+          "outputHash": "773645ca"
+        }
+      }
+    },
+    "orgsCancelInvitation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34749781",
+          "outputHash": "22fd4b3b"
+        }
+      }
+    },
+    "orgsCheckBlockedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1e0b820",
+          "outputHash": "24d9801c"
+        }
+      }
+    },
+    "orgsCheckMembershipForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "402afeec",
+          "outputHash": "98e2018b"
+        }
+      }
+    },
+    "orgsCheckPublicMembershipForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed598137",
+          "outputHash": "dece068c"
+        }
+      }
+    },
+    "orgsConvertMemberToOutsideCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6a9612ee",
+          "outputHash": "afebdb02"
+        }
+      }
+    },
+    "orgsCreateInvitation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "beda2f6a",
+          "outputHash": "50249d90"
+        }
+      }
+    },
+    "orgsCreateWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed089607",
+          "outputHash": "2b5dbd23"
+        }
+      }
+    },
+    "orgsDeleteWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1a13615",
+          "outputHash": "b22232de"
+        }
+      }
+    },
+    "orgsEnableOrDisableSecurityProductOnAllOrgRepos": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "297ea67c",
+          "outputHash": "018dc4f7"
+        }
+      }
+    },
+    "orgsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "132838bf",
+          "outputHash": "9177422d"
+        }
+      }
+    },
+    "orgsGetMembershipForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f802d825",
+          "outputHash": "768525aa"
+        }
+      }
+    },
+    "orgsGetMembershipForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7976db5e",
+          "outputHash": "0a3d2625"
+        }
+      }
+    },
+    "orgsGetWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5a9535a",
+          "outputHash": "fb2caff5"
+        }
+      }
+    },
+    "orgsGetWebhookConfigForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1067c10e",
+          "outputHash": "d6b93f96"
+        }
+      }
+    },
+    "orgsGetWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "770f26d2",
+          "outputHash": "d44a37d0"
+        }
+      }
+    },
+    "orgsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd74c9d5",
+          "outputHash": "805cc7ed"
+        }
+      }
+    },
+    "orgsListAppInstallations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dde1bdb3",
+          "outputHash": "fcb4fd86"
+        }
+      }
+    },
+    "orgsListBlockedUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12e03483",
+          "outputHash": "e328e49b"
+        }
+      }
+    },
+    "orgsListFailedInvitations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be320c73",
+          "outputHash": "9f91a248"
+        }
+      }
+    },
+    "orgsListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7da6c21",
+          "outputHash": "25e373a6"
+        }
+      }
+    },
+    "orgsListForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7aa6f74",
+          "outputHash": "17c3fd12"
+        }
+      }
+    },
+    "orgsListInvitationTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "01ceda36",
+          "outputHash": "0f95f3a4"
+        }
+      }
+    },
+    "orgsListMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "399872fd",
+          "outputHash": "17184789"
+        }
+      }
+    },
+    "orgsListMembershipsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0d9332a9",
+          "outputHash": "e801bd7d"
+        }
+      }
+    },
+    "orgsListOutsideCollaborators": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cba5e438",
+          "outputHash": "7a677bc9"
+        }
+      }
+    },
+    "orgsListPendingInvitations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50bd3fee",
+          "outputHash": "e2b72617"
+        }
+      }
+    },
+    "orgsListPublicMembers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e86a955",
+          "outputHash": "970a120b"
+        }
+      }
+    },
+    "orgsListSecurityManagerTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e14de4d4",
+          "outputHash": "3b188e41"
+        }
+      }
+    },
+    "orgsListWebhookDeliveries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b47a4949",
+          "outputHash": "4f8247d6"
+        }
+      }
+    },
+    "orgsListWebhooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "907b95e3",
+          "outputHash": "0d1010ff"
+        }
+      }
+    },
+    "orgsPingWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aa38d635",
+          "outputHash": "b591fdd1"
+        }
+      }
+    },
+    "orgsRedeliverWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4af213c8",
+          "outputHash": "c4c09fa8"
+        }
+      }
+    },
+    "orgsRemoveMember": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "71a230ec",
+          "outputHash": "5bc7f39a"
+        }
+      }
+    },
+    "orgsRemoveMembershipForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27bd9053",
+          "outputHash": "187aa97b"
+        }
+      }
+    },
+    "orgsRemoveOutsideCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c62d206f",
+          "outputHash": "0a9f5ae3"
+        }
+      }
+    },
+    "orgsRemovePublicMembershipForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab32888f",
+          "outputHash": "79a58749"
+        }
+      }
+    },
+    "orgsRemoveSecurityManagerTeam": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c2910ef",
+          "outputHash": "e818da77"
+        }
+      }
+    },
+    "orgsSetMembershipForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3442c726",
+          "outputHash": "65142bfa"
+        }
+      }
+    },
+    "orgsSetPublicMembershipForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "195bebfa",
+          "outputHash": "539d61a2"
+        }
+      }
+    },
+    "orgsUnblockUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0132f72b",
+          "outputHash": "88501e4f"
+        }
+      }
+    },
+    "orgsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32f705bd",
+          "outputHash": "02b90bc8"
+        }
+      }
+    },
+    "orgsUpdateMembershipForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4adbd6b",
+          "outputHash": "2983c11d"
+        }
+      }
+    },
+    "orgsUpdateWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34c12287",
+          "outputHash": "52aeb49e"
+        }
+      }
+    },
+    "orgsUpdateWebhookConfigForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f4da97e",
+          "outputHash": "780de83f"
+        }
+      }
+    },
+    "packagesDeletePackageForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f252798",
+          "outputHash": "6ac28973"
+        }
+      }
+    },
+    "packagesDeletePackageForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "83e03388",
+          "outputHash": "020cb03e"
+        }
+      }
+    },
+    "packagesDeletePackageForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b00729a0",
+          "outputHash": "3cb8d092"
+        }
+      }
+    },
+    "packagesDeletePackageVersionForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "068eac2e",
+          "outputHash": "20e9d68f"
+        }
+      }
+    },
+    "packagesDeletePackageVersionForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5e36a5e",
+          "outputHash": "0011d372"
+        }
+      }
+    },
+    "packagesDeletePackageVersionForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f5e56d3",
+          "outputHash": "4862f0e1"
+        }
+      }
+    },
+    "packagesGetAllPackageVersionsForPackageOwnedByAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6d476e33",
+          "outputHash": "a87ba7e3"
+        }
+      }
+    },
+    "packagesGetAllPackageVersionsForPackageOwnedByOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30e2fb4b",
+          "outputHash": "3b2f4440"
+        }
+      }
+    },
+    "packagesGetAllPackageVersionsForPackageOwnedByUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9af5c5fc",
+          "outputHash": "480f3c86"
+        }
+      }
+    },
+    "packagesGetPackageForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0261e39f",
+          "outputHash": "9c9c6f5f"
+        }
+      }
+    },
+    "packagesGetPackageForOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b1c093d9",
+          "outputHash": "b333bf9b"
+        }
+      }
+    },
+    "packagesGetPackageForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "614e1745",
+          "outputHash": "9a8e2137"
+        }
+      }
+    },
+    "packagesGetPackageVersionForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4dc73fea",
+          "outputHash": "ccf0fbb2"
+        }
+      }
+    },
+    "packagesGetPackageVersionForOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b7f048d8",
+          "outputHash": "5387a4cf"
+        }
+      }
+    },
+    "packagesGetPackageVersionForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a9e87ca",
+          "outputHash": "f2a7a2ec"
+        }
+      }
+    },
+    "packagesListPackagesForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2dd0b2a5",
+          "outputHash": "161d9862"
+        }
+      }
+    },
+    "packagesListPackagesForOrganization": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "777ee223",
+          "outputHash": "4ac23009"
+        }
+      }
+    },
+    "packagesListPackagesForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dc897a5",
+          "outputHash": "c275ceb6"
+        }
+      }
+    },
+    "packagesRestorePackageForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "826ff8d5",
+          "outputHash": "dd799596"
+        }
+      }
+    },
+    "packagesRestorePackageForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "342bbb47",
+          "outputHash": "b2297a76"
+        }
+      }
+    },
+    "packagesRestorePackageForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a0aaf8e4",
+          "outputHash": "5fc75ee4"
+        }
+      }
+    },
+    "packagesRestorePackageVersionForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cf6eb89d",
+          "outputHash": "6e94956b"
+        }
+      }
+    },
+    "packagesRestorePackageVersionForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecbc5487",
+          "outputHash": "599eda01"
+        }
+      }
+    },
+    "packagesRestorePackageVersionForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9983f8bb",
+          "outputHash": "6f401ced"
+        }
+      }
+    },
+    "projectsAddCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0e9ca4fe",
+          "outputHash": "bcddefd2"
+        }
+      }
+    },
+    "projectsCreateCard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f13431e3",
+          "outputHash": "8239229f"
+        }
+      }
+    },
+    "projectsCreateColumn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b030544",
+          "outputHash": "141db98c"
+        }
+      }
+    },
+    "projectsCreateForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "318e053b",
+          "outputHash": "47021244"
+        }
+      }
+    },
+    "projectsCreateForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e26efe3",
+          "outputHash": "c7a51400"
+        }
+      }
+    },
+    "projectsCreateForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39c6faa2",
+          "outputHash": "0af4c3b4"
+        }
+      }
+    },
+    "projectsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "36695b0e",
+          "outputHash": "49649fe0"
+        }
+      }
+    },
+    "projectsDeleteCard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b56e96a2",
+          "outputHash": "e7e0598e"
+        }
+      }
+    },
+    "projectsDeleteColumn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50200b43",
+          "outputHash": "eded27c4"
+        }
+      }
+    },
+    "projectsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd0fb021",
+          "outputHash": "db3bb3eb"
+        }
+      }
+    },
+    "projectsGetCard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c593d9b",
+          "outputHash": "2c784d91"
+        }
+      }
+    },
+    "projectsGetColumn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7458da90",
+          "outputHash": "7e546d09"
+        }
+      }
+    },
+    "projectsGetPermissionForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff6a4c8b",
+          "outputHash": "18dc8c5a"
+        }
+      }
+    },
+    "projectsListCards": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3740cc65",
+          "outputHash": "d7b6cf54"
+        }
+      }
+    },
+    "projectsListCollaborators": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5eda1940",
+          "outputHash": "705eabb7"
+        }
+      }
+    },
+    "projectsListColumns": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8cdcc9c2",
+          "outputHash": "390d0811"
+        }
+      }
+    },
+    "projectsListForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f5d66fb",
+          "outputHash": "38667715"
+        }
+      }
+    },
+    "projectsListForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5919f9cf",
+          "outputHash": "45e12e46"
+        }
+      }
+    },
+    "projectsListForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ee1c3f3",
+          "outputHash": "968062e0"
+        }
+      }
+    },
+    "projectsMoveCard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b409721",
+          "outputHash": "4fdb6bd9"
+        }
+      }
+    },
+    "projectsMoveColumn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc74606e",
+          "outputHash": "c93a44ea"
+        }
+      }
+    },
+    "projectsRemoveCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c070b14",
+          "outputHash": "456fd349"
+        }
+      }
+    },
+    "projectsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2269bb3f",
+          "outputHash": "a4e6b77c"
+        }
+      }
+    },
+    "projectsUpdateCard": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd9ceb1a",
+          "outputHash": "a7a57b61"
+        }
+      }
+    },
+    "projectsUpdateColumn": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c75e738",
+          "outputHash": "10331bcd"
+        }
+      }
+    },
+    "pullsCheckIfMerged": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "53fb5d68",
+          "outputHash": "7fb8e291"
+        }
+      }
+    },
+    "pullsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9af02f3",
+          "outputHash": "41b91918"
+        }
+      }
+    },
+    "pullsCreateReplyForReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2dbf27c2",
+          "outputHash": "c1a592d9"
+        }
+      }
+    },
+    "pullsCreateReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de5a02fd",
+          "outputHash": "ecc688ae"
+        }
+      }
+    },
+    "pullsCreateReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2bc085d2",
+          "outputHash": "24b17e7c"
+        }
+      }
+    },
+    "pullsDeletePendingReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c3e3c83",
+          "outputHash": "5fd85687"
+        }
+      }
+    },
+    "pullsDeleteReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a01c55f",
+          "outputHash": "bb5602ab"
+        }
+      }
+    },
+    "pullsDismissReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f69e206a",
+          "outputHash": "9678785c"
+        }
+      }
+    },
+    "pullsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "894b8dcf",
+          "outputHash": "6789b5ec"
+        }
+      }
+    },
+    "pullsGetReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "62308093",
+          "outputHash": "3cb44095"
+        }
+      }
+    },
+    "pullsGetReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80df6218",
+          "outputHash": "a268ec8d"
+        }
+      }
+    },
+    "pullsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "683b60f8",
+          "outputHash": "b0c94efd"
+        }
+      }
+    },
+    "pullsListCommentsForReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d259adb7",
+          "outputHash": "5492c323"
+        }
+      }
+    },
+    "pullsListCommits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4b257fdc",
+          "outputHash": "1b5fe809"
+        }
+      }
+    },
+    "pullsListFiles": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23372f76",
+          "outputHash": "fa8d1435"
+        }
+      }
+    },
+    "pullsListRequestedReviewers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e684019",
+          "outputHash": "4fee334d"
+        }
+      }
+    },
+    "pullsListReviewComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00a7a60f",
+          "outputHash": "802ad5b9"
+        }
+      }
+    },
+    "pullsListReviewCommentsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f62f6da",
+          "outputHash": "1dbce7a5"
+        }
+      }
+    },
+    "pullsListReviews": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8cd0ba02",
+          "outputHash": "dc6d0b19"
+        }
+      }
+    },
+    "pullsMerge": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4682132a",
+          "outputHash": "bc710282"
+        }
+      }
+    },
+    "pullsRemoveRequestedReviewers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfa7dd83",
+          "outputHash": "4bf67806"
+        }
+      }
+    },
+    "pullsRequestReviewers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f75df27",
+          "outputHash": "85b9bd66"
+        }
+      }
+    },
+    "pullsSubmitReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "516aab32",
+          "outputHash": "9e633977"
+        }
+      }
+    },
+    "pullsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b941fb2",
+          "outputHash": "13fec1bd"
+        }
+      }
+    },
+    "pullsUpdateBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a459926",
+          "outputHash": "8ac8327d"
+        }
+      }
+    },
+    "pullsUpdateReview": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30a10e69",
+          "outputHash": "5a1b08c4"
+        }
+      }
+    },
+    "pullsUpdateReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0908ccd3",
+          "outputHash": "57e29dd1"
+        }
+      }
+    },
+    "rateLimitGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd00927b",
+          "outputHash": "6e8da80c"
+        }
+      }
+    },
+    "reactionsCreateForCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab89255b",
+          "outputHash": "464f24a8"
+        }
+      }
+    },
+    "reactionsCreateForIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41628c35",
+          "outputHash": "888d5e26"
+        }
+      }
+    },
+    "reactionsCreateForIssueComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d262134",
+          "outputHash": "e8233490"
+        }
+      }
+    },
+    "reactionsCreateForPullRequestReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ee6ec3b",
+          "outputHash": "3a881dc0"
+        }
+      }
+    },
+    "reactionsCreateForRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08c74607",
+          "outputHash": "dc1f0fe4"
+        }
+      }
+    },
+    "reactionsCreateForTeamDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "730eab04",
+          "outputHash": "6574ee0b"
+        }
+      }
+    },
+    "reactionsCreateForTeamDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b30eb31b",
+          "outputHash": "bb33360f"
+        }
+      }
+    },
+    "reactionsDeleteForCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4025bb4e",
+          "outputHash": "afd0ca7f"
+        }
+      }
+    },
+    "reactionsDeleteForIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c0aeda55",
+          "outputHash": "2cd45abd"
+        }
+      }
+    },
+    "reactionsDeleteForIssueComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43d09259",
+          "outputHash": "534d68b7"
+        }
+      }
+    },
+    "reactionsDeleteForPullRequestComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9bb8288",
+          "outputHash": "37b997be"
+        }
+      }
+    },
+    "reactionsDeleteForRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59bb06e2",
+          "outputHash": "d9457123"
+        }
+      }
+    },
+    "reactionsDeleteForTeamDiscussion": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d24fa130",
+          "outputHash": "87749d44"
+        }
+      }
+    },
+    "reactionsDeleteForTeamDiscussionComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "59fcaabc",
+          "outputHash": "d901c101"
+        }
+      }
+    },
+    "reactionsListForCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "385a4666",
+          "outputHash": "7ac9b1d4"
+        }
+      }
+    },
+    "reactionsListForIssue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "29197a50",
+          "outputHash": "5737e53e"
+        }
+      }
+    },
+    "reactionsListForIssueComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2331b70",
+          "outputHash": "f72db724"
+        }
+      }
+    },
+    "reactionsListForPullRequestReviewComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ebc4ccff",
+          "outputHash": "3c278064"
+        }
+      }
+    },
+    "reactionsListForRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a37de83",
+          "outputHash": "1c51a565"
+        }
+      }
+    },
+    "reactionsListForTeamDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f32c7e4f",
+          "outputHash": "412afb3b"
+        }
+      }
+    },
+    "reactionsListForTeamDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb6d654b",
+          "outputHash": "51432776"
+        }
+      }
+    },
+    "reposAcceptInvitationForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0041bae",
+          "outputHash": "45606ea5"
+        }
+      }
+    },
+    "reposAddAppAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0806d0ea",
+          "outputHash": "915f8d8c"
+        }
+      }
+    },
+    "reposAddCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16f639b3",
+          "outputHash": "c6f845a5"
+        }
+      }
+    },
+    "reposAddStatusCheckContexts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b31d941",
+          "outputHash": "4f071e66"
+        }
+      }
+    },
+    "reposAddTeamAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "02122c19",
+          "outputHash": "6fc73b40"
+        }
+      }
+    },
+    "reposAddUserAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f3b23dc",
+          "outputHash": "6c4b20a8"
+        }
+      }
+    },
+    "reposCheckCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a89be90",
+          "outputHash": "72e8aa14"
+        }
+      }
+    },
+    "reposCheckVulnerabilityAlerts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f36c9e6a",
+          "outputHash": "56d0c86c"
+        }
+      }
+    },
+    "reposCodeownersErrors": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54baeeca",
+          "outputHash": "a98a3c52"
+        }
+      }
+    },
+    "reposCompareCommits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77ee34b0",
+          "outputHash": "ec6d53c5"
+        }
+      }
+    },
+    "reposCreateAutolink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3b3ff148",
+          "outputHash": "37b9a152"
+        }
+      }
+    },
+    "reposCreateCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "884c7f6f",
+          "outputHash": "2b8e0ae5"
+        }
+      }
+    },
+    "reposCreateCommitSignatureProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ef789ac",
+          "outputHash": "f58bf42d"
+        }
+      }
+    },
+    "reposCreateCommitStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38ea3319",
+          "outputHash": "1746e524"
+        }
+      }
+    },
+    "reposCreateDeployKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "19e30912",
+          "outputHash": "94345f2e"
+        }
+      }
+    },
+    "reposCreateDeployment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eb0f5c3d",
+          "outputHash": "c73ec058"
+        }
+      }
+    },
+    "reposCreateDeploymentBranchPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9bb4f779",
+          "outputHash": "13270015"
+        }
+      }
+    },
+    "reposCreateDeploymentStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1130eae8",
+          "outputHash": "33f984ce"
+        }
+      }
+    },
+    "reposCreateDispatchEvent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7cad374e",
+          "outputHash": "45f6837e"
+        }
+      }
+    },
+    "reposCreateForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "31e06a91",
+          "outputHash": "0122fa26"
+        }
+      }
+    },
+    "reposCreateFork": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "06f5ac4c",
+          "outputHash": "ed3c6700"
+        }
+      }
+    },
+    "reposCreateInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aad9eb5f",
+          "outputHash": "6ca53e74"
+        }
+      }
+    },
+    "reposCreateOrUpdateEnvironment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ad92bfe",
+          "outputHash": "42882257"
+        }
+      }
+    },
+    "reposCreateOrUpdateFileContents": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "98ca9485",
+          "outputHash": "06e24fa5"
+        }
+      }
+    },
+    "reposCreatePagesDeployment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e93e0858",
+          "outputHash": "dddc8ac4"
+        }
+      }
+    },
+    "reposCreatePagesSite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2027f5cc",
+          "outputHash": "b7628239"
+        }
+      }
+    },
+    "reposCreateRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8165d056",
+          "outputHash": "b67a0d5d"
+        }
+      }
+    },
+    "reposCreateTagProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a64c4b1",
+          "outputHash": "c16c474f"
+        }
+      }
+    },
+    "reposCreateUsingTemplate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8b731401",
+          "outputHash": "e9d34b2a"
+        }
+      }
+    },
+    "reposCreateWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e06b387",
+          "outputHash": "fca46c5e"
+        }
+      }
+    },
+    "reposDeclineInvitationForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43c14012",
+          "outputHash": "e4efe7ec"
+        }
+      }
+    },
+    "reposDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9029865c",
+          "outputHash": "18c57fc5"
+        }
+      }
+    },
+    "reposDeleteAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5afd1c9",
+          "outputHash": "268e1ad1"
+        }
+      }
+    },
+    "reposDeleteAdminBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de80978e",
+          "outputHash": "8fdd312c"
+        }
+      }
+    },
+    "reposDeleteAnEnvironment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f0c0cc43",
+          "outputHash": "bb68715b"
+        }
+      }
+    },
+    "reposDeleteAutolink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6bb58e02",
+          "outputHash": "0639a299"
+        }
+      }
+    },
+    "reposDeleteBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2bbac026",
+          "outputHash": "d31a081d"
+        }
+      }
+    },
+    "reposDeleteCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd9e5def",
+          "outputHash": "ab0b8b46"
+        }
+      }
+    },
+    "reposDeleteCommitSignatureProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68d17c0d",
+          "outputHash": "410e432d"
+        }
+      }
+    },
+    "reposDeleteDeployKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c322d44d",
+          "outputHash": "038787c8"
+        }
+      }
+    },
+    "reposDeleteDeployment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6f4a263",
+          "outputHash": "ed9e3c85"
+        }
+      }
+    },
+    "reposDeleteDeploymentBranchPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "66f461d6",
+          "outputHash": "d015f00f"
+        }
+      }
+    },
+    "reposDeleteFile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4a9024ad",
+          "outputHash": "eee4a48f"
+        }
+      }
+    },
+    "reposDeleteInvitation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "31916adf",
+          "outputHash": "055612bf"
+        }
+      }
+    },
+    "reposDeletePagesSite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e1318ba1",
+          "outputHash": "78fe2a89"
+        }
+      }
+    },
+    "reposDeletePullRequestReviewProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ce4743b8",
+          "outputHash": "9d18032c"
+        }
+      }
+    },
+    "reposDeleteRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8e24abc3",
+          "outputHash": "186deffb"
+        }
+      }
+    },
+    "reposDeleteReleaseAsset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e54bcd7a",
+          "outputHash": "a32660d0"
+        }
+      }
+    },
+    "reposDeleteTagProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d0b81fc",
+          "outputHash": "00d8abaf"
+        }
+      }
+    },
+    "reposDeleteWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81abcfe8",
+          "outputHash": "b36d7a7b"
+        }
+      }
+    },
+    "reposDisableAutomatedSecurityFixes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b146ed2",
+          "outputHash": "31471174"
+        }
+      }
+    },
+    "reposDisableLfsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6769b33a",
+          "outputHash": "81fe9ed0"
+        }
+      }
+    },
+    "reposDisableVulnerabilityAlerts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a2c2f26",
+          "outputHash": "0a745ccf"
+        }
+      }
+    },
+    "reposDownloadTarballArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3b569ee",
+          "outputHash": "f55be10e"
+        }
+      }
+    },
+    "reposDownloadZipballArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5181c5a3",
+          "outputHash": "c918859e"
+        }
+      }
+    },
+    "reposEnableAutomatedSecurityFixes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e5518de",
+          "outputHash": "dfe8d1f4"
+        }
+      }
+    },
+    "reposEnableLfsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dbe8d46",
+          "outputHash": "11f5ffb8"
+        }
+      }
+    },
+    "reposEnableVulnerabilityAlerts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30eb8479",
+          "outputHash": "a4fe64d1"
+        }
+      }
+    },
+    "reposGenerateReleaseNotes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8f184f8c",
+          "outputHash": "24c336da"
+        }
+      }
+    },
+    "reposGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2dd5749f",
+          "outputHash": "21170b5a"
+        }
+      }
+    },
+    "reposGetAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fe470b6",
+          "outputHash": "7ed31783"
+        }
+      }
+    },
+    "reposGetAdminBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b63f148",
+          "outputHash": "2ae1086c"
+        }
+      }
+    },
+    "reposGetAllEnvironments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4df2ea0",
+          "outputHash": "c2dc52aa"
+        }
+      }
+    },
+    "reposGetAllStatusCheckContexts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc0d1fba",
+          "outputHash": "b7ea9a91"
+        }
+      }
+    },
+    "reposGetAllTopics": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a07888e9",
+          "outputHash": "962eedc6"
+        }
+      }
+    },
+    "reposGetAppsWithAccessToProtectedBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d0e319e",
+          "outputHash": "9ceb5322"
+        }
+      }
+    },
+    "reposGetAutolink": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20aa5b53",
+          "outputHash": "563676e1"
+        }
+      }
+    },
+    "reposGetBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2fe21fe8",
+          "outputHash": "661835b9"
+        }
+      }
+    },
+    "reposGetBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d6f9b50",
+          "outputHash": "e526bf72"
+        }
+      }
+    },
+    "reposGetClones": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af959a3b",
+          "outputHash": "5ba49003"
+        }
+      }
+    },
+    "reposGetCodeFrequencyStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "77406e4e",
+          "outputHash": "525762b1"
+        }
+      }
+    },
+    "reposGetCollaboratorPermissionLevel": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c38e6606",
+          "outputHash": "eadc9dd0"
+        }
+      }
+    },
+    "reposGetCombinedStatusForRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a12b8cea",
+          "outputHash": "40373871"
+        }
+      }
+    },
+    "reposGetCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54db5df5",
+          "outputHash": "0629ebb5"
+        }
+      }
+    },
+    "reposGetCommitActivityStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20c27c1b",
+          "outputHash": "60aeae5a"
+        }
+      }
+    },
+    "reposGetCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e7490f3",
+          "outputHash": "1815f536"
+        }
+      }
+    },
+    "reposGetCommitSignatureProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b54a4d02",
+          "outputHash": "dae5a17c"
+        }
+      }
+    },
+    "reposGetCommunityProfileMetrics": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0a7206c2",
+          "outputHash": "d0ca63b0"
+        }
+      }
+    },
+    "reposGetContent": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c05a29d",
+          "outputHash": "c760627d"
+        }
+      }
+    },
+    "reposGetContributorsStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "342e0558",
+          "outputHash": "68776c0d"
+        }
+      }
+    },
+    "reposGetDeployKey": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e081ce1",
+          "outputHash": "419f6a03"
+        }
+      }
+    },
+    "reposGetDeployment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9461280d",
+          "outputHash": "4ce186aa"
+        }
+      }
+    },
+    "reposGetDeploymentBranchPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "45d096fa",
+          "outputHash": "9da5d632"
+        }
+      }
+    },
+    "reposGetDeploymentStatus": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "edffc85a",
+          "outputHash": "d3d71cbd"
+        }
+      }
+    },
+    "reposGetEnvironment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2f85de0",
+          "outputHash": "2f04168e"
+        }
+      }
+    },
+    "reposGetLatestPagesBuild": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "724ad3c5",
+          "outputHash": "30f3c275"
+        }
+      }
+    },
+    "reposGetLatestRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c149143a",
+          "outputHash": "f03ed520"
+        }
+      }
+    },
+    "reposGetPages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec560686",
+          "outputHash": "0ea73e0a"
+        }
+      }
+    },
+    "reposGetPagesBuild": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ffeb5db0",
+          "outputHash": "e42335b5"
+        }
+      }
+    },
+    "reposGetPagesHealthCheck": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d53815d5",
+          "outputHash": "24c48520"
+        }
+      }
+    },
+    "reposGetParticipationStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c5dda11",
+          "outputHash": "7f016c52"
+        }
+      }
+    },
+    "reposGetPullRequestReviewProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "91e520e8",
+          "outputHash": "362c6ee0"
+        }
+      }
+    },
+    "reposGetPunchCardStats": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d60ec959",
+          "outputHash": "6ab4a4bc"
+        }
+      }
+    },
+    "reposGetReadme": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4291e51",
+          "outputHash": "5a0417c7"
+        }
+      }
+    },
+    "reposGetReadmeInDirectory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c5a58bc",
+          "outputHash": "6c29709f"
+        }
+      }
+    },
+    "reposGetRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e29250b",
+          "outputHash": "e5ee33b4"
+        }
+      }
+    },
+    "reposGetReleaseAsset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24615283",
+          "outputHash": "e8251890"
+        }
+      }
+    },
+    "reposGetReleaseByTag": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "96d44942",
+          "outputHash": "81da8ee3"
+        }
+      }
+    },
+    "reposGetStatusChecksProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "087e8b5b",
+          "outputHash": "170a9d3d"
+        }
+      }
+    },
+    "reposGetTeamsWithAccessToProtectedBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15dd6b26",
+          "outputHash": "bf753413"
+        }
+      }
+    },
+    "reposGetTopPaths": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "679fb169",
+          "outputHash": "cbd44bae"
+        }
+      }
+    },
+    "reposGetTopReferrers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "47c77ce5",
+          "outputHash": "085f1d39"
+        }
+      }
+    },
+    "reposGetUsersWithAccessToProtectedBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fc709180",
+          "outputHash": "efc31831"
+        }
+      }
+    },
+    "reposGetViews": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6ff0967",
+          "outputHash": "450ba98c"
+        }
+      }
+    },
+    "reposGetWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "589edf5c",
+          "outputHash": "9c0f95a6"
+        }
+      }
+    },
+    "reposGetWebhookConfigForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "67af7a67",
+          "outputHash": "ba06f369"
+        }
+      }
+    },
+    "reposGetWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc80b6b0",
+          "outputHash": "f389ea9c"
+        }
+      }
+    },
+    "reposListAutolinks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46242c6a",
+          "outputHash": "c7a06d09"
+        }
+      }
+    },
+    "reposListBranches": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c84d3c8",
+          "outputHash": "b7197b32"
+        }
+      }
+    },
+    "reposListBranchesForHeadCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "80a3effe",
+          "outputHash": "52c1cf10"
+        }
+      }
+    },
+    "reposListCollaborators": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab324e0b",
+          "outputHash": "f90cc7cf"
+        }
+      }
+    },
+    "reposListCommentsForCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e009f142",
+          "outputHash": "e62e37ad"
+        }
+      }
+    },
+    "reposListCommitCommentsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "434af9dc",
+          "outputHash": "bc46bbec"
+        }
+      }
+    },
+    "reposListCommitStatusesForRef": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4d5044cd",
+          "outputHash": "f0866ed7"
+        }
+      }
+    },
+    "reposListCommits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7893142f",
+          "outputHash": "a85e9634"
+        }
+      }
+    },
+    "reposListContributors": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0485d5ba",
+          "outputHash": "b98479da"
+        }
+      }
+    },
+    "reposListDeployKeys": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "23345a9e",
+          "outputHash": "66627d6b"
+        }
+      }
+    },
+    "reposListDeploymentBranchPolicies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e608c69b",
+          "outputHash": "27957709"
+        }
+      }
+    },
+    "reposListDeploymentStatuses": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ce2918e",
+          "outputHash": "fc6be289"
+        }
+      }
+    },
+    "reposListDeployments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e008a4d",
+          "outputHash": "0ceaa1aa"
+        }
+      }
+    },
+    "reposListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4582b33b",
+          "outputHash": "85db68a7"
+        }
+      }
+    },
+    "reposListForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b53e4a9d",
+          "outputHash": "071381c3"
+        }
+      }
+    },
+    "reposListForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "68850021",
+          "outputHash": "a8e27c7d"
+        }
+      }
+    },
+    "reposListForks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "916b2b73",
+          "outputHash": "9e1ce8dc"
+        }
+      }
+    },
+    "reposListInvitations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a3b377a7",
+          "outputHash": "b9129e28"
+        }
+      }
+    },
+    "reposListInvitationsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2002838",
+          "outputHash": "bb9b4578"
+        }
+      }
+    },
+    "reposListLanguages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3457489d",
+          "outputHash": "39d48d73"
+        }
+      }
+    },
+    "reposListPagesBuilds": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c689bab8",
+          "outputHash": "7070c7bc"
+        }
+      }
+    },
+    "reposListPublic": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc851e24",
+          "outputHash": "614ba43a"
+        }
+      }
+    },
+    "reposListPullRequestsAssociatedWithCommit": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7b1a6a95",
+          "outputHash": "03271995"
+        }
+      }
+    },
+    "reposListReleaseAssets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "adf569f0",
+          "outputHash": "6da5f198"
+        }
+      }
+    },
+    "reposListReleases": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfb58e7c",
+          "outputHash": "881cb636"
+        }
+      }
+    },
+    "reposListTagProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4830ab5e",
+          "outputHash": "ac48356f"
+        }
+      }
+    },
+    "reposListTags": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a33b4295",
+          "outputHash": "2e3c678f"
+        }
+      }
+    },
+    "reposListTeams": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "342fe913",
+          "outputHash": "a722ee52"
+        }
+      }
+    },
+    "reposListWebhookDeliveries": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "074e9233",
+          "outputHash": "68e64ff7"
+        }
+      }
+    },
+    "reposListWebhooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc805409",
+          "outputHash": "7bc2b0e3"
+        }
+      }
+    },
+    "reposMerge": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7da27074",
+          "outputHash": "632b0c55"
+        }
+      }
+    },
+    "reposMergeUpstream": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "825dc9ea",
+          "outputHash": "144aac36"
+        }
+      }
+    },
+    "reposPingWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "aed1ff2e",
+          "outputHash": "137eb76c"
+        }
+      }
+    },
+    "reposRedeliverWebhookDelivery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8b5d3ef",
+          "outputHash": "356fca2b"
+        }
+      }
+    },
+    "reposRemoveAppAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5cf6dd3b",
+          "outputHash": "275e3fe6"
+        }
+      }
+    },
+    "reposRemoveCollaborator": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4ff9512",
+          "outputHash": "b48f48d6"
+        }
+      }
+    },
+    "reposRemoveStatusCheckContexts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec90ef74",
+          "outputHash": "d863545e"
+        }
+      }
+    },
+    "reposRemoveStatusCheckProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81b39c13",
+          "outputHash": "69ea9bc5"
+        }
+      }
+    },
+    "reposRemoveTeamAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "61c5d0e5",
+          "outputHash": "4ab90f57"
+        }
+      }
+    },
+    "reposRemoveUserAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ca7a4a7",
+          "outputHash": "877c6998"
+        }
+      }
+    },
+    "reposRenameBranch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "db0df809",
+          "outputHash": "664ddaa7"
+        }
+      }
+    },
+    "reposReplaceAllTopics": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b5df6b5",
+          "outputHash": "c2ef0638"
+        }
+      }
+    },
+    "reposRequestPagesBuild": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49dc1159",
+          "outputHash": "2935fd81"
+        }
+      }
+    },
+    "reposSetAdminBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb6694ad",
+          "outputHash": "4f7583e9"
+        }
+      }
+    },
+    "reposSetAppAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49e28b73",
+          "outputHash": "615f701c"
+        }
+      }
+    },
+    "reposSetStatusCheckContexts": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ed7b4f45",
+          "outputHash": "33d2145e"
+        }
+      }
+    },
+    "reposSetTeamAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8494d8a8",
+          "outputHash": "9a3f7450"
+        }
+      }
+    },
+    "reposSetUserAccessRestrictions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3701560f",
+          "outputHash": "17aba177"
+        }
+      }
+    },
+    "reposTestPushWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6940058f",
+          "outputHash": "57a8bccb"
+        }
+      }
+    },
+    "reposTransfer": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a7bafb08",
+          "outputHash": "55d13fec"
+        }
+      }
+    },
+    "reposUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "799953f8",
+          "outputHash": "8495ca54"
+        }
+      }
+    },
+    "reposUpdateBranchProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6e67a387",
+          "outputHash": "1bbf7c18"
+        }
+      }
+    },
+    "reposUpdateCommitComment": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "917acbb0",
+          "outputHash": "db454855"
+        }
+      }
+    },
+    "reposUpdateDeploymentBranchPolicy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7725210f",
+          "outputHash": "ac2a21ff"
+        }
+      }
+    },
+    "reposUpdateInformationAboutPagesSite": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d3985ac",
+          "outputHash": "876334b2"
+        }
+      }
+    },
+    "reposUpdateInvitation": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21f22fd3",
+          "outputHash": "cda23ff5"
+        }
+      }
+    },
+    "reposUpdatePullRequestReviewProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b5a011ed",
+          "outputHash": "cec59fbd"
+        }
+      }
+    },
+    "reposUpdateRelease": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e467c962",
+          "outputHash": "18754d13"
+        }
+      }
+    },
+    "reposUpdateReleaseAsset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3c9f4e65",
+          "outputHash": "ec3c5f6f"
+        }
+      }
+    },
+    "reposUpdateStatusCheckProtection": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f63a70c0",
+          "outputHash": "a258cc2e"
+        }
+      }
+    },
+    "reposUpdateWebhook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9296f5c5",
+          "outputHash": "64ac5297"
+        }
+      }
+    },
+    "reposUpdateWebhookConfigForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2786977b",
+          "outputHash": "5d78756f"
+        }
+      }
+    },
+    "reposUploadReleaseAsset": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d228f56",
+          "outputHash": "7d2153a7"
+        }
+      }
+    },
+    "searchCode": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b853dea",
+          "outputHash": "acf8456a"
+        }
+      }
+    },
+    "searchCommits": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d33a6c9c",
+          "outputHash": "e27ebc5e"
+        }
+      }
+    },
+    "searchIssuesAndPullRequests": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1266c3f0",
+          "outputHash": "7e92beec"
+        }
+      }
+    },
+    "searchLabels": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6a66a29",
+          "outputHash": "fc2d8a80"
+        }
+      }
+    },
+    "searchRepos": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b46ed2a9",
+          "outputHash": "d09e42fb"
+        }
+      }
+    },
+    "searchTopics": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6794f922",
+          "outputHash": "60d94c19"
+        }
+      }
+    },
+    "searchUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c233e273",
+          "outputHash": "b3494b69"
+        }
+      }
+    },
+    "secretScanningGetAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e4e51fac",
+          "outputHash": "18bc6270"
+        }
+      }
+    },
+    "secretScanningListAlertsForEnterprise": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "73175c7f",
+          "outputHash": "1cd7256d"
+        }
+      }
+    },
+    "secretScanningListAlertsForOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9197fefc",
+          "outputHash": "2579f21f"
+        }
+      }
+    },
+    "secretScanningListAlertsForRepo": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e08c3986",
+          "outputHash": "5085b0af"
+        }
+      }
+    },
+    "secretScanningListLocationsForAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "232bfe5e",
+          "outputHash": "c463a363"
+        }
+      }
+    },
+    "secretScanningUpdateAlert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "676875a7",
+          "outputHash": "a5ceb44d"
+        }
+      }
+    },
+    "teamsAddOrUpdateMembershipForUserInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2ae4b61",
+          "outputHash": "71acf793"
+        }
+      }
+    },
+    "teamsAddOrUpdateProjectPermissionsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "847f93e1",
+          "outputHash": "4b228121"
+        }
+      }
+    },
+    "teamsAddOrUpdateRepoPermissionsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "effd8648",
+          "outputHash": "cd5e25a8"
+        }
+      }
+    },
+    "teamsCheckPermissionsForProjectInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e2b02c9",
+          "outputHash": "f23af2a2"
+        }
+      }
+    },
+    "teamsCheckPermissionsForRepoInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f1f8a60",
+          "outputHash": "6d2d43bb"
+        }
+      }
+    },
+    "teamsCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c9da267a",
+          "outputHash": "a72fe955"
+        }
+      }
+    },
+    "teamsCreateDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2baa6a48",
+          "outputHash": "38075c19"
+        }
+      }
+    },
+    "teamsCreateDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af02493b",
+          "outputHash": "96014eb4"
+        }
+      }
+    },
+    "teamsDeleteDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e4e2ab3",
+          "outputHash": "453708ef"
+        }
+      }
+    },
+    "teamsDeleteDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1eb3fbe6",
+          "outputHash": "acd8bac2"
+        }
+      }
+    },
+    "teamsDeleteInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d0b856bc",
+          "outputHash": "2c139554"
+        }
+      }
+    },
+    "teamsGetByName": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "480daeea",
+          "outputHash": "01e3fffc"
+        }
+      }
+    },
+    "teamsGetDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b3466a6c",
+          "outputHash": "5cd53e4a"
+        }
+      }
+    },
+    "teamsGetDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea6c114b",
+          "outputHash": "6a1a142e"
+        }
+      }
+    },
+    "teamsGetMembershipForUserInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27aa8d26",
+          "outputHash": "74028a56"
+        }
+      }
+    },
+    "teamsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ba73b1a6",
+          "outputHash": "0ecf095c"
+        }
+      }
+    },
+    "teamsListChildInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8eb53dc4",
+          "outputHash": "9b99a99d"
+        }
+      }
+    },
+    "teamsListDiscussionCommentsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1d250bde",
+          "outputHash": "070864ad"
+        }
+      }
+    },
+    "teamsListDiscussionsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f34b64e3",
+          "outputHash": "bb76007f"
+        }
+      }
+    },
+    "teamsListForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbb902cb",
+          "outputHash": "7dec1d7d"
+        }
+      }
+    },
+    "teamsListMembersInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e7d0ea9",
+          "outputHash": "8f440184"
+        }
+      }
+    },
+    "teamsListPendingInvitationsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "31e2a70f",
+          "outputHash": "6385c510"
+        }
+      }
+    },
+    "teamsListProjectsInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f586a55e",
+          "outputHash": "0e8647c7"
+        }
+      }
+    },
+    "teamsListReposInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b29cc77",
+          "outputHash": "000bf86c"
+        }
+      }
+    },
+    "teamsRemoveMembershipForUserInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4c65caf2",
+          "outputHash": "9796c098"
+        }
+      }
+    },
+    "teamsRemoveProjectInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d49d619b",
+          "outputHash": "63e544d5"
+        }
+      }
+    },
+    "teamsRemoveRepoInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c630b675",
+          "outputHash": "5e18215c"
+        }
+      }
+    },
+    "teamsUpdateDiscussionCommentInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0b8d2f4e",
+          "outputHash": "a1a7f160"
+        }
+      }
+    },
+    "teamsUpdateDiscussionInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43db8ae0",
+          "outputHash": "018e4085"
+        }
+      }
+    },
+    "teamsUpdateInOrg": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fd0062be",
+          "outputHash": "45d0d500"
+        }
+      }
+    },
+    "usersAddEmailForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6b2c934",
+          "outputHash": "538d3d60"
+        }
+      }
+    },
+    "usersBlock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cf68b3f5",
+          "outputHash": "31fa8e84"
+        }
+      }
+    },
+    "usersCheckBlocked": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1908f7f1",
+          "outputHash": "6c5f4bd0"
+        }
+      }
+    },
+    "usersCheckFollowingForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ebe9967a",
+          "outputHash": "1a36b844"
+        }
+      }
+    },
+    "usersCheckPersonIsFollowedByAuthenticated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "868ed1b6",
+          "outputHash": "8aadbbf7"
+        }
+      }
+    },
+    "usersCreateGpgKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "229528d4",
+          "outputHash": "dba6a654"
+        }
+      }
+    },
+    "usersCreatePublicSshKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "de0e8e26",
+          "outputHash": "2b985f77"
+        }
+      }
+    },
+    "usersCreateSshSigningKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21ca2f0e",
+          "outputHash": "20484a63"
+        }
+      }
+    },
+    "usersDeleteEmailForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bf4e9ecb",
+          "outputHash": "a3912cb1"
+        }
+      }
+    },
+    "usersDeleteGpgKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dacfc8cb",
+          "outputHash": "2c24bce4"
+        }
+      }
+    },
+    "usersDeletePublicSshKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca9a5f7f",
+          "outputHash": "2634b7e2"
+        }
+      }
+    },
+    "usersDeleteSshSigningKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8adb9399",
+          "outputHash": "c283c24f"
+        }
+      }
+    },
+    "usersFollow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e409eb6f",
+          "outputHash": "5e86846f"
+        }
+      }
+    },
+    "usersGetAuthenticated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6732eef0",
+          "outputHash": "245a8f14"
+        }
+      }
+    },
+    "usersGetByUsername": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "56692df7",
+          "outputHash": "3f9e3225"
+        }
+      }
+    },
+    "usersGetContextForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "985aadca",
+          "outputHash": "897bb213"
+        }
+      }
+    },
+    "usersGetGpgKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f5a6be70",
+          "outputHash": "a53362de"
+        }
+      }
+    },
+    "usersGetPublicSshKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cacdd8e1",
+          "outputHash": "09c9eb2e"
+        }
+      }
+    },
+    "usersGetSshSigningKeyForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2037ed8f",
+          "outputHash": "e0c113dd"
+        }
+      }
+    },
+    "usersList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c939ca8d",
+          "outputHash": "d89f73c6"
+        }
+      }
+    },
+    "usersListBlockedByAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "847ea8c0",
+          "outputHash": "2d7dec29"
+        }
+      }
+    },
+    "usersListEmailsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49f6369c",
+          "outputHash": "f328440d"
+        }
+      }
+    },
+    "usersListFollowedByAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb64a600",
+          "outputHash": "11d6df0f"
+        }
+      }
+    },
+    "usersListFollowersForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "deb12c53",
+          "outputHash": "165d607e"
+        }
+      }
+    },
+    "usersListFollowersForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca666387",
+          "outputHash": "b08777f1"
+        }
+      }
+    },
+    "usersListFollowingForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7131d996",
+          "outputHash": "936321f9"
+        }
+      }
+    },
+    "usersListGpgKeysForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cd0dd030",
+          "outputHash": "43af6311"
+        }
+      }
+    },
+    "usersListGpgKeysForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5c25ca36",
+          "outputHash": "04ac806d"
+        }
+      }
+    },
+    "usersListPublicEmailsForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d57f3b86",
+          "outputHash": "3706498a"
+        }
+      }
+    },
+    "usersListPublicKeysForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "27d1d7a6",
+          "outputHash": "72d144f7"
+        }
+      }
+    },
+    "usersListPublicSshKeysForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b160d47a",
+          "outputHash": "da35e4db"
+        }
+      }
+    },
+    "usersListSshSigningKeysForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "75b6c8de",
+          "outputHash": "202e9010"
+        }
+      }
+    },
+    "usersListSshSigningKeysForUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3982dc77",
+          "outputHash": "bfcddf2d"
+        }
+      }
+    },
+    "usersSetPrimaryEmailVisibilityForAuthenticatedUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3a192eb9",
+          "outputHash": "dac09c5e"
+        }
+      }
+    },
+    "usersUnblock": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "19f0b57c",
+          "outputHash": "6c2cf565"
+        }
+      }
+    },
+    "usersUnfollow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "550d064f",
+          "outputHash": "c63bcadd"
+        }
+      }
+    },
+    "usersUpdateAuthenticated": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "264209f0",
+          "outputHash": "12c03833"
+        }
+      }
+    }
+  }
+}

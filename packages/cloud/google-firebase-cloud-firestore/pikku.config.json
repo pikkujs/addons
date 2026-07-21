@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "e5c63d4b79073ccc"
+    }
+  },
+  "node": {
+    "displayName": "Google Cloud Firestore",
+    "description": "Interact with Google Firebase Cloud Firestore",
+    "categories": [
+      "cloud"
+    ],
+    "icon": "./google-firebase-cloud-firestore.svg"
+  }
+}

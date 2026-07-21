@@ -1,0 +1,104 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6cc551b",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3fd88a1f",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactJourneyAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12e2deb7",
+          "outputHash": "1fcc0259"
+        }
+      }
+    },
+    "contactListAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3d4f949",
+          "outputHash": "a7ce836d"
+        }
+      }
+    },
+    "contactListExist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "892dde06",
+          "outputHash": "a3b51ab7"
+        }
+      }
+    },
+    "contactListGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0c7b16d1",
+          "outputHash": "ca25b736"
+        }
+      }
+    },
+    "contactListRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48695959",
+          "outputHash": "d5bc1dff"
+        }
+      }
+    },
+    "contactUpsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b068fda7",
+          "outputHash": "e86395ec"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "94b73670",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cf882b67",
+          "outputHash": "3556e648"
+        }
+      }
+    }
+  }
+}

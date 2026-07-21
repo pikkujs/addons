@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "analyzerExecute": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0ef41814",
+          "outputHash": "c1019800"
+        }
+      }
+    },
+    "jobGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1a731e33",
+          "outputHash": "6ebe5b36"
+        }
+      }
+    },
+    "jobReport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d50be9b0",
+          "outputHash": "9e04b627"
+        }
+      }
+    },
+    "responderExecute": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5726a296",
+          "outputHash": "35e9ad1b"
+        }
+      }
+    }
+  }
+}

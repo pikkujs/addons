@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "705fccb647000ec0"
+    }
+  },
+  "node": {
+    "displayName": "AWS Comprehend",
+    "description": "Amazon Comprehend text analysis for Pikku",
+    "categories": [
+      "ai"
+    ],
+    "icon": "./aws-comprehend.svg"
+  }
+}

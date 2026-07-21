@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "executeQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "284ee7ce",
+          "outputHash": "77436b3e"
+        }
+      }
+    },
+    "insert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6185c472",
+          "outputHash": "c02cfb25"
+        }
+      }
+    },
+    "update": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "972d49ea",
+          "outputHash": "52e0b444"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "campaignAddContact": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "41d26f52",
+          "outputHash": "3f70108b"
+        }
+      }
+    },
+    "campaignCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b93a1320",
+          "outputHash": "c6d291e7"
+        }
+      }
+    },
+    "campaignDuplicate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ced7a20",
+          "outputHash": "791e932f"
+        }
+      }
+    },
+    "campaignGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3f59c2c6",
+          "outputHash": "f9612003"
+        }
+      }
+    },
+    "campaignGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1861ab1a",
+          "outputHash": "4b58fa89"
+        }
+      }
+    },
+    "campaignPause": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "179ba489",
+          "outputHash": "89877ee0"
+        }
+      }
+    },
+    "campaignStart": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "647cf02b",
+          "outputHash": "5c8ac58d"
+        }
+      }
+    },
+    "contactListAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9ac44c77",
+          "outputHash": "a0d0d474"
+        }
+      }
+    },
+    "contactListGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "20567528",
+          "outputHash": "8abab0c4"
+        }
+      }
+    }
+  }
+}

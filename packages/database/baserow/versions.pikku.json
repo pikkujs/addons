@@ -1,0 +1,77 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "rowBatchCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "971d6140",
+          "outputHash": "d97b29c5"
+        }
+      }
+    },
+    "rowBatchDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "acea0b83",
+          "outputHash": "79338ac6"
+        }
+      }
+    },
+    "rowBatchUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ac84c049",
+          "outputHash": "fd4380a7"
+        }
+      }
+    },
+    "rowCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6ab2cb1",
+          "outputHash": "7fbc0d13"
+        }
+      }
+    },
+    "rowDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f88f8993",
+          "outputHash": "df9ac2b4"
+        }
+      }
+    },
+    "rowGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38db0d79",
+          "outputHash": "c0d3d903"
+        }
+      }
+    },
+    "rowGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24ca05c3",
+          "outputHash": "bce6fb9d"
+        }
+      }
+    },
+    "rowUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dd4e0ee",
+          "outputHash": "ff982a80"
+        }
+      }
+    }
+  }
+}

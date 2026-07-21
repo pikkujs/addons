@@ -1,0 +1,5 @@
+export { create } from './functions/create.function.js'
+export { get } from './functions/get.function.js'
+export { update } from './functions/update.function.js'
+export { deleteRecord } from './functions/deleteRecord.function.js'
+export { push } from './functions/push.function.js'

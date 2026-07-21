@@ -1,0 +1,5 @@
+export { contactCreate } from './functions/contactCreate.function.js'
+export { contactGet } from './functions/contactGet.function.js'
+export { contactGetAll } from './functions/contactGetAll.function.js'
+export { contactUpdate } from './functions/contactUpdate.function.js'
+export { contactDelete } from './functions/contactDelete.function.js'

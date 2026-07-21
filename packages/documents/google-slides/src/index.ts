@@ -1,0 +1,6 @@
+export { presentationCreate } from './functions/presentationCreate.function.js'
+export { presentationGet } from './functions/presentationGet.function.js'
+export { presentationGetSlides } from './functions/presentationGetSlides.function.js'
+export { presentationReplaceText } from './functions/presentationReplaceText.function.js'
+export { pageGet } from './functions/pageGet.function.js'
+export { pageGetThumbnail } from './functions/pageGetThumbnail.function.js'

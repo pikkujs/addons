@@ -1,0 +1,21 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "displayName": "Wikipedia",
+    "description": "Search Wikipedia and fetch article summaries and plain-text content via the public Wikimedia APIs",
+    "categories": [
+      "Knowledge",
+      "Search"
+    ],
+    "icon": "./wikipedia.svg"
+  },
+  "node": {
+    "icon": "./wikipedia.svg"
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "customFieldCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "44e9e38e",
+          "outputHash": "4ada8712"
+        }
+      }
+    },
+    "customFieldDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f99c1ec0",
+          "outputHash": "d87de62a"
+        }
+      }
+    },
+    "customFieldGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c06c73c8",
+          "outputHash": "7a5f52d0"
+        }
+      }
+    },
+    "customFieldGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c661439",
+          "outputHash": "c696f451"
+        }
+      }
+    },
+    "customFieldUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bbf16114",
+          "outputHash": "d39b60bf"
+        }
+      }
+    },
+    "formAddSubscriber": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "40864433",
+          "outputHash": "aa8f2bb7"
+        }
+      }
+    },
+    "formGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9d8a208",
+          "outputHash": "c8ab6cca"
+        }
+      }
+    },
+    "formGetSubscriptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "af4efb77",
+          "outputHash": "5681ca33"
+        }
+      }
+    },
+    "sequenceAddSubscriber": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8842ec5b",
+          "outputHash": "6b1efa0e"
+        }
+      }
+    },
+    "sequenceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "76894aa1",
+          "outputHash": "34f01e20"
+        }
+      }
+    },
+    "sequenceGetSubscriptions": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d5e52a4",
+          "outputHash": "86f96254"
+        }
+      }
+    },
+    "tagCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b458690d",
+          "outputHash": "1ce79691"
+        }
+      }
+    },
+    "tagGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c3d1e5a2",
+          "outputHash": "ce671717"
+        }
+      }
+    },
+    "tagSubscriberAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b6386b6e",
+          "outputHash": "80531a24"
+        }
+      }
+    },
+    "tagSubscriberDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e56ce0b",
+          "outputHash": "5e21925c"
+        }
+      }
+    },
+    "tagSubscriberGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6db658c8",
+          "outputHash": "4d1f3d4b"
+        }
+      }
+    }
+  }
+}

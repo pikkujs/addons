@@ -1,0 +1,91 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const IncrementalUserExportCursorInput = z.object({
+  start_time: z.number().int().optional().describe("The time to start the incremental export from. Must be at least one minute in the past. Data isn't provided for the most recent minute. Required on the initial export request; not required on subsequent cursor-based pagination requests. Example: 1332034771"),
+  cursor: z.string().optional().describe("The cursor pointer to work with for all subsequent exports after the initial request"),
+  per_page: z.number().int().optional().describe("The number of records to return per page"),
+})
+
+export const IncrementalUserExportCursorOutput = z.object({
+  after_cursor: z.string().nullable().optional(),
+  after_url: z.string().nullable().optional(),
+  before_cursor: z.string().nullable().optional(),
+  before_url: z.string().nullable().optional(),
+  end_of_stream: z.boolean().optional(),
+  users: z.array(z.union([z.object({
+    active: z.boolean().optional().describe("false if the user has been deleted"),
+    agent_brand_ids: z.array(z.number().int()).optional().describe("PUT or POST requests only. Assigns agent or agents to a brand. For more information, see [Agent brand ids](#agent-brand-ids)"),
+    alias: z.string().optional().describe("An alias displayed to end users"),
+    chat_only: z.boolean().optional().describe("Whether or not the user is a chat-only agent"),
+    created_at: z.string().datetime().optional().describe("The time the user was created"),
+    custom_role_id: z.number().int().nullable().optional().describe("A custom role if the user is an agent on the Enterprise plan or above"),
+    default_group_id: z.number().int().optional().describe("The id of the user's default group"),
+    details: z.string().optional().describe("Any details you want to store about the user, such as an address"),
+    email: z.string().optional().describe("The user's primary email address. *Writeable on create only. On update, a secondary email is added. See [Email Address](#email-address)"),
+    external_id: z.string().nullable().optional().describe("A unique identifier from another system. The API treats the id as case insensitive. Example: \"ian1\" and \"IAN1\" are the same value."),
+    iana_time_zone: z.string().optional().describe("The time zone for the user"),
+    id: z.number().int().optional().describe("Automatically assigned when the user is created"),
+    last_login_at: z.string().datetime().optional().describe("Last time the user signed in to Zendesk Support or made an API request\nusing an API token\n"),
+    locale: z.string().optional().describe("The user's locale. A BCP-47 compliant tag for the locale. If both \"locale\" and \"locale_id\" are present on create or update, \"locale_id\" is ignored and only \"locale\" is used."),
+    locale_id: z.number().int().optional().describe("The user's language identifier"),
+    moderator: z.boolean().optional().describe("Designates whether the user has forum moderation capabilities"),
+    name: z.string().describe("The user's name"),
+    notes: z.string().optional().describe("Any notes you want to store about the user"),
+    only_private_comments: z.boolean().optional().describe("true if the user can only create private comments"),
+    organization_id: z.number().int().nullable().optional().describe("The id of the user's organization. If the user has more than one [organization memberships](/api-reference/ticketing/organizations/organization_memberships/), the id of the user's default organization. If updating, see [Organization ID](#organization-id)"),
+    phone: z.string().nullable().optional().describe("The user's primary phone number. See [Phone Number](#phone-number) below"),
+    photo: z.record(z.string(), z.unknown()).nullable().optional().describe("The user's profile picture represented as an [Attachment](/api-reference/ticketing/tickets/ticket-attachments/) object"),
+    remote_photo_url: z.string().optional().describe("A URL pointing to the user's profile picture."),
+    report_csv: z.boolean().optional().describe("This parameter is inert and has no effect. It may be deprecated in the\nfuture.\n\nPreviously, this parameter determined whether a user could access a CSV\nreport in a legacy Guide dashboard. This dashboard has been removed. See\n[Announcing Guide legacy reporting upgrade to\nExplore](https://support.zendesk.com/hc/en-us/articles/4762263171610-Announcing-Guide-legacy-reporting-upgrade-to-Explore-)\n"),
+    restricted_agent: z.boolean().optional().describe("If the agent has any restrictions; false for admins and unrestricted agents, true for other agents"),
+    role: z.string().optional().describe("The user's role. Possible values are \"end-user\", \"agent\", or \"admin\""),
+    role_type: z.number().int().nullable().optional().describe("The user's role id. 0 for a custom agent, 1 for a light agent, 2 for a chat agent, 3 for a chat agent added to the Support account as a contributor ([Chat Phase 4](https://support.zendesk.com/hc/en-us/articles/4408836197658#topic_p1h_sx4_pgb)), 4 for an admin, and 5 for a billing admin"),
+    separation: z.object({
+      brand_id: z.number().int().optional().describe("The id of the brand the user is scoped to. Only present when \"scope\" is \"brand\"."),
+      scope: z.enum(["account", "brand"]).describe("The separation scope. \"account\" means account-level access; \"brand\" means access limited to a specific brand."),
+    }).optional().describe("The brand separation scope for the user. Only present when the account has brand separation enabled.\nFor end users, indicates whether they are scoped to the full account or a specific brand.\nStaff users (agents and admins) always have `scope: \"account\"`.\n"),
+    shared: z.boolean().optional().describe("If the user is shared from a different Zendesk Support instance. Shared users can be added to organizations but cannot be modified through update requests. Any attempt to update a shared user results in a 403 Forbidden error. Ticket sharing accounts only"),
+    shared_agent: z.boolean().optional().describe("If the user is a shared agent from a different Zendesk Support instance. Ticket sharing accounts only"),
+    shared_phone_number: z.boolean().nullable().optional().describe("Whether the `phone` number is shared or not. See [Phone Number](#phone-number) below"),
+    signature: z.string().optional().describe("The user's signature. Only agents and admins can have signatures"),
+    suspended: z.boolean().optional().describe("If the agent is suspended. Tickets from suspended users are also suspended, and these users cannot sign in to the end user portal"),
+    suspension_details: z.object({
+      channels: z.array(z.enum(["all", "messaging"])).min(1).describe("Channels on which the user is suspended. `[\"all\"]` means suspended across every channel. If \"all\" is present, it must be the only element"),
+    }).nullable().optional().describe("Channel-level suspension state for the user. The value is null if the user has no active channel-level suspension"),
+    tags: z.array(z.string()).optional().describe("The user's tags. Only present if your account has user tagging enabled"),
+    ticket_restriction: z.string().nullable().optional().describe("Specifies which tickets the user has access to. Possible values are: \"organization\", \"groups\", \"assigned\", \"requested\", null. \"groups\" and \"assigned\" are valid only for agents. If you pass an invalid value to an end user (for example, \"groups\"), they will be assigned to \"requested\", regardless of their previous access"),
+    time_zone: z.string().optional().describe("The user's time zone. See [Time Zone](#time-zone)"),
+    two_factor_auth_enabled: z.boolean().nullable().optional().describe("If two factor authentication is enabled"),
+    updated_at: z.string().datetime().optional().describe("The time the user was last updated"),
+    url: z.string().optional().describe("The user's API url"),
+    user_fields: z.record(z.string(), z.unknown()).optional().describe("Values of custom fields in the user's profile. See [User Fields](#user-fields)"),
+    verified: z.boolean().optional().describe("Any of the user's identities is verified. See [User Identities](/api-reference/ticketing/users/user_identities)"),
+  }), z.object({
+    created_at: z.string().datetime().optional().describe("The time the user was created"),
+    email: z.string().optional().describe("The primary email address of this user. If the primary email address is not [verified](https://support.zendesk.com/hc/en-us/articles/4408886752410), the secondary email address is used"),
+    iana_time_zone: z.string().optional().describe("The time zone for the user"),
+    id: z.number().int().optional().describe("Automatically assigned when creating users"),
+    locale: z.string().optional().describe("The locale for this user"),
+    locale_id: z.number().int().optional().describe("The language identifier for this user"),
+    name: z.string().describe("The name of the user"),
+    organization_id: z.number().int().optional().describe("The id of the user's organization. If the user has more than one [organization memberships](/api-reference/ticketing/organizations/organization_memberships/), the id of the user's default organization. If updating, see [Organization ID](/api-reference/ticketing/users/users/#organization-id)"),
+    phone: z.string().optional().describe("The primary phone number of this user. See [Phone Number](/api-reference/ticketing/users/users/#phone-number) in the Users API"),
+    photo: z.record(z.string(), z.unknown()).optional().describe("The user's profile picture represented as an [Attachment](/api-reference/ticketing/tickets/ticket-attachments/) object"),
+    role: z.string().optional().describe("The role of the user. Possible values: `\"end-user\"`, `\"agent\"`, `\"admin\"`"),
+    shared_phone_number: z.boolean().optional().describe("Whether the `phone` number is shared or not. See [Phone Number](/api-reference/ticketing/users/users/#phone-number) in the Users API"),
+    time_zone: z.string().optional().describe("The time-zone of this user"),
+    updated_at: z.string().datetime().optional().describe("The time of the last update of the user"),
+    url: z.string().optional().describe("The API url of this user"),
+    verified: z.boolean().optional().describe("Any of the user's identities is verified. See [User Identities](/api-reference/ticketing/users/user_identities)"),
+  })])).optional(),
+})
+
+export const incrementalUserExportCursor = pikkuSessionlessFunc({
+  description: "#### Allowed For\n\n * Admins\n\n#### Sideloading\n\nSee [Users sideloads](/documentation/ticketing/using-the-zendesk-api/side_loading/#supported-endpoints).",
+  input: IncrementalUserExportCursorInput,
+  output: IncrementalUserExportCursorOutput,
+  func: async ({ zendesk }, data) => {
+    return zendesk.call("GET", "/api/v2/incremental/users/cursor", data) as any
+  },
+})

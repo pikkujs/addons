@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "graphDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c6e284d5",
+          "outputHash": "15c33236"
+        }
+      }
+    },
+    "graphGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dbfa7bd5",
+          "outputHash": "6de60370"
+        }
+      }
+    },
+    "graphPost": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1810b569",
+          "outputHash": "0c7f5c15"
+        }
+      }
+    }
+  }
+}

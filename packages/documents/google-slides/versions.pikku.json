@@ -1,0 +1,59 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "pageGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "95d4f0f2",
+          "outputHash": "870c4f96"
+        }
+      }
+    },
+    "pageGetThumbnail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11b903ca",
+          "outputHash": "f9a501f7"
+        }
+      }
+    },
+    "presentationCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4f29dbd5",
+          "outputHash": "c4ff0232"
+        }
+      }
+    },
+    "presentationGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5cdd320a",
+          "outputHash": "42579a56"
+        }
+      }
+    },
+    "presentationGetSlides": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11426015",
+          "outputHash": "e6482c90"
+        }
+      }
+    },
+    "presentationReplaceText": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "89dd76b4",
+          "outputHash": "e2f7350c"
+        }
+      }
+    }
+  }
+}

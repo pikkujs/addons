@@ -1,0 +1,185 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "epicCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "07e124a4",
+          "outputHash": "9c54fd87"
+        }
+      }
+    },
+    "epicDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4fa6281",
+          "outputHash": "974ebb7a"
+        }
+      }
+    },
+    "epicGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d64a462",
+          "outputHash": "2f8ce236"
+        }
+      }
+    },
+    "epicGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f29d2fb1",
+          "outputHash": "b2106a30"
+        }
+      }
+    },
+    "epicUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1379f4d8",
+          "outputHash": "d53234cc"
+        }
+      }
+    },
+    "issueCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e4ff6aa",
+          "outputHash": "4b4b7f40"
+        }
+      }
+    },
+    "issueDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5d89f491",
+          "outputHash": "d165ee8c"
+        }
+      }
+    },
+    "issueGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bef56526",
+          "outputHash": "2ede1991"
+        }
+      }
+    },
+    "issueGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a43a0465",
+          "outputHash": "68ec726f"
+        }
+      }
+    },
+    "issueUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f2509202",
+          "outputHash": "4a53c6b0"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "50289588",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "12ad3142",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6678300d",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2e39e426",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00e3b055",
+          "outputHash": "dc1d8332"
+        }
+      }
+    },
+    "userStoryCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "43fe4045",
+          "outputHash": "88d7bcc8"
+        }
+      }
+    },
+    "userStoryDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "69b1f5d1",
+          "outputHash": "bee5b650"
+        }
+      }
+    },
+    "userStoryGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a9e009f",
+          "outputHash": "87068d03"
+        }
+      }
+    },
+    "userStoryGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2782868a",
+          "outputHash": "60644ae3"
+        }
+      }
+    },
+    "userStoryUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f4703ab6",
+          "outputHash": "249cedba"
+        }
+      }
+    }
+  }
+}

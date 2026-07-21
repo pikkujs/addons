@@ -1,0 +1,158 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "fileCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eca02da9",
+          "outputHash": "1e6bffac"
+        }
+      }
+    },
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "be006d31",
+          "outputHash": "2e31501c"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42cb6fff",
+          "outputHash": "4efee225"
+        }
+      }
+    },
+    "fileMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "42519d2e",
+          "outputHash": "f7b71720"
+        }
+      }
+    },
+    "fileShare": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "649c9e57",
+          "outputHash": "5325c5d5"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bfd76269",
+          "outputHash": "04d6e56e"
+        }
+      }
+    },
+    "folderCopy": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2489f09",
+          "outputHash": "42b9e273"
+        }
+      }
+    },
+    "folderCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "51be3af2",
+          "outputHash": "0615ed88"
+        }
+      }
+    },
+    "folderDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "329d4cf6",
+          "outputHash": "a0d1e4d2"
+        }
+      }
+    },
+    "folderList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "48f4d6dc",
+          "outputHash": "86bd039f"
+        }
+      }
+    },
+    "folderMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cee64d83",
+          "outputHash": "4e640af7"
+        }
+      }
+    },
+    "folderShare": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b44a7d23",
+          "outputHash": "874af150"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b6bf3e2",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6345026",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6f556147",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54b0fd8b",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "userUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1739768e",
+          "outputHash": "1bf397be"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "linkedResourceCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "491dab51",
+          "outputHash": "4f3bf254"
+        }
+      }
+    },
+    "linkedResourceDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "03924988",
+          "outputHash": "9094d873"
+        }
+      }
+    },
+    "linkedResourceGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13be12f0",
+          "outputHash": "1679bea0"
+        }
+      }
+    },
+    "linkedResourceGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b9a03ac8",
+          "outputHash": "f1958767"
+        }
+      }
+    },
+    "linkedResourceUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7c8d0d96",
+          "outputHash": "0eb82fca"
+        }
+      }
+    },
+    "listCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab9599e4",
+          "outputHash": "12634f3f"
+        }
+      }
+    },
+    "listDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7709e152",
+          "outputHash": "58da4749"
+        }
+      }
+    },
+    "listGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f8c0da42",
+          "outputHash": "a8b5e619"
+        }
+      }
+    },
+    "listGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3bdb91ac",
+          "outputHash": "3556e648"
+        }
+      }
+    },
+    "listUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "115e65f8",
+          "outputHash": "873c6907"
+        }
+      }
+    },
+    "taskCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "49acbddd",
+          "outputHash": "651aed32"
+        }
+      }
+    },
+    "taskDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fe43b419",
+          "outputHash": "17d7a597"
+        }
+      }
+    },
+    "taskGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc0c1a39",
+          "outputHash": "022e1188"
+        }
+      }
+    },
+    "taskGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ba0bc86",
+          "outputHash": "13568b34"
+        }
+      }
+    },
+    "taskUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ec1019f9",
+          "outputHash": "dc1d8332"
+        }
+      }
+    }
+  }
+}

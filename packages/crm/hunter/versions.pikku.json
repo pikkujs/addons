@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "domainSearch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cd10699",
+          "outputHash": "db32f7c6"
+        }
+      }
+    },
+    "emailFinder": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "948f2678",
+          "outputHash": "52efd5f1"
+        }
+      }
+    },
+    "emailVerifier": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e89e4709",
+          "outputHash": "a63ea9c6"
+        }
+      }
+    }
+  }
+}

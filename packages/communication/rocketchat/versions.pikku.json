@@ -1,0 +1,41 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "chatPostMessage": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "28e343f6",
+          "outputHash": "f91d34c1"
+        }
+      }
+    },
+    "dmMessages": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d4f1361e",
+          "outputHash": "4fcab076"
+        }
+      }
+    },
+    "subscriptionsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00095a09",
+          "outputHash": "9e6706dd"
+        }
+      }
+    },
+    "subscriptionsRead": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "54189902",
+          "outputHash": "5f6f3877"
+        }
+      }
+    }
+  }
+}

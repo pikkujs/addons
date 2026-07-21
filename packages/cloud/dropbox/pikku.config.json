@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "f3b0a96acedc42ef"
+    }
+  },
+  "node": {
+    "displayName": "Dropbox",
+    "description": "Dropbox integration for Pikku",
+    "categories": [
+      "Cloud"
+    ],
+    "icon": "./dropbox.svg"
+  }
+}

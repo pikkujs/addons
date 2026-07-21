@@ -1,0 +1,77 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "activityCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "815f52cb",
+          "outputHash": "88f82f6b"
+        }
+      }
+    },
+    "activityGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e99edf2a",
+          "outputHash": "f4656376"
+        }
+      }
+    },
+    "activityGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9ab12ea",
+          "outputHash": "68903a99"
+        }
+      }
+    },
+    "activityGetComments": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2358b11",
+          "outputHash": "c507e833"
+        }
+      }
+    },
+    "activityGetKudos": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0f9b491",
+          "outputHash": "99a83219"
+        }
+      }
+    },
+    "activityGetLaps": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff6de670",
+          "outputHash": "3d41fa7c"
+        }
+      }
+    },
+    "activityGetZones": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e7eb5f8d",
+          "outputHash": "dcf54366"
+        }
+      }
+    },
+    "activityUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a784a0e4",
+          "outputHash": "af53edd2"
+        }
+      }
+    }
+  }
+}

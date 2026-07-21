@@ -1,0 +1,31 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const PlaceAsBuildingMapLevelListUnitInput = z.object({
+  "place-id": z.string().describe("The unique identifier of place"),
+  "levelMap-id": z.string().describe("The unique identifier of levelMap"),
+  $top: z.number().int().min(0).optional().describe("Show only the first n items. Example: 50"),
+  $skip: z.number().int().min(0).optional().describe("Skip the first n items"),
+  $search: z.string().optional().describe("Search items by search phrases"),
+  $filter: z.string().optional().describe("Filter items by property values"),
+  $count: z.boolean().optional().describe("Include count of items"),
+  $orderby: z.array(z.string()).optional().describe("Order items by property values"),
+  $select: z.array(z.string()).optional().describe("Select properties to be returned"),
+  $expand: z.array(z.string()).optional().describe("Expand related entities"),
+})
+
+export const PlaceAsBuildingMapLevelListUnitOutput = z.object({
+  value: z.array(z.object({
+    placeId: z.string().nullable().optional().describe("Identifier of the place (such as a room) to which this unitMap belongs."),
+  })).optional(),
+  "@odata.nextLink": z.string().nullable().optional(),
+})
+
+export const placeAsBuildingMapLevelListUnit = pikkuSessionlessFunc({
+  description: "Get a list of the unitMap objects and their properties.",
+  input: PlaceAsBuildingMapLevelListUnitInput,
+  output: PlaceAsBuildingMapLevelListUnitOutput,
+  func: async ({ microsoftOutlook }, data) => {
+    return microsoftOutlook.call("GET", "/places/{place-id}/microsoft.graph.building/map/levels/{levelMap-id}/units", data) as any
+  },
+})

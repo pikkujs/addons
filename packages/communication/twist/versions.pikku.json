@@ -1,0 +1,203 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "channelArchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "37986cfa",
+          "outputHash": "aca6189a"
+        }
+      }
+    },
+    "channelCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cbd1b753",
+          "outputHash": "453f2041"
+        }
+      }
+    },
+    "channelDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ecd9d4a7",
+          "outputHash": "cee27f5e"
+        }
+      }
+    },
+    "channelGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2323da7",
+          "outputHash": "609c2ca6"
+        }
+      }
+    },
+    "channelGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b910c2a4",
+          "outputHash": "15ce3acc"
+        }
+      }
+    },
+    "channelUnarchive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1177505d",
+          "outputHash": "8a0fed44"
+        }
+      }
+    },
+    "channelUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a65ef6ac",
+          "outputHash": "cfc496d4"
+        }
+      }
+    },
+    "commentCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bdb0cff9",
+          "outputHash": "a7e58622"
+        }
+      }
+    },
+    "commentDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "39290ba3",
+          "outputHash": "d9640ff8"
+        }
+      }
+    },
+    "commentGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "34d81b3c",
+          "outputHash": "98086722"
+        }
+      }
+    },
+    "commentGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7e9cdd6f",
+          "outputHash": "e0b56e50"
+        }
+      }
+    },
+    "commentUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5cef0542",
+          "outputHash": "01471b7c"
+        }
+      }
+    },
+    "messageCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "951d451e",
+          "outputHash": "caeedffb"
+        }
+      }
+    },
+    "messageDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7ab38ad7",
+          "outputHash": "634b8027"
+        }
+      }
+    },
+    "messageGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6447d86b",
+          "outputHash": "17980d7a"
+        }
+      }
+    },
+    "messageGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c192a8d3",
+          "outputHash": "a6bf0427"
+        }
+      }
+    },
+    "messageUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f55f0194",
+          "outputHash": "7bd79985"
+        }
+      }
+    },
+    "threadCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "33017626",
+          "outputHash": "39362d84"
+        }
+      }
+    },
+    "threadDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5cb0158d",
+          "outputHash": "d27478a4"
+        }
+      }
+    },
+    "threadGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8dfd252d",
+          "outputHash": "c9017c7d"
+        }
+      }
+    },
+    "threadGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "46968d11",
+          "outputHash": "cb1b5bb0"
+        }
+      }
+    },
+    "threadUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2184e1e",
+          "outputHash": "0ab038d4"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "translate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fce0f09",
+          "outputHash": "3d8f17b5"
+        }
+      }
+    }
+  }
+}

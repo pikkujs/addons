@@ -1,0 +1,131 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "accountGetBalances": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dff292c6",
+          "outputHash": "03959f66"
+        }
+      }
+    },
+    "accountGetCurrencies": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e13d1dcb",
+          "outputHash": "ff49c68d"
+        }
+      }
+    },
+    "accountGetStatement": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7dae61fc",
+          "outputHash": "f0a891b5"
+        }
+      }
+    },
+    "exchangeRateGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30ab24c3",
+          "outputHash": "65fd77c4"
+        }
+      }
+    },
+    "profileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "252a5615",
+          "outputHash": "53028dea"
+        }
+      }
+    },
+    "profileGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "32eb7d26",
+          "outputHash": "6be49723"
+        }
+      }
+    },
+    "quoteCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb598bb1",
+          "outputHash": "587b1d8b"
+        }
+      }
+    },
+    "quoteGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d2770bb",
+          "outputHash": "ae2f7b52"
+        }
+      }
+    },
+    "recipientGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2c431202",
+          "outputHash": "78dfcadf"
+        }
+      }
+    },
+    "transferCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ff4b8102",
+          "outputHash": "a3239abe"
+        }
+      }
+    },
+    "transferDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b055eaf4",
+          "outputHash": "94ab7b74"
+        }
+      }
+    },
+    "transferExecute": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1c5466fd",
+          "outputHash": "7e10ef41"
+        }
+      }
+    },
+    "transferGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11ab1eea",
+          "outputHash": "78317824"
+        }
+      }
+    },
+    "transferGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4e591de6",
+          "outputHash": "adf5fd22"
+        }
+      }
+    }
+  }
+}

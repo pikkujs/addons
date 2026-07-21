@@ -1,0 +1,20 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+import { BadRequestError } from '@pikku/core/errors'
+
+export const PluginStatusInput = z.object({
+  pluginId: z.string().describe("Plugin Title"),
+  "xc-auth": z.string().describe("Auth Token is a JWT Token generated based on the logged-in user. By default, the token is only valid for 10 hours. However, you can change the value by defining it using environment variable NC_JWT_EXPIRES_IN."),
+})
+
+export const PluginStatusOutput = z.boolean()
+
+export const pluginStatus = pikkuSessionlessFunc({
+  description: "Check plugin is active or not",
+  input: PluginStatusInput,
+  output: PluginStatusOutput,
+  errors: [BadRequestError],
+  func: async ({ nocodb }, data) => {
+    return nocodb.call("GET", "/api/v1/db/meta/plugins/{pluginId}/status", data) as any
+  },
+})

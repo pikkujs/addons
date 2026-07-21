@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "0047476f4bcc777d"
+    }
+  },
+  "node": {
+    "displayName": "X (Twitter)",
+    "description": "Post, like, search tweets, send DMs, manage lists and users via the X API",
+    "categories": [
+      "communication"
+    ],
+    "icon": "./twitter.svg"
+  }
+}

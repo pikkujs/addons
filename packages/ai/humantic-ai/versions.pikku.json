@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "profileCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9d134ee6",
+          "outputHash": "38908c8a"
+        }
+      }
+    },
+    "profileGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ab682c02",
+          "outputHash": "53028dea"
+        }
+      }
+    },
+    "profileUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "00585248",
+          "outputHash": "a9cbdeef"
+        }
+      }
+    }
+  }
+}

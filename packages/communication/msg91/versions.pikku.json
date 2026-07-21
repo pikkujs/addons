@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "smsSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e1d27d9",
+          "outputHash": "a9c9a8aa"
+        }
+      }
+    }
+  }
+}

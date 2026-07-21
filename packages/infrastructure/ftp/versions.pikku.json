@@ -1,0 +1,50 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "fileDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1d49518",
+          "outputHash": "6a7b0fc5"
+        }
+      }
+    },
+    "fileDownload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b9af51e",
+          "outputHash": "38ba38f6"
+        }
+      }
+    },
+    "fileList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7f5ead77",
+          "outputHash": "a24bf737"
+        }
+      }
+    },
+    "fileRename": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d9e8710e",
+          "outputHash": "7fd8cf22"
+        }
+      }
+    },
+    "fileUpload": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6779ecb8",
+          "outputHash": "b086cc4c"
+        }
+      }
+    }
+  }
+}

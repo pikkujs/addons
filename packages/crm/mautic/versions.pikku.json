@@ -1,0 +1,185 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "campaignContactAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "244a51b7",
+          "outputHash": "4e573f90"
+        }
+      }
+    },
+    "campaignContactRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4860ddea",
+          "outputHash": "0b784084"
+        }
+      }
+    },
+    "companyContactAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "11225f3a",
+          "outputHash": "da6f6a4f"
+        }
+      }
+    },
+    "companyContactRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fac4c2e9",
+          "outputHash": "c7cd2946"
+        }
+      }
+    },
+    "companyCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a702044",
+          "outputHash": "6c646a99"
+        }
+      }
+    },
+    "companyDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fab01f38",
+          "outputHash": "7c328c1b"
+        }
+      }
+    },
+    "companyGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5e1ad33",
+          "outputHash": "5aaa934a"
+        }
+      }
+    },
+    "companyGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0297500a",
+          "outputHash": "d838d993"
+        }
+      }
+    },
+    "companyUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b0192421",
+          "outputHash": "f75bf7c0"
+        }
+      }
+    },
+    "contactCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2b6af98a",
+          "outputHash": "8a72fa54"
+        }
+      }
+    },
+    "contactDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f84ccc9f",
+          "outputHash": "66384b44"
+        }
+      }
+    },
+    "contactEditContactPoint": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a2dd70e9",
+          "outputHash": "f3151690"
+        }
+      }
+    },
+    "contactEditDoNotContactList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7529c905",
+          "outputHash": "6226363b"
+        }
+      }
+    },
+    "contactGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6cc551b",
+          "outputHash": "efd411dd"
+        }
+      }
+    },
+    "contactGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4320178",
+          "outputHash": "dbc1253f"
+        }
+      }
+    },
+    "contactSegmentAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b09d3246",
+          "outputHash": "b56fe4d6"
+        }
+      }
+    },
+    "contactSegmentRemove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b60b598f",
+          "outputHash": "7017b46c"
+        }
+      }
+    },
+    "contactSendEmail": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5e241d42",
+          "outputHash": "c090db82"
+        }
+      }
+    },
+    "contactUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b947b1f2",
+          "outputHash": "bd7c8214"
+        }
+      }
+    },
+    "segmentEmailSend": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0494c605",
+          "outputHash": "9376effb"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "aclDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8bd77b5c",
+          "outputHash": "76cb58fb"
+        }
+      }
+    },
+    "aclGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "004c8956",
+          "outputHash": "6a3f5cf1"
+        }
+      }
+    },
+    "aclInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a79b79b0",
+          "outputHash": "544dc305"
+        }
+      }
+    },
+    "aclList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3bb2d6d2",
+          "outputHash": "feddab6a"
+        }
+      }
+    },
+    "aclPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "893dadb3",
+          "outputHash": "feb59815"
+        }
+      }
+    },
+    "aclUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08318691",
+          "outputHash": "4706da80"
+        }
+      }
+    },
+    "aclWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3e99d494",
+          "outputHash": "3d08f477"
+        }
+      }
+    },
+    "calendarListDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d5176ed9",
+          "outputHash": "50895d32"
+        }
+      }
+    },
+    "calendarListGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b0c1657",
+          "outputHash": "a0fd1b14"
+        }
+      }
+    },
+    "calendarListInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bc2c41e9",
+          "outputHash": "00b4cbee"
+        }
+      }
+    },
+    "calendarListList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c1dd6644",
+          "outputHash": "8b36f832"
+        }
+      }
+    },
+    "calendarListPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "614e7b87",
+          "outputHash": "f587d330"
+        }
+      }
+    },
+    "calendarListUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3d1ba903",
+          "outputHash": "b1cd3ea2"
+        }
+      }
+    },
+    "calendarListWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fef2780e",
+          "outputHash": "35f659ca"
+        }
+      }
+    },
+    "calendarsClear": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a045368e",
+          "outputHash": "536c8f3e"
+        }
+      }
+    },
+    "calendarsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfdbf7de",
+          "outputHash": "38368a2c"
+        }
+      }
+    },
+    "calendarsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "914aad66",
+          "outputHash": "f80a9d15"
+        }
+      }
+    },
+    "calendarsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c978369a",
+          "outputHash": "9cbb6faa"
+        }
+      }
+    },
+    "calendarsPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b8b38647",
+          "outputHash": "6d6c3f56"
+        }
+      }
+    },
+    "calendarsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e65355a8",
+          "outputHash": "f9800b03"
+        }
+      }
+    },
+    "channelsStop": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8141accd",
+          "outputHash": "6f9b7e6e"
+        }
+      }
+    },
+    "colorsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16850a9d",
+          "outputHash": "9e2d1702"
+        }
+      }
+    },
+    "eventsDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "fedf2215",
+          "outputHash": "7dc25693"
+        }
+      }
+    },
+    "eventsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "834286e3",
+          "outputHash": "8ddcd054"
+        }
+      }
+    },
+    "eventsImport": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b2dc6663",
+          "outputHash": "e1ce1c8a"
+        }
+      }
+    },
+    "eventsInsert": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "473ab604",
+          "outputHash": "598c240a"
+        }
+      }
+    },
+    "eventsInstances": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cc10a84b",
+          "outputHash": "1f824801"
+        }
+      }
+    },
+    "eventsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6c8ced21",
+          "outputHash": "72666506"
+        }
+      }
+    },
+    "eventsMove": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "14c82373",
+          "outputHash": "8ffb69a3"
+        }
+      }
+    },
+    "eventsPatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f157dbf",
+          "outputHash": "c5312fd9"
+        }
+      }
+    },
+    "eventsQuickAdd": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f282fba9",
+          "outputHash": "6cd7884e"
+        }
+      }
+    },
+    "eventsUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca66dbc4",
+          "outputHash": "a64e62aa"
+        }
+      }
+    },
+    "eventsWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "13c8b71a",
+          "outputHash": "1d7ec42c"
+        }
+      }
+    },
+    "freebusyQuery": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d629a5b4",
+          "outputHash": "82dde18c"
+        }
+      }
+    },
+    "settingsGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e083809a",
+          "outputHash": "aecd6eac"
+        }
+      }
+    },
+    "settingsList": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ceda32d0",
+          "outputHash": "9ca1e712"
+        }
+      }
+    },
+    "settingsWatch": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d32b9208",
+          "outputHash": "ca401b31"
+        }
+      }
+    }
+  }
+}

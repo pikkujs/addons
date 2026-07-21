@@ -1,0 +1,797 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "addToQueue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fc7adff",
+          "outputHash": "1cb424bd"
+        }
+      }
+    },
+    "addTracksToPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d777869",
+          "outputHash": "0039a7ef"
+        }
+      }
+    },
+    "changePlaylistDetails": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c5a38f28",
+          "outputHash": "39bc7f74"
+        }
+      }
+    },
+    "checkCurrentUserFollows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "432d3367",
+          "outputHash": "6b2d5d7c"
+        }
+      }
+    },
+    "checkIfUserFollowsPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8a0ba6dc",
+          "outputHash": "2a8e97af"
+        }
+      }
+    },
+    "checkUsersSavedAlbums": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3ca22684",
+          "outputHash": "fa2e2c61"
+        }
+      }
+    },
+    "checkUsersSavedAudiobooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "17806145",
+          "outputHash": "702dc5ad"
+        }
+      }
+    },
+    "checkUsersSavedEpisodes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "180d0734",
+          "outputHash": "5e0dcebb"
+        }
+      }
+    },
+    "checkUsersSavedShows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "08ebac1a",
+          "outputHash": "31a03b70"
+        }
+      }
+    },
+    "checkUsersSavedTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2899f85f",
+          "outputHash": "60854ef6"
+        }
+      }
+    },
+    "createPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2cf8801f",
+          "outputHash": "bc442d61"
+        }
+      }
+    },
+    "followArtistsUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "991fda77",
+          "outputHash": "43611e5f"
+        }
+      }
+    },
+    "followPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0fbe5469",
+          "outputHash": "c3227730"
+        }
+      }
+    },
+    "getACategoriesPlaylists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "85e7409a",
+          "outputHash": "de6f2b37"
+        }
+      }
+    },
+    "getACategory": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0de1caa9",
+          "outputHash": "3dc11ab7"
+        }
+      }
+    },
+    "getAChapter": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b07724a7",
+          "outputHash": "d91b9b14"
+        }
+      }
+    },
+    "getAListOfCurrentUsersPlaylists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "007b7a79",
+          "outputHash": "aeee9d80"
+        }
+      }
+    },
+    "getAShow": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b86cc8f2",
+          "outputHash": "40914f7e"
+        }
+      }
+    },
+    "getAShowsEpisodes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b68d22e8",
+          "outputHash": "319f9ffb"
+        }
+      }
+    },
+    "getAUsersAvailableDevices": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8186af6f",
+          "outputHash": "607343eb"
+        }
+      }
+    },
+    "getAnAlbum": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c58d663f",
+          "outputHash": "9dbde01d"
+        }
+      }
+    },
+    "getAnAlbumsTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb9d3415",
+          "outputHash": "4ea79896"
+        }
+      }
+    },
+    "getAnArtist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2bf7f9e",
+          "outputHash": "988d5544"
+        }
+      }
+    },
+    "getAnArtistsAlbums": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "30537746",
+          "outputHash": "de9cc574"
+        }
+      }
+    },
+    "getAnArtistsRelatedArtists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "26fa74d6",
+          "outputHash": "7456d66a"
+        }
+      }
+    },
+    "getAnArtistsTopTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d46db60a",
+          "outputHash": "b0e226b4"
+        }
+      }
+    },
+    "getAnAudiobook": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2086250e",
+          "outputHash": "1a7eb131"
+        }
+      }
+    },
+    "getAnEpisode": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a15cd4ed",
+          "outputHash": "949964c5"
+        }
+      }
+    },
+    "getAudioFeatures": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "409e9eb5",
+          "outputHash": "a55d9cdf"
+        }
+      }
+    },
+    "getAudiobookChapters": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dc6a0247",
+          "outputHash": "daf7af45"
+        }
+      }
+    },
+    "getAvailableMarkets": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ceb56a06",
+          "outputHash": "cbdeb0d6"
+        }
+      }
+    },
+    "getCategories": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e723e990",
+          "outputHash": "02139eae"
+        }
+      }
+    },
+    "getCurrentUsersProfile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d56f0a74",
+          "outputHash": "c8484b55"
+        }
+      }
+    },
+    "getFeaturedPlaylists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9a4539e9",
+          "outputHash": "85799e74"
+        }
+      }
+    },
+    "getFollowed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "029d544e",
+          "outputHash": "7333f858"
+        }
+      }
+    },
+    "getInformationAboutTheUsersCurrentPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "500fd35b",
+          "outputHash": "7ec99b5d"
+        }
+      }
+    },
+    "getListUsersPlaylists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9aa90ac5",
+          "outputHash": "eb912d58"
+        }
+      }
+    },
+    "getMultipleAlbums": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c392e540",
+          "outputHash": "e6937d0b"
+        }
+      }
+    },
+    "getMultipleArtists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e6a3ecdc",
+          "outputHash": "f194ab83"
+        }
+      }
+    },
+    "getMultipleAudiobooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abb017d8",
+          "outputHash": "065f8557"
+        }
+      }
+    },
+    "getMultipleEpisodes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5ef2758d",
+          "outputHash": "754be3b2"
+        }
+      }
+    },
+    "getMultipleShows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1f00f5e9",
+          "outputHash": "fa19e8c7"
+        }
+      }
+    },
+    "getNewReleases": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8cdbcb04",
+          "outputHash": "b2c27907"
+        }
+      }
+    },
+    "getPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1feee4a8",
+          "outputHash": "ac3d121a"
+        }
+      }
+    },
+    "getPlaylistCover": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c357b939",
+          "outputHash": "a52945ef"
+        }
+      }
+    },
+    "getPlaylistsTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e92b1ee9",
+          "outputHash": "27fe1c04"
+        }
+      }
+    },
+    "getQueue": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "efc1a8a1",
+          "outputHash": "8bef7667"
+        }
+      }
+    },
+    "getRecentlyPlayed": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "713277cd",
+          "outputHash": "fdadee63"
+        }
+      }
+    },
+    "getRecommendationGenres": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bb0b3306",
+          "outputHash": "76d0091d"
+        }
+      }
+    },
+    "getRecommendations": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3abb2777",
+          "outputHash": "b011eeb3"
+        }
+      }
+    },
+    "getSeveralAudioFeatures": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "514e7e0a",
+          "outputHash": "f6dd5689"
+        }
+      }
+    },
+    "getSeveralChapters": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a50a26a",
+          "outputHash": "7bf9ad9d"
+        }
+      }
+    },
+    "getSeveralTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "38641cf0",
+          "outputHash": "be44b40f"
+        }
+      }
+    },
+    "getTheUsersCurrentlyPlayingTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "df08b06a",
+          "outputHash": "80096858"
+        }
+      }
+    },
+    "getTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5a9232d4",
+          "outputHash": "dd42b4bc"
+        }
+      }
+    },
+    "getUsersProfile": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "10cce588",
+          "outputHash": "6a588e59"
+        }
+      }
+    },
+    "getUsersSavedAlbums": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9fe347a9",
+          "outputHash": "011789c5"
+        }
+      }
+    },
+    "getUsersSavedAudiobooks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15b0533a",
+          "outputHash": "7f87d481"
+        }
+      }
+    },
+    "getUsersSavedEpisodes": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "92ba1caa",
+          "outputHash": "8350a623"
+        }
+      }
+    },
+    "getUsersSavedShows": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d2999b7e",
+          "outputHash": "efcf0fe7"
+        }
+      }
+    },
+    "getUsersSavedTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f618c790",
+          "outputHash": "85a7eeb8"
+        }
+      }
+    },
+    "getUsersTopArtists": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b052cc13",
+          "outputHash": "53039367"
+        }
+      }
+    },
+    "getUsersTopTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c08ff854",
+          "outputHash": "8001893c"
+        }
+      }
+    },
+    "pauseAUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "87aab577",
+          "outputHash": "ffecffb0"
+        }
+      }
+    },
+    "removeAlbumsUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef746480",
+          "outputHash": "128117ca"
+        }
+      }
+    },
+    "removeAudiobooksUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a4e28f23",
+          "outputHash": "e7c08368"
+        }
+      }
+    },
+    "removeEpisodesUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0088c416",
+          "outputHash": "ab9753ca"
+        }
+      }
+    },
+    "removeShowsUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7a9aa99",
+          "outputHash": "3a9d072b"
+        }
+      }
+    },
+    "removeTracksPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2b7ec18",
+          "outputHash": "57883981"
+        }
+      }
+    },
+    "removeTracksUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d192bfb",
+          "outputHash": "36b09428"
+        }
+      }
+    },
+    "reorderOrReplacePlaylistsTracks": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "2a93e152",
+          "outputHash": "5c8071e7"
+        }
+      }
+    },
+    "saveAlbumsUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "47bb76f3",
+          "outputHash": "dc304a98"
+        }
+      }
+    },
+    "saveAudiobooksUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "650dc499",
+          "outputHash": "945b52c1"
+        }
+      }
+    },
+    "saveEpisodesUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d48cade4",
+          "outputHash": "5d9a7792"
+        }
+      }
+    },
+    "saveShowsUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "785b409d",
+          "outputHash": "958af6b0"
+        }
+      }
+    },
+    "saveTracksUser": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "096cc502",
+          "outputHash": "59540689"
+        }
+      }
+    },
+    "search": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "bcd9983c",
+          "outputHash": "36402590"
+        }
+      }
+    },
+    "seekToPositionInCurrentlyPlayingTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6b194cdd",
+          "outputHash": "31d5eb7d"
+        }
+      }
+    },
+    "setRepeatModeOnUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e359c9b",
+          "outputHash": "6b65019e"
+        }
+      }
+    },
+    "setVolumeForUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5f9b66b0",
+          "outputHash": "14dbfc16"
+        }
+      }
+    },
+    "skipUsersPlaybackToNextTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7d77f353",
+          "outputHash": "bcdf1f33"
+        }
+      }
+    },
+    "skipUsersPlaybackToPreviousTrack": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7cb62366",
+          "outputHash": "705a4c1d"
+        }
+      }
+    },
+    "startAUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "6ede64fb",
+          "outputHash": "dbb6b04e"
+        }
+      }
+    },
+    "toggleShuffleForUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a6a3aceb",
+          "outputHash": "e5764bdc"
+        }
+      }
+    },
+    "transferAUsersPlayback": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d1b2b28b",
+          "outputHash": "fc117539"
+        }
+      }
+    },
+    "unfollowArtistsUsers": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "24ee41ae",
+          "outputHash": "97e5391c"
+        }
+      }
+    },
+    "unfollowPlaylist": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "883625fd",
+          "outputHash": "08249cce"
+        }
+      }
+    },
+    "uploadCustomPlaylistCover": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "746f6093",
+          "outputHash": "47f37260"
+        }
+      }
+    }
+  }
+}

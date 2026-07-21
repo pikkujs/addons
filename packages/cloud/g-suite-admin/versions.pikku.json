@@ -1,0 +1,113 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "groupCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ea648acf",
+          "outputHash": "1098a9d2"
+        }
+      }
+    },
+    "groupDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4096b782",
+          "outputHash": "274bf75a"
+        }
+      }
+    },
+    "groupGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee3dda2b",
+          "outputHash": "b4c4feaf"
+        }
+      }
+    },
+    "groupGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "e2ca0fb7",
+          "outputHash": "c1a3034c"
+        }
+      }
+    },
+    "groupUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8d11c19d",
+          "outputHash": "901801c9"
+        }
+      }
+    },
+    "userAddToGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "318ab967",
+          "outputHash": "90d08716"
+        }
+      }
+    },
+    "userCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "4eb7fe5e",
+          "outputHash": "c97479e8"
+        }
+      }
+    },
+    "userDelete": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "502acb8f",
+          "outputHash": "d93fa8b8"
+        }
+      }
+    },
+    "userGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb91204c",
+          "outputHash": "7f542146"
+        }
+      }
+    },
+    "userGetAll": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c02f84a4",
+          "outputHash": "019ccb2f"
+        }
+      }
+    },
+    "userRemoveFromGroup": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ef9ca1c8",
+          "outputHash": "339b77f8"
+        }
+      }
+    },
+    "userUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "3fc2a6c8",
+          "outputHash": "1bf397be"
+        }
+      }
+    }
+  }
+}

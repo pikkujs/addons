@@ -1,0 +1,32 @@
+{
+  "manifestVersion": 1,
+  "contracts": {
+    "linkCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eaaeeb10",
+          "outputHash": "097b4a7f"
+        }
+      }
+    },
+    "linkGet": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "7524e30d",
+          "outputHash": "7df59e1d"
+        }
+      }
+    },
+    "linkUpdate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1e153ec1",
+          "outputHash": "75311787"
+        }
+      }
+    }
+  }
+}

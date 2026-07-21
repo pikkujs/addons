@@ -1,0 +1,146 @@
+import { z } from 'zod'
+import { pikkuSessionlessFunc } from '#pikku'
+
+export const UserMailFolderGetMessageRuleInput = z.object({
+  "user-id": z.string().describe("The unique identifier of user"),
+  "mailFolder-id": z.string().describe("The unique identifier of mailFolder"),
+  "messageRule-id": z.string().describe("The unique identifier of messageRule"),
+  $select: z.array(z.string()).optional().describe("Select properties to be returned"),
+  $expand: z.array(z.string()).optional().describe("Expand related entities"),
+})
+
+export const UserMailFolderGetMessageRuleOutput = z.object({
+  id: z.string().optional().describe("The unique identifier for an entity. Read-only."),
+  actions: z.object({
+    assignCategories: z.array(z.string()).optional().describe("A list of categories to be assigned to a message."),
+    copyToFolder: z.string().nullable().optional().describe("The ID of a folder that a message is to be copied to."),
+    delete: z.boolean().nullable().optional().describe("Indicates whether a message should be moved to the Deleted Items folder."),
+    forwardAsAttachmentTo: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("The email addresses of the recipients to which a message should be forwarded as an attachment."),
+    forwardTo: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("The email addresses of the recipients to which a message should be forwarded."),
+    markAsRead: z.boolean().nullable().optional().describe("Indicates whether a message should be marked as read."),
+    markImportance: z.enum(["low", "normal", "high"]).optional(),
+    moveToFolder: z.string().nullable().optional().describe("The ID of the folder that a message will be moved to."),
+    permanentDelete: z.boolean().nullable().optional().describe("Indicates whether a message should be permanently deleted and not saved to the Deleted Items folder."),
+    redirectTo: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("The email addresses to which a message should be redirected."),
+    stopProcessingRules: z.boolean().nullable().optional().describe("Indicates whether subsequent rules should be evaluated."),
+  }).optional(),
+  conditions: z.object({
+    bodyContains: z.array(z.string()).optional().describe("Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply."),
+    bodyOrSubjectContains: z.array(z.string()).optional().describe("Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply."),
+    categories: z.array(z.string()).optional().describe("Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply."),
+    fromAddresses: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply."),
+    hasAttachments: z.boolean().nullable().optional().describe("Indicates whether an incoming message must have attachments in order for the condition or exception to apply."),
+    headerContains: z.array(z.string()).optional().describe("Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply."),
+    importance: z.enum(["low", "normal", "high"]).optional(),
+    isApprovalRequest: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be an approval request in order for the condition or exception to apply."),
+    isAutomaticForward: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply."),
+    isAutomaticReply: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply."),
+    isEncrypted: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be encrypted in order for the condition or exception to apply."),
+    isMeetingRequest: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply."),
+    isMeetingResponse: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply."),
+    isNonDeliveryReport: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply."),
+    isPermissionControlled: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply."),
+    isReadReceipt: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply."),
+    isSigned: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply."),
+    isVoicemail: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply."),
+    messageActionFlag: z.enum(["any", "call", "doNotForward", "followUp", "fyi", "forward", "noResponseNecessary", "read", "reply", "replyToAll", "review"]).optional(),
+    notSentToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply."),
+    recipientContains: z.array(z.string()).optional().describe("Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply."),
+    senderContains: z.array(z.string()).optional().describe("Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply."),
+    sensitivity: z.enum(["normal", "personal", "private", "confidential"]).optional(),
+    sentCcMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply."),
+    sentOnlyToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply."),
+    sentToAddresses: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply."),
+    sentToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply."),
+    sentToOrCcMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply."),
+    subjectContains: z.array(z.string()).optional().describe("Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply."),
+    withinSizeRange: z.object({
+      maximumSize: z.number().min(-2147483648).max(2147483647).nullable().optional().describe("The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply."),
+      minimumSize: z.number().min(-2147483648).max(2147483647).nullable().optional().describe("The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply."),
+    }).optional(),
+  }).optional(),
+  displayName: z.string().nullable().optional().describe("The display name of the rule."),
+  exceptions: z.object({
+    bodyContains: z.array(z.string()).optional().describe("Represents the strings that should appear in the body of an incoming message in order for the condition or exception to apply."),
+    bodyOrSubjectContains: z.array(z.string()).optional().describe("Represents the strings that should appear in the body or subject of an incoming message in order for the condition or exception to apply."),
+    categories: z.array(z.string()).optional().describe("Represents the categories that an incoming message should be labeled with in order for the condition or exception to apply."),
+    fromAddresses: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("Represents the specific sender email addresses of an incoming message in order for the condition or exception to apply."),
+    hasAttachments: z.boolean().nullable().optional().describe("Indicates whether an incoming message must have attachments in order for the condition or exception to apply."),
+    headerContains: z.array(z.string()).optional().describe("Represents the strings that appear in the headers of an incoming message in order for the condition or exception to apply."),
+    importance: z.enum(["low", "normal", "high"]).optional(),
+    isApprovalRequest: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be an approval request in order for the condition or exception to apply."),
+    isAutomaticForward: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be automatically forwarded in order for the condition or exception to apply."),
+    isAutomaticReply: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be an auto reply in order for the condition or exception to apply."),
+    isEncrypted: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be encrypted in order for the condition or exception to apply."),
+    isMeetingRequest: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a meeting request in order for the condition or exception to apply."),
+    isMeetingResponse: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a meeting response in order for the condition or exception to apply."),
+    isNonDeliveryReport: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a non-delivery report in order for the condition or exception to apply."),
+    isPermissionControlled: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be permission controlled (RMS-protected) in order for the condition or exception to apply."),
+    isReadReceipt: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a read receipt in order for the condition or exception to apply."),
+    isSigned: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be S/MIME-signed in order for the condition or exception to apply."),
+    isVoicemail: z.boolean().nullable().optional().describe("Indicates whether an incoming message must be a voice mail in order for the condition or exception to apply."),
+    messageActionFlag: z.enum(["any", "call", "doNotForward", "followUp", "fyi", "forward", "noResponseNecessary", "read", "reply", "replyToAll", "review"]).optional(),
+    notSentToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must not be a recipient of an incoming message in order for the condition or exception to apply."),
+    recipientContains: z.array(z.string()).optional().describe("Represents the strings that appear in either the toRecipients or ccRecipients properties of an incoming message in order for the condition or exception to apply."),
+    senderContains: z.array(z.string()).optional().describe("Represents the strings that appear in the from property of an incoming message in order for the condition or exception to apply."),
+    sensitivity: z.enum(["normal", "personal", "private", "confidential"]).optional(),
+    sentCcMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in the ccRecipients property of an incoming message in order for the condition or exception to apply."),
+    sentOnlyToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be the only recipient in an incoming message in order for the condition or exception to apply."),
+    sentToAddresses: z.array(z.object({
+      emailAddress: z.object({
+        address: z.string().nullable().optional().describe("The email address of the person or entity."),
+        name: z.string().nullable().optional().describe("The display name of the person or entity."),
+      }).optional(),
+    })).optional().describe("Represents the email addresses that an incoming message must have been sent to in order for the condition or exception to apply."),
+    sentToMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in the toRecipients property of an incoming message in order for the condition or exception to apply."),
+    sentToOrCcMe: z.boolean().nullable().optional().describe("Indicates whether the owner of the mailbox must be in either a toRecipients or ccRecipients property of an incoming message in order for the condition or exception to apply."),
+    subjectContains: z.array(z.string()).optional().describe("Represents the strings that appear in the subject of an incoming message in order for the condition or exception to apply."),
+    withinSizeRange: z.object({
+      maximumSize: z.number().min(-2147483648).max(2147483647).nullable().optional().describe("The maximum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply."),
+      minimumSize: z.number().min(-2147483648).max(2147483647).nullable().optional().describe("The minimum size (in kilobytes) that an incoming message must have in order for a condition or exception to apply."),
+    }).optional(),
+  }).optional(),
+  hasError: z.boolean().nullable().optional().describe("Indicates whether the rule is in an error condition. Read-only."),
+  isEnabled: z.boolean().nullable().optional().describe("Indicates whether the rule is enabled to be applied to messages."),
+  isReadOnly: z.boolean().nullable().optional().describe("Indicates if the rule is read-only and cannot be modified or deleted by the rules REST API."),
+  sequence: z.number().min(-2147483648).max(2147483647).nullable().optional().describe("Indicates the order in which the rule is executed, among other rules."),
+})
+
+export const userMailFolderGetMessageRule = pikkuSessionlessFunc({
+  description: "The collection of rules that apply to the user's Inbox folder.",
+  input: UserMailFolderGetMessageRuleInput,
+  output: UserMailFolderGetMessageRuleOutput,
+  func: async ({ microsoftOutlook }, data) => {
+    return microsoftOutlook.call("GET", "/users/{user-id}/mailFolders/{mailFolder-id}/messageRules/{messageRule-id}", data) as any
+  },
+})
