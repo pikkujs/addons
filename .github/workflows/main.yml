@@ -186,14 +186,41 @@ jobs:
       - name: Notify registry of published packages
         if: steps.changesets.outputs.published == 'true'
         run: |
-          echo '${{ steps.changesets.outputs.publishedPackages }}' | \
+          # Each package is notified independently: a single failure must not
+          # abort the loop (the step's shell runs with -e), or every package
+          # after it silently never gets ingested despite being live on npm.
+          # Failures are collected and reported once, at the end.
+          failed=()
+          while IFS=$'\t' read -r name version; do
+            if ! bash scripts/notify-registry.sh "$name" "$version"; then
+              echo "::warning::Registry ingest failed for $name@$version — re-run with scripts/backfill-registry.sh"
+              failed+=("$name@$version")
+            fi
+          done < <(echo '${{ steps.changesets.outputs.publishedPackages }}' | \
             node -e "
               const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
               for (const pkg of pkgs) {
                 console.log(pkg.name + '\t' + pkg.version);
               }
-            " | while IFS=$'\t' read -r name version; do
-              bash scripts/notify-registry.sh "$name" "$version"
-            done
+            ")
+
+          if [ ${#failed[@]} -gt 0 ]; then
+            echo "::error::${#failed[@]} package(s) published to npm but not ingested into the registry:"
+            printf '  - %s\n' "${failed[@]}"
+            echo "Backfill them with: REGISTRY_API_KEY=… bash scripts/backfill-registry.sh ${failed[*]}"
+            exit 1
+          fi
+
+          echo "All published packages ingested into the registry ✓"
+        env:
+          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
+
+      # Safety net for anything the per-release notify above never covered:
+      # packages published before the notify step existed, or stranded when an
+      # earlier run failed mid-loop. Diffs the catalogue against the checkout and
+      # ingests only the difference, so it is a no-op once the two agree.
+      - name: Reconcile registry with npm
+        if: always() && !cancelled()
+        run: bash scripts/backfill-registry.sh --reconcile
         env:
           REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
