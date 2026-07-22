@@ -47,7 +47,10 @@ for attempt in $(seq 1 "$MAX_RETRIES"); do
     -d "$payload")
 
   status=$(echo "$response" | tail -n1)
-  body=$(echo "$response" | head -n -1)
+  # `head -n -1` is GNU-only — BSD/macOS head rejects a negative count, which
+  # aborts the script before the status is ever checked. Strip the trailing
+  # status line with parameter expansion so this runs anywhere.
+  body="${response%$'\n'*}"
 
   if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
     echo "ok ($status)"

@@ -1,0 +1,49 @@
+name: Reconcile Registry
+
+# Keeps the pikkufabric catalogue in step with what is actually published to
+# npm. The release workflow notifies the registry per-publish, but that can miss
+# packages (npm's read path lags right after a publish, and packages published
+# before the notify step existed were never ingested at all). This diffs the
+# catalogue against the checkout and ingests only the difference.
+#
+# Runs on demand, and daily so drift is repaired without anyone noticing it.
+
+on:
+  workflow_dispatch:
+    inputs:
+      packages:
+        description: 'Space-separated pkg[@version] list. Empty = reconcile everything.'
+        required: false
+        default: ''
+  schedule:
+    # 04:00 UTC daily — well clear of release traffic.
+    - cron: '0 4 * * *'
+
+concurrency: ${{ github.workflow }}
+
+env:
+  YARN_ENABLE_IMMUTABLE_INSTALLS: false
+
+jobs:
+  reconcile:
+    name: Reconcile
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: corepack enable
+        shell: bash
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # No `yarn install` needed: the reconcile path only reads package.json
+      # versions and calls the registry over HTTP.
+      - name: Reconcile
+        run: |
+          if [ -n "${{ inputs.packages }}" ]; then
+            bash scripts/backfill-registry.sh ${{ inputs.packages }}
+          else
+            bash scripts/backfill-registry.sh --reconcile
+          fi
+        env:
+          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}

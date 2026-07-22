@@ -10,12 +10,22 @@ set -uo pipefail
 # Usage:
 #   REGISTRY_API_KEY=… bash scripts/backfill-registry.sh @pikku/addon-stripe@0.1.4 …
 #   REGISTRY_API_KEY=… bash scripts/backfill-registry.sh @pikku/addon-stripe
+#   REGISTRY_API_KEY=… bash scripts/backfill-registry.sh --reconcile
 #   REGISTRY_API_KEY=… bash scripts/backfill-registry.sh --all
 #
-# A package given without @version resolves to npm's `latest` dist-tag. `--all`
-# reads every publishable package in packages/ and ingests its local version —
-# so `git pull` first, or a stale checkout will ask for versions that were never
-# published (the ingest 500s on npm's 404 and the run reports them as failures).
+# A package given without @version resolves to npm's `latest` dist-tag.
+#
+# `--reconcile` (preferred) asks the registry what it already has, diffs that
+# against the versions in packages/, and ingests only what is missing or stale.
+# It is idempotent and cheap, so it is safe to run on every release as a
+# self-heal for anything an earlier notify step dropped.
+#
+# `--all` re-ingests every package unconditionally — a bigger hammer, useful
+# only if the registry's stored metadata itself needs rebuilding.
+#
+# Both modes read versions from the local checkout, so `git pull` first: a stale
+# checkout asks for versions that were never published, npm 404s, and the ingest
+# reports them as failures.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -26,26 +36,61 @@ if [ -z "${REGISTRY_API_KEY:-}" ]; then
 fi
 
 if [ $# -eq 0 ]; then
-  echo "Usage: backfill-registry.sh <pkg[@version]>... | --all" >&2
+  echo "Usage: backfill-registry.sh <pkg[@version]>... | --reconcile | --all" >&2
   exit 1
 fi
 
-specs=()
+REGISTRY_URL="${REGISTRY_URL:-https://api.pikkufabric.com}"
 
-if [ "$1" = "--all" ]; then
-  # Every non-test package under packages/, at its current local version.
+# Every publishable package in the checkout, as `name@version`.
+local_packages() {
   while IFS= read -r pkg_json; do
-    entry=$(node -e "
+    node -e "
       const p = require('$ROOT_DIR/' + process.argv[1]);
       if (p.private || !p.name || p.name.startsWith('@pikku/test-')) process.exit(0);
       console.log(p.name + '@' + p.version);
-    " "$pkg_json")
-    [ -n "$entry" ] && specs+=("$entry")
+    " "$pkg_json"
   done < <(cd "$ROOT_DIR" && find packages -maxdepth 3 -name package.json \
     -not -path '*/test/*' -not -path '*/node_modules/*' | sort)
-else
-  specs=("$@")
-fi
+}
+
+specs=()
+
+# `mapfile` is bash 4+; macOS still ships bash 3.2, where it is missing and the
+# array would silently stay empty — which reads as "nothing to do" rather than
+# as an error. Read the lines explicitly so both platforms behave the same.
+read_specs() {
+  local line
+  while IFS= read -r line; do
+    [ -n "$line" ] && specs+=("$line")
+  done <<< "$1"
+}
+
+case "$1" in
+  --reconcile)
+    # Ask the registry what it already has and ingest only the difference.
+    if ! diff_out=$(local_packages | REGISTRY_URL="$REGISTRY_URL" node "$SCRIPT_DIR/registry-diff.mjs"); then
+      echo "Error: could not diff the checkout against the registry" >&2
+      exit 1
+    fi
+    read_specs "$diff_out"
+
+    if [ ${#specs[@]} -eq 0 ]; then
+      echo "Registry is already in sync with the checkout — nothing to do."
+      exit 0
+    fi
+    ;;
+  --all)
+    if ! all_out=$(local_packages); then
+      echo "Error: could not enumerate local packages" >&2
+      exit 1
+    fi
+    read_specs "$all_out"
+    ;;
+  *)
+    specs=("$@")
+    ;;
+esac
 
 echo "Backfilling ${#specs[@]} package(s)..."
 echo
