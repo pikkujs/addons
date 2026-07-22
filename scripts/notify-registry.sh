@@ -28,12 +28,17 @@ else
   payload="{\"packageName\":\"$name\"}"
 fi
 
-# npm propagation can lag a few seconds after publish — retry up to 3 times
-# with a short back-off before giving up.
-MAX_RETRIES=3
-RETRY_DELAY=10
+# npm propagation lags after publish: fabric's ingest fetches the package doc
+# from registry.npmjs.org, which 404s until npm's read path catches up. That's
+# usually seconds, but the first package of a batch has repeatedly needed ~20s+
+# (a 3x10s budget once ran out one attempt short and stranded a package). Back
+# off exponentially (15/30/60/120/240s, ~8min total) instead — only the first
+# package of a run normally pays it: npm has caught up by the time the rest
+# are notified.
+MAX_RETRIES="${NOTIFY_MAX_RETRIES:-6}"
+RETRY_DELAY="${NOTIFY_RETRY_DELAY:-15}"
 
-for attempt in $(seq 1 $MAX_RETRIES); do
+for attempt in $(seq 1 "$MAX_RETRIES"); do
   echo -n "Ingesting $name${version:+@$version} (attempt $attempt/$MAX_RETRIES)... "
   response=$(curl -s -w "\n%{http_code}" \
     -X POST "$REGISTRY_URL/registry/addons/ingest" \
@@ -54,7 +59,8 @@ for attempt in $(seq 1 $MAX_RETRIES); do
 
   if [ "$attempt" -lt "$MAX_RETRIES" ]; then
     echo "  Retrying in ${RETRY_DELAY}s..."
-    sleep $RETRY_DELAY
+    sleep "$RETRY_DELAY"
+    RETRY_DELAY=$((RETRY_DELAY * 2))
   fi
 done
 
