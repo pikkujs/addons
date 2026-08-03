@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const mqttCredentialSchema = z.object({
   apiKey: z.string().describe('MQTT API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'mqtt',
   displayName: 'MQTT',
   description: 'Publish messages to an MQTT broker',

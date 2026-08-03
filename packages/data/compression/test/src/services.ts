@@ -3,6 +3,7 @@ import {
   LocalVariablesService,
   LocalSecretService,
 } from '@pikku/core/services'
+import type { JWTService } from '@pikku/core/services'
 import { LocalContent } from '@pikku/core/services/local-content'
 import { pikkuServices } from '#pikku'
 
@@ -17,7 +18,7 @@ export const createSingletonServices = pikkuServices(async (_config, existingSer
     localFileUploadPath: new URL('../fixtures', import.meta.url).pathname,
     uploadUrlPrefix: '/upload',
     assetUrlPrefix: '/assets',
-  }, logger)
+  }, logger, jwt)
 
   return {
     logger,

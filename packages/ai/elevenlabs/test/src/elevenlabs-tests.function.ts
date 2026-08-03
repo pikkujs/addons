@@ -5,7 +5,7 @@ export type TestElevenLabsInput = Record<string, never>
 export type TestElevenLabsOutput = { passed: number; failed: string[] }
 
 export const testElevenLabs = pikkuSessionlessFunc<TestElevenLabsInput, TestElevenLabsOutput>({
-  func: async (services, _data, { rpc }) => {
+  func: async (_services, _data, { rpc }) => {
     let passed = 0
     const failed: string[] = []
 

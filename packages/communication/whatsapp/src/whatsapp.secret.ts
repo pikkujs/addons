@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const whatsappSecretsSchema = z.object({
   accessToken: z.string().describe('WhatsApp Cloud API access token'),
@@ -16,7 +16,7 @@ export const whatsappSecretsSchema = z.object({
 
 export type WhatsappSecrets = z.infer<typeof whatsappSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'whatsapp',
   displayName: 'WhatsApp Cloud API',
   description: 'WhatsApp Business messaging platform',

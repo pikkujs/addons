@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const hubspotSecretsSchema = z.string().describe('HubSpot Private App Access Token')
 
 export type HubspotSecrets = z.infer<typeof hubspotSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'api_key',
   displayName: 'HubSpot API Key',
   description: 'HubSpot Private App Access Token',

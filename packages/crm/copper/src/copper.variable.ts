@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const copperBaseUrlSchema = z.enum(["https://api.copper.com/developer_api/v1"]).default("https://api.copper.com/developer_api/v1")
 
-wireVariable({
+defineVariable({
   name: 'COPPER_BASE_URL',
   displayName: 'Copper Base URL',
   description: 'The base URL for the Copper API.',

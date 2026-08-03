@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const matrixCredentialSchema = z.object({
   token: z.string().describe('Matrix bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'matrix',
   displayName: 'Matrix',
   description: 'Consume the Matrix chat API',

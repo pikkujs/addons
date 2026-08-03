@@ -1,11 +1,18 @@
+import { UnauthorizedError } from '@pikku/core/errors'
 import { MicrosoftToDoService } from './microsoft-to-do-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets, variables }
-) => {
-  const microsoftToDo = new MicrosoftToDoService(secrets, variables)
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    if (!wire.getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const cred = await wire.getCredential<{ accessToken: string }>('microsoftToDo')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Microsoft To Do connection — connect Microsoft To Do first')
+    }
+    const microsoftToDo = new MicrosoftToDoService(cred, variables)
 
-  return { microsoftToDo }
-})
+    return { microsoftToDo }
+  }
+)

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const openThesaurusCredentialSchema = z.object({
   apiKey: z.string().describe('openthesaurus API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'openThesaurus',
   displayName: 'openthesaurus',
   description: 'openthesaurus addon',

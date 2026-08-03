@@ -41,7 +41,7 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
     'Verify a Stripe webhook signature against the raw body and enqueue the verified event onto the stripe-webhook-event queue for the consuming app to process.',
   input: StripeWebhookInput,
   output: StripeWebhookOutput,
-  func: async ({ stripe, secrets, queueService, logger }, _payload, { http }) => {
+  func: async ({ stripeWebhookVerifier, queueService, logger }, _payload, { http }) => {
     if (!queueService) {
       logger.error('stripe webhook: queueService is not configured on the host app')
       throw new Error('queueService is required to process Stripe webhooks')
@@ -56,10 +56,7 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
       throw new UnauthorizedError('Missing stripe-signature header')
     }
 
-    const webhookSecret = await secrets
-      .getSecret('STRIPE_WEBHOOK_SECRET' as any)
-      .catch(() => undefined)
-    if (!webhookSecret) {
+    if (!stripeWebhookVerifier.configured) {
       logger.error('STRIPE_WEBHOOK_SECRET is not configured — webhook is disabled')
       throw new UnauthorizedError('Webhook receiver is not configured')
     }
@@ -73,12 +70,7 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
 
     let event: { id: string; type: string }
     try {
-      // Async variant uses SubtleCrypto so it works on edge/worker runtimes too.
-      event = (await stripe.webhooks.constructEventAsync(
-        rawBody,
-        signature,
-        webhookSecret,
-      )) as { id: string; type: string }
+      event = await stripeWebhookVerifier.verify(rawBody, signature)
     } catch (e: any) {
       logger.warn(`stripe webhook signature verification failed: ${e?.message}`)
       throw new UnauthorizedError('Invalid Stripe webhook signature')

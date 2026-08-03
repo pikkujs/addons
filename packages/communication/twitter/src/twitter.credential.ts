@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const twitterTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const twitterOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'twitter',
   displayName: 'X (Twitter)',
   description: 'Post, like, search tweets, send DMs, manage lists and users via the X API',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'twitterOAuthApp',
   displayName: 'X (Twitter) OAuth App',
   description: 'OAuth2 app credentials for X (Twitter)',

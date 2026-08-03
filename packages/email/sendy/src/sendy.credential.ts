@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const sendyCredentialSchema = z.object({
   apiKey: z.string().describe('Sendy API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'sendy',
   displayName: 'Sendy',
   description: 'Consume the Sendy email newsletter API',

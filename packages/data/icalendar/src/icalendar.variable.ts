@@ -2,11 +2,11 @@
 // Variables are for non-secret runtime configuration (base URLs, feature flags, etc.)
 
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const icalendarVariableSchema = z.string().optional().describe('TODO: describe this variable')
 
-wireVariable({
+defineVariable({
   name: 'icalendar_variable',
   displayName: 'ICalendar Variable',
   description: 'TODO: describe this variable',

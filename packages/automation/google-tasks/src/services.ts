@@ -1,11 +1,18 @@
+import { UnauthorizedError } from '@pikku/core/errors'
 import { GoogleTasksService } from './google-tasks-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets, variables }
-) => {
-  const googleTasks = new GoogleTasksService(secrets, variables)
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    if (!wire.getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const cred = await wire.getCredential<{ accessToken: string }>('googleTasks')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Google Tasks connection — connect Google Tasks first')
+    }
+    const googleTasks = new GoogleTasksService(cred, variables)
 
-  return { googleTasks }
-})
+    return { googleTasks }
+  }
+)

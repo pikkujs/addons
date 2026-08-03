@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const kafkaSecretsSchema = z.object({
   brokers: z.array(z.string()).describe('Kafka broker addresses (e.g. ["localhost:9092"])'),
@@ -12,7 +12,7 @@ export const kafkaSecretsSchema = z.object({
 
 export type KafkaSecrets = z.infer<typeof kafkaSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'Kafka Credentials',
   description: 'Kafka broker connection credentials',

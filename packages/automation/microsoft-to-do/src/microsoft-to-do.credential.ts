@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const microsoftToDoTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const microsoftToDoOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'microsoftToDo',
   displayName: 'Microsoft To Do',
   description: 'Consume the Microsoft To Do API (tasks, lists, linked resources).',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'microsoftToDoOAuthApp',
   displayName: 'Microsoft To Do OAuth App',
   description: 'OAuth2 app credentials for Microsoft To Do',

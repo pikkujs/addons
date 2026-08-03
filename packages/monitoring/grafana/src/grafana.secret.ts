@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const grafanaSecretsSchema = z.object({
   apiKey: z.string().describe('Grafana API key'),
@@ -8,7 +8,7 @@ export const grafanaSecretsSchema = z.object({
 
 export type GrafanaSecrets = z.infer<typeof grafanaSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'grafana',
   displayName: 'Grafana API',
   description: 'Observability platform',

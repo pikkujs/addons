@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const ghostCredentialSchema = z.object({
   apiKey: z.string().describe('Ghost API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'ghost',
   displayName: 'Ghost',
   description: 'Consume the Ghost blogging CMS Admin and Content API',

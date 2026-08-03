@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const veroBaseUrlSchema = z.enum(["https://api.getvero.com/api/v2"]).default("https://api.getvero.com/api/v2")
 
-wireVariable({
+defineVariable({
   name: 'VERO_BASE_URL',
   displayName: 'Vero Base URL',
   description: 'The base URL for the Vero API.',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const plentymarketsSecretsSchema = z.object({
   baseUrl: z
@@ -16,7 +16,7 @@ export type PlentymarketsSecrets = z.infer<
   typeof plentymarketsSecretsSchema
 >
 
-wireSecret({
+defineSecret({
   name: 'plentymarkets',
   displayName: 'PlentyMarkets API',
   description: 'PlentyMarkets REST API secrets',

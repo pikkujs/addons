@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const moceanBaseUrlSchema = z.enum(["https://rest.moceanapi.com"]).default("https://rest.moceanapi.com")
 
-wireVariable({
+defineVariable({
   name: 'MOCEAN_BASE_URL',
   displayName: 'mocean Base URL',
   description: 'The base URL for the mocean API.',

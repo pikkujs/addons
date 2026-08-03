@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const uptimerobotSecretsSchema = z.object({
   apiKey: z.string().describe('UptimeRobot API key'),
@@ -7,7 +7,7 @@ export const uptimerobotSecretsSchema = z.object({
 
 export type UptimerobotSecrets = z.infer<typeof uptimerobotSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'uptimerobot',
   displayName: 'UptimeRobot API',
   description: 'Website monitoring',

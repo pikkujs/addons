@@ -36,7 +36,7 @@ export const query = pikkuSessionlessFunc({
         'pinecone:query requires an aiEmbedding service wired into singletonServices'
       )
     }
-    const vector = await aiEmbedding.embed(query)
+    const vector = await aiEmbedding.embedQuery(query)
     const matches = await pineconeQuery(pinecone, collection, vector, topK ?? 4)
     return { query, matches }
   },

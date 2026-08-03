@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const gotifyBaseUrlSchema = z.enum(["https://gotify.example.com"]).default("https://gotify.example.com")
 
-wireVariable({
+defineVariable({
   name: 'GOTIFY_BASE_URL',
   displayName: 'Gotify Base URL',
   description: 'The base URL for the Gotify API.',

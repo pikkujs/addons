@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const elasticsearchCredentialSchema = z.object({
   apiKey: z.string().describe('Elasticsearch API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'elasticsearch',
   displayName: 'Elasticsearch',
   description: 'Consume the Elasticsearch API',

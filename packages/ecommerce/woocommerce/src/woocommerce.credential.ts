@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const woocommerceCredentialSchema = z.object({
   apiKey: z.string().describe('WooCommerce API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'woocommerce',
   displayName: 'WooCommerce',
   description: 'Consume the WooCommerce REST API (products, orders, customers)',

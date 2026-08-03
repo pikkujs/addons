@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const paddleSecretsSchema = z.object({
   apiKey: z.string().describe('Paddle API key'),
@@ -8,7 +8,7 @@ export const paddleSecretsSchema = z.object({
 
 export type PaddleSecrets = z.infer<typeof paddleSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'paddle',
   displayName: 'Paddle API',
   description: 'Payments and subscriptions',

@@ -45,7 +45,7 @@ export const query = pikkuSessionlessFunc({
         'supabase:query requires an aiEmbedding service wired into singletonServices'
       )
     }
-    const vector = await aiEmbedding.embed(query)
+    const vector = await aiEmbedding.embedQuery(query)
     const matchFn = collection || 'match_documents'
     const { data, error } = await supabase.rpc(matchFn, {
       query_embedding: vector,

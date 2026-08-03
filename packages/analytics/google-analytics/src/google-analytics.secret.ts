@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
-import { wireCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const googleAnalyticsSecretsSchema = z.object({
   measurementId: z.string().describe('GA4 Measurement ID (e.g., G-XXXXXXXXXX)'),
@@ -16,7 +16,7 @@ export const googleAnalyticsOAuthSchema = z.object({
 
 export type GoogleAnalyticsOAuthTokens = z.infer<typeof googleAnalyticsOAuthSchema>
 
-wireSecret({
+defineSecret({
   name: 'googleAnalytics',
   displayName: 'Google Analytics 4 Measurement Protocol',
   description: 'API key and Measurement ID for sending events via Measurement Protocol',
@@ -24,7 +24,7 @@ wireSecret({
   schema: googleAnalyticsSecretsSchema,
 })
 
-wireCredential({
+defineCredential({
   name: 'googleAnalyticsOAuth',
   displayName: 'Google Analytics 4 OAuth2',
   description: 'Google OAuth2 credentials for GA4 Data API (reporting)',

@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const orbitBaseUrlSchema = z.enum(["https://app.orbit.love/api/v1"]).default("https://app.orbit.love/api/v1")
 
-wireVariable({
+defineVariable({
   name: 'ORBIT_BASE_URL',
   displayName: 'Orbit Base URL',
   description: 'The base URL for the Orbit API.',

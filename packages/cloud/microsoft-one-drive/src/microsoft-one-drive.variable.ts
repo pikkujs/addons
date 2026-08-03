@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const microsoftOneDriveBaseUrlSchema = z.enum(["https://graph.microsoft.com/v1.0"]).default("https://graph.microsoft.com/v1.0")
 
-wireVariable({
+defineVariable({
   name: 'MICROSOFT_ONE_DRIVE_BASE_URL',
   displayName: 'Microsoft OneDrive Base URL',
   description: 'The base URL for the Microsoft OneDrive API.',

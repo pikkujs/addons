@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const nocodbBaseUrlSchema = z.enum(["https://app.nocodb.com"]).default("https://app.nocodb.com")
 
-wireVariable({
+defineVariable({
   name: 'NOCODB_BASE_URL',
   displayName: 'NocoDB Base URL',
   description: 'The base URL for the NocoDB API.',

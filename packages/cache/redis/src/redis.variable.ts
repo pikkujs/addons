@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const redisParamsSchema = z.object({
   host: z.string().default('localhost').describe('Redis server hostname'),
@@ -8,7 +8,7 @@ export const redisParamsSchema = z.object({
   tls: z.string().optional().describe('Enable TLS/SSL connection'),
 })
 
-wireVariable({
+defineVariable({
   name: 'redis_params',
   displayName: 'Redis Params',
   description: 'Redis connection parameters',

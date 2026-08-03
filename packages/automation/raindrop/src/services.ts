@@ -1,11 +1,18 @@
+import { UnauthorizedError } from '@pikku/core/errors'
 import { RaindropService } from './raindrop-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets, variables }
-) => {
-  const raindrop = new RaindropService(secrets, variables)
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    if (!wire.getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const cred = await wire.getCredential<{ accessToken: string }>('raindrop')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Raindrop connection — connect Raindrop first')
+    }
+    const raindrop = new RaindropService(cred, variables)
 
-  return { raindrop }
-})
+    return { raindrop }
+  }
+)

@@ -1,10 +1,10 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const googleCloudStorageProjectIdSchema = z.string()
   .describe('Google Cloud project ID (required for bucket create/list operations)')
 
-wireVariable({
+defineVariable({
   name: 'googleCloudStorage_projectId',
   displayName: 'Google Cloud Project ID',
   description: 'The Google Cloud project ID for Cloud Storage operations',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const flyioSecretsSchema = z.object({
   apiKey: z.string().describe('Fly.io API key'),
@@ -8,7 +8,7 @@ export const flyioSecretsSchema = z.object({
 
 export type FlyioSecrets = z.infer<typeof flyioSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'flyio',
   displayName: 'Fly.io API',
   description: 'Fly.io integration for Pikku',

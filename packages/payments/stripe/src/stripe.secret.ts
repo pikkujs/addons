@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const stripeSecretsSchema = z.string().describe('Stripe Secret Key (starts with sk_)')
 
 export type StripeSecrets = z.infer<typeof stripeSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secret_key',
   displayName: 'Stripe Secret Key',
   description: 'Stripe API secret key',
@@ -17,7 +17,7 @@ export const stripeWebhookSecretSchema = z.string().describe('Stripe webhook sig
 
 export type StripeWebhookSecret = z.infer<typeof stripeWebhookSecretSchema>
 
-wireSecret({
+defineSecret({
   name: 'webhook_secret',
   displayName: 'Stripe Webhook Signing Secret',
   description: 'Signing secret used to verify inbound Stripe webhook signatures',

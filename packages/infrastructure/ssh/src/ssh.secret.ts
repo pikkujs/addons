@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const sshSecretsSchema = z.object({
   host: z.string().describe('SSH server hostname'),
@@ -12,7 +12,7 @@ export const sshSecretsSchema = z.object({
 
 export type SshSecrets = z.infer<typeof sshSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'SSH Credentials',
   description: 'SSH server connection credentials',

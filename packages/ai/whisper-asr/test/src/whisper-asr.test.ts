@@ -8,8 +8,21 @@ import { GenericContainer, Wait } from 'testcontainers'
 import { stopSingletonServices } from '@pikku/core'
 import { rpcService } from '@pikku/core/rpc'
 import { LocalVariablesService, ConsoleLogger } from '@pikku/core/services'
+import type { JWTService } from '@pikku/core/services'
 import { LocalContent } from '@pikku/core/services/local-content'
 import { createSingletonServices } from './services.js'
+
+/**
+ * LocalContent signs asset URLs and so requires a JWTService since
+ * @pikku/core 0.12.74. This test only reads a fixture off disk and never
+ * verifies a signature, so an unsigned base64 round-trip is enough — it is a
+ * test double, not something to reach for outside this harness.
+ */
+const jwt: JWTService = {
+  encode: async (_expiresIn, payload) =>
+    Buffer.from(JSON.stringify(payload)).toString('base64url'),
+  decode: async (hash) => JSON.parse(Buffer.from(hash, 'base64url').toString()),
+}
 
 const WHISPER_ASR_IMAGE = process.env.WHISPER_ASR_IMAGE || 'onerahmet/openai-whisper-asr-webservice:latest'
 
@@ -38,7 +51,7 @@ test('whisper-asr external package', async () => {
       localFileUploadPath: fixturesDir,
       uploadUrlPrefix: '/uploads',
       assetUrlPrefix: '/assets',
-    }, logger)
+    }, logger, jwt)
 
     const singletonServices = await createSingletonServices({}, { variables, content } as any)
     const rpc = rpcService.getContextRPCService(singletonServices as any, {})

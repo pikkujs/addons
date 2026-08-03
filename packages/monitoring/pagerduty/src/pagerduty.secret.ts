@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const pagerdutySecretsSchema = z.object({
   apiKey: z.string().describe('PagerDuty API key'),
@@ -7,7 +7,7 @@ export const pagerdutySecretsSchema = z.object({
 
 export type PagerdutySecrets = z.infer<typeof pagerdutySecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'pagerduty',
   displayName: 'PagerDuty API',
   description: 'Incident management',

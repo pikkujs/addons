@@ -1,11 +1,18 @@
+import { UnauthorizedError } from '@pikku/core/errors'
 import { StravaService } from './strava-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets, variables }
-) => {
-  const strava = new StravaService(secrets, variables)
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    if (!wire.getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const cred = await wire.getCredential<{ accessToken: string }>('strava')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Strava connection — connect Strava first')
+    }
+    const strava = new StravaService(cred, variables)
 
-  return { strava }
-})
+    return { strava }
+  }
+)

@@ -1,5 +1,3 @@
-import { OAuth2Client } from '@pikku/core/oauth2'
-import type { TypedSecretService } from '#pikku/secrets/pikku-secrets.gen.js'
 import { BadRequestError, ConflictError, ForbiddenError, InternalServerError, MethodNotAllowedError, NotFoundError, TooManyRequestsError, UnauthorizedError, UnprocessableContentError } from '@pikku/core/errors'
 import type { TypedVariablesService } from '#pikku/variables/pikku-variables.gen.js'
 
@@ -109,15 +107,9 @@ const ROUTES: Record<string, { path: string[], query: string[], headers: string[
 
 export class RedditService {
   private baseUrl: string
-  private oauth: OAuth2Client
 
-  constructor(secrets: TypedSecretService, variables: TypedVariablesService) {
+  constructor(private creds: { accessToken: string }, variables: TypedVariablesService) {
     this.baseUrl = variables.get('REDDIT_BASE_URL') as string
-    this.oauth = new OAuth2Client(
-      REDDIT_OAUTH2_CONFIG,
-      'REDDIT_APP_CREDENTIALS',
-      secrets
-    )
   }
 
   async call<T>(
@@ -167,7 +159,9 @@ export class RedditService {
       url.searchParams.set(key, value)
     }
 
-    const response = await this.oauth.request(url.toString(), {
+    headers.Authorization = `Bearer ${this.creds.accessToken}`
+
+    const response = await fetch(url.toString(), {
       method,
       headers,
       body: body ? JSON.stringify(body) : undefined,

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const autopilotCredentialSchema = z.object({
   apiKey: z.string().describe('Autopilot API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'autopilot',
   displayName: 'Autopilot',
   description: 'Consume the Autopilot marketing automation API',

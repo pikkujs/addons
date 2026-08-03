@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const wekanCredentialSchema = z.object({
   apiKey: z.string().describe('Wekan API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'wekan',
   displayName: 'Wekan',
   description: 'Consume the Wekan kanban API',

@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const googleTasksTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const googleTasksOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'googleTasks',
   displayName: 'Google Tasks',
   description: 'Consume the Google Tasks API',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'googleTasksOAuthApp',
   displayName: 'Google Tasks OAuth App',
   description: 'OAuth2 app credentials for Google Tasks',

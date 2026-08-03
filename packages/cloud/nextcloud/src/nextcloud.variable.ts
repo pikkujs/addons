@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const nextcloudBaseUrlSchema = z.enum(["https://nextcloud.example.com"]).default("https://nextcloud.example.com")
 
-wireVariable({
+defineVariable({
   name: 'NEXTCLOUD_BASE_URL',
   displayName: 'Nextcloud Base URL',
   description: 'The base URL for the Nextcloud API.',

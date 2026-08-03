@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const resendSecretsSchema = z.object({
   apiKey: z.string().describe('Resend API key'),
@@ -8,7 +8,7 @@ export const resendSecretsSchema = z.object({
 
 export type ResendSecrets = z.infer<typeof resendSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'resend',
   displayName: 'Resend API',
   description: 'Email API for developers',

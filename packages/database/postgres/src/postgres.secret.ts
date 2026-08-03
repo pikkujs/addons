@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const postgresSecretsSchema = z.object({
   user: z.string().describe('Username'),
@@ -11,7 +11,7 @@ export const postgresSecretsSchema = z.object({
 
 export type PostgresSecrets = z.infer<typeof postgresSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'PostgreSQL Secrets',
   description: 'PostgreSQL authentication secrets',

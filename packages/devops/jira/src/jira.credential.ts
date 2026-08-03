@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const jiraCredentialSchema = z.object({
   apiKey: z.string().describe('Jira API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'jira',
   displayName: 'Jira',
   description: 'Jira integration for Pikku',

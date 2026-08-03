@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const openWeatherMapCredentialSchema = z.object({
   apiKey: z.string().describe('OpenWeatherMap API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'openWeatherMap',
   displayName: 'OpenWeatherMap',
   description: 'Gets current and future weather information',

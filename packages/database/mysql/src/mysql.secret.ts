@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const mysqlSecretsSchema = z.object({
   user: z.string().describe('Username'),
@@ -11,7 +11,7 @@ export const mysqlSecretsSchema = z.object({
 
 export type MysqlSecrets = z.infer<typeof mysqlSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'MySQL Secrets',
   description: 'MySQL authentication secrets',

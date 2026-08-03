@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const bitlyCredentialSchema = z.object({
   apiKey: z.string().describe('bitly API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'bitly',
   displayName: 'bitly',
   description: 'bitly addon',

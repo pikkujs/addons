@@ -1,6 +1,5 @@
 import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core'
-import { OAuth2Client } from '@pikku/core/oauth2'
-import type { TypedSecretService } from '#pikku/secrets/pikku-secrets.gen.js'
+import { UnauthorizedError } from '@pikku/core/errors'
 
 const GMAIL_BASE_URL = 'https://gmail.googleapis.com/gmail/v1'
 
@@ -37,18 +36,26 @@ const base64Url = (value: string): string =>
     .replace(/\//g, '_')
     .replace(/=+$/, '')
 
-export class GmailService implements EmailService {
-  private oauth: OAuth2Client
+export interface GmailCredentialResolver {
+  get<T = unknown>(name: string): Promise<T | null>
+}
 
+export class GmailService implements EmailService {
   constructor(
-    secrets: TypedSecretService,
+    private credentials: GmailCredentialResolver,
     private defaultFrom?: string
-  ) {
-    this.oauth = new OAuth2Client(
-      GMAIL_OAUTH2_CONFIG,
-      'GMAIL_APP_CREDENTIALS',
-      secrets
-    )
+  ) {}
+
+  /**
+   * The access token is owned and refreshed by the platform credential service,
+   * so it is resolved per-request rather than cached on the service.
+   */
+  private async authorization(): Promise<string> {
+    const cred = await this.credentials.get<{ accessToken: string }>('gmailOAuth')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Gmail connection — connect Gmail first')
+    }
+    return `Bearer ${cred.accessToken}`
   }
 
   async request<T>(
@@ -66,10 +73,11 @@ export class GmailService implements EmailService {
       }
     }
 
-    const response = await this.oauth.request(url.toString(), {
+    const response = await fetch(url.toString(), {
       method,
       headers: {
         'Content-Type': 'application/json',
+        Authorization: await this.authorization(),
       },
       body: options?.body ? JSON.stringify(options.body) : undefined,
     })

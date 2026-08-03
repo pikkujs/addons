@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const airtopBaseUrlSchema = z.enum(["https://api.airtop.ai/api/v1"]).default("https://api.airtop.ai/api/v1")
 
-wireVariable({
+defineVariable({
   name: 'AIRTOP_BASE_URL',
   displayName: 'Airtop Base URL',
   description: 'The base URL for the Airtop API.',

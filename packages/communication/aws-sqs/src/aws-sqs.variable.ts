@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const awsSqsBaseUrlSchema = z.enum(["https://sqs.local"]).default("https://sqs.local")
 
-wireVariable({
+defineVariable({
   name: 'AWS_SQS_BASE_URL',
   displayName: 'awssqs Base URL',
   description: 'The base URL for the awssqs API.',

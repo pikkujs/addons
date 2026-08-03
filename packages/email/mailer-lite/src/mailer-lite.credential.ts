@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const mailerLiteCredentialSchema = z.object({
   apiKey: z.string().describe('MailerLite API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'mailerLite',
   displayName: 'MailerLite',
   description: 'Consume the MailerLite email marketing API',

@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const githubBaseUrlSchema = z.enum(["https://api.github.com"]).default("https://api.github.com")
 
-wireVariable({
+defineVariable({
   name: 'GITHUB_BASE_URL',
   displayName: 'GitHub Base URL',
   description: 'The base URL for the GitHub API.',

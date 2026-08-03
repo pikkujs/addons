@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const webflowCredentialSchema = z.object({
   token: z.string().describe('Webflow bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'webflow',
   displayName: 'Webflow',
   description: 'Consume the Webflow CMS API',

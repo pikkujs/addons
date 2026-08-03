@@ -15,8 +15,8 @@ export const createSingletonServices = pikkuServices(async (_config, existingSer
     secrets,
     aiEmbedding: {
       model: 'test-embedding',
-      embed: async (_value: string) => [0.1, 0.2, 0.3],
-      embedMany: async (values: string[]) => values.map(() => [0.1, 0.2, 0.3]),
+      embedQuery: async (_value: string) => [0.1, 0.2, 0.3],
+      embedDocuments: async (values: string[]) => values.map(() => [0.1, 0.2, 0.3]),
     },
   }
 })

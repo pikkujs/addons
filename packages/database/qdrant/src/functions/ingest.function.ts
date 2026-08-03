@@ -24,7 +24,7 @@ export const ingest = pikkuSessionlessFunc({
       )
     }
     if (texts.length === 0) return { upserted: 0 }
-    const vectors = await aiEmbedding.embedMany(texts)
+    const vectors = await aiEmbedding.embedDocuments(texts)
     const points = texts.map((text, i) => ({
       id: globalThis.crypto.randomUUID(),
       vector: vectors[i],

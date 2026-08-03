@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const amqpCredentialSchema = z.object({
   apiKey: z.string().describe('AMQP API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'amqp',
   displayName: 'AMQP',
   description: 'AMQP sender integration for Pikku',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const upleadCredentialSchema = z.object({
   apiKey: z.string().describe('uplead API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'uplead',
   displayName: 'uplead',
   description: 'uplead addon',

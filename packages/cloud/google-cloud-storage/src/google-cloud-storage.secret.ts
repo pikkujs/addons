@@ -1,7 +1,7 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
-wireCredential({
+defineCredential({
   name: 'googleCloudStorageOAuth',
   displayName: 'Google Cloud Storage OAuth2',
   description: 'Google OAuth2 credentials for Cloud Storage API access',

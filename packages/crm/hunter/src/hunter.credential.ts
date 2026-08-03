@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const hunterCredentialSchema = z.object({
   apiKey: z.string().describe('Hunter API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'hunter',
   displayName: 'Hunter',
   description: 'Consume the Hunter email finder API',

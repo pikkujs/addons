@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const taigaCredentialSchema = z.object({
   apiKey: z.string().describe('Taiga API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'taiga',
   displayName: 'Taiga',
   description: 'Consume the Taiga API',

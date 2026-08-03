@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const autopilotBaseUrlSchema = z.enum(["https://api2.autopilothq.com/v1"]).default("https://api2.autopilothq.com/v1")
 
-wireVariable({
+defineVariable({
   name: 'AUTOPILOT_BASE_URL',
   displayName: 'Autopilot Base URL',
   description: 'The base URL for the Autopilot API.',

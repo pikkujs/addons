@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const clickupCredentialSchema = z.object({
   apiKey: z.string().describe('ClickUp API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'clickup',
   displayName: 'ClickUp',
   description: 'Consume the ClickUp API',

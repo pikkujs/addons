@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const erpnextCredentialSchema = z.object({
   apiKey: z.string().describe('ERPNext API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'erpnext',
   displayName: 'ERPNext',
   description: 'Consume the ERPNext REST API',

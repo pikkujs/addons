@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const nasaBaseUrlSchema = z.enum(["https://api.nasa.gov"]).default("https://api.nasa.gov")
 
-wireVariable({
+defineVariable({
   name: 'NASA_BASE_URL',
   displayName: 'NASA Base URL',
   description: 'The base URL for the NASA API.',

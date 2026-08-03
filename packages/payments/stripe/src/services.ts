@@ -1,5 +1,6 @@
 import Stripe from 'stripe'
 import { pikkuAddonServices } from '#pikku'
+import { StripeWebhookVerifier } from './stripe-webhook-verifier.service.js'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets, variables }) => {
   const apiKey = await secrets.getSecret('STRIPE_SECRET_KEY')
@@ -15,5 +16,10 @@ export const createSingletonServices = pikkuAddonServices(async (config, { secre
 
   const stripe = new Stripe(apiKey, opts)
 
-  return { stripe }
+  // Optional: an app can use the Stripe API without receiving webhooks, so a
+  // missing signing secret disables the receiver rather than failing boot.
+  const signingSecret = await secrets.getSecret('STRIPE_WEBHOOK_SECRET').catch(() => null)
+  const stripeWebhookVerifier = new StripeWebhookVerifier(stripe, signingSecret)
+
+  return { stripe, stripeWebhookVerifier }
 })

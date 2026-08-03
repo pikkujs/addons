@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const wiseCredentialSchema = z.object({
   token: z.string().describe('Wise bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'wise',
   displayName: 'Wise',
   description: 'Consume the Wise (TransferWise) payments API',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const metabaseSecretsSchema = z.object({
   host: z.string().describe('Metabase instance URL (e.g., https://metabase.example.com)'),
@@ -8,7 +8,7 @@ export const metabaseSecretsSchema = z.object({
 
 export type MetabaseSecrets = z.infer<typeof metabaseSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'metabase',
   displayName: 'Metabase API',
   description: 'Business intelligence',

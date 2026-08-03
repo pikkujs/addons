@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const mailgunSecretsSchema = z.object({
   apiKey: z.string().describe('Mailgun API key'),
@@ -9,7 +9,7 @@ export const mailgunSecretsSchema = z.object({
 
 export type MailgunSecrets = z.infer<typeof mailgunSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'mailgun',
   displayName: 'Mailgun API',
   description: 'Email delivery service',

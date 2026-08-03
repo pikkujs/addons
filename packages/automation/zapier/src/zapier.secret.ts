@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const zapierSecretsSchema = z.object({
   webhookUrls: z.record(z.string(), z.string().url())
@@ -8,7 +8,7 @@ export const zapierSecretsSchema = z.object({
 
 export type ZapierSecrets = z.infer<typeof zapierSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'zapier',
   displayName: 'Zapier Webhooks',
   description: 'Zapier webhook URLs for automation triggers',

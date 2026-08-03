@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const todoistCredentialSchema = z.object({
   token: z.string().describe('Todoist bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'todoist',
   displayName: 'Todoist',
   description: 'Todoist integration for Pikku',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const mailcheckCredentialSchema = z.object({
   apiKey: z.string().describe('Mailcheck API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'mailcheck',
   displayName: 'Mailcheck',
   description: 'Mailcheck addon',

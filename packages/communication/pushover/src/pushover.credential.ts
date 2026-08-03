@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const pushoverCredentialSchema = z.object({
   apiKey: z.string().describe('Pushover API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'pushover',
   displayName: 'Pushover',
   description: 'Send push notifications via Pushover',

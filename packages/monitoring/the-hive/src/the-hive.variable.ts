@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const theHiveBaseUrlSchema = z.enum(["https://thehive.example.com/api"]).default("https://thehive.example.com/api")
 
-wireVariable({
+defineVariable({
   name: 'THE_HIVE_BASE_URL',
   displayName: 'TheHive Base URL',
   description: 'The base URL for the TheHive API.',

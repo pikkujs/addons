@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const imapSecretsSchema = z.object({
   user: z.string().describe('Email address or username for IMAP login'),
@@ -12,7 +12,7 @@ export const imapSecretsSchema = z.object({
 
 export type ImapSecrets = z.infer<typeof imapSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'imap',
   displayName: 'IMAP Email',
   description: 'Connect to email servers via IMAP protocol',

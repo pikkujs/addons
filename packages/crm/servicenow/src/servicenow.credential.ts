@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const servicenowCredentialSchema = z.object({
   apiKey: z.string().describe('ServiceNow API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'servicenow',
   displayName: 'ServiceNow',
   description: 'Consume the ServiceNow ITSM API',

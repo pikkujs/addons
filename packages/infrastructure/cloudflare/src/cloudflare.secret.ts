@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const cloudflareSecretsSchema = z.object({
   apiKey: z.string().describe('Cloudflare API key'),
@@ -8,7 +8,7 @@ export const cloudflareSecretsSchema = z.object({
 
 export type CloudflareSecrets = z.infer<typeof cloudflareSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'cloudflare',
   displayName: 'Cloudflare API',
   description: 'Web security and CDN',

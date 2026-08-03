@@ -1,6 +1,5 @@
-import { OAuth2Client } from '@pikku/core/oauth2'
 import type { OAuth2CredentialConfig } from '@pikku/core/secret'
-import type { SecretService } from '@pikku/core'
+import { UnauthorizedError } from '@pikku/core/errors'
 
 const DATA_API_URL = 'https://analyticsdata.googleapis.com'
 
@@ -80,21 +79,39 @@ export interface MetadataResponse {
   metrics: Array<MetadataEntry & { type: string }>
 }
 
-export class GoogleAnalyticsReportingService {
-  private oauth: OAuth2Client
+export interface GoogleAnalyticsCredentialResolver {
+  get<T = unknown>(name: string): Promise<T | null>
+}
 
-  constructor(private propertyId: string, secrets: SecretService) {
-    this.oauth = new OAuth2Client(
-      GA4_OAUTH2_CONFIG,
-      'GOOGLE_ANALYTICS_APP_CREDENTIALS',
-      secrets
+export class GoogleAnalyticsReportingService {
+  constructor(
+    private propertyId: string,
+    private credentials: GoogleAnalyticsCredentialResolver
+  ) {}
+
+  /**
+   * The access token is owned and refreshed by the platform credential service,
+   * so it is resolved per-request rather than cached on the service.
+   */
+  private async authorization(): Promise<string> {
+    const cred = await this.credentials.get<{ accessToken: string }>(
+      'googleAnalyticsOAuth'
     )
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError(
+        'No Google Analytics connection — connect Google Analytics first'
+      )
+    }
+    return `Bearer ${cred.accessToken}`
   }
 
   private async request<T>(method: string, url: string, body?: unknown): Promise<T> {
-    const response = await this.oauth.request(url, {
+    const response = await fetch(url, {
       method,
-      headers: { 'Content-Type': 'application/json' },
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: await this.authorization(),
+      },
       body: body ? JSON.stringify(body) : undefined,
     })
 

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const emailSendSecretsSchema = z.object({
   host: z.string().describe('SMTP server hostname'),
@@ -11,7 +11,7 @@ export const emailSendSecretsSchema = z.object({
 
 export type EmailSendSecrets = z.infer<typeof emailSendSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'SMTP Credentials',
   description: 'SMTP server connection credentials',

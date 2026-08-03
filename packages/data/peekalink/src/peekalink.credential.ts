@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const peekalinkCredentialSchema = z.object({
   apiKey: z.string().describe('Peekalink API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'peekalink',
   displayName: 'Peekalink',
   description: 'Peekalink addon',

@@ -5,7 +5,7 @@ export type TestWhisperASRInput = Record<string, never>
 export type TestWhisperASROutput = { passed: number; failed: string[] }
 
 export const testWhisperASR = pikkuSessionlessFunc<TestWhisperASRInput, TestWhisperASROutput>({
-  func: async (services, _data, { rpc }) => {
+  func: async (_services, _data, { rpc }) => {
     let passed = 0
     const failed: string[] = []
 

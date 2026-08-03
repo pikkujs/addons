@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const sentrySecretsSchema = z.object({
   token: z.string().describe('Sentry API authentication token (Bearer token)'),
@@ -11,7 +11,7 @@ export const sentrySecretsSchema = z.object({
 
 export type SentrySecrets = z.infer<typeof sentrySecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'Sentry Secrets',
   description: 'API secrets for Sentry.io or self-hosted Sentry',

@@ -1,11 +1,18 @@
+import { UnauthorizedError } from '@pikku/core/errors'
 import { ZoomService } from './zoom-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets, variables }
-) => {
-  const zoom = new ZoomService(secrets, variables)
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    if (!wire.getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const cred = await wire.getCredential<{ accessToken: string }>('zoom')
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError('No Zoom connection — connect Zoom first')
+    }
+    const zoom = new ZoomService(cred, variables)
 
-  return { zoom }
-})
+    return { zoom }
+  }
+)

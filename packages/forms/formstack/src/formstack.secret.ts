@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const formstackCredentialsSchema = z.object({
   accessToken: z.string().describe('Formstack OAuth access token'),
@@ -7,7 +7,7 @@ export const formstackCredentialsSchema = z.object({
 
 export type FormstackCredentials = z.infer<typeof formstackCredentialsSchema>
 
-wireSecret({
+defineSecret({
   name: 'formstack',
   displayName: 'Formstack API',
   description: 'Form builder',

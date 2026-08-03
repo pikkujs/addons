@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const vonageBaseUrlSchema = z.enum(["https://rest.nexmo.com"]).default("https://rest.nexmo.com")
 
-wireVariable({
+defineVariable({
   name: 'VONAGE_BASE_URL',
   displayName: 'Vonage Base URL',
   description: 'The base URL for the Vonage API.',

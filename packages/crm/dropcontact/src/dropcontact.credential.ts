@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const dropcontactCredentialSchema = z.object({
   apiKey: z.string().describe('Dropcontact API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'dropcontact',
   displayName: 'Dropcontact',
   description: 'Find B2B emails and enrich contacts',

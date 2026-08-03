@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const deeplSecretsSchema = z.object({
   apiKey: z.string().describe('DeepL API key'),
@@ -8,7 +8,7 @@ export const deeplSecretsSchema = z.object({
 
 export type DeeplSecrets = z.infer<typeof deeplSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'deepl',
   displayName: 'DeepL API',
   description: 'AI translation service',

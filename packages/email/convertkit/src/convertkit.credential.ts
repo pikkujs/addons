@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const convertkitCredentialSchema = z.object({
   apiKey: z.string().describe('ConvertKit API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'convertkit',
   displayName: 'ConvertKit',
   description: 'Consume the ConvertKit API',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const mandrillSecretsSchema = z.string().describe('Mandrill API key')
 
 export type MandrillSecrets = z.infer<typeof mandrillSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'api_key',
   displayName: 'Mandrill API Key',
   description: 'Mandrill email API key',

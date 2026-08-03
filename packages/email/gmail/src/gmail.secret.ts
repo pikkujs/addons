@@ -1,7 +1,7 @@
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 import { z } from 'zod'
 
-wireCredential({
+defineCredential({
   name: 'gmailOAuth',
   displayName: 'Gmail OAuth2',
   description: 'Google OAuth2 secrets for Gmail API access',

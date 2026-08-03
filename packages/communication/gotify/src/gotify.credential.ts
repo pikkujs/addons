@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const gotifyCredentialSchema = z.object({
   apiKey: z.string().describe('Gotify API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'gotify',
   displayName: 'Gotify',
   description: 'Gotify addon',

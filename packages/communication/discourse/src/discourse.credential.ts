@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const discourseCredentialSchema = z.object({
   apiKey: z.string().describe('Discourse API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'discourse',
   displayName: 'Discourse',
   description: 'Consume the Discourse forum API',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const awsS3CredentialSchema = z.object({
   apiKey: z.string().describe('AWS S3 API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'awsS3',
   displayName: 'AWS S3',
   description: 'Store and retrieve objects in AWS S3',

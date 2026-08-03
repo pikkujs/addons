@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const s3SecretsSchema = z.object({
   accessKeyId: z.string().describe('AWS access key ID'),
@@ -11,7 +11,7 @@ export const s3SecretsSchema = z.object({
 
 export type S3Secrets = z.infer<typeof s3SecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'S3 Credentials',
   description: 'S3-compatible object storage credentials',

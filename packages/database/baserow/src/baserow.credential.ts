@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const baserowCredentialSchema = z.object({
   apiKey: z.string().describe('Baserow API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'baserow',
   displayName: 'Baserow',
   description: 'Consume the Baserow API',

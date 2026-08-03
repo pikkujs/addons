@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const clearbitCredentialSchema = z.object({
   token: z.string().describe('Clearbit bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'clearbit',
   displayName: 'Clearbit',
   description: 'Consume the Clearbit API for company and person enrichment',

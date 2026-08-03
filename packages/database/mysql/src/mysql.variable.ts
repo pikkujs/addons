@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const mysqlParamsSchema = z.object({
   host: z.string().default('localhost').describe('MySQL server hostname'),
@@ -8,7 +8,7 @@ export const mysqlParamsSchema = z.object({
   ssl: z.string().optional().describe('Enable SSL connection'),
 })
 
-wireVariable({
+defineVariable({
   name: 'mysql_params',
   displayName: 'MySQL Params',
   description: 'MySQL connection parameters',

@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const googleCloudNaturalLanguageTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const googleCloudNaturalLanguageOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'googleCloudNaturalLanguage',
   displayName: 'Google Cloud Natural Language',
   description: 'Consume the Google Cloud Natural Language API',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'googleCloudNaturalLanguageOAuthApp',
   displayName: 'Google Cloud Natural Language OAuth App',
   description: 'OAuth2 app credentials for Google Cloud Natural Language',

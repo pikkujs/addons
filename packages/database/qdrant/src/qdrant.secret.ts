@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const qdrantApiKeySchema = z
   .string()
@@ -8,7 +8,7 @@ export const qdrantApiKeySchema = z
 
 export type QdrantApiKey = z.infer<typeof qdrantApiKeySchema>
 
-wireSecret({
+defineSecret({
   name: 'apiKey',
   displayName: 'Qdrant API Key',
   description: 'API key for Qdrant Cloud',

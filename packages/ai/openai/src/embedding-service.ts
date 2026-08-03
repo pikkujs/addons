@@ -23,12 +23,12 @@ export class OpenAIEmbeddingService implements AIEmbeddingService {
     this.dimensions = options.dimensions
   }
 
-  async embed(value: string): Promise<number[]> {
-    const [vector] = await this.embedMany([value])
+  async embedQuery(value: string): Promise<number[]> {
+    const [vector] = await this.embedDocuments([value])
     return vector
   }
 
-  async embedMany(values: string[]): Promise<number[][]> {
+  async embedDocuments(values: string[]): Promise<number[][]> {
     if (values.length === 0) return []
     const result = await this.openai.embeddings.create({
       model: this.model,

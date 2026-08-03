@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const microsoftExcelTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const microsoftExcelOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'microsoftExcel',
   displayName: 'Microsoft Excel (OneDrive)',
   description: 'Consume the Microsoft Excel API for workbooks stored in OneDrive',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'microsoftExcelOAuthApp',
   displayName: 'Microsoft Excel (OneDrive) OAuth App',
   description: 'OAuth2 app credentials for Microsoft Excel (OneDrive)',

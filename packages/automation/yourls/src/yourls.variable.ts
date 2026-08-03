@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const yourlsBaseUrlSchema = z.enum(["https://yourls.local"]).default("https://yourls.local")
 
-wireVariable({
+defineVariable({
   name: 'YOURLS_BASE_URL',
   displayName: 'Yourls Base URL',
   description: 'The base URL for the Yourls API.',

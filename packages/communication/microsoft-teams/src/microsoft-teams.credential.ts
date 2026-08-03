@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const microsoftTeamsTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const microsoftTeamsOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'microsoftTeams',
   displayName: 'Microsoft Teams',
   description: 'Consume the Microsoft Teams (Graph) API',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'microsoftTeamsOAuthApp',
   displayName: 'Microsoft Teams OAuth App',
   description: 'OAuth2 app credentials for Microsoft Teams',

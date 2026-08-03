@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const automizyCredentialSchema = z.object({
   token: z.string().describe('Automizy bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'automizy',
   displayName: 'Automizy',
   description: 'Automizy email marketing — contacts and smart lists',

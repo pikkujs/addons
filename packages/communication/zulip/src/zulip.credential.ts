@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const zulipCredentialSchema = z.object({
   apiKey: z.string().describe('Zulip API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'zulip',
   displayName: 'Zulip',
   description: 'Consume the Zulip chat API',

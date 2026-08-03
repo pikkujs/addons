@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const lemlistCredentialSchema = z.object({
   apiKey: z.string().describe('Lemlist API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'lemlist',
   displayName: 'Lemlist',
   description: 'Consume the Lemlist cold email API',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const gristCredentialSchema = z.object({
   apiKey: z.string().describe('Grist API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'grist',
   displayName: 'Grist',
   description: 'Grist integration for Pikku',

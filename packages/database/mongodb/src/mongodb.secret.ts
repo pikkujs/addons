@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const mongodbSecretsSchema = z.object({
   connectionString: z.string().describe('MongoDB connection string (e.g. mongodb://user:pass@host:27017 or mongodb+srv://...)'),
@@ -11,7 +11,7 @@ export const mongodbSecretsSchema = z.object({
 
 export type MongodbSecrets = z.infer<typeof mongodbSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'MongoDB Secrets',
   description: 'MongoDB connection secrets',

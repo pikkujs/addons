@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-flyio",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "type": "module",
   "imports": {
     "#pikku": "./dist/.pikku/pikku-types.gen.js",
@@ -27,12 +27,12 @@
     "pikku": "pikku all"
   },
   "peerDependencies": {
-    "@pikku/core": "^0.12.36",
+    "@pikku/core": "^0.12.74",
     "zod": "^4"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.55",
-    "@pikku/core": "^0.12.39",
+    "@pikku/cli": "^0.12.96",
+    "@pikku/core": "^0.12.74",
     "typescript": "^5.7.2",
     "zod": "^4"
   }

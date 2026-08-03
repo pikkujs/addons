@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const orbitCredentialSchema = z.object({
   token: z.string().describe('Orbit bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'orbit',
   displayName: 'Orbit',
   description: 'Consume the Orbit API',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const posthogSecretsSchema = z.object({
   apiKey: z.string().describe('PostHog API key'),
@@ -8,7 +8,7 @@ export const posthogSecretsSchema = z.object({
 
 export type PosthogSecrets = z.infer<typeof posthogSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'posthog',
   displayName: 'PostHog API',
   description: 'Product analytics',

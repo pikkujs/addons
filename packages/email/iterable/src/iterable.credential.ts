@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const iterableCredentialSchema = z.object({
   apiKey: z.string().describe('Iterable API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'iterable',
   displayName: 'Iterable',
   description: 'Consume the Iterable marketing API',

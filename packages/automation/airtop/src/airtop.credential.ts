@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const airtopCredentialSchema = z.object({
   token: z.string().describe('Airtop bearer token'),
 })
 
-wireCredential({
+defineCredential({
   name: 'airtop',
   displayName: 'Airtop',
   description: 'Scrape and control any site with Airtop',

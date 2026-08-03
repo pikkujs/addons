@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const questDbBaseUrlSchema = z.enum(["https://questdb.local"]).default("https://questdb.local")
 
-wireVariable({
+defineVariable({
   name: 'QUEST_DB_BASE_URL',
   displayName: 'questdb Base URL',
   description: 'The base URL for the questdb API.',

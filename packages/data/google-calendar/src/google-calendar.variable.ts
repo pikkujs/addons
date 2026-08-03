@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const googleCalendarBaseUrlSchema = z.enum(["https://www.googleapis.com/calendar/v3"]).default("https://www.googleapis.com/calendar/v3")
 
-wireVariable({
+defineVariable({
   name: 'GOOGLE_CALENDAR_BASE_URL',
   displayName: 'Google Calendar Base URL',
   description: 'The base URL for the Google Calendar API.',

@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const googleTasksBaseUrlSchema = z.enum(["https://tasks.googleapis.com"]).default("https://tasks.googleapis.com")
 
-wireVariable({
+defineVariable({
   name: 'GOOGLE_TASKS_BASE_URL',
   displayName: 'Google Tasks Base URL',
   description: 'The base URL for the Google Tasks API.',

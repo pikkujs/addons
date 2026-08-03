@@ -4,14 +4,14 @@ import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,
-  { secrets, variables }
+  { secrets, variables, credentials }
 ) => {
   const creds = await secrets.getSecret('GOOGLE_ANALYTICS_CREDENTIALS')
   const googleAnalytics = new GoogleAnalyticsService(creds)
 
   const propertyId = await variables.get('GOOGLE_ANALYTICS_PROPERTY_ID')
   const googleAnalyticsReporting = propertyId
-    ? new GoogleAnalyticsReportingService(propertyId, secrets)
+    ? new GoogleAnalyticsReportingService(propertyId, credentials)
     : undefined
 
   return { googleAnalytics, googleAnalyticsReporting }

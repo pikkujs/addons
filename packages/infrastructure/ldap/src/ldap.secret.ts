@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const ldapSecretsSchema = z.object({
   url: z.string().describe('LDAP server URL (e.g. ldap://localhost:389)'),
@@ -10,7 +10,7 @@ export const ldapSecretsSchema = z.object({
 
 export type LdapSecrets = z.infer<typeof ldapSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'secrets',
   displayName: 'LDAP Credentials',
   description: 'LDAP server connection credentials',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const metaConversionsSecretsSchema = z.object({
   pixelId: z.string().describe('Meta Pixel ID'),
@@ -8,7 +8,7 @@ export const metaConversionsSecretsSchema = z.object({
 
 export type MetaConversionsSecrets = z.infer<typeof metaConversionsSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'metaConversions',
   displayName: 'Meta Conversions API',
   description: 'Meta (Facebook) Conversions API for server-side event tracking',

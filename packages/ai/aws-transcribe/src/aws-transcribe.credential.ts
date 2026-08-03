@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const awsTranscribeCredentialSchema = z.object({
   apiKey: z.string().describe('AWS Transcribe API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'awsTranscribe',
   displayName: 'AWS Transcribe',
   description: 'Sends data to AWS Transcribe',

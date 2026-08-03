@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const venafiTlsProtectCloudCredentialSchema = z.object({
   apiKey: z.string().describe('Venafi TLS Protect Cloud API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'venafiTlsProtectCloud',
   displayName: 'Venafi TLS Protect Cloud',
   description: 'Consume the Venafi TLS Protect Cloud API',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const segmentSecretsSchema = z.object({
   apiKey: z.string().describe('Segment API key'),
@@ -8,7 +8,7 @@ export const segmentSecretsSchema = z.object({
 
 export type SegmentSecrets = z.infer<typeof segmentSecretsSchema>
 
-wireSecret({
+defineSecret({
   name: 'segment',
   displayName: 'Segment API',
   description: 'Customer data platform',

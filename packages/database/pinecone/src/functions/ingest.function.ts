@@ -26,7 +26,7 @@ export const ingest = pikkuSessionlessFunc({
       )
     }
     if (texts.length === 0) return { upserted: 0 }
-    const vectors = await aiEmbedding.embedMany(texts)
+    const vectors = await aiEmbedding.embedDocuments(texts)
     await pineconeFetch(pinecone, `/vectors/upsert`, {
       namespace: collection,
       vectors: texts.map((text, i) => ({

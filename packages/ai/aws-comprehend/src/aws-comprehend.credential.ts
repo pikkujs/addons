@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const awsComprehendCredentialSchema = z.object({
   apiKey: z.string().describe('AWS Comprehend API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'awsComprehend',
   displayName: 'AWS Comprehend',
   description: 'Amazon Comprehend text analysis for Pikku',

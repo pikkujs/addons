@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const microsoftSqlCredentialSchema = z.object({
   apiKey: z.string().describe('microsoftsql API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'microsoftSql',
   displayName: 'microsoftsql',
   description: 'microsoftsql addon',

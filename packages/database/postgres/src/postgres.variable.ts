@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const postgresParamsSchema = z.object({
   host: z.string().default('localhost').describe('PostgreSQL server hostname'),
@@ -8,7 +8,7 @@ export const postgresParamsSchema = z.object({
   ssl: z.string().optional().describe('Enable SSL connection'),
 })
 
-wireVariable({
+defineVariable({
   name: 'postgres_params',
   displayName: 'PostgreSQL Params',
   description: 'PostgreSQL connection parameters',

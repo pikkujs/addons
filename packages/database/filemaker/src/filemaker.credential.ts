@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const filemakerCredentialSchema = z.object({
   apiKey: z.string().describe('FileMaker API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'filemaker',
   displayName: 'FileMaker',
   description: 'Retrieve and manage data via the FileMaker Data API',

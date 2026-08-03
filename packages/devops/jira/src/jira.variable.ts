@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const jiraBaseUrlSchema = z.enum(["https://your-domain.atlassian.net"]).default("https://your-domain.atlassian.net")
 
-wireVariable({
+defineVariable({
   name: 'JIRA_BASE_URL',
   displayName: 'Jira Base URL',
   description: 'The base URL for the Jira API.',

@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const mondayComCredentialSchema = z.object({
   apiKey: z.string().describe('Monday.com API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'mondayCom',
   displayName: 'Monday.com',
   description: 'Consume the Monday.com GraphQL API',

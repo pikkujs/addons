@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const awsComprehendBaseUrlSchema = z.enum(["https://comprehend.us-east-1.amazonaws.com"]).default("https://comprehend.us-east-1.amazonaws.com")
 
-wireVariable({
+defineVariable({
   name: 'AWS_COMPREHEND_BASE_URL',
   displayName: 'AWS Comprehend Base URL',
   description: 'The base URL for the AWS Comprehend API.',

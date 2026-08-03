@@ -1,13 +1,13 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const spotifyTokenSchema = z.object({
   accessToken: z.string(),
   refreshToken: z.string().optional(),
 })
 
-wireCredential({
+defineCredential({
   name: 'spotify',
   displayName: 'Spotify',
   description: 'Spotify integration for Pikku',
@@ -27,7 +27,7 @@ export const spotifyOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireSecret({
+defineSecret({
   name: 'spotifyOAuthApp',
   schema: spotifyOAuthAppSchema,
   displayName: 'Spotify OAuth App',

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { wireSecret } from '@pikku/core/secret'
+import { defineSecret } from '@pikku/core/secret'
 
 export const typeformCredentialsSchema = z.object({
   apiKey: z.string().describe('Typeform personal access token'),
@@ -7,7 +7,7 @@ export const typeformCredentialsSchema = z.object({
 
 export type TypeformCredentials = z.infer<typeof typeformCredentialsSchema>
 
-wireSecret({
+defineSecret({
   name: 'typeform',
   displayName: 'Typeform API',
   description: 'Form builder',

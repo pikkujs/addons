@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const awsLambdaBaseUrlSchema = z.enum(["https://lambda.local"]).default("https://lambda.local")
 
-wireVariable({
+defineVariable({
   name: 'AWS_LAMBDA_BASE_URL',
   displayName: 'awslambda Base URL',
   description: 'The base URL for the awslambda API.',

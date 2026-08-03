@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const mqttBaseUrlSchema = z.enum(["https://mqtt.local"]).default("https://mqtt.local")
 
-wireVariable({
+defineVariable({
   name: 'MQTT_BASE_URL',
   displayName: 'MQTT Base URL',
   description: 'The base URL for the MQTT API.',

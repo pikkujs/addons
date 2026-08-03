@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const snowflakeCredentialSchema = z.object({
   apiKey: z.string().describe('Snowflake API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'snowflake',
   displayName: 'Snowflake',
   description: 'Run SQL queries, insert and update rows in Snowflake',

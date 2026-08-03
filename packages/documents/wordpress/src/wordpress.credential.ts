@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const wordpressCredentialSchema = z.object({
   apiKey: z.string().describe('WordPress API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'wordpress',
   displayName: 'WordPress',
   description: 'WordPress integration for Pikku',

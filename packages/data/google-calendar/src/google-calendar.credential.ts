@@ -1,6 +1,6 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
-import { wireSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
+import { defineSecret } from '@pikku/core/secret'
 
 export const googleCalendarTokenSchema = z.object({
   accessToken: z.string(),
@@ -12,7 +12,7 @@ export const googleCalendarOAuthAppSchema = z.object({
   clientSecret: z.string().describe('OAuth2 app client secret'),
 })
 
-wireCredential({
+defineCredential({
   name: 'googleCalendar',
   displayName: 'Google Calendar',
   description: 'Google Calendar integration for Pikku',
@@ -27,7 +27,7 @@ wireCredential({
   },
 })
 
-wireSecret({
+defineSecret({
   name: 'googleCalendarOAuthApp',
   displayName: 'Google Calendar OAuth App',
   description: 'OAuth2 app credentials for Google Calendar',

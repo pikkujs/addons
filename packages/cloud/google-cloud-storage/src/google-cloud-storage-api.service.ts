@@ -1,6 +1,5 @@
-import { OAuth2Client } from '@pikku/core/oauth2'
 import type { OAuth2CredentialConfig } from '@pikku/core/secret'
-import type { SecretService } from '@pikku/core'
+import { UnauthorizedError } from '@pikku/core/errors'
 
 const BASE_URL = 'https://storage.googleapis.com/storage/v1'
 const UPLOAD_URL = 'https://storage.googleapis.com/upload/storage/v1'
@@ -49,15 +48,30 @@ export interface GCSBucket {
   [key: string]: unknown
 }
 
-export class GoogleCloudStorageService {
-  private oauth: OAuth2Client
+export interface GCSCredentialResolver {
+  get<T = unknown>(name: string): Promise<T | null>
+}
 
-  constructor(private projectId: string, secrets: SecretService) {
-    this.oauth = new OAuth2Client(
-      GCS_OAUTH2_CONFIG,
-      'GOOGLE_CLOUD_STORAGE_APP_CREDENTIALS',
-      secrets
+export class GoogleCloudStorageService {
+  constructor(
+    private projectId: string,
+    private credentials: GCSCredentialResolver
+  ) {}
+
+  /**
+   * The access token is owned and refreshed by the platform credential service,
+   * so it is resolved per-request rather than cached on the service.
+   */
+  private async authorization(): Promise<string> {
+    const cred = await this.credentials.get<{ accessToken: string }>(
+      'googleCloudStorageOAuth'
     )
+    if (!cred?.accessToken) {
+      throw new UnauthorizedError(
+        'No Google Cloud Storage connection — connect Google Cloud Storage first'
+      )
+    }
+    return `Bearer ${cred.accessToken}`
   }
 
   private async request<T>(
@@ -69,6 +83,7 @@ export class GoogleCloudStorageService {
       method,
       headers: {
         ...options?.headers,
+        Authorization: await this.authorization(),
       },
     }
 
@@ -78,7 +93,7 @@ export class GoogleCloudStorageService {
 
     init.body = options?.rawBody ?? (options?.body ? JSON.stringify(options.body) : undefined)
 
-    const response = await this.oauth.request(url, init)
+    const response = await fetch(url, init)
 
     if (!response.ok) {
       const errorText = await response.text()
@@ -93,7 +108,10 @@ export class GoogleCloudStorageService {
   }
 
   private async requestBuffer(method: string, url: string): Promise<ArrayBuffer> {
-    const response = await this.oauth.request(url, { method })
+    const response = await fetch(url, {
+      method,
+      headers: { Authorization: await this.authorization() },
+    })
 
     if (!response.ok) {
       const errorText = await response.text()

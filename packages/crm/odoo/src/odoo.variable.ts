@@ -1,9 +1,9 @@
 import { z } from 'zod'
-import { wireVariable } from '@pikku/core/variable'
+import { defineVariable } from '@pikku/core/variable'
 
 export const odooBaseUrlSchema = z.enum(["https://odoo.example.com"]).default("https://odoo.example.com")
 
-wireVariable({
+defineVariable({
   name: 'ODOO_BASE_URL',
   displayName: 'Odoo Base URL',
   description: 'The base URL for the Odoo API.',

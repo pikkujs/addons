@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const questDbCredentialSchema = z.object({
   apiKey: z.string().describe('questdb API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'questDb',
   displayName: 'questdb',
   description: 'questdb addon',

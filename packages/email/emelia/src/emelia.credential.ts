@@ -1,11 +1,11 @@
 import { z } from 'zod'
-import { wireCredential } from '@pikku/core/credential'
+import { defineCredential } from '@pikku/core/credential'
 
 export const emeliaCredentialSchema = z.object({
   apiKey: z.string().describe('Emelia API key'),
 })
 
-wireCredential({
+defineCredential({
   name: 'emelia',
   displayName: 'Emelia',
   description: 'Consume the Emelia cold email API',
