@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-servicenow",
-  "version": "0.0.3",
+  "version": "0.0.2",
   "type": "module",
   "imports": {
     "#pikku": "./.pikku/pikku-types.gen.ts",

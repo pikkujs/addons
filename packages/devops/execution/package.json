@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-execution",
-  "version": "0.2.1",
+  "version": "0.2.0",
   "type": "module",
   "imports": {
     "#pikku": "./dist/.pikku/pikku-types.gen.js"
