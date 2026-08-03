@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-quickbooks",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "imports": {
     "#pikku": "./.pikku/pikku-types.gen.ts",
