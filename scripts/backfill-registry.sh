@@ -26,6 +26,9 @@ set -uo pipefail
 # Both modes read versions from the local checkout, so `git pull` first: a stale
 # checkout asks for versions that were never published, npm 404s, and the ingest
 # reports them as failures.
+#
+# Every registry in registry-targets.sh (staging and production) is reconciled,
+# each against its own catalogue. Pin a single one with REGISTRY_URL=…
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$SCRIPT_DIR")"
@@ -40,7 +43,8 @@ if [ $# -eq 0 ]; then
   exit 1
 fi
 
-REGISTRY_URL="${REGISTRY_URL:-https://api.pikkufabric.com}"
+# shellcheck source=scripts/registry-targets.sh
+source "$SCRIPT_DIR/registry-targets.sh"
 
 # Every publishable package in the checkout, as `name@version`.
 local_packages() {
@@ -60,62 +64,99 @@ specs=()
 # array would silently stay empty — which reads as "nothing to do" rather than
 # as an error. Read the lines explicitly so both platforms behave the same.
 read_specs() {
+  specs=()
   local line
   while IFS= read -r line; do
     [ -n "$line" ] && specs+=("$line")
   done <<< "$1"
 }
 
-case "$1" in
-  --reconcile)
-    # Ask the registry what it already has and ingest only the difference.
-    if ! diff_out=$(local_packages | REGISTRY_URL="$REGISTRY_URL" node "$SCRIPT_DIR/registry-diff.mjs"); then
-      echo "Error: could not diff the checkout against the registry" >&2
-      exit 1
-    fi
-    read_specs "$diff_out"
+# Ingest the resolved specs into ONE registry. Each environment is reconciled
+# against its own catalogue — staging and prod are routinely at different states
+# (a fresh prod reset, a staging that has never been ingested), so a single
+# shared diff would skip whatever one of them is missing.
+backfill_target() {
+  local url="$1"
 
-    if [ ${#specs[@]} -eq 0 ]; then
-      echo "Registry is already in sync with the checkout — nothing to do."
-      exit 0
+  case "$mode" in
+    --reconcile)
+      # Ask this registry what it already has and ingest only the difference.
+      if ! diff_out=$(local_packages | REGISTRY_URL="$url" node "$SCRIPT_DIR/registry-diff.mjs"); then
+        echo "Error: could not diff the checkout against $url" >&2
+        return 1
+      fi
+      read_specs "$diff_out"
+
+      if [ ${#specs[@]} -eq 0 ]; then
+        echo "$url is already in sync with the checkout — nothing to do."
+        return 0
+      fi
+      ;;
+    --all)
+      if ! all_out=$(local_packages); then
+        echo "Error: could not enumerate local packages" >&2
+        return 1
+      fi
+      read_specs "$all_out"
+      ;;
+    *)
+      specs=("${explicit_specs[@]}")
+      ;;
+  esac
+
+  echo "Backfilling ${#specs[@]} package(s) into $url..."
+  echo
+
+  local failed=()
+  local spec name version
+  for spec in "${specs[@]}"; do
+    # Split a trailing @version off, taking care not to eat the leading @scope.
+    if [[ "$spec" =~ ^(@?[^@]+)@(.+)$ ]]; then
+      name="${BASH_REMATCH[1]}"
+      version="${BASH_REMATCH[2]}"
+    else
+      name="$spec"
+      version=""
     fi
-    ;;
-  --all)
-    if ! all_out=$(local_packages); then
-      echo "Error: could not enumerate local packages" >&2
-      exit 1
+
+    if ! REGISTRY_URL="$url" bash "$SCRIPT_DIR/notify-registry.sh" "$name" "$version"; then
+      failed+=("$spec")
     fi
-    read_specs "$all_out"
+  done
+
+  echo
+  if [ ${#failed[@]} -gt 0 ]; then
+    echo "${#failed[@]} of ${#specs[@]} failed for $url:" >&2
+    printf '  - %s\n' "${failed[@]}" >&2
+    return 1
+  fi
+
+  echo "All ${#specs[@]} package(s) ingested into $url ✓"
+  return 0
+}
+
+case "$1" in
+  --reconcile | --all)
+    mode="$1"
+    explicit_specs=()
     ;;
   *)
-    specs=("$@")
+    mode='explicit'
+    explicit_specs=("$@")
     ;;
 esac
 
-echo "Backfilling ${#specs[@]} package(s)..."
-echo
+# Every target is attempted even if an earlier one fails: a staging outage must
+# not leave production un-ingested (or the reverse).
+failed_targets=()
+while IFS= read -r target; do
+  [ -n "$target" ] || continue
+  echo "── $target ─────────────────────────────────────────"
+  backfill_target "$target" || failed_targets+=("$target")
+  echo
+done < <(registry_targets)
 
-failed=()
-for spec in "${specs[@]}"; do
-  # Split a trailing @version off, taking care not to eat the leading @scope.
-  if [[ "$spec" =~ ^(@?[^@]+)@(.+)$ ]]; then
-    name="${BASH_REMATCH[1]}"
-    version="${BASH_REMATCH[2]}"
-  else
-    name="$spec"
-    version=""
-  fi
-
-  if ! bash "$SCRIPT_DIR/notify-registry.sh" "$name" "$version"; then
-    failed+=("$spec")
-  fi
-done
-
-echo
-if [ ${#failed[@]} -gt 0 ]; then
-  echo "${#failed[@]} of ${#specs[@]} failed:" >&2
-  printf '  - %s\n' "${failed[@]}" >&2
+if [ ${#failed_targets[@]} -gt 0 ]; then
+  echo "Backfill failed for: ${failed_targets[*]}" >&2
   exit 1
 fi
-
-echo "All ${#specs[@]} package(s) ingested ✓"

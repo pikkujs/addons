@@ -1,11 +1,20 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Notify the pikkufabric registry that a package was published to npm. Fabric
+# Notify the pikkufabric registries that a package was published to npm. Fabric
 # fetches the published tarball, stores it in R2, and indexes it (the
 # `ingestPackage` endpoint). REGISTRY_API_KEY is a fabric API token — it's
 # resolved (sha256 -> apiToken table) to the publishing org/user, who the
 # ingested package is then attributed to.
+#
+# The package is ingested into every target from registry-targets.sh (staging
+# and production by default). Targets are independent: one being down must not
+# stop the others from being told, so all are attempted and failures are
+# reported together at the end.
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+# shellcheck source=scripts/registry-targets.sh
+source "$SCRIPT_DIR/registry-targets.sh"
 
 if [ -z "${REGISTRY_API_KEY:-}" ]; then
   echo "Error: REGISTRY_API_KEY environment variable is required"
@@ -17,7 +26,6 @@ if [ -z "${1:-}" ]; then
   exit 1
 fi
 
-REGISTRY_URL="${REGISTRY_URL:-https://api.pikkufabric.com}"
 name="$1"
 version="${2:-}"
 
@@ -36,35 +44,57 @@ fi
 # package of a run normally pays it: npm has caught up by the time the rest
 # are notified.
 MAX_RETRIES="${NOTIFY_MAX_RETRIES:-6}"
-RETRY_DELAY="${NOTIFY_RETRY_DELAY:-15}"
 
-for attempt in $(seq 1 "$MAX_RETRIES"); do
-  echo -n "Ingesting $name${version:+@$version} (attempt $attempt/$MAX_RETRIES)... "
-  response=$(curl -s -w "\n%{http_code}" \
-    -X POST "$REGISTRY_URL/registry/addons/ingest" \
-    -H "Content-Type: application/json" \
-    -H "Authorization: Bearer $REGISTRY_API_KEY" \
-    -d "$payload")
+# Ingest into one registry, retrying the npm-lag window. Echoes progress; returns
+# non-zero once the retry budget is spent.
+ingest_into() {
+  local url="$1"
+  local delay="${NOTIFY_RETRY_DELAY:-15}"
+  local attempt response status body
 
-  status=$(echo "$response" | tail -n1)
-  # `head -n -1` is GNU-only — BSD/macOS head rejects a negative count, which
-  # aborts the script before the status is ever checked. Strip the trailing
-  # status line with parameter expansion so this runs anywhere.
-  body="${response%$'\n'*}"
+  for attempt in $(seq 1 "$MAX_RETRIES"); do
+    echo -n "Ingesting $name${version:+@$version} into $url (attempt $attempt/$MAX_RETRIES)... "
+    response=$(curl -s -w "\n%{http_code}" \
+      -X POST "$url/registry/addons/ingest" \
+      -H "Content-Type: application/json" \
+      -H "Authorization: Bearer $REGISTRY_API_KEY" \
+      -d "$payload")
 
-  if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
-    echo "ok ($status)"
-    exit 0
+    status=$(echo "$response" | tail -n1)
+    # `head -n -1` is GNU-only — BSD/macOS head rejects a negative count, which
+    # aborts the script before the status is ever checked. Strip the trailing
+    # status line with parameter expansion so this runs anywhere.
+    body="${response%$'\n'*}"
+
+    if [ "$status" -ge 200 ] && [ "$status" -lt 300 ]; then
+      echo "ok ($status)"
+      return 0
+    fi
+
+    echo "FAILED ($status)"
+    echo "  Response: $body"
+
+    if [ "$attempt" -lt "$MAX_RETRIES" ]; then
+      echo "  Retrying in ${delay}s..."
+      sleep "$delay"
+      delay=$((delay * 2))
+    fi
+  done
+
+  return 1
+}
+
+failed=()
+while IFS= read -r url; do
+  [ -n "$url" ] || continue
+  if ! ingest_into "$url"; then
+    failed+=("$url")
   fi
+done < <(registry_targets)
 
-  echo "FAILED ($status)"
-  echo "  Response: $body"
+if [ ${#failed[@]} -gt 0 ]; then
+  echo "  $name${version:+@$version} was not ingested into: ${failed[*]}" >&2
+  exit 1
+fi
 
-  if [ "$attempt" -lt "$MAX_RETRIES" ]; then
-    echo "  Retrying in ${RETRY_DELAY}s..."
-    sleep "$RETRY_DELAY"
-    RETRY_DELAY=$((RETRY_DELAY * 2))
-  fi
-done
-
-exit 1
+exit 0

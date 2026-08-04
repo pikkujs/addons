@@ -1,10 +1,12 @@
 name: Reconcile Registry
 
-# Keeps the pikkufabric catalogue in step with what is actually published to
-# npm. The release workflow notifies the registry per-publish, but that can miss
+# Keeps the pikkufabric catalogues (staging AND production — see
+# scripts/registry-targets.sh) in step with what is actually published to npm.
+# The release workflow notifies the registries per-publish, but that can miss
 # packages (npm's read path lags right after a publish, and packages published
-# before the notify step existed were never ingested at all). This diffs the
-# catalogue against the checkout and ingests only the difference.
+# before the notify step existed were never ingested at all). This diffs each
+# catalogue against the checkout and ingests only that environment's difference,
+# so an environment reset back to empty is repopulated in full.
 #
 # Runs on demand, and daily so drift is repaired without anyone noticing it.
 

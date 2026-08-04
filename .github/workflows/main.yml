@@ -183,6 +183,9 @@ jobs:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: '0'
 
+      # notify-registry.sh ingests into every environment listed in
+      # scripts/registry-targets.sh (staging and production), so a released
+      # addon is installable in both as soon as it lands on npm.
       - name: Notify registry of published packages
         if: steps.changesets.outputs.published == 'true'
         run: |
