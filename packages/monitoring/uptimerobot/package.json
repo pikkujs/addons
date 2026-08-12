@@ -17,8 +17,7 @@
     }
   },
   "files": [
-    "dist",
-    ".pikku"
+    "dist"
   ],
   "scripts": {
     "prebuild": "pikku all",
