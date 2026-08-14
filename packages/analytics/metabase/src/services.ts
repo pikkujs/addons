@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret('METABASE_CREDENTIALS')
+  const creds = (await secrets.getSecret('METABASE_CREDENTIALS')).reveal()
   const metabase = new MetabaseService(creds)
 
   return { metabase }

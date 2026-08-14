@@ -38,7 +38,7 @@ export class MandrillService implements EmailService {
 
   private async getApiKey(): Promise<string> {
     if (typeof this.secretsOrApiKey === 'string') return this.secretsOrApiKey
-    return this.secretsOrApiKey.getSecret('MANDRILL_API_KEY')
+    return (await this.secretsOrApiKey.getSecret('MANDRILL_API_KEY')).reveal()
   }
 
   async request<T>(

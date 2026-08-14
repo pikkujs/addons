@@ -22,7 +22,7 @@ export class SendgridService implements EmailService {
 
   private async getApiKey(): Promise<string> {
     if (typeof this.secretsOrApiKey === 'string') return this.secretsOrApiKey
-    return this.secretsOrApiKey.getSecret('SENDGRID_API_KEY')
+    return (await this.secretsOrApiKey.getSecret('SENDGRID_API_KEY')).reveal()
   }
 
   async request<T>(

@@ -3,10 +3,7 @@ import { pikkuAddonServices } from '#pikku'
 
 export const createSingletonServices = pikkuAddonServices(
   async (config, { secrets }) => {
-    const creds =
-      await secrets.getSecret(
-        'PLENTYMARKETS_CREDENTIALS'
-      )
+    const creds = (await secrets.getSecret('PLENTYMARKETS_CREDENTIALS')).reveal()
     const plentymarkets = new PlentymarketsService(creds)
 
     return { plentymarkets }

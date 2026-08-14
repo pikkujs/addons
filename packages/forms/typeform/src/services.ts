@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret('TYPEFORM_CREDENTIALS')
+  const creds = (await secrets.getSecret('TYPEFORM_CREDENTIALS')).reveal()
   const typeform = new TypeformService(creds)
 
   return { typeform }

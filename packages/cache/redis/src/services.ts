@@ -13,7 +13,7 @@ export const createSingletonServices = pikkuAddonServices(async (config, { varia
   const port = parseInt(params?.port ?? '6379', 10)
   const database = parseInt(params?.database ?? '0', 10)
   const tls = params?.tls === 'true'
-  const password = await secrets.getSecret('REDIS_PASSWORD')
+  const password = (await secrets.getSecret('REDIS_PASSWORD')).reveal()
 
   const redis = new RedisService({
     host,

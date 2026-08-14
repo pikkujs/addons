@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret('JOTFORM_CREDENTIALS')
+  const creds = (await secrets.getSecret('JOTFORM_CREDENTIALS')).reveal()
   const jotform = new JotformService(creds)
 
   return { jotform }

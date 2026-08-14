@@ -28,7 +28,7 @@ export class MailgunService implements EmailService {
 
   private async getCreds(): Promise<MailgunSecrets> {
     if ('getSecret' in this.secretsOrCreds) {
-      return this.secretsOrCreds.getSecret('MAILGUN_CREDENTIALS')
+      return (await this.secretsOrCreds.getSecret('MAILGUN_CREDENTIALS')).reveal()
     }
     return this.secretsOrCreds
   }

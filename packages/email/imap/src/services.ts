@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret('IMAP_CREDENTIALS')
+  const creds = (await secrets.getSecret('IMAP_CREDENTIALS')).reveal()
   const imap = new ImapService(creds)
 
   return { imap }

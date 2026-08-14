@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets }
 ) => {
-  const creds = await secrets.getSecret('DOCRAPTOR_CREDENTIALS')
+  const creds = (await secrets.getSecret('DOCRAPTOR_CREDENTIALS')).reveal()
   const docraptor = new DocraptorService(creds)
 
   return { docraptor }

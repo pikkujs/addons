@@ -5,7 +5,7 @@ export const createSingletonServices = pikkuAddonServices(async (
   config,
   { secrets, variables }
 ) => {
-  const creds = await secrets.getSecret('FLYIO_CREDENTIALS')
+  const creds = (await secrets.getSecret('FLYIO_CREDENTIALS')).reveal()
   const flyio = new FlyioService(creds, variables)
 
   return { flyio }

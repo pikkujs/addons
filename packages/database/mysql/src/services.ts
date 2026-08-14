@@ -10,7 +10,7 @@ export const createSingletonServices = pikkuAddonServices(async (config, { varia
   const port = parseInt(params?.port ?? '3306', 10)
   const database = params?.database
   const ssl = params?.ssl === 'true'
-  const creds = await secrets.getSecret('MYSQL_CREDENTIALS')
+  const creds = (await secrets.getSecret('MYSQL_CREDENTIALS')).reveal()
 
   const connectionOptions: mysql.PoolOptions = {
     host,

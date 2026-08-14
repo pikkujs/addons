@@ -32,7 +32,7 @@ export class ResendService implements EmailService {
 
   private async getApiKey(): Promise<string> {
     if (typeof this.secretsOrApiKey === 'string') return this.secretsOrApiKey
-    return (await this.secretsOrApiKey.getSecret('RESEND_CREDENTIALS')).apiKey
+    return (await this.secretsOrApiKey.getSecret('RESEND_CREDENTIALS')).reveal().apiKey
   }
 
   async request<T>(
