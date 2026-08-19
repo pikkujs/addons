@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-cloudflare",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "type": "module",
   "imports": {
     "#pikku/*.gen.js": "./.pikku/*.gen.ts",

@@ -1,5 +1,42 @@
 # @pikku/addon-mailer-lite
 
+## 0.0.5
+
+### Patch Changes
+
+- 2c2a4fd: Move every addon onto the split addon leaf, and off the removed `@pikku/core` root barrel.
+
+  `@pikku/core` 0.12.85 / `@pikku/cli` 0.12.106 split the addon leaf so an
+  application cannot shadow a linked addon's own (changeset 7722ceb). The CLI now
+  writes per-area barrels — nested under `.pikku/addon/` for an addon, flat under
+  `.pikku/` for an app — so the authoring half is reached as `#pikku/addon/setup`
+  and a function helper as `#pikku/addon/function`. Every addon here still
+  imported a bare `#pikku` mapped onto a single `pikku-types.gen.ts` that is no
+  longer written, so codegen failed with PKU724.
+
+  The same release retired the package root of `@pikku/core`: `exports['.']` now
+  resolves to a six-name bootstrap shim, and `CoreConfig`, `CoreServices`,
+  `CoreSingletonServices` and `CoreUserSession` live on `@pikku/core/types`. Every
+  `types/application-types.d.ts` imported them from the root, and because each
+  addon sets `skipLibCheck` the dead import was silent: `SingletonServices` simply
+  lost its `CoreSingletonServices` base. That is what emptied `allSingletonServices`
+  for the addons declaring no services of their own, and what dropped `logger`,
+  `secrets` and `variables` off the generated setup types everywhere else.
+
+  Per package:
+
+  - `imports` and tsconfig `paths` map `#pikku/*` onto the barrel index
+  - `#pikku` imports move to the barrel that owns each name
+  - deep generated specifiers take the `addon/` prefix
+  - `forceRequiredServices` names the addon's own singletons, since an addon's
+    functions are wired by the consuming app and the inspector's `usedFunctions`
+    is empty at addon build time
+  - `wireAddon`/`wireRemoteAddon` move off `@pikku/core/rpc` onto `@pikku/core/addon`
+
+  Three addons carried a latent bug that the restored types exposed: `redis` and
+  `qdrant` called `.reveal()` on a secret their own schema declares optional, and
+  `plentymarkets` reached into the leaf by relative path.
+
 ## 0.0.4
 
 ### Patch Changes
