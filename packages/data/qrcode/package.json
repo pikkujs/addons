@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-qrcode",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "type": "module",
   "imports": {
     "#pikku/*.gen.js": "./.pikku/*.gen.ts",
