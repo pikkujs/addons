@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { PlentyAvailabilitySchema } from '../../schemas.js'
 
 export const ListAvailabilitiesInput = z.void()

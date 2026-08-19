@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./nasa.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "nasa"
+  ]
 }

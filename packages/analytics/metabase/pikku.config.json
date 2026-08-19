@@ -13,5 +13,8 @@
       "Analytics"
     ],
     "icon": "./metabase.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "metabase"
+  ]
 }

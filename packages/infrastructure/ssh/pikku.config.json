@@ -13,5 +13,9 @@
       "Infrastructure"
     ],
     "icon": "./ssh.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "sshClient",
+    "content"
+  ]
 }

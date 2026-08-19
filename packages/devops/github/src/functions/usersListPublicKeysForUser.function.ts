@@ -1,7 +1,7 @@
 // users — Interact with and view information about users and also current user.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UsersListPublicKeysForUserInput = z.object({
   username: z.string().describe("The handle for the GitHub user account."),

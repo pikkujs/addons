@@ -19,5 +19,8 @@
       "ai"
     ],
     "icon": "./humantic-ai.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "humanticAi"
+  ]
 }

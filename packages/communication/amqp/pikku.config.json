@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./amqp.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "amqp"
+  ]
 }

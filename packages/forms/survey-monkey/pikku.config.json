@@ -13,5 +13,8 @@
       "Forms"
     ],
     "icon": "./survey-monkey.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "surveyMonkey"
+  ]
 }

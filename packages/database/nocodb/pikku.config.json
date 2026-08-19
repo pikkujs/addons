@@ -19,5 +19,8 @@
       "Database"
     ],
     "icon": "./nocodb.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "nocodb"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ActionSourceEnum = z.enum([
   'website', 'email', 'app', 'phone_call', 'chat',

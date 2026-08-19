@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesGetThumbnailInput = z.object({
   path: z.string().optional().describe("The path to the image file you want to thumbnail."),

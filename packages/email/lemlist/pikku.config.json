@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./lemlist.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "lemlist"
+  ]
 }

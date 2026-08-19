@@ -13,5 +13,8 @@
       "Infrastructure"
     ],
     "icon": "./ldap.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "ldapClient"
+  ]
 }

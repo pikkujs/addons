@@ -1,7 +1,7 @@
 // OAuth Clients — OAuth clients represent third-party applications that access the Zendesk API on behalf of users.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteClientInput = z.object({
   oauth_client_id: z.number().int().describe("The ID of the OAuth client. Example: 223443"),

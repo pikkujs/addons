@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import pg from 'pg'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { onChangedMessages } from './on-change.function.js'
 
 export type TestPostgresInput = { startTriggers: () => Promise<void> }

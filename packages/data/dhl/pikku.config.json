@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./dhl.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "dhl"
+  ]
 }

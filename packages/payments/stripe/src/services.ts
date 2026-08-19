@@ -1,5 +1,5 @@
 import Stripe from 'stripe'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 import { StripeWebhookVerifier } from './stripe-webhook-verifier.service.js'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets, variables }) => {

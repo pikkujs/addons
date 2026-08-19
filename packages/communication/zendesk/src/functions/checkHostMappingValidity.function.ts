@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CheckHostMappingValidityInput = z.object({
   host_mapping: z.string().describe("The hostmapping to a brand, if any (only admins view this key). Example: \"brand1.com\""),

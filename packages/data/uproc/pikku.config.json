@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./uproc.png"
-  }
+  },
+  "forceRequiredServices": [
+    "uproc"
+  ]
 }

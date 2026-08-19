@@ -1,7 +1,7 @@
 // Dynamic modules — This resource represents [modules registered dynamically](https://developer.atlassian.com/cloud/jira/platform/dynamic-modules/) by [Connect apps](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps).
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const DynamicModulesResourceGetModulesGetOutput = z.object({

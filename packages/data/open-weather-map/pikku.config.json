@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./open-weather-map.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "openWeatherMap"
+  ]
 }

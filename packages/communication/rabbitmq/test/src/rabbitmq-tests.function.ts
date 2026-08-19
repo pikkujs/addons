@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export type TestRabbitmqInput = {}
 export type TestRabbitmqOutput = { passed: number; failed: string[] }

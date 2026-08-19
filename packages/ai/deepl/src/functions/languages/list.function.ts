@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LanguagesListInput = z.object({
   type: z.enum(['source', 'target']).optional().describe('Type of languages to list'),

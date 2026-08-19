@@ -19,5 +19,8 @@
       "Data"
     ],
     "icon": "./notion.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "notion"
+  ]
 }

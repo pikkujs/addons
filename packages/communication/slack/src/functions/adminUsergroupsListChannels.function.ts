@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminUsergroupsListChannelsInput = z.object({
   usergroup_id: z.string().describe("ID of the IDP group to list default channels for."),

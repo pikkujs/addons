@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ChartCreateInput = z.object({
   chart: z.string().describe("A Chart.js configuration object serialized as a JSON string"),

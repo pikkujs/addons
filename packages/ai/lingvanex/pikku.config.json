@@ -19,5 +19,8 @@
       "ai"
     ],
     "icon": "./lingvanex.png"
-  }
+  },
+  "forceRequiredServices": [
+    "lingvanex"
+  ]
 }

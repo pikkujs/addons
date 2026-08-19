@@ -1,6 +1,6 @@
 import mysql from 'mysql2/promise'
 import type { Pool } from 'mysql2/promise'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export type MysqlService = Pool & { stop: () => Promise<void> }
 

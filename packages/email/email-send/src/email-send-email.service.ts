@@ -1,8 +1,4 @@
-import type {
-  EmailService,
-  SendEmailInput,
-  SendEmailResult,
-} from '@pikku/core'
+import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core/services'
 import type { Transporter } from 'nodemailer'
 
 /**

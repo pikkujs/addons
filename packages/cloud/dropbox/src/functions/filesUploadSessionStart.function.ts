@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesUploadSessionStartInput = z.object({
   close: z.boolean().optional().describe("If true, the current session will be closed, at which point you won't be able to call :route:`upload_session/append_v2` anymore with the current session."),

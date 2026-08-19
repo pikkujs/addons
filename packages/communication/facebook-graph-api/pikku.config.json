@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./facebook-graph-api.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "facebookGraphApi"
+  ]
 }

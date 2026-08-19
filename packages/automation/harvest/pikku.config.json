@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./harvest.png"
-  }
+  },
+  "forceRequiredServices": [
+    "harvest"
+  ]
 }

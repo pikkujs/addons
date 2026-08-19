@@ -1,7 +1,7 @@
 // Project avatars — This resource represents avatars associated with a project. Use it to get, load, set, and remove project avatars.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const CreateProjectAvatarInput = z.object({

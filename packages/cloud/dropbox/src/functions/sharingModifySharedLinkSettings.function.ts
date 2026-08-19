@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingModifySharedLinkSettingsInput = z.object({
   url: z.string().optional().describe("URL of the shared link to change its settings."),

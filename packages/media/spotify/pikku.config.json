@@ -19,5 +19,8 @@
       "Media"
     ],
     "icon": "./spotify.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "spotify"
+  ]
 }

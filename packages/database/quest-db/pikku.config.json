@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./quest-db.png"
-  }
+  },
+  "forceRequiredServices": [
+    "questDb"
+  ]
 }

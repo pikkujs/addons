@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateBlocksInput = z.object({
   date: z.string().datetime().nullable().optional().describe("The date the post was published, in the site's timezone."),

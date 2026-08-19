@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./microsoft-one-drive.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "microsoftOneDrive"
+  ]
 }

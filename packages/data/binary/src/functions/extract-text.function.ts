@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ExtractTextInput = z.object({
   base64: z.string().describe('Base64-encoded file bytes'),

@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./quickbase.png"
-  }
+  },
+  "forceRequiredServices": [
+    "quickbase"
+  ]
 }

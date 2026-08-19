@@ -1,7 +1,7 @@
 // dependabot — Endpoints to manage Dependabot.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, ForbiddenError, NotFoundError, ConflictError, UnprocessableContentError } from '@pikku/core/errors'
 import { alertnumberSchema } from '../github.types.js'
 

@@ -1,7 +1,7 @@
 // channels — Endpoints for creating, getting and interacting with channels.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const CreateChannelsMembersInput = z.object({

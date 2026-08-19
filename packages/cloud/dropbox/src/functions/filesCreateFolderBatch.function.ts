@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesCreateFolderBatchInput = z.object({
   paths: z.array(z.string()).optional().describe("List of paths to be created in the user's Dropbox. Duplicate path arguments in the batch are considered only once."),

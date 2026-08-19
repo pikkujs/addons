@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UsersSetPhotoInput = z.object({
   crop_w: z.string().optional().describe("Width/height of crop box (always square)"),

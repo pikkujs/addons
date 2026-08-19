@@ -19,5 +19,8 @@
       "documents"
     ],
     "icon": "./strapi.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "strapi"
+  ]
 }

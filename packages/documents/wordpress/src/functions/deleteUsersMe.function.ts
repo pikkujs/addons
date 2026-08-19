@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteUsersMeInput = z.object({
   force: z.boolean().optional().default(false).describe("Required to be true, as users do not support trashing."),

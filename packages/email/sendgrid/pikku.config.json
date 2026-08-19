@@ -15,5 +15,8 @@
       "Mail"
     ],
     "icon": "./sendgrid.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "sendgrid"
+  ]
 }

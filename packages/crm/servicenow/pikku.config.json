@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./servicenow.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "servicenow"
+  ]
 }

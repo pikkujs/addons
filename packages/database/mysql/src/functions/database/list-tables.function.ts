@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTablesInput = z.object({
   pattern: z.string().optional().describe('Optional LIKE pattern to filter table names (e.g., "user%")'),

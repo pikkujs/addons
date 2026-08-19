@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./google-contacts.png"
-  }
+  },
+  "forceRequiredServices": [
+    "googleContacts"
+  ]
 }

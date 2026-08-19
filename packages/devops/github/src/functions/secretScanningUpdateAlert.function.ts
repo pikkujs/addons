@@ -1,7 +1,7 @@
 // secret-scanning — Retrieve secret scanning alerts from a repository.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, NotFoundError, UnprocessableContentError } from '@pikku/core/errors'
 import { alertnumberSchema } from '../github.types.js'
 

@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { generateObject } from 'ai'
 import { jsonSchema } from 'ai'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MessageSchema = z.object({
   role: z.enum(['system', 'user', 'assistant']).describe('The role of the message author'),

@@ -1,7 +1,7 @@
 // repos — Interact with GitHub Repos.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ConflictError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const ReposMergeUpstreamInput = z.object({

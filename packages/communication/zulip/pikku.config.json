@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./zulip.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "zulip"
+  ]
 }

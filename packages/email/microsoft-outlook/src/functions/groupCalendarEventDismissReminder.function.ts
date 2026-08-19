@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GroupCalendarEventDismissReminderInput = z.object({
   "group-id": z.string().describe("The unique identifier of group"),

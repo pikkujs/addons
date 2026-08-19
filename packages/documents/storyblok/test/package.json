@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@pikku/addon-storyblok": "workspace:*",
-    "@pikku/core": "^0.12.83"
+    "@pikku/core": "^0.12.86"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.103",
+    "@pikku/cli": "^0.12.107",
     "@types/node": "^24",
     "tsx": "^4",
     "typescript": "^5.9",

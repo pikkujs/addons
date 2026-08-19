@@ -1,7 +1,7 @@
 // schemes — Endpoints for creating, getting and updating and deleting schemes.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const ListSchemesTeamsInput = z.object({

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TeamdrivesGetInput = z.object({
   teamDriveId: z.string().describe("The ID of the Team Drive"),

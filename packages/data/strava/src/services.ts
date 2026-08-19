@@ -1,6 +1,6 @@
 import { UnauthorizedError } from '@pikku/core/errors'
 import { StravaService } from './strava-api.service.js'
-import { pikkuAddonWireServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {

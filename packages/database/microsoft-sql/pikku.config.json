@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./microsoft-sql.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "microsoftSql"
+  ]
 }

@@ -1,7 +1,7 @@
 // Tasks — This resource represents a [long-running asynchronous tasks](#async-operations). Use it to obtain details about the progress of a long-running task or cancel a long-running task.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const GetTaskInput = z.object({

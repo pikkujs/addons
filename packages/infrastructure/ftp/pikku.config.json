@@ -19,5 +19,8 @@
       "infrastructure"
     ],
     "icon": "./ftp.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "ftp"
+  ]
 }

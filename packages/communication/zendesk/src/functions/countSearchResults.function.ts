@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CountSearchResultsInput = z.object({
   query: z.string().describe("The search query. Example: \"https://subdomain.zendesk.com/api/v2/search?query=type:ticket status:closed\""),

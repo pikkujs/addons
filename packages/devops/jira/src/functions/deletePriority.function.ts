@@ -1,7 +1,7 @@
 // Issue priorities — This resource represents issue priorities. Use it to get, create and update issue priorities and details for individual issue priorities.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError, ConflictError } from '@pikku/core/errors'
 
 export const DeletePriorityInput = z.object({

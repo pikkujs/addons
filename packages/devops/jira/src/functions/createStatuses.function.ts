@@ -1,7 +1,7 @@
 // Status — This resource represents statuses. Use it to search, get, create, delete, and change statuses.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
 
 export const CreateStatusesInput = z.object({

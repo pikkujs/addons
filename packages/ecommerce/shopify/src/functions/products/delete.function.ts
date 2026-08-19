@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteProductInput = z.object({
   productId: z.string().describe('Product ID'),

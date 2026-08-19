@@ -1,7 +1,7 @@
 // Workflows — This resource represents workflows. Use it to: * get workflows. * create workflows. * delete inactive workflows.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetWorkflowsPaginatedInput = z.object({

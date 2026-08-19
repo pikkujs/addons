@@ -1,4 +1,4 @@
-import { defineHTTPRoutes } from '../.pikku/http/pikku-http-types.gen.js'
+import { defineHTTPRoutes } from '#pikku/addon/http'
 import { plentymarketsWebhookHandler } from './functions/webhooks/handle.function.js'
 
 /**

@@ -1,7 +1,7 @@
 // checks — Rich interactions with checks run by your integrations.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ChecksListForSuiteInput = z.object({
   owner: z.string().describe("The account owner of the repository. The name is not case sensitive."),

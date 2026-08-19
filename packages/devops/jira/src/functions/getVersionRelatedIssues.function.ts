@@ -1,7 +1,7 @@
 // Project versions — This resource represents project versions. Use it to get, get lists of, create, update, move, merge, and delete project versions. This resource also provides counts of issues by version.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetVersionRelatedIssuesInput = z.object({

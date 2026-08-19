@@ -1,7 +1,7 @@
 // apps — Information for integrations and installations.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const AppsListWebhookDeliveriesInput = z.object({

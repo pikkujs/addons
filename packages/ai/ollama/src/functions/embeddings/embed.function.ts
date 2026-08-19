@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { embed } from 'ai'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const OllamaEmbedInput = z.object({
   model: z.string().describe('The Ollama embedding model to use (e.g. "nomic-embed-text", "mxbai-embed-large")'),

@@ -1,7 +1,7 @@
 // Issue votes — This resource represents votes cast by users on an issue. Use it to get details of votes on an issue as well as cast and withdrawal votes.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const RemoveVoteInput = z.object({

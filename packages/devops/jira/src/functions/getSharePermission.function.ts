@@ -1,7 +1,7 @@
 // Filter sharing — This resource represents options for sharing [filters](#api-group-Filters). Use it to get share scopes as well as add and remove share scopes from filters.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetSharePermissionInput = z.object({

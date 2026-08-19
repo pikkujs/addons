@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./google-big-query.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleBigQuery"
+  ]
 }

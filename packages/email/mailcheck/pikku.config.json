@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./mailcheck.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mailcheck"
+  ]
 }

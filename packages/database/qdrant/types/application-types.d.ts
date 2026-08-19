@@ -1,10 +1,5 @@
-import type {
-  AIEmbeddingService,
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { AIEmbeddingService } from '@pikku/core/services'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { QdrantConfig } from '../src/qdrant.js'
 
 export interface Config extends CoreConfig {}

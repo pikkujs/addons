@@ -1,5 +1,5 @@
 import pg from 'pg'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export class PostgresService extends pg.Pool {
   async stop() {

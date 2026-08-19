@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuTriggerFunc } from '#pikku'
+import { pikkuTriggerFunc } from '#pikku/addon/trigger'
 
 const UpdateType = z.enum([
   'message',

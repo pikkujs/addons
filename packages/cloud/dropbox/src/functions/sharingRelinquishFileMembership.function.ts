@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingRelinquishFileMembershipInput = z.object({
   file: z.string().optional().describe("The path or id for the file."),

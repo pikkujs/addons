@@ -19,5 +19,8 @@
       "Documents"
     ],
     "icon": "./wordpress.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "wordpress"
+  ]
 }

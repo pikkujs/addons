@@ -1,7 +1,7 @@
 // orgs — Interact with GitHub Orgs.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const OrgsListMembershipsForAuthenticatedUserInput = z.object({

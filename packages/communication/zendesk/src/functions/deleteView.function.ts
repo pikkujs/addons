@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteViewInput = z.object({
   view_id: z.number().int().describe("The ID of the view. Example: 25"),

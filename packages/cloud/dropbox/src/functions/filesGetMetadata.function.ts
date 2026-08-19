@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesGetMetadataInput = z.object({
   path: z.string().optional().describe("The path of a file or folder on Dropbox."),

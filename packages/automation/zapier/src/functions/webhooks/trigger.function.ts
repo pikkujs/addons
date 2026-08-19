@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const WebhookTriggerInput = z.object({
   webhookUrl: z.string().url().describe('The full Zapier webhook URL to send data to'),

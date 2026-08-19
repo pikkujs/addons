@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./linkedin.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "linkedin"
+  ]
 }

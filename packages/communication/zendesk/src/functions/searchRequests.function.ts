@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SearchRequestsInput = z.object({
   query: z.string().optional().describe("The syntax and matching logic for the string is detailed in the [Zendesk Support search reference](https://support.zendesk.com/hc/en-us/articles/4408886879258). See also [Query basics](/api-reference/ticketing/ticket-management/search/#query-basics) in the Tickets API doc."),

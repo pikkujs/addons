@@ -1,5 +1,5 @@
 import { CratedbService } from './cratedb-api.service.js'
-import { pikkuAddonWireServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {

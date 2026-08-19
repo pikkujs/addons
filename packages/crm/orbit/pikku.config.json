@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./orbit.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "orbit"
+  ]
 }

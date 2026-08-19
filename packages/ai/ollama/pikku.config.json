@@ -14,5 +14,8 @@
       "Embeddings"
     ],
     "icon": "./ollama.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "ollama"
+  ]
 }

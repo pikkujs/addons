@@ -1,7 +1,7 @@
 // Issue links — This resource represents links between issues. Use it to get, create, and delete links between issues. To use it, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const DeleteIssueLinkInput = z.object({

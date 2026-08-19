@@ -13,5 +13,8 @@
       "Analytics"
     ],
     "icon": "./posthog.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "posthog"
+  ]
 }

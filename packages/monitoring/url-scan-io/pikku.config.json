@@ -19,5 +19,8 @@
       "monitoring"
     ],
     "icon": "./url-scan-io.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "urlScanIo"
+  ]
 }

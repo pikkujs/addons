@@ -19,5 +19,8 @@
       "monitoring"
     ],
     "icon": "./signl4.png"
-  }
+  },
+  "forceRequiredServices": [
+    "signl4"
+  ]
 }

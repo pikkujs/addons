@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MonitorsCreateInput = z.object({
   friendly_name: z.string().describe('Monitor name'),

@@ -19,5 +19,8 @@
       "payments"
     ],
     "icon": "./quickbooks.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "quickbooks"
+  ]
 }

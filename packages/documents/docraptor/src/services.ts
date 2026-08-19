@@ -1,5 +1,5 @@
 import { DocraptorService } from './docraptor-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,

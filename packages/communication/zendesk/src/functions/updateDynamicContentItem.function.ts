@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UpdateDynamicContentItemInput = z.object({
   dynamic_content_item_id: z.number().int().describe("The ID of the dynamic content item. Example: 47"),

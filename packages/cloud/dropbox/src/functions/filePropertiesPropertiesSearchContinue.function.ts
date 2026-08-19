@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilePropertiesPropertiesSearchContinueInput = z.object({
   cursor: z.string().optional().describe("The cursor returned by your last call to :route:`properties/search` or :route:`properties/search/continue`."),

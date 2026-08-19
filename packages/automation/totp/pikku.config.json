@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./totp.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "totp"
+  ]
 }

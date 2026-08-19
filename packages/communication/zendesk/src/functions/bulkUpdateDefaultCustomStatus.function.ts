@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const BulkUpdateDefaultCustomStatusInput = z.object({
   ids: z.string().optional().describe("The comma-separated list of custom ticket status ids to be set as default for their status categories"),

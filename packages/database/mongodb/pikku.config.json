@@ -13,5 +13,8 @@
       "Database"
     ],
     "icon": "./mongodb.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mongodb"
+  ]
 }

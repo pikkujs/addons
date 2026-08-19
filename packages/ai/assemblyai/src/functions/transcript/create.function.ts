@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TranscriptCreateInput = z.object({
   audioUrl: z.string().describe('URL of the audio file to transcribe'),

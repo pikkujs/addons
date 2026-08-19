@@ -15,5 +15,8 @@
       "Transactions"
     ],
     "icon": "./paddle.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "paddle"
+  ]
 }

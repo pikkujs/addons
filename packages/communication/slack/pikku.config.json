@@ -19,5 +19,8 @@
       "Communication"
     ],
     "icon": "./slack.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "slack"
+  ]
 }

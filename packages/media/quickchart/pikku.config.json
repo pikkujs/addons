@@ -19,5 +19,8 @@
       "media"
     ],
     "icon": "./quickchart.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "quickchart"
+  ]
 }

@@ -1,7 +1,7 @@
 // users — Endpoints for creating, getting and interacting with users. When using endpoints that require a user id, the string `me` can be used in place of the user id to indicate the action is to be taken for the logged in user.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateUsersTokensSearchInput = z.object({
   term: z.string().describe("The search term to match against the token id, user id or username."),

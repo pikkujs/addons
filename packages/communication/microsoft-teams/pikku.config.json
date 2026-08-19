@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./microsoft-teams.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "microsoftTeams"
+  ]
 }

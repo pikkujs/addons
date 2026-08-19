@@ -1,6 +1,6 @@
 import { UnauthorizedError } from '@pikku/core/errors'
 import { ZoomService } from './zoom-api.service.js'
-import { pikkuAddonWireServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {

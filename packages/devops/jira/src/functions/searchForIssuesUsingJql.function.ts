@@ -1,7 +1,7 @@
 // Issue search — This resource represents various ways to search for issues. Use it to search for issues with a JQL query and find issues to populate an issue picker.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
 
 export const SearchForIssuesUsingJqlInput = z.object({

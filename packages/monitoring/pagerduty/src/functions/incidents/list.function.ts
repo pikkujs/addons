@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IncidentsListInput = z.object({
   status: z.array(z.string()).optional().describe('Filter by statuses (triggered, acknowledged, resolved)'),

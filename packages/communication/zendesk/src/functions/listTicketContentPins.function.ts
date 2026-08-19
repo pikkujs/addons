@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketContentPinsInput = z.object({
   ticket_id: z.string().optional().describe("The id of the ticket for which to list content pins"),

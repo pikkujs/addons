@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./agile-crm.png"
-  }
+  },
+  "forceRequiredServices": [
+    "agileCrm"
+  ]
 }

@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./timescale-db.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "timescaleDb"
+  ]
 }

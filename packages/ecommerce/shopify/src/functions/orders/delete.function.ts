@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteOrderInput = z.object({
   orderId: z.string().describe('Order ID'),

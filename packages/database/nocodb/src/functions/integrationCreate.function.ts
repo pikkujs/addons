@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IntegrationCreateInput = z.object({
   title: z.string().max(128).describe("Integration Name - Default BASE will be null by default"),

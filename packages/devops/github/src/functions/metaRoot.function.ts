@@ -1,7 +1,7 @@
 // meta — Endpoints that give information about the API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MetaRootOutput = z.object({
   authorizations_url: z.string(),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowManyUserFieldsInput = z.object({
   keys: z.string().optional().describe("Comma-separated list of user field keys to retrieve.\n. Example: \"my_field_1,my_field_2\""),

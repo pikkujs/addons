@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UpdatePermissionPolicyInput = z.object({
   custom_object_key: z.string().describe("The key of a custom object. Example: \"car\""),

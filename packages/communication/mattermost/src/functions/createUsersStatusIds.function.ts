@@ -1,7 +1,7 @@
 // status — Endpoints for getting and updating user statuses.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
 
 export const CreateUsersStatusIdsInput = z.object({

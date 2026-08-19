@@ -1,7 +1,7 @@
 // billing — Monitor charges and usage from Actions and Packages.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const BillingGetSharedStorageBillingUserInput = z.object({
   username: z.string().describe("The handle for the GitHub user account."),

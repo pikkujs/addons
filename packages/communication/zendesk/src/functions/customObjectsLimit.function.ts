@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CustomObjectsLimitOutput = z.object({
   count: z.number().int().optional().describe("The current numnber of the requested resource"),

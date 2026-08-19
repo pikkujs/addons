@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./freshdesk.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "freshdesk"
+  ]
 }

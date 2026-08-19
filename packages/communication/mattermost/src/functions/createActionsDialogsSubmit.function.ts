@@ -1,7 +1,7 @@
 // integration_actions — Endpoints for interactive actions for use by integrations.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const CreateActionsDialogsSubmitInput = z.object({

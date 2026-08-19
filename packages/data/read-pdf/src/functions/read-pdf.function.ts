@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { getDocument } from 'pdfjs-dist/legacy/build/pdf.mjs'
 
 export const ReadPdfInput = z.object({

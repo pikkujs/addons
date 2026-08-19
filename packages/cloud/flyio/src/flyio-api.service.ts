@@ -1,6 +1,6 @@
 import type { FlyioSecrets } from './flyio.secret.js'
 import { BadRequestError, ConflictError, ForbiddenError, InternalServerError, MethodNotAllowedError, NotFoundError, TooManyRequestsError, UnauthorizedError, UnprocessableContentError } from '@pikku/core/errors'
-import type { TypedVariablesService } from '#pikku/variables/pikku-variables.gen.js'
+import type { TypedVariablesService } from '#pikku/addon/variables/pikku-variables.gen.js'
 
 const ROUTES: Record<string, { path: string[], query: string[], headers: string[], errors?: Record<number, string> }> = {
   "GET /apps": {

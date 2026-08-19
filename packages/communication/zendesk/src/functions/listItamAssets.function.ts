@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListItamAssetsInput = z.object({
   "filter[ids]": z.string().optional().describe("Optional comma-separated list of ids to filter assets by. If one or more ids are specified, only matching assets are returned. The ids must be unique and are case sensitive."),

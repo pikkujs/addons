@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DialogOpenInput = z.object({
   dialog: z.string().describe("The dialog definition. This must be a JSON-encoded string."),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const StarsRemoveInput = z.object({
   token: z.string().describe("Authentication token. Requires scope: `stars:write`"),

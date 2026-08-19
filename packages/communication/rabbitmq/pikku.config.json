@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./rabbitmq.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "rabbitmq"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListApprovalRequestsInput = z.object({
   "filter[status]": z.string().optional().describe("Filter by a comma-separated list of one or more approval statuses. Allowed values are active, approved, rejected, withdrawn. Maximum 100 values."),

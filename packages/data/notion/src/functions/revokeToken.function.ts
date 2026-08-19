@@ -1,7 +1,7 @@
 // OAuth — OAuth endpoints (basic authentication)
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, InternalServerError } from '@pikku/core/errors'
 
 export const RevokeTokenInput = z.object({

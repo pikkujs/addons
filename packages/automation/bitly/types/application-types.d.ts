@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { BitlyService } from '../src/bitly-api.service.js'
 
 export interface Config extends CoreConfig {}

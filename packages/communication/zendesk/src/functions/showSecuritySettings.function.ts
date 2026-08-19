@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowSecuritySettingsInput = z.object({
   brand_id: z.number().int().optional().describe("When brand separation is enabled, scopes the security settings to the specified brand.\n"),

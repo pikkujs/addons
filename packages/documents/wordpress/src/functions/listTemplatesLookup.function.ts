@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTemplatesLookupInput = z.object({
   slug: z.string().describe("The slug of the template to get the fallback for"),

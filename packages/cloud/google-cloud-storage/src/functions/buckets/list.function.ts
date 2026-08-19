@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const BucketListInput = z.object({
   prefix: z.string().optional().describe('Filter buckets by name prefix'),

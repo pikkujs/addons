@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesSearchInput = z.object({
   start: z.number().optional().describe("The starting index within the search results (used for paging)."),

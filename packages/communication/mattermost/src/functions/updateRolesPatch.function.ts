@@ -1,7 +1,7 @@
 // roles — Endpoints for creating, getting and updating roles.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const UpdateRolesPatchInput = z.object({

@@ -14,5 +14,8 @@
       "Alerts"
     ],
     "icon": "./uptimerobot.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "uptimerobot"
+  ]
 }

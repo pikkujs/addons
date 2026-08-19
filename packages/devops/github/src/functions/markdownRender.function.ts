@@ -1,7 +1,7 @@
 // markdown — Render GitHub flavored markdown
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MarkdownRenderInput = z.object({
   context: z.string().optional().describe("The repository context to use when creating references in `gfm` mode.  For example, setting `context` to `octo-org/octo-repo` will change the text `#42` into an HTML link to issue 42 in the `octo-org/octo-repo` repository."),

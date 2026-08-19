@@ -19,5 +19,8 @@
       "Forms"
     ],
     "icon": "./hubspot.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "hubspot"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListActivitiesInput = z.object({
   since: z.string().optional().describe("A UTC time in ISO 8601 format to return ticket activities since said date.. Example: \"2013-04-03T16:02:46Z\""),

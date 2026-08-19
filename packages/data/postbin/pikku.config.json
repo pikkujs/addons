@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./postbin.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "postbin"
+  ]
 }

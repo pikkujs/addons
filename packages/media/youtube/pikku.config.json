@@ -19,5 +19,8 @@
       "Media"
     ],
     "icon": "./youtube.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "youtube"
+  ]
 }

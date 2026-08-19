@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesRemoteRemoveInput = z.object({
   external_id: z.string().optional().describe("Creator defined GUID for the file."),

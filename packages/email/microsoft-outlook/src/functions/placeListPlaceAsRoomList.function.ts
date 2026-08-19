@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PlaceListPlaceAsRoomListInput = z.object({
   $top: z.number().int().min(0).optional().describe("Show only the first n items. Example: 50"),

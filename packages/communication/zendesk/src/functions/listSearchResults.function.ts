@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListSearchResultsInput = z.object({
   query: z.string().describe("The search query. See [Query basics](#query-basics) above. For details on the query syntax, see the [Zendesk Support search reference](https://support.zendesk.com/hc/en-us/articles/4408886879258). Example: \"https://subdomain.zendesk.com/api/v2/search?query=type:ticket status:closed&sort_by=status&sort_order=desc\""),

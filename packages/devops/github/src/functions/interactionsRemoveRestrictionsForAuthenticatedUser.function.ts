@@ -1,6 +1,6 @@
 // interactions — Owner or admin management of users interactions.
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const interactionsRemoveRestrictionsForAuthenticatedUser = pikkuSessionlessFunc({
   description: "Removes any interaction restrictions from your public repositories.",

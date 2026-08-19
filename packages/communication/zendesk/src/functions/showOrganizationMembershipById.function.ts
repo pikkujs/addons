@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowOrganizationMembershipByIdInput = z.object({
   organization_membership_id: z.number().int().describe("The ID of the organization membership. Example: 4"),

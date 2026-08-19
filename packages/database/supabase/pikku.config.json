@@ -14,5 +14,9 @@
       "Vector"
     ],
     "icon": "./supabase.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "supabase",
+    "aiEmbedding"
+  ]
 }

@@ -1,7 +1,7 @@
 // licenses — View various OSS licenses.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LicensesGetForRepoInput = z.object({
   owner: z.string().describe("The account owner of the repository. The name is not case sensitive."),

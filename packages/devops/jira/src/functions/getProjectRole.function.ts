@@ -1,7 +1,7 @@
 // Project roles — This resource represents the roles that users can play in projects. Use this resource to get, create, update, and delete project roles.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetProjectRoleInput = z.object({

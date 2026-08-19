@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { toStripeParams, fromStripeObject, epochToIso } from '../../stripe.transform.js'
 
 export const CardSchema = z.object({

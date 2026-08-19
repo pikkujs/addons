@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./monday-com.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mondayCom"
+  ]
 }

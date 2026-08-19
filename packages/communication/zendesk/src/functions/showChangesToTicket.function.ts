@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowChangesToTicketInput = z.object({
   macro_id: z.number().int().describe("The ID of the macro. Example: 25"),

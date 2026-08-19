@@ -13,5 +13,8 @@
       "Speech"
     ],
     "icon": "./elevenlabs.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "elevenlabs"
+  ]
 }

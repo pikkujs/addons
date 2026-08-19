@@ -1,7 +1,7 @@
 // repos — Interact with GitHub Repos.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ForbiddenError, NotFoundError, ConflictError } from '@pikku/core/errors'
 
 export const ReposDeclineInvitationForAuthenticatedUserInput = z.object({

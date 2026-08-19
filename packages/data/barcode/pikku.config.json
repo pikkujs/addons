@@ -13,5 +13,8 @@
       "Data"
     ],
     "icon": "./barcode.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "content"
+  ]
 }

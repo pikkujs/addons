@@ -19,5 +19,8 @@
       "ai"
     ],
     "icon": "./aws-comprehend.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsComprehend"
+  ]
 }

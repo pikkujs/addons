@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesCreateFolderInput = z.object({
   path: z.string().optional().describe("Path in the user's Dropbox to create."),

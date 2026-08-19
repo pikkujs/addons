@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const BulkDeleteViewsInput = z.object({
   ids: z.string().describe("The IDs of the views to delete. Example: \"1,2,3\""),

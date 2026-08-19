@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetStatusInput = z.object({
   status: z.string().describe("An alphanumeric identifier for the status."),

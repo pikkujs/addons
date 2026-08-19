@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CallbackAnswerQueryInput = z.object({
   callback_query_id: z.string().describe('Unique identifier for the query to be answered'),

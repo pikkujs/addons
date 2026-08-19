@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const WorkflowsUpdateStepInput = z.object({
   workflow_step_edit_id: z.string().describe("A context identifier provided with `view_submission` payloads used to call back to `workflows.updateStep`."),

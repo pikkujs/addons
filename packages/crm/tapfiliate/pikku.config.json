@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./tapfiliate.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "tapfiliate"
+  ]
 }

@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./aws-s3.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsS3"
+  ]
 }

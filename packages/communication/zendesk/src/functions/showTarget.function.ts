@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowTargetInput = z.object({
   target_id: z.number().int().describe("The ID of the target. Example: 211"),

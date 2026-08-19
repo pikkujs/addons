@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UpdateBrandLogoInput = z.object({
   brand_id: z.number().int().describe("The ID of the brand. Example: 360002783572"),

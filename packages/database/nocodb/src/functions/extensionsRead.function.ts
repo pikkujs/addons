@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ExtensionsReadInput = z.object({
   extensionId: z.string().min(0).max(20).describe("Model for ID").describe("Unique Extension ID"),

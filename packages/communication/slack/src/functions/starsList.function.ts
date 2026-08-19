@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const StarsListInput = z.object({
   token: z.string().optional().describe("Authentication token. Requires scope: `stars:read`"),

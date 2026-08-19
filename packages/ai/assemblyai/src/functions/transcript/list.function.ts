@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TranscriptListInput = z.object({
   limit: z.number().optional().describe('Maximum number of transcripts to return'),

@@ -1,7 +1,7 @@
 // Issue fields — This resource represents issue fields, both system and custom fields. Use it to get fields, field configurations, and create custom fields.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError } from '@pikku/core/errors'
 
 export const CreateCustomFieldInput = z.object({

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ViewsUpdateInput = z.object({
   view_id: z.string().optional().describe("A unique identifier of the view to be updated. Either `view_id` or `external_id` is required."),

@@ -1,7 +1,7 @@
 // oidc — Endpoints to manage GitHub OIDC configuration using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const OidcUpdateOidcCustomSubTemplateForOrgInput = z.object({

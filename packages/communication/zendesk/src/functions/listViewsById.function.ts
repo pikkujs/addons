@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListViewsByIdInput = z.object({
   ids: z.string().describe("List of view's ids separated by commas.. Example: \"1,2,3\""),

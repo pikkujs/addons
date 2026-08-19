@@ -1,5 +1,5 @@
 import { GrafanaService } from './grafana-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const creds = (await secrets.getSecret('GRAFANA_CREDENTIALS')).reveal()

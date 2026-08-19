@@ -1,7 +1,7 @@
 // LDAP — Endpoints for configuring and interacting with LDAP.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { InternalServerError } from '@pikku/core/errors'
 
 export const CreateLdapTestOutput = z.object({

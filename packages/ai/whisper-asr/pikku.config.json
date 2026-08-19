@@ -13,5 +13,9 @@
       "Speech"
     ],
     "icon": "./whisper-asr.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "whisperASR",
+    "content"
+  ]
 }

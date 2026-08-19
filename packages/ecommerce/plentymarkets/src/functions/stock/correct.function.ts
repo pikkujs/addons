@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CorrectStockInput = z.object({
   warehouseId: z.number().describe('Warehouse ID'),

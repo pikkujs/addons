@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { GmailService } from '../src/gmail-api.service.js'
 
 export interface Config extends CoreConfig {}

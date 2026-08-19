@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminEmojiRenameInput = z.object({
   name: z.string().describe("The name of the emoji to be renamed. Colons (`:myemoji:`) around the value are not required, although they may be included."),

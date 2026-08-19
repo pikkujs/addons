@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import ical, { ICalCalendarMethod } from 'ical-generator'
 
 export const ICalendarCreateInput = z.object({

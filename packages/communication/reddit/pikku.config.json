@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./reddit.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "reddit"
+  ]
 }

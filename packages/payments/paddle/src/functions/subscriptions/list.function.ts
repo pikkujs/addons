@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SubscriptionsListInput = z.object({
   status: z.enum(['active', 'canceled', 'past_due', 'paused', 'trialing']).optional().describe('Filter by status'),

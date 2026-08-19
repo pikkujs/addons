@@ -15,5 +15,8 @@
       "Message"
     ],
     "icon": "./discord.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "discord"
+  ]
 }

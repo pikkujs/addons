@@ -1,0 +1,252 @@
+---
+'@pikku/addon-agile-crm': patch
+'@pikku/addon-ai-whisper-asr': patch
+'@pikku/addon-airtable': patch
+'@pikku/addon-airtop': patch
+'@pikku/addon-amqp': patch
+'@pikku/addon-asana': patch
+'@pikku/addon-assemblyai': patch
+'@pikku/addon-automizy': patch
+'@pikku/addon-autopilot': patch
+'@pikku/addon-aws-comprehend': patch
+'@pikku/addon-aws-lambda': patch
+'@pikku/addon-aws-s3': patch
+'@pikku/addon-aws-ses': patch
+'@pikku/addon-aws-sns': patch
+'@pikku/addon-aws-sqs': patch
+'@pikku/addon-aws-transcribe': patch
+'@pikku/addon-bamboo-hr': patch
+'@pikku/addon-bannerbear': patch
+'@pikku/addon-barcode': patch
+'@pikku/addon-baserow': patch
+'@pikku/addon-binary': patch
+'@pikku/addon-bitly': patch
+'@pikku/addon-bitwarden': patch
+'@pikku/addon-clearbit': patch
+'@pikku/addon-clickup': patch
+'@pikku/addon-clockify': patch
+'@pikku/addon-cloudflare': patch
+'@pikku/addon-coingecko': patch
+'@pikku/addon-compression': patch
+'@pikku/addon-convertkit': patch
+'@pikku/addon-copper': patch
+'@pikku/addon-cortex': patch
+'@pikku/addon-cratedb': patch
+'@pikku/addon-deepl': patch
+'@pikku/addon-dhl': patch
+'@pikku/addon-discord': patch
+'@pikku/addon-discourse': patch
+'@pikku/addon-docraptor': patch
+'@pikku/addon-dropbox': patch
+'@pikku/addon-dropcontact': patch
+'@pikku/addon-edit-image': patch
+'@pikku/addon-egoi': patch
+'@pikku/addon-elasticsearch': patch
+'@pikku/addon-elevenlabs': patch
+'@pikku/addon-email-send': patch
+'@pikku/addon-emelia': patch
+'@pikku/addon-erpnext': patch
+'@pikku/addon-execution': patch
+'@pikku/addon-facebook-graph-api': patch
+'@pikku/addon-filemaker': patch
+'@pikku/addon-flyio': patch
+'@pikku/addon-formstack': patch
+'@pikku/addon-freshdesk': patch
+'@pikku/addon-ftp': patch
+'@pikku/addon-g-suite-admin': patch
+'@pikku/addon-ghost': patch
+'@pikku/addon-git': patch
+'@pikku/addon-github': patch
+'@pikku/addon-gitlab': patch
+'@pikku/addon-gmail': patch
+'@pikku/addon-google-analytics': patch
+'@pikku/addon-google-big-query': patch
+'@pikku/addon-google-books': patch
+'@pikku/addon-google-calendar': patch
+'@pikku/addon-google-cloud-natural-language': patch
+'@pikku/addon-google-cloud-storage': patch
+'@pikku/addon-google-contacts': patch
+'@pikku/addon-google-docs': patch
+'@pikku/addon-google-drive': patch
+'@pikku/addon-google-firebase-cloud-firestore': patch
+'@pikku/addon-google-firebase-realtime-database': patch
+'@pikku/addon-google-sheets': patch
+'@pikku/addon-google-slides': patch
+'@pikku/addon-google-tasks': patch
+'@pikku/addon-gotify': patch
+'@pikku/addon-grafana': patch
+'@pikku/addon-grist': patch
+'@pikku/addon-hackernews': patch
+'@pikku/addon-harvest': patch
+'@pikku/addon-html': patch
+'@pikku/addon-html-extract': patch
+'@pikku/addon-hubspot': patch
+'@pikku/addon-human-design': patch
+'@pikku/addon-humantic-ai': patch
+'@pikku/addon-hunter': patch
+'@pikku/addon-icalendar': patch
+'@pikku/addon-imap': patch
+'@pikku/addon-iterable': patch
+'@pikku/addon-jenkins': patch
+'@pikku/addon-jira': patch
+'@pikku/addon-jotform': patch
+'@pikku/addon-kafka': patch
+'@pikku/addon-keap': patch
+'@pikku/addon-ldap': patch
+'@pikku/addon-lemlist': patch
+'@pikku/addon-linear': patch
+'@pikku/addon-lingvanex': patch
+'@pikku/addon-linkedin': patch
+'@pikku/addon-mailcheck': patch
+'@pikku/addon-mailchimp': patch
+'@pikku/addon-mailer-lite': patch
+'@pikku/addon-mailgun': patch
+'@pikku/addon-mailjet': patch
+'@pikku/addon-mandrill': patch
+'@pikku/addon-markdown': patch
+'@pikku/addon-math': patch
+'@pikku/addon-matrix': patch
+'@pikku/addon-mattermost': patch
+'@pikku/addon-mautic': patch
+'@pikku/addon-meta-conversions': patch
+'@pikku/addon-metabase': patch
+'@pikku/addon-microsoft-excel': patch
+'@pikku/addon-microsoft-one-drive': patch
+'@pikku/addon-microsoft-outlook': patch
+'@pikku/addon-microsoft-sql': patch
+'@pikku/addon-microsoft-teams': patch
+'@pikku/addon-microsoft-to-do': patch
+'@pikku/addon-mindee': patch
+'@pikku/addon-mocean': patch
+'@pikku/addon-monday-com': patch
+'@pikku/addon-mongodb': patch
+'@pikku/addon-mqtt': patch
+'@pikku/addon-msg91': patch
+'@pikku/addon-mysql': patch
+'@pikku/addon-nasa': patch
+'@pikku/addon-nextcloud': patch
+'@pikku/addon-nocodb': patch
+'@pikku/addon-notion': patch
+'@pikku/addon-odoo': patch
+'@pikku/addon-ollama': patch
+'@pikku/addon-onfleet': patch
+'@pikku/addon-open-thesaurus': patch
+'@pikku/addon-open-weather-map': patch
+'@pikku/addon-openai': patch
+'@pikku/addon-orbit': patch
+'@pikku/addon-paddle': patch
+'@pikku/addon-pagerduty': patch
+'@pikku/addon-peekalink': patch
+'@pikku/addon-phantombuster': patch
+'@pikku/addon-philips-hue': patch
+'@pikku/addon-pinecone': patch
+'@pikku/addon-plentymarkets': patch
+'@pikku/addon-postbin': patch
+'@pikku/addon-postgres': patch
+'@pikku/addon-posthog': patch
+'@pikku/addon-pushbullet': patch
+'@pikku/addon-pushover': patch
+'@pikku/addon-qdrant': patch
+'@pikku/addon-qrcode': patch
+'@pikku/addon-quest-db': patch
+'@pikku/addon-quickbase': patch
+'@pikku/addon-quickbooks': patch
+'@pikku/addon-quickchart': patch
+'@pikku/addon-rabbitmq': patch
+'@pikku/addon-raindrop': patch
+'@pikku/addon-read-pdf': patch
+'@pikku/addon-reddit': patch
+'@pikku/addon-redis': patch
+'@pikku/addon-resend': patch
+'@pikku/addon-rocketchat': patch
+'@pikku/addon-rss-feed': patch
+'@pikku/addon-s3': patch
+'@pikku/addon-salesforce': patch
+'@pikku/addon-security-scorecard': patch
+'@pikku/addon-segment': patch
+'@pikku/addon-sendgrid': patch
+'@pikku/addon-sendy': patch
+'@pikku/addon-sentry': patch
+'@pikku/addon-servicenow': patch
+'@pikku/addon-shopify': patch
+'@pikku/addon-signl4': patch
+'@pikku/addon-slack': patch
+'@pikku/addon-snowflake': patch
+'@pikku/addon-spotify': patch
+'@pikku/addon-spreadsheet': patch
+'@pikku/addon-ssh': patch
+'@pikku/addon-storyblok': patch
+'@pikku/addon-strapi': patch
+'@pikku/addon-strava': patch
+'@pikku/addon-stripe': patch
+'@pikku/addon-supabase': patch
+'@pikku/addon-survey-monkey': patch
+'@pikku/addon-taiga': patch
+'@pikku/addon-tapfiliate': patch
+'@pikku/addon-telegram': patch
+'@pikku/addon-the-hive': patch
+'@pikku/addon-timescale-db': patch
+'@pikku/addon-todoist': patch
+'@pikku/addon-totp': patch
+'@pikku/addon-trello': patch
+'@pikku/addon-twilio': patch
+'@pikku/addon-twist': patch
+'@pikku/addon-twitter': patch
+'@pikku/addon-typeform': patch
+'@pikku/addon-uplead': patch
+'@pikku/addon-uproc': patch
+'@pikku/addon-uptimerobot': patch
+'@pikku/addon-url-scan-io': patch
+'@pikku/addon-venafi-tls-protect-cloud': patch
+'@pikku/addon-vero': patch
+'@pikku/addon-vonage': patch
+'@pikku/addon-webflow': patch
+'@pikku/addon-wekan': patch
+'@pikku/addon-whatsapp': patch
+'@pikku/addon-whatsapp-baileys': patch
+'@pikku/addon-wikipedia': patch
+'@pikku/addon-wise': patch
+'@pikku/addon-woocommerce': patch
+'@pikku/addon-wordpress': patch
+'@pikku/addon-xml': patch
+'@pikku/addon-yourls': patch
+'@pikku/addon-youtube': patch
+'@pikku/addon-zammad': patch
+'@pikku/addon-zapier': patch
+'@pikku/addon-zendesk': patch
+'@pikku/addon-zoom': patch
+'@pikku/addon-zulip': patch
+---
+
+Move every addon onto the split addon leaf, and off the removed `@pikku/core` root barrel.
+
+`@pikku/core` 0.12.85 / `@pikku/cli` 0.12.106 split the addon leaf so an
+application cannot shadow a linked addon's own (changeset 7722ceb). The CLI now
+writes per-area barrels — nested under `.pikku/addon/` for an addon, flat under
+`.pikku/` for an app — so the authoring half is reached as `#pikku/addon/setup`
+and a function helper as `#pikku/addon/function`. Every addon here still
+imported a bare `#pikku` mapped onto a single `pikku-types.gen.ts` that is no
+longer written, so codegen failed with PKU724.
+
+The same release retired the package root of `@pikku/core`: `exports['.']` now
+resolves to a six-name bootstrap shim, and `CoreConfig`, `CoreServices`,
+`CoreSingletonServices` and `CoreUserSession` live on `@pikku/core/types`. Every
+`types/application-types.d.ts` imported them from the root, and because each
+addon sets `skipLibCheck` the dead import was silent: `SingletonServices` simply
+lost its `CoreSingletonServices` base. That is what emptied `allSingletonServices`
+for the addons declaring no services of their own, and what dropped `logger`,
+`secrets` and `variables` off the generated setup types everywhere else.
+
+Per package:
+
+- `imports` and tsconfig `paths` map `#pikku/*` onto the barrel index
+- `#pikku` imports move to the barrel that owns each name
+- deep generated specifiers take the `addon/` prefix
+- `forceRequiredServices` names the addon's own singletons, since an addon's
+  functions are wired by the consuming app and the inspector's `usedFunctions`
+  is empty at addon build time
+- `wireAddon`/`wireRemoteAddon` move off `@pikku/core/rpc` onto `@pikku/core/addon`
+
+Three addons carried a latent bug that the restored types exposed: `redis` and
+`qdrant` called `.reveal()` on a secret their own schema declares optional, and
+`plentymarkets` reached into the leaf by relative path.

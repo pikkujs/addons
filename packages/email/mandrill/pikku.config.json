@@ -13,5 +13,8 @@
       "Messages"
     ],
     "icon": "./mandrill.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mandrill"
+  ]
 }

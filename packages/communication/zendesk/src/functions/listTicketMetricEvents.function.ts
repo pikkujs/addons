@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketMetricEventsInput = z.object({
   start_time: z.number().int().describe("The Unix UTC epoch time of the oldest event you're interested in. Example: 1332034771.. Example: 1332034771"),

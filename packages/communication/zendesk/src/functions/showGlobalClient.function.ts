@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowGlobalClientInput = z.object({
   global_client_id: z.number().int().describe("The ID of the Global OAuth client. Example: 223443"),

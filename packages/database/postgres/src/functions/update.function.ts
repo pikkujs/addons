@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { WhereClause, escapeIdentifier, buildWhereClause } from '../shared.js'
 
 export const UpdateInput = z.object({

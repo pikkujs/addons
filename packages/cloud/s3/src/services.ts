@@ -1,6 +1,6 @@
 import { S3Client } from '@aws-sdk/client-s3'
 import type { S3Secrets } from './s3.secret.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets, content }) => {
   const creds = (await secrets.getSecret('S3_CREDENTIALS')).reveal()

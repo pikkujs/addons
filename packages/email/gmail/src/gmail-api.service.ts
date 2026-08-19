@@ -1,4 +1,4 @@
-import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core'
+import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core/services'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 const GMAIL_BASE_URL = 'https://gmail.googleapis.com/gmail/v1'

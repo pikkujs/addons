@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UsersGetAccountBatchInput = z.object({
   account_ids: z.array(z.string()).optional().describe("List of user account identifiers.  Should not contain any duplicate account IDs."),

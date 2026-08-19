@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ContactListInput = z.object({
   query: z.string().optional().describe('SGQL query to filter contacts (e.g., "email LIKE \'%@example.com\'")'),

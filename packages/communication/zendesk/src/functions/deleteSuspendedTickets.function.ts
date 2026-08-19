@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteSuspendedTicketsInput = z.object({
   ids: z.string().describe("A comma separated list of ids of suspended tickets to delete.. Example: \"94,141\""),

@@ -1,5 +1,5 @@
 import { MailgunService } from './mailgun-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const mailgun = new MailgunService(secrets)

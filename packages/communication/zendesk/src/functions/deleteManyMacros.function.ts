@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteManyMacrosInput = z.object({
   ids: z.array(z.number().int()).describe("The IDs of the macros to delete. Example: [1,2,3]"),

@@ -13,5 +13,8 @@
       "Data"
     ],
     "icon": "./compression.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "content"
+  ]
 }

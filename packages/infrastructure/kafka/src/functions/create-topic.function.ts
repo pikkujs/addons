@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const KafkaCreateTopicInput = z.object({
   topic: z.string().describe('Topic name to create'),

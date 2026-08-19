@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./egoi.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "egoi"
+  ]
 }

@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export type TestLingvanexInput = {}
 export type TestLingvanexOutput = { passed: number; failed: string[] }

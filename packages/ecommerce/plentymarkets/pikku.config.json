@@ -13,5 +13,8 @@
       "Ecommerce"
     ],
     "icon": "./plentymarkets.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "plentymarkets"
+  ]
 }

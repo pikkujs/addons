@@ -1,5 +1,5 @@
 import { Kafka, type Producer, type SASLOptions } from 'kafkajs'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => {
   const creds = (await secrets.getSecret('KAFKA_CREDENTIALS')).reveal()

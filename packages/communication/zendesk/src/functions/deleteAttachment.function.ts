@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteAttachmentInput = z.object({
   attachment_id: z.number().int().describe("The ID of the attachment. Example: 498483"),

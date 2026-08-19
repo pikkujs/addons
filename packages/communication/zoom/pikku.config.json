@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./zoom.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "zoom"
+  ]
 }

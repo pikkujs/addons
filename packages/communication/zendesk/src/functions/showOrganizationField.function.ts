@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowOrganizationFieldInput = z.object({
   organization_field_id: z.union([z.number().int(), z.string()]).describe("The ID or key of the organization field. Example: \"my_text_field\""),

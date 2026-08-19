@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesUploadInput = z.object({
   autorename: z.boolean().optional().describe("If there's a conflict, as determined by :field:`mode`, have the Dropbox server try to autorename the file to avoid conflict."),

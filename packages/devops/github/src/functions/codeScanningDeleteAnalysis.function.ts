@@ -1,7 +1,7 @@
 // code-scanning — Retrieve code scanning alerts from a repository.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const CodeScanningDeleteAnalysisInput = z.object({

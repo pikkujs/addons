@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { derivative as mathDerivative } from 'mathjs'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DerivativeInput = z.object({
   expression: z

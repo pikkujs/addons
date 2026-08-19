@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { NotFoundError, ConflictError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const UpdateSavedSearchInput = z.object({

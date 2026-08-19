@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type Stripe from 'stripe'
 import type { StripeWebhookVerifier } from '../src/stripe-webhook-verifier.service.js'
 

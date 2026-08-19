@@ -1,7 +1,7 @@
 // Jira expressions — This resource is a collection of operations for [Jira expressions](https://developer.atlassian.com/cloud/jira/platform/jira-expressions/).
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const AnalyseExpressionInput = z.object({

@@ -19,5 +19,8 @@
       "ai"
     ],
     "icon": "./mindee.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mindee"
+  ]
 }

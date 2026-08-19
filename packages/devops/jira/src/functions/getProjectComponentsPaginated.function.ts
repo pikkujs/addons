@@ -1,7 +1,7 @@
 // Project components — This resource represents project components. Use it to get, create, update, and delete project components. Also get components for project and get a count of issues by component.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetProjectComponentsPaginatedInput = z.object({

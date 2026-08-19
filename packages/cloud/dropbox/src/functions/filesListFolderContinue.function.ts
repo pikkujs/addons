@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesListFolderContinueInput = z.object({
   cursor: z.string().optional().describe("The cursor returned by your last call to :route:`list_folder` or :route:`list_folder/continue`."),

@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./twitter.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "twitter"
+  ]
 }

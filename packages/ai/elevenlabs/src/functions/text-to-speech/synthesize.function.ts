@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 const DEFAULT_VOICE_ID = 'JBFqnCBsd6RMkjVDRZzb'
 

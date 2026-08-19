@@ -1,7 +1,7 @@
 // orgs — Interact with GitHub Orgs.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const OrgsListInput = z.object({
   since: z.number().int().optional().describe("An organization ID. Only return organizations with an ID greater than this ID."),

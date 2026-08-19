@@ -17,5 +17,8 @@
       "PubSub"
     ],
     "icon": "./redis.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "redis"
+  ]
 }

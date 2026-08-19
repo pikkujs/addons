@@ -19,5 +19,8 @@
       "payments"
     ],
     "icon": "./wise.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "wise"
+  ]
 }

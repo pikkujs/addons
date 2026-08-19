@@ -15,5 +15,8 @@
       "Workers"
     ],
     "icon": "./cloudflare.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "cloudflare"
+  ]
 }

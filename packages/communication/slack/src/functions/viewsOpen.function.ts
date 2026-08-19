@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ViewsOpenInput = z.object({
   trigger_id: z.string().describe("Exchange a trigger to post to the user."),

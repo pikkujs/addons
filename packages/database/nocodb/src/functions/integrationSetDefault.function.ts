@@ -1,4 +1,4 @@
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const integrationSetDefault = pikkuSessionlessFunc({
   description: "Set integration as category default",

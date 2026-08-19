@@ -13,5 +13,8 @@
       "Webhooks"
     ],
     "icon": "./zapier.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "zapier"
+  ]
 }

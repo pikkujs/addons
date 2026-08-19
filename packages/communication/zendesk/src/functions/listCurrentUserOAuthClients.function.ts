@@ -1,7 +1,7 @@
 // OAuth Clients — OAuth clients represent third-party applications that access the Zendesk API on behalf of users.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListCurrentUserOAuthClientsOutput = z.object({
   clients: z.array(z.object({

@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets, aiEmbedding }) => {
   const creds = (await secrets.getSecret('SUPABASE_CREDENTIALS')).reveal()

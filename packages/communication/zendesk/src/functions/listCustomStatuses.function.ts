@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListCustomStatusesInput = z.object({
   status_categories: z.string().optional().describe("Filter the list of custom ticket statuses by a comma-separated list of status categories"),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateCommentsInput = z.object({
   author: z.number().int().optional().describe("The ID of the user object, if author was a user."),

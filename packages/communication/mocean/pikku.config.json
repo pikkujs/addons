@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./mocean.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mocean"
+  ]
 }

@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./google-firebase-cloud-firestore.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleFirebaseCloudFirestore"
+  ]
 }

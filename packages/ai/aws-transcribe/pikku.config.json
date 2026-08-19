@@ -19,5 +19,8 @@
       "ai"
     ],
     "icon": "./aws-transcribe.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsTranscribe"
+  ]
 }

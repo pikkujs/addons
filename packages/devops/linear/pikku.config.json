@@ -19,5 +19,8 @@
       "devops"
     ],
     "icon": "./linear.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "linear"
+  ]
 }

@@ -19,5 +19,8 @@
       "infrastructure"
     ],
     "icon": "./philips-hue.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "philipsHue"
+  ]
 }

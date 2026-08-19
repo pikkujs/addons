@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketFormsInput = z.object({
   active: z.boolean().optional().describe("true returns active ticket forms; false returns inactive ticket forms. If not present, returns both"),

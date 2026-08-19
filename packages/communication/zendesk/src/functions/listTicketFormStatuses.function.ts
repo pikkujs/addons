@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketFormStatusesInput = z.object({
   ticket_form_id: z.string().optional().describe("Filter by ticket form ID.\n\nSupports single ID or comma-separated list of IDs.\n"),

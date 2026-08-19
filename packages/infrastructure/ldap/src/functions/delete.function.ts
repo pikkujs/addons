@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LdapDeleteInput = z.object({
   dn: z.string().describe('Distinguished name of the entry to delete'),

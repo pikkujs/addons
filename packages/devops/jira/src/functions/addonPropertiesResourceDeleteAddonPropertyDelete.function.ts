@@ -1,7 +1,7 @@
 // App properties — This resource represents app properties. Use it to store arbitrary data for your [Connect app](https://developer.atlassian.com/cloud/jira/platform/index/#connect-apps).
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const AddonPropertiesResourceDeleteAddonPropertyDeleteInput = z.object({

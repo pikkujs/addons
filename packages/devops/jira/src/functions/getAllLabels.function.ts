@@ -1,7 +1,7 @@
 // Labels — This resource represents available labels. Use it to get available labels for the global label field.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetAllLabelsInput = z.object({
   startAt: z.number().int().optional().default(0).describe("The index of the first item to return in a page of results (page offset)."),

@@ -1,5 +1,5 @@
 import { BadRequestError, ConflictError, ForbiddenError, InternalServerError, MethodNotAllowedError, NotFoundError, TooManyRequestsError, UnauthorizedError, UnprocessableContentError } from '@pikku/core/errors'
-import type { TypedVariablesService } from '#pikku/variables/pikku-variables.gen.js'
+import type { TypedVariablesService } from '#pikku/addon/variables/pikku-variables.gen.js'
 
 export const MICROSOFT_ONE_DRIVE_OAUTH2_CONFIG = {
   tokenSecretId: 'MICROSOFT_ONE_DRIVE_TOKENS',

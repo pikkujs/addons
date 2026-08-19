@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { GoogleAnalyticsService } from '../src/google-analytics-api.service.js'
 import type { GoogleAnalyticsReportingService } from '../src/google-analytics-reporting.service.js'
 

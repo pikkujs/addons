@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SmsSendInput = z.object({
   From: z.string().describe('A Twilio phone number or short code in E.164 format'),

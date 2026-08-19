@@ -1,7 +1,7 @@
 import { z } from 'zod'
 import { Readable } from 'node:stream'
 import { GetObjectCommand } from '@aws-sdk/client-s3'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const S3GetObjectInput = z.object({
   bucket: z.string().describe('Bucket name'),

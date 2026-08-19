@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketFieldsInput = z.object({
   locale: z.string().optional().describe("Forces the `title_in_portal` property to return a dynamic content variant for the specified locale.\n Only accepts [active locale ids](/api-reference/ticketing/account-configuration/locales/#list-locales).\nExample: `locale=\"de\"`.\n"),

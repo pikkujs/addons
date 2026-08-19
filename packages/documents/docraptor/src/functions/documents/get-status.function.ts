@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DocumentGetStatusInput = z.object({
   status_id: z.string().describe('Status ID from an async document creation'),

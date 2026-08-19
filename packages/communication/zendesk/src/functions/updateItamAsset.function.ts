@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UpdateItamAssetInput = z.object({
   asset_id: z.string().describe("The id of the asset. Example: \"01K9AMAPSER316NHTJ2R36YAQ1\""),

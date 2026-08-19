@@ -1,7 +1,7 @@
 // meta — Endpoints that give information about the API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MetaGetOctocatInput = z.object({
   s: z.string().optional().describe("The words to show in Octocat's speech bubble"),

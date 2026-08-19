@@ -1,7 +1,7 @@
 // Issue link types — This resource represents [issue link](#api-group-Issue-links) types. Use it to get, create, update, and delete link issue types as well as get lists of all link issue types. To use it, the site must have [issue linking](https://confluence.atlassian.com/x/yoXKM) enabled.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const CreateIssueLinkTypeInput = z.object({

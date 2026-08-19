@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FileRequestsGetInput = z.object({
   id: z.string().optional().describe("The ID of the file request to retrieve."),

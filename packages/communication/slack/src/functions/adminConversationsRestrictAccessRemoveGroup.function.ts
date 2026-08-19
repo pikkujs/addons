@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminConversationsRestrictAccessRemoveGroupInput = z.object({
   channel_id: z.string().describe("The channel to remove the linked group from."),

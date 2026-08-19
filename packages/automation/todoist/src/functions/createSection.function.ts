@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateSectionInput = z.object({
   project_id: z.string().describe("Project ID this section should belong to"),

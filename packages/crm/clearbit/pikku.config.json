@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./clearbit.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "clearbit"
+  ]
 }

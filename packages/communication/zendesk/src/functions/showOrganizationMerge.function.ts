@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowOrganizationMergeInput = z.object({
   organization_merge_id: z.string().describe("The ID of the organization merge. Example: \"01HPZM6206BF4G63783E5349AD\""),

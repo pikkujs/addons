@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./mautic.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mautic"
+  ]
 }

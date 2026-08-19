@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./yourls.png"
-  }
+  },
+  "forceRequiredServices": [
+    "yourls"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowAccountSettingsInput = z.object({
   authenticity_token: z.string().optional().describe("Legacy CSRF token. Ignored by API."),

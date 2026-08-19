@@ -17,5 +17,8 @@
       "Trigger"
     ],
     "icon": "./telegram.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "telegram"
+  ]
 }

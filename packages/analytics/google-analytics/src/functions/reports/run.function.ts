@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DateRangeSchema = z.object({
   startDate: z.string().describe('Start date (YYYY-MM-DD, or relative: today, yesterday, NdaysAgo)'),

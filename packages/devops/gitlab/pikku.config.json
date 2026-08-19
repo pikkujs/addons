@@ -19,5 +19,8 @@
       "devops"
     ],
     "icon": "./gitlab.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "gitlab"
+  ]
 }

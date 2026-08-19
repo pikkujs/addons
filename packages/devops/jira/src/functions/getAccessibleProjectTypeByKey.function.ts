@@ -1,7 +1,7 @@
 // Project types — This resource represents project types. Use it to obtain a list of all project types, a list of project types accessible to the calling user, and details of a project type.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetAccessibleProjectTypeByKeyInput = z.object({

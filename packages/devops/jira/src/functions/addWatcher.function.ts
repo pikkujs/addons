@@ -1,7 +1,7 @@
 // Issue watchers — This resource represents users watching an issue. Use it to get details of users watching an issue as well as start and stop a user watching an issue.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const AddWatcherInput = z.object({

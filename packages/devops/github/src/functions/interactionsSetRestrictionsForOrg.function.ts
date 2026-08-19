@@ -1,7 +1,7 @@
 // interactions — Owner or admin management of users interactions.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnprocessableContentError } from '@pikku/core/errors'
 
 export const InteractionsSetRestrictionsForOrgInput = z.object({

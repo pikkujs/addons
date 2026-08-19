@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListReceivedFilesInput = z.object({
   limit: z.number().optional().describe("Number of files to return max per query. Defaults to 100 if no limit is specified."),

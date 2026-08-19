@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingUnshareFolderInput = z.object({
   shared_folder_id: z.string().optional().describe("The ID for the shared folder."),

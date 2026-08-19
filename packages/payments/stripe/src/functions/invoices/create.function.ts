@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { InvoiceSchema, MetadataSchema } from '../../stripe.types.js'
 import { fromStripeObject, epochToIso } from '../../stripe.transform.js'
 

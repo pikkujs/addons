@@ -13,11 +13,11 @@
   },
   "dependencies": {
     "@pikku/addon-postgres": "workspace:*",
-    "@pikku/core": "^0.12.83",
+    "@pikku/core": "^0.12.86",
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.103",
+    "@pikku/cli": "^0.12.107",
     "@testcontainers/postgresql": "^10",
     "@types/node": "^24",
     "testcontainers": "^10",

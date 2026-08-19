@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilePropertiesTemplatesUpdateForUserInput = z.object({
   add_fields: z.array(z.object({

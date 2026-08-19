@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const YoutubeCaptionsDownloadInput = z.object({
   id: z.string().describe("The ID of the caption track to download, required for One Platform."),

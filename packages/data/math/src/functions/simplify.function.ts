@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { simplify as mathSimplify } from 'mathjs'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SimplifyInput = z.object({
   expression: z

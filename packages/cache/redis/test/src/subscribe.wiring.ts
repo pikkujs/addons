@@ -1,4 +1,4 @@
-import { wireTrigger, wireTriggerSource } from '#pikku'
+import { wireTrigger, wireTriggerSource } from '#pikku/addon/trigger'
 import { subscribe } from '@pikku/addon-redis'
 import { onSubscribe } from './on-subscribe.function.js'
 

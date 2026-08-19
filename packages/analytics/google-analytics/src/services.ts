@@ -1,6 +1,6 @@
 import { GoogleAnalyticsService } from './google-analytics-api.service.js'
 import { GoogleAnalyticsReportingService } from './google-analytics-reporting.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,

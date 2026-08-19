@@ -1,7 +1,7 @@
 // Project key and name validation — This resource provides validation for project keys and names.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const GetValidProjectKeyInput = z.object({

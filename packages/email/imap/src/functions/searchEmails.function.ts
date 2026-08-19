@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SearchEmailsInput = z.object({
   mailbox: z.string().default('INBOX').describe('Mailbox to search in'),

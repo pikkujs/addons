@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { onSubscribeMessages } from './on-subscribe.function.js'
 
 export type TestRedisInput = {}

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeletePersonalLabelInput = z.object({
   label_id: z.number().int().describe("The ID of the label to delete."),

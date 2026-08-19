@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteTicketFormStatusByIdInput = z.object({
   ticket_form_id: z.number().int().describe("The ID of the ticket form. Example: 47"),

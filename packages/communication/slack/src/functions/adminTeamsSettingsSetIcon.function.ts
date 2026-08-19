@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminTeamsSettingsSetIconInput = z.object({
   image_url: z.string().describe("Image URL for the icon"),

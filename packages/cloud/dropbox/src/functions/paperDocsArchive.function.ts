@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PaperDocsArchiveInput = z.object({
   doc_id: z.string().optional().describe("The Paper doc ID."),

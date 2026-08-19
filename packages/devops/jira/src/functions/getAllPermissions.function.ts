@@ -1,7 +1,7 @@
 // Permissions — This resource represents permissions. Use it to obtain details of all permissions and determine whether the user has certain permissions.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetAllPermissionsOutput = z.object({

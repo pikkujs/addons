@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilteredSearchItamAssetsInput = z.object({
   query: z.string().optional().describe("Lists the search terms, separated by a space, used to identify the asset records.\n. Example: \"laptop\""),

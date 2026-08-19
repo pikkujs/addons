@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./clickup.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "clickup"
+  ]
 }

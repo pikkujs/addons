@@ -1,7 +1,7 @@
 // Screen tab fields — This resource represents the screen tab fields used to record issue details. Use it to get, add, move, and remove fields from screen tabs.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const MoveScreenTabFieldInput = z.object({

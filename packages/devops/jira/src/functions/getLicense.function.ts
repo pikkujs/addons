@@ -1,7 +1,7 @@
 // Instance information — This resource represents information about the Jira instance. Use it to get license details.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const GetLicenseOutput = z.object({

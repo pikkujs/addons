@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SearchUsersInput = z.object({
   page: z.number().int().optional().describe("Page number for offset-based pagination (non-negative integer).. Example: 1"),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ExecuteQueryInput = z.object({
   statement: z.string().describe("The SQL statement to execute"),

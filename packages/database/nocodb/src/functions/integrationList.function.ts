@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IntegrationListInput = z.object({
   type: z.enum(["database", "ai", "auth", "sync", "communication", "spread-sheet", "project-management", "crm", "marketing", "ats", "development", "finance", "ticketing", "storage", "others", "workflow-node"]).optional().describe("Integration Type"),

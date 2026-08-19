@@ -1,5 +1,5 @@
 import { Client } from 'ssh2'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets, content }) => {
   const creds = (await secrets.getSecret('SSH_CREDENTIALS')).reveal()

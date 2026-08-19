@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./snowflake.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "snowflake"
+  ]
 }

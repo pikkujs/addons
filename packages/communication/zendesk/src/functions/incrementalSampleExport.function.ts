@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IncrementalSampleExportInput = z.object({
   incremental_resource: z.string().describe("The resource requested for incremental sample export. Example: \"tickets\""),

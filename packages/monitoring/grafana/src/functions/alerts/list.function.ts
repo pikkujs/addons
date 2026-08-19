@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AlertsListInput = z.object({
   dashboardId: z.number().optional().describe('Filter by dashboard ID'),

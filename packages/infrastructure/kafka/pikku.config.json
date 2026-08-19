@@ -13,5 +13,10 @@
       "Infrastructure"
     ],
     "icon": "./kafka.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "kafka",
+    "kafkaProducer",
+    "kafkaAdmin"
+  ]
 }

@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./aws-sns.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsSns"
+  ]
 }

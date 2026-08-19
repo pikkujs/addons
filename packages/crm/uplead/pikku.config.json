@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./uplead.png"
-  }
+  },
+  "forceRequiredServices": [
+    "uplead"
+  ]
 }

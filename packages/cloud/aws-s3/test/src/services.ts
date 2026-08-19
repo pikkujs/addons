@@ -3,7 +3,7 @@ import {
   LocalVariablesService,
   LocalSecretService,
 } from '@pikku/core/services'
-import { pikkuServices } from '#pikku'
+import { pikkuServices } from '#pikku/addon/setup'
 
 import '../.pikku/pikku-bootstrap.gen.js'
 

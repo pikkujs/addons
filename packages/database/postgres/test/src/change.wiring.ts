@@ -1,4 +1,4 @@
-import { wireTrigger, wireTriggerSource } from '#pikku'
+import { wireTrigger, wireTriggerSource } from '#pikku/addon/trigger'
 import { onChanges } from '@pikku/addon-postgres'
 import { onChange } from './on-change.function.js'
 

@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./trello.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "trello"
+  ]
 }

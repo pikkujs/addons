@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminConversationsSearchInput = z.object({
   team_ids: z.string().optional().describe("Comma separated string of team IDs, signifying the workspaces to search through."),

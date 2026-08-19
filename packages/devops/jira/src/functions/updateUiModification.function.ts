@@ -1,7 +1,7 @@
 // UI modifications (apps) — UI modifications is an experimental feature available for **Forge apps only**. It enables Forge apps to control how selected Jira fields behave on global create issue dialog. For example: hide specific fields, set them as required, etc.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const UpdateUiModificationInput = z.object({

@@ -1,7 +1,7 @@
 // Issue types — This resource represents issues types. Use it to: * get, create, update, and delete issue types. * get all issue types for a user. * get alternative issue types. * set an avatar for an issue type.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const GetIssueAllTypesOutput = z.array(z.object({

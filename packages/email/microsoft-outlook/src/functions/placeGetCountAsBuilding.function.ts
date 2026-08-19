@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PlaceGetCountAsBuildingInput = z.object({
   $search: z.string().optional().describe("Search items by search phrases"),

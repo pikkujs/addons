@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListUsersInput = z.object({
   role: z.string().optional().describe("Filters the results by role. Possible values are \"end-user\", \"agent\", \"admin\", or a custom role name\n. Example: \"agent\""),

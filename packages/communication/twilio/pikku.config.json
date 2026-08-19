@@ -14,5 +14,8 @@
       "Call"
     ],
     "icon": "./twilio.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "twilio"
+  ]
 }

@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./grist.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "grist"
+  ]
 }

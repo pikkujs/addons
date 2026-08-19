@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const KeysInput = z.object({
   pattern: z.string().describe('Pattern to match keys (e.g., "user:*")'),

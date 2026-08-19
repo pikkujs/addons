@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowAuditLogInput = z.object({
   audit_log_id: z.number().int().describe("The ID of the audit log. Example: 498483"),

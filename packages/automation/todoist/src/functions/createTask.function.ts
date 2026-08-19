@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateTaskInput = z.object({
   content: z.string().optional().describe("Task content. This value may contain markdown-formatted text and hyperlinks."),

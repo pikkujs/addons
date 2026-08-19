@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MessageEditInput = z.object({
   chat_id: z.union([z.string(), z.number()]).optional().describe('Required if inline_message_id is not specified. Unique identifier for the target chat'),

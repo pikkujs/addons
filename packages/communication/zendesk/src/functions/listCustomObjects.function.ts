@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListCustomObjectsInput = z.object({
   include_ui_path: z.boolean().optional().describe("Include UI path in the response"),

@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./pushbullet.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "pushbullet"
+  ]
 }

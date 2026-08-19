@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminEmojiAddAliasInput = z.object({
   alias_for: z.string().describe("The alias of the emoji."),

@@ -2,7 +2,7 @@
 
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AppCertificatesCustomDeleteInput = z.object({
   app_name: z.string().describe("Fly App Name"),

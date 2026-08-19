@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateCommentInput = z.object({
   task_id: z.string().optional().describe("Comment's task ID (for task comments). task_id or project_id required"),

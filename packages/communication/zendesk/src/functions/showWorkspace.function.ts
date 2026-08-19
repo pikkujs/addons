@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowWorkspaceInput = z.object({
   workspace_id: z.number().int().describe("The id of the workspace. Example: 3133"),

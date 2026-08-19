@@ -1,7 +1,7 @@
 // code-scanning — Retrieve code scanning alerts from a repository.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { NotFoundError } from '@pikku/core/errors'
 import { codescanninganalysistoolguidSchema, codescanninganalysistoolnameSchema } from '../github.types.js'
 

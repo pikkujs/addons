@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./aws-lambda.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsLambda"
+  ]
 }

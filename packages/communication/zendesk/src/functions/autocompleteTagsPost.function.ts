@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AutocompleteTagsPostInput = z.object({
   name: z.string().optional().describe("A substring of a tag to search for. Example: \"att\""),

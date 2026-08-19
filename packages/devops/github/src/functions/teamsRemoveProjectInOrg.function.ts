@@ -1,7 +1,7 @@
 // teams — Interact with GitHub Teams.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TeamsRemoveProjectInOrgInput = z.object({
   org: z.string().describe("The organization name. The name is not case sensitive."),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetRedactedAudioInput = z.object({
   transcriptId: z.string().describe('The transcript ID (must have been created with redact_pii enabled)'),

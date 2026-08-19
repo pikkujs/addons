@@ -1,7 +1,7 @@
 // Project permission schemes — This resource represents permission schemes for a project. Use this resource to: * get details of a project's issue security levels available to the calling user. * get the permission scheme associated with the project or assign different permission scheme to the project. * get details of a project's issue security scheme. See [Managing project permissions](https://confluence.atlassian.com/x/yodKLg) for more information about permission schemes.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const GetProjectIssueSecuritySchemeInput = z.object({

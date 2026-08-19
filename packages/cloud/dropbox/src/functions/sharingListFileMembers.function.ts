@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListFileMembersInput = z.object({
   include_inherited: z.boolean().optional().describe("Whether to include members who only have access from a parent shared folder."),

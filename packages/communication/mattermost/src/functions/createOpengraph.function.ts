@@ -1,7 +1,7 @@
 // OpenGraph — Endpoint for getting Open Graph metadata.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateOpengraphInput = z.object({
   url: z.string().describe("The URL to get Open Graph Metadata."),

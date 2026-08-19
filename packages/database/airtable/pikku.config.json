@@ -13,5 +13,8 @@
       "Database"
     ],
     "icon": "./airtable.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "airtable"
+  ]
 }

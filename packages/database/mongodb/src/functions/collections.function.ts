@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListCollectionsInput = z.object({
   filter: z.record(z.string(), z.any()).optional().describe('Filter for collection names'),

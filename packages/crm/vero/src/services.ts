@@ -1,5 +1,5 @@
 import { VeroService } from './vero-api.service.js'
-import { pikkuAddonWireServices } from '#pikku'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {

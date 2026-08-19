@@ -1,7 +1,7 @@
 // actions — Endpoints to manage GitHub Actions using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ActionsSetSelectedReposToRequiredWorkflowInput = z.object({
   org: z.string().describe("The organization name. The name is not case sensitive."),

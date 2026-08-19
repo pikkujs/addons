@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const VerifySubdomainAvailabilityInput = z.object({
   subdomain: z.string().describe("Specify the name of the subdomain you want to verify. The name can't contain underscores, hyphens, or spaces.\n. Example: \"z3ndesk\""),

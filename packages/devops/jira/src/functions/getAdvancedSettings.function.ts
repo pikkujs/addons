@@ -1,7 +1,7 @@
 // Jira settings — This resource represents various settings in Jira. Use it to get and update Jira settings and properties.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetAdvancedSettingsOutput = z.array(z.object({

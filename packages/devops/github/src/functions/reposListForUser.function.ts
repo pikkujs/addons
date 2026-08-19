@@ -1,7 +1,7 @@
 // repos — Interact with GitHub Repos.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ReposListForUserInput = z.object({
   username: z.string().describe("The handle for the GitHub user account."),

@@ -19,5 +19,8 @@
       "monitoring"
     ],
     "icon": "./the-hive.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "theHive"
+  ]
 }

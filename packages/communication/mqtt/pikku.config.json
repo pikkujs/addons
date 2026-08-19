@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./mqtt.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mqtt"
+  ]
 }

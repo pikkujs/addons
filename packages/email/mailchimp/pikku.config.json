@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./mailchimp.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mailchimp"
+  ]
 }

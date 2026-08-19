@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteUploadInput = z.object({
   token: z.string().describe("The token of the uploaded attachment. Example: \"6bk3gql82em5nmf\""),

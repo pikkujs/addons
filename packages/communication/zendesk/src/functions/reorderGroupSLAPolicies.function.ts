@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ReorderGroupSLAPoliciesInput = z.object({
   group_sla_policy_ids: z.array(z.string()).optional().describe("The ids of the Group SLA policies to reorder"),

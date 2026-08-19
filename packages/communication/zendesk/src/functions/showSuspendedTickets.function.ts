@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowSuspendedTicketsInput = z.object({
   id: z.number().int().describe("id of the suspended ticket. Example: 35436"),

@@ -1,5 +1,5 @@
-import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core'
-import type { TypedSecretService } from '#pikku/secrets/pikku-secrets.gen.js'
+import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core/services'
+import type { TypedSecretService } from '#pikku/addon/secrets/pikku-secrets.gen.js'
 import type { MailgunSecrets } from './mailgun.secret.js'
 
 export interface RequestOptions {

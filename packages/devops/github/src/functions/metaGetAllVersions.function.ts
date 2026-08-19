@@ -1,7 +1,7 @@
 // meta — Endpoints that give information about the API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { NotFoundError } from '@pikku/core/errors'
 
 export const MetaGetAllVersionsOutput = z.array(z.string().date())

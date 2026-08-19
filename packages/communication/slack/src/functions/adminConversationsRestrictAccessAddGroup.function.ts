@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminConversationsRestrictAccessAddGroupInput = z.object({
   channel_id: z.string().describe("The channel to link this group to."),

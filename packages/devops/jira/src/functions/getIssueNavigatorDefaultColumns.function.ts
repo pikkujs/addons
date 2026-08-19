@@ -1,7 +1,7 @@
 // Issue navigator settings — This resource represents issue navigator settings. Use it to get and set issue navigator default columns.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetIssueNavigatorDefaultColumnsOutput = z.array(z.object({

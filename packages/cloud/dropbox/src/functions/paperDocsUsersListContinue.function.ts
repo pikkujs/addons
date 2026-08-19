@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PaperDocsUsersListContinueInput = z.object({
   cursor: z.string().optional().describe("The cursor obtained from :route:`docs/users/list` or :route:`docs/users/list/continue`. Allows for pagination."),

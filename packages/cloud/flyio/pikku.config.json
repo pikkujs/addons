@@ -13,5 +13,8 @@
       "Cloud"
     ],
     "icon": "./flyio.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "flyio"
+  ]
 }

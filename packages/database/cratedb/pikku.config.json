@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./cratedb.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "cratedb"
+  ]
 }

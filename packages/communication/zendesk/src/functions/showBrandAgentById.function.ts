@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowBrandAgentByIdInput = z.object({
   brand_agent_id: z.string().describe("The id of the brand agent. Example: \"123ABC\""),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CallsInfoInput = z.object({
   id: z.string().describe("`id` of the Call returned by the [`calls.add`](/methods/calls.add) method."),

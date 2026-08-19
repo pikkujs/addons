@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./wekan.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "wekan"
+  ]
 }

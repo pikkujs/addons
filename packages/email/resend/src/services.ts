@@ -1,5 +1,5 @@
 import { ResendService } from './resend-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const resend = new ResendService(secrets)

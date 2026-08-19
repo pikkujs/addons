@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowManyOrganizationsInput = z.object({
   ids: z.string().optional().describe("A list of organization ids. Example: \"35436,20057623\""),

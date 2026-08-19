@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateFontFamiliesInput = z.object({
   theme_json_version: z.number().int().min(2).max(3).optional().default(3).describe("Version of the theme.json schema used for the typography settings."),

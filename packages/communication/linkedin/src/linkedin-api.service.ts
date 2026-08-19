@@ -1,5 +1,5 @@
 import { BadRequestError, ConflictError, ForbiddenError, InternalServerError, MethodNotAllowedError, NotFoundError, TooManyRequestsError, UnauthorizedError, UnprocessableContentError } from '@pikku/core/errors'
-import type { TypedVariablesService } from '#pikku/variables/pikku-variables.gen.js'
+import type { TypedVariablesService } from '#pikku/addon/variables/pikku-variables.gen.js'
 
 export const LINKEDIN_OAUTH2_CONFIG = {
   tokenSecretId: 'LINKEDIN_TOKENS',

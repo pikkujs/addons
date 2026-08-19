@@ -1,5 +1,5 @@
 import { TypeformService } from './typeform-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (
   config,

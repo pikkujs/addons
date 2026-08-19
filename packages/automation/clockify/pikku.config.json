@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./clockify.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "clockify"
+  ]
 }

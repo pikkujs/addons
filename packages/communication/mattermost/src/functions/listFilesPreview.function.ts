@@ -1,7 +1,7 @@
 // files — Endpoints for uploading and interacting with files.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const ListFilesPreviewInput = z.object({

@@ -1,7 +1,7 @@
 // OAuth — Endpoints for configuring and interacting with Mattermost as an OAuth 2.0 service provider.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const ListOauthAppsInput = z.object({

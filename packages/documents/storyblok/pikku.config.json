@@ -19,5 +19,8 @@
       "documents"
     ],
     "icon": "./storyblok.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "storyblok"
+  ]
 }

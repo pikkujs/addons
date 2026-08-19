@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesUploadSessionAppendInput = z.object({
   session_id: z.string().optional().describe("The upload session ID (returned by :route:`upload_session/start`)."),

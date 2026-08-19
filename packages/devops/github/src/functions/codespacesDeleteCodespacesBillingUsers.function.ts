@@ -1,7 +1,7 @@
 // codespaces — Endpoints to manage Codespaces using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, NotFoundError, UnprocessableContentError, InternalServerError } from '@pikku/core/errors'
 
 export const CodespacesDeleteCodespacesBillingUsersInput = z.object({

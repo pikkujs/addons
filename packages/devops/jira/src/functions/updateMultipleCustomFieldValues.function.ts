@@ -1,7 +1,7 @@
 // Issue custom field values (apps) — This resource represents the values of custom fields added by [Forge apps](https://developer.atlassian.com/platform/forge/). Use it to update the value of a custom field on issues.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const UpdateMultipleCustomFieldValuesInput = z.object({

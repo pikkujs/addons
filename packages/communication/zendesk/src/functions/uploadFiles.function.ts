@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UploadFilesInput = z.object({
   filename: z.string().describe("The name to assign to the uploaded file. Example: \"my_document.pdf\""),

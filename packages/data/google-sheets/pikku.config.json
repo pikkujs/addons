@@ -19,5 +19,8 @@
       "Data"
     ],
     "icon": "./google-sheets.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleSheets"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GroupMembershipSetDefaultInput = z.object({
   user_id: z.number().int().describe("The id of the user. Example: 35436"),

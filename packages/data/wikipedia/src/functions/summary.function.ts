@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { pageUrl, wikiFetch } from '../wikipedia.js'
 
 export const SummaryInput = z.object({

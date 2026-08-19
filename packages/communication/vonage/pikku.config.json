@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./vonage.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "vonage"
+  ]
 }

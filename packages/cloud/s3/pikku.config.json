@@ -13,5 +13,9 @@
       "Cloud"
     ],
     "icon": "./s3.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "s3Client",
+    "content"
+  ]
 }

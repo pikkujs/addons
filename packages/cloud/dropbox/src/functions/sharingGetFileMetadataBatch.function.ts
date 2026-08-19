@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingGetFileMetadataBatchInput = z.object({
   files: z.array(z.string()).optional().describe("The files to query."),

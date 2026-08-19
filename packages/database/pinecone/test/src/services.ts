@@ -1,4 +1,4 @@
-import { pikkuServices } from '#pikku'
+import { pikkuServices } from '#pikku/addon/setup'
 import {
   ConsoleLogger,
   LocalVariablesService,

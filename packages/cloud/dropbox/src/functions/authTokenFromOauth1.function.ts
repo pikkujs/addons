@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AuthTokenFromOauth1Input = z.object({
   oauth1_token: z.string().optional().describe("The supplied OAuth 1.0 access token."),

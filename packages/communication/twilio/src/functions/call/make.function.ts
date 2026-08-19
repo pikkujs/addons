@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CallMakeInput = z.object({
   From: z.string().describe('The phone number to use as the caller ID in E.164 format'),

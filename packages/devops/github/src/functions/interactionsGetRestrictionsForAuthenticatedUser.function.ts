@@ -1,7 +1,7 @@
 // interactions — Owner or admin management of users interactions.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const InteractionsGetRestrictionsForAuthenticatedUserOutput = z.union([z.object({
   expires_at: z.string().datetime(),

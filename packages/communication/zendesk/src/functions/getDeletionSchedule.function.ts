@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetDeletionScheduleInput = z.object({
   deletion_schedule_id: z.number().int().describe("The id of the deletion schedule. Example: 132828"),

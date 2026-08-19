@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { PutObjectCommand } from '@aws-sdk/client-s3'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const S3PutObjectInput = z.object({
   bucket: z.string().describe('Bucket name'),

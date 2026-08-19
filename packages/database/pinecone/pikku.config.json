@@ -1,11 +1,21 @@
 {
   "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
   "tsconfig": "./tsconfig.json",
-  "srcDirectories": ["src", "types"],
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
   "outDir": "./.pikku",
   "addon": {
     "displayName": "Pinecone",
     "description": "Vector search over a Pinecone index — embed a query and retrieve the nearest matches",
-    "categories": ["Search", "Write"]
-  }
+    "categories": [
+      "Search",
+      "Write"
+    ]
+  },
+  "forceRequiredServices": [
+    "pinecone",
+    "aiEmbedding"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetThemeInput = z.object({
   stylesheet: z.string().describe("The theme's stylesheet. This uniquely identifies the theme."),

@@ -13,5 +13,9 @@
       "Email"
     ],
     "icon": "./email-send.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "emailTransport",
+    "content"
+  ]
 }

@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./zammad.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "zammad"
+  ]
 }

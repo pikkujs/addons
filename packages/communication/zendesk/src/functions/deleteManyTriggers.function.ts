@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteManyTriggersInput = z.object({
   ids: z.string().describe("A comma separated list of trigger IDs. Example: \"131,178,938\""),

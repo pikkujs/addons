@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./airtop.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "airtop"
+  ]
 }

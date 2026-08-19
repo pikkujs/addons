@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GA4EventSchema = z.object({
   name: z.string().describe('Event name (e.g., purchase, page_view, add_to_cart)'),

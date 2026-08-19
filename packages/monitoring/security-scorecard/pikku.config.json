@@ -19,5 +19,8 @@
       "monitoring"
     ],
     "icon": "./security-scorecard.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "securityScorecard"
+  ]
 }

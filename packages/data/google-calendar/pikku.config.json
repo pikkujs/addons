@@ -19,5 +19,8 @@
       "Data"
     ],
     "icon": "./google-calendar.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleCalendar"
+  ]
 }

@@ -1,11 +1,6 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { Transporter } from 'nodemailer'
-import type { ContentService } from '@pikku/core'
+import type { ContentService } from '@pikku/core/services'
 
 export interface Config extends CoreConfig {}
 export interface UserSession extends CoreUserSession {}

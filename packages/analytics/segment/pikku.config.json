@@ -13,5 +13,8 @@
       "Analytics"
     ],
     "icon": "./segment.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "segment"
+  ]
 }

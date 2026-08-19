@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateStreamingTokenInput = z.object({
   expiresInSeconds: z.number().min(1).max(600).describe('Token expiration time in seconds (1-600)'),

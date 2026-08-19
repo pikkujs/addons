@@ -1,7 +1,7 @@
 // Views — View endpoints
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, NotFoundError, ConflictError, TooManyRequestsError, InternalServerError } from '@pikku/core/errors'
 
 const viewSortRequestSchema = z.record(z.string(), z.unknown()).describe("Sort for the view. Can be a property sort (with property and direction) or timestamp sort (with timestamp and direction).")

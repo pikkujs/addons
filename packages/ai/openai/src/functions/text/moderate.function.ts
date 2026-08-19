@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TextModerateInput = z.object({
   input: z.union([z.string(), z.array(z.string())]).describe('The input text to classify'),

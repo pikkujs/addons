@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./google-firebase-realtime-database.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleFirebaseRealtimeDatabase"
+  ]
 }

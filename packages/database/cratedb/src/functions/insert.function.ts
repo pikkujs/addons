@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const InsertInput = z.object({
   schema: z.string().optional().describe("Name of the schema the table belongs to"),

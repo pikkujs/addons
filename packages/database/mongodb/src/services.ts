@@ -1,6 +1,6 @@
 import { MongoClient } from 'mongodb'
 import type { Db } from 'mongodb'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export type MongodbService = Db & { stop: () => Promise<void> }
 

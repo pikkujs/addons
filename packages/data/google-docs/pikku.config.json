@@ -19,5 +19,8 @@
       "Data"
     ],
     "icon": "./google-docs.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleDocs"
+  ]
 }

@@ -1,7 +1,7 @@
 // Time tracking — This resource represents time tracking and time tracking providers. Use it to get and set the time tracking provider, get and set the time tracking options, and disable time tracking.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetAvailableTimeTrackingImplementationsOutput = z.array(z.object({

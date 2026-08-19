@@ -19,5 +19,8 @@
       "Data"
     ],
     "icon": "./google-drive.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleDrive"
+  ]
 }

@@ -1,7 +1,7 @@
 // emoji — Endpoints for creating, getting and interacting with emojis.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetEmojiInput = z.object({

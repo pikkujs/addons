@@ -19,5 +19,8 @@
       "monitoring"
     ],
     "icon": "./cortex.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "cortex"
+  ]
 }

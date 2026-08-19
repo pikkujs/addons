@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowTicketMetricsInput = z.object({
   ticket_metric_id: z.string().describe("The id of the ticket metric to retrieve. Example: \"10001\""),

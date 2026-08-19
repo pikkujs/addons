@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LdapSearchInput = z.object({
   baseDN: z.string().describe('Base DN to search from (e.g. dc=example,dc=org)'),

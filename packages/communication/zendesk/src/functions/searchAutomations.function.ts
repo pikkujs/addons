@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SearchAutomationsInput = z.object({
   query: z.string().describe("Query string used to find all automations with matching title. Example: \"close\""),

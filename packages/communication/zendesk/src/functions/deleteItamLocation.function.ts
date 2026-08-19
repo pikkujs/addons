@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteItamLocationInput = z.object({
   location_id: z.string().describe("The id of the location. Example: \"01KBFXPX2QFYZSSC1TMF3Q6T68\""),

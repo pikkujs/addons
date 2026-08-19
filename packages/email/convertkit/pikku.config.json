@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./convertkit.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "convertkit"
+  ]
 }

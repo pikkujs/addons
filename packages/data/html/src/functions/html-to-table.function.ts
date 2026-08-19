@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const HtmlToTableInput = z.object({
   data: z.array(z.record(z.string(), z.any())).describe('Array of objects to convert to an HTML table'),

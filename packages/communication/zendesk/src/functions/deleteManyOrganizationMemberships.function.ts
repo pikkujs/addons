@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteManyOrganizationMembershipsInput = z.object({
   ids: z.array(z.number().int()).optional().describe("The IDs of the organization memberships to delete"),

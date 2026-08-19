@@ -13,5 +13,8 @@
       "Database"
     ],
     "icon": "./postgres.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "postgres"
+  ]
 }

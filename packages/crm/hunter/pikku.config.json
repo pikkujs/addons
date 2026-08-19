@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./hunter.png"
-  }
+  },
+  "forceRequiredServices": [
+    "hunter"
+  ]
 }

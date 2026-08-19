@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateTemplatePartsInput = z.object({
   slug: z.string().min(1).regex(new RegExp("[a-zA-Z0-9_\\%-]+")).describe("Unique slug identifying the template."),

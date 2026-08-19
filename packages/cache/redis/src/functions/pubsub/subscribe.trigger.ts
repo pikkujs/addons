@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuTriggerFunc } from '#pikku'
+import { pikkuTriggerFunc } from '#pikku/addon/trigger'
 
 export const SubscribeConfig = z.object({
   channels: z.set(z.string()).describe('Comma-separated list of channels to subscribe to. Supports wildcards (*) for pattern subscription.'),

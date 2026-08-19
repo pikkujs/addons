@@ -1,4 +1,4 @@
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 import type { PineconeConfig } from './pinecone.js'
 
 export const createSingletonServices = pikkuAddonServices(

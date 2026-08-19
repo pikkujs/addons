@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ViewsPublishInput = z.object({
   user_id: z.string().describe("`id` of the user you want publish a view to."),

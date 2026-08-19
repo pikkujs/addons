@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetAllCommentsInput = z.object({
   project_id: z.string().optional().describe("ID of the project used to filter comments. task_id or project_id required"),

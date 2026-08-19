@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListMountableFoldersInput = z.object({
   limit: z.number().optional().describe("The maximum number of results to return per request."),

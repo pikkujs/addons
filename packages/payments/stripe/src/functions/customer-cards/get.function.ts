@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { fromStripeObject } from '../../stripe.transform.js'
 
 export const CustomerCardGetInput = z.object({

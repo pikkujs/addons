@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { exec } from 'node:child_process'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ExecuteInput = z.object({
   command: z.string().describe('The shell command to run'),

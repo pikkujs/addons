@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PlaceAsFloorUpdateCheckInInput = z.object({
   "place-id": z.string().describe("The unique identifier of place"),

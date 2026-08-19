@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { evaluate as mathEvaluate, format } from 'mathjs'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const EvaluateInput = z.object({
   expression: z

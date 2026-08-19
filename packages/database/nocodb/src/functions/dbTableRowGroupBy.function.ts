@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DbTableRowGroupByInput = z.object({
   orgs: z.string().describe("Organisation Name. Currently `noco` will be used."),

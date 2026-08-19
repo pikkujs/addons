@@ -1,7 +1,7 @@
 // activity — Activity APIs provide access to notifications, subscriptions, and timelines.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ActivityGetFeedsOutput = z.object({
   _links: z.object({

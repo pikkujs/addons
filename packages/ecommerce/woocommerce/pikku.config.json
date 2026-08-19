@@ -19,5 +19,8 @@
       "ecommerce"
     ],
     "icon": "./woocommerce.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "woocommerce"
+  ]
 }

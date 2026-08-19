@@ -13,5 +13,8 @@
       "Image"
     ],
     "icon": "./edit-image.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "content"
+  ]
 }

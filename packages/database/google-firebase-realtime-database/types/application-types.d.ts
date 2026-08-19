@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { GoogleFirebaseRealtimeDatabaseService } from '../src/google-firebase-realtime-database-api.service.js'
 
 export interface Config extends CoreConfig {}

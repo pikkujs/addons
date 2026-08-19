@@ -1,7 +1,7 @@
 // Workflow scheme project associations — This resource represents the associations between workflow schemes and projects. For more information, see [Managing your workflows](https://confluence.atlassian.com/x/q4hKLg).
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetWorkflowSchemeProjectAssociationsInput = z.object({

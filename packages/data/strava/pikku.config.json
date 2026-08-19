@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./strava.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "strava"
+  ]
 }

@@ -1,7 +1,7 @@
 // codespaces — Endpoints to manage Codespaces using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CodespacesListSecretsForAuthenticatedUserInput = z.object({
   per_page: z.number().int().optional().default(30).describe("The number of results per page (max 100)."),

@@ -1,4 +1,4 @@
-import type { AIEmbeddingService } from '@pikku/core'
+import type { AIEmbeddingService } from '@pikku/core/services'
 import type OpenAI from 'openai'
 
 const DEFAULT_MODEL = 'text-embedding-3-small'

@@ -1,7 +1,7 @@
 // dependabot — Endpoints to manage Dependabot.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DependabotListOrgSecretsInput = z.object({
   org: z.string().describe("The organization name. The name is not case sensitive."),

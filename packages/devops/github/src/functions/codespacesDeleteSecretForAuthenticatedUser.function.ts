@@ -1,7 +1,7 @@
 // codespaces — Endpoints to manage Codespaces using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CodespacesDeleteSecretForAuthenticatedUserInput = z.object({
   secret_name: z.string().describe("The name of the secret."),

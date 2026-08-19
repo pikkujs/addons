@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowCustomRoleByIdInput = z.object({
   custom_role_id: z.number().int().describe("The ID of the custom agent role. Example: 10127"),

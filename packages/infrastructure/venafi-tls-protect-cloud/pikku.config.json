@@ -19,5 +19,8 @@
       "infrastructure"
     ],
     "icon": "./venafi-tls-protect-cloud.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "venafiTlsProtectCloud"
+  ]
 }

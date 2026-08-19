@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListMountableFoldersContinueInput = z.object({
   cursor: z.string().optional().describe("The cursor returned by the previous API call specified in the endpoint description."),

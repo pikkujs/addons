@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./filemaker.png"
-  }
+  },
+  "forceRequiredServices": [
+    "filemaker"
+  ]
 }

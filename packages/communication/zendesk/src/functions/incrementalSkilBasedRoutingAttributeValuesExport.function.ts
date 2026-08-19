@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IncrementalSkilBasedRoutingAttributeValuesExportOutput = z.object({
   attribute_values: z.array(z.object({

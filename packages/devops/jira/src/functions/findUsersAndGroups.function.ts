@@ -1,7 +1,7 @@
 // Group and user picker — This resource represents a list of users and a list of groups. Use it to obtain the details to populate user and group picker suggestions list.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError, TooManyRequestsError } from '@pikku/core/errors'
 
 export const FindUsersAndGroupsInput = z.object({

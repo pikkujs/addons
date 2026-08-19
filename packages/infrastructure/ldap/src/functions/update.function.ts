@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { Change, Attribute } from 'ldapts'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ChangeSchema = z.object({
   operation: z.enum(['add', 'replace', 'delete']).describe('Type of modification'),

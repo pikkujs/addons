@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowJobStatusInput = z.object({
   job_status_id: z.string().describe("the Id of the Job status. Example: \"8b726e606741012ffc2d782bcb7848fe\""),

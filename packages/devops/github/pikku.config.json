@@ -19,5 +19,8 @@
       "Devops"
     ],
     "icon": "./github.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "github"
+  ]
 }

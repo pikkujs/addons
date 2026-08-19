@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, InternalServerError } from '@pikku/core/errors'
 
 export const AutocompleteUsersPostInput = z.object({

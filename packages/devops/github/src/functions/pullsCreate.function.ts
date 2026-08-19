@@ -1,7 +1,7 @@
 // pulls — Interact with GitHub Pull Requests.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ForbiddenError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const PullsCreateInput = z.object({

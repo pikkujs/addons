@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./pushover.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "pushover"
+  ]
 }

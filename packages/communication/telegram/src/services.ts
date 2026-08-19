@@ -1,5 +1,5 @@
 import { TelegramService } from './telegram-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { variables, secrets }) => {
   const botToken = (await secrets.getSecret('TELEGRAM_BOT_TOKEN')).reveal()

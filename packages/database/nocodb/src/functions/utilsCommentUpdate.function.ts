@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const UtilsCommentUpdateInput = z.object({
   commentId: z.string().describe("Comment ID"),

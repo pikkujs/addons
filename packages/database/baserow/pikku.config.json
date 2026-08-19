@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./baserow.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "baserow"
+  ]
 }

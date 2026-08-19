@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const RecordNewSkipInput = z.object({
   sort_order: z.enum(["asc", "desc"]).optional().describe("Sort order. Defaults to \"asc\""),

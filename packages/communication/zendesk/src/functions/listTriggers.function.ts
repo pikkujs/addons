@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTriggersInput = z.object({
   active: z.boolean().optional().describe("Filter by active triggers if true or inactive triggers if false. Example: true"),

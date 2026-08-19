@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./aws-ses.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "awsSes"
+  ]
 }

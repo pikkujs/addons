@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./keap.png"
-  }
+  },
+  "forceRequiredServices": [
+    "keap"
+  ]
 }

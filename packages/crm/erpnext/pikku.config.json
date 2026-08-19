@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./erpnext.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "erpnext"
+  ]
 }

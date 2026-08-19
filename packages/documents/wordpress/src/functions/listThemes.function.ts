@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListThemesInput = z.object({
   status: z.array(z.enum(["active", "inactive"])).optional().describe("Limit result set to themes assigned one or more statuses."),

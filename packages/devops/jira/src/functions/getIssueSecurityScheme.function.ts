@@ -1,7 +1,7 @@
 // Issue security schemes — This resource represents issue security schemes. Use it to get an issue security scheme or list of issues security schemes. Issue security schemes control which users or groups of users can view an issue. When an issue security scheme is associated with a project, its security levels can be applied to issues in that project. Sub-tasks also inherit the security level of their parent issue.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetIssueSecuritySchemeInput = z.object({

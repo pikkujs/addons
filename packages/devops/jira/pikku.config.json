@@ -19,5 +19,8 @@
       "Devops"
     ],
     "icon": "./jira.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "jira"
+  ]
 }

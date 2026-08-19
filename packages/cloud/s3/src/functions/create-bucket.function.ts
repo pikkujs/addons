@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { CreateBucketCommand } from '@aws-sdk/client-s3'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const S3CreateBucketInput = z.object({
   bucket: z.string().describe('Bucket name to create'),

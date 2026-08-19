@@ -1,7 +1,7 @@
 // OAuth Tokens — OAuth tokens are credentials used to authenticate API requests on behalf of users or applications.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowCurrentTokenOutput = z.object({
   token: z.object({

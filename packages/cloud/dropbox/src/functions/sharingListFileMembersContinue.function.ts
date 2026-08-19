@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListFileMembersContinueInput = z.object({
   cursor: z.string().optional().describe("The cursor returned by your last call to :route:`list_file_members`, :route:`list_file_members/continue`, or :route:`list_file_members/batch`."),

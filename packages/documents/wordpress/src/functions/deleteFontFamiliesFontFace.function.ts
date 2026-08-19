@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteFontFamiliesFontFaceInput = z.object({
   font_family_id: z.string().describe("The ID for the parent font family of the font face."),

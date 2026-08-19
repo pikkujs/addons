@@ -18,5 +18,8 @@
       "Teams"
     ],
     "icon": "./sentry.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "sentry"
+  ]
 }

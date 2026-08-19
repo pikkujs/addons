@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PaperDocsCreateInput = z.object({
   parent_folder_id: z.string().optional().describe("The Paper folder ID where the Paper document should be created. The API user has to have write access to this folder or error is thrown."),

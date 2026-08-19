@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuTriggerFunc } from '#pikku'
+import { pikkuTriggerFunc } from '#pikku/addon/trigger'
 import { escapeIdentifier } from '../shared.js'
 
 export const OnChangesConfig = z.object({

@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { CopyObjectCommand } from '@aws-sdk/client-s3'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const S3CopyObjectInput = z.object({
   sourceBucket: z.string().describe('Source bucket name'),

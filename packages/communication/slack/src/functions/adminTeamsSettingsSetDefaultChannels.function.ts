@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminTeamsSettingsSetDefaultChannelsInput = z.object({
   channel_ids: z.string().describe("An array of channel IDs."),

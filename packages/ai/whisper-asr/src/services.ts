@@ -1,4 +1,4 @@
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 import { WhisperASRService } from './whisper-asr.service.js'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { variables, content }) => {

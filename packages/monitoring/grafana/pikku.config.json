@@ -15,5 +15,8 @@
       "Datasources"
     ],
     "icon": "./grafana.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "grafana"
+  ]
 }

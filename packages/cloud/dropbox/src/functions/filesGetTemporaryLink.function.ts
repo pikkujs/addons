@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesGetTemporaryLinkInput = z.object({
   path: z.string().optional().describe("The path to the file you want a temporary link to."),

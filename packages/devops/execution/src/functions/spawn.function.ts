@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { spawn } from 'node:child_process'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SpawnCommandInput = z.object({
   command: z.string().describe('The program to run (no shell interpretation)'),

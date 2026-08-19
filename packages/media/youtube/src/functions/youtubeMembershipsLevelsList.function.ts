@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const YoutubeMembershipsLevelsListInput = z.object({
   "$.xgafv": z.enum(["1", "2"]).optional().describe("V1 error format."),

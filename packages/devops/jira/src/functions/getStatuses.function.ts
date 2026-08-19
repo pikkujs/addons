@@ -1,7 +1,7 @@
 // Workflow statuses — This resource represents issue workflow statuses. Use it to obtain a list of all statuses associated with workflows and the details of a status.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const GetStatusesOutput = z.array(z.object({

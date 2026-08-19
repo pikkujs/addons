@@ -1,7 +1,7 @@
 // cluster — Endpoints for configuring and interacting with high availability clusters.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ForbiddenError } from '@pikku/core/errors'
 
 export const ListClusterStatusOutput = z.array(z.object({

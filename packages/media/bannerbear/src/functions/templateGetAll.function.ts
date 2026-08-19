@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TemplateGetAllOutput = z.object({
   items: z.array(z.record(z.string(), z.unknown())).optional(),

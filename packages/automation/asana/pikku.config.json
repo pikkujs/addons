@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./asana.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "asana"
+  ]
 }

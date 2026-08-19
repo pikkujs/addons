@@ -1,7 +1,7 @@
 // Announcement banner — This resource represents an announcement banner. Use it to retrieve and update banner configuration.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const SetBannerInput = z.object({

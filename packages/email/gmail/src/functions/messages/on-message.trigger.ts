@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuTriggerFunc } from '#pikku'
+import { pikkuTriggerFunc } from '#pikku/addon/trigger'
 
 export const OnMessageConfig = z.object({
   q: z.string().optional(),

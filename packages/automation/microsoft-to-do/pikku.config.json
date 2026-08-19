@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./microsoft-to-do.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "microsoftToDo"
+  ]
 }

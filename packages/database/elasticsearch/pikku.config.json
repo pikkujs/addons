@@ -19,5 +19,8 @@
       "database"
     ],
     "icon": "./elasticsearch.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "elasticsearch"
+  ]
 }

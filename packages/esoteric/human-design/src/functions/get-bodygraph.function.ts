@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 import { getBodyGraph } from '../lib/humandesign.js'
 import { BodygraphOutput } from '../human-design.types.js'

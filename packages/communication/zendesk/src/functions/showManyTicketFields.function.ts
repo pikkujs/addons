@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowManyTicketFieldsInput = z.object({
   ids: z.string().optional().describe("Comma-separated list of ticket field IDs to retrieve. Up to 100 values accepted.\n\nEither `ids` or `keys` can be used, but not both.\n. Example: \"123,456,789\""),

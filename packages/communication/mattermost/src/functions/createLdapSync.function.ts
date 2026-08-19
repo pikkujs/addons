@@ -1,7 +1,7 @@
 // LDAP — Endpoints for configuring and interacting with LDAP.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const CreateLdapSyncOutput = z.object({
   status: z.string().optional().describe("Will contain \"ok\" if the request was successful and there was nothing else to return"),

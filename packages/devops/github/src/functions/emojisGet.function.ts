@@ -1,7 +1,7 @@
 // emojis — List emojis available to use on GitHub.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const EmojisGetOutput = z.record(z.string(), z.string())
 

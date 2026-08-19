@@ -1,4 +1,4 @@
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { content }) => {
   if (!content) {

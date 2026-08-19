@@ -1,7 +1,7 @@
 // teams — Interact with GitHub Teams.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ForbiddenError, NotFoundError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const TeamsUpdateInOrgInput = z.object({

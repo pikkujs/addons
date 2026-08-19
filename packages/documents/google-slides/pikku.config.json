@@ -19,5 +19,8 @@
       "documents"
     ],
     "icon": "./google-slides.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleSlides"
+  ]
 }

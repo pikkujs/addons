@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesListFolderLongpollInput = z.object({
   cursor: z.string().optional().describe("A cursor as returned by :route:`list_folder` or :route:`list_folder/continue`. Cursors retrieved by setting :field:`ListFolderArg.include_media_info` to :val:`true` are not supported."),

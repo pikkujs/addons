@@ -1,7 +1,7 @@
 // Issue worklogs — This resource represents issue worklogs. Use it to: * get, create, update, and delete worklogs. * obtain lists of updated or deleted worklogs.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, NotFoundError } from '@pikku/core/errors'
 
 export const GetIssueWorklogInput = z.object({

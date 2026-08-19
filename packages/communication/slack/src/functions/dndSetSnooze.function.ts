@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DndSetSnoozeInput = z.object({
   num_minutes: z.string().describe("Number of minutes, from now, to snooze until."),

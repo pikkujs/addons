@@ -1,5 +1,5 @@
 import { HubspotService } from './hubspot-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const apiKey = (await secrets.getSecret('HUBSPOT_API_KEY')).reveal()

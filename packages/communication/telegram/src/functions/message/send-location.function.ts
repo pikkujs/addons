@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MessageSendLocationInput = z.object({
   chat_id: z.union([z.string(), z.number()]).describe('Unique identifier for the target chat or username of the target channel'),

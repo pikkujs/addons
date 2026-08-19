@@ -1,7 +1,7 @@
 // projects — Interact with GitHub Projects.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError, NotFoundError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const ProjectsUpdateInput = z.object({

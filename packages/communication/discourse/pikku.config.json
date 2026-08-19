@@ -19,5 +19,8 @@
       "Communication"
     ],
     "icon": "./discourse.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "discourse"
+  ]
 }

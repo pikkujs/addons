@@ -19,5 +19,8 @@
       "Automation"
     ],
     "icon": "./todoist.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "todoist"
+  ]
 }

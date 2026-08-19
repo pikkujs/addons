@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GroupMembershipBulkDeleteInput = z.object({
   ids: z.string().optional().describe("Id of the group memberships to delete. Comma separated. Example: \"1,2,3\""),

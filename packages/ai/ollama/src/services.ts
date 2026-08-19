@@ -1,5 +1,5 @@
 import { createOpenAI } from '@ai-sdk/openai'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (_config, { variables }) => {
   const baseURL = (await variables.get('OLLAMA_BASE_URL')) ?? 'http://localhost:11434/v1'

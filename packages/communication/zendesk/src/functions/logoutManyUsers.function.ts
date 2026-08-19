@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LogoutManyUsersInput = z.object({
   ids: z.string().optional().describe("Accepts a comma-separated list of up to 100 user ids.\n. Example: \"1,2\""),

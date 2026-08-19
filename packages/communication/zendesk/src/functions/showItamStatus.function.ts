@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowItamStatusInput = z.object({
   status_id: z.string().describe("The id of the asset status. Example: \"01K9BT5XE82QS5DG58F4J8WQWY\""),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const RenewCurrentSessionOutput = z.object({
   authenticity_token: z.string().optional().describe("A token of authenticity for the request"),

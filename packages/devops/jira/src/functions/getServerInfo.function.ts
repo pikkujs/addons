@@ -1,7 +1,7 @@
 // Server info — This resource provides information about the Jira instance.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError } from '@pikku/core/errors'
 
 export const GetServerInfoOutput = z.object({

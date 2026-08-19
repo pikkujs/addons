@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PaperDocsUsersListInput = z.object({
   limit: z.number().optional().describe("Size limit per batch. The maximum number of users that can be retrieved per batch is 1000. Higher value results in invalid arguments error."),

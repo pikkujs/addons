@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesModifyLabelsInput = z.object({
   fileId: z.string().describe("The ID of the file for which the labels are modified."),

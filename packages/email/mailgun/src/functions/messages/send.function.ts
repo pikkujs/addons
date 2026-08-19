@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const MessagesSendInput = z.object({
   from: z.string().describe('Sender email address (e.g., "Admin <admin@example.com>")'),

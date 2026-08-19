@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesUploadSessionFinishBatchCheckInput = z.object({
   async_job_id: z.string().optional().describe("Id of the asynchronous job. This is the value of a response returned from the method that launched the job."),

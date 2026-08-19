@@ -13,5 +13,8 @@
       "Email"
     ],
     "icon": "./imap.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "imap"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteOrganizationSubscriptionInput = z.object({
   organization_subscription_id: z.number().int().describe("The ID of the organization subscription. Example: 35436"),

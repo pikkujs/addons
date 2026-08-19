@@ -1,7 +1,7 @@
 // actions — Endpoints to manage GitHub Actions using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { codescanningrefSchema } from '../github.types.js'
 
 export const ActionsDeleteActionsCacheByKeyInput = z.object({

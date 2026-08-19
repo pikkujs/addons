@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DestroyManyUsersInput = z.object({
   ids: z.string().optional().describe("Id of the users to delete. Comma separated. Example: \"1,2,3\""),

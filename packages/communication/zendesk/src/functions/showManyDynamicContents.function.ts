@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowManyDynamicContentsInput = z.object({
   identifiers: z.string().optional().describe("Identifiers for the dynamic contents. Example: \"item1,item2\""),

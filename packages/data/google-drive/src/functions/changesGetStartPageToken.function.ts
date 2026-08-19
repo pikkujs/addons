@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ChangesGetStartPageTokenInput = z.object({
   alt: z.literal("json").optional().describe("Data format for the response."),

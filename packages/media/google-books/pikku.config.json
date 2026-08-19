@@ -19,5 +19,8 @@
       "media"
     ],
     "icon": "./google-books.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleBooks"
+  ]
 }

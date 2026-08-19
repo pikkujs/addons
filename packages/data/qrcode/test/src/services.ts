@@ -5,7 +5,7 @@ import {
 } from '@pikku/core/services'
 import type { JWTService } from '@pikku/core/services'
 import { LocalContent } from '@pikku/core/services/local-content'
-import { pikkuServices } from '#pikku'
+import { pikkuServices } from '#pikku/addon/setup'
 
 import '../.pikku/pikku-bootstrap.gen.js'
 

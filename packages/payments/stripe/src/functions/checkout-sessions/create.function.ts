@@ -1,6 +1,6 @@
 import Stripe from 'stripe'
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { MetadataSchema } from '../../stripe.types.js'
 import { fromStripeObject } from '../../stripe.transform.js'
 

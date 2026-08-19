@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ContactDeleteInput = z.object({
   ids: z.string().describe('Comma-separated list of contact IDs to delete'),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowCustomStatusInput = z.object({
   custom_status_id: z.number().int().describe("The id of the custom status. Example: 1234567"),

@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./onfleet.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "onfleet"
+  ]
 }

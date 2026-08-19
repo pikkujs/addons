@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import QRCode from 'qrcode'
 
 export const QrCodeToDataUrlInput = z.object({

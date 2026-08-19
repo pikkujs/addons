@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./g-suite-admin.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "gSuiteAdmin"
+  ]
 }

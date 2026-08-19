@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SharingListReceivedFilesContinueInput = z.object({
   cursor: z.string().optional().describe("Cursor in :field:`ListFilesResult.cursor`."),

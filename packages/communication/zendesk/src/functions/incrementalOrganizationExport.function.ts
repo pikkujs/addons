@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const IncrementalOrganizationExportInput = z.object({
   start_time: z.number().int().describe("The time to start the incremental export from. Must be at least one minute in the past. Data isn't provided for the most recent minute. Example: 1332034771"),

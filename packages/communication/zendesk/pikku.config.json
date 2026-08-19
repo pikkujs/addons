@@ -19,5 +19,8 @@
       "Communication"
     ],
     "icon": "./zendesk.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "zendesk"
+  ]
 }

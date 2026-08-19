@@ -1,7 +1,7 @@
 // Application roles — This resource represents application roles. Use it to get details of an application role or all application roles.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const GetApplicationRoleInput = z.object({

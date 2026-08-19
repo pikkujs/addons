@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminUsersListInput = z.object({
   team_id: z.string().describe("The ID (`T1234`) of the workspace."),

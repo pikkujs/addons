@@ -13,5 +13,8 @@
       "Ecommerce"
     ],
     "icon": "./shopify.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "shopify"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListTicketsFullfilledByUserInput = z.object({
   ticket_ids: z.number().int().describe("The IDs of the relevant tickets to check for matching attributes. Example: 1"),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilePropertiesTemplatesRemoveForTeamInput = z.object({
   template_id: z.string().optional().describe("An identifier for a template created by :route:`templates/add_for_user` or :route:`templates/add_for_team`."),

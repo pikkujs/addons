@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesMoveInput = z.object({
   allow_ownership_transfer: z.boolean().optional().describe("Allow moves by owner even if it would result in an ownership transfer for the content being moved. This does not apply to copies."),

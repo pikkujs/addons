@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FileRequestsCreateInput = z.object({
   open: z.boolean().optional().describe("Whether or not the file request should be open. If the file request is closed, it will not accept any file submissions, but it can be opened later."),

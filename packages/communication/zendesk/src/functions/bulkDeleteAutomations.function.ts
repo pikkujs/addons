@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const BulkDeleteAutomationsInput = z.object({
   ids: z.array(z.number().int()).optional().describe("The IDs of the automations to delete"),

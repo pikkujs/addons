@@ -1,9 +1,4 @@
-import type {
-  CoreConfig,
-  CoreServices,
-  CoreSingletonServices,
-  CoreUserSession,
-} from '@pikku/core'
+import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { VenafiTlsProtectCloudService } from '../src/venafi-tls-protect-cloud-api.service.js'
 
 export interface Config extends CoreConfig {}

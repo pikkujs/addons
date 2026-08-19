@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./mailjet.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mailjet"
+  ]
 }

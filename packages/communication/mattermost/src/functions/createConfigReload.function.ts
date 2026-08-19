@@ -1,7 +1,7 @@
 // system — General endpoints for interating with the server, such as configuration and logging.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, ForbiddenError } from '@pikku/core/errors'
 
 export const CreateConfigReloadOutput = z.object({

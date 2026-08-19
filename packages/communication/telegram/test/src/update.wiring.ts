@@ -1,4 +1,4 @@
-import { wireTrigger, wireTriggerSource } from '#pikku'
+import { wireTrigger, wireTriggerSource } from '#pikku/addon/trigger'
 import { onUpdate } from '@pikku/addon-telegram'
 import { onUpdate as handleUpdate } from './on-update.function.js'
 

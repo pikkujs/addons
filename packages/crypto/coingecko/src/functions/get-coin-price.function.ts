@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetCoinPriceInput = z.object({
   coinIds: z.array(z.string()).describe('Coin IDs (e.g. ["bitcoin", "ethereum"])'),

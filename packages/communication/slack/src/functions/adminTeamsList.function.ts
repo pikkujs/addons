@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AdminTeamsListInput = z.object({
   limit: z.number().int().optional().describe("The maximum number of items to return. Must be between 1 - 100 both inclusive."),

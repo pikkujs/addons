@@ -1,7 +1,7 @@
 // actions — Endpoints to manage GitHub Actions using the REST API.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, NotFoundError, UnprocessableContentError } from '@pikku/core/errors'
 
 export const ActionsSetCustomOidcSubClaimForRepoInput = z.object({

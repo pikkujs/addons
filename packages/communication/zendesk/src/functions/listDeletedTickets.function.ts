@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListDeletedTicketsInput = z.object({
   sort_by: z.enum(["id", "subject", "deleted_at", "created_at", "updated_at", "status", "requester", "requester.name", "group", "assignee", "assignee.name"]).optional().describe("Sort by"),

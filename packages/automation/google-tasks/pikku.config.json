@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./google-tasks.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleTasks"
+  ]
 }

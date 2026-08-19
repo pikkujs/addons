@@ -1,6 +1,6 @@
 import { z } from 'zod'
 
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { ShopifyOrderSchema, ShopifyAddressSchema } from '../../schemas.js'
 
 export const CreateOrderInput = z.object({

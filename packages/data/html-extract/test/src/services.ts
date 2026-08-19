@@ -1,9 +1,7 @@
 import type {
   SingletonServices,
 } from '../types/application-types.js'
-import {
-  CreateSingletonServices,
-} from '@pikku/core'
+import { CreateSingletonServices } from '@pikku/core/types'
 import {
   ConsoleLogger,
   LocalVariablesService,

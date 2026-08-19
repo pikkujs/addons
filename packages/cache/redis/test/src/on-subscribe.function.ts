@@ -1,4 +1,4 @@
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const onSubscribe = pikkuSessionlessFunc<
   { channel: string; message: any },

@@ -19,5 +19,8 @@
       "Cloud"
     ],
     "icon": "./dropbox.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "dropbox"
+  ]
 }

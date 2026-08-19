@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./msg91.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "msg91"
+  ]
 }

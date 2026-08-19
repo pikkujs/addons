@@ -1,7 +1,7 @@
 // SAML — Endpoints for configuring and interacting with SAML.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListSamlMetadataOutput = z.string()
 

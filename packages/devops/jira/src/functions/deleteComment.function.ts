@@ -1,7 +1,7 @@
 // Issue comments — This resource represents issue comments. Use it to: * get, create, update, and delete a comment from an issue. * get all comments from issue. * get a list of comments by comment ID.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, NotFoundError, MethodNotAllowedError } from '@pikku/core/errors'
 
 export const DeleteCommentInput = z.object({

@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./autopilot.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "autopilot"
+  ]
 }

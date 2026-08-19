@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { WhereClause, OrderByClause, escapeIdentifier, buildWhereClause, buildOrderByClause } from '../shared.js'
 
 export const SelectInput = z.object({

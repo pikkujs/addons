@@ -13,5 +13,8 @@
       "Events"
     ],
     "icon": "./meta-conversions.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "metaConversions"
+  ]
 }

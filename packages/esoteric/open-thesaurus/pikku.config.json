@@ -19,5 +19,8 @@
       "esoteric"
     ],
     "icon": "./open-thesaurus.png"
-  }
+  },
+  "forceRequiredServices": [
+    "openThesaurus"
+  ]
 }

@@ -1,7 +1,7 @@
 // Workflow transition rules — This resource represents workflow transition rules. Workflow transition rules define a Connect app routine, such as a [workflow post functions](https://developer.atlassian.com/cloud/jira/platform/modules/workflow-post-function/) that is executed in association with the workflow. Use it to read and modify configuration of workflow transition rules.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, ForbiddenError } from '@pikku/core/errors'
 
 export const UpdateWorkflowTransitionRuleConfigurationsInput = z.object({

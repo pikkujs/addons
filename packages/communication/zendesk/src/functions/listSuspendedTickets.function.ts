@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListSuspendedTicketsInput = z.object({
   sort_by: z.string().optional().describe("The field to sort the suspended tickets by. One of \"author_email\", \"cause\", \"created_at\", or \"subject\". Example: \"author_email\""),

@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./salesforce.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "salesforce"
+  ]
 }

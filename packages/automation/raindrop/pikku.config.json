@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./raindrop.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "raindrop"
+  ]
 }

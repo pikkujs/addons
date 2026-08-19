@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { simpleParser, type ParsedMail } from 'mailparser'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const GetEmailInput = z.object({
   mailbox: z.string().default('INBOX').describe('Mailbox containing the email'),

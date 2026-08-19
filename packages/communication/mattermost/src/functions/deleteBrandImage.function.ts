@@ -1,7 +1,7 @@
 // brand — Endpoints related to custom branding and white-labeling. See [our branding documentation](https://docs.mattermost.com/administration/branding.html) for more information.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnauthorizedError, ForbiddenError, NotFoundError } from '@pikku/core/errors'
 
 export const DeleteBrandImageOutput = z.object({

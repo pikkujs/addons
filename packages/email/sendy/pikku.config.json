@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./sendy.png"
-  }
+  },
+  "forceRequiredServices": [
+    "sendy"
+  ]
 }

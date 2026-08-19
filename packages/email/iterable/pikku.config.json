@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./iterable.png"
-  }
+  },
+  "forceRequiredServices": [
+    "iterable"
+  ]
 }

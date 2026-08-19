@@ -15,5 +15,8 @@
       "Users"
     ],
     "icon": "./pagerduty.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "pagerduty"
+  ]
 }

@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./bamboo-hr.png"
-  }
+  },
+  "forceRequiredServices": [
+    "bambooHr"
+  ]
 }

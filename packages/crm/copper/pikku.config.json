@@ -19,5 +19,8 @@
       "crm"
     ],
     "icon": "./copper.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "copper"
+  ]
 }

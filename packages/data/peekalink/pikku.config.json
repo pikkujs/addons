@@ -19,5 +19,8 @@
       "data"
     ],
     "icon": "./peekalink.png"
-  }
+  },
+  "forceRequiredServices": [
+    "peekalink"
+  ]
 }

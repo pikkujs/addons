@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowManyEmailNotificationsInput = z.object({
   ids: z.string().optional().describe("Comma-separated list of notification ids. One of ids, comment_ids, or ticket_ids is required.. Example: \"8433702508541,8433348111869\""),

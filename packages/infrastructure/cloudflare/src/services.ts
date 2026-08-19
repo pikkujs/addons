@@ -1,5 +1,5 @@
 import { CloudflareService } from './cloudflare-api.service.js'
-import { pikkuAddonServices } from '#pikku'
+import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
   const creds = (await secrets.getSecret('CLOUDFLARE_CREDENTIALS')).reveal()

@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./emelia.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "emelia"
+  ]
 }

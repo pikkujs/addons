@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./automizy.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "automizy"
+  ]
 }

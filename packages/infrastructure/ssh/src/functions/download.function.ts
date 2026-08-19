@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { Readable } from 'node:stream'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SshDownloadInput = z.object({
   bucket: z.string().describe('Storage bucket to save the file to'),

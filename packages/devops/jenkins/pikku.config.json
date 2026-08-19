@@ -14,5 +14,8 @@
       "Jobs"
     ],
     "icon": "./jenkins.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "jenkins"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const PerformInput = z.object({
   processor: z.string().describe("The uProc tool key in dashed lowercase form, e.g. check-email-exists"),

@@ -14,5 +14,9 @@
       "Reports"
     ],
     "icon": "./google-analytics.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "googleAnalytics",
+    "googleAnalyticsReporting"
+  ]
 }

@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./phantombuster.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "phantombuster"
+  ]
 }

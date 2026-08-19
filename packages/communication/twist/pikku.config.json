@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./twist.png"
-  }
+  },
+  "forceRequiredServices": [
+    "twist"
+  ]
 }

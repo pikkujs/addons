@@ -19,5 +19,8 @@
       "communication"
     ],
     "icon": "./rocketchat.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "rocketchat"
+  ]
 }

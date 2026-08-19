@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const WorkflowsStepFailedInput = z.object({
   workflow_step_execute_id: z.string().describe("Context identifier that maps to the correct workflow step execution."),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListBlockDirectorySearchInput = z.object({
   context: z.literal("view").optional().default("view").describe("Scope under which the request is made; determines fields present in response."),

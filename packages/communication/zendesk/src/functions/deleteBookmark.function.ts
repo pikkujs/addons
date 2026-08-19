@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const DeleteBookmarkInput = z.object({
   bookmark_id: z.number().int().describe("The ID of the bookmark. Example: 900000001111"),

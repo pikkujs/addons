@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const TextEmbeddingInput = z.object({
   input: z.union([z.string(), z.array(z.string())]).describe('Input text to embed, encoded as a string or array of strings. To embed multiple inputs in a single request, pass an array of strings.'),

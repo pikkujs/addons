@@ -19,5 +19,8 @@
       "documents"
     ],
     "icon": "./microsoft-excel.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "microsoftExcel"
+  ]
 }

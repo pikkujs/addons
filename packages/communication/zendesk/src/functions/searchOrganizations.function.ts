@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const SearchOrganizationsInput = z.object({
   external_id: z.number().int().optional().describe("The external id of an organization. Example: 1234"),

@@ -1,7 +1,7 @@
 // search — Look for stuff on GitHub.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { UnprocessableContentError } from '@pikku/core/errors'
 
 export const SearchReposInput = z.object({

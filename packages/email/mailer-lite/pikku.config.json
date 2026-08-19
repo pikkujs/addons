@@ -19,5 +19,8 @@
       "email"
     ],
     "icon": "./mailer-lite.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mailerLite"
+  ]
 }

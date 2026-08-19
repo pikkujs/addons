@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowTaskListTemplateInput = z.object({
   task_list_template_id: z.string().describe("The id of the task list template. Example: \"01K205PG0J2ET0B8AFHA106C1E\""),

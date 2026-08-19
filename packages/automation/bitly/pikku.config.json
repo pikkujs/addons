@@ -19,5 +19,8 @@
       "automation"
     ],
     "icon": "./bitly.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "bitly"
+  ]
 }

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowSatisfactionRatingsInput = z.object({
   satisfaction_reason_id: z.number().int().describe("The id of the satisfaction rating reason. Example: 35121"),

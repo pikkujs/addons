@@ -16,5 +16,8 @@
       "Threads"
     ],
     "icon": "./gmail.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "gmail"
+  ]
 }

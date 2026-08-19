@@ -19,5 +19,8 @@
       "media"
     ],
     "icon": "./bannerbear.png"
-  }
+  },
+  "forceRequiredServices": [
+    "bannerbear"
+  ]
 }

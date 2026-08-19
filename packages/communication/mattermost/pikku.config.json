@@ -19,5 +19,8 @@
       "Communication"
     ],
     "icon": "./mattermost.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mattermost"
+  ]
 }

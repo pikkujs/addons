@@ -1,7 +1,7 @@
 // apps — Information for integrations and installations.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const AppsUpdateWebhookConfigForAppInput = z.object({
   content_type: z.string().optional().describe("The media type used to serialize the payloads. Supported values include `json` and `form`. The default is `form`."),

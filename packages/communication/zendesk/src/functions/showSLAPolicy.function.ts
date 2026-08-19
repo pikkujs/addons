@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowSLAPolicyInput = z.object({
   sla_policy_id: z.number().int().describe("The ID of the SLA Policy. Example: 36"),

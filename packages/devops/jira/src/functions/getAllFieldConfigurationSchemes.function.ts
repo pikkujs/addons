@@ -1,7 +1,7 @@
 // Issue field configurations — This resource represents issue field configurations. Use it to get, set, and delete field configurations and field configuration schemes.
 
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError, ForbiddenError } from '@pikku/core/errors'
 
 export const GetAllFieldConfigurationSchemesInput = z.object({

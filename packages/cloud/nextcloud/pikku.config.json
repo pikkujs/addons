@@ -19,5 +19,8 @@
       "cloud"
     ],
     "icon": "./nextcloud.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "nextcloud"
+  ]
 }

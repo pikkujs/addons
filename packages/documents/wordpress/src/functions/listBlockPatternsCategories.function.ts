@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ListBlockPatternsCategoriesOutput = z.array(z.object({
   name: z.string().optional().describe("The category name."),

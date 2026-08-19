@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const FilesUploadInput = z.object({
   channels: z.string().optional().describe("Comma-separated list of channel names or IDs where the file will be shared."),

@@ -1,6 +1,6 @@
 import { z } from 'zod'
 import { Attribute } from 'ldapts'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const LdapCreateInput = z.object({
   dn: z.string().describe('Distinguished name of the entry to create'),

@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const ShowEmailNotificationInput = z.object({
   notification_id: z.number().int().describe("The id of the email notification. Example: 7824075373693"),

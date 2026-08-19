@@ -1,4 +1,4 @@
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 export const onUpdate = pikkuSessionlessFunc<
   { update_id: number; message?: any; callback_query?: any },
