@@ -107,9 +107,30 @@ backfill_target() {
   echo "Backfilling ${#specs[@]} package(s) into $url..."
   echo
 
+  # Circuit breaker. notify-registry.sh spends a ~8 minute retry budget per
+  # package to ride out npm propagation lag, which is right for the one or two
+  # packages of a release but catastrophic in bulk: on 2026-08-21 a systematic
+  # rejection turned a 217-package reconcile into a 28-hour job that pinned the
+  # release workflow's concurrency slot and blocked the publish behind it.
+  #
+  # Nothing here can distinguish "npm is lagging" from "this target rejects
+  # everything", but the shape differs: lag clears within the first package's
+  # budget, a broken target fails every one. So give the budget to the first few
+  # and bail if not a single package has landed by then — the operator wants to
+  # know the target is broken, not to watch it fail 217 times.
+  local breaker="${BACKFILL_INITIAL_FAILURE_LIMIT:-3}"
+
   local failed=()
+  local ok_count=0
   local spec name version
   for spec in "${specs[@]}"; do
+    if [ "$breaker" -gt 0 ] && [ "$ok_count" -eq 0 ] && [ "${#failed[@]}" -ge "$breaker" ]; then
+      echo
+      echo "Aborting $url: the first ${#failed[@]} package(s) all failed and none succeeded." >&2
+      echo "That is a broken target, not npm lag — fix it and re-run the reconcile." >&2
+      echo "Set BACKFILL_INITIAL_FAILURE_LIMIT=0 to disable this check." >&2
+      return 1
+    fi
     # Split a trailing @version off, taking care not to eat the leading @scope.
     if [[ "$spec" =~ ^(@?[^@]+)@(.+)$ ]]; then
       name="${BASH_REMATCH[1]}"
@@ -121,6 +142,8 @@ backfill_target() {
 
     if ! REGISTRY_URL="$url" bash "$SCRIPT_DIR/notify-registry.sh" "$name" "$version"; then
       failed+=("$spec")
+    else
+      ok_count=$((ok_count + 1))
     fi
   done
 

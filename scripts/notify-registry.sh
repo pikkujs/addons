@@ -54,7 +54,13 @@ ingest_into() {
 
   for attempt in $(seq 1 "$MAX_RETRIES"); do
     echo -n "Ingesting $name${version:+@$version} into $url (attempt $attempt/$MAX_RETRIES)... "
+    # Bound the request. Without --max-time a stalled ingest hangs this curl —
+    # and with it the whole release job — for as long as the server holds the
+    # socket, with no retry and no error. A bounded request turns a stall into
+    # an ordinary failed attempt the backoff below can retry.
     response=$(curl -s -w "\n%{http_code}" \
+      --connect-timeout "${NOTIFY_CONNECT_TIMEOUT:-15}" \
+      --max-time "${NOTIFY_MAX_TIME:-180}" \
       -X POST "$url/registry/addons/ingest" \
       -H "Content-Type: application/json" \
       -H "Authorization: Bearer $REGISTRY_API_KEY" \
