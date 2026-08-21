@@ -218,6 +218,18 @@ jobs:
         env:
           REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
 
+      # backfill-registry.sh reads versions from the checkout, and the step above
+      # leaves that checkout rewritten to the NEXT versions: on a run that creates
+      # a Version Packages PR, changeset-version.cjs bumps every package.json in
+      # place and those bumps are pushed to changeset-release/main, not consumed
+      # here. Reconciling against that tree asks npm for versions that do not
+      # exist yet — 404 on all 217 packages, six retries each, ~28 hours of a job
+      # that looks busy and achieves nothing (2026-08-21). Restore the tracked
+      # files so the reconcile sees the versions that are actually published.
+      - name: Restore checkout versions
+        if: always() && !cancelled()
+        run: git checkout -- .
+
       # Safety net for anything the per-release notify above never covered:
       # packages published before the notify step existed, or stranded when an
       # earlier run failed mid-loop. Diffs the catalogue against the checkout and
