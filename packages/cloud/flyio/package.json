@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-flyio",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "type": "module",
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",

@@ -1,5 +1,35 @@
 # @pikku/addon-survey-monkey
 
+## 0.1.6
+
+### Patch Changes
+
+- cb62952: Resolve `#pikku/*` in the published package, not in the source tree
+
+  `imports` pointed at `./.pikku/*/index.ts`, which `files: ["dist"]` never ships
+  and Node could not load if it did. Every addon published since the addon-leaf
+  migration threw `Cannot find module '.../.pikku/addon/function/index.ts'` on
+  first import, out of a file the consuming app never wrote. `imports` now names
+  the built tree and tsconfig `paths` keeps resolving the source, which is the
+  split `pikku new addon` scaffolds.
+
+  The `.pikku` export targets gain the `addon` segment that codegen has written
+  since the leaf split; the subpaths consumers write are unchanged.
+
+- a9b146b: Regenerate against @pikku/cli 0.12.111, and raise the @pikku/core floor to the
+  version the output was built against
+
+  `WiredSingletonServices` is no longer exported from the generated function leaf.
+  The auth and middleware leaves now derive the intersection themselves from
+  `RequiredSingletonServices`, because nothing outside a generated leaf ever names
+  it — so every addon's `.pikku/addon/**` changes shape and has to be rebuilt
+  rather than merely republished.
+
+  The peer floor moves from `^0.12.86` to `^0.12.89` to name the core the output
+  was actually generated and typechecked against. Nothing in the new output
+  requires it — the leaves reference each other, not core — but a floor that
+  records the tested pairing is the point of having one.
+
 ## 0.1.5
 
 ### Patch Changes

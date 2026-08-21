@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-microsoft-excel",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",

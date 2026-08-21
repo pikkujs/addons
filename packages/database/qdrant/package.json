@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-qdrant",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "type": "module",
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",
