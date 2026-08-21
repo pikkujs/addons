@@ -31,15 +31,15 @@
     "test": "cd test && yarn test"
   },
   "peerDependencies": {
-    "@pikku/core": "^0.12.86",
+    "@pikku/core": "^0.12.89",
     "zod": "^4"
   },
   "dependencies": {
     "pg": "^8.13.1"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.107",
-    "@pikku/core": "^0.12.86",
+    "@pikku/cli": "^0.12.111",
+    "@pikku/core": "^0.12.89",
     "@types/pg": "^8.11.10",
     "typescript": "^5.7.2",
     "zod": "^4"
