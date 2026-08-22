@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v1",
-      "hash": "68e46467844d47c7"
-    }
-  },
-  "node": {
     "displayName": "Google Docs",
     "description": "Google Docs integration for Pikku",
     "categories": [
       "Data"
     ],
-    "icon": "./google-docs.svg"
+    "icon": "./google-docs.svg",
+    "openapi": {
+      "version": "v1",
+      "hash": "68e46467844d47c7"
+    }
   },
   "forceRequiredServices": [
     "googleDocs"

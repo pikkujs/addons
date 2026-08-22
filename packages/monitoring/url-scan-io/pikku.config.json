@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "03680610668790d4"
-    }
-  },
-  "node": {
     "displayName": "urlscanio",
     "description": "urlscanio addon",
     "categories": [
       "monitoring"
     ],
-    "icon": "./url-scan-io.svg"
+    "icon": "./url-scan-io.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "03680610668790d4"
+    }
   },
   "forceRequiredServices": [
     "urlScanIo"

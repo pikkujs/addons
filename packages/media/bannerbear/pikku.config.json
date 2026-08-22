@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "6a60af9dc2d3cd76"
-    }
-  },
-  "node": {
     "displayName": "Bannerbear",
     "description": "Generate images from templates with the Bannerbear API",
     "categories": [
       "media"
     ],
-    "icon": "./bannerbear.png"
+    "icon": "./bannerbear.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "6a60af9dc2d3cd76"
+    }
   },
   "forceRequiredServices": [
     "bannerbear"

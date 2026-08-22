@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "bab5549d022bb3c1"
-    }
-  },
-  "node": {
     "displayName": "Webflow",
     "description": "Consume the Webflow CMS API",
     "categories": [
       "cloud"
     ],
-    "icon": "./webflow.svg"
+    "icon": "./webflow.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "bab5549d022bb3c1"
+    }
   },
   "forceRequiredServices": [
     "webflow"

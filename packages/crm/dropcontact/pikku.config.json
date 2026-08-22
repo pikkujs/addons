@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c4b6b43aed8e2fab"
-    }
-  },
-  "node": {
     "displayName": "Dropcontact",
     "description": "Find B2B emails and enrich contacts",
     "categories": [
       "crm"
     ],
-    "icon": "./dropcontact.svg"
+    "icon": "./dropcontact.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c4b6b43aed8e2fab"
+    }
   },
   "forceRequiredServices": [
     "dropcontact"

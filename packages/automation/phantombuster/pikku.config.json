@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "00a2a7f185220034"
-    }
-  },
-  "node": {
     "displayName": "Phantombuster",
     "description": "Consume the Phantombuster API to launch and manage agents",
     "categories": [
       "automation"
     ],
-    "icon": "./phantombuster.svg"
+    "icon": "./phantombuster.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "00a2a7f185220034"
+    }
   },
   "forceRequiredServices": [
     "phantombuster"

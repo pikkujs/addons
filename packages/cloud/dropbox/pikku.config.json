@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "f3b0a96acedc42ef"
-    }
-  },
-  "node": {
     "displayName": "Dropbox",
     "description": "Dropbox integration for Pikku",
     "categories": [
       "Cloud"
     ],
-    "icon": "./dropbox.svg"
+    "icon": "./dropbox.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "f3b0a96acedc42ef"
+    }
   },
   "forceRequiredServices": [
     "dropbox"

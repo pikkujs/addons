@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "4.0.0",
-      "hash": "df1fe5b4a2c975f4"
-    }
-  },
-  "node": {
     "displayName": "Mattermost",
     "description": "Mattermost integration for Pikku",
     "categories": [
       "Communication"
     ],
-    "icon": "./mattermost.svg"
+    "icon": "./mattermost.svg",
+    "openapi": {
+      "version": "4.0.0",
+      "hash": "df1fe5b4a2c975f4"
+    }
   },
   "forceRequiredServices": [
     "mattermost"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "d74427f6d3c595a6"
-    }
-  },
-  "node": {
     "displayName": "BambooHR",
     "description": "Consume the BambooHR HR API",
     "categories": [
       "crm"
     ],
-    "icon": "./bamboo-hr.png"
+    "icon": "./bamboo-hr.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "d74427f6d3c595a6"
+    }
   },
   "forceRequiredServices": [
     "bambooHr"

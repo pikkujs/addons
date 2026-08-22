@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c5291f612f1673ba"
-    }
-  },
-  "node": {
     "displayName": "Microsoft OneDrive",
     "description": "Consume the Microsoft OneDrive API",
     "categories": [
       "cloud"
     ],
-    "icon": "./microsoft-one-drive.svg"
+    "icon": "./microsoft-one-drive.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c5291f612f1673ba"
+    }
   },
   "forceRequiredServices": [
     "microsoftOneDrive"

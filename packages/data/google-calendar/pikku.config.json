@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v3",
-      "hash": "7ea1a92eddbdeb53"
-    }
-  },
-  "node": {
     "displayName": "Google Calendar",
     "description": "Google Calendar integration for Pikku",
     "categories": [
       "Data"
     ],
-    "icon": "./google-calendar.svg"
+    "icon": "./google-calendar.svg",
+    "openapi": {
+      "version": "v3",
+      "hash": "7ea1a92eddbdeb53"
+    }
   },
   "forceRequiredServices": [
     "googleCalendar"

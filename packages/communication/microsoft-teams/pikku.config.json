@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "5c8e458ef56de55e"
-    }
-  },
-  "node": {
     "displayName": "Microsoft Teams",
     "description": "Consume the Microsoft Teams (Graph) API",
     "categories": [
       "communication"
     ],
-    "icon": "./microsoft-teams.svg"
+    "icon": "./microsoft-teams.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "5c8e458ef56de55e"
+    }
   },
   "forceRequiredServices": [
     "microsoftTeams"

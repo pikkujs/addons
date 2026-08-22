@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0",
-      "hash": "2b6811619f51fa02"
-    }
-  },
-  "node": {
     "displayName": "NocoDB",
     "description": "NocoDB integration for Pikku",
     "categories": [
       "Database"
     ],
-    "icon": "./nocodb.svg"
+    "icon": "./nocodb.svg",
+    "openapi": {
+      "version": "1.0",
+      "hash": "2b6811619f51fa02"
+    }
   },
   "forceRequiredServices": [
     "nocodb"

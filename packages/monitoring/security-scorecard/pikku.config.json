@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4c338bb5eb8d5e16"
-    }
-  },
-  "node": {
     "displayName": "SecurityScorecard",
     "description": "SecurityScorecard addon",
     "categories": [
       "monitoring"
     ],
-    "icon": "./security-scorecard.svg"
+    "icon": "./security-scorecard.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4c338bb5eb8d5e16"
+    }
   },
   "forceRequiredServices": [
     "securityScorecard"

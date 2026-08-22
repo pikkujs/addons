@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "62090355fecdabcf"
-    }
-  },
-  "node": {
     "displayName": "ClickUp",
     "description": "Consume the ClickUp API",
     "categories": [
       "automation"
     ],
-    "icon": "./clickup.svg"
+    "icon": "./clickup.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "62090355fecdabcf"
+    }
   },
   "forceRequiredServices": [
     "clickup"

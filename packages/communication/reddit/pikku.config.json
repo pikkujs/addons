@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "1712ec37c04dc4c9"
-    }
-  },
-  "node": {
     "displayName": "Reddit",
     "description": "Consume the Reddit API",
     "categories": [
       "communication"
     ],
-    "icon": "./reddit.svg"
+    "icon": "./reddit.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "1712ec37c04dc4c9"
+    }
   },
   "forceRequiredServices": [
     "reddit"

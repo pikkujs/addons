@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "aa2bc68e9ef85605"
-    }
-  },
-  "node": {
     "displayName": "Wekan",
     "description": "Consume the Wekan kanban API",
     "categories": [
       "automation"
     ],
-    "icon": "./wekan.svg"
+    "icon": "./wekan.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "aa2bc68e9ef85605"
+    }
   },
   "forceRequiredServices": [
     "wekan"

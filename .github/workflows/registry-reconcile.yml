@@ -17,6 +17,11 @@ on:
         description: 'Space-separated pkg[@version] list. Empty = reconcile everything.'
         required: false
         default: ''
+      all:
+        description: 'Re-ingest EVERY package, rebuilding stored metadata (overrides the list above).'
+        type: boolean
+        required: false
+        default: false
   schedule:
     # 04:00 UTC daily — well clear of release traffic.
     - cron: '0 4 * * *'
@@ -40,9 +45,16 @@ jobs:
 
       # No `yarn install` needed: the reconcile path only reads package.json
       # versions and calls the registry over HTTP.
+      # `--reconcile` only ingests versions the catalogue is MISSING, so it cannot
+      # repair an entry stored at the right version with the wrong contents — a
+      # broken extractor leaves exactly that, and every nightly run then correctly
+      # reports "Missing: 0, stale: 0" and does nothing (2026-08-14 to 2026-08-22,
+      # 217 rows with an empty displayName). `--all` is the repair path for that.
       - name: Reconcile
         run: |
-          if [ -n "${{ inputs.packages }}" ]; then
+          if [ "${{ inputs.all }}" = "true" ]; then
+            bash scripts/backfill-registry.sh --all
+          elif [ -n "${{ inputs.packages }}" ]; then
             bash scripts/backfill-registry.sh ${{ inputs.packages }}
           else
             bash scripts/backfill-registry.sh --reconcile

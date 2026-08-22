@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "fed5e83d4a0c01b1"
-    }
-  },
-  "node": {
     "displayName": "Mailcheck",
     "description": "Mailcheck addon",
     "categories": [
       "email"
     ],
-    "icon": "./mailcheck.svg"
+    "icon": "./mailcheck.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "fed5e83d4a0c01b1"
+    }
   },
   "forceRequiredServices": [
     "mailcheck"

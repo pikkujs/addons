@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "6540f7bbcf6b3bb7"
-    }
-  },
-  "node": {
     "displayName": "Strava",
     "description": "Consume the Strava API",
     "categories": [
       "data"
     ],
-    "icon": "./strava.svg"
+    "icon": "./strava.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "6540f7bbcf6b3bb7"
+    }
   },
   "forceRequiredServices": [
     "strava"

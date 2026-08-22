@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "119aeac6a5db6965"
-    }
-  },
-  "node": {
     "displayName": "CrateDB",
     "description": "Add and update data in CrateDB",
     "categories": [
       "database"
     ],
-    "icon": "./cratedb.svg"
+    "icon": "./cratedb.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "119aeac6a5db6965"
+    }
   },
   "forceRequiredServices": [
     "cratedb"

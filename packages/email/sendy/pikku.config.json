@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "0a17cce1482cad67"
-    }
-  },
-  "node": {
     "displayName": "Sendy",
     "description": "Consume the Sendy email newsletter API",
     "categories": [
       "email"
     ],
-    "icon": "./sendy.png"
+    "icon": "./sendy.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "0a17cce1482cad67"
+    }
   },
   "forceRequiredServices": [
     "sendy"

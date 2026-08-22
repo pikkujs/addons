@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "d22f73176b69cb5d"
-    }
-  },
-  "node": {
     "displayName": "Pushover",
     "description": "Send push notifications via Pushover",
     "categories": [
       "communication"
     ],
-    "icon": "./pushover.svg"
+    "icon": "./pushover.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "d22f73176b69cb5d"
+    }
   },
   "forceRequiredServices": [
     "pushover"

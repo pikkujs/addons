@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.1.0",
-      "hash": "ab821a7882859a0e"
-    }
-  },
-  "node": {
     "displayName": "Todoist",
     "description": "Todoist integration for Pikku",
     "categories": [
       "Automation"
     ],
-    "icon": "./todoist.svg"
+    "icon": "./todoist.svg",
+    "openapi": {
+      "version": "1.1.0",
+      "hash": "ab821a7882859a0e"
+    }
   },
   "forceRequiredServices": [
     "todoist"

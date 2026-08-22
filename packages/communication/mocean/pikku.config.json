@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "9bb71d26a1312941"
-    }
-  },
-  "node": {
     "displayName": "mocean",
     "description": "mocean addon",
     "categories": [
       "communication"
     ],
-    "icon": "./mocean.svg"
+    "icon": "./mocean.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "9bb71d26a1312941"
+    }
   },
   "forceRequiredServices": [
     "mocean"

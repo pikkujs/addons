@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "884e48bfd8f4dd17"
-    }
-  },
-  "node": {
     "displayName": "Automizy",
     "description": "Automizy email marketing — contacts and smart lists",
     "categories": [
       "email"
     ],
-    "icon": "./automizy.svg"
+    "icon": "./automizy.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "884e48bfd8f4dd17"
+    }
   },
   "forceRequiredServices": [
     "automizy"

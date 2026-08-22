@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4845ff1c2d0492bd"
-    }
-  },
-  "node": {
     "displayName": "Google Books",
     "description": "Google Books addon",
     "categories": [
       "media"
     ],
-    "icon": "./google-books.svg"
+    "icon": "./google-books.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4845ff1c2d0492bd"
+    }
   },
   "forceRequiredServices": [
     "googleBooks"

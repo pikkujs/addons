@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "2.0.0",
-      "hash": "0c2f32995db4c51d"
-    }
-  },
-  "node": {
     "displayName": "Zendesk",
     "description": "Zendesk integration for Pikku",
     "categories": [
       "Communication"
     ],
-    "icon": "./zendesk.svg"
+    "icon": "./zendesk.svg",
+    "openapi": {
+      "version": "2.0.0",
+      "hash": "0c2f32995db4c51d"
+    }
   },
   "forceRequiredServices": [
     "zendesk"

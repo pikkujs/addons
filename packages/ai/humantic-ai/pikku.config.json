@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "e342631a56ba9d3f"
-    }
-  },
-  "node": {
     "displayName": "Humantic AI",
     "description": "Consume the Humantic AI personality API",
     "categories": [
       "ai"
     ],
-    "icon": "./humantic-ai.svg"
+    "icon": "./humantic-ai.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "e342631a56ba9d3f"
+    }
   },
   "forceRequiredServices": [
     "humanticAi"

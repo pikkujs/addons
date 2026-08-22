@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "83e2d30f06d3c07e"
-    }
-  },
-  "node": {
     "displayName": "Google Cloud Natural Language",
     "description": "Consume the Google Cloud Natural Language API",
     "categories": [
       "ai"
     ],
-    "icon": "./google-cloud-natural-language.png"
+    "icon": "./google-cloud-natural-language.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "83e2d30f06d3c07e"
+    }
   },
   "forceRequiredServices": [
     "googleCloudNaturalLanguage"

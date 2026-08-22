@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "3fbd1262b34e3b85"
-    }
-  },
-  "node": {
     "displayName": "E-goi",
     "description": "Consume the E-goi marketing API (contacts)",
     "categories": [
       "email"
     ],
-    "icon": "./egoi.svg"
+    "icon": "./egoi.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "3fbd1262b34e3b85"
+    }
   },
   "forceRequiredServices": [
     "egoi"

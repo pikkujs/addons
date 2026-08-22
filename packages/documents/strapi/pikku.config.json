@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "bcb88d56ae014624"
-    }
-  },
-  "node": {
     "displayName": "Strapi",
     "description": "Consume the Strapi headless CMS API",
     "categories": [
       "documents"
     ],
-    "icon": "./strapi.svg"
+    "icon": "./strapi.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "bcb88d56ae014624"
+    }
   },
   "forceRequiredServices": [
     "strapi"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "d2816e92639fcde2"
-    }
-  },
-  "node": {
     "displayName": "Trello",
     "description": "Create, change and delete Trello boards, cards, lists and more",
     "categories": [
       "automation"
     ],
-    "icon": "./trello.svg"
+    "icon": "./trello.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "d2816e92639fcde2"
+    }
   },
   "forceRequiredServices": [
     "trello"

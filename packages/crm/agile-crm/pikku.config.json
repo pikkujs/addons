@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ba4023c33a1b71a8"
-    }
-  },
-  "node": {
     "displayName": "Agile CRM",
     "description": "Consume the Agile CRM API (contacts, companies, deals)",
     "categories": [
       "crm"
     ],
-    "icon": "./agile-crm.png"
+    "icon": "./agile-crm.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ba4023c33a1b71a8"
+    }
   },
   "forceRequiredServices": [
     "agileCrm"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "52630f6d19f1b459"
-    }
-  },
-  "node": {
     "displayName": "Nextcloud",
     "description": "Access files, folders and users on Nextcloud",
     "categories": [
       "cloud"
     ],
-    "icon": "./nextcloud.svg"
+    "icon": "./nextcloud.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "52630f6d19f1b459"
+    }
   },
   "forceRequiredServices": [
     "nextcloud"

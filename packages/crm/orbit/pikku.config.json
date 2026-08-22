@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ce085af423938719"
-    }
-  },
-  "node": {
     "displayName": "Orbit",
     "description": "Consume the Orbit API",
     "categories": [
       "crm"
     ],
-    "icon": "./orbit.svg"
+    "icon": "./orbit.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ce085af423938719"
+    }
   },
   "forceRequiredServices": [
     "orbit"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "aa9ff5af2104d6e7"
-    }
-  },
-  "node": {
     "displayName": "OpenWeatherMap",
     "description": "Gets current and future weather information",
     "categories": [
       "data"
     ],
-    "icon": "./open-weather-map.svg"
+    "icon": "./open-weather-map.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "aa9ff5af2104d6e7"
+    }
   },
   "forceRequiredServices": [
     "openWeatherMap"

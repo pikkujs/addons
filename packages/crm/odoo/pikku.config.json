@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "56b5de69ad823283"
-    }
-  },
-  "node": {
     "displayName": "Odoo",
     "description": "Odoo ERP via JSON-RPC",
     "categories": [
       "crm"
     ],
-    "icon": "./odoo.svg"
+    "icon": "./odoo.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "56b5de69ad823283"
+    }
   },
   "forceRequiredServices": [
     "odoo"

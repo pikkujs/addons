@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "f5b903b3f526bb18"
-    }
-  },
-  "node": {
     "displayName": "ServiceNow",
     "description": "Consume the ServiceNow ITSM API",
     "categories": [
       "crm"
     ],
-    "icon": "./servicenow.svg"
+    "icon": "./servicenow.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "f5b903b3f526bb18"
+    }
   },
   "forceRequiredServices": [
     "servicenow"

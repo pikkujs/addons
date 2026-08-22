@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v3",
-      "hash": "c64d10f6d813288e"
-    }
-  },
-  "node": {
     "displayName": "YouTube",
     "description": "YouTube integration for Pikku",
     "categories": [
       "Media"
     ],
-    "icon": "./youtube.svg"
+    "icon": "./youtube.svg",
+    "openapi": {
+      "version": "v3",
+      "hash": "c64d10f6d813288e"
+    }
   },
   "forceRequiredServices": [
     "youtube"

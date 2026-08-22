@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4d9cf2ae21da0565"
-    }
-  },
-  "node": {
     "displayName": "openthesaurus",
     "description": "openthesaurus addon",
     "categories": [
       "esoteric"
     ],
-    "icon": "./open-thesaurus.png"
+    "icon": "./open-thesaurus.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4d9cf2ae21da0565"
+    }
   },
   "forceRequiredServices": [
     "openThesaurus"

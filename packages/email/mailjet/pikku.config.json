@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "9a3302033f733e94"
-    }
-  },
-  "node": {
     "displayName": "Mailjet",
     "description": "Send transactional email and SMS via the Mailjet API",
     "categories": [
       "email"
     ],
-    "icon": "./mailjet.svg"
+    "icon": "./mailjet.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "9a3302033f733e94"
+    }
   },
   "forceRequiredServices": [
     "mailjet"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4c38ea9f4be1b330"
-    }
-  },
-  "node": {
     "displayName": "Asana",
     "description": "Consume the Asana REST API",
     "categories": [
       "automation"
     ],
-    "icon": "./asana.svg"
+    "icon": "./asana.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4c38ea9f4be1b330"
+    }
   },
   "forceRequiredServices": [
     "asana"

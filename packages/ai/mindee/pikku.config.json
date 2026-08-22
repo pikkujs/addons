@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ff3df8e577bf3df6"
-    }
-  },
-  "node": {
     "displayName": "Mindee",
     "description": "Mindee OCR document prediction API",
     "categories": [
       "ai"
     ],
-    "icon": "./mindee.svg"
+    "icon": "./mindee.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ff3df8e577bf3df6"
+    }
   },
   "forceRequiredServices": [
     "mindee"

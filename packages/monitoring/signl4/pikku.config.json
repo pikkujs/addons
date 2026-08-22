@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "930c5da14bcfb0f5"
-    }
-  },
-  "node": {
     "displayName": "SIGNL4",
     "description": "Send and resolve SIGNL4 alerts",
     "categories": [
       "monitoring"
     ],
-    "icon": "./signl4.png"
+    "icon": "./signl4.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "930c5da14bcfb0f5"
+    }
   },
   "forceRequiredServices": [
     "signl4"

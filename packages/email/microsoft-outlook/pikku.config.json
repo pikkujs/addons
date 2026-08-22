@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v1.0",
-      "hash": "bb0f00d4c773a399"
-    }
-  },
-  "node": {
     "displayName": "Microsoft Outlook",
     "description": "Microsoft Outlook integration for Pikku",
     "categories": [
       "Email"
     ],
-    "icon": "./microsoft-outlook.svg"
+    "icon": "./microsoft-outlook.svg",
+    "openapi": {
+      "version": "v1.0",
+      "hash": "bb0f00d4c773a399"
+    }
   },
   "forceRequiredServices": [
     "microsoftOutlook"

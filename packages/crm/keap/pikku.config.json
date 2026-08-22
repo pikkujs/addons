@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c7af1491f7e98359"
-    }
-  },
-  "node": {
     "displayName": "Keap",
     "description": "Consume the Keap (Infusionsoft) CRM API",
     "categories": [
       "crm"
     ],
-    "icon": "./keap.png"
+    "icon": "./keap.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c7af1491f7e98359"
+    }
   },
   "forceRequiredServices": [
     "keap"

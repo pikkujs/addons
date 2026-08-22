@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "52f63c441238757b"
-    }
-  },
-  "node": {
     "displayName": "Google BigQuery",
     "description": "Google BigQuery integration for Pikku",
     "categories": [
       "database"
     ],
-    "icon": "./google-big-query.svg"
+    "icon": "./google-big-query.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "52f63c441238757b"
+    }
   },
   "forceRequiredServices": [
     "googleBigQuery"

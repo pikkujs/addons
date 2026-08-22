@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "a352491c4497f185"
-    }
-  },
-  "node": {
     "displayName": "Ghost",
     "description": "Consume the Ghost blogging CMS Admin and Content API",
     "categories": [
       "documents"
     ],
-    "icon": "./ghost.svg"
+    "icon": "./ghost.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "a352491c4497f185"
+    }
   },
   "forceRequiredServices": [
     "ghost"

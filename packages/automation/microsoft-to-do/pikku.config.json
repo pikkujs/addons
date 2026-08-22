@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "54167bcd9bd1b256"
-    }
-  },
-  "node": {
     "displayName": "Microsoft To Do",
     "description": "Consume the Microsoft To Do API (tasks, lists, linked resources).",
     "categories": [
       "automation"
     ],
-    "icon": "./microsoft-to-do.svg"
+    "icon": "./microsoft-to-do.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "54167bcd9bd1b256"
+    }
   },
   "forceRequiredServices": [
     "microsoftToDo"

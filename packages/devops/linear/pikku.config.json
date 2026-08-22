@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "196fdf8be2f7e0bc"
-    }
-  },
-  "node": {
     "displayName": "Linear",
     "description": "Consume the Linear issue tracking GraphQL API",
     "categories": [
       "devops"
     ],
-    "icon": "./linear.svg"
+    "icon": "./linear.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "196fdf8be2f7e0bc"
+    }
   },
   "forceRequiredServices": [
     "linear"

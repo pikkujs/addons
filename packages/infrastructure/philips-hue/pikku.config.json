@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4088a954205b2bc4"
-    }
-  },
-  "node": {
     "displayName": "philipshue",
     "description": "philipshue addon",
     "categories": [
       "infrastructure"
     ],
-    "icon": "./philips-hue.svg"
+    "icon": "./philips-hue.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4088a954205b2bc4"
+    }
   },
   "forceRequiredServices": [
     "philipsHue"

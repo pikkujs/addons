@@ -7,7 +7,8 @@
 - Package names use `@pikku/addon-<name>` prefix (e.g., `@pikku/addon-stripe`)
 - Test pattern: testcontainers for integration tests, RPC to invoke functions
 - Prefer fetch-based API services over third-party SDKs (keeps packages lightweight)
-- Icons live at the package root as `<name>.svg` (referenced via `node.icon` in pikku.config.json)
+- Icons live at the package root as `<name>.svg` (referenced via `addon.icon` in pikku.config.json)
+- Catalogue metadata (`displayName`, `description`, `categories`, `icon`) goes under the `addon` key in pikku.config.json. A top-level `node` key is the old spelling and is ignored — codegen then emits no `console/pikku-addon-meta.gen.json`, and the package lands in the registry with no metadata at all.
 
 ## Creating a New Addon
 

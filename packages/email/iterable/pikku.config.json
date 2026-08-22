@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ed8c64a0f2c5fe78"
-    }
-  },
-  "node": {
     "displayName": "Iterable",
     "description": "Consume the Iterable marketing API",
     "categories": [
       "email"
     ],
-    "icon": "./iterable.png"
+    "icon": "./iterable.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ed8c64a0f2c5fe78"
+    }
   },
   "forceRequiredServices": [
     "iterable"

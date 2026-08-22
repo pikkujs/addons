@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "03d386d03f579f6d"
-    }
-  },
-  "node": {
     "displayName": "MailerLite",
     "description": "Consume the MailerLite email marketing API",
     "categories": [
       "email"
     ],
-    "icon": "./mailer-lite.svg"
+    "icon": "./mailer-lite.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "03d386d03f579f6d"
+    }
   },
   "forceRequiredServices": [
     "mailerLite"

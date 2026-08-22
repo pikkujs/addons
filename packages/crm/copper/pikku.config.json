@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "2dbb23d6f0d9f828"
-    }
-  },
-  "node": {
     "displayName": "Copper",
     "description": "Consume the Copper CRM API",
     "categories": [
       "crm"
     ],
-    "icon": "./copper.svg"
+    "icon": "./copper.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "2dbb23d6f0d9f828"
+    }
   },
   "forceRequiredServices": [
     "copper"

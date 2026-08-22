@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "62c12069b4f9d724"
-    }
-  },
-  "node": {
     "displayName": "Google Contacts",
     "description": "Consume the Google Contacts (People) API",
     "categories": [
       "crm"
     ],
-    "icon": "./google-contacts.png"
+    "icon": "./google-contacts.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "62c12069b4f9d724"
+    }
   },
   "forceRequiredServices": [
     "googleContacts"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "53f33dea748246ff"
-    }
-  },
-  "node": {
     "displayName": "FileMaker",
     "description": "Retrieve and manage data via the FileMaker Data API",
     "categories": [
       "database"
     ],
-    "icon": "./filemaker.png"
+    "icon": "./filemaker.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "53f33dea748246ff"
+    }
   },
   "forceRequiredServices": [
     "filemaker"

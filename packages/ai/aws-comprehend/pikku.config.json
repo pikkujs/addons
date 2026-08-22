@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "705fccb647000ec0"
-    }
-  },
-  "node": {
     "displayName": "AWS Comprehend",
     "description": "Amazon Comprehend text analysis for Pikku",
     "categories": [
       "ai"
     ],
-    "icon": "./aws-comprehend.svg"
+    "icon": "./aws-comprehend.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "705fccb647000ec0"
+    }
   },
   "forceRequiredServices": [
     "awsComprehend"

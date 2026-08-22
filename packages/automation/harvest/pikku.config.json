@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "5b452b9eca021a9f"
-    }
-  },
-  "node": {
     "displayName": "Harvest",
     "description": "Harvest addon",
     "categories": [
       "automation"
     ],
-    "icon": "./harvest.png"
+    "icon": "./harvest.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "5b452b9eca021a9f"
+    }
   },
   "forceRequiredServices": [
     "harvest"

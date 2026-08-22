@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "74fa42de61733c97"
-    }
-  },
-  "node": {
     "displayName": "Google Slides",
     "description": "Consume the Google Slides API",
     "categories": [
       "documents"
     ],
-    "icon": "./google-slides.svg"
+    "icon": "./google-slides.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "74fa42de61733c97"
+    }
   },
   "forceRequiredServices": [
     "googleSlides"

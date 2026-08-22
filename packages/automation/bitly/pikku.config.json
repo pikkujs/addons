@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "bc36306e9b608d18"
-    }
-  },
-  "node": {
     "displayName": "bitly",
     "description": "bitly addon",
     "categories": [
       "automation"
     ],
-    "icon": "./bitly.svg"
+    "icon": "./bitly.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "bc36306e9b608d18"
+    }
   },
   "forceRequiredServices": [
     "bitly"

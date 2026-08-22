@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "8750ece2a8bd23d0"
-    }
-  },
-  "node": {
     "displayName": "awssqs",
     "description": "awssqs addon",
     "categories": [
       "communication"
     ],
-    "icon": "./aws-sqs.svg"
+    "icon": "./aws-sqs.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "8750ece2a8bd23d0"
+    }
   },
   "forceRequiredServices": [
     "awsSqs"

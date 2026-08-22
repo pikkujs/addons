@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "cf4e064c71879dbc"
-    }
-  },
-  "node": {
     "displayName": "DHL",
     "description": "DHL addon",
     "categories": [
       "data"
     ],
-    "icon": "./dhl.svg"
+    "icon": "./dhl.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "cf4e064c71879dbc"
+    }
   },
   "forceRequiredServices": [
     "dhl"

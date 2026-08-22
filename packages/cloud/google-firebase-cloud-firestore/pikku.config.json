@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "e5c63d4b79073ccc"
-    }
-  },
-  "node": {
     "displayName": "Google Cloud Firestore",
     "description": "Interact with Google Firebase Cloud Firestore",
     "categories": [
       "cloud"
     ],
-    "icon": "./google-firebase-cloud-firestore.svg"
+    "icon": "./google-firebase-cloud-firestore.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "e5c63d4b79073ccc"
+    }
   },
   "forceRequiredServices": [
     "googleFirebaseCloudFirestore"

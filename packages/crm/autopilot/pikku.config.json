@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "8e92eb7325846753"
-    }
-  },
-  "node": {
     "displayName": "Autopilot",
     "description": "Consume the Autopilot marketing automation API",
     "categories": [
       "crm"
     ],
-    "icon": "./autopilot.svg"
+    "icon": "./autopilot.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "8e92eb7325846753"
+    }
   },
   "forceRequiredServices": [
     "autopilot"

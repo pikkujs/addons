@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "cba8f1dc965eb3c1"
-    }
-  },
-  "node": {
     "displayName": "uplead",
     "description": "uplead addon",
     "categories": [
       "crm"
     ],
-    "icon": "./uplead.png"
+    "icon": "./uplead.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "cba8f1dc965eb3c1"
+    }
   },
   "forceRequiredServices": [
     "uplead"

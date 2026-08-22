@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c7a5fe8cd325112f"
-    }
-  },
-  "node": {
     "displayName": "MSG91",
     "description": "MSG91 addon",
     "categories": [
       "communication"
     ],
-    "icon": "./msg91.svg"
+    "icon": "./msg91.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c7a5fe8cd325112f"
+    }
   },
   "forceRequiredServices": [
     "msg91"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "9b7066931bb92859"
-    }
-  },
-  "node": {
     "displayName": "Microsoft Excel (OneDrive)",
     "description": "Consume the Microsoft Excel API for workbooks stored in OneDrive",
     "categories": [
       "documents"
     ],
-    "icon": "./microsoft-excel.svg"
+    "icon": "./microsoft-excel.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "9b7066931bb92859"
+    }
   },
   "forceRequiredServices": [
     "microsoftExcel"

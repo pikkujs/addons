@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "97ab82e0afe351ed"
-    }
-  },
-  "node": {
     "displayName": "TheHive",
     "description": "Consume TheHive security incident response API",
     "categories": [
       "monitoring"
     ],
-    "icon": "./the-hive.svg"
+    "icon": "./the-hive.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "97ab82e0afe351ed"
+    }
   },
   "forceRequiredServices": [
     "theHive"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ba9beb882e8cdd8c"
-    }
-  },
-  "node": {
     "displayName": "RocketChat",
     "description": "RocketChat integration for Pikku",
     "categories": [
       "communication"
     ],
-    "icon": "./rocketchat.svg"
+    "icon": "./rocketchat.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ba9beb882e8cdd8c"
+    }
   },
   "forceRequiredServices": [
     "rocketchat"

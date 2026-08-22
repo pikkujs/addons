@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ab546d730bad81d9"
-    }
-  },
-  "node": {
     "displayName": "awslambda",
     "description": "awslambda addon",
     "categories": [
       "cloud"
     ],
-    "icon": "./aws-lambda.svg"
+    "icon": "./aws-lambda.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ab546d730bad81d9"
+    }
   },
   "forceRequiredServices": [
     "awsLambda"

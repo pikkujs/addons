@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "e8aa5f205414f46b"
-    }
-  },
-  "node": {
     "displayName": "Lemlist",
     "description": "Consume the Lemlist cold email API",
     "categories": [
       "email"
     ],
-    "icon": "./lemlist.svg"
+    "icon": "./lemlist.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "e8aa5f205414f46b"
+    }
   },
   "forceRequiredServices": [
     "lemlist"

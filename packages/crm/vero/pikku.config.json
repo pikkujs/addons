@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "be372569db1ce398"
-    }
-  },
-  "node": {
     "displayName": "Vero",
     "description": "Vero addon",
     "categories": [
       "crm"
     ],
-    "icon": "./vero.svg"
+    "icon": "./vero.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "be372569db1ce398"
+    }
   },
   "forceRequiredServices": [
     "vero"

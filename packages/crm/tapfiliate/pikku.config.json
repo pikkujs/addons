@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c950367b00972308"
-    }
-  },
-  "node": {
     "displayName": "Tapfiliate",
     "description": "Consume the Tapfiliate affiliate marketing API",
     "categories": [
       "crm"
     ],
-    "icon": "./tapfiliate.svg"
+    "icon": "./tapfiliate.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c950367b00972308"
+    }
   },
   "forceRequiredServices": [
     "tapfiliate"

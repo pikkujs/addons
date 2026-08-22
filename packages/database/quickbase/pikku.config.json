@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "66a639749a220b32"
-    }
-  },
-  "node": {
     "displayName": "Quick Base",
     "description": "Integrate with the Quick Base RESTful API",
     "categories": [
       "database"
     ],
-    "icon": "./quickbase.png"
+    "icon": "./quickbase.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "66a639749a220b32"
+    }
   },
   "forceRequiredServices": [
     "quickbase"

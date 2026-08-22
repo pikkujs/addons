@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b6df728f9601d763"
-    }
-  },
-  "node": {
     "displayName": "Salesforce",
     "description": "Salesforce CRM API",
     "categories": [
       "crm"
     ],
-    "icon": "./salesforce.svg"
+    "icon": "./salesforce.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b6df728f9601d763"
+    }
   },
   "forceRequiredServices": [
     "salesforce"

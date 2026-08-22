@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "d12ce93f3a203a31"
-    }
-  },
-  "node": {
     "displayName": "Elasticsearch",
     "description": "Consume the Elasticsearch API",
     "categories": [
       "database"
     ],
-    "icon": "./elasticsearch.svg"
+    "icon": "./elasticsearch.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "d12ce93f3a203a31"
+    }
   },
   "forceRequiredServices": [
     "elasticsearch"

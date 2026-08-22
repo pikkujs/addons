@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b341e9e79cea4247"
-    }
-  },
-  "node": {
     "displayName": "LingvaNex",
     "description": "Consume the LingvaNex translation API",
     "categories": [
       "ai"
     ],
-    "icon": "./lingvanex.png"
+    "icon": "./lingvanex.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b341e9e79cea4247"
+    }
   },
   "forceRequiredServices": [
     "lingvanex"

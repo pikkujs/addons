@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "0287bc448e6e4740"
-    }
-  },
-  "node": {
     "displayName": "AMQP",
     "description": "AMQP sender integration for Pikku",
     "categories": [
       "communication"
     ],
-    "icon": "./amqp.svg"
+    "icon": "./amqp.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "0287bc448e6e4740"
+    }
   },
   "forceRequiredServices": [
     "amqp"

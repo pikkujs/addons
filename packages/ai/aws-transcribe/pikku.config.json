@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ce1858da6fe8eee4"
-    }
-  },
-  "node": {
     "displayName": "AWS Transcribe",
     "description": "Sends data to AWS Transcribe",
     "categories": [
       "ai"
     ],
-    "icon": "./aws-transcribe.svg"
+    "icon": "./aws-transcribe.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ce1858da6fe8eee4"
+    }
   },
   "forceRequiredServices": [
     "awsTranscribe"

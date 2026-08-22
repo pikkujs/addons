@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "322c5903ce106cfc"
-    }
-  },
-  "node": {
     "displayName": "AWS SES",
     "description": "Send emails and manage templates via AWS SES",
     "categories": [
       "email"
     ],
-    "icon": "./aws-ses.svg"
+    "icon": "./aws-ses.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "322c5903ce106cfc"
+    }
   },
   "forceRequiredServices": [
     "awsSes"

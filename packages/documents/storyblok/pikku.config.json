@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b9f19f2123dc3bb3"
-    }
-  },
-  "node": {
     "displayName": "Storyblok",
     "description": "Consume the Storyblok headless CMS Management API",
     "categories": [
       "documents"
     ],
-    "icon": "./storyblok.svg"
+    "icon": "./storyblok.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b9f19f2123dc3bb3"
+    }
   },
   "forceRequiredServices": [
     "storyblok"

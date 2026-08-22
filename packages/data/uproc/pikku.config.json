@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ad3f9ffa6855d072"
-    }
-  },
-  "node": {
     "displayName": "uProc",
     "description": "uProc data tools API (email/phone/address/company data enrichment and validation)",
     "categories": [
       "data"
     ],
-    "icon": "./uproc.png"
+    "icon": "./uproc.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ad3f9ffa6855d072"
+    }
   },
   "forceRequiredServices": [
     "uproc"

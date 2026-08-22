@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "631f3c82ab77dced"
-    }
-  },
-  "node": {
     "displayName": "QuickBooks Online",
     "description": "Consume the QuickBooks Online accounting API",
     "categories": [
       "payments"
     ],
-    "icon": "./quickbooks.svg"
+    "icon": "./quickbooks.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "631f3c82ab77dced"
+    }
   },
   "forceRequiredServices": [
     "quickbooks"

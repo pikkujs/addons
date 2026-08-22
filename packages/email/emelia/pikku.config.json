@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "953a6237101b3eb7"
-    }
-  },
-  "node": {
     "displayName": "Emelia",
     "description": "Consume the Emelia cold email API",
     "categories": [
       "email"
     ],
-    "icon": "./emelia.svg"
+    "icon": "./emelia.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "953a6237101b3eb7"
+    }
   },
   "forceRequiredServices": [
     "emelia"

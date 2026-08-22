@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b8ebefdaf9d8685f"
-    }
-  },
-  "node": {
     "displayName": "Google Tasks",
     "description": "Consume the Google Tasks API",
     "categories": [
       "automation"
     ],
-    "icon": "./google-tasks.svg"
+    "icon": "./google-tasks.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b8ebefdaf9d8685f"
+    }
   },
   "forceRequiredServices": [
     "googleTasks"

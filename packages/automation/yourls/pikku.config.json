@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "d4ee92cac1aaf6be"
-    }
-  },
-  "node": {
     "displayName": "Yourls",
     "description": "Yourls addon",
     "categories": [
       "automation"
     ],
-    "icon": "./yourls.png"
+    "icon": "./yourls.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "d4ee92cac1aaf6be"
+    }
   },
   "forceRequiredServices": [
     "yourls"

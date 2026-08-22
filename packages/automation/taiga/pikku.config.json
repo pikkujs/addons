@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4e7a3c4612d36f7b"
-    }
-  },
-  "node": {
     "displayName": "Taiga",
     "description": "Consume the Taiga API",
     "categories": [
       "automation"
     ],
-    "icon": "./taiga.svg"
+    "icon": "./taiga.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4e7a3c4612d36f7b"
+    }
   },
   "forceRequiredServices": [
     "taiga"

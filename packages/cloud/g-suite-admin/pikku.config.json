@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "a4cc1c33729ac4e7"
-    }
-  },
-  "node": {
     "displayName": "Google Workspace Admin",
     "description": "Manage Google Workspace users and groups via the Admin SDK Directory API",
     "categories": [
       "cloud"
     ],
-    "icon": "./g-suite-admin.svg"
+    "icon": "./g-suite-admin.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "a4cc1c33729ac4e7"
+    }
   },
   "forceRequiredServices": [
     "gSuiteAdmin"

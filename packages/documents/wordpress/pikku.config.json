@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v2",
-      "hash": "d2a3cf2b403b6559"
-    }
-  },
-  "node": {
     "displayName": "WordPress",
     "description": "WordPress integration for Pikku",
     "categories": [
       "Documents"
     ],
-    "icon": "./wordpress.svg"
+    "icon": "./wordpress.svg",
+    "openapi": {
+      "version": "v2",
+      "hash": "d2a3cf2b403b6559"
+    }
   },
   "forceRequiredServices": [
     "wordpress"

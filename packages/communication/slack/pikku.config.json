@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.7.0",
-      "hash": "3e144fdb56a25839"
-    }
-  },
-  "node": {
     "displayName": "Slack",
     "description": "Slack integration for Pikku",
     "categories": [
       "Communication"
     ],
-    "icon": "./slack.svg"
+    "icon": "./slack.svg",
+    "openapi": {
+      "version": "1.7.0",
+      "hash": "3e144fdb56a25839"
+    }
   },
   "forceRequiredServices": [
     "slack"

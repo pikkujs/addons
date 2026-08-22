@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "904770848fecfe87"
-    }
-  },
-  "node": {
     "displayName": "Wise",
     "description": "Consume the Wise (TransferWise) payments API",
     "categories": [
       "payments"
     ],
-    "icon": "./wise.svg"
+    "icon": "./wise.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "904770848fecfe87"
+    }
   },
   "forceRequiredServices": [
     "wise"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b775b5752cc24920"
-    }
-  },
-  "node": {
     "displayName": "Twist",
     "description": "Consume the Twist team messaging API",
     "categories": [
       "communication"
     ],
-    "icon": "./twist.png"
+    "icon": "./twist.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b775b5752cc24920"
+    }
   },
   "forceRequiredServices": [
     "twist"

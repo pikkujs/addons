@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "f0fee3e42c23cf0e"
-    }
-  },
-  "node": {
     "displayName": "Baserow",
     "description": "Consume the Baserow API",
     "categories": [
       "database"
     ],
-    "icon": "./baserow.svg"
+    "icon": "./baserow.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "f0fee3e42c23cf0e"
+    }
   },
   "forceRequiredServices": [
     "baserow"

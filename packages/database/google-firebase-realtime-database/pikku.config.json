@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "8f055d137eac2271"
-    }
-  },
-  "node": {
     "displayName": "Firebase Realtime DB",
     "description": "firebase addon",
     "categories": [
       "database"
     ],
-    "icon": "./google-firebase-realtime-database.svg"
+    "icon": "./google-firebase-realtime-database.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "8f055d137eac2271"
+    }
   },
   "forceRequiredServices": [
     "googleFirebaseRealtimeDatabase"

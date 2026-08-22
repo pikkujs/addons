@@ -4,18 +4,6 @@ on:
   push:
     branches:
       - main
-  # Manual full re-ingest. The per-release notify and the reconcile below both
-  # only ever push versions the catalogue is missing, so neither can repair
-  # entries that were ingested at the right version but with degraded metadata
-  # (empty displayName/description/categories) — which is exactly what a broken
-  # extractor leaves behind. `--all` is the hammer for that case, and it lives
-  # here so the registry bearer stays a CI secret instead of being copied around.
-  workflow_dispatch:
-    inputs:
-      backfill:
-        description: Re-ingest every package into both registries, rebuilding stored metadata
-        type: boolean
-        default: false
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -30,7 +18,6 @@ env:
 jobs:
   discover:
     name: Discover changed addons
-    if: github.event_name == 'push'
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.find.outputs.matrix }}
@@ -172,7 +159,7 @@ jobs:
     name: Release
     runs-on: ubuntu-latest
     needs: [discover, build]
-    if: always() && !failure() && !cancelled() && github.event_name == 'push'
+    if: always() && !failure() && !cancelled()
     steps:
       - uses: actions/checkout@v4
       - run: corepack enable
@@ -250,21 +237,5 @@ jobs:
       - name: Reconcile registry with npm
         if: always() && !cancelled()
         run: bash scripts/backfill-registry.sh --reconcile
-        env:
-          REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}
-
-  backfill:
-    name: Re-ingest catalogue
-    if: github.event_name == 'workflow_dispatch' && inputs.backfill
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-      # No `yarn install`: the backfill scripts shell out to curl and to `node -e`
-      # against package.json only, so the workspace's dependencies are dead weight
-      # here (and installing 217 packages' worth of them is the slow part).
-      - run: bash scripts/backfill-registry.sh --all
         env:
           REGISTRY_API_KEY: ${{ secrets.REGISTRY_API_KEY }}

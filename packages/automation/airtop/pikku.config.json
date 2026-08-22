@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "7877f3cfbb59e168"
-    }
-  },
-  "node": {
     "displayName": "Airtop",
     "description": "Scrape and control any site with Airtop",
     "categories": [
       "automation"
     ],
-    "icon": "./airtop.svg"
+    "icon": "./airtop.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "7877f3cfbb59e168"
+    }
   },
   "forceRequiredServices": [
     "airtop"

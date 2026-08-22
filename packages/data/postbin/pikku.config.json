@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "8579ade3720ad267"
-    }
-  },
-  "node": {
     "displayName": "PostBin",
     "description": "Consume the PostBin API",
     "categories": [
       "data"
     ],
-    "icon": "./postbin.svg"
+    "icon": "./postbin.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "8579ade3720ad267"
+    }
   },
   "forceRequiredServices": [
     "postbin"

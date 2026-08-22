@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "11fc3d2ddfef110a"
-    }
-  },
-  "node": {
     "displayName": "Zoom",
     "description": "Zoom meetings API",
     "categories": [
       "communication"
     ],
-    "icon": "./zoom.svg"
+    "icon": "./zoom.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "11fc3d2ddfef110a"
+    }
   },
   "forceRequiredServices": [
     "zoom"

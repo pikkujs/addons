@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "97ab7628d8c48358"
-    }
-  },
-  "node": {
     "displayName": "questdb",
     "description": "questdb addon",
     "categories": [
       "database"
     ],
-    "icon": "./quest-db.png"
+    "icon": "./quest-db.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "97ab7628d8c48358"
+    }
   },
   "forceRequiredServices": [
     "questDb"

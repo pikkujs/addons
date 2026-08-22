@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "51a87cd11678e113"
-    }
-  },
-  "node": {
     "displayName": "LinkedIn",
     "description": "Consume LinkedIn API",
     "categories": [
       "communication"
     ],
-    "icon": "./linkedin.svg"
+    "icon": "./linkedin.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "51a87cd11678e113"
+    }
   },
   "forceRequiredServices": [
     "linkedin"

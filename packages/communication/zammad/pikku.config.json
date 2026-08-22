@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "5090058f828318ca"
-    }
-  },
-  "node": {
     "displayName": "Zammad",
     "description": "Consume the Zammad helpdesk API",
     "categories": [
       "communication"
     ],
-    "icon": "./zammad.svg"
+    "icon": "./zammad.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "5090058f828318ca"
+    }
   },
   "forceRequiredServices": [
     "zammad"

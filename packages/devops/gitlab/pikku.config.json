@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "de23dab19af0b1e0"
-    }
-  },
-  "node": {
     "displayName": "GitLab",
     "description": "Interact with the GitLab API",
     "categories": [
       "devops"
     ],
-    "icon": "./gitlab.svg"
+    "icon": "./gitlab.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "de23dab19af0b1e0"
+    }
   },
   "forceRequiredServices": [
     "gitlab"

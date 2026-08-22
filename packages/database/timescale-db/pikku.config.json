@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "0732523daa5bad4a"
-    }
-  },
-  "node": {
     "displayName": "timescaledb",
     "description": "timescaledb addon",
     "categories": [
       "database"
     ],
-    "icon": "./timescale-db.svg"
+    "icon": "./timescale-db.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "0732523daa5bad4a"
+    }
   },
   "forceRequiredServices": [
     "timescaleDb"

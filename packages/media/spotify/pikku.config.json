@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "2023.2.27",
-      "hash": "61931026bddfa422"
-    }
-  },
-  "node": {
     "displayName": "Spotify",
     "description": "Spotify integration for Pikku",
     "categories": [
       "Media"
     ],
-    "icon": "./spotify.svg"
+    "icon": "./spotify.svg",
+    "openapi": {
+      "version": "2023.2.27",
+      "hash": "61931026bddfa422"
+    }
   },
   "forceRequiredServices": [
     "spotify"

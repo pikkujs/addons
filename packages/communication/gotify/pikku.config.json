@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "2ec36c02020841a6"
-    }
-  },
-  "node": {
     "displayName": "Gotify",
     "description": "Gotify addon",
     "categories": [
       "communication"
     ],
-    "icon": "./gotify.png"
+    "icon": "./gotify.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "2ec36c02020841a6"
+    }
   },
   "forceRequiredServices": [
     "gotify"

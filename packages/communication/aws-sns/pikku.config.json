@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "a084567f6ba3566b"
-    }
-  },
-  "node": {
     "displayName": "awssns",
     "description": "awssns addon",
     "categories": [
       "communication"
     ],
-    "icon": "./aws-sns.svg"
+    "icon": "./aws-sns.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "a084567f6ba3566b"
+    }
   },
   "forceRequiredServices": [
     "awsSns"

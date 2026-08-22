@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "9006fd8aced59119"
-    }
-  },
-  "node": {
     "displayName": "Peekalink",
     "description": "Peekalink addon",
     "categories": [
       "data"
     ],
-    "icon": "./peekalink.png"
+    "icon": "./peekalink.png",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "9006fd8aced59119"
+    }
   },
   "forceRequiredServices": [
     "peekalink"

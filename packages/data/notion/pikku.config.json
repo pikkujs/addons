@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "3124bd77ad619df5"
-    }
-  },
-  "node": {
     "displayName": "Notion",
     "description": "Notion integration for Pikku",
     "categories": [
       "Data"
     ],
-    "icon": "./notion.svg"
+    "icon": "./notion.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "3124bd77ad619df5"
+    }
   },
   "forceRequiredServices": [
     "notion"

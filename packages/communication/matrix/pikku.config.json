@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "b0d3dc73476e4513"
-    }
-  },
-  "node": {
     "displayName": "Matrix",
     "description": "Consume the Matrix chat API",
     "categories": [
       "communication"
     ],
-    "icon": "./matrix.svg"
+    "icon": "./matrix.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "b0d3dc73476e4513"
+    }
   },
   "forceRequiredServices": [
     "matrix"

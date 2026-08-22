@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "4aca9eba2721a03c"
-    }
-  },
-  "node": {
     "displayName": "Raindrop",
     "description": "Consume the Raindrop bookmarks API",
     "categories": [
       "automation"
     ],
-    "icon": "./raindrop.svg"
+    "icon": "./raindrop.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "4aca9eba2721a03c"
+    }
   },
   "forceRequiredServices": [
     "raindrop"

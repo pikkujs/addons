@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "1b615c0d68012a81"
-    }
-  },
-  "node": {
     "displayName": "QuickChart",
     "description": "Create chart images via the QuickChart API",
     "categories": [
       "media"
     ],
-    "icon": "./quickchart.svg"
+    "icon": "./quickchart.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "1b615c0d68012a81"
+    }
   },
   "forceRequiredServices": [
     "quickchart"

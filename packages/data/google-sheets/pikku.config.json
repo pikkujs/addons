@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "v4",
-      "hash": "2d44d47d8373afc8"
-    }
-  },
-  "node": {
     "displayName": "Google Sheets",
     "description": "Google Sheets integration for Pikku",
     "categories": [
       "Data"
     ],
-    "icon": "./google-sheets.svg"
+    "icon": "./google-sheets.svg",
+    "openapi": {
+      "version": "v4",
+      "hash": "2d44d47d8373afc8"
+    }
   },
   "forceRequiredServices": [
     "googleSheets"

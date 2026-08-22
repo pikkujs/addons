@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "1b1e1677dca0186a"
-    }
-  },
-  "node": {
     "displayName": "ERPNext",
     "description": "Consume the ERPNext REST API",
     "categories": [
       "crm"
     ],
-    "icon": "./erpnext.svg"
+    "icon": "./erpnext.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "1b1e1677dca0186a"
+    }
   },
   "forceRequiredServices": [
     "erpnext"

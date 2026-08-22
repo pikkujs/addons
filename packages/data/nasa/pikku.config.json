@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "cefb3553bf1bc962"
-    }
-  },
-  "node": {
     "displayName": "NASA",
     "description": "Retrieve data from the NASA API",
     "categories": [
       "data"
     ],
-    "icon": "./nasa.svg"
+    "icon": "./nasa.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "cefb3553bf1bc962"
+    }
   },
   "forceRequiredServices": [
     "nasa"

@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1001.0.0-SNAPSHOT",
-      "hash": "1a178aef46148af8"
-    }
-  },
-  "node": {
     "displayName": "Jira",
     "description": "Jira integration for Pikku",
     "categories": [
       "Devops"
     ],
-    "icon": "./jira.svg"
+    "icon": "./jira.svg",
+    "openapi": {
+      "version": "1001.0.0-SNAPSHOT",
+      "hash": "1a178aef46148af8"
+    }
   },
   "forceRequiredServices": [
     "jira"

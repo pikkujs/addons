@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "1f5d28a7dfb7a9ad"
-    }
-  },
-  "node": {
     "displayName": "Venafi TLS Protect Cloud",
     "description": "Consume the Venafi TLS Protect Cloud API",
     "categories": [
       "infrastructure"
     ],
-    "icon": "./venafi-tls-protect-cloud.svg"
+    "icon": "./venafi-tls-protect-cloud.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "1f5d28a7dfb7a9ad"
+    }
   },
   "forceRequiredServices": [
     "venafiTlsProtectCloud"

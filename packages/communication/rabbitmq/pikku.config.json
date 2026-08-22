@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "07c444bcfd626f98"
-    }
-  },
-  "node": {
     "displayName": "rabbitmq",
     "description": "rabbitmq addon",
     "categories": [
       "communication"
     ],
-    "icon": "./rabbitmq.svg"
+    "icon": "./rabbitmq.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "07c444bcfd626f98"
+    }
   },
   "forceRequiredServices": [
     "rabbitmq"

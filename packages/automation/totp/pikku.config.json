@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "00c4aade89ceb230"
-    }
-  },
-  "node": {
     "displayName": "TOTP",
     "description": "TOTP addon",
     "categories": [
       "automation"
     ],
-    "icon": "./totp.svg"
+    "icon": "./totp.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "00c4aade89ceb230"
+    }
   },
   "forceRequiredServices": [
     "totp"

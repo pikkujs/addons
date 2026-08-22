@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "c7c966cb984030c8"
-    }
-  },
-  "node": {
     "displayName": "Zulip",
     "description": "Consume the Zulip chat API",
     "categories": [
       "communication"
     ],
-    "icon": "./zulip.svg"
+    "icon": "./zulip.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "c7c966cb984030c8"
+    }
   },
   "forceRequiredServices": [
     "zulip"

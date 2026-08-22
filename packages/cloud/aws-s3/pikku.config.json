@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "24392e1ae06534c8"
-    }
-  },
-  "node": {
     "displayName": "AWS S3",
     "description": "Store and retrieve objects in AWS S3",
     "categories": [
       "cloud"
     ],
-    "icon": "./aws-s3.svg"
+    "icon": "./aws-s3.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "24392e1ae06534c8"
+    }
   },
   "forceRequiredServices": [
     "awsS3"

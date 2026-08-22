@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "668acf61b092de8c"
-    }
-  },
-  "node": {
     "displayName": "Clockify",
     "description": "Consume the Clockify time-tracking REST API",
     "categories": [
       "automation"
     ],
-    "icon": "./clockify.svg"
+    "icon": "./clockify.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "668acf61b092de8c"
+    }
   },
   "forceRequiredServices": [
     "clockify"

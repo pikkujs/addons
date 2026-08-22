@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "190957e52b14faa1"
-    }
-  },
-  "node": {
     "displayName": "Mautic",
     "description": "Consume the Mautic marketing automation API",
     "categories": [
       "crm"
     ],
-    "icon": "./mautic.svg"
+    "icon": "./mautic.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "190957e52b14faa1"
+    }
   },
   "forceRequiredServices": [
     "mautic"

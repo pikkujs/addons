@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "a7d71cde4fcf7884"
-    }
-  },
-  "node": {
     "displayName": "Grist",
     "description": "Grist integration for Pikku",
     "categories": [
       "database"
     ],
-    "icon": "./grist.svg"
+    "icon": "./grist.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "a7d71cde4fcf7884"
+    }
   },
   "forceRequiredServices": [
     "grist"

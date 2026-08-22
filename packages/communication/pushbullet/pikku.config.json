@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "efe70fbffe71c8bd"
-    }
-  },
-  "node": {
     "displayName": "Pushbullet",
     "description": "Pushbullet addon",
     "categories": [
       "communication"
     ],
-    "icon": "./pushbullet.svg"
+    "icon": "./pushbullet.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "efe70fbffe71c8bd"
+    }
   },
   "forceRequiredServices": [
     "pushbullet"

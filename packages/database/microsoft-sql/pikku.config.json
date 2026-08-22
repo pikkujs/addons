@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "ad931882091638e8"
-    }
-  },
-  "node": {
     "displayName": "microsoftsql",
     "description": "microsoftsql addon",
     "categories": [
       "database"
     ],
-    "icon": "./microsoft-sql.svg"
+    "icon": "./microsoft-sql.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "ad931882091638e8"
+    }
   },
   "forceRequiredServices": [
     "microsoftSql"

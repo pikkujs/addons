@@ -7,18 +7,16 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "openapi": {
-      "version": "1.0.0",
-      "hash": "6ec5322f5546ae44"
-    }
-  },
-  "node": {
     "displayName": "Facebook Graph API",
     "description": "Interact with Facebook using the Graph API",
     "categories": [
       "communication"
     ],
-    "icon": "./facebook-graph-api.svg"
+    "icon": "./facebook-graph-api.svg",
+    "openapi": {
+      "version": "1.0.0",
+      "hash": "6ec5322f5546ae44"
+    }
   },
   "forceRequiredServices": [
     "facebookGraphApi"
