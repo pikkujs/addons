@@ -223,12 +223,19 @@ jobs:
       # a Version Packages PR, changeset-version.cjs bumps every package.json in
       # place and those bumps are pushed to changeset-release/main, not consumed
       # here. Reconciling against that tree asks npm for versions that do not
-      # exist yet — 404 on all 217 packages, six retries each, ~28 hours of a job
-      # that looks busy and achieves nothing (2026-08-21). Restore the tracked
-      # files so the reconcile sees the versions that are actually published.
+      # exist yet — 404 on every package, six retries each, ~28 hours of a job
+      # that looks busy and achieves nothing (2026-08-21).
+      #
+      # Restore to github.sha, NOT `git checkout -- .`: changesets/action does not
+      # leave the bumps as working-tree dirt, it COMMITS them onto a local
+      # changeset-release/main before pushing. A plain restore then has nothing to
+      # revert — the tree is clean, the bumps are in HEAD — and the reconcile 404s
+      # exactly as before (run 32589916006, asking for aws-transcribe@0.0.7 while
+      # npm had 0.0.6). Naming the triggering commit is indifferent to which branch
+      # the action left us on and to whether it committed at all.
       - name: Restore checkout versions
         if: always() && !cancelled()
-        run: git checkout -- .
+        run: git checkout ${{ github.sha }} -- .
 
       # Safety net for anything the per-release notify above never covered:
       # packages published before the notify step existed, or stranded when an
