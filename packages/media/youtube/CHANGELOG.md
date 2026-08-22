@@ -1,5 +1,17 @@
 # @pikku/addon-youtube
 
+## 0.0.7
+
+### Patch Changes
+
+- 092edf8: Move the catalogue metadata from the ignored top-level `node` key to `addon`.
+
+  `node` is not in the CLI config schema, so codegen emitted no
+  `console/pikku-addon-meta.gen.json` for these packages and the published tarballs
+  shipped none. The registry had nothing to extract and stored every one of them
+  with its package name as the display name, an empty description and no
+  categories. The metadata was always there — just under a key nothing reads.
+
 ## 0.0.6
 
 ### Patch Changes
