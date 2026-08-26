@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Calendar',
   secretId: 'GOOGLE_CALENDAR_OAUTH_APP',
   schema: googleCalendarOAuthAppSchema,
+  optional: true,
 })

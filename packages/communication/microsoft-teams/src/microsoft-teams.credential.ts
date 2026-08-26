@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Microsoft Teams',
   secretId: 'MICROSOFT_TEAMS_OAUTH_APP',
   schema: microsoftTeamsOAuthAppSchema,
+  optional: true,
 })

@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Harvest',
   secretId: 'HARVEST_OAUTH_APP',
   schema: harvestOAuthAppSchema,
+  optional: true,
 })

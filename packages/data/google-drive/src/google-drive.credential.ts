@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Drive',
   secretId: 'GOOGLE_DRIVE_OAUTH_APP',
   schema: googleDriveOAuthAppSchema,
+  optional: true,
 })

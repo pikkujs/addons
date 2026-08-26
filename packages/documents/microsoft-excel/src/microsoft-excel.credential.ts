@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Microsoft Excel (OneDrive)',
   secretId: 'MICROSOFT_EXCEL_OAUTH_APP',
   schema: microsoftExcelOAuthAppSchema,
+  optional: true,
 })

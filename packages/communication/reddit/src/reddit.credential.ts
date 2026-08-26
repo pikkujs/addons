@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Reddit',
   secretId: 'REDDIT_OAUTH_APP',
   schema: redditOAuthAppSchema,
+  optional: true,
 })

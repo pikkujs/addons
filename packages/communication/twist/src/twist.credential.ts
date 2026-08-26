@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Twist',
   secretId: 'TWIST_OAUTH_APP',
   schema: twistOAuthAppSchema,
+  optional: true,
 })

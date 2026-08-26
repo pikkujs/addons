@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for X (Twitter)',
   secretId: 'TWITTER_OAUTH_APP',
   schema: twitterOAuthAppSchema,
+  optional: true,
 })

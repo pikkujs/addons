@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'GitHub OAuth App',
   description: 'OAuth2 app credentials for GitHub',
   secretId: 'GITHUB_OAUTH_APP',
+  optional: true,
 })

@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Slack',
   secretId: 'SLACK_OAUTH_APP',
   schema: slackOAuthAppSchema,
+  optional: true,
 })

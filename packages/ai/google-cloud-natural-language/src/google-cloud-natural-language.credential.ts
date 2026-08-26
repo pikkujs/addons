@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Cloud Natural Language',
   secretId: 'GOOGLE_CLOUD_NATURAL_LANGUAGE_OAUTH_APP',
   schema: googleCloudNaturalLanguageOAuthAppSchema,
+  optional: true,
 })

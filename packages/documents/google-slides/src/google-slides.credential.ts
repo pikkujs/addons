@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Slides',
   secretId: 'GOOGLE_SLIDES_OAUTH_APP',
   schema: googleSlidesOAuthAppSchema,
+  optional: true,
 })

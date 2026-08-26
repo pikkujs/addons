@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google BigQuery',
   secretId: 'GOOGLE_BIG_QUERY_OAUTH_APP',
   schema: googleBigQueryOAuthAppSchema,
+  optional: true,
 })

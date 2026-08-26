@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for QuickBooks Online',
   secretId: 'QUICKBOOKS_OAUTH_APP',
   schema: quickbooksOAuthAppSchema,
+  optional: true,
 })

@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Books',
   secretId: 'GOOGLE_BOOKS_OAUTH_APP',
   schema: googleBooksOAuthAppSchema,
+  optional: true,
 })

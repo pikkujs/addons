@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Workspace Admin',
   secretId: 'G_SUITE_ADMIN_OAUTH_APP',
   schema: gSuiteAdminOAuthAppSchema,
+  optional: true,
 })

@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Contacts',
   secretId: 'GOOGLE_CONTACTS_OAUTH_APP',
   schema: googleContactsOAuthAppSchema,
+  optional: true,
 })

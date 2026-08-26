@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Zoom',
   secretId: 'ZOOM_OAUTH_APP',
   schema: zoomOAuthAppSchema,
+  optional: true,
 })

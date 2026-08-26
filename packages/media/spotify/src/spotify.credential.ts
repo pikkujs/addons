@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'Spotify OAuth App',
   description: 'OAuth2 app credentials for Spotify',
   secretId: 'SPOTIFY_OAUTH_APP',
+  optional: true,
 })
