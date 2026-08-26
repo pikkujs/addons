@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'Dropbox OAuth App',
   description: 'OAuth2 app credentials for Dropbox',
   secretId: 'DROPBOX_OAUTH_APP',
+  optional: true,
 })

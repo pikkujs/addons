@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'YouTube OAuth App',
   description: 'OAuth2 app credentials for YouTube',
   secretId: 'YOUTUBE_OAUTH_APP',
+  optional: true,
 })

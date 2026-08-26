@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Tasks',
   secretId: 'GOOGLE_TASKS_OAUTH_APP',
   schema: googleTasksOAuthAppSchema,
+  optional: true,
 })

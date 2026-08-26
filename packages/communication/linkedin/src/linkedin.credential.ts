@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for LinkedIn',
   secretId: 'LINKEDIN_OAUTH_APP',
   schema: linkedinOAuthAppSchema,
+  optional: true,
 })

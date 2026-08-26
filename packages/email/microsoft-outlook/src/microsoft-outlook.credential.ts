@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'Microsoft Outlook OAuth App',
   description: 'OAuth2 app credentials for Microsoft Outlook',
   secretId: 'MICROSOFT_OUTLOOK_OAUTH_APP',
+  optional: true,
 })

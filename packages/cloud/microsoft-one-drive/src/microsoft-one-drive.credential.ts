@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Microsoft OneDrive',
   secretId: 'MICROSOFT_ONE_DRIVE_OAUTH_APP',
   schema: microsoftOneDriveOAuthAppSchema,
+  optional: true,
 })

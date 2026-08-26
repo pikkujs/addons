@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Raindrop',
   secretId: 'RAINDROP_OAUTH_APP',
   schema: raindropOAuthAppSchema,
+  optional: true,
 })

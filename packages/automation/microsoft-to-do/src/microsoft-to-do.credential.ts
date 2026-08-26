@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Microsoft To Do',
   secretId: 'MICROSOFT_TO_DO_OAUTH_APP',
   schema: microsoftToDoOAuthAppSchema,
+  optional: true,
 })

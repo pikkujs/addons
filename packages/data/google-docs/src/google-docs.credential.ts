@@ -33,4 +33,5 @@ defineSecret({
   displayName: 'Google Docs OAuth App',
   description: 'OAuth2 app credentials for Google Docs',
   secretId: 'GOOGLE_DOCS_OAUTH_APP',
+  optional: true,
 })

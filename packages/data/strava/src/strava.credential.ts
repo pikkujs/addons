@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Strava',
   secretId: 'STRAVA_OAUTH_APP',
   schema: stravaOAuthAppSchema,
+  optional: true,
 })

@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Cloud Firestore',
   secretId: 'GOOGLE_FIREBASE_CLOUD_FIRESTORE_OAUTH_APP',
   schema: googleFirebaseCloudFirestoreOAuthAppSchema,
+  optional: true,
 })

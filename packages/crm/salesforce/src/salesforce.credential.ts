@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Salesforce',
   secretId: 'SALESFORCE_OAUTH_APP',
   schema: salesforceOAuthAppSchema,
+  optional: true,
 })

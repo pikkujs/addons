@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Keap',
   secretId: 'KEAP_OAUTH_APP',
   schema: keapOAuthAppSchema,
+  optional: true,
 })

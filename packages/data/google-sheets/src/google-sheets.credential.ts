@@ -33,4 +33,5 @@ defineSecret({
   description: 'OAuth2 app credentials for Google Sheets',
   secretId: 'GOOGLE_SHEETS_OAUTH_APP',
   schema: googleSheetsOAuthAppSchema,
+  optional: true,
 })
