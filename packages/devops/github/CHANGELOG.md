@@ -1,5 +1,19 @@
 # @pikku/addon-github
 
+## 0.1.8
+
+### Patch Changes
+
+- 88f2edc: Make the OAuth app secret optional on the 33 addons that declare one.
+
+  Each of these addons declares `defineCredential({ type: 'wire', oauth2: { appCredentialSecretId: '<X>_OAUTH_APP', ... } })` — a wire credential, so a host can hand the token straight to the wire with `setCredential` and never touch the OAuth grant. The app secret gates only that grant. Declaring it required means any deploy using the addon must set a client id and client secret for an authorization flow it does not run: with `@pikku/addon-github` wired and the token supplied on the wire, `pikku fabric deploy apply` still stops on a missing `GITHUB_OAUTH_APP`.
+
+  `optional` says absence is a supported state and `getSecret` resolves `undefined` — it does not weaken the grant path, which still fails on a missing app credential at the point it needs one.
+
+  Two signs this was a scaffold default rather than a decision: `<X>_OAUTH_TOKENS`, the other half of the same `oauth2` block, is already not declared as a required secret; and 21 of the 33 still carry the placeholder `https://example.com/oauth2/authorize` and `.../token` URLs, so the flow the secret gates cannot run at all yet.
+
+  Unchanged: addons whose secret is the only way to authenticate. This touches only the OAuth app secret named by an `appCredentialSecretId`.
+
 ## 0.1.7
 
 ### Patch Changes

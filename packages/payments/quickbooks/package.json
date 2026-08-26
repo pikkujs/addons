@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-quickbooks",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "type": "module",
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",
