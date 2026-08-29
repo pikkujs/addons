@@ -21,9 +21,11 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'KEAP_OAUTH_APP',
     tokenSecretId: 'KEAP_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://accounts.infusionsoft.com/app/oauth/authorize',
+    tokenUrl: 'https://api.infusionsoft.com/token',
+    scopes: [
+      'full',
+    ],
   },
 })
 

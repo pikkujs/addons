@@ -21,9 +21,19 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'REDDIT_OAUTH_APP',
     tokenSecretId: 'REDDIT_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://www.reddit.com/api/v1/authorize',
+    tokenUrl: 'https://www.reddit.com/api/v1/access_token',
+    scopes: [
+      'identity',
+      'read',
+      'submit',
+      'edit',
+      'mysubreddits',
+      'history',
+    ],
+    additionalParams: {
+      duration: 'permanent',
+    },
   },
 })
 

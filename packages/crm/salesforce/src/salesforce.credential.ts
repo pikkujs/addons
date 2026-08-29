@@ -21,9 +21,12 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'SALESFORCE_OAUTH_APP',
     tokenSecretId: 'SALESFORCE_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://login.salesforce.com/services/oauth2/authorize',
+    tokenUrl: 'https://login.salesforce.com/services/oauth2/token',
+    scopes: [
+      'api',
+      'refresh_token',
+    ],
   },
 })
 

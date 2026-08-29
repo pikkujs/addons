@@ -16,9 +16,16 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'GOOGLE_DOCS_OAUTH_APP',
     tokenSecretId: 'GOOGLE_DOCS_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://accounts.google.com/o/oauth2/v2/auth',
+    tokenUrl: 'https://oauth2.googleapis.com/token',
+    scopes: [
+      'https://www.googleapis.com/auth/documents',
+      'https://www.googleapis.com/auth/drive.file',
+    ],
+    additionalParams: {
+      access_type: 'offline',
+      prompt: 'consent',
+    },
   },
 })
 

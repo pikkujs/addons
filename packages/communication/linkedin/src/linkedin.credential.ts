@@ -21,9 +21,14 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'LINKEDIN_OAUTH_APP',
     tokenSecretId: 'LINKEDIN_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://www.linkedin.com/oauth/v2/authorization',
+    tokenUrl: 'https://www.linkedin.com/oauth/v2/accessToken',
+    scopes: [
+      'openid',
+      'profile',
+      'email',
+      'w_member_social',
+    ],
   },
 })
 

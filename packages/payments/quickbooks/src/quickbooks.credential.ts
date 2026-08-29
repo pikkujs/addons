@@ -21,9 +21,11 @@ defineCredential({
   oauth2: {
     appCredentialSecretId: 'QUICKBOOKS_OAUTH_APP',
     tokenSecretId: 'QUICKBOOKS_OAUTH_TOKENS',
-    authorizationUrl: 'https://example.com/oauth2/authorize',
-    tokenUrl: 'https://example.com/oauth2/token',
-    scopes: ['read', 'write'],
+    authorizationUrl: 'https://appcenter.intuit.com/connect/oauth2',
+    tokenUrl: 'https://oauth.platform.intuit.com/oauth2/v1/tokens/bearer',
+    scopes: [
+      'com.intuit.quickbooks.accounting',
+    ],
   },
 })
 
