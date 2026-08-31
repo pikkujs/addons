@@ -1,0 +1,20 @@
+{
+  "name": "@pikku/test-payment-stripe",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --import tsx --test src/*.test.ts",
+    "coverage": "node --import tsx --test --experimental-test-coverage src/*.test.ts"
+  },
+  "dependencies": {
+    "@pikku/addon-payment-stripe": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^9.6.0",
+    "@types/node": "^24",
+    "better-sqlite3": "^13.0.3",
+    "kysely": "^0.29.5",
+    "tsx": "^4",
+    "typescript": "^5.9"
+  }
+}

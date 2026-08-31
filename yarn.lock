@@ -4531,6 +4531,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-payment-stripe@workspace:*, @pikku/addon-payment-stripe@workspace:packages/payments/payment-stripe":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-payment-stripe@workspace:packages/payments/payment-stripe"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    kysely: "npm:^0.29.5"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    kysely: ^0.29.0
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-peekalink@workspace:*, @pikku/addon-peekalink@workspace:packages/data/peekalink":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-peekalink@workspace:packages/data/peekalink"
@@ -7585,6 +7601,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/test-payment-stripe@workspace:packages/payments/payment-stripe/test":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-payment-stripe@workspace:packages/payments/payment-stripe/test"
+  dependencies:
+    "@pikku/addon-payment-stripe": "workspace:*"
+    "@types/better-sqlite3": "npm:^9.6.0"
+    "@types/node": "npm:^24"
+    better-sqlite3: "npm:^13.0.3"
+    kysely: "npm:^0.29.5"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+  languageName: unknown
+  linkType: soft
+
 "@pikku/test-peekalink@workspace:packages/data/peekalink/test":
   version: 0.0.0-use.local
   resolution: "@pikku/test-peekalink@workspace:packages/data/peekalink/test"
@@ -9448,6 +9478,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/better-sqlite3@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "@types/better-sqlite3@npm:9.6.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/3dcbf6126b6b6c5ccc73d03d88590f67a2bf0cb40dcfee392ae6f08554b57e8112c739edefef4349f13a2a9d23d31374ba9c18e0572dcb0332a9ccd87ebc71c6
+  languageName: node
+  linkType: hard
+
 "@types/cookie@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/cookie@npm:1.0.0"
@@ -10181,6 +10220,16 @@ __metadata:
   dependencies:
     is-windows: "npm:^1.0.0"
   checksum: 10/5392dbe04e7fe68b944eb37961d9dfa147aaac3ee9ee3f6e13d42e2c9fbe949e68d16e896c14ee9016fa5f8e6e53ec7fd8b5f01b50a32067a7d94ac9cfb9a050
+  languageName: node
+  linkType: hard
+
+"better-sqlite3@npm:^13.0.3":
+  version: 13.0.3
+  resolution: "better-sqlite3@npm:13.0.3"
+  dependencies:
+    node-addon-api: "npm:^8.0.0"
+    node-gyp: "npm:latest"
+  checksum: 10/035f8fa70784762fd73e1dbeb6f157186abb97705ff759b312cfb0dc1c675fd1c6b5378d2c036758000ce9da1d49bf61689531aa2718a7e32dc272c114a4c71f
   languageName: node
   linkType: hard
 
@@ -12858,6 +12907,15 @@ __metadata:
   version: 2.6.2
   resolution: "neo-async@npm:2.6.2"
   checksum: 10/1a7948fea86f2b33ec766bc899c88796a51ba76a4afc9026764aedc6e7cde692a09067031e4a1bf6db4f978ccd99e7f5b6c03fe47ad9865c3d4f99050d67e002
+  languageName: node
+  linkType: hard
+
+"node-addon-api@npm:^8.0.0":
+  version: 8.9.2
+  resolution: "node-addon-api@npm:8.9.2"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 10/5354f9b53631d99a952408112d795f36782fd41c0ac073bd91814805fe931b619c743689d0cedcc310c0ae8392fc9b104b2852d28cce294236407ca57d01743e
   languageName: node
   linkType: hard
 
