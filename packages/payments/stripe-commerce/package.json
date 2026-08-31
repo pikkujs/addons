@@ -1,5 +1,5 @@
 {
-  "name": "@pikku/addon-payment-stripe",
+  "name": "@pikku/addon-stripe-commerce",
   "version": "0.1.0",
   "type": "module",
   "description": "A ready-made Stripe payment system: ships its own tables, checkout, and webhook handling. Talks to the Stripe HTTP API directly, with no SDK dependency.",

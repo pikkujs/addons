@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { listSubscriptions } from '@pikku/addon-payment-stripe'
+import { listSubscriptions } from '@pikku/addon-stripe-commerce'
 import { createServices, createTestDb } from './harness.js'
 
 const seedSubscription = async (

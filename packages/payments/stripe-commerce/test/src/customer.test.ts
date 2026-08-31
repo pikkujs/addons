@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { ensureCustomer, StripeApi } from '@pikku/addon-payment-stripe'
+import { ensureCustomer, StripeApi } from '@pikku/addon-stripe-commerce'
 import { createTestDb } from './harness.js'
 
 const realFetch = globalThis.fetch

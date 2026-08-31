@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { loadCart, openCart } from '@pikku/addon-payment-stripe'
+import { loadCart, openCart } from '@pikku/addon-stripe-commerce'
 import { createTestDb, seedProduct } from './harness.js'
 
 const NOW = '2026-08-31T13:00:00.000Z'

@@ -4531,22 +4531,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-payment-stripe@workspace:*, @pikku/addon-payment-stripe@workspace:packages/payments/payment-stripe":
-  version: 0.0.0-use.local
-  resolution: "@pikku/addon-payment-stripe@workspace:packages/payments/payment-stripe"
-  dependencies:
-    "@pikku/cli": "npm:^0.12.111"
-    "@pikku/core": "npm:^0.12.89"
-    kysely: "npm:^0.29.5"
-    typescript: "npm:^5.7.2"
-    zod: "npm:^4"
-  peerDependencies:
-    "@pikku/core": ^0.12.89
-    kysely: ^0.29.0
-    zod: ^4
-  languageName: unknown
-  linkType: soft
-
 "@pikku/addon-peekalink@workspace:*, @pikku/addon-peekalink@workspace:packages/data/peekalink":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-peekalink@workspace:packages/data/peekalink"
@@ -5145,6 +5129,22 @@ __metadata:
     zod: "npm:^4"
   peerDependencies:
     "@pikku/core": ^0.12.89
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-stripe-commerce@workspace:*, @pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    kysely: "npm:^0.29.5"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    kysely: ^0.29.0
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -7601,20 +7601,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/test-payment-stripe@workspace:packages/payments/payment-stripe/test":
-  version: 0.0.0-use.local
-  resolution: "@pikku/test-payment-stripe@workspace:packages/payments/payment-stripe/test"
-  dependencies:
-    "@pikku/addon-payment-stripe": "workspace:*"
-    "@types/better-sqlite3": "npm:^9.6.0"
-    "@types/node": "npm:^24"
-    better-sqlite3: "npm:^13.0.3"
-    kysely: "npm:^0.29.5"
-    tsx: "npm:^4"
-    typescript: "npm:^5.9"
-  languageName: unknown
-  linkType: soft
-
 "@pikku/test-peekalink@workspace:packages/data/peekalink/test":
   version: 0.0.0-use.local
   resolution: "@pikku/test-peekalink@workspace:packages/data/peekalink/test"
@@ -8155,6 +8141,20 @@ __metadata:
     tsx: "npm:^4"
     typescript: "npm:^5.9"
     zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test"
+  dependencies:
+    "@pikku/addon-stripe-commerce": "workspace:*"
+    "@types/better-sqlite3": "npm:^9.6.0"
+    "@types/node": "npm:^24"
+    better-sqlite3: "npm:^13.0.3"
+    kysely: "npm:^0.29.5"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
   languageName: unknown
   linkType: soft
 

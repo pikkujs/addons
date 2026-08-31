@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { createCartCheckout, createCheckout, setCartItem } from '@pikku/addon-payment-stripe'
+import { createCartCheckout, createCheckout, setCartItem } from '@pikku/addon-stripe-commerce'
 import { createServices, createTestDb, seedProduct } from './harness.js'
 
 const session = (over: Record<string, unknown> = {}) => ({

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { listShippingRates, saveShippingRate } from '@pikku/addon-payment-stripe'
+import { listShippingRates, saveShippingRate } from '@pikku/addon-stripe-commerce'
 import { createServices, createTestDb } from './harness.js'
 
 const standard = { name: 'Standard', amountMinor: 499, currency: 'eur' }

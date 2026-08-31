@@ -1,8 +1,8 @@
 ---
-'@pikku/addon-payment-stripe': patch
+'@pikku/addon-stripe-commerce': patch
 ---
 
-Add `@pikku/addon-payment-stripe`, a self-contained storefront addon: catalogue,
+Add `@pikku/addon-stripe-commerce`, a self-contained storefront addon: catalogue,
 cart, checkout, orders, fulfilment, refunds and subscriptions, with the tables
 it needs shipped as addon schema for `pikku db generate`.
 

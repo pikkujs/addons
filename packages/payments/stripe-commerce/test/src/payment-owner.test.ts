@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { SessionPaymentOwner } from '@pikku/addon-payment-stripe'
+import { SessionPaymentOwner } from '@pikku/addon-stripe-commerce'
 
 test('the default owner is the session user', async () => {
   const owner = new SessionPaymentOwner()

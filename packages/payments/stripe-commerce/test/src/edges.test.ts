@@ -12,7 +12,7 @@ import {
   loadCart,
   saveProduct,
   setCartItem,
-} from '@pikku/addon-payment-stripe'
+} from '@pikku/addon-stripe-commerce'
 import { createLogger, createServices, createTestDb, seedCartOrder, seedProduct } from './harness.js'
 
 test('a request whose raw body cannot be read is refused, not verified against nothing', async () => {

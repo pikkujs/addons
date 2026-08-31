@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { StripeSignature } from '@pikku/addon-payment-stripe'
+import { StripeSignature } from '@pikku/addon-stripe-commerce'
 
 const SECRET = 'whsec_test_secret'
 const BODY = JSON.stringify({ id: 'evt_123', type: 'checkout.session.completed' })

@@ -1,6 +1,6 @@
 import { test } from 'node:test'
 import assert from 'node:assert/strict'
-import { formEncode } from '@pikku/addon-payment-stripe'
+import { formEncode } from '@pikku/addon-stripe-commerce'
 
 const decode = (encoded: string): string => decodeURIComponent(encoded).replace(/\+/g, ' ')
 

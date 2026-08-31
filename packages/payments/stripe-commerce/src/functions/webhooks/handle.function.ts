@@ -62,7 +62,7 @@ const localCustomerId = async (
  *
  * Wire it in the consuming app:
  *   wireHTTP({ method: 'post', route: '/webhooks/stripe',
- *     func: addon('payment-stripe:handleStripeWebhook'), auth: false })
+ *     func: addon('shop:handleStripeWebhook'), auth: false })
  */
 export const handleStripeWebhook = pikkuSessionlessFunc({
   auth: false,

@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { createPrice, ensureVariantPrice, pushProduct, syncVariantPrice } from '@pikku/addon-payment-stripe'
+import { createPrice, ensureVariantPrice, pushProduct, syncVariantPrice } from '@pikku/addon-stripe-commerce'
 import { createServices, createTestDb, seedProduct } from './harness.js'
 
 test('pushProduct creates when unmirrored and updates when mirrored', async () => {

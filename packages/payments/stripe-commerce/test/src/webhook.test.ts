@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { StripeSignature, handleStripeWebhook } from '@pikku/addon-payment-stripe'
+import { StripeSignature, handleStripeWebhook } from '@pikku/addon-stripe-commerce'
 import { createLogger, createTestDb, seedCartOrder, seedProduct } from './harness.js'
 
 const SECRET = 'whsec_test'
