@@ -11,8 +11,31 @@ export const HandleStripeWebhookOutput = z.object({
   received: z.boolean().describe('Always true once the signature verifies'),
   eventId: z.string().describe('The verified Stripe event id (evt_...)'),
   type: z.string().describe('The Stripe event type'),
-  processed: z.boolean().describe('False when this event id was already applied'),
+  processed: z
+    .boolean()
+    .describe('False when this event id was already applied, or when the type is not one this addon handles'),
 })
+
+/**
+ * What this receiver acts on. Everything else — `customer.subscription.*` above
+ * all, which Stripe delivers to every endpoint on the account and which belongs
+ * to whatever owns plans and licensing — is acknowledged and ignored: an
+ * endpoint that answers anything but a 2xx gets retried and eventually disabled
+ * by Stripe, which would take the order events down with it.
+ *
+ * Narrow the endpoint's own event selection in Stripe to this list and none of
+ * the rest is delivered here in the first place.
+ */
+const HANDLED = new Set([
+  'checkout.session.completed',
+  'checkout.session.async_payment_succeeded',
+  'checkout.session.async_payment_failed',
+  'checkout.session.expired',
+  'payment_intent.payment_failed',
+  'charge.refunded',
+  'charge.dispute.created',
+  'charge.dispute.closed',
+])
 
 type StripeEvent = {
   id: string
@@ -22,55 +45,7 @@ type StripeEvent = {
 
 const asString = (value: unknown): string | null => (typeof value === 'string' ? value : null)
 
-const asEpochString = (value: unknown): string | null =>
-  typeof value === 'number' ? new Date(value * 1000).toISOString() : null
-
 const asNumber = (value: unknown): number | null => (typeof value === 'number' ? value : null)
-
-type SubscriptionItems =
-  | { data?: Array<{ price?: { id?: string }; current_period_end?: unknown }> }
-  | undefined
-
-/**
- * Maps a Stripe price onto the catalogue variant that owns it, which is what
- * marks a subscription as a storefront sale rather than one of the plan
- * subscriptions better-auth created — this receiver sees both.
- */
-const localVariantId = async (
-  kysely: Kysely<PaymentDatabase>,
-  stripePriceId: string | null
-): Promise<string | null> => {
-  if (!stripePriceId) {
-    return null
-  }
-  const row = await kysely
-    .selectFrom('paymentVariant')
-    .select(['id'])
-    .where('stripePriceId', '=', stripePriceId)
-    .executeTakeFirst()
-  return row?.id ?? null
-}
-
-/**
- * Maps a Stripe customer id onto this addon's row, so a subscription created
- * anywhere — the storefront, a billing portal, the dashboard — hangs off the
- * same buyer. Null when the customer was never seen here, which is what a
- * subscription owned by another part of the app looks like.
- */
-const localCustomerId = async (
-  kysely: Kysely<PaymentDatabase>,
-  stripeCustomerId: string | null
-): Promise<string | null> => {
-  if (!stripeCustomerId) {
-    return null
-  }
-  const row = await kysely
-    .selectFrom('paymentCustomer')
-    .select(['id'])
-    .where('stripeCustomerId', '=', stripeCustomerId)
-    .executeTakeFirst()
-  return row?.id ?? null
-}
 
 /**
  * `POST` receiver for Stripe webhooks.
@@ -116,6 +91,13 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
 
     const event = JSON.parse(body) as StripeEvent
     const now = new Date().toISOString()
+
+    if (!HANDLED.has(event.type)) {
+      // Not recorded either: the event row exists to make a retry a no-op, and
+      // there is nothing to repeat for an event this addon never applied.
+      logger.debug(`stripe webhook: no handler for ${event.type}`)
+      return { received: true, eventId: event.id, type: event.type, processed: false }
+    }
 
     const recorded = await kysely
       .insertInto('paymentWebhookEvent')
@@ -195,52 +177,6 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
             .execute()
           break
         }
-        case 'customer.subscription.created':
-        case 'customer.subscription.updated':
-        case 'customer.subscription.deleted': {
-          const subscriptionId = asString(object.id)
-          if (subscriptionId) {
-            const items = object.items as SubscriptionItems
-            const firstItem = items?.data?.[0]
-            // Stripe moved the period boundary off the subscription and onto each
-            // item in API version 2025-03-31. The addon does not pin a version, so
-            // it reads whichever the account sends.
-            const currentPeriodEnd =
-              asEpochString(object.current_period_end) ??
-              asEpochString(firstItem?.current_period_end)
-            const customerId = await localCustomerId(kysely, asString(object.customer))
-            const stripePriceId = firstItem?.price?.id ?? null
-            const variantId = await localVariantId(kysely, stripePriceId)
-            await kysely
-              .insertInto('paymentSubscription')
-              .values({
-                id: crypto.randomUUID(),
-                customerId,
-                stripeSubscriptionId: subscriptionId,
-                stripePriceId,
-                variantId,
-                status: asString(object.status) ?? 'unknown',
-                currentPeriodEnd,
-                cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
-                createdAt: now,
-                updatedAt: now,
-              })
-              .onConflict((oc) =>
-                oc.column('stripeSubscriptionId').doUpdateSet({
-                  ...(customerId ? { customerId } : {}),
-                  ...(variantId ? { variantId } : {}),
-                  status: asString(object.status) ?? 'unknown',
-                  currentPeriodEnd,
-                  cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
-                  updatedAt: now,
-                })
-              )
-              .execute()
-          }
-          break
-        }
-        default:
-          logger.debug(`stripe webhook: no handler for ${event.type}`)
       }
     } catch (error) {
       await kysely.deleteFrom('paymentWebhookEvent').where('id', '=', event.id).execute()

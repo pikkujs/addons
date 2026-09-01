@@ -40,22 +40,6 @@ test('saving a new product writes the row and mirrors it onto Stripe', async () 
   assert.equal(variant.position, 0)
 })
 
-test('a recurring variant is pushed as a recurring price', async () => {
-  const kysely = createTestDb()
-  const { services, posts } = createServices(kysely, { replies: catalogueReplies })
-
-  await saveProduct.func(
-    services,
-    {
-      ...kettle,
-      variants: [{ name: 'Annual', amountMinor: 9900, currency: 'eur', recurringInterval: 'year' }],
-    },
-    {} as any
-  )
-
-  assert.deepEqual(posts[1]!.body.recurring, { interval: 'year' })
-})
-
 test('a product defaults to shipping-required and active, and stores metadata as JSON', async () => {
   const kysely = createTestDb()
   const { services } = createServices(kysely, { replies: catalogueReplies })

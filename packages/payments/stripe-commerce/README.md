@@ -1,7 +1,12 @@
 # @pikku/addon-stripe-commerce
 
-A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment,
-refunds and subscriptions, with the tables it needs shipped as addon schema.
+A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment
+and refunds, with the tables it needs shipped as addon schema.
+
+Commerce only — one-off purchases. Subscriptions, plans, seats and licensing
+belong to whatever owns access in your app; better-auth's Stripe plugin already
+does that job properly, and this addon does not compete with it. What the two
+share is the Stripe Customer, which is the whole integration.
 
 Talks to the Stripe v1 HTTP API directly — no `stripe` SDK, no runtime
 dependency. Webhook signatures are verified with WebCrypto and a constant-time
@@ -14,7 +19,6 @@ compare; request bodies are form-encoded in-package.
 - `saveShippingRate`, `listShippingRates`
 - `createCheckout`, `createCartCheckout` — hosted Checkout sessions and the pending order the webhook settles
 - `listOrders`, `getOrder`, `captureOrder`, `fulfillOrder`, `refundOrder`
-- `listSubscriptions`
 - `handleStripeWebhook`
 
 ## Wiring
@@ -76,18 +80,28 @@ The reads are scoped the same way: with a session, `getOrder`, `listOrders` and
 `listSubscriptions` return only what the resolved owner owns, and the explicit
 `ownerId` filter is there for a back office wired without one.
 
-## Subscriptions
+## Webhooks
 
-Stripe delivers `customer.subscription.*` to every registered endpoint, so with
-both webhooks wired `payment_subscription` sees the whole account — storefront
-sales and the plan subscriptions an auth layer created through its own checkout.
-It is a ledger, not a rival record: better-auth's table stays the thing that
-says who has access.
+Stripe delivers to every registered endpoint on the account independently, so
+this receiver and better-auth's each get their own copy of everything they are
+subscribed to, in any order, with no coordination between them.
 
-`variant_id` is what separates them. It is set when the subscription's Stripe
-price belongs to a variant in this catalogue — a recurring product, a
-subscription box — and null when the subscription came from somewhere else.
-`listSubscriptions` takes a `storefront` filter over exactly that.
+It acts on eight event types:
+
+```
+checkout.session.completed        payment_intent.payment_failed
+checkout.session.async_payment_succeeded    charge.refunded
+checkout.session.async_payment_failed       charge.dispute.created
+checkout.session.expired                    charge.dispute.closed
+```
+
+Narrow the endpoint's event selection in Stripe to that list and nothing else
+arrives. Anything that does arrive anyway — `customer.subscription.*` above all
+— is logged, answered 200 and dropped without a `payment_webhook_event` row:
+that row exists to make a retry a no-op, and there is nothing to repeat for an
+event this addon never applied. The 200 matters, because an endpoint that
+answers anything else gets retried and eventually disabled by Stripe, which
+would take the order events down with it.
 
 ## Refunds
 

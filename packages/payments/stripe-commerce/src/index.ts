@@ -17,7 +17,6 @@ export { captureOrder } from './functions/orders/capture.function.js'
 export { fulfillOrder } from './functions/orders/fulfill.function.js'
 export { refundOrder } from './functions/orders/refund.function.js'
 
-export { listSubscriptions } from './functions/subscriptions/list.function.js'
 export { handleStripeWebhook } from './functions/webhooks/handle.function.js'
 
 export { settleCheckoutSession, applyPaidTransition } from './lib/settle-order.js'

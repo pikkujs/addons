@@ -3,8 +3,13 @@
 ---
 
 Add `@pikku/addon-stripe-commerce`, a self-contained storefront addon: catalogue,
-cart, checkout, orders, fulfilment, refunds and subscriptions, with the tables
-it needs shipped as addon schema for `pikku db generate`.
+cart, checkout, orders, fulfilment and refunds, with the tables it needs shipped
+as addon schema for `pikku db generate`.
+
+Commerce only, one-off purchases. Subscriptions, plans, seats and licensing are
+deliberately out of scope: better-auth's Stripe plugin already owns access, and
+a second half-implementation of the same thing is worse than none. What the two
+share is the Stripe Customer.
 
 It talks to Stripe over the raw v1 HTTP API rather than the `stripe` SDK, so it
 adds no runtime dependency — webhook signatures are verified with WebCrypto and
@@ -41,21 +46,22 @@ minted, and the default resolver reads exactly that off better-auth's own `user`
 a `stripeCustomerId` there and on every `subscription` row — has one Stripe
 customer across both halves instead of two, with nothing to wire and nothing
 imported from better-auth. An app without the plugin probes once and falls back
-to the plain session resolver. Subscriptions stay in the addon and are hung off the local customer their Stripe
-customer id resolves to. Stripe delivers `customer.subscription.*` to every
-registered endpoint, so `payment_subscription` is a ledger of the whole account
-rather than a rival record: `variant_id` is set when the subscription's price
-belongs to this catalogue — a recurring product — and null when it came from
-elsewhere, which is a plan subscription only an auth layer's own table can say
-anything useful about. `listSubscriptions` filters on it.
+to the plain session resolver.
 
-Subscription period ends read `items.data[0].current_period_end` when the
-account is on API version 2025-03-31 or later, where Stripe moved the boundary
-off the subscription and onto each item.
+The webhook receiver acts on eight event types: the four `checkout.session.*`,
+`payment_intent.payment_failed`, `charge.refunded` and the two
+`charge.dispute.*`. Stripe fans every event out to every registered endpoint
+independently, so this receiver and an auth layer's own each get their own copy
+with no coordination between them. Anything outside the eight —
+`customer.subscription.*` above all — is logged, answered 200 and dropped
+without an event row, because that row exists to make a retry a no-op and there
+is nothing to repeat for an event the addon never applied. The 200 is not
+optional: an endpoint that answers anything else is retried and eventually
+disabled by Stripe, which would take the order events with it.
 
-Reads are scoped to the buyer: with a session, `getOrder`, `listOrders` and
-`listSubscriptions` return only what the resolved owner owns, and the explicit
-`ownerId` filter is for a back office wired without one. A guest customer is
+Reads are scoped to the buyer: with a session, `getOrder` and `listOrders`
+return only what the resolved owner owns, and the explicit `ownerId` filter is
+for a back office wired without one. A guest customer is
 only claimed on an email the owner record carries, never one the caller typed.
 
 Refunds are recorded in `payment_refund` keyed by Stripe's own refund id, and

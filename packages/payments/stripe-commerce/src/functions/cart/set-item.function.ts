@@ -88,7 +88,6 @@ export const setCartItem = pikkuSessionlessFunc({
       subtotalMinor: cart.subtotalMinor,
       currency: cart.currency,
       requiresShipping: cart.requiresShipping,
-      hasSubscription: cart.hasSubscription,
     }
   },
 })

@@ -97,7 +97,6 @@ export const seedProduct = async (
     requiresShipping?: boolean
     stock?: number | null
     amountMinor?: number
-    recurringInterval?: 'month' | null
   } = {}
 ) => {
   const productId = crypto.randomUUID()
@@ -127,7 +126,6 @@ export const seedProduct = async (
       sku: `sku-${variantId.slice(0, 8)}`,
       amountMinor: options.amountMinor ?? 2500,
       currency: 'eur',
-      recurringInterval: options.recurringInterval ?? null,
       stock: options.stock === undefined ? 10 : options.stock,
       position: 0,
       active: 1,

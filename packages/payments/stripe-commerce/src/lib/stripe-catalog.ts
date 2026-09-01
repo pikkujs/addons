@@ -58,14 +58,12 @@ export const createPrice = async (
     stripeProductId: string
     amountMinor: number
     currency: string
-    recurringInterval: 'day' | 'week' | 'month' | 'year' | null
   }
 ): Promise<string> => {
   const price = await stripeApi.post<StripeId>('/prices', {
     product: variant.stripeProductId,
     unit_amount: variant.amountMinor,
     currency: variant.currency,
-    ...(variant.recurringInterval ? { recurring: { interval: variant.recurringInterval } } : {}),
   })
   return price.id
 }
@@ -75,10 +73,10 @@ export const archivePrice = async (stripeApi: StripeApi, priceId: string): Promi
 }
 
 /**
- * Brings a variant's mirrored Price in line with its local amount, currency and
- * interval. A Price cannot be edited, so a change to any of those three creates
- * a replacement and archives the previous one. Unchanged variants are left
- * alone rather than churning a new Price on every save.
+ * Brings a variant's mirrored Price in line with its local amount and currency.
+ * A Price cannot be edited, so a change to either creates a replacement and
+ * archives the previous one. Unchanged variants are left alone rather than
+ * churning a new Price on every save.
  */
 export const syncVariantPrice = async (
   stripeApi: StripeApi,
@@ -99,7 +97,6 @@ export const syncVariantPrice = async (
     stripeProductId,
     amountMinor: variant.amountMinor,
     currency: variant.currency,
-    recurringInterval: variant.recurringInterval,
   })
 
   await kysely

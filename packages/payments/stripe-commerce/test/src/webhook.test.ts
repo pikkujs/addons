@@ -340,70 +340,31 @@ test('a won dispute is recorded as won', async () => {
   assert.equal(order.disputeStatus, 'won')
 })
 
-test('a subscription is upserted, so created then updated leaves one row', async () => {
-  const kysely = createTestDb()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_1',
-      status: 'active',
-      current_period_end: 1790000000,
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_1' } }] },
-    })
-  )
-  await deliver(
-    kysely,
-    event('customer.subscription.updated', {
-      id: 'sub_1',
-      status: 'past_due',
-      cancel_at_period_end: true,
-    })
-  )
-
-  const rows = await kysely.selectFrom('paymentSubscription').selectAll().execute()
-  assert.equal(rows.length, 1)
-  assert.equal(rows[0]!.status, 'past_due')
-  assert.equal(rows[0]!.cancelAtPeriodEnd, 1)
-  assert.equal(rows[0]!.stripePriceId, 'price_1')
-  assert.equal(rows[0]!.currentPeriodEnd, null)
-})
-
-test('a deleted subscription keeps the row and records the status', async () => {
-  const kysely = createTestDb()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.deleted', { id: 'sub_1', status: 'canceled' })
-  )
-
-  const rows = await kysely.selectFrom('paymentSubscription').selectAll().execute()
-  assert.equal(rows.length, 1)
-  assert.equal(rows[0]!.status, 'canceled')
-})
-
-test('a subscription event with no id is ignored rather than inserting a blank row', async () => {
-  const kysely = createTestDb()
-  const { result } = await deliver(kysely, event('customer.subscription.created', { status: 'active' }))
-  assert.equal(result?.processed, true)
-  const rows = await kysely.selectFrom('paymentSubscription').selectAll().execute()
-  assert.equal(rows.length, 0)
-})
-
-test('an unhandled event type is acknowledged and recorded, not dropped', async () => {
+test('an event this addon does not handle is acknowledged, and not recorded', async () => {
   const kysely = createTestDb()
   const { result, logger } = await deliver(kysely, event('invoice.paid', { id: 'in_1' }))
 
-  assert.equal(result?.processed, true)
+  assert.equal(result?.received, true)
+  assert.equal(result?.processed, false)
   assert.equal(result?.type, 'invoice.paid')
   assert.match(logger.debugged[0]!, /no handler for invoice.paid/)
   const recorded = await kysely
     .selectFrom('paymentWebhookEvent')
     .select(['status'])
     .where('id', '=', result!.eventId)
-    .executeTakeFirstOrThrow()
-  assert.equal(recorded.status, 'processed')
+    .executeTakeFirst()
+  assert.equal(recorded, undefined)
+})
+
+test('a subscription event is left to whatever owns plans, not mirrored here', async () => {
+  const kysely = createTestDb()
+  const { result } = await deliver(
+    kysely,
+    event('customer.subscription.created', { id: 'sub_1', status: 'active', customer: 'cus_1' })
+  )
+
+  assert.equal(result?.received, true)
+  assert.equal(result?.processed, false)
 })
 
 test('a session for an order we do not have is warned, not thrown', async () => {
@@ -415,128 +376,6 @@ test('a session for an order we do not have is warned, not thrown', async () => 
 
   assert.equal(result?.processed, true)
   assert.match(logger.warned[0]!, /no order for checkout session cs_unknown/)
-})
-
-test('a subscription whose period moved onto its items is still dated', async () => {
-  const kysely = createTestDb()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_items',
-      status: 'active',
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_1' }, current_period_end: 1790000000 }] },
-    })
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .selectAll()
-    .executeTakeFirstOrThrow()
-  assert.equal(row.currentPeriodEnd, new Date(1790000000 * 1000).toISOString())
-})
-
-test('a subscription is hung off the local customer it belongs to', async () => {
-  const kysely = createTestDb()
-  const customerId = crypto.randomUUID()
-  await kysely
-    .insertInto('paymentCustomer')
-    .values({
-      id: customerId,
-      ownerType: 'user',
-      ownerId: 'user_1',
-      stripeCustomerId: 'cus_1',
-      email: null,
-      createdAt: new Date().toISOString(),
-    })
-    .execute()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_owned',
-      status: 'active',
-      customer: 'cus_1',
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_1' } }] },
-    })
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .selectAll()
-    .executeTakeFirstOrThrow()
-  assert.equal(row.customerId, customerId)
-})
-
-test('a subscription for a customer this addon never saw is recorded unowned', async () => {
-  const kysely = createTestDb()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_foreign',
-      status: 'active',
-      customer: 'cus_elsewhere',
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_1' } }] },
-    })
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .selectAll()
-    .executeTakeFirstOrThrow()
-  assert.equal(row.customerId, null)
-})
-
-test('a subscription selling one of our variants is marked as a storefront sale', async () => {
-  const kysely = createTestDb()
-  const { variantId } = await seedProduct(kysely, { recurringInterval: 'month' })
-  await kysely
-    .updateTable('paymentVariant')
-    .set({ stripePriceId: 'price_ours' })
-    .where('id', '=', variantId)
-    .execute()
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_shop',
-      status: 'active',
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_ours' } }] },
-    })
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .selectAll()
-    .executeTakeFirstOrThrow()
-  assert.equal(row.variantId, variantId)
-})
-
-test("a plan subscription created elsewhere is recorded, and not ours", async () => {
-  const kysely = createTestDb()
-  await seedProduct(kysely, { recurringInterval: 'month' })
-
-  await deliver(
-    kysely,
-    event('customer.subscription.created', {
-      id: 'sub_plan',
-      status: 'active',
-      cancel_at_period_end: false,
-      items: { data: [{ price: { id: 'price_better_auth' } }] },
-    })
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .selectAll()
-    .executeTakeFirstOrThrow()
-  assert.equal(row.stripePriceId, 'price_better_auth')
-  assert.equal(row.variantId, null)
 })
 
 test('an event that fails to apply releases its claim so the retry can work', async () => {

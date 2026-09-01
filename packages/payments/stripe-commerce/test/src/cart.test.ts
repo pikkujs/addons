@@ -39,15 +39,6 @@ test('a physical line makes the whole cart require shipping', async () => {
   assert.equal((await loadCart(kysely, cartId)).requiresShipping, true)
 })
 
-test('a recurring variant marks the cart as a subscription', async () => {
-  const kysely = createTestDb()
-  const { variantId } = await seedProduct(kysely, { recurringInterval: 'month' })
-  const cartId = await openCart(kysely, undefined, null)
-  await addItem(kysely, cartId, variantId, 1)
-
-  assert.equal((await loadCart(kysely, cartId)).hasSubscription, true)
-})
-
 test('a line asking for more than remains is reported unavailable', async () => {
   const kysely = createTestDb()
   const { variantId } = await seedProduct(kysely, { stock: 1 })

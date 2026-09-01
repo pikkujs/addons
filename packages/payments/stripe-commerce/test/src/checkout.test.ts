@@ -81,27 +81,6 @@ test('an inline price is sent as price_data rather than a pre-created Price', as
   ])
 })
 
-test('a subscription sends subscription_data and no capture method', async () => {
-  const kysely = createTestDb()
-  const { services, posts } = createServices(kysely, { replies: session() })
-
-  await createCheckout.func(
-    services,
-    {
-      mode: 'subscription',
-      priceData: { amountMinor: 900, currency: 'eur', productName: 'Plan', interval: 'month' },
-      successUrl: 'https://shop/ok',
-      cancelUrl: 'https://shop/no',
-    },
-    {} as any
-  )
-
-  const call = posts.find((p) => p.path === '/checkout/sessions')!
-  assert.equal(call.body.payment_intent_data, undefined)
-  assert.ok(call.body.subscription_data)
-  assert.deepEqual((call.body.line_items as any)[0].price_data.recurring, { interval: 'month' })
-})
-
 test('manual capture is passed through on the payment intent', async () => {
   const kysely = createTestDb()
   const { services, posts } = createServices(kysely, { replies: session() })
@@ -163,39 +142,6 @@ test('refuses a checkout with neither a price nor price data', async () => {
         {} as any
       ),
     /Provide either priceId or priceData/
-  )
-})
-
-test('refuses an inline subscription price with no interval', async () => {
-  const kysely = createTestDb()
-  const { services } = createServices(kysely, { replies: session() })
-  await assert.rejects(
-    () =>
-      createCheckout.func(
-        services,
-        {
-          mode: 'subscription',
-          priceData: { amountMinor: 900, currency: 'eur', productName: 'Plan' },
-          successUrl: 'https://s',
-          cancelUrl: 'https://c',
-        },
-        {} as any
-      ),
-    /interval is required/
-  )
-})
-
-test('refuses to authorise a subscription for later capture', async () => {
-  const kysely = createTestDb()
-  const { services } = createServices(kysely, { replies: session() })
-  await assert.rejects(
-    () =>
-      createCheckout.func(
-        services,
-        { ...oneOff, mode: 'subscription', captureMethod: 'manual' },
-        {} as any
-      ),
-    /cannot be authorised and captured later/
   )
 })
 
@@ -369,19 +315,6 @@ test('a digital cart collects no address and needs no fulfilment', async () => {
   assert.equal(order.fulfillmentStatus, 'not_required')
 })
 
-test('a recurring cart checks out in subscription mode', async () => {
-  const kysely = createTestDb()
-  const { services, posts } = createServices(kysely, { replies: session() })
-  const { token } = await cartWith(kysely, services, { recurringInterval: 'month' })
-  posts.length = 0
-
-  await createCartCheckout.func(services, { ...cartCheckout, token }, {} as any)
-
-  const call = posts.find((p) => p.path === '/checkout/sessions')!
-  assert.equal(call.body.mode, 'subscription')
-  assert.ok(call.body.subscription_data)
-})
-
 test('automatic tax and promotion codes are opt-in and opt-out', async () => {
   const kysely = createTestDb()
   const { services, posts } = createServices(kysely, { replies: session() })
@@ -442,35 +375,6 @@ test('refuses a cart whose stock ran out after the item was added', async () => 
   await assert.rejects(
     () => createCartCheckout.func(services, { ...cartCheckout, token }, {} as any),
     /only has 1 left/
-  )
-})
-
-test('refuses a cart mixing a subscription with a one-off item', async () => {
-  const kysely = createTestDb()
-  const { services } = createServices(kysely, { replies: session() })
-  const { token } = await cartWith(kysely, services, { recurringInterval: 'month' })
-  const { variantId: oneOffVariant } = await seedProduct(kysely)
-  await setCartItem.func(services, { token, variantId: oneOffVariant, quantity: 1 }, {} as any)
-
-  await assert.rejects(
-    () => createCartCheckout.func(services, { ...cartCheckout, token }, {} as any),
-    /cannot mix subscription and one-off/
-  )
-})
-
-test('refuses to authorise a subscription cart for later capture', async () => {
-  const kysely = createTestDb()
-  const { services } = createServices(kysely, { replies: session() })
-  const { token } = await cartWith(kysely, services, { recurringInterval: 'month' })
-
-  await assert.rejects(
-    () =>
-      createCartCheckout.func(
-        services,
-        { ...cartCheckout, token, captureMethod: 'manual' },
-        {} as any
-      ),
-    /cannot be authorised and captured later/
   )
 })
 

@@ -5,9 +5,6 @@ import type { FormValue } from '../../lib/form-encode.js'
 import { ensureCustomer } from '../../lib/customer.js'
 
 export const CreateCheckoutInput = z.object({
-  mode: z
-    .enum(['payment', 'subscription'])
-    .describe('payment for a one-off purchase, subscription for a recurring plan'),
   priceId: z
     .string()
     .optional()
@@ -21,10 +18,6 @@ export const CreateCheckoutInput = z.object({
         .describe('Amount in the currency\'s minor unit (500 = $5.00, but 500 = ¥500 for JPY)'),
       currency: z.string().describe('Three-letter ISO currency code, lowercase'),
       productName: z.string().describe('Product name shown to the customer at checkout'),
-      interval: z
-        .enum(['day', 'week', 'month', 'year'])
-        .optional()
-        .describe('Billing frequency. Required in subscription mode'),
     })
     .optional()
     .describe('An inline price, so a caller can charge a dynamic amount without pre-creating a Price'),
@@ -36,7 +29,7 @@ export const CreateCheckoutInput = z.object({
     .enum(['automatic', 'manual'])
     .optional()
     .describe(
-      'manual authorises the card at checkout and charges it later via captureOrder. Payment mode only; a card authorisation expires after 7 days. Defaults to automatic'
+      'manual authorises the card at checkout and charges it later via captureOrder. A card authorisation expires after 7 days. Defaults to automatic'
     ),
   metadata: z
     .record(z.string(), z.string())
@@ -60,7 +53,7 @@ type StripeCheckoutSession = {
 
 export const createCheckout = pikkuSessionlessFunc({
   description:
-    'Create a Stripe Checkout session for a one-off payment or a subscription, recording a pending order the webhook later settles',
+    'Create a Stripe Checkout session for a one-off payment, recording a pending order the webhook later settles',
   node: { displayName: 'Create Checkout', category: 'Checkout', type: 'action' },
   input: CreateCheckoutInput,
   output: CreateCheckoutOutput,
@@ -69,14 +62,7 @@ export const createCheckout = pikkuSessionlessFunc({
     if (!data.priceId && !data.priceData) {
       throw new BadRequestError('Provide either priceId or priceData')
     }
-    if (data.mode === 'subscription' && data.priceData && !data.priceData.interval) {
-      throw new BadRequestError('priceData.interval is required in subscription mode')
-    }
-
     const captureMethod = data.captureMethod ?? 'automatic'
-    if (captureMethod === 'manual' && data.mode === 'subscription') {
-      throw new BadRequestError('A subscription cannot be authorised and captured later')
-    }
 
     const orderId = crypto.randomUUID()
     const now = new Date().toISOString()
@@ -88,7 +74,6 @@ export const createCheckout = pikkuSessionlessFunc({
             currency: data.priceData.currency,
             unit_amount: data.priceData.amountMinor,
             product_data: { name: data.priceData.productName },
-            ...(data.priceData.interval ? { recurring: { interval: data.priceData.interval } } : {}),
           },
         }
       : { price: data.priceId, quantity: data.quantity ?? 1 }
@@ -101,17 +86,14 @@ export const createCheckout = pikkuSessionlessFunc({
     const session = await stripeApi.post<StripeCheckoutSession>(
       '/checkout/sessions',
       {
-        mode: data.mode,
+        mode: 'payment',
         line_items: [lineItem],
         success_url: data.successUrl,
         cancel_url: data.cancelUrl,
         client_reference_id: orderId,
         ...(customer ? { customer: customer.stripeCustomerId } : {}),
         metadata,
-        ...(data.mode === 'payment'
-          ? { payment_intent_data: { metadata, capture_method: captureMethod } }
-          : {}),
-        ...(data.mode === 'subscription' ? { subscription_data: { metadata } } : {}),
+        payment_intent_data: { metadata, capture_method: captureMethod },
       },
       orderId
     )

@@ -16,7 +16,6 @@
       "Shipping",
       "Orders",
       "Customers",
-      "Subscriptions",
       "Webhooks"
     ],
     "icon": "./stripe.svg"
