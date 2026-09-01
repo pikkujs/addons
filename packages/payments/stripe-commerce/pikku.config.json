@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pikkujs/pikku/refs/heads/main/packages/cli/cli.schema.json",
+  "tsconfig": "./tsconfig.json",
+  "srcDirectories": [
+    "src",
+    "types"
+  ],
+  "outDir": "./.pikku",
+  "addon": {
+    "displayName": "Stripe Payments",
+    "description": "A ready-made Stripe payment system with its own tables, checkout and webhook handling",
+    "categories": [
+      "Catalogue",
+      "Cart",
+      "Checkout",
+      "Shipping",
+      "Orders",
+      "Customers",
+      "Subscriptions",
+      "Webhooks"
+    ],
+    "icon": "./stripe.svg"
+  }
+}

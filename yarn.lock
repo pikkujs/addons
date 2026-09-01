@@ -983,6 +983,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@better-auth/core@npm:^1.7.2":
+  version: 1.7.2
+  resolution: "@better-auth/core@npm:1.7.2"
+  dependencies:
+    "@opentelemetry/semantic-conventions": "npm:^1.41.1"
+    "@standard-schema/spec": "npm:^1.1.0"
+    zod: "npm:^4.3.6"
+  peerDependencies:
+    "@better-auth/utils": 0.4.2
+    "@better-fetch/fetch": 1.3.1
+    "@cloudflare/workers-types": ">=4"
+    "@opentelemetry/api": ^1.9.0
+    better-call: 1.4.0
+    jose: ^6.1.0
+    kysely: ^0.28.5 || ^0.29.0
+    nanostores: ^1.0.1
+  peerDependenciesMeta:
+    "@cloudflare/workers-types":
+      optional: true
+    "@opentelemetry/api":
+      optional: true
+  checksum: 10/5a78a9726dcdb48f6235252af65624c1936030cc74fbe669726f07ff4f5b8c9f74c76a723b8ece91cdf22e8ead16e11eb7c1c48aa9c2ab59d5a9462ca4d11536
+  languageName: node
+  linkType: hard
+
 "@better-auth/drizzle-adapter@npm:1.6.20":
   version: 1.6.20
   resolution: "@better-auth/drizzle-adapter@npm:1.6.20"
@@ -2586,6 +2611,13 @@ __metadata:
   version: 1.41.1
   resolution: "@opentelemetry/semantic-conventions@npm:1.41.1"
   checksum: 10/3b80fba5b0f28884326966a7b0dfc228c55698531db08834ece2c0ef7537aaaa83cba3f933731c14ffa6b0162b72cc14fee4a0ba68a1858837a590b49be23ee5
+  languageName: node
+  linkType: hard
+
+"@opentelemetry/semantic-conventions@npm:^1.41.1":
+  version: 1.43.0
+  resolution: "@opentelemetry/semantic-conventions@npm:1.43.0"
+  checksum: 10/44c0e667cbfbecd98911cd6a90dc5f873de262da82d6684f467a87d529098b04fb2b9705bbd3524ecdedf13c62914d9ccf0ddcc4104dbba5062faf68f361aef4
   languageName: node
   linkType: hard
 
@@ -5129,6 +5161,22 @@ __metadata:
     zod: "npm:^4"
   peerDependencies:
     "@pikku/core": ^0.12.89
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-stripe-commerce@workspace:*, @pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    kysely: "npm:^0.29.5"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    kysely: ^0.29.0
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -8128,6 +8176,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test"
+  dependencies:
+    "@pikku/addon-stripe-commerce": "workspace:*"
+    "@types/better-sqlite3": "npm:^9.6.0"
+    "@types/node": "npm:^24"
+    better-sqlite3: "npm:^13.0.3"
+    kysely: "npm:^0.29.5"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
+  languageName: unknown
+  linkType: soft
+
 "@pikku/test-stripe@workspace:packages/payments/stripe/test":
   version: 0.0.0-use.local
   resolution: "@pikku/test-stripe@workspace:packages/payments/stripe/test"
@@ -9448,6 +9510,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/better-sqlite3@npm:^9.6.0":
+  version: 9.6.0
+  resolution: "@types/better-sqlite3@npm:9.6.0"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 10/3dcbf6126b6b6c5ccc73d03d88590f67a2bf0cb40dcfee392ae6f08554b57e8112c739edefef4349f13a2a9d23d31374ba9c18e0572dcb0332a9ccd87ebc71c6
+  languageName: node
+  linkType: hard
+
 "@types/cookie@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/cookie@npm:1.0.0"
@@ -10181,6 +10252,16 @@ __metadata:
   dependencies:
     is-windows: "npm:^1.0.0"
   checksum: 10/5392dbe04e7fe68b944eb37961d9dfa147aaac3ee9ee3f6e13d42e2c9fbe949e68d16e896c14ee9016fa5f8e6e53ec7fd8b5f01b50a32067a7d94ac9cfb9a050
+  languageName: node
+  linkType: hard
+
+"better-sqlite3@npm:^13.0.3":
+  version: 13.0.3
+  resolution: "better-sqlite3@npm:13.0.3"
+  dependencies:
+    node-addon-api: "npm:^8.0.0"
+    node-gyp: "npm:latest"
+  checksum: 10/035f8fa70784762fd73e1dbeb6f157186abb97705ff759b312cfb0dc1c675fd1c6b5378d2c036758000ce9da1d49bf61689531aa2718a7e32dc272c114a4c71f
   languageName: node
   linkType: hard
 
@@ -12861,6 +12942,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"node-addon-api@npm:^8.0.0":
+  version: 8.9.2
+  resolution: "node-addon-api@npm:8.9.2"
+  dependencies:
+    node-gyp: "npm:latest"
+  checksum: 10/5354f9b53631d99a952408112d795f36782fd41c0ac073bd91814805fe931b619c743689d0cedcc310c0ae8392fc9b104b2852d28cce294236407ca57d01743e
+  languageName: node
+  linkType: hard
+
 "node-addon-api@npm:^8.3.1":
   version: 8.5.0
   resolution: "node-addon-api@npm:8.5.0"
@@ -13401,6 +13491,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pikku-addons@workspace:."
   dependencies:
+    "@better-auth/core": "npm:^1.7.2"
     "@changesets/cli": "npm:^2.27.9"
     better-auth: "npm:^1.6.0"
     node-gyp: "npm:^12.2.0"
