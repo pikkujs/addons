@@ -26,6 +26,7 @@ export { loadCart, openCart } from './lib/cart.js'
 export { ensureVariantPrice, syncVariantPrice, pushProduct, createPrice, pushShippingRate } from './lib/stripe-catalog.js'
 
 export { SessionPaymentOwner } from './payment-owner.service.js'
+export { BetterAuthPaymentOwner } from './better-auth-owner.service.js'
 export type { PaymentOwner, PaymentOwnerRef } from './payment-owner.service.js'
 
 export { StripeApi } from './stripe-api.service.js'

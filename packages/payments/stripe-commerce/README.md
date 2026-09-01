@@ -48,16 +48,24 @@ export interface PaymentOwner {
 }
 ```
 
-The addon supplies a default that reads the session — `userId`, or `orgId` when
-`STRIPE_OWNER_TYPE` is `organization`, which is the same choice better-auth
-models as its `CustomerType`. Both columns are null for a guest, and a guest who
-later signs in keeps the Stripe customer they already have.
+The default is `BetterAuthPaymentOwner`: the owner is the session's `userId`, or
+its `orgId` when `STRIPE_OWNER_TYPE` is `organization` — the same choice
+better-auth models as its `CustomerType` — and the Stripe customer is read off
+better-auth's own `user` / `organization` row.
 
-Return a `stripeCustomerId` and the addon adopts it instead of posting to
-`/customers`. That is the hook for an app already running the better-auth Stripe
-plugin: better-auth owns subscription lifecycle and keeps a `stripeCustomerId`
-on `user`, `organization` and each `subscription` row, and handing it back here
-keeps both halves of the account on one customer rather than two.
+That last part is the whole integration. better-auth's Stripe plugin owns
+subscription lifecycle and keeps a `stripeCustomerId` on `user`, `organization`
+and every `subscription` row; returning it here makes the storefront **adopt**
+that customer instead of posting to `/customers`, so an app's plan subscription
+and its orders sit on one Stripe Customer rather than two. Nothing is imported
+from better-auth — the tables are in the same database, and the id is the only
+fact the addon needs, so any other billing plugin is a resolver away too.
+
+An app running no better-auth Stripe plugin needs no configuration: the lookup
+is probed once and a missing table turns it off, leaving the plain session
+resolver (`SessionPaymentOwner`, exported for anyone who wants to skip the
+probe). Both owner columns are null for a guest, and a guest who later signs in
+keeps the Stripe customer they already have.
 
 An app whose billing entity is neither the session user nor its org replaces the
 service outright, from its own `pikkuServices` factory.

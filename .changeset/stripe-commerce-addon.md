@@ -36,9 +36,12 @@ the same choice better-auth models as its `CustomerType`. Both columns are null
 for a guest, and matching falls back to email for one.
 
 An owner that comes back carrying a `stripeCustomerId` is adopted rather than
-minted, so an app already running the better-auth Stripe plugin — which keeps
-its own `stripeCustomerId` on `user`, `organization` and every `subscription`
-row — has one Stripe customer across both halves instead of two. Subscriptions
+minted, and the default resolver reads exactly that off better-auth's own `user`
+/ `organization` row: an app running the better-auth Stripe plugin — which keeps
+a `stripeCustomerId` there and on every `subscription` row — has one Stripe
+customer across both halves instead of two, with nothing to wire and nothing
+imported from better-auth. An app without the plugin probes once and falls back
+to the plain session resolver. Subscriptions
 stay in the addon for standalone use, and are hung off the local customer their
 Stripe customer id resolves to.
 
