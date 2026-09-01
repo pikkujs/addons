@@ -129,114 +129,122 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
 
     const object = event.data.object
 
-    switch (event.type) {
-      case 'checkout.session.completed':
-      case 'checkout.session.async_payment_succeeded': {
-        await settleCheckoutSession(kysely, logger, object, now)
-        break
-      }
-      case 'checkout.session.async_payment_failed': {
-        await kysely
-          .updateTable('paymentOrder')
-          .set({ status: 'failed', updatedAt: now })
-          .where('stripeCheckoutSessionId', '=', asString(object.id))
-          .execute()
-        break
-      }
-      case 'checkout.session.expired': {
-        // The customer never paid and never will on this session. Marking it
-        // terminal keeps the pending list a list of live checkouts.
-        await kysely
-          .updateTable('paymentOrder')
-          .set({ status: 'expired', updatedAt: now })
-          .where('stripeCheckoutSessionId', '=', asString(object.id))
-          .where('status', '=', 'pending')
-          .execute()
-        break
-      }
-      case 'payment_intent.payment_failed': {
-        await kysely
-          .updateTable('paymentOrder')
-          .set({ status: 'failed', updatedAt: now })
-          .where('stripePaymentIntentId', '=', asString(object.id))
-          .execute()
-        break
-      }
-      case 'charge.refunded': {
-        const refunded = asNumber(object.amount_refunded) ?? 0
-        const captured = asNumber(object.amount_captured) ?? asNumber(object.amount) ?? 0
-        await kysely
-          .updateTable('paymentOrder')
-          .set({
-            amountRefundedMinor: refunded,
-            status: refunded >= captured && captured > 0 ? 'refunded' : 'paid',
-            updatedAt: now,
-          })
-          .where('stripePaymentIntentId', '=', asString(object.payment_intent))
-          .execute()
-        break
-      }
-      case 'charge.dispute.created':
-      case 'charge.dispute.closed': {
-        // A dispute is not a refund: the money is held, the order stays as it
-        // was, and the outcome may still go either way. Recording it separately
-        // keeps the shipping queue honest without rewriting payment state.
-        const outcome = asString(object.status)
-        const disputeStatus =
-          outcome === 'won' ? 'won' : outcome === 'lost' ? 'lost' : 'open'
-        await kysely
-          .updateTable('paymentOrder')
-          .set({ disputeStatus, updatedAt: now })
-          .where('stripePaymentIntentId', '=', asString(object.payment_intent))
-          .execute()
-        break
-      }
-      case 'customer.subscription.created':
-      case 'customer.subscription.updated':
-      case 'customer.subscription.deleted': {
-        const subscriptionId = asString(object.id)
-        if (subscriptionId) {
-          const items = object.items as SubscriptionItems
-          const firstItem = items?.data?.[0]
-          // Stripe moved the period boundary off the subscription and onto each
-          // item in API version 2025-03-31. The addon does not pin a version, so
-          // it reads whichever the account sends.
-          const currentPeriodEnd =
-            asEpochString(object.current_period_end) ??
-            asEpochString(firstItem?.current_period_end)
-          const customerId = await localCustomerId(kysely, asString(object.customer))
-          const stripePriceId = firstItem?.price?.id ?? null
-          const variantId = await localVariantId(kysely, stripePriceId)
+    // The dedupe insert above already claimed this event id, so a throw from
+    // here would leave the row stuck on `processing` and Stripe's retry would
+    // be swallowed as a duplicate. Releasing the claim makes the retry work.
+    try {
+      switch (event.type) {
+        case 'checkout.session.completed':
+        case 'checkout.session.async_payment_succeeded': {
+          await settleCheckoutSession(kysely, logger, object, now)
+          break
+        }
+        case 'checkout.session.async_payment_failed': {
           await kysely
-            .insertInto('paymentSubscription')
-            .values({
-              id: crypto.randomUUID(),
-              customerId,
-              stripeSubscriptionId: subscriptionId,
-              stripePriceId,
-              variantId,
-              status: asString(object.status) ?? 'unknown',
-              currentPeriodEnd,
-              cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
-              createdAt: now,
+            .updateTable('paymentOrder')
+            .set({ status: 'failed', updatedAt: now })
+            .where('stripeCheckoutSessionId', '=', asString(object.id))
+            .execute()
+          break
+        }
+        case 'checkout.session.expired': {
+          // The customer never paid and never will on this session. Marking it
+          // terminal keeps the pending list a list of live checkouts.
+          await kysely
+            .updateTable('paymentOrder')
+            .set({ status: 'expired', updatedAt: now })
+            .where('stripeCheckoutSessionId', '=', asString(object.id))
+            .where('status', '=', 'pending')
+            .execute()
+          break
+        }
+        case 'payment_intent.payment_failed': {
+          await kysely
+            .updateTable('paymentOrder')
+            .set({ status: 'failed', updatedAt: now })
+            .where('stripePaymentIntentId', '=', asString(object.id))
+            .execute()
+          break
+        }
+        case 'charge.refunded': {
+          const refunded = asNumber(object.amount_refunded) ?? 0
+          const captured = asNumber(object.amount_captured) ?? asNumber(object.amount) ?? 0
+          await kysely
+            .updateTable('paymentOrder')
+            .set({
+              amountRefundedMinor: refunded,
+              status: refunded >= captured && captured > 0 ? 'refunded' : 'paid',
               updatedAt: now,
             })
-            .onConflict((oc) =>
-              oc.column('stripeSubscriptionId').doUpdateSet({
-                ...(customerId ? { customerId } : {}),
-                ...(variantId ? { variantId } : {}),
+            .where('stripePaymentIntentId', '=', asString(object.payment_intent))
+            .execute()
+          break
+        }
+        case 'charge.dispute.created':
+        case 'charge.dispute.closed': {
+          // A dispute is not a refund: the money is held, the order stays as it
+          // was, and the outcome may still go either way. Recording it separately
+          // keeps the shipping queue honest without rewriting payment state.
+          const outcome = asString(object.status)
+          const disputeStatus =
+            outcome === 'won' ? 'won' : outcome === 'lost' ? 'lost' : 'open'
+          await kysely
+            .updateTable('paymentOrder')
+            .set({ disputeStatus, updatedAt: now })
+            .where('stripePaymentIntentId', '=', asString(object.payment_intent))
+            .execute()
+          break
+        }
+        case 'customer.subscription.created':
+        case 'customer.subscription.updated':
+        case 'customer.subscription.deleted': {
+          const subscriptionId = asString(object.id)
+          if (subscriptionId) {
+            const items = object.items as SubscriptionItems
+            const firstItem = items?.data?.[0]
+            // Stripe moved the period boundary off the subscription and onto each
+            // item in API version 2025-03-31. The addon does not pin a version, so
+            // it reads whichever the account sends.
+            const currentPeriodEnd =
+              asEpochString(object.current_period_end) ??
+              asEpochString(firstItem?.current_period_end)
+            const customerId = await localCustomerId(kysely, asString(object.customer))
+            const stripePriceId = firstItem?.price?.id ?? null
+            const variantId = await localVariantId(kysely, stripePriceId)
+            await kysely
+              .insertInto('paymentSubscription')
+              .values({
+                id: crypto.randomUUID(),
+                customerId,
+                stripeSubscriptionId: subscriptionId,
+                stripePriceId,
+                variantId,
                 status: asString(object.status) ?? 'unknown',
                 currentPeriodEnd,
                 cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
+                createdAt: now,
                 updatedAt: now,
               })
-            )
-            .execute()
+              .onConflict((oc) =>
+                oc.column('stripeSubscriptionId').doUpdateSet({
+                  ...(customerId ? { customerId } : {}),
+                  ...(variantId ? { variantId } : {}),
+                  status: asString(object.status) ?? 'unknown',
+                  currentPeriodEnd,
+                  cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
+                  updatedAt: now,
+                })
+              )
+              .execute()
+          }
+          break
         }
-        break
+        default:
+          logger.debug(`stripe webhook: no handler for ${event.type}`)
       }
-      default:
-        logger.debug(`stripe webhook: no handler for ${event.type}`)
+    } catch (error) {
+      await kysely.deleteFrom('paymentWebhookEvent').where('id', '=', event.id).execute()
+      throw error
     }
 
     await kysely

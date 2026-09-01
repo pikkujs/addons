@@ -54,28 +54,29 @@ export type StripePost = {
 export const createServices = (
   kysely: Kysely<PaymentDatabase>,
   options: {
-    replies?: Record<string, unknown>
+    replies?: Record<string, unknown | ((post: StripePost) => unknown)>
     fail?: string
     paymentOwner?: PaymentOwner
   } = {}
 ) => {
   const posts: StripePost[] = []
   const logger = createLogger()
-  const replyFor = (path: string) => {
+  const replyFor = (post: StripePost) => {
     for (const [prefix, reply] of Object.entries(options.replies ?? {})) {
-      if (path.startsWith(prefix)) {
-        return reply
+      if (post.path.startsWith(prefix)) {
+        return typeof reply === 'function' ? reply(post) : reply
       }
     }
     return { id: `stripe_${posts.length}` }
   }
   const stripeApi = {
     post: async (path: string, body: Record<string, any> = {}, idempotencyKey?: string) => {
-      posts.push({ path, body, idempotencyKey })
+      const post = { path, body, idempotencyKey }
+      posts.push(post)
       if (options.fail && path.startsWith(options.fail)) {
         throw new Error(`Stripe POST ${path} failed (402): declined`)
       }
-      return replyFor(path)
+      return replyFor(post)
     },
   }
   const paymentOwner = options.paymentOwner ?? new SessionPaymentOwner()

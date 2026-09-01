@@ -80,3 +80,35 @@ test('storefront sales and plan subscriptions from elsewhere can be told apart',
   const both = await listSubscriptions.func(services, {}, {} as any)
   assert.equal(both?.length, 2)
 })
+
+test('a signed-in caller only sees the subscriptions on their own customer', async () => {
+  const kysely = createTestDb()
+  await kysely
+    .insertInto('paymentCustomer')
+    .values({
+      id: 'cust_1',
+      ownerType: 'user',
+      ownerId: 'user_1',
+      stripeCustomerId: 'cus_1',
+      email: null,
+      createdAt: new Date().toISOString(),
+    })
+    .execute()
+  await seedSubscription(kysely, { stripeSubscriptionId: 'sub_mine', status: 'active' })
+  await kysely
+    .updateTable('paymentSubscription')
+    .set({ customerId: 'cust_1' })
+    .where('stripeSubscriptionId', '=', 'sub_mine')
+    .execute()
+  await seedSubscription(kysely, { stripeSubscriptionId: 'sub_theirs', status: 'active' })
+  const { services } = createServices(kysely)
+
+  const mine = await listSubscriptions.func(services, {}, { session: { userId: 'user_1' } } as any)
+  assert.deepEqual(
+    mine.map((row) => row.stripeSubscriptionId),
+    ['sub_mine']
+  )
+
+  const all = await listSubscriptions.func(services, {}, {} as any)
+  assert.equal(all.length, 2)
+})

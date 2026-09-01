@@ -42,12 +42,11 @@ test('a guest who later signs in keeps their Stripe customer', async (t) => {
   const kysely = createTestDb()
 
   const guest = await ensureCustomer(api, kysely, null, 'guest@example.com')
-  const signedIn = await ensureCustomer(
-    api,
-    kysely,
-    { type: 'user', id: 'user_9' },
-    'guest@example.com'
-  )
+  const signedIn = await ensureCustomer(api, kysely, {
+    type: 'user',
+    id: 'user_9',
+    email: 'guest@example.com',
+  })
 
   assert.equal(signedIn?.stripeCustomerId, guest?.stripeCustomerId)
   assert.equal(stripe.posts.length, 1)
@@ -138,4 +137,28 @@ test('a user and an organization with the same id are different customers', asyn
 
   assert.notEqual(asUser?.id, asOrg?.id)
   assert.equal(await countCustomers(kysely), 2)
+})
+
+test('a signed-in buyer cannot claim a guest customer by typing their email', async (t) => {
+  const stripe = stubStripe()
+  t.after(stripe.restore)
+  const kysely = createTestDb()
+
+  const guest = await ensureCustomer(api, kysely, null, 'victim@example.com')
+  const attacker = await ensureCustomer(
+    api,
+    kysely,
+    { type: 'user', id: 'user_evil' },
+    'victim@example.com'
+  )
+
+  assert.notEqual(attacker?.stripeCustomerId, guest?.stripeCustomerId)
+  assert.equal(await countCustomers(kysely), 2)
+
+  const claimed = await kysely
+    .selectFrom('paymentCustomer')
+    .select(['ownerId'])
+    .where('stripeCustomerId', '=', guest!.stripeCustomerId)
+    .executeTakeFirstOrThrow()
+  assert.equal(claimed.ownerId, null)
 })

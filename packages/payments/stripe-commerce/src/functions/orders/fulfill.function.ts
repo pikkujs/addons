@@ -40,6 +40,9 @@ export const fulfillOrder = pikkuFunc({
     if (order.fulfillmentStatus === 'not_required') {
       throw new BadRequestError(`Order ${data.id} contains nothing that ships`)
     }
+    if (order.fulfillmentStatus === 'fulfilled') {
+      throw new BadRequestError(`Order ${data.id} has already shipped`)
+    }
 
     const now = new Date().toISOString()
     await kysely

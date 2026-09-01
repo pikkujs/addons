@@ -538,3 +538,19 @@ test("a plan subscription created elsewhere is recorded, and not ours", async ()
   assert.equal(row.stripePriceId, 'price_better_auth')
   assert.equal(row.variantId, null)
 })
+
+test('an event that fails to apply releases its claim so the retry can work', async () => {
+  const kysely = createTestDb()
+  await kysely.schema.dropTable('paymentOrder').execute()
+
+  await assert.rejects(() =>
+    deliver(kysely, event('charge.refunded', { payment_intent: 'pi_1', amount_refunded: 100 }, 'evt_fail'))
+  )
+
+  const claimed = await kysely
+    .selectFrom('paymentWebhookEvent')
+    .select(['id'])
+    .where('id', '=', 'evt_fail')
+    .executeTakeFirst()
+  assert.equal(claimed, undefined)
+})

@@ -32,10 +32,18 @@ export const pushProduct = async (
     active: number
   }
 ): Promise<string> => {
+  // On an update Stripe leaves an omitted field alone, so clearing a
+  // description locally has to be sent as an explicit empty value or the old
+  // one stays live on the product. On a create there is nothing to clear.
+  const update = product.stripeProductId !== null
   const body = {
     name: product.name,
-    ...(product.description ? { description: product.description } : {}),
-    ...(product.imageUrl ? { images: [product.imageUrl] } : {}),
+    ...(product.description
+      ? { description: product.description }
+      : update
+        ? { description: '' }
+        : {}),
+    ...(product.imageUrl ? { images: [product.imageUrl] } : update ? { images: [] } : {}),
     active: product.active === 1,
   }
   const result = product.stripeProductId

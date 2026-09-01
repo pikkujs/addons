@@ -143,3 +143,24 @@ test('ensureVariantPrice on an unknown variant throws rather than selling nothin
     /Unknown variant nope/
   )
 })
+
+test('clearing a description or image on a mirrored product clears it on Stripe too', async () => {
+  const { stripeApi, posts } = createServices(createTestDb(), {
+    replies: { '/products': { id: 'prod_1' } },
+  })
+
+  await pushProduct(stripeApi as any, {
+    stripeProductId: 'prod_1',
+    name: 'Kettle',
+    description: null,
+    imageUrl: null,
+    active: 1,
+  })
+
+  assert.deepEqual(posts[0]!.body, {
+    name: 'Kettle',
+    description: '',
+    images: [],
+    active: true,
+  })
+})

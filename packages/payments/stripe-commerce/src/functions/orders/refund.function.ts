@@ -73,19 +73,53 @@ export const refundOrder = pikkuFunc({
       `refund_${data.id}_${order.amountRefundedMinor}_${amountMinor}`
     )
 
-    const amountRefundedMinor = order.amountRefundedMinor + amountMinor
-    const fullyRefunded = amountRefundedMinor >= order.amountMinor
     const now = new Date().toISOString()
 
-    await kysely
-      .updateTable('paymentOrder')
-      .set({
-        amountRefundedMinor,
-        status: fullyRefunded ? 'refunded' : order.status,
-        updatedAt: now,
+    // Stripe replays a refund for a repeated idempotency key, and two operators
+    // refunding at once each read the same running total. Keying the ledger on
+    // Stripe's refund id makes the insert the thing that decides whether this
+    // refund is new, and the total then moves by a delta the database applies
+    // rather than by a figure read before the call.
+    const applied = await kysely
+      .insertInto('paymentRefund')
+      .values({
+        id: refund.id,
+        orderId: data.id,
+        amountMinor,
+        reason: data.reason ?? null,
+        createdAt: now,
       })
+      .onConflict((oc) => oc.column('id').doNothing())
+      .executeTakeFirst()
+
+    if (applied.numInsertedOrUpdatedRows) {
+      await kysely
+        .updateTable('paymentOrder')
+        .set((eb) => ({
+          amountRefundedMinor: eb('amountRefundedMinor', '+', amountMinor),
+          updatedAt: now,
+        }))
+        .where('id', '=', data.id)
+        .where('amountRefundedMinor', '<=', order.amountMinor - amountMinor)
+        .execute()
+    }
+
+    const settled = await kysely
+      .selectFrom('paymentOrder')
+      .select(['amountRefundedMinor', 'status'])
       .where('id', '=', data.id)
-      .execute()
+      .executeTakeFirstOrThrow()
+
+    const amountRefundedMinor = settled.amountRefundedMinor
+    const fullyRefunded = amountRefundedMinor >= order.amountMinor
+
+    if (fullyRefunded && settled.status !== 'refunded') {
+      await kysely
+        .updateTable('paymentOrder')
+        .set({ status: 'refunded', updatedAt: now })
+        .where('id', '=', data.id)
+        .execute()
+    }
 
     if (data.restock ?? fullyRefunded) {
       const items = await kysely
@@ -109,7 +143,7 @@ export const refundOrder = pikkuFunc({
       id: data.id,
       refundId: refund.id,
       amountRefundedMinor,
-      status: fullyRefunded ? 'refunded' : order.status,
+      status: fullyRefunded ? 'refunded' : settled.status,
     }
   },
 })

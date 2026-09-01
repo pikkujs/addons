@@ -17,6 +17,24 @@ type StripeAddress = {
 
 const asString = (value: unknown): string | null => (typeof value === 'string' ? value : null)
 
+const shippingColumns = (shipping: StripeAddress) => {
+  const columns: Record<string, string> = {}
+  const set = (column: string, value: unknown) => {
+    const text = asString(value)
+    if (text !== null) {
+      columns[column] = text
+    }
+  }
+  set('shippingName', shipping.name)
+  set('shippingLine1', shipping.address?.line1)
+  set('shippingLine2', shipping.address?.line2)
+  set('shippingCity', shipping.address?.city)
+  set('shippingState', shipping.address?.state)
+  set('shippingPostalCode', shipping.address?.postal_code)
+  set('shippingCountry', shipping.address?.country)
+  return columns
+}
+
 const asNumber = (value: unknown): number | null => (typeof value === 'number' ? value : null)
 
 /**
@@ -119,13 +137,11 @@ export const settleCheckoutSession = async (
       stripePaymentIntentId: asString(session.payment_intent),
       ...(amountTotal !== null ? { amountMinor: amountTotal } : {}),
       ...(customerEmail !== null ? { email: customerEmail } : {}),
-      shippingName: asString(shipping?.name),
-      shippingLine1: asString(shipping?.address?.line1),
-      shippingLine2: asString(shipping?.address?.line2),
-      shippingCity: asString(shipping?.address?.city),
-      shippingState: asString(shipping?.address?.state),
-      shippingPostalCode: asString(shipping?.address?.postal_code),
-      shippingCountry: asString(shipping?.address?.country),
+      // Only what this payload actually carries. `completed` and
+      // `async_payment_succeeded` arrive for the same session and the second
+      // need not repeat the address, so writing nulls unconditionally would
+      // erase the address the first one recorded.
+      ...(shipping ? shippingColumns(shipping) : {}),
       updatedAt: now,
     })
     .where('id', '=', order.id)

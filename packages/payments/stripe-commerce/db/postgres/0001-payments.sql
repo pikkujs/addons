@@ -138,6 +138,16 @@ CREATE TABLE payment_order_item (
 CREATE INDEX payment_order_item_order_id ON payment_order_item (order_id);
 CREATE INDEX payment_order_item_variant_id ON payment_order_item (variant_id);
 
+CREATE TABLE payment_refund (
+  id TEXT PRIMARY KEY NOT NULL,
+  order_id TEXT NOT NULL,
+  amount_minor INTEGER NOT NULL,
+  reason TEXT,
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX payment_refund_order_id ON payment_refund (order_id);
+
 CREATE TABLE payment_subscription (
   id TEXT PRIMARY KEY NOT NULL,
   customer_id TEXT,

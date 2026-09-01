@@ -30,6 +30,12 @@ export const ensureCustomer = async (
     return null
   }
 
+  // A guest row may only be claimed on an email the caller did not choose:
+  // either the buyer is anonymous, in which case the email is all there is to
+  // match on, or it came off the owner record. Adopting on a signed-in
+  // buyer's *typed* email would hand them any guest's saved payment details.
+  const adoptableEmail = owner ? (owner.email ?? null) : buyerEmail
+
   const existing = owner
     ? await kysely
         .selectFrom('paymentCustomer')
@@ -41,11 +47,11 @@ export const ensureCustomer = async (
 
   const found =
     existing ??
-    (buyerEmail
+    (adoptableEmail
       ? await kysely
           .selectFrom('paymentCustomer')
           .select(['id', 'stripeCustomerId'])
-          .where('email', '=', buyerEmail)
+          .where('email', '=', adoptableEmail)
           .where('ownerId', 'is', null)
           .executeTakeFirst()
       : undefined)

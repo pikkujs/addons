@@ -167,3 +167,17 @@ test('an event for an unknown session warns rather than throwing', async () => {
   assert.equal(logger.warned.length, 1)
   assert.match(logger.warned[0]!, /no order for checkout session cs_nothing/)
 })
+
+test('a second delivery without shipping details keeps the address the first recorded', async () => {
+  const kysely = createTestDb()
+  const { variantId } = await seedProduct(kysely)
+  const { orderId, sessionId } = await seedCartOrder(kysely, variantId)
+
+  await settleCheckoutSession(kysely, createLogger(), cardSession(sessionId), NOW)
+  const { collected_information: _dropped, ...withoutShipping } = cardSession(sessionId)
+  await settleCheckoutSession(kysely, createLogger(), withoutShipping, NOW)
+
+  const order = await orderRow(kysely, orderId)
+  assert.equal(order.shippingLine1, '1 Test Street')
+  assert.equal(order.shippingCountry, 'DE')
+})

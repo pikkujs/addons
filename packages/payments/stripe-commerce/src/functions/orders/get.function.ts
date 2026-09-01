@@ -44,18 +44,33 @@ export const GetOrderOutput = z.object({
   createdAt: z.string(),
 })
 
+/**
+ * Sessionless so a back office can wire it behind its own auth, but a signed-in
+ * caller only ever sees their own orders: the owner comes from the session by
+ * way of the `paymentOwner` service, never from input, so an order id guessed
+ * or leaked is not enough to read someone else's address and line items.
+ */
 export const getOrder = pikkuSessionlessFunc({
   description: 'Fetch one order with its line items and shipping address',
   node: { displayName: 'Get Order', category: 'Orders', type: 'action' },
   input: GetOrderInput,
   output: GetOrderOutput,
   tags: ['addon'],
-  func: async ({ kysely }, data) => {
-    const order = await kysely
-      .selectFrom('paymentOrder')
-      .selectAll()
-      .where('id', '=', data.id)
-      .executeTakeFirst()
+  func: async ({ kysely, paymentOwner }, data, { session }) => {
+    const owner = session ? await paymentOwner.resolve(session) : null
+
+    let query = kysely.selectFrom('paymentOrder').selectAll().where('id', '=', data.id)
+    if (owner) {
+      query = query.where('customerId', 'in', (eb) =>
+        eb
+          .selectFrom('paymentCustomer')
+          .select('id')
+          .where('ownerType', '=', owner.type)
+          .where('ownerId', '=', owner.id)
+      )
+    }
+
+    const order = await query.executeTakeFirst()
     if (!order) {
       throw new NotFoundError(`Unknown order ${data.id}`)
     }

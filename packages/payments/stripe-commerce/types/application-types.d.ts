@@ -172,6 +172,18 @@ export interface PaymentDatabase {
     createdAt: string
     updatedAt: string
   }
+  /**
+   * One row per Stripe refund, keyed by Stripe's own refund id. The order's
+   * running total is only moved when a row is actually inserted here, which is
+   * what stops a retried or concurrent refund being counted twice.
+   */
+  paymentRefund: {
+    id: string
+    orderId: string
+    amountMinor: number
+    reason: string | null
+    createdAt: string
+  }
   paymentWebhookEvent: {
     id: string
     type: string

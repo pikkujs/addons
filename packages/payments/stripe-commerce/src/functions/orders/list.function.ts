@@ -17,7 +17,9 @@ export const ListOrdersInput = z.object({
   ownerId: z
     .string()
     .optional()
-    .describe('Only return orders belonging to this owner — the id your paymentOwner service resolves, so a user or an organization id'),
+    .describe(
+      'Only return orders belonging to this owner — the id your paymentOwner service resolves, so a user or an organization id. Ignored for a signed-in caller, who only ever sees their own'
+    ),
   ownerType: z
     .string()
     .optional()
@@ -47,7 +49,13 @@ export const listOrders = pikkuSessionlessFunc({
   input: ListOrdersInput,
   output: ListOrdersOutput,
   tags: ['addon'],
-  func: async ({ kysely }, data) => {
+  func: async ({ kysely, paymentOwner }, data, { session }) => {
+    // A signed-in caller is scoped to themselves. The input filter is for a
+    // back office wired without a session, which the app guards on the route.
+    const owner = session ? await paymentOwner.resolve(session) : null
+    const ownerType = owner ? owner.type : (data.ownerType ?? 'user')
+    const ownerId = owner ? owner.id : data.ownerId
+
     let query = kysely
       .selectFrom('paymentOrder')
       .select([
@@ -75,13 +83,13 @@ export const listOrders = pikkuSessionlessFunc({
     if (data.email) {
       query = query.where('email', '=', data.email)
     }
-    if (data.ownerId) {
+    if (ownerId) {
       query = query.where('customerId', 'in', (eb) =>
         eb
           .selectFrom('paymentCustomer')
           .select('id')
-          .where('ownerType', '=', data.ownerType ?? 'user')
-          .where('ownerId', '=', data.ownerId!)
+          .where('ownerType', '=', ownerType)
+          .where('ownerId', '=', ownerId)
       )
     }
     if (data.disputed) {

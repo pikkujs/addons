@@ -33,7 +33,12 @@ export const listSubscriptions = pikkuSessionlessFunc({
   input: ListSubscriptionsInput,
   output: ListSubscriptionsOutput,
   tags: ['addon'],
-  func: async ({ kysely }, data) => {
+  func: async ({ kysely, paymentOwner }, data, { session }) => {
+    // Every `customer.subscription.*` on the account lands in this table,
+    // including ones another part of the app owns, so a signed-in caller has to
+    // be scoped to their own rows before any of it is handed back.
+    const owner = session ? await paymentOwner.resolve(session) : null
+
     let query = kysely
       .selectFrom('paymentSubscription')
       .select([
@@ -48,6 +53,15 @@ export const listSubscriptions = pikkuSessionlessFunc({
       .orderBy('createdAt', 'desc')
       .limit(data.limit ?? 50)
 
+    if (owner) {
+      query = query.where('customerId', 'in', (eb) =>
+        eb
+          .selectFrom('paymentCustomer')
+          .select('id')
+          .where('ownerType', '=', owner.type)
+          .where('ownerId', '=', owner.id)
+      )
+    }
     if (data.status) {
       query = query.where('status', '=', data.status)
     }

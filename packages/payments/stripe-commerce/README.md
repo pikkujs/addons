@@ -70,6 +70,12 @@ keeps the Stripe customer they already have.
 An app whose billing entity is neither the session user nor its org replaces the
 service outright, from its own `pikkuServices` factory.
 
+A guest is claimed on email alone, so `ensureCustomer` will only match a guest
+row on an address the caller did not choose — the one the owner record carries.
+The reads are scoped the same way: with a session, `getOrder`, `listOrders` and
+`listSubscriptions` return only what the resolved owner owns, and the explicit
+`ownerId` filter is there for a back office wired without one.
+
 ## Subscriptions
 
 Stripe delivers `customer.subscription.*` to every registered endpoint, so with
@@ -82,6 +88,14 @@ says who has access.
 price belongs to a variant in this catalogue — a recurring product, a
 subscription box — and null when the subscription came from somewhere else.
 `listSubscriptions` takes a `storefront` filter over exactly that.
+
+## Refunds
+
+`refundOrder` writes a `payment_refund` row keyed by Stripe's own refund id and
+only moves the order's running total when that insert is new, so a replayed
+idempotency key and two operators refunding at once both land once. The total
+itself moves by a delta the database applies rather than by a figure read before
+the Stripe call.
 
 ## Secrets and variables
 

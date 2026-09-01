@@ -101,7 +101,10 @@ test('successive partial refunds accumulate and the last one closes the order', 
   const { variantId } = await seedProduct(kysely)
   const { orderId } = await seedCartOrder(kysely, variantId)
   await paid(kysely, orderId)
-  const { services, posts } = createServices(kysely, { replies: { '/refunds': { id: 're_1' } } })
+  let refunds = 0
+  const { services, posts } = createServices(kysely, {
+    replies: { '/refunds': () => ({ id: `re_${++refunds}` }) },
+  })
 
   await refundOrder.func(services, { id: orderId, amountMinor: 2000 }, {} as any)
   const second = await refundOrder.func(services, { id: orderId, amountMinor: 3000 }, {} as any)
@@ -392,4 +395,77 @@ test('orders can be listed for one owner', async () => {
 
   const defaultType = await listOrders.func(services, { ownerId: 'org_1' }, {} as any)
   assert.equal(defaultType.length, 0)
+})
+
+test('a replayed refund moves the total once, however many times Stripe answers', async () => {
+  const kysely = createTestDb()
+  const { variantId } = await seedProduct(kysely)
+  const { orderId } = await seedCartOrder(kysely, variantId)
+  await paid(kysely, orderId)
+  const { services } = createServices(kysely, { replies: { '/refunds': { id: 're_same' } } })
+
+  await refundOrder.func(services, { id: orderId, amountMinor: 2000 }, {} as any)
+  const second = await refundOrder.func(services, { id: orderId, amountMinor: 2000 }, {} as any)
+
+  assert.equal(second?.amountRefundedMinor, 2000)
+})
+
+test('an order that already shipped is not fulfilled a second time', async () => {
+  const kysely = createTestDb()
+  const { variantId } = await seedProduct(kysely)
+  const { orderId } = await seedCartOrder(kysely, variantId)
+  await paid(kysely, orderId)
+  const { services } = createServices(kysely)
+
+  await fulfillOrder.func(services, { id: orderId, trackingNumber: 'TRACK' }, {} as any)
+
+  await assert.rejects(
+    () => fulfillOrder.func(services, { id: orderId }, {} as any),
+    /already shipped/
+  )
+
+  const order = await kysely
+    .selectFrom('paymentOrder')
+    .select(['trackingNumber'])
+    .where('id', '=', orderId)
+    .executeTakeFirstOrThrow()
+  assert.equal(order.trackingNumber, 'TRACK')
+})
+
+test('a signed-in caller cannot read another owner\'s order', async () => {
+  const kysely = createTestDb()
+  const { variantId } = await seedProduct(kysely)
+  const { orderId } = await seedCartOrder(kysely, variantId)
+  await kysely
+    .insertInto('paymentCustomer')
+    .values({
+      id: 'cust_1',
+      ownerType: 'user',
+      ownerId: 'user_1',
+      stripeCustomerId: 'cus_1',
+      email: null,
+      createdAt: new Date().toISOString(),
+    })
+    .execute()
+  await kysely
+    .updateTable('paymentOrder')
+    .set({ customerId: 'cust_1' })
+    .where('id', '=', orderId)
+    .execute()
+  const { services } = createServices(kysely)
+
+  const own = await getOrder.func(services, { id: orderId }, { session: { userId: 'user_1' } } as any)
+  assert.equal(own.id, orderId)
+
+  await assert.rejects(
+    () => getOrder.func(services, { id: orderId }, { session: { userId: 'user_2' } } as any),
+    /Unknown order/
+  )
+
+  const theirs = await listOrders.func(
+    services,
+    { ownerId: 'user_1' },
+    { session: { userId: 'user_2' } } as any
+  )
+  assert.equal(theirs.length, 0)
 })
