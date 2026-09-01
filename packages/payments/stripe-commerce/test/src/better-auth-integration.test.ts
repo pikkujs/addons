@@ -8,7 +8,6 @@ import {
   BetterAuthPaymentOwner,
   createCartCheckout,
   handleStripeWebhook,
-  listSubscriptions,
   setCartItem,
   StripeSignature,
 } from '@pikku/addon-stripe-commerce'
@@ -128,61 +127,33 @@ test('a signed-in buyer checks out onto the customer better-auth already made', 
   assert.equal(orderRow.customerId, customers[0]!.id)
 })
 
-test('both halves of the account land in one ledger, and stay tellable apart', async () => {
+test('a subscription on the shared customer is acknowledged and left alone', async () => {
   const kysely = createAppDb()
   await kysely
     .insertInto('user')
     .values({ id: 'user_1', email: 'ada@example.com', stripeCustomerId: 'cus_ba' })
     .execute()
-  await kysely
-    .insertInto('paymentCustomer')
-    .values({
-      id: 'customer_1',
-      ownerType: 'user',
-      ownerId: 'user_1',
-      stripeCustomerId: 'cus_ba',
-      email: 'ada@example.com',
-      createdAt: new Date().toISOString(),
-    })
-    .execute()
-
-  const { variantId } = await seedProduct(kysely, { recurringInterval: 'month' })
-  await kysely
-    .updateTable('paymentVariant')
-    .set({ stripePriceId: 'price_coffee' })
-    .where('id', '=', variantId)
-    .execute()
 
   const { services } = createServices(kysely, { paymentOwner: new BetterAuthPaymentOwner(kysely) })
 
-  const subscription = (id: string, priceId: string) => ({
-    id: `evt_${id}`,
+  const result = await deliver(services, {
+    id: 'evt_sub',
     type: 'customer.subscription.created',
     data: {
       object: {
-        id,
+        id: 'sub_plan',
         status: 'active',
         customer: 'cus_ba',
         cancel_at_period_end: false,
-        items: { data: [{ price: { id: priceId }, current_period_end: 1790000000 }] },
+        items: { data: [{ price: { id: 'price_pro_plan' }, current_period_end: 1790000000 }] },
       },
     },
   })
 
-  await deliver(services, subscription('sub_coffee', 'price_coffee'))
-  await deliver(services, subscription('sub_plan', 'price_pro_plan'))
-
-  const all = await listSubscriptions.func(services, {}, {} as any)
-  assert.equal(all?.length, 2)
-  assert.ok(all?.every((row) => row.currentPeriodEnd !== null))
-
-  const shop = await listSubscriptions.func(services, { storefront: true }, {} as any)
-  assert.deepEqual(shop?.map((row) => row.stripeSubscriptionId), ['sub_coffee'])
-  assert.equal(shop?.[0]!.variantId, variantId)
-
-  const plans = await listSubscriptions.func(services, { storefront: false }, {} as any)
-  assert.deepEqual(plans?.map((row) => row.stripeSubscriptionId), ['sub_plan'])
-
-  const rows = await kysely.selectFrom('paymentSubscription').selectAll().execute()
-  assert.ok(rows.every((row) => row.customerId === 'customer_1'))
+  // Same Stripe customer, same webhook fan-out, and still nothing of the plan
+  // lands here: subscriptions belong to whatever sells them.
+  assert.equal(result?.received, true)
+  assert.equal(result?.processed, false)
+  const events = await kysely.selectFrom('paymentWebhookEvent').selectAll().execute()
+  assert.equal(events.length, 0)
 })

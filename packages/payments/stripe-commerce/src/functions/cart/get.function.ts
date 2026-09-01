@@ -19,7 +19,6 @@ export const CartLineOutput = z.object({
   unitAmountMinor: z.number(),
   lineAmountMinor: z.number(),
   currency: z.string(),
-  recurringInterval: z.enum(['day', 'week', 'month', 'year']).nullable(),
   requiresShipping: z.boolean(),
   stock: z.number().nullable(),
   available: z.boolean().describe('False when stock is tracked and the line asks for more than remains'),
@@ -31,7 +30,6 @@ export const GetCartOutput = z.object({
   subtotalMinor: z.number().describe("Sum of the lines, in the currency's minor unit. Excludes shipping and tax"),
   currency: z.string().nullable().describe('Null while the cart is empty'),
   requiresShipping: z.boolean().describe('True when any line is a physical product'),
-  hasSubscription: z.boolean().describe('True when any line is a recurring variant'),
 })
 
 export const getCart = pikkuSessionlessFunc({
@@ -50,7 +48,6 @@ export const getCart = pikkuSessionlessFunc({
       subtotalMinor: cart.subtotalMinor,
       currency: cart.currency,
       requiresShipping: cart.requiresShipping,
-      hasSubscription: cart.hasSubscription,
     }
   },
 })

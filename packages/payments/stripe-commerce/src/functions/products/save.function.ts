@@ -13,10 +13,6 @@ const VariantInput = z.object({
     .nonnegative()
     .describe("Price in the currency's minor unit (500 = $5.00, but 500 = ¥500 for JPY)"),
   currency: z.string().describe('Three-letter ISO currency code, lowercase'),
-  recurringInterval: z
-    .enum(['day', 'week', 'month', 'year'])
-    .optional()
-    .describe('Omit for a one-off purchase; set to sell this variant as a subscription'),
   stock: z
     .number()
     .int()
@@ -119,7 +115,6 @@ export const saveProduct = pikkuFunc({
         sku: variant.sku ?? null,
         amountMinor: variant.amountMinor,
         currency: variant.currency,
-        recurringInterval: variant.recurringInterval ?? null,
         stock: variant.stock ?? null,
         position: variant.position ?? index,
         active: (variant.active ?? true) ? 1 : 0,
@@ -145,8 +140,7 @@ export const saveProduct = pikkuFunc({
         !previous ||
         !previous.stripePriceId ||
         previous.amountMinor !== variant.amountMinor ||
-        previous.currency !== variant.currency ||
-        previous.recurringInterval !== (variant.recurringInterval ?? null)
+        previous.currency !== variant.currency
 
       if (priceChanged) {
         changedVariants.push(variantId)

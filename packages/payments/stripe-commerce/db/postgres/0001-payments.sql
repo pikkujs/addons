@@ -35,7 +35,6 @@ CREATE TABLE payment_variant (
   sku TEXT,
   amount_minor INTEGER NOT NULL,
   currency TEXT NOT NULL,
-  recurring_interval TEXT CHECK (recurring_interval IN ('day', 'week', 'month', 'year')),
   stock INTEGER,
   position INTEGER NOT NULL DEFAULT 0,
   active INTEGER NOT NULL DEFAULT 1,
@@ -147,23 +146,6 @@ CREATE TABLE payment_refund (
 );
 
 CREATE INDEX payment_refund_order_id ON payment_refund (order_id);
-
-CREATE TABLE payment_subscription (
-  id TEXT PRIMARY KEY NOT NULL,
-  customer_id TEXT,
-  stripe_subscription_id TEXT NOT NULL,
-  stripe_price_id TEXT,
-  variant_id TEXT,
-  status TEXT NOT NULL,
-  current_period_end TEXT,
-  cancel_at_period_end INTEGER NOT NULL DEFAULT 0,
-  created_at TEXT NOT NULL,
-  updated_at TEXT NOT NULL
-);
-
-CREATE UNIQUE INDEX payment_subscription_stripe_id_unique ON payment_subscription (stripe_subscription_id);
-CREATE INDEX payment_subscription_customer_id ON payment_subscription (customer_id);
-CREATE INDEX payment_subscription_variant_id ON payment_subscription (variant_id);
 
 CREATE TABLE payment_webhook_event (
   id TEXT PRIMARY KEY NOT NULL,

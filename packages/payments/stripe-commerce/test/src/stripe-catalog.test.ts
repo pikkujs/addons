@@ -34,7 +34,7 @@ test('pushProduct creates when unmirrored and updates when mirrored', async () =
   })
 })
 
-test('createPrice omits the recurring block for a one-off price', async () => {
+test('createPrice sends a one-off price with no recurring block', async () => {
   const { stripeApi, posts } = createServices(createTestDb(), {
     replies: { '/prices': { id: 'price_1' } },
   })
@@ -43,7 +43,6 @@ test('createPrice omits the recurring block for a one-off price', async () => {
     stripeProductId: 'prod_1',
     amountMinor: 2500,
     currency: 'eur',
-    recurringInterval: null,
   })
 
   assert.deepEqual(posts[0]!.body, { product: 'prod_1', unit_amount: 2500, currency: 'eur' })

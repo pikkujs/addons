@@ -14,7 +14,6 @@ test('getCart with no token opens a cart and hands back its token', async () => 
   assert.equal(cart?.subtotalMinor, 0)
   assert.equal(cart?.currency, null)
   assert.equal(cart?.requiresShipping, false)
-  assert.equal(cart?.hasSubscription, false)
 
   const again = await getCart.func(services, { token: cart!.token }, {} as any)
   assert.equal(again?.token, cart!.token)
@@ -191,17 +190,6 @@ test('a converted cart hands the visitor a fresh one rather than reopening it', 
 
   assert.notEqual(fresh?.token, cart!.token)
   assert.deepEqual(fresh?.lines, [])
-})
-
-test('a subscription line is flagged on the cart', async () => {
-  const kysely = createTestDb()
-  const { services } = createServices(kysely)
-  const { variantId } = await seedProduct(kysely, { recurringInterval: 'month' })
-
-  const cart = await setCartItem.func(services, { variantId, quantity: 1 }, {} as any)
-
-  assert.equal(cart?.hasSubscription, true)
-  assert.equal(cart?.lines[0]!.recurringInterval, 'month')
 })
 
 test('a digital-only cart needs no shipping', async () => {

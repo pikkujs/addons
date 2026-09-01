@@ -13,7 +13,6 @@ export type CartLine = {
   unitAmountMinor: number
   lineAmountMinor: number
   currency: string
-  recurringInterval: 'day' | 'week' | 'month' | 'year' | null
   requiresShipping: boolean
   stock: number | null
   /** False when stock is tracked and the cart asks for more than remains. */
@@ -29,7 +28,6 @@ export type LoadedCart = {
   currency: string | null
   subtotalMinor: number
   requiresShipping: boolean
-  hasSubscription: boolean
 }
 
 /**
@@ -64,7 +62,6 @@ export const loadCart = async (
       'paymentVariant.sku as sku',
       'paymentVariant.amountMinor as amountMinor',
       'paymentVariant.currency as currency',
-      'paymentVariant.recurringInterval as recurringInterval',
       'paymentVariant.stock as stock',
       'paymentProduct.id as productId',
       'paymentProduct.name as productName',
@@ -84,7 +81,6 @@ export const loadCart = async (
     unitAmountMinor: row.amountMinor,
     lineAmountMinor: row.amountMinor * row.quantity,
     currency: row.currency,
-    recurringInterval: row.recurringInterval,
     requiresShipping: row.requiresShipping === 1,
     stock: row.stock,
     available: row.stock === null || row.stock >= row.quantity,
@@ -99,7 +95,6 @@ export const loadCart = async (
     currency: lines[0]?.currency ?? null,
     subtotalMinor: lines.reduce((total, line) => total + line.lineAmountMinor, 0),
     requiresShipping: lines.some((line) => line.requiresShipping),
-    hasSubscription: lines.some((line) => line.recurringInterval !== null),
   }
 }
 

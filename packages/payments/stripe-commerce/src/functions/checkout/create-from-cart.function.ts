@@ -93,16 +93,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
         `${unavailable.productName} — ${unavailable.variantName} only has ${unavailable.stock} left`
       )
     }
-    if (cart.hasSubscription && cart.lines.some((line) => line.recurringInterval === null)) {
-      throw new BadRequestError(
-        'A cart cannot mix subscription and one-off items — check them out separately'
-      )
-    }
-
     const captureMethod = data.captureMethod ?? 'automatic'
-    if (captureMethod === 'manual' && cart.hasSubscription) {
-      throw new BadRequestError('A subscription cannot be authorised and captured later')
-    }
 
     const lineItems: FormValue[] = []
     for (const line of cart.lines) {
@@ -112,7 +103,6 @@ export const createCartCheckout = pikkuSessionlessFunc({
 
     const orderId = crypto.randomUUID()
     const metadata = { ...(data.metadata ?? {}), paymentOrderId: orderId }
-    const mode = cart.hasSubscription ? 'subscription' : 'payment'
 
     let shipping: Record<string, FormValue> = {}
     if (cart.requiresShipping) {
@@ -154,7 +144,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
     const session = await stripeApi.post<StripeCheckoutSession>(
       '/checkout/sessions',
       {
-        mode,
+        mode: 'payment',
         line_items: lineItems,
         success_url: data.successUrl,
         cancel_url: data.cancelUrl,
@@ -164,10 +154,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
         ...(customer ? { customer: customer.stripeCustomerId } : {}),
         ...shipping,
         metadata,
-        ...(mode === 'payment'
-          ? { payment_intent_data: { metadata, capture_method: captureMethod } }
-          : {}),
-        ...(mode === 'subscription' ? { subscription_data: { metadata } } : {}),
+        payment_intent_data: { metadata, capture_method: captureMethod },
       },
       orderId
     )

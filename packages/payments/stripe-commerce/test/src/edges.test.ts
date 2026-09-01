@@ -331,47 +331,6 @@ test('a product and variant can be saved inactive from the start', async () => {
   assert.equal(variant.active, 0)
 })
 
-test('a subscription event with no status is recorded as unknown rather than null', async () => {
-  const kysely = createTestDb()
-  const body = JSON.stringify({
-    id: 'evt_sub',
-    type: 'customer.subscription.created',
-    data: { object: { id: 'sub_1' } },
-  })
-  const timestamp = Math.floor(Date.now() / 1000)
-  const key = await crypto.subtle.importKey(
-    'raw',
-    new TextEncoder().encode('whsec_test'),
-    { name: 'HMAC', hash: 'SHA-256' },
-    false,
-    ['sign']
-  )
-  const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${timestamp}.${body}`))
-  const signature = `t=${timestamp},v1=${Array.from(new Uint8Array(mac))
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('')}`
-
-  await handleStripeWebhook.func(
-    { kysely, logger: createLogger(), stripeSignature: new StripeSignature('whsec_test') } as any,
-    {},
-    {
-      http: {
-        request: {
-          header: () => signature,
-          headers: () => ({}),
-          arrayBuffer: async () => new TextEncoder().encode(body).buffer,
-        },
-      },
-    } as any
-  )
-
-  const row = await kysely
-    .selectFrom('paymentSubscription')
-    .select(['status'])
-    .executeTakeFirstOrThrow()
-  assert.equal(row.status, 'unknown')
-})
-
 test('a cart checkout for a known buyer attaches the Stripe customer to the order', async () => {
   const kysely = createTestDb()
   const { services, posts } = createServices(kysely, {
