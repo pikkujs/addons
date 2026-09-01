@@ -1,8 +1,24 @@
 {
   "name": "@pikku/addon-stripe-commerce",
   "version": "0.1.0",
+  "description": "A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment, refunds and subscriptions, shipping its own tables. Talks to the Stripe HTTP API directly, with no SDK dependency.",
+  "license": "MIT",
   "type": "module",
-  "description": "A ready-made Stripe payment system: ships its own tables, checkout, and webhook handling. Talks to the Stripe HTTP API directly, with no SDK dependency.",
+  "keywords": [
+    "pikku",
+    "pikku-addon",
+    "stripe",
+    "ecommerce",
+    "payments",
+    "checkout",
+    "subscriptions"
+  ],
+  "homepage": "https://github.com/pikkujs/addons/tree/main/packages/payments/stripe-commerce",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pikkujs/addons.git",
+    "directory": "packages/payments/stripe-commerce"
+  },
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",
     "#pikku/*": [
@@ -16,7 +32,7 @@
       "import": "./dist/src/index.js"
     },
     "./types": {
-      "types": "./types/application-types.d.ts"
+      "types": "./dist/types/application-types.d.ts"
     },
     "./.pikku/*": "./dist/.pikku/addon/*",
     "./.pikku/pikku-metadata.gen.json": "./dist/.pikku/addon/pikku-metadata.gen.json",
@@ -27,13 +43,14 @@
   },
   "files": [
     "dist",
-    "db"
+    "README.md"
   ],
   "scripts": {
     "prebuild": "pikku all && pikku db export",
     "build": "tsc && cp -r .pikku types db dist/",
     "pikku": "pikku all && pikku db export",
-    "ncu": "npx npm-check-updates"
+    "ncu": "npx npm-check-updates",
+    "prepublishOnly": "yarn build"
   },
   "peerDependencies": {
     "@pikku/core": "^0.12.89",
