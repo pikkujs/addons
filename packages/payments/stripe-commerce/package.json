@@ -1,6 +1,6 @@
 {
   "name": "@pikku/addon-stripe-commerce",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment, refunds and subscriptions, shipping its own tables. Talks to the Stripe HTTP API directly, with no SDK dependency.",
   "license": "MIT",
   "type": "module",
