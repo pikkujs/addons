@@ -41,9 +41,13 @@ minted, and the default resolver reads exactly that off better-auth's own `user`
 a `stripeCustomerId` there and on every `subscription` row — has one Stripe
 customer across both halves instead of two, with nothing to wire and nothing
 imported from better-auth. An app without the plugin probes once and falls back
-to the plain session resolver. Subscriptions
-stay in the addon for standalone use, and are hung off the local customer their
-Stripe customer id resolves to.
+to the plain session resolver. Subscriptions stay in the addon and are hung off the local customer their Stripe
+customer id resolves to. Stripe delivers `customer.subscription.*` to every
+registered endpoint, so `payment_subscription` is a ledger of the whole account
+rather than a rival record: `variant_id` is set when the subscription's price
+belongs to this catalogue — a recurring product — and null when it came from
+elsewhere, which is a plan subscription only an auth layer's own table can say
+anything useful about. `listSubscriptions` filters on it.
 
 Subscription period ends read `items.data[0].current_period_end` when the
 account is on API version 2025-03-31 or later, where Stripe moved the boundary

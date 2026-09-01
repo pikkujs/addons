@@ -490,3 +490,51 @@ test('a subscription for a customer this addon never saw is recorded unowned', a
     .executeTakeFirstOrThrow()
   assert.equal(row.customerId, null)
 })
+
+test('a subscription selling one of our variants is marked as a storefront sale', async () => {
+  const kysely = createTestDb()
+  const { variantId } = await seedProduct(kysely, { recurringInterval: 'month' })
+  await kysely
+    .updateTable('paymentVariant')
+    .set({ stripePriceId: 'price_ours' })
+    .where('id', '=', variantId)
+    .execute()
+
+  await deliver(
+    kysely,
+    event('customer.subscription.created', {
+      id: 'sub_shop',
+      status: 'active',
+      cancel_at_period_end: false,
+      items: { data: [{ price: { id: 'price_ours' } }] },
+    })
+  )
+
+  const row = await kysely
+    .selectFrom('paymentSubscription')
+    .selectAll()
+    .executeTakeFirstOrThrow()
+  assert.equal(row.variantId, variantId)
+})
+
+test("a plan subscription created elsewhere is recorded, and not ours", async () => {
+  const kysely = createTestDb()
+  await seedProduct(kysely, { recurringInterval: 'month' })
+
+  await deliver(
+    kysely,
+    event('customer.subscription.created', {
+      id: 'sub_plan',
+      status: 'active',
+      cancel_at_period_end: false,
+      items: { data: [{ price: { id: 'price_better_auth' } }] },
+    })
+  )
+
+  const row = await kysely
+    .selectFrom('paymentSubscription')
+    .selectAll()
+    .executeTakeFirstOrThrow()
+  assert.equal(row.stripePriceId, 'price_better_auth')
+  assert.equal(row.variantId, null)
+})

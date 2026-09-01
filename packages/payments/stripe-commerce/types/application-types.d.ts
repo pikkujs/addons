@@ -155,6 +155,17 @@ export interface PaymentDatabase {
     customerId: string | null
     stripeSubscriptionId: string
     stripePriceId: string | null
+    /**
+     * The catalogue variant this subscription sells, when it is one of ours.
+     *
+     * Stripe delivers `customer.subscription.*` to every registered endpoint,
+     * so this table sees the whole account — including the plan subscriptions
+     * better-auth created through its own checkout. A set `variantId` is what
+     * separates a storefront sale, a recurring product with a price in this
+     * catalogue, from a plan subscription that only better-auth's table can
+     * say anything useful about.
+     */
+    variantId: string | null
     status: string
     currentPeriodEnd: string | null
     cancelAtPeriodEnd: number

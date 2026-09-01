@@ -5,7 +5,12 @@ import { createServices, createTestDb } from './harness.js'
 
 const seedSubscription = async (
   kysely: ReturnType<typeof createTestDb>,
-  row: { stripeSubscriptionId: string; status: string; cancelAtPeriodEnd?: 0 | 1 }
+  row: {
+    stripeSubscriptionId: string
+    status: string
+    cancelAtPeriodEnd?: 0 | 1
+    variantId?: string | null
+  }
 ) => {
   const now = new Date().toISOString()
   await kysely
@@ -15,6 +20,7 @@ const seedSubscription = async (
       customerId: null,
       stripeSubscriptionId: row.stripeSubscriptionId,
       stripePriceId: 'price_1',
+      variantId: row.variantId ?? null,
       status: row.status,
       currentPeriodEnd: '2026-09-30T00:00:00.000Z',
       cancelAtPeriodEnd: row.cancelAtPeriodEnd ?? 0,
@@ -53,4 +59,24 @@ test('filters by Stripe status and limits', async () => {
 
   const limited = await listSubscriptions.func(services, { limit: 1 }, {} as any)
   assert.equal(limited?.length, 1)
+})
+
+test('storefront sales and plan subscriptions from elsewhere can be told apart', async () => {
+  const kysely = createTestDb()
+  await seedSubscription(kysely, {
+    stripeSubscriptionId: 'sub_shop',
+    status: 'active',
+    variantId: 'variant_1',
+  })
+  await seedSubscription(kysely, { stripeSubscriptionId: 'sub_plan', status: 'active' })
+  const { services } = createServices(kysely)
+
+  const shop = await listSubscriptions.func(services, { storefront: true }, {} as any)
+  assert.deepEqual(shop?.map((r) => r.stripeSubscriptionId), ['sub_shop'])
+
+  const plans = await listSubscriptions.func(services, { storefront: false }, {} as any)
+  assert.deepEqual(plans?.map((r) => r.stripeSubscriptionId), ['sub_plan'])
+
+  const both = await listSubscriptions.func(services, {}, {} as any)
+  assert.equal(both?.length, 2)
 })

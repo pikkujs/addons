@@ -70,6 +70,19 @@ keeps the Stripe customer they already have.
 An app whose billing entity is neither the session user nor its org replaces the
 service outright, from its own `pikkuServices` factory.
 
+## Subscriptions
+
+Stripe delivers `customer.subscription.*` to every registered endpoint, so with
+both webhooks wired `payment_subscription` sees the whole account — storefront
+sales and the plan subscriptions an auth layer created through its own checkout.
+It is a ledger, not a rival record: better-auth's table stays the thing that
+says who has access.
+
+`variant_id` is what separates them. It is set when the subscription's Stripe
+price belongs to a variant in this catalogue — a recurring product, a
+subscription box — and null when the subscription came from somewhere else.
+`listSubscriptions` takes a `storefront` filter over exactly that.
+
 ## Secrets and variables
 
 - `STRIPE_SECRET_KEY` — required

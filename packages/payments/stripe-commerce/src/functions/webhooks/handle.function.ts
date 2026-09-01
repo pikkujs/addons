@@ -32,6 +32,26 @@ type SubscriptionItems =
   | undefined
 
 /**
+ * Maps a Stripe price onto the catalogue variant that owns it, which is what
+ * marks a subscription as a storefront sale rather than one of the plan
+ * subscriptions better-auth created — this receiver sees both.
+ */
+const localVariantId = async (
+  kysely: Kysely<PaymentDatabase>,
+  stripePriceId: string | null
+): Promise<string | null> => {
+  if (!stripePriceId) {
+    return null
+  }
+  const row = await kysely
+    .selectFrom('paymentVariant')
+    .select(['id'])
+    .where('stripePriceId', '=', stripePriceId)
+    .executeTakeFirst()
+  return row?.id ?? null
+}
+
+/**
  * Maps a Stripe customer id onto this addon's row, so a subscription created
  * anywhere — the storefront, a billing portal, the dashboard — hangs off the
  * same buyer. Null when the customer was never seen here, which is what a
@@ -185,13 +205,16 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
             asEpochString(object.current_period_end) ??
             asEpochString(firstItem?.current_period_end)
           const customerId = await localCustomerId(kysely, asString(object.customer))
+          const stripePriceId = firstItem?.price?.id ?? null
+          const variantId = await localVariantId(kysely, stripePriceId)
           await kysely
             .insertInto('paymentSubscription')
             .values({
               id: crypto.randomUUID(),
               customerId,
               stripeSubscriptionId: subscriptionId,
-              stripePriceId: firstItem?.price?.id ?? null,
+              stripePriceId,
+              variantId,
               status: asString(object.status) ?? 'unknown',
               currentPeriodEnd,
               cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
@@ -201,6 +224,7 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
             .onConflict((oc) =>
               oc.column('stripeSubscriptionId').doUpdateSet({
                 ...(customerId ? { customerId } : {}),
+                ...(variantId ? { variantId } : {}),
                 status: asString(object.status) ?? 'unknown',
                 currentPeriodEnd,
                 cancelAtPeriodEnd: object.cancel_at_period_end === true ? 1 : 0,
