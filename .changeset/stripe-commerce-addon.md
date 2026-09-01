@@ -52,3 +52,14 @@ anything useful about. `listSubscriptions` filters on it.
 Subscription period ends read `items.data[0].current_period_end` when the
 account is on API version 2025-03-31 or later, where Stripe moved the boundary
 off the subscription and onto each item.
+
+Reads are scoped to the buyer: with a session, `getOrder`, `listOrders` and
+`listSubscriptions` return only what the resolved owner owns, and the explicit
+`ownerId` filter is for a back office wired without one. A guest customer is
+only claimed on an email the owner record carries, never one the caller typed.
+
+Refunds are recorded in `payment_refund` keyed by Stripe's own refund id, and
+the order total moves by a delta the database applies, so a replayed
+idempotency key or two operators refunding at once cannot double-count or lose
+a refund. A webhook that fails to apply releases its event row so Stripe's
+retry is not swallowed as a duplicate.
