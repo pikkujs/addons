@@ -26,7 +26,7 @@ defineSecret({
 
 defineCredential({
   name: 'googleAnalyticsOAuth',
-  displayName: 'Google Analytics 4 OAuth2',
+  displayName: 'Google Analytics 4 Reporting',
   description: 'Google OAuth2 credentials for GA4 Data API (reporting)',
   type: 'singleton',
   schema: googleAnalyticsOAuthSchema,

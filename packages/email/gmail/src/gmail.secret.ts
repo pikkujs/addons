@@ -3,7 +3,7 @@ import { z } from 'zod'
 
 defineCredential({
   name: 'gmailOAuth',
-  displayName: 'Gmail OAuth2',
+  displayName: 'Gmail',
   description: 'Google OAuth2 secrets for Gmail API access',
   type: 'singleton',
   schema: z.object({
