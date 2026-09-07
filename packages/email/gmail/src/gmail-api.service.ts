@@ -37,7 +37,7 @@ const base64Url = (value: string): string =>
     .replace(/=+$/, '')
 
 export interface GmailCredentialResolver {
-  get<T = unknown>(name: string): Promise<T | null>
+  getCredential<T = unknown>(name: string): Promise<T | null>
 }
 
 export class GmailService implements EmailService {
@@ -51,7 +51,9 @@ export class GmailService implements EmailService {
    * so it is resolved per-request rather than cached on the service.
    */
   private async authorization(): Promise<string> {
-    const cred = await this.credentials.get<{ accessToken: string }>('gmailOAuth')
+    const cred = await this.credentials.getCredential<{ accessToken: string }>(
+      'gmailOAuth'
+    )
     if (!cred?.accessToken) {
       throw new UnauthorizedError('No Gmail connection — connect Gmail first')
     }
