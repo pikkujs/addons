@@ -49,7 +49,7 @@ export interface GCSBucket {
 }
 
 export interface GCSCredentialResolver {
-  get<T = unknown>(name: string): Promise<T | null>
+  getCredential<T = unknown>(name: string): Promise<T | null>
 }
 
 export class GoogleCloudStorageService {
@@ -63,7 +63,7 @@ export class GoogleCloudStorageService {
    * so it is resolved per-request rather than cached on the service.
    */
   private async authorization(): Promise<string> {
-    const cred = await this.credentials.get<{ accessToken: string }>(
+    const cred = await this.credentials.getCredential<{ accessToken: string }>(
       'googleCloudStorageOAuth'
     )
     if (!cred?.accessToken) {

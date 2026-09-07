@@ -80,7 +80,7 @@ export interface MetadataResponse {
 }
 
 export interface GoogleAnalyticsCredentialResolver {
-  get<T = unknown>(name: string): Promise<T | null>
+  getCredential<T = unknown>(name: string): Promise<T | null>
 }
 
 export class GoogleAnalyticsReportingService {
@@ -94,7 +94,7 @@ export class GoogleAnalyticsReportingService {
    * so it is resolved per-request rather than cached on the service.
    */
   private async authorization(): Promise<string> {
-    const cred = await this.credentials.get<{ accessToken: string }>(
+    const cred = await this.credentials.getCredential<{ accessToken: string }>(
       'googleAnalyticsOAuth'
     )
     if (!cred?.accessToken) {

@@ -1,15 +1,26 @@
 import { GoogleCloudStorageService } from './google-cloud-storage-api.service.js'
-import { pikkuAddonServices } from '#pikku/addon/setup'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { credentials, variables }
-) => {
-  const projectId = await variables.get('GOOGLE_CLOUD_STORAGE_PROJECT_ID')
-  if (!projectId) {
-    throw new Error('GOOGLE_CLOUD_STORAGE_PROJECT_ID variable is required')
+/**
+ * Built per wire rather than once per deployment, because
+ * `googleCloudStorageOAuth` may be either a single service account or one
+ * account per user — the wiring decides, and only the wire knows whose
+ * request this is.
+ */
+export const createWireServices = pikkuAddonWireServices(
+  async ({ variables }, wire) => {
+    const getCredential = wire.getCredential
+    if (!getCredential) {
+      throw new Error('Credential resolution is not available in this runtime')
+    }
+    const projectId = await variables.get('GOOGLE_CLOUD_STORAGE_PROJECT_ID')
+    if (!projectId) {
+      throw new Error('GOOGLE_CLOUD_STORAGE_PROJECT_ID variable is required')
+    }
+    const googleCloudStorage = new GoogleCloudStorageService(projectId, {
+      getCredential,
+    })
+
+    return { googleCloudStorage }
   }
-  const googleCloudStorage = new GoogleCloudStorageService(projectId, credentials)
-
-  return { googleCloudStorage }
-})
+)
