@@ -23,9 +23,9 @@ jobs:
       matrix: ${{ steps.find.outputs.matrix }}
       has_addons: ${{ steps.find.outputs.has_addons }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: corepack enable
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: yarn
@@ -62,7 +62,7 @@ jobs:
   #   name: Verify changesets for changed packages
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v4
+  #     - uses: actions/checkout@v7
   #       with:
   #         fetch-depth: 0
   #     - run: |
@@ -144,10 +144,10 @@ jobs:
       fail-fast: false
       matrix: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: corepack enable
         shell: bash
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: yarn
@@ -161,10 +161,10 @@ jobs:
     needs: [discover, build]
     if: always() && !failure() && !cancelled()
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - run: corepack enable
         shell: bash
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
           node-version: 22
           cache: yarn
@@ -173,11 +173,12 @@ jobs:
 
       - name: Create Release Pull Request or Publish
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
-          version: node .github/changeset-version.cjs
-          publish: yarn release
-          createGithubReleases: false
+          version-script: node .github/changeset-version.cjs
+          publish-script: yarn release
+          create-github-releases: false
+          push-git-tags: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
@@ -199,7 +200,7 @@ jobs:
               echo "::warning::Registry ingest failed for $name@$version — re-run with scripts/backfill-registry.sh"
               failed+=("$name@$version")
             fi
-          done < <(echo '${{ steps.changesets.outputs.publishedPackages }}' | \
+          done < <(echo '${{ steps.changesets.outputs.published-packages }}' | \
             node -e "
               const pkgs = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
               for (const pkg of pkgs) {
