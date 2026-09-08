@@ -16,7 +16,7 @@ jobs:
     name: Ingest into registry
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Ingest packages
         run: |
           echo '${{ github.event.inputs.packages }}' | \
