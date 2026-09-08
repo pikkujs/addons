@@ -27,6 +27,10 @@ set -uo pipefail
 # checkout asks for versions that were never published, npm 404s, and the ingest
 # reports them as failures.
 #
+# `--reconcile` additionally skips any package whose name npm has never served —
+# a package added here but not yet released is not a registry gap. `--all` and an
+# explicit package list do not skip: naming a package is asking for it.
+#
 # Every registry in registry-targets.sh (staging and production) is reconciled,
 # each against its own catalogue. Pin a single one with REGISTRY_URL=…
 
@@ -71,6 +75,28 @@ read_specs() {
   done <<< "$1"
 }
 
+# A package whose NAME has never existed on npm is not a registry gap: it is a
+# package this repo has added but not yet released. `--reconcile` exists to make
+# the registry match what npm actually serves, so those are skipped rather than
+# retried — notify-registry.sh spends ~8 minutes of backoff per package riding
+# out propagation lag, and no amount of waiting publishes something for the
+# first time. Left in, one unreleased package fails the scheduled reconcile
+# every day for as long as it stays unreleased (@pikku/addon-stripe-commerce did
+# exactly that from 2026-09-02, ~16 minutes a night, and the red run then hides
+# whatever else breaks).
+#
+# This is deliberately about the NAME, not the version. A name npm has never
+# heard of cannot be lag. A known name at an unpublished version IS the lag case
+# the retry budget is for, and still gets it.
+never_published() {
+  local name="$1" out
+  out=$(npm view "$name" version 2>&1) && return 1
+  case "$out" in
+    *E404*|*'is not in this registry'*|*'404 Not Found'*) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
 # Ingest the resolved specs into ONE registry. Each environment is reconciled
 # against its own catalogue — staging and prod are routinely at different states
 # (a fresh prod reset, a staging that has never been ingested), so a single
@@ -86,6 +112,22 @@ backfill_target() {
         return 1
       fi
       read_specs "$diff_out"
+
+      local kept=() unreleased=() spec_name
+      for spec_name in "${specs[@]}"; do
+        if never_published "${spec_name%@*}"; then
+          unreleased+=("${spec_name%@*}")
+        else
+          kept+=("$spec_name")
+        fi
+      done
+      if [ ${#unreleased[@]} -gt 0 ]; then
+        echo "Skipping ${#unreleased[@]} package(s) never published to npm:"
+        printf '  - %s\n' "${unreleased[@]}"
+        echo "  Release them and the next reconcile picks them up."
+        echo
+      fi
+      specs=("${kept[@]+"${kept[@]}"}")
 
       if [ ${#specs[@]} -eq 0 ]; then
         echo "$url is already in sync with the checkout — nothing to do."
