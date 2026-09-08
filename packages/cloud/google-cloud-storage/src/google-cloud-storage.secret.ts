@@ -3,7 +3,7 @@ import { defineCredential } from '@pikku/core/credential'
 
 defineCredential({
   name: 'googleCloudStorageOAuth',
-  displayName: 'Google Cloud Storage OAuth2',
+  displayName: 'Google Cloud Storage',
   description: 'Google OAuth2 credentials for Cloud Storage API access',
   type: 'singleton',
   schema: z.object({
