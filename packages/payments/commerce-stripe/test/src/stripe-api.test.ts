@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test, { afterEach } from 'node:test'
-import { StripeApi } from '@pikku/addon-stripe-commerce'
+import { StripeApi } from '@pikku/addon-commerce-stripe'
 
 type Call = { url: string; init: RequestInit }
 

@@ -3014,6 +3014,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-commerce-stripe@workspace:*, @pikku/addon-commerce-stripe@workspace:packages/payments/commerce-stripe":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-commerce-stripe@workspace:packages/payments/commerce-stripe"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    kysely: "npm:^0.29.5"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    kysely: ^0.29.0
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-compression@workspace:*, @pikku/addon-compression@workspace:packages/data/compression":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-compression@workspace:packages/data/compression"
@@ -5165,22 +5181,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-stripe-commerce@workspace:*, @pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce":
-  version: 0.0.0-use.local
-  resolution: "@pikku/addon-stripe-commerce@workspace:packages/payments/stripe-commerce"
-  dependencies:
-    "@pikku/cli": "npm:^0.12.111"
-    "@pikku/core": "npm:^0.12.89"
-    kysely: "npm:^0.29.5"
-    typescript: "npm:^5.7.2"
-    zod: "npm:^4"
-  peerDependencies:
-    "@pikku/core": ^0.12.89
-    kysely: ^0.29.0
-    zod: ^4
-  languageName: unknown
-  linkType: soft
-
 "@pikku/addon-stripe@workspace:*, @pikku/addon-stripe@workspace:packages/payments/stripe":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-stripe@workspace:packages/payments/stripe"
@@ -6287,6 +6287,20 @@ __metadata:
     tsx: "npm:^4"
     typescript: "npm:^5.9"
     zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-commerce-stripe@workspace:packages/payments/commerce-stripe/test":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-commerce-stripe@workspace:packages/payments/commerce-stripe/test"
+  dependencies:
+    "@pikku/addon-commerce-stripe": "workspace:*"
+    "@types/better-sqlite3": "npm:^9.6.0"
+    "@types/node": "npm:^24"
+    better-sqlite3: "npm:^13.0.3"
+    kysely: "npm:^0.29.5"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
   languageName: unknown
   linkType: soft
 
@@ -8173,20 +8187,6 @@ __metadata:
     tsx: "npm:^4"
     typescript: "npm:^5.9"
     zod: "npm:^4"
-  languageName: unknown
-  linkType: soft
-
-"@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test":
-  version: 0.0.0-use.local
-  resolution: "@pikku/test-stripe-commerce@workspace:packages/payments/stripe-commerce/test"
-  dependencies:
-    "@pikku/addon-stripe-commerce": "workspace:*"
-    "@types/better-sqlite3": "npm:^9.6.0"
-    "@types/node": "npm:^24"
-    better-sqlite3: "npm:^13.0.3"
-    kysely: "npm:^0.29.5"
-    tsx: "npm:^4"
-    typescript: "npm:^5.9"
   languageName: unknown
   linkType: soft
 

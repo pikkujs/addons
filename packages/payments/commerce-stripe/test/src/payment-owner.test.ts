@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import test from 'node:test'
 import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
-import { BetterAuthPaymentOwner, SessionPaymentOwner } from '@pikku/addon-stripe-commerce'
+import { BetterAuthPaymentOwner, SessionPaymentOwner } from '@pikku/addon-commerce-stripe'
 
 test('the default owner is the session user', async () => {
   const owner = new SessionPaymentOwner()

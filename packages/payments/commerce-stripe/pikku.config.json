@@ -7,8 +7,8 @@
   ],
   "outDir": "./.pikku",
   "addon": {
-    "displayName": "Stripe Payments",
-    "description": "A ready-made Stripe payment system with its own tables, checkout and webhook handling",
+    "displayName": "Stripe Commerce",
+    "description": "A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment and refunds, shipping its own tables. Talks the Stripe HTTP API directly, with no SDK dependency.",
     "categories": [
       "Catalogue",
       "Cart",
@@ -18,6 +18,6 @@
       "Customers",
       "Webhooks"
     ],
-    "icon": "./stripe.svg"
+    "icon": "./commerce-stripe.svg"
   }
 }

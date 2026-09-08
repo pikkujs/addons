@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { getCart, setCartItem } from '@pikku/addon-stripe-commerce'
+import { getCart, setCartItem } from '@pikku/addon-commerce-stripe'
 import { createServices, createTestDb, seedProduct } from './harness.js'
 
 test('getCart with no token opens a cart and hands back its token', async () => {

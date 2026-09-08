@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { archiveProduct, listProducts, saveProduct } from '@pikku/addon-stripe-commerce'
+import { archiveProduct, listProducts, saveProduct } from '@pikku/addon-commerce-stripe'
 import { createServices, createTestDb, seedProduct } from './harness.js'
 
 const catalogueReplies = {
