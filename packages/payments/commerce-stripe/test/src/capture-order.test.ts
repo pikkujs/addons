@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { captureOrder } from '@pikku/addon-stripe-commerce'
+import { captureOrder } from '@pikku/addon-commerce-stripe'
 import { createTestDb, seedCartOrder, seedProduct } from './harness.js'
 
 type Post = { path: string; body: Record<string, unknown>; idempotencyKey?: string }

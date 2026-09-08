@@ -1,10 +1,10 @@
-# @pikku/addon-stripe-commerce
+# @pikku/addon-commerce-stripe
 
 ## 0.1.1
 
 ### Patch Changes
 
-- d378ff5: Add `@pikku/addon-stripe-commerce`, a self-contained storefront addon: catalogue,
+- d378ff5: Add `@pikku/addon-commerce-stripe`, a self-contained storefront addon: catalogue,
   cart, checkout, orders, fulfilment and refunds, with the tables it needs shipped
   as addon schema for `pikku db generate`.
 

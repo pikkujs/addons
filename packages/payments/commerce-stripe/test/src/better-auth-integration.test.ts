@@ -10,7 +10,7 @@ import {
   handleStripeWebhook,
   setCartItem,
   StripeSignature,
-} from '@pikku/addon-stripe-commerce'
+} from '@pikku/addon-commerce-stripe'
 import { createServices, seedProduct } from './harness.js'
 
 const SCHEMA = fileURLToPath(new URL('../../db/sqlite/0001-payments.sql', import.meta.url))

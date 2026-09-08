@@ -1,4 +1,4 @@
-# @pikku/addon-stripe-commerce
+# @pikku/addon-commerce-stripe
 
 A ready-made Stripe storefront: catalogue, cart, checkout, orders, fulfilment
 and refunds, with the tables it needs shipped as addon schema.
@@ -24,7 +24,7 @@ compare; request bodies are form-encoded in-package.
 ## Wiring
 
 ```ts
-wireAddon({ name: 'shop', package: '@pikku/addon-stripe-commerce' })
+wireAddon({ name: 'shop', package: '@pikku/addon-commerce-stripe' })
 
 wireHTTP({
   method: 'post',

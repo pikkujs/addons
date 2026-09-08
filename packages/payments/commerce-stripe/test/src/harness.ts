@@ -2,9 +2,9 @@ import { readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
-import type { PaymentDatabase } from '@pikku/addon-stripe-commerce/types'
-import { SessionPaymentOwner } from '@pikku/addon-stripe-commerce'
-import type { PaymentOwner } from '@pikku/addon-stripe-commerce'
+import type { PaymentDatabase } from '@pikku/addon-commerce-stripe/types'
+import { SessionPaymentOwner } from '@pikku/addon-commerce-stripe'
+import type { PaymentOwner } from '@pikku/addon-commerce-stripe'
 
 const SCHEMA = fileURLToPath(
   new URL('../../db/sqlite/0001-payments.sql', import.meta.url)
