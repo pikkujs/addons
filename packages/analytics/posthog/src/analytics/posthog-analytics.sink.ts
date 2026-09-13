@@ -29,10 +29,6 @@ export class PostHogAnalyticsSink implements AnalyticsService {
     this.projectApiKey = key
   }
 
-  async record(event: AnalyticsRecord): Promise<void> {
-    await this.write([event])
-  }
-
   async write(batch: AnalyticsRecord[]): Promise<void> {
     if (batch.length === 0) return
 
