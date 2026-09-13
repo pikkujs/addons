@@ -4685,6 +4685,7 @@ __metadata:
   dependencies:
     "@pikku/cli": "npm:^0.12.111"
     "@pikku/core": "npm:^0.12.89"
+    tsx: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
@@ -5385,6 +5386,21 @@ __metadata:
   dependencies:
     "@pikku/cli": "npm:^0.12.111"
     "@pikku/core": "npm:^0.12.89"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
+"@pikku/addon-unleash@workspace:packages/devops/unleash":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-unleash@workspace:packages/devops/unleash"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    tsx: "npm:^4"
     typescript: "npm:^5.7.2"
     zod: "npm:^4"
   peerDependencies:
