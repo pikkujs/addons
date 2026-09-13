@@ -36,10 +36,6 @@ export class MetaConversionsSink implements AnalyticsService {
     private readonly options: MetaConversionsSinkOptions = {}
   ) {}
 
-  async record(event: AnalyticsRecord): Promise<void> {
-    await this.write([event])
-  }
-
   async write(batch: AnalyticsRecord[]): Promise<void> {
     const events: MetaEvent[] = []
     for (const record of batch) {
