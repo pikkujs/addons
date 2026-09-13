@@ -21,14 +21,19 @@ export const eventsCapture = pikkuSessionlessFunc({
   input: EventsCaptureInput,
   output: EventsCaptureOutput,
   func: async ({ posthog }, data) => {
-    await posthog.request('POST', 'capture', {
-      body: {
-        api_key: posthog.apiKey,
-        distinct_id: data.distinctId,
-        event: data.event,
-        properties: data.properties || {},
-        timestamp: data.timestamp,
-      },
+    if (!posthog.projectApiKey) {
+      throw new Error(
+        'Capturing an event needs `projectApiKey` in POSTHOG_CREDENTIALS: ' +
+          'ingestion authenticates with the project key, and PostHog rejects ' +
+          'the personal one.'
+      )
+    }
+    await posthog.ingest('capture', {
+      api_key: posthog.projectApiKey,
+      distinct_id: data.distinctId,
+      event: data.event,
+      properties: data.properties || {},
+      timestamp: data.timestamp,
     })
     return { status: 1 }
   },
