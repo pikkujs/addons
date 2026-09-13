@@ -11,19 +11,23 @@ export interface PostHogAnalyticsMapperOptions {
  * I/O, no batching, no client.
  *
  * `distinct_id` is the identity PostHog joins every other event on, so it must
- * be stable for one person across sign-in. `pikkuUserId` is the fallback rather
- * than a random id: it survives the anonymous half of a session, where a
- * per-record id would make each event its own person.
+ * be stable for one person across sign-in. Returns `undefined` where the record
+ * carries no id at all: a shared literal would be worse than dropping, since it
+ * merges every anonymous visitor into a single person whose funnel is the sum
+ * of everyone's. `anonymousId` is what an app wires to stop that being the
+ * choice — see `anonymousAnalyticsIdentity`.
  */
 export class PostHogAnalyticsMapper {
   constructor(private readonly options: PostHogAnalyticsMapperOptions = {}) {}
 
-  toEvent(record: AnalyticsRecord): PostHogCaptureEvent {
-    const { userId, orgId, pikkuUserId } = record.userIdentity
+  toEvent(record: AnalyticsRecord): PostHogCaptureEvent | undefined {
+    const { userId, orgId, pikkuUserId, anonymousId } = record.userIdentity
+    const distinctId = userId ?? pikkuUserId ?? anonymousId
+    if (!distinctId) return undefined
 
     return {
       event: this.options.nameMap?.[record.name] ?? record.name,
-      distinct_id: userId ?? pikkuUserId ?? 'anonymous',
+      distinct_id: distinctId,
       timestamp: record.occurredAt,
       properties: {
         ...record.props,

@@ -10,3 +10,4 @@ export type {
   SegmentTrackCall,
   SegmentAnalyticsMapperOptions,
 } from './analytics/segment-analytics-mapper.js'
+export * from './create-segment.js'
