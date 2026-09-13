@@ -22,10 +22,6 @@ export class SegmentAnalyticsSink implements AnalyticsService {
     private readonly mapper = new SegmentAnalyticsMapper()
   ) {}
 
-  async record(event: AnalyticsRecord): Promise<void> {
-    await this.write([event])
-  }
-
   async write(batch: AnalyticsRecord[]): Promise<void> {
     const calls = batch
       .map((record) => this.mapper.toCall(record))
