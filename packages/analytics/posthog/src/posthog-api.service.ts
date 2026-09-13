@@ -8,10 +8,12 @@ export interface RequestOptions {
 export class PosthogService {
   private baseUrl: string
   public readonly apiKey: string
+  public readonly projectApiKey: string | undefined
 
   constructor(private creds: PosthogSecrets) {
     this.baseUrl = creds.host || 'https://app.posthog.com'
     this.apiKey = creds.apiKey
+    this.projectApiKey = creds.projectApiKey
   }
 
   async request<T>(
@@ -44,5 +46,25 @@ export class PosthogService {
     }
 
     return response.json() as Promise<T>
+  }
+
+  /**
+   * Ingestion, which is not the management API: it sits outside `/api/` and
+   * authenticates with the project key carried in the body, so it takes neither
+   * the base path nor the Authorization header `request()` applies.
+   */
+  async ingest(endpoint: 'batch' | 'capture', body: unknown): Promise<void> {
+    const response = await fetch(`${this.baseUrl}/${endpoint}/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+    })
+
+    if (!response.ok) {
+      const errorText = await response.text()
+      throw new Error(
+        `PostHog ingest error (${response.status}): ${errorText}`
+      )
+    }
   }
 }
