@@ -13,3 +13,10 @@ export type {
   GA4MappedEvent,
   GoogleAnalyticsMapperOptions,
 } from './analytics/google-analytics-mapper.js'
+export { googleAnalyticsIdentity } from './analytics/google-analytics-identity.js'
+export type { GoogleAnalyticsIdentityOptions } from './analytics/google-analytics-identity.js'
+export { createGoogleAnalytics } from './create-google-analytics.js'
+export type {
+  CreateGoogleAnalyticsOptions,
+  GoogleAnalyticsAddon,
+} from './create-google-analytics.js'
