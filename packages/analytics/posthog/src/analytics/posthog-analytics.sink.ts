@@ -36,9 +36,14 @@ export class PostHogAnalyticsSink implements AnalyticsService {
   async write(batch: AnalyticsRecord[]): Promise<void> {
     if (batch.length === 0) return
 
+    const events = batch
+      .map((record) => this.mapper.toEvent(record))
+      .filter((event) => event !== undefined)
+    if (events.length === 0) return
+
     const body: PostHogBatchBody = {
       api_key: this.projectApiKey,
-      batch: batch.map((record) => this.mapper.toEvent(record)),
+      batch: events,
     }
 
     await this.posthog.ingest('batch', body)
