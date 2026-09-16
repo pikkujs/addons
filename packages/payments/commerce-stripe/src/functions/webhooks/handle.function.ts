@@ -66,8 +66,13 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
   input: HandleStripeWebhookInput,
   output: HandleStripeWebhookOutput,
   tags: ['addon'],
-  func: async ({ stripeSignature, kysely, logger }, _payload, { http }) => {
+  func: async ({ stripeSignatureFor, kysely, logger }, _payload, { http }) => {
     const request = http?.request
+    // Which account's endpoint received this: configured on the URL by the host
+    // app (e.g. `/webhooks/stripe?account=cc-eu`). Absent, the default secret.
+    const rawAccount = request?.query?.()?.account
+    const account = Array.isArray(rawAccount) ? rawAccount[0] : (rawAccount ?? null)
+    const stripeSignature = stripeSignatureFor(account)
     const signature = request?.header('stripe-signature') ?? request?.headers()['stripe-signature']
     if (!signature) {
       throw new UnauthorizedError('Missing stripe-signature header')

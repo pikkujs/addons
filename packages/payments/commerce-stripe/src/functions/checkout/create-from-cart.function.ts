@@ -72,7 +72,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
   input: CreateCartCheckoutInput,
   output: CreateCartCheckoutOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely, paymentOwner }, data, { session: userSession }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session: userSession }) => {
     const found = await kysely
       .selectFrom('paymentCart')
       .select(['id'])
@@ -94,6 +94,11 @@ export const createCartCheckout = pikkuSessionlessFunc({
       )
     }
     const captureMethod = data.captureMethod ?? 'automatic'
+
+    // The account this purchase belongs to, resolved before any Stripe call:
+    // the price and shipping-rate mirrors are per account too.
+    const owner = await paymentOwner.resolve(userSession)
+    const stripeApi = stripeApiFor(owner?.stripeAccount)
 
     const lineItems: FormValue[] = []
     for (const line of cart.lines) {
@@ -138,7 +143,6 @@ export const createCartCheckout = pikkuSessionlessFunc({
     // Created before the session so Stripe attaches the purchase to a real
     // customer: a repeat buyer keeps one customer, and a saved mandate or the
     // billing portal has something to hang off.
-    const owner = await paymentOwner.resolve(userSession)
     const customer = await ensureCustomer(stripeApi, kysely, owner, data.email)
 
     const session = await stripeApi.post<StripeCheckoutSession>(
@@ -171,6 +175,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
         customerId: customer?.id ?? null,
         cartId: cart.id,
         email: data.email ?? null,
+        stripeAccount: owner?.stripeAccount ?? null,
         stripeCheckoutSessionId: session.id,
         stripePaymentIntentId: null,
         amountMinor: session.amount_total ?? cart.subtotalMinor,

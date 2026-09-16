@@ -6,7 +6,7 @@ type Logger = { debug: (message: string) => void }
 
 type BetterAuthTables = {
   user: { id: string; email: string | null; stripeCustomerId: string | null }
-  organization: { id: string; stripeCustomerId: string | null }
+  organization: { id: string; stripeCustomerId: string | null; country?: string | null }
 }
 
 /**
@@ -31,7 +31,9 @@ export class BetterAuthPaymentOwner implements PaymentOwner {
   constructor(
     private readonly kysely: Kysely<BetterAuthTables>,
     private readonly ownerType: 'user' | 'organization' = 'user',
-    private readonly logger?: Logger
+    private readonly logger?: Logger,
+    /** country code → account key; unset means the default account. */
+    private readonly accountByCountry: Record<string, string> = {}
   ) {}
 
   async resolve(session?: CoreUserSession): Promise<PaymentOwnerRef | null> {
@@ -49,7 +51,7 @@ export class BetterAuthPaymentOwner implements PaymentOwner {
         this.ownerType === 'organization'
           ? await this.kysely
               .selectFrom('organization')
-              .select(['stripeCustomerId'])
+              .select(['stripeCustomerId', 'country'])
               .where('id', '=', id)
               .executeTakeFirst()
           : await this.kysely
@@ -58,11 +60,18 @@ export class BetterAuthPaymentOwner implements PaymentOwner {
               .where('id', '=', id)
               .executeTakeFirst()
 
+      const country = (row as { country?: string | null } | undefined)?.country ?? null
+      const stripeAccount =
+        this.ownerType === 'organization' && country
+          ? (this.accountByCountry[country.toLowerCase()] ?? null)
+          : null
+
       return {
         type: this.ownerType,
         id,
         email: (row as { email?: string | null } | undefined)?.email ?? null,
         stripeCustomerId: row?.stripeCustomerId ?? null,
+        stripeAccount,
       }
     } catch (error) {
       this.available = false

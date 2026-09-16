@@ -14,6 +14,13 @@ export type PaymentOwnerRef = {
   id: string
   email?: string | null
   stripeCustomerId?: string | null
+  /**
+   * Which Stripe account this owner's purchases belong to, when the app runs
+   * several (one per jurisdiction, say). The addon maps it to a client through
+   * `STRIPE_ACCOUNTS`; unset means the default account. Only meaningful when
+   * the app configures more than one account.
+   */
+  stripeAccount?: string | null
 }
 
 export interface PaymentOwner {
