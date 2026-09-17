@@ -33,6 +33,12 @@ export const CreateCartCheckoutInput = z.object({
     .boolean()
     .optional()
     .describe('Let Stripe Tax calculate tax. Requires Stripe Tax to be enabled on the account. Defaults to false'),
+  createInvoice: z
+    .boolean()
+    .optional()
+    .describe(
+      'Create a Stripe invoice for this payment, carrying the session metadata — so a one-off purchase produces an invoice the host app can mirror. Defaults to false'
+    ),
   captureMethod: z
     .enum(['automatic', 'manual'])
     .optional()
@@ -206,6 +212,9 @@ export const createCartCheckout = pikkuSessionlessFunc({
         client_reference_id: orderId,
         ...(discounts ? { discounts } : { allow_promotion_codes: data.allowPromotionCodes ?? true }),
         ...(data.automaticTax ? { automatic_tax: { enabled: true } } : {}),
+        ...(data.createInvoice
+          ? { invoice_creation: { enabled: true, invoice_data: { metadata } } }
+          : {}),
         ...(customer ? { customer: customer.stripeCustomerId } : {}),
         ...shipping,
         metadata,
