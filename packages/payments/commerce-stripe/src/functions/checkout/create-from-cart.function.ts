@@ -39,6 +39,25 @@ export const CreateCartCheckoutInput = z.object({
     .describe(
       'manual authorises the card at checkout and charges it later via captureOrder — use it to avoid refunding an item you cannot ship. One-off payments only; a card authorisation expires after 7 days. Defaults to automatic'
     ),
+  shippingAmountMinor: z
+    .number()
+    .int()
+    .nonnegative()
+    .optional()
+    .describe(
+      'Overrides the shipping charge in minor units, for a caller that prices shipping itself (a per-country rule). Creates a Stripe shipping rate for this amount instead of the stored rates'
+    ),
+  discount: z
+    .object({
+      percentOff: z.number().optional(),
+      amountOffMinor: z.number().int().optional(),
+      currency: z.string().optional(),
+      duration: z.enum(['once', 'forever']).optional(),
+    })
+    .optional()
+    .describe(
+      'A discount mirrored to a Stripe coupon and applied to the session. percentOff or amountOffMinor, one of them'
+    ),
   metadata: z.record(z.string(), z.string()).optional().describe('Copied onto the Stripe objects and echoed back on the webhook'),
 })
 
@@ -94,6 +113,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
       )
     }
     const captureMethod = data.captureMethod ?? 'automatic'
+    const currency = cart.lines[0]!.currency
 
     // The account this purchase belongs to, resolved before any Stripe call:
     // the price and shipping-rate mirrors are per account too.
@@ -111,25 +131,37 @@ export const createCartCheckout = pikkuSessionlessFunc({
 
     let shipping: Record<string, FormValue> = {}
     if (cart.requiresShipping) {
-      const rates = await kysely
-        .selectFrom('paymentShippingRate')
-        .selectAll()
-        .where('active', '=', 1)
-        .orderBy('position', 'asc')
-        .execute()
-
       const shippingOptions: FormValue[] = []
-      for (const rate of rates) {
-        let rateId = rate.stripeShippingRateId
-        if (!rateId) {
-          rateId = await pushShippingRate(stripeApi, rate)
-          await kysely
-            .updateTable('paymentShippingRate')
-            .set({ stripeShippingRateId: rateId, updatedAt: new Date().toISOString() })
-            .where('id', '=', rate.id)
-            .execute()
-        }
+      if (data.shippingAmountMinor != null) {
+        // The caller priced shipping itself; one Stripe rate carries that amount.
+        const rateId = await pushShippingRate(stripeApi, {
+          name: 'Shipping',
+          amountMinor: data.shippingAmountMinor,
+          currency,
+          deliveryMinDays: null,
+          deliveryMaxDays: null,
+        })
         shippingOptions.push({ shipping_rate: rateId })
+      } else {
+        const rates = await kysely
+          .selectFrom('paymentShippingRate')
+          .selectAll()
+          .where('active', '=', 1)
+          .orderBy('position', 'asc')
+          .execute()
+
+        for (const rate of rates) {
+          let rateId = rate.stripeShippingRateId
+          if (!rateId) {
+            rateId = await pushShippingRate(stripeApi, rate)
+            await kysely
+              .updateTable('paymentShippingRate')
+              .set({ stripeShippingRateId: rateId, updatedAt: new Date().toISOString() })
+              .where('id', '=', rate.id)
+              .execute()
+          }
+          shippingOptions.push({ shipping_rate: rateId })
+        }
       }
 
       shipping = {
@@ -138,6 +170,25 @@ export const createCartCheckout = pikkuSessionlessFunc({
         },
         ...(shippingOptions.length > 0 ? { shipping_options: shippingOptions } : {}),
       }
+    }
+
+    // A caller discount becomes a one-off Stripe coupon: Stripe owns the pricing
+    // maths at checkout, and the amount is mirrored locally only for the order
+    // fallback when the session does not echo a total.
+    let discounts: FormValue[] | undefined
+    let discountMinor = 0
+    if (data.discount && (data.discount.percentOff != null || data.discount.amountOffMinor != null)) {
+      const couponBody: Record<string, FormValue> = { duration: data.discount.duration ?? 'once' }
+      if (data.discount.percentOff != null) {
+        couponBody.percent_off = data.discount.percentOff
+        discountMinor = Math.floor((cart.subtotalMinor * data.discount.percentOff) / 100)
+      } else {
+        couponBody.amount_off = data.discount.amountOffMinor!
+        couponBody.currency = data.discount.currency ?? currency
+        discountMinor = Math.min(data.discount.amountOffMinor!, cart.subtotalMinor)
+      }
+      const coupon = await stripeApi.post<{ id: string }>('/coupons', couponBody, orderId)
+      discounts = [{ coupon: coupon.id }]
     }
 
     // Created before the session so Stripe attaches the purchase to a real
@@ -153,7 +204,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
         success_url: data.successUrl,
         cancel_url: data.cancelUrl,
         client_reference_id: orderId,
-        allow_promotion_codes: data.allowPromotionCodes ?? true,
+        ...(discounts ? { discounts } : { allow_promotion_codes: data.allowPromotionCodes ?? true }),
         ...(data.automaticTax ? { automatic_tax: { enabled: true } } : {}),
         ...(customer ? { customer: customer.stripeCustomerId } : {}),
         ...shipping,
@@ -178,9 +229,11 @@ export const createCartCheckout = pikkuSessionlessFunc({
         stripeAccount: owner?.stripeAccount ?? null,
         stripeCheckoutSessionId: session.id,
         stripePaymentIntentId: null,
-        amountMinor: session.amount_total ?? cart.subtotalMinor,
+        amountMinor:
+          session.amount_total ??
+          cart.subtotalMinor + (data.shippingAmountMinor ?? 0) - discountMinor,
         amountRefundedMinor: 0,
-        currency: session.currency ?? cart.lines[0]!.currency,
+        currency: session.currency ?? currency,
         status: 'pending',
         captureMethod,
         amountCapturedMinor: null,
