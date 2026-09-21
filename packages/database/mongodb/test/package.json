@@ -18,9 +18,9 @@
     "@pikku/cli": "^0.12.159",
     "@testcontainers/mongodb": "^10",
     "@types/node": "^24",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "testcontainers": "^10",
     "tsx": "^4",
-    "typescript": "^5.9",
     "zod": "^4"
   }
 }
