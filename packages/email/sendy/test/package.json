@@ -12,10 +12,10 @@
   },
   "dependencies": {
     "@pikku/addon-sendy": "workspace:*",
-    "@pikku/core": "^0.12.89"
+    "@pikku/core": "^0.12.117"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.111",
+    "@pikku/cli": "^0.12.159",
     "@types/node": "^24",
     "tsx": "^4",
     "typescript": "^5.9",
