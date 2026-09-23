@@ -55,8 +55,8 @@ export const CreateCartCheckoutInput = z.object({
     ),
   discount: z
     .object({
-      percentOff: z.number().optional(),
-      amountOffMinor: z.number().int().optional(),
+      percentOff: z.number().gt(0).max(100).optional(),
+      amountOffMinor: z.number().int().positive().optional(),
       currency: z.string().optional(),
       duration: z.enum(['once', 'forever']).optional(),
     })
@@ -98,6 +98,10 @@ export const createCartCheckout = pikkuSessionlessFunc({
   output: CreateCartCheckoutOutput,
   tags: ['addon'],
   func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session: userSession }) => {
+    if (data.discount && (data.discount.percentOff == null) === (data.discount.amountOffMinor == null)) {
+      throw new BadRequestError('A discount takes exactly one of percentOff or amountOffMinor')
+    }
+
     const found = await kysely
       .selectFrom('paymentCart')
       .select(['id'])

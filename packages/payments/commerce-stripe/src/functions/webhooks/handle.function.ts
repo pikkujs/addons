@@ -71,7 +71,8 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
     // Which account's endpoint received this: configured on the URL by the host
     // app (e.g. `/webhooks/stripe?account=cc-eu`). Absent, the default secret.
     const rawAccount = request?.query?.()?.account
-    const account = Array.isArray(rawAccount) ? rawAccount[0] : (rawAccount ?? null)
+    const firstAccount = Array.isArray(rawAccount) ? rawAccount[0] : rawAccount
+    const account = typeof firstAccount === 'string' ? firstAccount : null
     const stripeSignature = stripeSignatureFor(account)
     const signature = request?.header('stripe-signature') ?? request?.headers()['stripe-signature']
     if (!signature) {

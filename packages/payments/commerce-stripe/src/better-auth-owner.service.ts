@@ -51,7 +51,13 @@ export class BetterAuthPaymentOwner implements PaymentOwner {
         this.ownerType === 'organization'
           ? await this.kysely
               .selectFrom('organization')
-              .select(['stripeCustomerId', 'country'])
+              // `country` is optional in better-auth; only ask for it when
+              // country routing is configured, or its absence disables the lookup.
+              .select(
+                Object.keys(this.accountByCountry).length > 0
+                  ? ['stripeCustomerId', 'country']
+                  : ['stripeCustomerId']
+              )
               .where('id', '=', id)
               .executeTakeFirst()
           : await this.kysely

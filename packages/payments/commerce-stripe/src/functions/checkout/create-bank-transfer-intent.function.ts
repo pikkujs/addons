@@ -12,7 +12,10 @@ export const BankTransferFinancialAddress = z.object({
 
 export const CreateBankTransferIntentInput = z.object({
   amountMinor: z.number().int().positive().describe('Amount to collect, in minor units'),
-  currency: z.string().describe('Three-letter ISO currency code, lowercase'),
+  currency: z
+    .string()
+    .regex(/^[a-z]{3}$/, 'Currency must be a lowercase three-letter code')
+    .describe('Three-letter ISO currency code, lowercase'),
   country: z
     .string()
     .length(2)
@@ -34,6 +37,7 @@ type StripeIntent = {
   id: string
   status?: string
   amount?: number
+  amount_received?: number
   currency?: string
   next_action?: {
     type?: string
@@ -57,7 +61,10 @@ export const mapBankTransferInstructions = (intent: StripeIntent) => {
   return {
     paymentIntentId: intent.id,
     status: intent.status ?? 'unknown',
-    amountRemainingMinor: Number(instructions?.amount_remaining ?? intent.amount ?? 0),
+    amountRemainingMinor: Number(
+      instructions?.amount_remaining ??
+        Math.max((intent.amount ?? 0) - (intent.amount_received ?? 0), 0)
+    ),
     currency: instructions?.currency ?? intent.currency ?? 'eur',
     reference: instructions?.reference ?? null,
     financialAddresses: (instructions?.financial_addresses ?? []).map((address) => ({

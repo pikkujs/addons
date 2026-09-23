@@ -76,8 +76,10 @@ export const ensureCustomer = async (
     return found
   }
 
+  // An owner's own stripeCustomerId (better-auth's) lives on the default
+  // account; a named account gets a customer of its own.
   const stripeCustomerId =
-    owner?.stripeCustomerId ??
+    (account ? null : owner?.stripeCustomerId) ??
     (
       await stripeApi.post<{ id: string }>('/customers', {
         ...(buyerEmail ? { email: buyerEmail } : {}),

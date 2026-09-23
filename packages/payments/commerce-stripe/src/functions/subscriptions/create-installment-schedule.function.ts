@@ -5,7 +5,10 @@ import { ensureCustomer } from '../../lib/customer.js'
 
 export const CreateInstallmentScheduleInput = z.object({
   amountMinor: z.number().int().nonnegative().describe('Total to collect across the installments'),
-  currency: z.string().describe('Three-letter ISO currency code, lowercase'),
+  currency: z
+    .string()
+    .regex(/^[a-z]{3}$/, 'Currency must be a lowercase three-letter code')
+    .describe('Three-letter ISO currency code, lowercase'),
   installments: z.number().int().min(2).max(12).describe('Number of installments'),
   downPaymentPercent: z
     .number()
@@ -66,6 +69,9 @@ export const createInstallmentSchedule = pikkuSessionlessFunc({
     } else {
       perInstallmentMinor = Math.floor(totalMinor / data.installments)
       firstAmountMinor = perInstallmentMinor + (totalMinor - perInstallmentMinor * data.installments)
+    }
+    if (firstAmountMinor <= 0 || perInstallmentMinor <= 0) {
+      throw new BadRequestError('Each installment must be at least one minor currency unit')
     }
 
     const priceFor = async (amountMinor: number): Promise<string> => {
