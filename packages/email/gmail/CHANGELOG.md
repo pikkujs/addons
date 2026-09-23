@@ -1,5 +1,48 @@
 # @pikku/addon-gmail
 
+## 0.1.8
+
+### Patch Changes
+
+- 01f6d60: An OAuth2 credential no longer restates its app secret
+  
+  Every one of these declared a `defineSecret` holding `{ clientId, clientSecret }` for the id its credential already named in `oauth2.appCredentialSecretId`, byte-identical each time — and `gmail`, `google-analytics` and `google-cloud-storage` never declared one at all, so a deployment was never asked for the app credentials their connect flow needs.
+  
+  `@pikku/core` now derives that secret from the credential, typed as `OAuth2AppCredential`, which is the shape the runtime has always read it as. The declarations are deleted; the secret is still there.
+  
+  The three Google credentials also drop the `OAuth2` suffix from their display name, so the console's connect list reads `Gmail` rather than `Gmail OAuth2`.
+  
+  This needs a `@pikku/core` that derives OAuth2 app secrets.
+- 01f6d60: Resolve the Gmail credential through the wire, so one addon serves both a team
+  mailbox and a per-user connection.
+  
+  `GmailService` was built once in `createSingletonServices` from the deployment's
+  credential service. That service has no user, so `gmailOAuth` could only ever be
+  a single deployment-wide account: a product where each user connects their own
+  Gmail read the platform's token, or none at all. It is now built per wire from
+  `wire.getCredential`, which knows whose request it is.
+  
+  `defineCredential` still declares `singleton`, and a deployment that wants one
+  team mailbox needs to change nothing. A deployment that wants per-user
+  connections says so at the wiring:
+  
+  ```ts
+  wireAddon({
+    name: 'gmail',
+    package: '@pikku/addon-gmail',
+    credentialOverrides: { gmailOAuth: { mode: 'wire' } },
+  })
+  ```
+  
+  This needs a `@pikku/core` that resolves a credential by its declared mode
+  rather than by whether a per-user lookup came back empty. On an older core a
+  singleton credential is never loaded for a wire with no user, and every Gmail
+  call fails as unauthorized.
+  
+  The `onMessage` trigger is unchanged and still runs against whatever single
+  account the deployment holds — a trigger fires with no user, so per-user polling
+  needs the trigger to be able to name one.
+
 ## 0.1.7
 
 ### Patch Changes
