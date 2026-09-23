@@ -39,7 +39,7 @@ export const refundOrder = pikkuFunc({
   input: RefundOrderInput,
   output: RefundOrderOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely }, data) => {
+  func: async ({ stripeApiFor, kysely }, data) => {
     const order = await kysely
       .selectFrom('paymentOrder')
       .selectAll()
@@ -48,6 +48,7 @@ export const refundOrder = pikkuFunc({
     if (!order) {
       throw new NotFoundError(`Unknown order ${data.id}`)
     }
+    const stripeApi = stripeApiFor(order.stripeAccount)
     if (!order.stripePaymentIntentId) {
       throw new BadRequestError(`Order ${data.id} has no payment to refund`)
     }

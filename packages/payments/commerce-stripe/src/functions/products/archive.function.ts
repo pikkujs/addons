@@ -4,6 +4,10 @@ import { BadRequestError } from '@pikku/core/errors'
 
 export const ArchiveProductInput = z.object({
   id: z.string().describe('The product to archive'),
+  account: z
+    .string()
+    .optional()
+    .describe('Which Stripe account to mirror the archive onto. Unset means the default account'),
 })
 
 export const ArchiveProductOutput = z.object({
@@ -22,7 +26,8 @@ export const archiveProduct = pikkuFunc({
   input: ArchiveProductInput,
   output: ArchiveProductOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely, logger }, data) => {
+  func: async ({ stripeApiFor, kysely, logger }, data) => {
+    const stripeApi = stripeApiFor(data.account)
     const product = await kysely
       .selectFrom('paymentProduct')
       .selectAll()

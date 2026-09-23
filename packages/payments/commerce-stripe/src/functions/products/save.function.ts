@@ -36,6 +36,10 @@ export const SaveProductInput = z.object({
   active: z.boolean().optional().describe('Defaults to true. Inactive products are hidden from the storefront'),
   metadata: z.record(z.string(), z.string()).optional().describe('Arbitrary key-value pairs stored with the product'),
   variants: z.array(VariantInput).min(1).describe('At least one variant. A simple product has exactly one'),
+  account: z
+    .string()
+    .optional()
+    .describe('Which Stripe account to mirror onto. Unset means the default account'),
 })
 
 export const SaveProductOutput = z.object({
@@ -58,7 +62,8 @@ export const saveProduct = pikkuFunc({
   input: SaveProductInput,
   output: SaveProductOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely, logger }, data) => {
+  func: async ({ stripeApiFor, kysely, logger }, data) => {
+    const stripeApi = stripeApiFor(data.account)
     const now = new Date().toISOString()
     const productId = data.id ?? crypto.randomUUID()
 

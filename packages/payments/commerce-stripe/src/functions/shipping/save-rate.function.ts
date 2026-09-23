@@ -12,6 +12,10 @@ export const SaveShippingRateInput = z.object({
   deliveryMaxDays: z.number().int().nonnegative().nullish().describe('Slowest business days, shown as an estimate'),
   position: z.number().int().optional().describe('Sort order at checkout'),
   active: z.boolean().optional().describe('Defaults to true'),
+  account: z
+    .string()
+    .optional()
+    .describe('Which Stripe account to mirror onto. Unset means the default account'),
 })
 
 export const SaveShippingRateOutput = z.object({
@@ -30,7 +34,8 @@ export const saveShippingRate = pikkuFunc({
   input: SaveShippingRateInput,
   output: SaveShippingRateOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely, logger }, data) => {
+  func: async ({ stripeApiFor, kysely, logger }, data) => {
+    const stripeApi = stripeApiFor(data.account)
     const now = new Date().toISOString()
     const id = data.id ?? crypto.randomUUID()
 

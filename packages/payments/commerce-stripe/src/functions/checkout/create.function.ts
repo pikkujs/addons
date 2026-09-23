@@ -58,7 +58,7 @@ export const createCheckout = pikkuSessionlessFunc({
   input: CreateCheckoutInput,
   output: CreateCheckoutOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely, paymentOwner }, data, { session: userSession }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session: userSession }) => {
     if (!data.priceId && !data.priceData) {
       throw new BadRequestError('Provide either priceId or priceData')
     }
@@ -81,6 +81,7 @@ export const createCheckout = pikkuSessionlessFunc({
     const metadata = { ...(data.metadata ?? {}), paymentOrderId: orderId }
 
     const owner = await paymentOwner.resolve(userSession)
+    const stripeApi = stripeApiFor(owner?.stripeAccount)
     const customer = await ensureCustomer(stripeApi, kysely, owner, data.email)
 
     const session = await stripeApi.post<StripeCheckoutSession>(
@@ -109,6 +110,7 @@ export const createCheckout = pikkuSessionlessFunc({
         customerId: customer?.id ?? null,
         cartId: null,
         email: data.email ?? null,
+        stripeAccount: owner?.stripeAccount ?? null,
         stripeCheckoutSessionId: session.id,
         stripePaymentIntentId: null,
         amountMinor: session.amount_total ?? data.priceData?.amountMinor ?? 0,

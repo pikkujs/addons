@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
 import { StripeSignature, handleStripeWebhook } from '@pikku/addon-commerce-stripe'
-import { createLogger, createTestDb, seedCartOrder, seedProduct } from './harness.js'
+import { createLogger, createTestDb, seedCartOrder, seedProduct, signatureServices } from './harness.js'
 
 const SECRET = 'whsec_test'
 
@@ -44,9 +44,9 @@ const deliver = async (
   const services = {
     kysely,
     logger,
-    stripeSignature: new StripeSignature(
+    ...signatureServices(new StripeSignature(
       options.secret === undefined ? SECRET : options.secret
-    ),
+    )),
   } as any
   const result = await handleStripeWebhook.func(services, {}, httpFor(body, signature) as any)
   return { result, logger }
