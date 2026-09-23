@@ -5408,6 +5408,20 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-typesafe@workspace:*, @pikku/addon-typesafe@workspace:packages/ai/typesafe":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-typesafe@workspace:packages/ai/typesafe"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-uplead@workspace:*, @pikku/addon-uplead@workspace:packages/crm/uplead":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-uplead@workspace:packages/crm/uplead"
@@ -8413,6 +8427,20 @@ __metadata:
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
+    zod: "npm:^4"
+  languageName: unknown
+  linkType: soft
+
+"@pikku/test-typesafe@workspace:packages/ai/typesafe/test":
+  version: 0.0.0-use.local
+  resolution: "@pikku/test-typesafe@workspace:packages/ai/typesafe/test"
+  dependencies:
+    "@pikku/addon-typesafe": "workspace:*"
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    "@types/node": "npm:^24"
+    tsx: "npm:^4"
+    typescript: "npm:^5.9"
     zod: "npm:^4"
   languageName: unknown
   linkType: soft
