@@ -1,5 +1,5 @@
 ---
-'@pikku/addon-typesafe': minor
+'@pikku/addon-typesafe': patch
 ---
 
 Add `@pikku/addon-typesafe`: TypeSafe System One as an addon, so calibrated

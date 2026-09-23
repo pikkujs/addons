@@ -1,6 +1,6 @@
 {
-  "name": "@pikku/addon-posthog",
-  "version": "0.1.6",
+  "name": "@pikku/addon-unleash",
+  "version": "0.0.1",
   "type": "module",
   "imports": {
     "#pikku/*.js": "./dist/.pikku/*.js",

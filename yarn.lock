@@ -4665,6 +4665,7 @@ __metadata:
     "@pikku/cli": "npm:^0.12.159"
     "@pikku/core": "npm:^0.12.117"
     "@typescript/native": "npm:typescript@^7.0.2"
+    tsx: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
     "@pikku/core": ^0.12.117
@@ -5394,16 +5395,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@pikku/addon-typesafe@workspace:*, @pikku/addon-typesafe@workspace:packages/ai/typesafe":
+"@pikku/addon-unleash@workspace:packages/devops/unleash":
   version: 0.0.0-use.local
-  resolution: "@pikku/addon-typesafe@workspace:packages/ai/typesafe"
+  resolution: "@pikku/addon-unleash@workspace:packages/devops/unleash"
   dependencies:
-    "@pikku/cli": "npm:^0.12.111"
-    "@pikku/core": "npm:^0.12.89"
-    typescript: "npm:^5.7.2"
+    "@pikku/cli": "npm:^0.12.159"
+    "@pikku/core": "npm:^0.12.117"
+    "@typescript/native": "npm:typescript@^7.0.2"
+    tsx: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.89
+    "@pikku/core": ^0.12.117
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -8413,20 +8415,6 @@ __metadata:
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
-    zod: "npm:^4"
-  languageName: unknown
-  linkType: soft
-
-"@pikku/test-typesafe@workspace:packages/ai/typesafe/test":
-  version: 0.0.0-use.local
-  resolution: "@pikku/test-typesafe@workspace:packages/ai/typesafe/test"
-  dependencies:
-    "@pikku/addon-typesafe": "workspace:*"
-    "@pikku/cli": "npm:^0.12.111"
-    "@pikku/core": "npm:^0.12.89"
-    "@types/node": "npm:^24"
-    tsx: "npm:^4"
-    typescript: "npm:^5.9"
     zod: "npm:^4"
   languageName: unknown
   linkType: soft
