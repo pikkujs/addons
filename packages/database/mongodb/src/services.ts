@@ -1,5 +1,5 @@
 import { MongoClient } from 'mongodb'
-import type { Db } from 'mongodb'
+import type { Db, MongoClientOptions } from 'mongodb'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
 export type MongodbService = Db & { stop: () => Promise<void> }
@@ -7,7 +7,7 @@ export type MongodbService = Db & { stop: () => Promise<void> }
 export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => {
   const creds = (await secrets.getSecret('MONGODB_CREDENTIALS')).reveal()
 
-  const tlsOptions: Record<string, unknown> = {}
+  const tlsOptions: MongoClientOptions = {}
   if (creds.caCertificate) {
     tlsOptions.tls = true
     tlsOptions.tlsCAFile = creds.caCertificate

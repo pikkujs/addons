@@ -24,7 +24,11 @@ const authorize = async (
     .execute()
 
 const capture = (kysely: unknown, posts: Post[], data: { id: string; amountMinor?: number }) =>
-  captureOrder.func({ stripeApi: stripeApi(posts), kysely } as any, data, {} as any)
+  captureOrder.func(
+    { stripeApiFor: () => stripeApi(posts), kysely } as any,
+    data,
+    {} as any
+  )
 
 test('captures the full authorised amount and releases the order', async () => {
   const kysely = createTestDb()

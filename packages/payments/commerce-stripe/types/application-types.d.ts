@@ -33,6 +33,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     stripeCustomerId: string
     email: string | null
+    /** Which Stripe account this customer belongs to; null = default. */
+    stripeAccount: string | null
     createdAt: string
   }
   paymentProduct: {
@@ -83,6 +85,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     email: string | null
     status: 'open' | 'converted' | 'abandoned'
+    /** Which Stripe account this cart belongs to; null = default. */
+    stripeAccount: string | null
     createdAt: string
     updatedAt: string
   }
@@ -99,6 +103,8 @@ export interface PaymentDatabase {
     customerId: string | null
     cartId: string | null
     email: string | null
+    /** Which Stripe account this order was created on; null = default. */
+    stripeAccount: string | null
     stripeCheckoutSessionId: string | null
     stripePaymentIntentId: string | null
     amountMinor: number
@@ -174,8 +180,17 @@ export interface UserSession extends CoreUserSession {}
 
 export interface SingletonServices extends CoreSingletonServices<Config> {
   stripeApi: StripeApi
+  /**
+   * The client for a named account (see `STRIPE_ACCOUNTS`), or the default when
+   * the account is unset/unknown. Single-account apps never need it; a
+   * multi-account one passes `paymentOwner.stripeAccount` or an explicit
+   * `account` input.
+   */
+  stripeApiFor: (account?: string | null) => StripeApi
   /** Holds STRIPE_WEBHOOK_SECRET so the receiver never reads it — see the service. */
   stripeSignature: StripeSignature
+  /** Per-account signature verifier (see `STRIPE_WEBHOOK_SECRETS`). */
+  stripeSignatureFor: (account?: string | null) => StripeSignature
   /**
    * Resolves the session into the entity a purchase belongs to. The addon falls
    * back to a session-derived one, so a parent app only supplies this when its

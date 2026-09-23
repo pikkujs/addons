@@ -6,11 +6,20 @@ import { PlentyPaymentSchema } from '../../schemas.js'
 export const CreatePaymentInput = z.object({
   amount: z.number().describe('Payment amount'),
   currency: z.string().describe('Currency code'),
-  mopId: z.number().describe('Method of payment ID'),
+  mopId: z.number().optional().describe('Method of payment ID'),
   type: z.string().optional().describe('Payment type'),
   status: z.number().optional().describe('Payment status'),
   transactionType: z.number().optional().describe('Transaction type'),
   parentId: z.number().optional().describe('Parent payment ID'),
+  order: z.object({ orderId: z.number() }).optional().describe('Order relation'),
+  properties: z
+    .array(z.object({ typeId: z.number(), value: z.string() }))
+    .optional()
+    .describe('Payment properties'),
+  updateOrderPaymentStatus: z
+    .boolean()
+    .optional()
+    .describe('Whether to update the order payment status'),
 })
 
 export const CreatePaymentOutput = z.object({
@@ -30,7 +39,18 @@ export const createPayment = pikkuSessionlessFunc({
   output: CreatePaymentOutput,
   func: async (
     { plentymarkets },
-    { amount, currency, mopId, type, status, transactionType, parentId }
+    {
+      amount,
+      currency,
+      mopId,
+      type,
+      status,
+      transactionType,
+      parentId,
+      order,
+      properties,
+      updateOrderPaymentStatus,
+    }
   ) => {
     const payment = await plentymarkets.createPayment({
       amount,
@@ -40,6 +60,9 @@ export const createPayment = pikkuSessionlessFunc({
       status,
       transactionType,
       parentId,
+      order,
+      properties,
+      updateOrderPaymentStatus,
     })
     return { payment }
   },

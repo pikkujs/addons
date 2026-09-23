@@ -31,19 +31,20 @@
     "test": "node --import tsx --test src/**/*.test.ts"
   },
   "peerDependencies": {
-    "@pikku/core": "^0.12.89",
+    "@pikku/core": "^0.12.117",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
     "qrcode-terminal": ">=0.12",
     "zod": "^4"
   },
   "devDependencies": {
-    "@pikku/cli": "^0.12.111",
-    "@pikku/core": "^0.12.89",
+    "@pikku/cli": "^0.12.159",
+    "@pikku/core": "^0.12.117",
+    "@types/node": "^24",
     "@types/qrcode-terminal": "^0",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "@whiskeysockets/baileys": "^7.0.0-rc.9",
     "qrcode-terminal": "^0.12.0",
     "tsx": "^4",
-    "typescript": "^5.7.2",
     "zod": "^4"
   }
 }

@@ -48,6 +48,7 @@ test("better-auth's stripe customer is picked up rather than minted again", asyn
     id: 'user_1',
     email: 'ada@example.com',
     stripeCustomerId: 'cus_ba',
+    stripeAccount: null,
   })
 })
 
@@ -64,6 +65,7 @@ test('an organization-billed app reads the org row', async () => {
     id: 'org_1',
     email: null,
     stripeCustomerId: 'cus_org',
+    stripeAccount: null,
   })
 })
 
@@ -80,6 +82,7 @@ test('a user better-auth has no customer for is still an owner', async () => {
     id: 'user_1',
     email: null,
     stripeCustomerId: null,
+    stripeAccount: null,
   })
 })
 

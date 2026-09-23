@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs'
+import { readdirSync, readFileSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
@@ -6,9 +6,7 @@ import type { PaymentDatabase } from '@pikku/addon-commerce-stripe/types'
 import { SessionPaymentOwner } from '@pikku/addon-commerce-stripe'
 import type { PaymentOwner } from '@pikku/addon-commerce-stripe'
 
-const SCHEMA = fileURLToPath(
-  new URL('../../db/sqlite/0001-payments.sql', import.meta.url)
-)
+const MIGRATIONS = fileURLToPath(new URL('../../db/sqlite/', import.meta.url))
 
 /**
  * A real database on the addon's own shipped schema, so a test proves the SQL
@@ -16,9 +14,15 @@ const SCHEMA = fileURLToPath(
  * The CamelCasePlugin is how a consumer maps the snake_case columns onto the
  * camelCase `PaymentDatabase` interface, so it belongs here too.
  */
+export const applyMigrations = (sqlite: SQLite.Database) => {
+  for (const file of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) {
+    sqlite.exec(readFileSync(MIGRATIONS + file, 'utf8'))
+  }
+}
+
 export const createTestDb = () => {
   const sqlite = new SQLite(':memory:')
-  sqlite.exec(readFileSync(SCHEMA, 'utf8'))
+  applyMigrations(sqlite)
   return new Kysely<PaymentDatabase>({
     dialect: new SqliteDialect({ database: sqlite }),
     plugins: [new CamelCasePlugin()],
@@ -78,6 +82,7 @@ export const createServices = (
       }
       return replyFor(post)
     },
+    get: async (path: string) => replyFor({ path, body: {} }),
   }
   const paymentOwner = options.paymentOwner ?? new SessionPaymentOwner()
   return {
@@ -85,7 +90,7 @@ export const createServices = (
     logger,
     stripeApi,
     kysely,
-    services: { stripeApi, kysely, logger, paymentOwner } as any,
+    services: { stripeApi, stripeApiFor: () => stripeApi, kysely, logger, paymentOwner } as any,
   }
 }
 
@@ -206,3 +211,12 @@ export const seedCartOrder = async (
     .execute()
   return { cartId, orderId, sessionId }
 }
+
+/**
+ * The webhook resolves its signer per account; a single-account test hands the
+ * same signer back for any account.
+ */
+export const signatureServices = <T>(stripeSignature: T) => ({
+  stripeSignature,
+  stripeSignatureFor: () => stripeSignature,
+})

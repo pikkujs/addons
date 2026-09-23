@@ -30,6 +30,10 @@ export const ensureCustomer = async (
     return null
   }
 
+  // The Stripe account is part of the customer's identity: the same owner on
+  // two accounts is two Stripe customers, never one.
+  const account = owner?.stripeAccount ?? null
+
   // A guest row may only be claimed on an email the caller did not choose:
   // either the buyer is anonymous, in which case the email is all there is to
   // match on, or it came off the owner record. Adopting on a signed-in
@@ -42,6 +46,7 @@ export const ensureCustomer = async (
         .select(['id', 'stripeCustomerId'])
         .where('ownerType', '=', owner.type)
         .where('ownerId', '=', owner.id)
+        .where('stripeAccount', account ? '=' : 'is', account)
         .executeTakeFirst()
     : undefined
 
@@ -53,6 +58,7 @@ export const ensureCustomer = async (
           .select(['id', 'stripeCustomerId'])
           .where('email', '=', adoptableEmail)
           .where('ownerId', 'is', null)
+          .where('stripeAccount', account ? '=' : 'is', account)
           .executeTakeFirst()
       : undefined)
 
@@ -70,8 +76,10 @@ export const ensureCustomer = async (
     return found
   }
 
+  // An owner's own stripeCustomerId (better-auth's) lives on the default
+  // account; a named account gets a customer of its own.
   const stripeCustomerId =
-    owner?.stripeCustomerId ??
+    (account ? null : owner?.stripeCustomerId) ??
     (
       await stripeApi.post<{ id: string }>('/customers', {
         ...(buyerEmail ? { email: buyerEmail } : {}),
@@ -88,6 +96,7 @@ export const ensureCustomer = async (
       ownerId: owner?.id ?? null,
       stripeCustomerId,
       email: buyerEmail,
+      stripeAccount: account,
       createdAt: new Date().toISOString(),
     })
     .execute()

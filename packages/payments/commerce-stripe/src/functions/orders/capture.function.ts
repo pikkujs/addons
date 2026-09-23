@@ -38,7 +38,7 @@ export const captureOrder = pikkuFunc({
   input: CaptureOrderInput,
   output: CaptureOrderOutput,
   tags: ['addon'],
-  func: async ({ stripeApi, kysely }, data) => {
+  func: async ({ stripeApiFor, kysely }, data) => {
     const order = await kysely
       .selectFrom('paymentOrder')
       .select([
@@ -48,12 +48,14 @@ export const captureOrder = pikkuFunc({
         'captureMethod',
         'amountMinor',
         'stripePaymentIntentId',
+        'stripeAccount',
       ])
       .where('id', '=', data.id)
       .executeTakeFirst()
     if (!order) {
       throw new NotFoundError(`Unknown order ${data.id}`)
     }
+    const stripeApi = stripeApiFor(order.stripeAccount)
     if (order.captureMethod !== 'manual') {
       throw new BadRequestError(`Order ${data.id} was captured automatically at checkout`)
     }

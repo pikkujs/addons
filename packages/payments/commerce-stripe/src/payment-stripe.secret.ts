@@ -48,3 +48,56 @@ defineVariable({
   schema: stripeApiVersionSchema,
   optional: true,
 })
+
+export const stripeAccountsSchema = z
+  .string()
+  .describe('JSON object mapping an account key to the secretId holding its Stripe secret key')
+
+/**
+ * Multi-account option. `{"cc-eu":"STRIPE_CC_EU_SECRET_KEY", ...}` — each entry
+ * names a secretId the host app declares and grants to this addon. Unset, the
+ * addon serves the single `STRIPE_SECRET_KEY` account exactly as before.
+ */
+defineVariable({
+  name: 'accounts',
+  displayName: 'Stripe Accounts',
+  description:
+    'JSON map of account key → secretId of that account’s Stripe secret key (e.g. {"cc-eu":"STRIPE_CC_EU_SECRET_KEY"}). Unset means one account.',
+  variableId: 'STRIPE_ACCOUNTS',
+  schema: stripeAccountsSchema,
+  optional: true,
+})
+
+export const stripeWebhookSecretsSchema = z
+  .string()
+  .describe('JSON object mapping an account key to the secretId holding its webhook signing secret')
+
+/** The per-account counterpart of `STRIPE_ACCOUNTS`, for signature verification. */
+defineVariable({
+  name: 'webhook_secrets',
+  displayName: 'Stripe Webhook Secrets',
+  description:
+    'JSON map of account key → secretId of that account’s webhook signing secret. Unset means one account.',
+  variableId: 'STRIPE_WEBHOOK_SECRETS',
+  schema: stripeWebhookSecretsSchema,
+  optional: true,
+})
+
+export const stripeAccountByCountrySchema = z
+  .string()
+  .describe('JSON object mapping a two-letter country code to an account key')
+
+/**
+ * How a jurisdiction selects its account. `{"de":"cc-eu","gb":"cc-gb", ...}` —
+ * the addon's better-auth owner reads the organization's `country` and resolves
+ * the matching account key. Unset means the default account.
+ */
+defineVariable({
+  name: 'account_by_country',
+  displayName: 'Stripe Account by Country',
+  description:
+    'JSON map of country code → account key (e.g. {"de":"cc-eu","gb":"cc-gb"}), used to pick the account for an organization by its country.',
+  variableId: 'STRIPE_ACCOUNT_BY_COUNTRY',
+  schema: stripeAccountByCountrySchema,
+  optional: true,
+})
