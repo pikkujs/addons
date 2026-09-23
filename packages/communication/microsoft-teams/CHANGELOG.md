@@ -1,5 +1,19 @@
 # @pikku/addon-microsoft-teams
 
+## 0.0.9
+
+### Patch Changes
+
+- 01f6d60: An OAuth2 credential no longer restates its app secret
+  
+  Every one of these declared a `defineSecret` holding `{ clientId, clientSecret }` for the id its credential already named in `oauth2.appCredentialSecretId`, byte-identical each time — and `gmail`, `google-analytics` and `google-cloud-storage` never declared one at all, so a deployment was never asked for the app credentials their connect flow needs.
+  
+  `@pikku/core` now derives that secret from the credential, typed as `OAuth2AppCredential`, which is the shape the runtime has always read it as. The declarations are deleted; the secret is still there.
+  
+  The three Google credentials also drop the `OAuth2` suffix from their display name, so the console's connect list reads `Gmail` rather than `Gmail OAuth2`.
+  
+  This needs a `@pikku/core` that derives OAuth2 app secrets.
+
 ## 0.0.8
 
 ### Patch Changes
