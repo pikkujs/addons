@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { getOwnedStripeResource } from '../../lib/owned-resource.js'
 
 export const UpdateInvoiceInput = z.object({
   stripeInvoiceId: z.string(),
@@ -24,10 +25,12 @@ export const updateInvoice = pikkuSessionlessFunc({
   input: UpdateInvoiceInput,
   output: UpdateInvoiceOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, paymentOwner }, { stripeInvoiceId, description, metadata }, { session }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, { stripeInvoiceId, description, metadata }, { session }) => {
     const owner = await paymentOwner.resolve(session)
     const stripeApi = stripeApiFor(owner?.stripeAccount)
-    const invoice = await stripeApi.post<StripeInvoice>(`/invoices/${stripeInvoiceId}`, {
+    const path = `/invoices/${encodeURIComponent(stripeInvoiceId)}`
+    await getOwnedStripeResource(stripeApi, kysely, owner, path)
+    const invoice = await stripeApi.post<StripeInvoice>(path, {
       ...(description === undefined ? {} : { description }),
       ...(metadata ? { metadata } : {}),
     })

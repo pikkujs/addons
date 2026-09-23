@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { getOwnedStripeResource } from '../../lib/owned-resource.js'
 
 export const AttachPaymentToInvoiceInput = z.object({
   stripeInvoiceId: z.string(),
@@ -23,11 +24,21 @@ export const attachPaymentToInvoice = pikkuSessionlessFunc({
   input: AttachPaymentToInvoiceInput,
   output: AttachPaymentToInvoiceOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, paymentOwner }, { stripeInvoiceId, paymentIntentId }, { session }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, { stripeInvoiceId, paymentIntentId }, { session }) => {
     const owner = await paymentOwner.resolve(session)
     const stripeApi = stripeApiFor(owner?.stripeAccount)
+    // Both halves must be the caller's, or one owner's payment could settle
+    // another's invoice.
+    const path = `/invoices/${encodeURIComponent(stripeInvoiceId)}`
+    await getOwnedStripeResource(stripeApi, kysely, owner, path)
+    await getOwnedStripeResource(
+      stripeApi,
+      kysely,
+      owner,
+      `/payment_intents/${encodeURIComponent(paymentIntentId)}`
+    )
     const invoice = await stripeApi.post<StripeInvoice>(
-      `/invoices/${stripeInvoiceId}/attach_payment`,
+      `${path}/attach_payment`,
       { payment_intent: paymentIntentId }
     )
     return { invoiceId: invoice.id, status: invoice.status ?? 'unknown' }

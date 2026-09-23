@@ -23,6 +23,13 @@ export const CreateInstallmentScheduleInput = z.object({
     .nonnegative()
     .optional()
     .describe('Days before the first installment is charged'),
+  idempotencyKey: z
+    .string()
+    .min(1)
+    .max(200)
+    .describe(
+      'A stable key for this plan (an order id, say). A retry with the same key returns the schedule already created instead of billing the customer twice'
+    ),
   metadata: z.record(z.string(), z.string()).optional(),
 })
 
@@ -74,21 +81,30 @@ export const createInstallmentSchedule = pikkuSessionlessFunc({
       throw new BadRequestError('Each installment must be at least one minor currency unit')
     }
 
-    const priceFor = async (amountMinor: number): Promise<string> => {
-      const price = await stripeApi.post<StripePrice>('/prices', {
-        currency: data.currency,
-        unit_amount: amountMinor,
-        recurring: { interval: 'month' },
-        product_data: { name: 'Installment plan' },
-      })
+    // Each Stripe request gets its own key derived from the caller's, so a
+    // retry replays the original prices and schedule rather than making more.
+    const priceFor = async (amountMinor: number, step: string): Promise<string> => {
+      const price = await stripeApi.post<StripePrice>(
+        '/prices',
+        {
+          currency: data.currency,
+          unit_amount: amountMinor,
+          recurring: { interval: 'month' },
+          product_data: { name: 'Installment plan' },
+        },
+        `installments:${data.idempotencyKey}:${step}`
+      )
       return price.id
     }
 
-    const firstPrice = await priceFor(firstAmountMinor)
-    const basePrice = await priceFor(perInstallmentMinor)
+    const firstPrice = await priceFor(firstAmountMinor, 'first-price')
+    const basePrice = await priceFor(perInstallmentMinor, 'base-price')
+    // Truncated to the hour: Stripe refuses a replayed key whose parameters
+    // differ, so a retry moments later must compute the same start date.
+    const hour = 60 * 60
     const startDate =
       data.deferredDays && data.deferredDays > 0
-        ? Math.floor(Date.now() / 1000) + data.deferredDays * 24 * 60 * 60
+        ? Math.floor(Date.now() / 1000 / hour) * hour + data.deferredDays * 24 * hour
         : undefined
 
     const schedule = await stripeApi.post<StripeSchedule>('/subscription_schedules', {
@@ -108,7 +124,7 @@ export const createInstallmentSchedule = pikkuSessionlessFunc({
           ...(data.metadata ? { metadata: data.metadata } : {}),
         },
       ],
-    })
+    }, `installments:${data.idempotencyKey}:schedule`)
 
     return {
       scheduleId: schedule.id,

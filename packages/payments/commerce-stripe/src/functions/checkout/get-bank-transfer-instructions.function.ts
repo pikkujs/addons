@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { getOwnedStripeResource } from '../../lib/owned-resource.js'
 import {
   BankTransferFinancialAddress,
   mapBankTransferInstructions,
@@ -29,10 +30,15 @@ export const getBankTransferInstructions = pikkuSessionlessFunc({
   input: GetBankTransferInstructionsInput,
   output: GetBankTransferInstructionsOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, paymentOwner }, { paymentIntentId }, { session }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, { paymentIntentId }, { session }) => {
     const owner = await paymentOwner.resolve(session)
     const stripeApi = stripeApiFor(owner?.stripeAccount)
-    const intent = await stripeApi.get(`/payment_intents/${paymentIntentId}`)
-    return mapBankTransferInstructions(intent as Parameters<typeof mapBankTransferInstructions>[0])
+    const intent = await getOwnedStripeResource<Parameters<typeof mapBankTransferInstructions>[0]>(
+      stripeApi,
+      kysely,
+      owner,
+      `/payment_intents/${encodeURIComponent(paymentIntentId)}`
+    )
+    return mapBankTransferInstructions(intent)
   },
 })

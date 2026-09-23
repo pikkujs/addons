@@ -1,5 +1,6 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { getOwnedStripeResource } from '../../lib/owned-resource.js'
 
 export const CancelPaymentIntentInput = z.object({
   paymentIntentId: z.string(),
@@ -22,10 +23,12 @@ export const cancelPaymentIntent = pikkuSessionlessFunc({
   input: CancelPaymentIntentInput,
   output: CancelPaymentIntentOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, paymentOwner }, { paymentIntentId }, { session }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner }, { paymentIntentId }, { session }) => {
     const owner = await paymentOwner.resolve(session)
     const stripeApi = stripeApiFor(owner?.stripeAccount)
-    const intent = await stripeApi.post<StripeIntent>(`/payment_intents/${paymentIntentId}/cancel`)
+    const path = `/payment_intents/${encodeURIComponent(paymentIntentId)}`
+    await getOwnedStripeResource(stripeApi, kysely, owner, path)
+    const intent = await stripeApi.post<StripeIntent>(`${path}/cancel`)
     return { paymentIntentId: intent.id, status: intent.status ?? 'unknown' }
   },
 })

@@ -13,13 +13,13 @@ import {
   saveProduct,
   setCartItem,
 } from '@pikku/addon-commerce-stripe'
-import { createLogger, createServices, createTestDb, seedCartOrder, seedProduct } from './harness.js'
+import { createLogger, createServices, createTestDb, seedCartOrder, seedProduct, signatureServices } from './harness.js'
 
 test('a request whose raw body cannot be read is refused, not verified against nothing', async () => {
   const services = {
     kysely: createTestDb(),
     logger: createLogger(),
-    stripeSignature: new StripeSignature('whsec_test'),
+    ...signatureServices(new StripeSignature('whsec_test')),
   } as any
   const http = {
     http: {
@@ -53,7 +53,7 @@ test('the signature header is read from headers() when header() gives nothing', 
     .join('')}`
 
   const result = await handleStripeWebhook.func(
-    { kysely, logger: createLogger(), stripeSignature: new StripeSignature('whsec_test') } as any,
+    { kysely, logger: createLogger(), ...signatureServices(new StripeSignature('whsec_test')) } as any,
     {},
     {
       http: {

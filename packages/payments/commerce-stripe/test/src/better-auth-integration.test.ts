@@ -1,5 +1,3 @@
-import { readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
 import assert from 'node:assert/strict'
 import test from 'node:test'
 import SQLite from 'better-sqlite3'
@@ -11,9 +9,7 @@ import {
   setCartItem,
   StripeSignature,
 } from '@pikku/addon-commerce-stripe'
-import { createServices, seedProduct } from './harness.js'
-
-const SCHEMA = fileURLToPath(new URL('../../db/sqlite/0001-payments.sql', import.meta.url))
+import { applyMigrations, createServices, seedProduct, signatureServices } from './harness.js'
 
 const SECRET = 'whsec_test'
 
@@ -24,7 +20,7 @@ const SECRET = 'whsec_test'
  */
 const createAppDb = () => {
   const sqlite = new SQLite(':memory:')
-  sqlite.exec(readFileSync(SCHEMA, 'utf8'))
+  applyMigrations(sqlite)
   sqlite.exec(`
     CREATE TABLE user (id TEXT PRIMARY KEY, email TEXT, stripe_customer_id TEXT);
     CREATE TABLE subscription (
@@ -62,7 +58,7 @@ const deliver = async (services: any, event: Record<string, unknown>) => {
   const body = JSON.stringify(event)
   const signature = await signed(body)
   return handleStripeWebhook.func(
-    { ...services, stripeSignature: new StripeSignature(SECRET) },
+    { ...services, ...signatureServices(new StripeSignature(SECRET)) },
     {},
     {
       http: {
