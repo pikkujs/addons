@@ -12,9 +12,9 @@
   "devDependencies": {
     "@types/better-sqlite3": "^9.6.0",
     "@types/node": "^24",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "better-sqlite3": "^13.0.3",
     "kysely": "^0.29.5",
-    "tsx": "^4",
-    "typescript": "^5.9"
+    "tsx": "^4"
   }
 }
