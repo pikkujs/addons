@@ -1,6 +1,15 @@
 {
   "manifestVersion": 1,
   "contracts": {
+    "convertkitWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "0bbaa7b1",
+          "outputHash": "a0b64ff6"
+        }
+      }
+    },
     "customFieldCreate": {
       "latest": 1,
       "versions": {

@@ -162,6 +162,15 @@
           "outputHash": "2502ea99"
         }
       }
+    },
+    "mondayComWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "cb6c617d",
+          "outputHash": "a158f651"
+        }
+      }
     }
   }
 }

@@ -1,5 +1,6 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { ZendeskService } from './zendesk-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -15,3 +16,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { zendesk }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  zendeskWebhookSecret: new WebhookSigningSecret(
+    'Zendesk',
+    await secrets
+      .getSecret('ZENDESK_WEBHOOK_SECRET')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

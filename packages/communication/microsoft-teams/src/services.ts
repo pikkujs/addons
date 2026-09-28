@@ -1,6 +1,7 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { UnauthorizedError } from '@pikku/core/errors'
 import { MicrosoftTeamsService } from './microsoft-teams-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -16,3 +17,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { microsoftTeams }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  microsoftTeamsWebhookSecret: new WebhookSigningSecret(
+    'Microsoft Teams',
+    await secrets
+      .getSecret('MICROSOFT_TEAMS_WEBHOOK_CLIENT_STATE')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

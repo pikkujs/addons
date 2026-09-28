@@ -1,5 +1,6 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { TrelloService } from './trello-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -15,3 +16,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { trello }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  trelloWebhookSecret: new WebhookSigningSecret(
+    'Trello',
+    await secrets
+      .getSecret('TRELLO_WEBHOOK_SECRET')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

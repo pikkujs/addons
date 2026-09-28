@@ -1,5 +1,6 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { WiseService } from './wise-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -15,3 +16,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { wise }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  wiseWebhookSecret: new WebhookSigningSecret(
+    'Wise',
+    await secrets
+      .getSecret('WISE_WEBHOOK_PUBLIC_KEY')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

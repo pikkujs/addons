@@ -109,6 +109,15 @@
         }
       }
     },
+    "onfleetWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d8ceb9e1",
+          "outputHash": "f44b2bbd"
+        }
+      }
+    },
     "organizationGet": {
       "latest": 1,
       "versions": {

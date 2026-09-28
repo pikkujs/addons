@@ -1,6 +1,7 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { UnauthorizedError } from '@pikku/core/errors'
 import { YoutubeService } from './youtube-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -16,3 +17,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { youtube }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  youtubeWebhookSecret: new WebhookSigningSecret(
+    'YouTube',
+    await secrets
+      .getSecret('YOUTUBE_WEBHOOK_SECRET')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

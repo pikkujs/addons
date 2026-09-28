@@ -1,6 +1,7 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { UnauthorizedError } from '@pikku/core/errors'
 import { ZoomService } from './zoom-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -16,3 +17,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { zoom }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  zoomWebhookSecret: new WebhookSigningSecret(
+    'Zoom',
+    await secrets
+      .getSecret('ZOOM_WEBHOOK_SECRET_TOKEN')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

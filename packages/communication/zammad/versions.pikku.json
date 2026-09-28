@@ -189,6 +189,15 @@
           "outputHash": "1bf397be"
         }
       }
+    },
+    "zammadWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c2d6e60b",
+          "outputHash": "356b1914"
+        }
+      }
     }
   }
 }

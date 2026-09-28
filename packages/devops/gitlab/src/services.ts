@@ -1,5 +1,6 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { GitlabService } from './gitlab-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -15,3 +16,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { gitlab }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  gitlabWebhookSecret: new WebhookSigningSecret(
+    'GitLab',
+    await secrets
+      .getSecret('GITLAB_WEBHOOK_TOKEN')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

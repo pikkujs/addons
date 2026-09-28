@@ -22,3 +22,4 @@ export { deleteCustomer } from './functions/customers/delete.function.js'
 
 // Inventory
 export { adjustInventory } from './functions/inventory/adjust.function.js'
+export { shopifyWebhookReceive } from './functions/webhooks/receive.function.js'

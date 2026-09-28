@@ -3,3 +3,4 @@ export { synthesize } from './functions/text-to-speech/synthesize.function.js'
 
 export * from './elevenlabs.secret.js'
 export * from './elevenlabs-api.service.js'
+export { elevenlabsWebhookReceive } from './functions/webhooks/receive.function.js'
