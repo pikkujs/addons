@@ -91,6 +91,15 @@
         }
       }
     },
+    "taigaWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8cf8276a",
+          "outputHash": "ccfcdb9f"
+        }
+      }
+    },
     "taskCreate": {
       "latest": 1,
       "versions": {

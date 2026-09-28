@@ -1,5 +1,6 @@
+import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { NocodbService } from './nocodb-api.service.js'
-import { pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -15,3 +16,13 @@ export const createWireServices = pikkuAddonWireServices(
     return { nocodb }
   }
 )
+
+export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
+  nocodbWebhookSecret: new WebhookSigningSecret(
+    'NocoDB',
+    await secrets
+      .getSecret('NOCODB_WEBHOOK_TOKEN')
+      .then((secret) => secret.reveal())
+      .catch(() => null)
+  ),
+}))

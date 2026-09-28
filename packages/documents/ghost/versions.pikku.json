@@ -1,6 +1,15 @@
 {
   "manifestVersion": 1,
   "contracts": {
+    "ghostWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "21b2ac4c",
+          "outputHash": "6a2b06a0"
+        }
+      }
+    },
     "postCreate": {
       "latest": 1,
       "versions": {

@@ -46,6 +46,15 @@
         }
       }
     },
+    "freshdeskWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b25b3202",
+          "outputHash": "8ae7055a"
+        }
+      }
+    },
     "ticketCreate": {
       "latest": 1,
       "versions": {

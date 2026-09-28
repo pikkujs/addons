@@ -216,6 +216,15 @@
           "outputHash": "3556e648"
         }
       }
+    },
+    "wekanWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b4b3ed8c",
+          "outputHash": "143d8c73"
+        }
+      }
     }
   }
 }

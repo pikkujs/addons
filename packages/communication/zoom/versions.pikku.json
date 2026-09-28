@@ -45,6 +45,15 @@
           "outputHash": "7d6a2efe"
         }
       }
+    },
+    "zoomWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ee0f0c09",
+          "outputHash": "f223d647"
+        }
+      }
     }
   }
 }

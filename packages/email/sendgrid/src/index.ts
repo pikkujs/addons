@@ -15,3 +15,4 @@ export { contactList } from './functions/contacts/list.function.js'
 export { contactDelete } from './functions/contacts/delete.function.js'
 
 export { SendgridService } from './sendgrid-api.service.js'
+export { sendgridWebhookReceive } from './functions/webhooks/receive.function.js'
