@@ -4,8 +4,7 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 /**
  * The `receive` step of a PlentyMarkets webhook source. PlentyMarkets signs
- * nothing, so there is nothing to verify: as with `plentymarketsWebhookHandler`,
- * an event is only a cue to resync the record from PlentyMarkets, so a forged
+ * nothing, so there is nothing to verify: an event is only a cue to resync the record from PlentyMarkets, so a forged
  * one at worst triggers a redundant resync. The event is named after its
  * `type` (`order.updated`, ...), keyed by PlentyMarkets' own `id`.
  *

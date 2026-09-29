@@ -23,31 +23,27 @@ payment intents, setup intents, Connect (marketplaces), and webhook handling.
 **Payment Intents:** `paymentIntentCreate` (off-session charge or client-side Elements — returns `clientSecret`), `paymentIntentGet`, `paymentIntentConfirm`, `paymentIntentCapture`, `paymentIntentCancel`
 **Setup Intents:** `setupIntentCreate` (save a card without charging), `setupIntentGet`
 **Connect:** `accountCreate`, `accountGet`, `accountLinkCreate`, `transferCreate`, `payoutCreate`
-**Webhooks:** `stripeWebhookHandler`
+**Webhooks:** `stripeWebhookReceive`, `stripeWebhookCheck`, `stripeWebhookSetup`, `stripeWebhookTeardown`
 
 ## Webhooks
 
-`stripeWebhookHandler` verifies the Stripe signature against the raw request
-body (`STRIPE_WEBHOOK_SECRET`) and publishes the verified event onto the
-`stripe-webhook-event` queue (exported as `STRIPE_WEBHOOK_QUEUE`). The consuming
-app owns the mapping by wiring the route and a queue worker:
+The addon ships the steps of a Stripe webhook source. `receive` verifies the
+signature against the raw body (`STRIPE_WEBHOOK_SECRET`) and names each event
+after its Stripe type; `setup` creates the endpoint for this deployment and
+returns its signing secret for deploy to store:
 
 ```typescript
-import { addon } from '#pikku'
-import { wireHTTPRoutes } from '#pikku/pikku-types.gen.js'
-import { wireQueueWorker } from '#pikku/queue/pikku-queue-types.gen.js'
-import { STRIPE_WEBHOOK_QUEUE } from '@pikku/addon-stripe'
+wireTriggerWebhookSource({
+  name: 'stripe',
+  secret: 'STRIPE_WEBHOOK_SECRET',
+  receive: ref('stripe:stripeWebhookReceive'),
+  check: ref('stripe:stripeWebhookCheck'),
+  setup: ref('stripe:stripeWebhookSetup'),
+  teardown: ref('stripe:stripeWebhookTeardown'),
+})
 
-wireHTTPRoutes({ routes: { stripe: { webhook: {
-  method: 'post', route: '/webhooks/stripe',
-  func: addon('stripe:stripeWebhookHandler'), auth: false,
-} } } })
-
-wireQueueWorker({ name: STRIPE_WEBHOOK_QUEUE, func: handleStripeEvent })
+wireTrigger({ name: 'stripe:invoice.paid', func: onInvoicePaid })
 ```
-
-The host app must provide `queueService` (any pikku queue adapter — pg-boss,
-BullMQ, …) as a singleton service; the handler enqueues onto it.
 
 ## Conventions
 

@@ -26,7 +26,6 @@ export { captureOrder } from './functions/orders/capture.function.js'
 export { fulfillOrder } from './functions/orders/fulfill.function.js'
 export { refundOrder } from './functions/orders/refund.function.js'
 
-export { handleStripeWebhook } from './functions/webhooks/handle.function.js'
 export {
   receiveStripeWebhook,
   applyStripeWebhookEvent,

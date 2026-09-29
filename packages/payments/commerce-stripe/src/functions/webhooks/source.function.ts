@@ -23,9 +23,16 @@ export const receiveStripeWebhook = pikkuSessionlessFunc<WebhookRequest, Webhook
   description: 'Verify a Stripe webhook and read it into trigger events',
   func: async ({ stripeSignatureFor }, { body, headers, query }) => {
     const stripeSignature = stripeSignatureFor(query.account ?? null)
+    const signature = headers['stripe-signature']
+    if (!signature) {
+      throw new UnauthorizedError('Missing stripe-signature header')
+    }
+    if (!stripeSignature.configured) {
+      throw new UnauthorizedError('Webhook receiver is not configured')
+    }
     const raw = new TextDecoder().decode(body)
     try {
-      await stripeSignature.verify(raw, headers['stripe-signature'] ?? '')
+      await stripeSignature.verify(raw, signature)
     } catch {
       throw new UnauthorizedError('Invalid Stripe webhook signature')
     }

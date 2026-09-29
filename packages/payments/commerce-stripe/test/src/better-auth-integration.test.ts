@@ -5,11 +5,10 @@ import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
 import {
   BetterAuthPaymentOwner,
   createCartCheckout,
-  handleStripeWebhook,
   setCartItem,
   StripeSignature,
 } from '@pikku/addon-commerce-stripe'
-import { applyMigrations, createServices, seedProduct, signatureServices } from './harness.js'
+import { applyMigrations, createServices, deliverWebhook, seedProduct, signatureServices } from './harness.js'
 
 const SECRET = 'whsec_test'
 
@@ -57,19 +56,7 @@ const signed = async (body: string) => {
 const deliver = async (services: any, event: Record<string, unknown>) => {
   const body = JSON.stringify(event)
   const signature = await signed(body)
-  return handleStripeWebhook.func(
-    { ...services, ...signatureServices(new StripeSignature(SECRET)) },
-    {},
-    {
-      http: {
-        request: {
-          header: (name: string) => (name === 'stripe-signature' ? signature : null),
-          headers: () => ({ 'stripe-signature': signature }),
-          arrayBuffer: async () => new TextEncoder().encode(body).buffer,
-        },
-      },
-    } as any
-  )
+  return deliverWebhook({ ...services, ...signatureServices(new StripeSignature(SECRET)) }, body, signature)
 }
 
 test('a signed-in buyer checks out onto the customer better-auth already made', async () => {
