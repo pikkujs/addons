@@ -51,9 +51,10 @@
 '@pikku/addon-paddle': minor
 '@pikku/addon-quickbooks': minor
 '@pikku/addon-wise': minor
+'@pikku/addon-mailchimp': minor
 ---
 
-Add a webhook `receive` step to 52 addons, for `wireTriggerWebhookSource`.
+Add a webhook `receive` step to 53 addons, for `wireTriggerWebhookSource`.
 Each one verifies the provider's signature (or its shared token) with a
 `WebhookSigningSecret` built from a new `<PROVIDER>_WEBHOOK_*` secret, answers
 the provider's URL handshake where it has one (Zoom, WhatsApp, Strava,

@@ -19,19 +19,31 @@ compare; request bodies are form-encoded in-package.
 - `saveShippingRate`, `listShippingRates`
 - `createCheckout`, `createCartCheckout` — hosted Checkout sessions and the pending order the webhook settles
 - `listOrders`, `getOrder`, `captureOrder`, `fulfillOrder`, `refundOrder`
-- `handleStripeWebhook`
+- `receiveStripeWebhook`, `applyStripeWebhookEvent` — the webhook source and the trigger that applies its events
 
 ## Wiring
 
 ```ts
 wireAddon({ name: 'shop', package: '@pikku/addon-commerce-stripe' })
 
-wireHTTP({
-  method: 'post',
-  route: '/webhooks/stripe',
-  func: addon('shop:handleStripeWebhook'),
-  auth: false,
+wireTriggerWebhookSource({
+  name: 'stripe',
+  secret: 'STRIPE_WEBHOOK_SECRET',
+  receive: ref('shop:receiveStripeWebhook'),
 })
+
+for (const event of [
+  'checkout.session.completed',
+  'checkout.session.async_payment_succeeded',
+  'checkout.session.async_payment_failed',
+  'checkout.session.expired',
+  'payment_intent.payment_failed',
+  'charge.refunded',
+  'charge.dispute.created',
+  'charge.dispute.closed',
+]) {
+  wireTrigger({ name: `stripe:${event}`, func: ref('shop:applyStripeWebhookEvent') })
+}
 ```
 
 ## Who a purchase belongs to

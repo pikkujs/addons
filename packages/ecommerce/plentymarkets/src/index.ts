@@ -43,11 +43,6 @@ export { createPayment } from './functions/payments/create.function.js'
 export { searchOrderPayments } from './functions/payments/search-by-order.function.js'
 
 // Webhooks
-export {
-  plentymarketsWebhookHandler,
-  PLENTYMARKETS_WEBHOOK_QUEUE,
-} from './functions/webhooks/handle.function.js'
-export { plentymarketsHTTPRoutes } from './webhooks.http.js'
 export { plentymarketsWebhookReceive } from './functions/webhooks/receive.function.js'
 
 // Schemas + types — so a consuming app can type the values it reads back off an RPC

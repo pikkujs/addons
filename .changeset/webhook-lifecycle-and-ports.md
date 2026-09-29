@@ -16,4 +16,9 @@ Shopify, Paddle, Telegram, PagerDuty, SendGrid and Mandrill, so
 provider issues. Stripe gets `stripeWebhookReceive`; commerce-stripe gets
 `receiveStripeWebhook` and `applyStripeWebhookEvent` as the trigger that
 applies events to its tables; PlentyMarkets gets `plentymarketsWebhookReceive`.
-The HTTP handlers they replace still work and are marked deprecated.
+
+Breaking: the HTTP handlers they replace are removed — `stripeWebhookHandler`
+and `STRIPE_WEBHOOK_QUEUE`, `handleStripeWebhook`, and
+`plentymarketsWebhookHandler`, `PLENTYMARKETS_WEBHOOK_QUEUE` and
+`plentymarketsHTTPRoutes`. Wire the webhook source and triggers instead (see
+the READMEs).
