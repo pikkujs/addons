@@ -27,10 +27,13 @@ const sameSet = (a: string[], b: string[]) =>
 export const telegramWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check the bot's Telegram webhook",
-  func: async ({ telegram }, { url, events }) => {
+  func: async ({ telegram, credentialService }, { url, events }) => {
     const info = await telegram.request<WebhookInfo>('getWebhookInfo')
     if (!info.url) {
       return { status: 'missing' }
+    }
+    if (!(await credentialService?.get<string>('telegramWebhookSecret'))) {
+      return { status: 'drifted', reason: 'has no secret token stored' }
     }
     if (info.url !== url) {
       return { status: 'drifted', reason: `points at ${info.url}` }
@@ -50,7 +53,9 @@ export const telegramWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, 
       throw new Error('Storing the Telegram signing secret needs a credentialService')
     }
     const previous = await telegram.request<WebhookInfo>('getWebhookInfo')
-    const secret = crypto.randomUUID().replaceAll('-', '')
+    const secret =
+      (await credentialService.get<string>('telegramWebhookSecret')) ??
+      crypto.randomUUID().replaceAll('-', '')
     await telegram.request('setWebhook', {
       body: { url, secret_token: secret, allowed_updates: events },
     })

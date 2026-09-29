@@ -65,10 +65,13 @@ const create = async (pagerduty: PagerdutyService, url: string, label: string, e
 export const pagerdutyWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check this deployment's PagerDuty webhook subscription",
-  func: async ({ pagerduty }, { url, label, events, previous }) => {
+  func: async ({ pagerduty, credentialService }, { url, label, events, previous }) => {
     const subscription = await findSubscription(pagerduty, label, previous)
     if (!subscription) {
       return { status: events.length === 0 ? 'ok' : 'missing' }
+    }
+    if (!(await credentialService?.get<string>('pagerdutyWebhookSecret'))) {
+      return { status: 'drifted', reason: 'has no signing secret stored' }
     }
     if (subscription.delivery_method.url !== url) {
       return { status: 'drifted', reason: `points at ${subscription.delivery_method.url}` }
@@ -91,7 +94,11 @@ export const pagerdutyWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput,
       throw new Error('Storing the PagerDuty signing secret needs a credentialService')
     }
     const existing = await findSubscription(pagerduty, label, previous)
-    if (existing && existing.delivery_method.url === url) {
+    if (
+      existing &&
+      existing.delivery_method.url === url &&
+      (await credentialService.get<string>('pagerdutyWebhookSecret'))
+    ) {
       await pagerduty.request('PUT', `/webhook_subscriptions/${existing.id}`, {
         body: { webhook_subscription: { events, active: true } },
       })

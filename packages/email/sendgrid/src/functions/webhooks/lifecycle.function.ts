@@ -31,6 +31,11 @@ const findWebhook = async (sendgrid: SendgridService, label: string, previous?: 
     await sendgrid.request<{ webhooks: EventWebhook[] }>('GET', '/user/webhooks/event/settings/all')
   ).webhooks?.find((webhook) => webhook.id === previous?.id || webhook.friendly_name === label)
 
+const signingKey = async (sendgrid: SendgridService, id: string) =>
+  (
+    await sendgrid.request<{ public_key?: string }>('GET', `/user/webhooks/event/settings/signed/${id}`)
+  ).public_key || undefined
+
 const settings = (url: string, events: string[]) => ({
   enabled: true,
   url,
@@ -51,10 +56,17 @@ const settings = (url: string, events: string[]) => ({
 export const sendgridWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check this deployment's SendGrid Event Webhook",
-  func: async ({ sendgrid }, { url, label, events, previous }) => {
+  func: async ({ sendgrid, credentialService }, { url, label, events, previous }) => {
     const webhook = await findWebhook(sendgrid, label, previous)
     if (!webhook) {
       return { status: events.length === 0 ? 'ok' : 'missing' }
+    }
+    const publicKey = await signingKey(sendgrid, webhook.id)
+    if (!publicKey) {
+      return { status: 'drifted', reason: 'is not signed' }
+    }
+    if ((await credentialService?.get<string>('sendgridWebhookSecret')) !== publicKey) {
+      return { status: 'drifted', reason: 'has a different verification key stored' }
     }
     if (webhook.url !== url) {
       return { status: 'drifted', reason: `points at ${webhook.url}` }
@@ -82,18 +94,23 @@ export const sendgridWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, 
       await sendgrid.request('PATCH', `/user/webhooks/event/settings/${existing.id}`, {
         body: settings(url, events),
       })
-      return { status: 'updated', state: { id: existing.id } }
     }
-    const created = await sendgrid.request<EventWebhook>('POST', '/user/webhooks/event/settings', {
-      body: { ...settings(url, events), friendly_name: label },
-    })
-    const { public_key } = await sendgrid.request<{ public_key: string }>(
-      'PATCH',
-      `/user/webhooks/event/settings/signed/${created.id}`,
-      { body: { enabled: true } }
-    )
-    await credentialService.set('sendgridWebhookSecret', public_key)
-    return { status: 'created', state: { id: created.id } }
+    const webhook =
+      existing ??
+      (await sendgrid.request<EventWebhook>('POST', '/user/webhooks/event/settings', {
+        body: { ...settings(url, events), friendly_name: label },
+      }))
+    const publicKey =
+      (existing && (await signingKey(sendgrid, existing.id))) ||
+      (
+        await sendgrid.request<{ public_key: string }>(
+          'PATCH',
+          `/user/webhooks/event/settings/signed/${webhook.id}`,
+          { body: { enabled: true } }
+        )
+      ).public_key
+    await credentialService.set('sendgridWebhookSecret', publicKey)
+    return { status: existing ? 'updated' : 'created', state: { id: webhook.id } }
   },
 })
 
