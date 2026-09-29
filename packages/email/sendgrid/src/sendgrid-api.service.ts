@@ -1,7 +1,7 @@
 import type { EmailService, SendEmailInput, SendEmailResult } from '@pikku/core/services'
 import type { TypedSecretService } from '#pikku/addon/secrets/pikku-secrets.gen.js'
 
-const BASE_URL = 'https://api.sendgrid.com/v3'
+const BASE_URL = 'https://api.sendgrid.com/v3/'
 
 export interface RequestOptions {
   body?: unknown
@@ -31,7 +31,7 @@ export class SendgridService implements EmailService {
     options?: RequestOptions
   ): Promise<T> {
     const apiKey = await this.getApiKey()
-    const url = new URL(endpoint, BASE_URL)
+    const url = new URL(endpoint.replace(/^\/+/, ''), BASE_URL)
 
     if (options?.qs) {
       for (const [key, value] of Object.entries(options.qs)) {
