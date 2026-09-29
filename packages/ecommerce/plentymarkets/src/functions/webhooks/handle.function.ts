@@ -34,6 +34,9 @@ export const PlentymarketsWebhookOutput = z.object({
  * domain mapping happens in the consumer's queue worker.
  *
  * The route is wired in `../webhooks.http.ts` so the ingress ships with the addon.
+ *
+ * @deprecated Wire `plentymarketsWebhookReceive` as a webhook source instead,
+ * which routes events to triggers.
  */
 export const plentymarketsWebhookHandler = pikkuSessionlessFunc({
   auth: false,
