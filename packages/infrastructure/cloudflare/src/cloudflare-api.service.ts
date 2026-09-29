@@ -1,6 +1,6 @@
 import type { CloudflareSecrets } from './cloudflare.secret.js'
 
-const BASE_URL = 'https://api.cloudflare.com/client/v4'
+const BASE_URL = 'https://api.cloudflare.com/client/v4/'
 
 export interface RequestOptions {
   body?: unknown
@@ -15,7 +15,7 @@ export class CloudflareService {
     endpoint: string,
     options?: RequestOptions
   ): Promise<T> {
-    const url = new URL(endpoint, BASE_URL)
+    const url = new URL(endpoint.replace(/^\/+/, ''), BASE_URL)
 
     if (options?.qs) {
       for (const [key, value] of Object.entries(options.qs)) {
