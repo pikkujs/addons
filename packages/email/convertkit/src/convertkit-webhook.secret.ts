@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const convertkitWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'convertkitWebhookSecret',
   displayName: 'Kit Webhook Secret',
   description: "A token of your choosing, added to the webhook URL as ?token=",
-  secretId: 'CONVERTKIT_WEBHOOK_TOKEN',
+  type: 'singleton',
   schema: convertkitWebhookSecretSchema,
 })

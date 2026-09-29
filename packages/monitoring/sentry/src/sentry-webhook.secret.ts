@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const sentryWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'sentryWebhookSecret',
   displayName: 'Sentry Webhook Secret',
   description: "The integration's client secret",
-  secretId: 'SENTRY_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: sentryWebhookSecretSchema,
 })

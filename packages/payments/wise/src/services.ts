@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  wiseWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  wiseWebhookSecret: WebhookSigningSecret.fromCredential(
     'Wise',
-    await secrets
-      .getSecret('WISE_WEBHOOK_PUBLIC_KEY')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'wiseWebhookSecret'
   ),
 }))

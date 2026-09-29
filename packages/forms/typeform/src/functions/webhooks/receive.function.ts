@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'typeform',
- *     secret: 'TYPEFORM_WEBHOOK_SECRET',
  *     receive: ref('typeform:typeformWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const typeformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a Typeform webhook and read it into trigger events',
   func: async ({ typeformWebhookSecret }, { body, headers }) => {
+    const signing = await typeformWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    typeformWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['typeform-signature']?.replace(/^sha256=/, ''),
       'sha256',
       raw,

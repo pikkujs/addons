@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  quickbooksWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  quickbooksWebhookSecret: WebhookSigningSecret.fromCredential(
     'QuickBooks',
-    await secrets
-      .getSecret('QUICKBOOKS_WEBHOOK_VERIFIER_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'quickbooksWebhookSecret'
   ),
 }))

@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const formstackWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'formstackWebhookSecret',
   displayName: 'Formstack Webhook Secret',
   description: "The webhook's handshake key",
-  secretId: 'FORMSTACK_WEBHOOK_HANDSHAKE_KEY',
+  type: 'singleton',
   schema: formstackWebhookSecretSchema,
 })

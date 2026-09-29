@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'sentry',
- *     secret: 'SENTRY_WEBHOOK_SECRET',
  *     receive: ref('sentry:sentryWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const sentryWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Sentry webhook and read it into trigger events',
   func: async ({ sentryWebhookSecret }, { body, headers }) => {
+    const signing = await sentryWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    sentryWebhookSecret.verifyHmac(headers['sentry-hook-signature'], 'sha256', raw, 'hex')
+    signing.verifyHmac(headers['sentry-hook-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: [

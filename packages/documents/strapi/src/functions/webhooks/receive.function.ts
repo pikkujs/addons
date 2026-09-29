@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'strapi',
- *     secret: 'STRAPI_WEBHOOK_TOKEN',
  *     receive: ref('strapi:strapiWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const strapiWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Strapi webhook and read it into trigger events',
   func: async ({ strapiWebhookSecret }, { body, headers }) => {
-    strapiWebhookSecret.verifyToken(headers['authorization'])
+    const signing = await strapiWebhookSecret.load()
+    signing.verifyToken(headers['authorization'])
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.event, data }] }
   },

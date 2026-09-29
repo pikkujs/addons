@@ -2,16 +2,14 @@ import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { SentryService } from './sentry-api.service.js'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets, credentialService }) => {
   const creds = (await secrets.getSecret('SENTRY_CREDENTIALS')).reveal()
   const sentry = new SentryService(creds)
 
-  const sentryWebhookSecret = new WebhookSigningSecret(
+  const sentryWebhookSecret = WebhookSigningSecret.fromCredential(
     'Sentry',
-    await secrets
-      .getSecret('SENTRY_WEBHOOK_SECRET')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'sentryWebhookSecret'
   )
 
 

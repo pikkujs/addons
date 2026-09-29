@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  googleDriveWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  googleDriveWebhookSecret: WebhookSigningSecret.fromCredential(
     'Google Drive',
-    await secrets
-      .getSecret('GOOGLE_DRIVE_WEBHOOK_CHANNEL_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'googleDriveWebhookSecret'
   ),
 }))

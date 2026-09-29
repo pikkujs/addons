@@ -25,7 +25,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'paddle',
- *     secret: 'PADDLE_WEBHOOK_SECRET',
  *     receive: ref('paddle:paddleWebhookReceive'),
  *   })
  */
@@ -33,6 +32,7 @@ export const paddleWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Paddle webhook and read it into trigger events',
   func: async ({ paddleWebhookSecret }, { body, headers }) => {
+    const signing = await paddleWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const fields = (headers['paddle-signature'] ?? '')
       .split(';')
@@ -44,7 +44,7 @@ export const paddleWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
     const signatures = fields.filter(([key]) => key === 'h1').map(([, value]) => value!)
     if (
       !anyVerifies(signatures, (signature) =>
-        paddleWebhookSecret.verifyHmac(signature, 'sha256', `${ts}:${raw}`, 'hex')
+        signing.verifyHmac(signature, 'sha256', `${ts}:${raw}`, 'hex')
       )
     ) {
       throw new UnauthorizedError('Invalid Paddle webhook signature')

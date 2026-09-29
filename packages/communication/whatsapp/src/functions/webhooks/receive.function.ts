@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'whatsapp',
- *     secret: 'WHATSAPP_APP_SECRET',
  *     method: ['get',  'post'],
  *     receive: ref('whatsapp:whatsappWebhookReceive'),
  *   })
@@ -25,6 +24,7 @@ export const whatsappWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a WhatsApp webhook and read it into trigger events',
   func: async ({ whatsappWebhookSecret, variables }, { body, headers, method, query }) => {
+    const signing = await whatsappWebhookSecret.load()
     if (method.toLowerCase() === 'get') {
       const verifyToken = await variables.get('WHATSAPP_WEBHOOK_VERIFY_TOKEN')
       if (query['hub.mode'] !== 'subscribe' || !verifyToken || query['hub.verify_token'] !== verifyToken) {
@@ -33,7 +33,7 @@ export const whatsappWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
       return { respond: { status: 200, body: query['hub.challenge'] } }
     }
     const raw = new TextDecoder().decode(body)
-    whatsappWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-hub-signature-256']?.replace(/^sha256=/, ''),
       'sha256',
       raw,

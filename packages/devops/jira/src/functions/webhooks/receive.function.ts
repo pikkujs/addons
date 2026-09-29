@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'jira',
- *     secret: 'JIRA_WEBHOOK_SECRET',
  *     receive: ref('jira:jiraWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const jiraWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookRe
   auth: false,
   description: 'Verify a Jira webhook and read it into trigger events',
   func: async ({ jiraWebhookSecret }, { body, headers }) => {
+    const signing = await jiraWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    jiraWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-hub-signature']?.replace(/^sha256=/, ''),
       'sha256',
       raw,

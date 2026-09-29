@@ -2,19 +2,14 @@ import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { JotformService } from './jotform-api.service.js'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets }
-) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets, credentialService }) => {
   const creds = (await secrets.getSecret('JOTFORM_CREDENTIALS')).reveal()
   const jotform = new JotformService(creds)
 
-  const jotformWebhookSecret = new WebhookSigningSecret(
+  const jotformWebhookSecret = WebhookSigningSecret.fromCredential(
     'Jotform',
-    await secrets
-      .getSecret('JOTFORM_WEBHOOK_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'jotformWebhookSecret'
   )
 
 

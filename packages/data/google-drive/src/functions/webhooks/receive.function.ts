@@ -7,7 +7,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'google-drive',
- *     secret: 'GOOGLE_DRIVE_WEBHOOK_CHANNEL_TOKEN',
  *     receive: ref('google-drive:googleDriveWebhookReceive'),
  *   })
  */
@@ -15,7 +14,8 @@ export const googleDriveWebhookReceive = pikkuSessionlessFunc<WebhookRequest, We
   auth: false,
   description: 'Verify a Google Drive webhook and read it into trigger events',
   func: async ({ googleDriveWebhookSecret }, { headers }) => {
-    googleDriveWebhookSecret.verifyToken(headers['x-goog-channel-token'])
+    const signing = await googleDriveWebhookSecret.load()
+    signing.verifyToken(headers['x-goog-channel-token'])
     const channelId = headers['x-goog-channel-id']
     return {
       events: [

@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'convertkit',
- *     secret: 'CONVERTKIT_WEBHOOK_TOKEN',
  *     receive: ref('convertkit:convertkitWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const convertkitWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Web
   auth: false,
   description: 'Verify a Kit webhook and read it into trigger events',
   func: async ({ convertkitWebhookSecret }, { body, query }) => {
-    convertkitWebhookSecret.verifyToken(query.token)
+    const signing = await convertkitWebhookSecret.load()
+    signing.verifyToken(query.token)
     return {
       events: [{ name: query.event ?? '', data: parseJson(new TextDecoder().decode(body)) }],
     }

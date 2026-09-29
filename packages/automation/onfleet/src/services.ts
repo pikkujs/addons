@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  onfleetWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  onfleetWebhookSecret: WebhookSigningSecret.fromCredential(
     'Onfleet',
-    await secrets
-      .getSecret('ONFLEET_WEBHOOK_SECRET')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'onfleetWebhookSecret'
   ),
 }))

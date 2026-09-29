@@ -25,7 +25,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'resend',
- *     secret: 'RESEND_WEBHOOK_SECRET',
  *     receive: ref('resend:resendWebhookReceive'),
  *   })
  */
@@ -33,6 +32,7 @@ export const resendWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Resend webhook and read it into trigger events',
   func: async ({ resendWebhookSecret }, { body, headers }) => {
+    const signing = await resendWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const id = headers['svix-id']
     const timestamp = headers['svix-timestamp']
@@ -45,7 +45,7 @@ export const resendWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
       .map((signature) => signature.slice(3))
     if (
       !anyVerifies(signatures, (signature) =>
-        resendWebhookSecret.verifyHmac(
+        signing.verifyHmac(
           signature,
           'sha256',
           `${id}.${timestamp}.${raw}`,

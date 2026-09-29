@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'telegram',
- *     secret: 'TELEGRAM_WEBHOOK_SECRET',
  *     receive: ref('telegram:telegramWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const telegramWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a Telegram webhook and read it into trigger events',
   func: async ({ telegramWebhookSecret }, { body, headers }) => {
-    telegramWebhookSecret.verifyToken(headers['x-telegram-bot-api-secret-token'])
+    const signing = await telegramWebhookSecret.load()
+    signing.verifyToken(headers['x-telegram-bot-api-secret-token'])
     const { update_id, ...update } = parseJson(new TextDecoder().decode(body))
     const name = Object.keys(update)[0] ?? ''
     return { events: [{ name, id: String(update_id), data: update[name] }] }

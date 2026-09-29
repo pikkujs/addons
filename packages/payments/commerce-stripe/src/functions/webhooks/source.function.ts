@@ -14,7 +14,6 @@ import { applyStripeEvent, type StripeEvent } from '../../lib/apply-stripe-event
  * for the events this addon handles:
  *   wireTriggerWebhookSource({
  *     name: 'stripe',
- *     secret: 'STRIPE_WEBHOOK_SECRET',
  *     receive: ref('shop:receiveStripeWebhook'),
  *   })
  */

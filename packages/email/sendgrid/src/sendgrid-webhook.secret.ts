@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const sendgridWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'sendgridWebhookSecret',
   displayName: 'SendGrid Webhook Secret',
   description: "The Event Webhook's verification key, as SendGrid shows it",
-  secretId: 'SENDGRID_WEBHOOK_PUBLIC_KEY',
+  type: 'singleton',
   schema: sendgridWebhookSecretSchema,
 })

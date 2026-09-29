@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  youtubeWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  youtubeWebhookSecret: WebhookSigningSecret.fromCredential(
     'YouTube',
-    await secrets
-      .getSecret('YOUTUBE_WEBHOOK_SECRET')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'youtubeWebhookSecret'
   ),
 }))

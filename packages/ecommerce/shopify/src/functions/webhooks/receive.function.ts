@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'shopify',
- *     secret: 'SHOPIFY_WEBHOOK_SECRET',
  *     receive: ref('shopify:shopifyWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const shopifyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Shopify webhook and read it into trigger events',
   func: async ({ shopifyWebhookSecret }, { body, headers }) => {
+    const signing = await shopifyWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    shopifyWebhookSecret.verifyHmac(headers['x-shopify-hmac-sha256'], 'sha256', raw, 'base64')
+    signing.verifyHmac(headers['x-shopify-hmac-sha256'], 'sha256', raw, 'base64')
     const name = headers['x-shopify-topic']
     if (!name) {
       throw new BadRequestError('Missing X-Shopify-Topic header')

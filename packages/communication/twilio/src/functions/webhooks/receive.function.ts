@@ -10,7 +10,6 @@ const parseForm = (raw: string): Record<string, string> =>
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'twilio',
- *     secret: 'TWILIO_WEBHOOK_AUTH_TOKEN',
  *     receive: ref('twilio:twilioWebhookReceive'),
  *   })
  */
@@ -18,12 +17,13 @@ export const twilioWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Twilio webhook and read it into trigger events',
   func: async ({ twilioWebhookSecret, variables }, { body, headers }) => {
+    const signing = await twilioWebhookSecret.load()
     const form = parseForm(new TextDecoder().decode(body))
     const url = (await variables.get('TWILIO_WEBHOOK_URL')) ?? ''
     const signed = Object.keys(form)
       .sort()
       .reduce((payload, key) => payload + key + form[key], url)
-    twilioWebhookSecret.verifyHmac(headers['x-twilio-signature'], 'sha1', signed, 'base64')
+    signing.verifyHmac(headers['x-twilio-signature'], 'sha1', signed, 'base64')
     const status = form.MessageStatus ?? form.CallStatus
     const sid = form.MessageSid ?? form.CallSid
     return {

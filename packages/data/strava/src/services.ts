@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  stravaWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  stravaWebhookSecret: WebhookSigningSecret.fromCredential(
     'Strava',
-    await secrets
-      .getSecret('STRAVA_WEBHOOK_VERIFY_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'stravaWebhookSecret'
   ),
 }))

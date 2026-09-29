@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'storyblok',
- *     secret: 'STORYBLOK_WEBHOOK_SECRET',
  *     receive: ref('storyblok:storyblokWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const storyblokWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a Storyblok webhook and read it into trigger events',
   func: async ({ storyblokWebhookSecret }, { body, headers }) => {
+    const signing = await storyblokWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    storyblokWebhookSecret.verifyHmac(headers['webhook-signature'], 'sha1', raw, 'hex')
+    signing.verifyHmac(headers['webhook-signature'], 'sha1', raw, 'hex')
     const data = parseJson(raw)
     return { events: [{ name: data.action, data }] }
   },

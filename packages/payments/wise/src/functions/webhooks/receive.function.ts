@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'wise',
- *     secret: 'WISE_WEBHOOK_PUBLIC_KEY',
  *     receive: ref('wise:wiseWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const wiseWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookRe
   auth: false,
   description: 'Verify a Wise webhook and read it into trigger events',
   func: async ({ wiseWebhookSecret }, { body, headers }) => {
+    const signing = await wiseWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    wiseWebhookSecret.verifyPublicKey(headers['x-signature-sha256'], raw)
+    signing.verifyPublicKey(headers['x-signature-sha256'], raw)
     const data = parseJson(raw)
     return {
       events: [{ name: String(data.event_type), id: headers['x-delivery-id'], data }],

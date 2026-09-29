@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const webflowWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'webflowWebhookSecret',
   displayName: 'Webflow Webhook Secret',
   description: "The site's webhook secret, or the app's client secret for OAuth apps",
-  secretId: 'WEBFLOW_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: webflowWebhookSecretSchema,
 })

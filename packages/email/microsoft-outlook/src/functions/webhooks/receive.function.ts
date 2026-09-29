@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'microsoft-outlook',
- *     secret: 'MICROSOFT_OUTLOOK_WEBHOOK_CLIENT_STATE',
  *     receive: ref('microsoft-outlook:microsoftOutlookWebhookReceive'),
  *   })
  */
@@ -24,6 +23,7 @@ export const microsoftOutlookWebhookReceive = pikkuSessionlessFunc<WebhookReques
   auth: false,
   description: 'Verify a Microsoft Outlook webhook and read it into trigger events',
   func: async ({ microsoftOutlookWebhookSecret }, { body, query }) => {
+    const signing = await microsoftOutlookWebhookSecret.load()
     if (query.validationToken) {
       return {
         respond: {
@@ -35,7 +35,7 @@ export const microsoftOutlookWebhookReceive = pikkuSessionlessFunc<WebhookReques
     }
     const { value = [] } = parseJson(new TextDecoder().decode(body))
     for (const notification of value) {
-      microsoftOutlookWebhookSecret.verifyToken(notification.clientState)
+      signing.verifyToken(notification.clientState)
     }
     return {
       events: value.map((notification: any) => ({

@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  microsoftTeamsWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  microsoftTeamsWebhookSecret: WebhookSigningSecret.fromCredential(
     'Microsoft Teams',
-    await secrets
-      .getSecret('MICROSOFT_TEAMS_WEBHOOK_CLIENT_STATE')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'microsoftTeamsWebhookSecret'
   ),
 }))

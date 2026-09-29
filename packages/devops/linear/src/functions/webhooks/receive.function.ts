@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'linear',
- *     secret: 'LINEAR_WEBHOOK_SECRET',
  *     receive: ref('linear:linearWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const linearWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Linear webhook and read it into trigger events',
   func: async ({ linearWebhookSecret }, { body, headers }) => {
+    const signing = await linearWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    linearWebhookSecret.verifyHmac(headers['linear-signature'], 'sha256', raw, 'hex')
+    signing.verifyHmac(headers['linear-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     if (Math.abs(Date.now() - Number(data.webhookTimestamp)) > 60_000) {
       throw new UnauthorizedError('Stale Linear webhook')

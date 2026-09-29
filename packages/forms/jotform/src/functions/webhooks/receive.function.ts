@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'jotform',
- *     secret: 'JOTFORM_WEBHOOK_TOKEN',
  *     receive: ref('jotform:jotformWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const jotformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Jotform webhook and read it into trigger events',
   func: async ({ jotformWebhookSecret }, { body, headers, query }) => {
-    jotformWebhookSecret.verifyToken(query.token)
+    const signing = await jotformWebhookSecret.load()
+    signing.verifyToken(query.token)
     const form = await new Response(body.slice(), {
       headers: { 'content-type': headers['content-type'] ?? '' },
     }).formData()

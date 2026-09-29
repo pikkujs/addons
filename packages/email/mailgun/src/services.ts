@@ -2,14 +2,12 @@ import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { MailgunService } from './mailgun-api.service.js'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets, credentialService }) => {
   const mailgun = new MailgunService(secrets)
-  const mailgunWebhookSecret = new WebhookSigningSecret(
+  const mailgunWebhookSecret = WebhookSigningSecret.fromCredential(
     'Mailgun',
-    await secrets
-      .getSecret('MAILGUN_WEBHOOK_SIGNING_KEY')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'mailgunWebhookSecret'
   )
 
   return { mailgun, mailgunWebhookSecret }

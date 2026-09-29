@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  mailchimpWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  mailchimpWebhookSecret: WebhookSigningSecret.fromCredential(
     'Mailchimp',
-    await secrets
-      .getSecret('MAILCHIMP_WEBHOOK_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'mailchimpWebhookSecret'
   ),
 }))

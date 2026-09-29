@@ -12,14 +12,13 @@ import type {
 } from '@pikku/core/trigger'
 
 /**
- * The webhook source steps for Stripe. `setup` creates the endpoint and hands
- * back its signing secret, so the app stores `STRIPE_WEBHOOK_SECRET` from the
- * deploy rather than copying it from the dashboard.
+ * The webhook source steps for Stripe. `setup` creates the endpoint and stores
+ * its signing secret in the credential store as `stripeWebhookSecret`, so
+ * nobody copies it from the dashboard and a new one needs no deploy.
  *
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'stripe',
- *     secret: 'STRIPE_WEBHOOK_SECRET',
  *     receive: ref('stripe:stripeWebhookReceive'),
  *     check: ref('stripe:stripeWebhookCheck'),
  *     setup: ref('stripe:stripeWebhookSetup'),
@@ -31,7 +30,7 @@ export const stripeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   description: 'Verify a Stripe webhook and read it into trigger events',
   func: async ({ stripeWebhookVerifier }, { body, headers }) => {
     const signature = headers['stripe-signature']
-    if (!signature || !stripeWebhookVerifier.configured) {
+    if (!signature) {
       throw new UnauthorizedError('Invalid Stripe webhook signature')
     }
     let event: { id: string; type: string; data?: unknown }
@@ -85,7 +84,10 @@ export const stripeWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, We
 export const stripeWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Create or update this deployment's Stripe webhook endpoint",
-  func: async ({ stripe }, { url, label, events, previous }) => {
+  func: async ({ stripe, credentialService }, { url, label, events, previous }) => {
+    if (!credentialService) {
+      throw new Error('Storing the Stripe signing secret needs a credentialService')
+    }
     const existing = await findEndpoint(stripe, label, previous)
     if (existing) {
       await stripe.webhookEndpoints.update(existing.id, {
@@ -100,19 +102,21 @@ export const stripeWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, We
       enabled_events: enabledEvents(events),
       metadata: { [LABEL_KEY]: label },
     })
-    return { status: 'created', state: { id: created.id }, secret: created.secret }
+    await credentialService.set('stripeWebhookSecret', created.secret)
+    return { status: 'created', state: { id: created.id } }
   },
 })
 
 export const stripeWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Delete this deployment's Stripe webhook endpoint",
-  func: async ({ stripe }, { label, previous }) => {
+  func: async ({ stripe, credentialService }, { label, previous }) => {
     const endpoint = await findEndpoint(stripe, label, previous)
     if (!endpoint) {
       return { status: 'absent' }
     }
     await stripe.webhookEndpoints.del(endpoint.id)
+    await credentialService?.delete('stripeWebhookSecret')
     return { status: 'deleted' }
   },
 })

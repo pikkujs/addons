@@ -1,14 +1,14 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 import { defineVariable } from '@pikku/core/variable'
 
 export const mandrillWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'mandrillWebhookSecret',
   displayName: 'Mandrill Webhook Secret',
   description: "The webhook's key",
-  secretId: 'MANDRILL_WEBHOOK_KEY',
+  type: 'singleton',
   schema: mandrillWebhookSecretSchema,
 })
 

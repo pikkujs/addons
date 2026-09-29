@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const taigaWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'taigaWebhookSecret',
   displayName: 'Taiga Webhook Secret',
   description: "The webhook's secret key",
-  secretId: 'TAIGA_WEBHOOK_KEY',
+  type: 'singleton',
   schema: taigaWebhookSecretSchema,
 })

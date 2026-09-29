@@ -15,8 +15,8 @@ const sameSet = (a: string[], b: string[]) =>
 /**
  * The lifecycle steps of a Telegram webhook source. A bot has exactly one
  * webhook, so `setup` points it at this deployment, replacing whatever it
- * pointed at, with a fresh `secret_token` for deploy to store as
- * `TELEGRAM_WEBHOOK_SECRET`. Events are the update kinds (`message`,
+ * pointed at, with a fresh `secret_token` that it stores in the credential store as
+ * `telegramWebhookSecret`. Events are the update kinds (`message`,
  * `callback_query`, ...); none means Telegram's default set.
  *
  * Wire them next to `telegramWebhookReceive`:
@@ -45,25 +45,30 @@ export const telegramWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, 
 export const telegramWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Point the bot's Telegram webhook at this deployment",
-  func: async ({ telegram }, { url, events }) => {
+  func: async ({ telegram, credentialService }, { url, events }) => {
+    if (!credentialService) {
+      throw new Error('Storing the Telegram signing secret needs a credentialService')
+    }
     const previous = await telegram.request<WebhookInfo>('getWebhookInfo')
     const secret = crypto.randomUUID().replaceAll('-', '')
     await telegram.request('setWebhook', {
       body: { url, secret_token: secret, allowed_updates: events },
     })
-    return { status: previous.url ? 'updated' : 'created', state: { url }, secret }
+    await credentialService.set('telegramWebhookSecret', secret)
+    return { status: previous.url ? 'updated' : 'created', state: { url } }
   },
 })
 
 export const telegramWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Remove the bot's Telegram webhook if it points at this deployment",
-  func: async ({ telegram }, { previous }) => {
+  func: async ({ telegram, credentialService }, { previous }) => {
     const info = await telegram.request<WebhookInfo>('getWebhookInfo')
     if (!info.url || info.url !== previous?.url) {
       return { status: 'absent' }
     }
     await telegram.request('deleteWebhook')
+    await credentialService?.delete('telegramWebhookSecret')
     return { status: 'deleted' }
   },
 })

@@ -41,7 +41,7 @@ const settings = (url: string, events: string[]) => ({
  * The lifecycle steps of a SendGrid webhook source: one Event Webhook per
  * deployment, found by its friendly name (the label), with signature
  * verification switched on. Enabling it issues the verification key, which
- * deploy stores as `SENDGRID_WEBHOOK_PUBLIC_KEY`.
+ * `setup` stores in the credential store as `sendgridWebhookSecret`.
  *
  * Wire them next to `sendgridWebhookReceive`:
  *   check: ref('sendgrid:sendgridWebhookCheck'),
@@ -73,7 +73,10 @@ export const sendgridWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, 
 export const sendgridWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Create or update this deployment's SendGrid Event Webhook",
-  func: async ({ sendgrid }, { url, label, events, previous }) => {
+  func: async ({ sendgrid, credentialService }, { url, label, events, previous }) => {
+    if (!credentialService) {
+      throw new Error('Storing the SendGrid signing secret needs a credentialService')
+    }
     const existing = await findWebhook(sendgrid, label, previous)
     if (existing) {
       await sendgrid.request('PATCH', `/user/webhooks/event/settings/${existing.id}`, {
@@ -89,19 +92,21 @@ export const sendgridWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, 
       `/user/webhooks/event/settings/signed/${created.id}`,
       { body: { enabled: true } }
     )
-    return { status: 'created', state: { id: created.id }, secret: public_key }
+    await credentialService.set('sendgridWebhookSecret', public_key)
+    return { status: 'created', state: { id: created.id } }
   },
 })
 
 export const sendgridWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Delete this deployment's SendGrid Event Webhook",
-  func: async ({ sendgrid }, { label, previous }) => {
+  func: async ({ sendgrid, credentialService }, { label, previous }) => {
     const webhook = await findWebhook(sendgrid, label, previous)
     if (!webhook) {
       return { status: 'absent' }
     }
     await sendgrid.request('DELETE', `/user/webhooks/event/settings/${webhook.id}`)
+    await credentialService?.delete('sendgridWebhookSecret')
     return { status: 'deleted' }
   },
 })

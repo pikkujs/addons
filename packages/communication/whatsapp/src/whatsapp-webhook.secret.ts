@@ -1,14 +1,14 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 import { defineVariable } from '@pikku/core/variable'
 
 export const whatsappWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'whatsappWebhookSecret',
   displayName: 'WhatsApp Webhook Secret',
   description: "The Meta app's secret, which signs webhook deliveries",
-  secretId: 'WHATSAPP_APP_SECRET',
+  type: 'singleton',
   schema: whatsappWebhookSecretSchema,
 })
 

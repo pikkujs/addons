@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'zammad',
- *     secret: 'ZAMMAD_WEBHOOK_SECRET',
  *     receive: ref('zammad:zammadWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const zammadWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Zammad webhook and read it into trigger events',
   func: async ({ zammadWebhookSecret }, { body, headers }) => {
+    const signing = await zammadWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    zammadWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-hub-signature']?.replace(/^sha1=/, ''),
       'sha1',
       raw,

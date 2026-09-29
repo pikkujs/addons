@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'airtable',
- *     secret: 'AIRTABLE_WEBHOOK_SECRET',
  *     receive: ref('airtable:airtableWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const airtableWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a Airtable webhook and read it into trigger events',
   func: async ({ airtableWebhookSecret }, { body, headers }) => {
+    const signing = await airtableWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    airtableWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-airtable-content-mac']?.replace(/^hmac-sha256=/, ''),
       'sha256',
       raw,

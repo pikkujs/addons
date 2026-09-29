@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'webflow',
- *     secret: 'WEBFLOW_WEBHOOK_SECRET',
  *     receive: ref('webflow:webflowWebhookReceive'),
  *   })
  */
@@ -24,12 +23,13 @@ export const webflowWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Webflow webhook and read it into trigger events',
   func: async ({ webflowWebhookSecret }, { body, headers }) => {
+    const signing = await webflowWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const timestamp = headers['x-webflow-timestamp']
     if (!timestamp || Math.abs(Date.now() - Number(timestamp)) > 300_000) {
       throw new UnauthorizedError('Stale or unsigned Webflow webhook')
     }
-    webflowWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-webflow-signature'],
       'sha256',
       `${timestamp}:${raw}`,

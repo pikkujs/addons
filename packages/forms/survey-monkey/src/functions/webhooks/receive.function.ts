@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'survey-monkey',
- *     secret: 'SURVEY_MONKEY_WEBHOOK_KEY',
  *     method: ['head', 'post'],
  *     receive: ref('survey-monkey:surveyMonkeyWebhookReceive'),
  *   })
@@ -25,11 +24,12 @@ export const surveyMonkeyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, W
   auth: false,
   description: 'Verify a SurveyMonkey webhook and read it into trigger events',
   func: async ({ surveyMonkeyWebhookSecret }, { body, headers, method }) => {
+    const signing = await surveyMonkeyWebhookSecret.load()
     if (method.toLowerCase() === 'head') {
       return { respond: { status: 200 } }
     }
     const raw = new TextDecoder().decode(body)
-    surveyMonkeyWebhookSecret.verifyHmac(headers['sm-signature'], 'sha1', raw, 'base64')
+    signing.verifyHmac(headers['sm-signature'], 'sha1', raw, 'base64')
     const data = parseJson(raw)
     return { events: [{ name: data.event_type, id: data.event_id, data }] }
   },

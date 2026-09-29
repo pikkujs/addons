@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  googleCalendarWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  googleCalendarWebhookSecret: WebhookSigningSecret.fromCredential(
     'Google Calendar',
-    await secrets
-      .getSecret('GOOGLE_CALENDAR_WEBHOOK_CHANNEL_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'googleCalendarWebhookSecret'
   ),
 }))

@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  mailjetWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  mailjetWebhookSecret: WebhookSigningSecret.fromCredential(
     'Mailjet',
-    await secrets
-      .getSecret('MAILJET_WEBHOOK_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'mailjetWebhookSecret'
   ),
 }))

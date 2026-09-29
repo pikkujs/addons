@@ -18,7 +18,6 @@ const parseForm = (raw: string): Record<string, string> =>
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'mandrill',
- *     secret: 'MANDRILL_WEBHOOK_KEY',
  *     method: ['head', 'post'],
  *     receive: ref('mandrill:mandrillWebhookReceive'),
  *   })
@@ -27,6 +26,7 @@ export const mandrillWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a Mandrill webhook and read it into trigger events',
   func: async ({ mandrillWebhookSecret, variables }, { body, headers, method }) => {
+    const signing = await mandrillWebhookSecret.load()
     if (method.toLowerCase() === 'head') {
       return { respond: { status: 200 } }
     }
@@ -35,7 +35,7 @@ export const mandrillWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
     const signed = Object.keys(form)
       .sort()
       .reduce((payload, key) => payload + key + form[key], url)
-    mandrillWebhookSecret.verifyHmac(headers['x-mandrill-signature'], 'sha1', signed, 'base64')
+    signing.verifyHmac(headers['x-mandrill-signature'], 'sha1', signed, 'base64')
     return {
       events: parseJson(form.mandrill_events ?? '[]').map((event: any) => ({
         name: event.event ?? event.type,

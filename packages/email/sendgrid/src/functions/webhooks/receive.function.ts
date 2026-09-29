@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'sendgrid',
- *     secret: 'SENDGRID_WEBHOOK_PUBLIC_KEY',
  *     receive: ref('sendgrid:sendgridWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const sendgridWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a SendGrid webhook and read it into trigger events',
   func: async ({ sendgridWebhookSecret }, { body, headers }) => {
+    const signing = await sendgridWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    sendgridWebhookSecret.verifyPublicKey(
+    signing.verifyPublicKey(
       headers['x-twilio-email-event-webhook-signature'],
       `${headers['x-twilio-email-event-webhook-timestamp']}${raw}`
     )
