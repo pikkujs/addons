@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'strava',
- *     secret: 'STRAVA_WEBHOOK_VERIFY_TOKEN',
  *     method: ['get',  'post'],
  *     receive: ref('strava:stravaWebhookReceive'),
  *   })
@@ -25,8 +24,9 @@ export const stravaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a Strava webhook and read it into trigger events',
   func: async ({ stravaWebhookSecret }, { body, method, query }) => {
+    const signing = await stravaWebhookSecret.load()
     if (method.toLowerCase() === 'get') {
-      stravaWebhookSecret.verifyToken(query['hub.verify_token'])
+      signing.verifyToken(query['hub.verify_token'])
       return { respond: { status: 200, body: { 'hub.challenge': query['hub.challenge'] } } }
     }
     const data = parseJson(new TextDecoder().decode(body))

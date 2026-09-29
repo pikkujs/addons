@@ -28,7 +28,6 @@ wireAddon({ name: 'shop', package: '@pikku/addon-commerce-stripe' })
 
 wireTriggerWebhookSource({
   name: 'stripe',
-  secret: 'STRIPE_WEBHOOK_SECRET',
   receive: ref('shop:receiveStripeWebhook'),
 })
 

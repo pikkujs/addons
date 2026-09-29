@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  taigaWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  taigaWebhookSecret: WebhookSigningSecret.fromCredential(
     'Taiga',
-    await secrets
-      .getSecret('TAIGA_WEBHOOK_KEY')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'taigaWebhookSecret'
   ),
 }))

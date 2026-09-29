@@ -17,12 +17,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  gitlabWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  gitlabWebhookSecret: WebhookSigningSecret.fromCredential(
     'GitLab',
-    await secrets
-      .getSecret('GITLAB_WEBHOOK_TOKEN')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'gitlabWebhookSecret'
   ),
 }))

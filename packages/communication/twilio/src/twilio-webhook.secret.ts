@@ -1,14 +1,14 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 import { defineVariable } from '@pikku/core/variable'
 
 export const twilioWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'twilioWebhookSecret',
   displayName: 'Twilio Webhook Secret',
   description: "The account's auth token, which Twilio signs requests with",
-  secretId: 'TWILIO_WEBHOOK_AUTH_TOKEN',
+  type: 'singleton',
   schema: twilioWebhookSecretSchema,
 })
 

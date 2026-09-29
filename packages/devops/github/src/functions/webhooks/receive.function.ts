@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'github',
- *     secret: 'GITHUB_WEBHOOK_SECRET',
  *     receive: ref('github:githubWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const githubWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a GitHub webhook and read it into trigger events',
   func: async ({ githubWebhookSecret }, { body, headers }) => {
+    const signing = await githubWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    githubWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-hub-signature-256']?.replace(/^sha256=/, ''),
       'sha256',
       raw,

@@ -13,7 +13,9 @@
 Webhook source lifecycle steps (`check`, `setup`, `teardown`) for Stripe,
 Shopify, Paddle, Telegram, PagerDuty, SendGrid and Mandrill, so
 `pikku webhooks setup` registers the endpoint and stores the signing secret the
-provider issues. Stripe gets `stripeWebhookReceive`; commerce-stripe gets
+provider issues in the credential store (`teardown` removes it). Stripe's
+signing secret moves from the `STRIPE_WEBHOOK_SECRET` secret to the
+`stripeWebhookSecret` credential. Stripe gets `stripeWebhookReceive`; commerce-stripe gets
 `receiveStripeWebhook` and `applyStripeWebhookEvent` as the trigger that
 applies events to its tables; PlentyMarkets gets `plentymarketsWebhookReceive`.
 

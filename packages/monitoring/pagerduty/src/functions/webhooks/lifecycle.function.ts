@@ -54,7 +54,7 @@ const create = async (pagerduty: PagerdutyService, url: string, label: string, e
 /**
  * The lifecycle steps of a PagerDuty webhook source: one account-wide v3
  * subscription per deployment, found by its description (the label). Creating
- * it issues the signing secret, which deploy stores. PagerDuty cannot move a
+ * it issues the signing secret, which it stores in the credential store. PagerDuty cannot move a
  * subscription to a new URL, so a changed URL replaces it.
  *
  * Wire them next to `pagerdutyWebhookReceive`:
@@ -86,7 +86,10 @@ export const pagerdutyWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput,
 export const pagerdutyWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Create or update this deployment's PagerDuty webhook subscription",
-  func: async ({ pagerduty }, { url, label, events, previous }) => {
+  func: async ({ pagerduty, credentialService }, { url, label, events, previous }) => {
+    if (!credentialService) {
+      throw new Error('Storing the PagerDuty signing secret needs a credentialService')
+    }
     const existing = await findSubscription(pagerduty, label, previous)
     if (existing && existing.delivery_method.url === url) {
       await pagerduty.request('PUT', `/webhook_subscriptions/${existing.id}`, {
@@ -98,23 +101,23 @@ export const pagerdutyWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput,
       await pagerduty.request('DELETE', `/webhook_subscriptions/${existing.id}`)
     }
     const created = await create(pagerduty, url, label, events)
-    return {
-      status: existing ? 'updated' : 'created',
-      state: { id: created.id },
-      secret: created.delivery_method.secret,
+    if (created.delivery_method.secret) {
+      await credentialService.set('pagerdutyWebhookSecret', created.delivery_method.secret)
     }
+    return { status: existing ? 'updated' : 'created', state: { id: created.id } }
   },
 })
 
 export const pagerdutyWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Delete this deployment's PagerDuty webhook subscription",
-  func: async ({ pagerduty }, { label, previous }) => {
+  func: async ({ pagerduty, credentialService }, { label, previous }) => {
     const subscription = await findSubscription(pagerduty, label, previous)
     if (!subscription) {
       return { status: 'absent' }
     }
     await pagerduty.request('DELETE', `/webhook_subscriptions/${subscription.id}`)
+    await credentialService?.delete('pagerdutyWebhookSecret')
     return { status: 'deleted' }
   },
 })

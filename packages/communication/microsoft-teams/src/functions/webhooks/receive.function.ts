@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'microsoft-teams',
- *     secret: 'MICROSOFT_TEAMS_WEBHOOK_CLIENT_STATE',
  *     receive: ref('microsoft-teams:microsoftTeamsWebhookReceive'),
  *   })
  */
@@ -24,6 +23,7 @@ export const microsoftTeamsWebhookReceive = pikkuSessionlessFunc<WebhookRequest,
   auth: false,
   description: 'Verify a Microsoft Teams webhook and read it into trigger events',
   func: async ({ microsoftTeamsWebhookSecret }, { body, query }) => {
+    const signing = await microsoftTeamsWebhookSecret.load()
     if (query.validationToken) {
       return {
         respond: {
@@ -35,7 +35,7 @@ export const microsoftTeamsWebhookReceive = pikkuSessionlessFunc<WebhookRequest,
     }
     const { value = [] } = parseJson(new TextDecoder().decode(body))
     for (const notification of value) {
-      microsoftTeamsWebhookSecret.verifyToken(notification.clientState)
+      signing.verifyToken(notification.clientState)
     }
     return {
       events: value.map((notification: any) => ({

@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const elevenlabsWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'elevenlabsWebhookSecret',
   displayName: 'ElevenLabs Webhook Secret',
   description: "The webhook's HMAC secret",
-  secretId: 'ELEVENLABS_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: elevenlabsWebhookSecretSchema,
 })

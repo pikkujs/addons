@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'wekan',
- *     secret: 'WEKAN_WEBHOOK_TOKEN',
  *     receive: ref('wekan:wekanWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const wekanWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookR
   auth: false,
   description: 'Verify a Wekan webhook and read it into trigger events',
   func: async ({ wekanWebhookSecret }, { body, query }) => {
-    wekanWebhookSecret.verifyToken(query.token)
+    const signing = await wekanWebhookSecret.load()
+    signing.verifyToken(query.token)
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.description ?? '', data }] }
   },

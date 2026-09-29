@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'clickup',
- *     secret: 'CLICKUP_WEBHOOK_SECRET',
  *     receive: ref('clickup:clickupWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const clickupWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a ClickUp webhook and read it into trigger events',
   func: async ({ clickupWebhookSecret }, { body, headers }) => {
+    const signing = await clickupWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    clickupWebhookSecret.verifyHmac(headers['x-signature'], 'sha256', raw, 'hex')
+    signing.verifyHmac(headers['x-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: [

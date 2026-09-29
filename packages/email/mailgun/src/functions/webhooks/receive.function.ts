@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'mailgun',
- *     secret: 'MAILGUN_WEBHOOK_SIGNING_KEY',
  *     receive: ref('mailgun:mailgunWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const mailgunWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Mailgun webhook and read it into trigger events',
   func: async ({ mailgunWebhookSecret }, { body }) => {
+    const signing = await mailgunWebhookSecret.load()
     const { signature, 'event-data': event } = parseJson(new TextDecoder().decode(body))
-    mailgunWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       signature?.signature,
       'sha256',
       `${signature?.timestamp}${signature?.token}`,

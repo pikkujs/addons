@@ -2,19 +2,14 @@ import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { WhatsappService } from './whatsapp-api.service.js'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (
-  config,
-  { secrets }
-) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets, credentialService }) => {
   const creds = (await secrets.getSecret('WHATSAPP_CREDENTIALS')).reveal()
   const whatsapp = new WhatsappService(creds)
 
-  const whatsappWebhookSecret = new WebhookSigningSecret(
+  const whatsappWebhookSecret = WebhookSigningSecret.fromCredential(
     'WhatsApp',
-    await secrets
-      .getSecret('WHATSAPP_APP_SECRET')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'whatsappWebhookSecret'
   )
 
 

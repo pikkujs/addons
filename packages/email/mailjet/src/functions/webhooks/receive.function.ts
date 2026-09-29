@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'mailjet',
- *     secret: 'MAILJET_WEBHOOK_TOKEN',
  *     receive: ref('mailjet:mailjetWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const mailjetWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Mailjet webhook and read it into trigger events',
   func: async ({ mailjetWebhookSecret }, { body, query }) => {
-    mailjetWebhookSecret.verifyToken(query.token)
+    const signing = await mailjetWebhookSecret.load()
+    signing.verifyToken(query.token)
     const data = parseJson(new TextDecoder().decode(body))
     return {
       events: [data].flat().map((event: any) => ({

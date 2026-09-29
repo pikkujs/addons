@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'elevenlabs',
- *     secret: 'ELEVENLABS_WEBHOOK_SECRET',
  *     receive: ref('elevenlabs:elevenlabsWebhookReceive'),
  *   })
  */
@@ -24,6 +23,7 @@ export const elevenlabsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Web
   auth: false,
   description: 'Verify a ElevenLabs webhook and read it into trigger events',
   func: async ({ elevenlabsWebhookSecret }, { body, headers }) => {
+    const signing = await elevenlabsWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const fields = Object.fromEntries(
       (headers['elevenlabs-signature'] ?? '').split(',').map((field) => field.split('='))
@@ -31,7 +31,7 @@ export const elevenlabsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Web
     if (!fields.t || Math.abs(Date.now() / 1000 - Number(fields.t)) > 1800) {
       throw new UnauthorizedError('Stale or unsigned ElevenLabs webhook')
     }
-    elevenlabsWebhookSecret.verifyHmac(fields.v0, 'sha256', `${fields.t}.${raw}`, 'hex')
+    signing.verifyHmac(fields.v0, 'sha256', `${fields.t}.${raw}`, 'hex')
     const data = parseJson(raw)
     return { events: [{ name: data.type, data: data.data ?? data }] }
   },

@@ -10,7 +10,6 @@ const parseForm = (raw: string): Record<string, string> =>
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'mailchimp',
- *     secret: 'MAILCHIMP_WEBHOOK_TOKEN',
  *     method: ['get',  'post'],
  *     receive: ref('mailchimp:mailchimpWebhookReceive'),
  *   })
@@ -19,10 +18,11 @@ export const mailchimpWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a Mailchimp webhook and read it into trigger events',
   func: async ({ mailchimpWebhookSecret }, { body, method, query }) => {
+    const signing = await mailchimpWebhookSecret.load()
     if (method.toLowerCase() === 'get') {
       return { respond: { status: 200 } }
     }
-    mailchimpWebhookSecret.verifyToken(query.token)
+    signing.verifyToken(query.token)
     const { type = '', fired_at, ...fields } = parseForm(new TextDecoder().decode(body))
     return {
       events: [

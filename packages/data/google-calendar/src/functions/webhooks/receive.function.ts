@@ -7,7 +7,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'google-calendar',
- *     secret: 'GOOGLE_CALENDAR_WEBHOOK_CHANNEL_TOKEN',
  *     receive: ref('google-calendar:googleCalendarWebhookReceive'),
  *   })
  */
@@ -15,7 +14,8 @@ export const googleCalendarWebhookReceive = pikkuSessionlessFunc<WebhookRequest,
   auth: false,
   description: 'Verify a Google Calendar webhook and read it into trigger events',
   func: async ({ googleCalendarWebhookSecret }, { headers }) => {
-    googleCalendarWebhookSecret.verifyToken(headers['x-goog-channel-token'])
+    const signing = await googleCalendarWebhookSecret.load()
+    signing.verifyToken(headers['x-goog-channel-token'])
     const channelId = headers['x-goog-channel-id']
     return {
       events: [

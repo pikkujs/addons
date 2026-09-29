@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'woocommerce',
- *     secret: 'WOOCOMMERCE_WEBHOOK_SECRET',
  *     receive: ref('woocommerce:woocommerceWebhookReceive'),
  *   })
  */
@@ -24,12 +23,13 @@ export const woocommerceWebhookReceive = pikkuSessionlessFunc<WebhookRequest, We
   auth: false,
   description: 'Verify a WooCommerce webhook and read it into trigger events',
   func: async ({ woocommerceWebhookSecret }, { body, headers }) => {
+    const signing = await woocommerceWebhookSecret.load()
     const name = headers['x-wc-webhook-topic']
     if (!name) {
       return { respond: { status: 200 } }
     }
     const raw = new TextDecoder().decode(body)
-    woocommerceWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-wc-webhook-signature'],
       'sha256',
       raw,

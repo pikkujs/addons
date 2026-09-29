@@ -2,14 +2,12 @@ import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { MandrillService } from './mandrill-api.service.js'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 
-export const createSingletonServices = pikkuAddonServices(async (config, { secrets }) => {
+export const createSingletonServices = pikkuAddonServices(async (config, { secrets, credentialService }) => {
   const mandrill = new MandrillService(secrets)
-  const mandrillWebhookSecret = new WebhookSigningSecret(
+  const mandrillWebhookSecret = WebhookSigningSecret.fromCredential(
     'Mandrill',
-    await secrets
-      .getSecret('MANDRILL_WEBHOOK_KEY')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'mandrillWebhookSecret'
   )
 
   return { mandrill, mandrillWebhookSecret }

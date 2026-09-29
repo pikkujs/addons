@@ -22,7 +22,8 @@ const findWebhook = async (mandrill: MandrillService, label: string, previous?: 
 /**
  * The lifecycle steps of a Mandrill webhook source: one webhook per
  * deployment, found by its description (the label). Creating it issues the
- * webhook's key, which deploy stores as `MANDRILL_WEBHOOK_KEY`. The receiver
+ * webhook's key, which `setup` stores in the credential store as
+ * `mandrillWebhookSecret`. The receiver
  * signs over the URL, so set the `MANDRILL_WEBHOOK_URL` variable to the same
  * URL. Mandrill checks the URL with a HEAD request before it adds the webhook.
  *
@@ -52,26 +53,31 @@ export const mandrillWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, 
 export const mandrillWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Create or update this deployment's Mandrill webhook",
-  func: async ({ mandrill }, { url, label, events, previous }) => {
+  func: async ({ mandrill, credentialService }, { url, label, events, previous }) => {
+    if (!credentialService) {
+      throw new Error('Storing the Mandrill signing secret needs a credentialService')
+    }
     const existing = await findWebhook(mandrill, label, previous)
     if (existing) {
       await mandrill.request('/webhooks', '/update', { id: existing.id, url, description: label, events })
       return { status: 'updated', state: { id: existing.id } }
     }
     const created = await mandrill.request<MandrillWebhook>('/webhooks', '/add', { url, description: label, events })
-    return { status: 'created', state: { id: created.id }, secret: created.auth_key }
+    await credentialService.set('mandrillWebhookSecret', created.auth_key)
+    return { status: 'created', state: { id: created.id } }
   },
 })
 
 export const mandrillWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Delete this deployment's Mandrill webhook",
-  func: async ({ mandrill }, { label, previous }) => {
+  func: async ({ mandrill, credentialService }, { label, previous }) => {
     const webhook = await findWebhook(mandrill, label, previous)
     if (!webhook) {
       return { status: 'absent' }
     }
     await mandrill.request('/webhooks', '/delete', { id: webhook.id })
+    await credentialService?.delete('mandrillWebhookSecret')
     return { status: 'deleted' }
   },
 })

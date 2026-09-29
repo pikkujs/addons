@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'clockify',
- *     secret: 'CLOCKIFY_WEBHOOK_TOKEN',
  *     receive: ref('clockify:clockifyWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const clockifyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
   auth: false,
   description: 'Verify a Clockify webhook and read it into trigger events',
   func: async ({ clockifyWebhookSecret }, { body, headers }) => {
-    clockifyWebhookSecret.verifyToken(headers['clockify-signature'])
+    const signing = await clockifyWebhookSecret.load()
+    signing.verifyToken(headers['clockify-signature'])
     return {
       events: [
         {

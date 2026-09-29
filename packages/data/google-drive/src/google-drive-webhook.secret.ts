@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const googleDriveWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'googleDriveWebhookSecret',
   displayName: 'Google Drive Webhook Secret',
   description: "The token given when the push channel was opened",
-  secretId: 'GOOGLE_DRIVE_WEBHOOK_CHANNEL_TOKEN',
+  type: 'singleton',
   schema: googleDriveWebhookSecretSchema,
 })

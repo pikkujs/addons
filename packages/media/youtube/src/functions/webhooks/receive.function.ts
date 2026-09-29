@@ -7,7 +7,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'youtube',
- *     secret: 'YOUTUBE_WEBHOOK_SECRET',
  *     method: ['get',  'post'],
  *     receive: ref('youtube:youtubeWebhookReceive'),
  *   })
@@ -16,11 +15,12 @@ export const youtubeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a YouTube webhook and read it into trigger events',
   func: async ({ youtubeWebhookSecret }, { body, headers, method, query }) => {
+    const signing = await youtubeWebhookSecret.load()
     if (method.toLowerCase() === 'get') {
       return { respond: { status: 200, body: query['hub.challenge'] ?? '' } }
     }
     const raw = new TextDecoder().decode(body)
-    youtubeWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-hub-signature']?.replace(/^sha1=/, ''),
       'sha1',
       raw,

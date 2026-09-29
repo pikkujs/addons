@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const googleCalendarWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'googleCalendarWebhookSecret',
   displayName: 'Google Calendar Webhook Secret',
   description: "The token given when the push channel was opened",
-  secretId: 'GOOGLE_CALENDAR_WEBHOOK_CHANNEL_TOKEN',
+  type: 'singleton',
   schema: googleCalendarWebhookSecretSchema,
 })

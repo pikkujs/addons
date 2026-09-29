@@ -28,14 +28,13 @@ payment intents, setup intents, Connect (marketplaces), and webhook handling.
 ## Webhooks
 
 The addon ships the steps of a Stripe webhook source. `receive` verifies the
-signature against the raw body (`STRIPE_WEBHOOK_SECRET`) and names each event
-after its Stripe type; `setup` creates the endpoint for this deployment and
-returns its signing secret for deploy to store:
+signature against the raw body and names each event after its Stripe type;
+`setup` creates the endpoint for this deployment and stores its signing secret
+in the credential store (`stripeWebhookSecret`), which `teardown` removes:
 
 ```typescript
 wireTriggerWebhookSource({
   name: 'stripe',
-  secret: 'STRIPE_WEBHOOK_SECRET',
   receive: ref('stripe:stripeWebhookReceive'),
   check: ref('stripe:stripeWebhookCheck'),
   setup: ref('stripe:stripeWebhookSetup'),
@@ -59,7 +58,6 @@ unconverted — only field names and dates are normalized.
 ## Secrets
 
 - `STRIPE_SECRET_KEY` — Stripe secret key (`sk_...`)
-- `STRIPE_WEBHOOK_SECRET` — webhook signing secret (`whsec_...`)
 
 ## Dependencies
 

@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'onfleet',
- *     secret: 'ONFLEET_WEBHOOK_SECRET',
  *     method: ['get',  'post'],
  *     receive: ref('onfleet:onfleetWebhookReceive'),
  *   })
@@ -25,11 +24,12 @@ export const onfleetWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Onfleet webhook and read it into trigger events',
   func: async ({ onfleetWebhookSecret }, { body, headers, method, query }) => {
+    const signing = await onfleetWebhookSecret.load()
     if (method.toLowerCase() === 'get') {
       return { respond: { status: 200, body: query.check ?? '' } }
     }
     const raw = new TextDecoder().decode(body)
-    onfleetWebhookSecret.verifyHmac(headers['x-onfleet-signature'], 'sha512', raw, 'hex', 'hex')
+    signing.verifyHmac(headers['x-onfleet-signature'], 'sha512', raw, 'hex', 'hex')
     const data = parseJson(raw)
     return {
       events: [{ name: data.triggerName, id: `${data.taskId}:${data.triggerName}:${data.time}`, data }],

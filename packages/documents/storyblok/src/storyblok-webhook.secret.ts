@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const storyblokWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'storyblokWebhookSecret',
   displayName: 'Storyblok Webhook Secret',
   description: "The webhook's secret",
-  secretId: 'STORYBLOK_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: storyblokWebhookSecretSchema,
 })

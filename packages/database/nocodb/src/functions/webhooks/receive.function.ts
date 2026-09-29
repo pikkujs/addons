@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'nocodb',
- *     secret: 'NOCODB_WEBHOOK_TOKEN',
  *     receive: ref('nocodb:nocodbWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const nocodbWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhook
   auth: false,
   description: 'Verify a NocoDB webhook and read it into trigger events',
   func: async ({ nocodbWebhookSecret }, { body, headers }) => {
-    nocodbWebhookSecret.verifyToken(headers['x-webhook-token'])
+    const signing = await nocodbWebhookSecret.load()
+    signing.verifyToken(headers['x-webhook-token'])
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.type, id: data.id, data }] }
   },

@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'monday-com',
- *     secret: 'MONDAY_COM_WEBHOOK_TOKEN',
  *     receive: ref('monday-com:mondayComWebhookReceive'),
  *   })
  */
@@ -24,11 +23,12 @@ export const mondayComWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a monday.com webhook and read it into trigger events',
   func: async ({ mondayComWebhookSecret }, { body, query }) => {
+    const signing = await mondayComWebhookSecret.load()
     const data = parseJson(new TextDecoder().decode(body))
     if (data.challenge) {
       return { respond: { status: 200, body: { challenge: data.challenge } } }
     }
-    mondayComWebhookSecret.verifyToken(query.token)
+    signing.verifyToken(query.token)
     return {
       events: [{ name: data.event.type, id: data.event.triggerUuid, data: data.event }],
     }

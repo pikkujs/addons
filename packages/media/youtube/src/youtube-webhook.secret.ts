@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const youtubeWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'youtubeWebhookSecret',
   displayName: 'YouTube Webhook Secret',
   description: "The hub.secret given when subscribing to the channel feed",
-  secretId: 'YOUTUBE_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: youtubeWebhookSecretSchema,
 })

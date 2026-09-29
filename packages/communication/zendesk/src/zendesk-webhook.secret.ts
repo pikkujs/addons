@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const zendeskWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'zendeskWebhookSecret',
   displayName: 'Zendesk Webhook Secret',
   description: "The webhook's signing secret",
-  secretId: 'ZENDESK_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: zendeskWebhookSecretSchema,
 })

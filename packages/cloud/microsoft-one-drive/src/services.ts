@@ -18,12 +18,10 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { secrets }) => ({
-  microsoftOneDriveWebhookSecret: new WebhookSigningSecret(
+export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
+  microsoftOneDriveWebhookSecret: WebhookSigningSecret.fromCredential(
     'Microsoft OneDrive',
-    await secrets
-      .getSecret('MICROSOFT_ONE_DRIVE_WEBHOOK_CLIENT_STATE')
-      .then((secret) => secret.reveal())
-      .catch(() => null)
+    credentialService,
+    'microsoftOneDriveWebhookSecret'
   ),
 }))

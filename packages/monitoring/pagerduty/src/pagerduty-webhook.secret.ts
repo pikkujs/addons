@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const pagerdutyWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'pagerdutyWebhookSecret',
   displayName: 'PagerDuty Webhook Secret',
   description: "The webhook subscription's secret",
-  secretId: 'PAGERDUTY_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: pagerdutyWebhookSecretSchema,
 })

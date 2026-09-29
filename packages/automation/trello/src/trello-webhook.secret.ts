@@ -1,14 +1,14 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 import { defineVariable } from '@pikku/core/variable'
 
 export const trelloWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'trelloWebhookSecret',
   displayName: 'Trello Webhook Secret',
   description: "The app's OAuth secret, which Trello signs webhooks with",
-  secretId: 'TRELLO_WEBHOOK_SECRET',
+  type: 'singleton',
   schema: trelloWebhookSecretSchema,
 })
 

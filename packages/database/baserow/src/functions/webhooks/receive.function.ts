@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'baserow',
- *     secret: 'BASEROW_WEBHOOK_TOKEN',
  *     receive: ref('baserow:baserowWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const baserowWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Baserow webhook and read it into trigger events',
   func: async ({ baserowWebhookSecret }, { body, headers }) => {
-    baserowWebhookSecret.verifyToken(headers['x-webhook-token'])
+    const signing = await baserowWebhookSecret.load()
+    signing.verifyToken(headers['x-webhook-token'])
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.event_type, id: data.event_id, data }] }
   },

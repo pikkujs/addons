@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'freshdesk',
- *     secret: 'FRESHDESK_WEBHOOK_TOKEN',
  *     receive: ref('freshdesk:freshdeskWebhookReceive'),
  *   })
  */
@@ -24,7 +23,8 @@ export const freshdeskWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a Freshdesk webhook and read it into trigger events',
   func: async ({ freshdeskWebhookSecret }, { body, query }) => {
-    freshdeskWebhookSecret.verifyToken(query.token)
+    const signing = await freshdeskWebhookSecret.load()
+    signing.verifyToken(query.token)
     return {
       events: [{ name: query.event ?? '', data: parseJson(new TextDecoder().decode(body)) }],
     }

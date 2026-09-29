@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'zoom',
- *     secret: 'ZOOM_WEBHOOK_SECRET_TOKEN',
  *     receive: ref('zoom:zoomWebhookReceive'),
  *   })
  */
@@ -24,6 +23,7 @@ export const zoomWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookRe
   auth: false,
   description: 'Verify a Zoom webhook and read it into trigger events',
   func: async ({ zoomWebhookSecret }, { body, headers }) => {
+    const signing = await zoomWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const data = parseJson(raw)
     if (data.event === 'endpoint.url_validation') {
@@ -33,7 +33,7 @@ export const zoomWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookRe
           status: 200,
           body: {
             plainToken,
-            encryptedToken: zoomWebhookSecret.hmac('sha256', plainToken, 'hex'),
+            encryptedToken: signing.hmac('sha256', plainToken, 'hex'),
           },
         },
       }
@@ -42,7 +42,7 @@ export const zoomWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookRe
     if (!timestamp || Math.abs(Date.now() / 1000 - Number(timestamp)) > 300) {
       throw new UnauthorizedError('Stale or unsigned Zoom webhook')
     }
-    zoomWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-zm-signature']?.replace(/^v0=/, ''),
       'sha256',
       `v0:${timestamp}:${raw}`,

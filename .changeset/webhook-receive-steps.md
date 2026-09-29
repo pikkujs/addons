@@ -56,7 +56,10 @@
 
 Add a webhook `receive` step to 53 addons, for `wireTriggerWebhookSource`.
 Each one verifies the provider's signature (or its shared token) with a
-`WebhookSigningSecret` built from a new `<PROVIDER>_WEBHOOK_*` secret, answers
-the provider's URL handshake where it has one (Zoom, WhatsApp, Strava,
-Microsoft Graph, YouTube, Onfleet, Asana, monday.com, Trello), and returns
-events named after the provider's own event names.
+`WebhookSigningSecret` that reads a new `<provider>WebhookSecret` singleton
+credential per delivery, so a new secret takes effect without a deploy. Each
+answers the provider's URL handshake where it has one (Zoom, WhatsApp, Strava,
+Microsoft Graph, YouTube, Onfleet, Asana, monday.com, Trello) and returns
+events named after the provider's own event names. Asana also gets
+`asanaWebhookCreate`: its handshake is accepted only with the nonce that call
+holds, and the secret it brings is stored as the credential.

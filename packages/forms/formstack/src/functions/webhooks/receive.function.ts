@@ -18,7 +18,6 @@ const parseForm = (raw: string): Record<string, string> =>
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'formstack',
- *     secret: 'FORMSTACK_WEBHOOK_HANDSHAKE_KEY',
  *     receive: ref('formstack:formstackWebhookReceive'),
  *   })
  */
@@ -26,11 +25,12 @@ export const formstackWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a Formstack webhook and read it into trigger events',
   func: async ({ formstackWebhookSecret }, { body, headers }) => {
+    const signing = await formstackWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const { HandshakeKey, ...data } = headers['content-type']?.includes('json')
       ? parseJson(raw)
       : parseForm(raw)
-    formstackWebhookSecret.verifyToken(HandshakeKey)
+    signing.verifyToken(HandshakeKey)
     return { events: [{ name: 'submission', id: data.UniqueID, data }] }
   },
 })

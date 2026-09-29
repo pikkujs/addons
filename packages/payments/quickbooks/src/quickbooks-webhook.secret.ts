@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const quickbooksWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'quickbooksWebhookSecret',
   displayName: 'QuickBooks Webhook Secret',
   description: "The app's webhook verifier token",
-  secretId: 'QUICKBOOKS_WEBHOOK_VERIFIER_TOKEN',
+  type: 'singleton',
   schema: quickbooksWebhookSecretSchema,
 })

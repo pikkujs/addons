@@ -25,7 +25,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'pagerduty',
- *     secret: 'PAGERDUTY_WEBHOOK_SECRET',
  *     receive: ref('pagerduty:pagerdutyWebhookReceive'),
  *   })
  */
@@ -33,13 +32,14 @@ export const pagerdutyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webh
   auth: false,
   description: 'Verify a PagerDuty webhook and read it into trigger events',
   func: async ({ pagerdutyWebhookSecret }, { body, headers }) => {
+    const signing = await pagerdutyWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
     const signatures = (headers['x-pagerduty-signature'] ?? '')
       .split(',')
       .map((signature) => signature.trim().replace(/^v1=/, ''))
     if (
       !anyVerifies(signatures, (signature) =>
-        pagerdutyWebhookSecret.verifyHmac(signature, 'sha256', raw, 'hex')
+        signing.verifyHmac(signature, 'sha256', raw, 'hex')
       )
     ) {
       throw new UnauthorizedError('Invalid PagerDuty webhook signature')

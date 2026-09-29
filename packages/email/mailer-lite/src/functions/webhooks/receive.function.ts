@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'mailer-lite',
- *     secret: 'MAILER_LITE_WEBHOOK_SECRET',
  *     receive: ref('mailer-lite:mailerLiteWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const mailerLiteWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Web
   auth: false,
   description: 'Verify a MailerLite webhook and read it into trigger events',
   func: async ({ mailerLiteWebhookSecret }, { body, headers }) => {
+    const signing = await mailerLiteWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    mailerLiteWebhookSecret.verifyHmac(headers['signature'], 'sha256', raw, 'hex')
+    signing.verifyHmac(headers['signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: (data.events ?? [data]).map((event: any) => ({

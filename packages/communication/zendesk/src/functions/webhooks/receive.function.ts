@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'zendesk',
- *     secret: 'ZENDESK_WEBHOOK_SECRET',
  *     receive: ref('zendesk:zendeskWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const zendeskWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webhoo
   auth: false,
   description: 'Verify a Zendesk webhook and read it into trigger events',
   func: async ({ zendeskWebhookSecret }, { body, headers }) => {
+    const signing = await zendeskWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    zendeskWebhookSecret.verifyHmac(
+    signing.verifyHmac(
       headers['x-zendesk-webhook-signature'],
       'sha256',
       `${headers['x-zendesk-webhook-signature-timestamp']}${raw}`,

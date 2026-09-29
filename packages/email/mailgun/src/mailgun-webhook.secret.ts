@@ -1,12 +1,12 @@
 import { z } from 'zod'
-import { defineSecret } from '@pikku/core/secret'
+import { defineCredential } from '@pikku/core/credential'
 
 export const mailgunWebhookSecretSchema = z.string()
 
-defineSecret({
-  name: 'webhook_secret',
+defineCredential({
+  name: 'mailgunWebhookSecret',
   displayName: 'Mailgun Webhook Secret',
   description: "The account's HTTP webhook signing key",
-  secretId: 'MAILGUN_WEBHOOK_SIGNING_KEY',
+  type: 'singleton',
   schema: mailgunWebhookSecretSchema,
 })

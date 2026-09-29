@@ -16,7 +16,6 @@ const parseJson = (raw: string): any => {
  * Wire it in the consuming app:
  *   wireTriggerWebhookSource({
  *     name: 'quickbooks',
- *     secret: 'QUICKBOOKS_WEBHOOK_VERIFIER_TOKEN',
  *     receive: ref('quickbooks:quickbooksWebhookReceive'),
  *   })
  */
@@ -24,8 +23,9 @@ export const quickbooksWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Web
   auth: false,
   description: 'Verify a QuickBooks webhook and read it into trigger events',
   func: async ({ quickbooksWebhookSecret }, { body, headers }) => {
+    const signing = await quickbooksWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    quickbooksWebhookSecret.verifyHmac(headers['intuit-signature'], 'sha256', raw, 'base64')
+    signing.verifyHmac(headers['intuit-signature'], 'sha256', raw, 'base64')
     const data = parseJson(raw)
     if (Array.isArray(data)) {
       return {

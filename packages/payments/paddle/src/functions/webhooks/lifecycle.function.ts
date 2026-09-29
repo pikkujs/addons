@@ -29,7 +29,7 @@ const findSetting = async (paddle: PaddleService, label: string, previous?: Reco
 /**
  * The lifecycle steps of a Paddle webhook source: one notification
  * destination per deployment, found by its description (the label). Creating
- * it issues the destination's secret key, which deploy stores.
+ * it issues the destination's secret key, which it stores in the credential store.
  *
  * Wire them next to `paddleWebhookReceive`:
  *   check: ref('paddle:paddleWebhookCheck'),
@@ -61,7 +61,10 @@ export const paddleWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, We
 export const paddleWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
   auth: false,
   description: "Create or update this deployment's Paddle notification destination",
-  func: async ({ paddle }, { url, label, events, previous }) => {
+  func: async ({ paddle, credentialService }, { url, label, events, previous }) => {
+    if (!credentialService) {
+      throw new Error('Storing the Paddle signing secret needs a credentialService')
+    }
     const existing = await findSetting(paddle, label, previous)
     if (existing) {
       await paddle.request('PATCH', `notification-settings/${existing.id}`, {
@@ -72,19 +75,21 @@ export const paddleWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, We
     const { data } = await paddle.request<{ data: NotificationSetting }>('POST', 'notification-settings', {
       body: { description: label, destination: url, subscribed_events: events, type: 'url', api_version: 1 },
     })
-    return { status: 'created', state: { id: data.id }, secret: data.endpoint_secret_key }
+    await credentialService.set('paddleWebhookSecret', data.endpoint_secret_key)
+    return { status: 'created', state: { id: data.id } }
   },
 })
 
 export const paddleWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
   auth: false,
   description: "Delete this deployment's Paddle notification destination",
-  func: async ({ paddle }, { label, previous }) => {
+  func: async ({ paddle, credentialService }, { label, previous }) => {
     const setting = await findSetting(paddle, label, previous)
     if (!setting) {
       return { status: 'absent' }
     }
     await paddle.request('DELETE', `notification-settings/${setting.id}`)
+    await credentialService?.delete('paddleWebhookSecret')
     return { status: 'deleted' }
   },
 })
