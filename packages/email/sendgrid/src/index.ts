@@ -16,3 +16,4 @@ export { contactDelete } from './functions/contacts/delete.function.js'
 
 export { SendgridService } from './sendgrid-api.service.js'
 export { sendgridWebhookReceive } from './functions/webhooks/receive.function.js'
+export { sendgridWebhookCheck, sendgridWebhookSetup, sendgridWebhookTeardown } from './functions/webhooks/lifecycle.function.js'

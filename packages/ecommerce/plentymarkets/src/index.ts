@@ -48,6 +48,7 @@ export {
   PLENTYMARKETS_WEBHOOK_QUEUE,
 } from './functions/webhooks/handle.function.js'
 export { plentymarketsHTTPRoutes } from './webhooks.http.js'
+export { plentymarketsWebhookReceive } from './functions/webhooks/receive.function.js'
 
 // Schemas + types — so a consuming app can type the values it reads back off an RPC
 // result (getOrder → PlentyOrder, searchOrderPayments → PlentyPayment, …) without

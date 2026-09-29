@@ -27,6 +27,10 @@ export { fulfillOrder } from './functions/orders/fulfill.function.js'
 export { refundOrder } from './functions/orders/refund.function.js'
 
 export { handleStripeWebhook } from './functions/webhooks/handle.function.js'
+export {
+  receiveStripeWebhook,
+  applyStripeWebhookEvent,
+} from './functions/webhooks/source.function.js'
 
 export { settleCheckoutSession, applyPaidTransition } from './lib/settle-order.js'
 export { ensureCustomer } from './lib/customer.js'

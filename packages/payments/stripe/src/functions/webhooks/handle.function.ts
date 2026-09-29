@@ -30,6 +30,9 @@ export const StripeWebhookOutput = z.object({
  * domain mapping (plan changes, pot credits) happens in the consumer's queue
  * worker, so this stays generic and reusable.
  *
+ * @deprecated Wire `stripeWebhookReceive` as a webhook source instead, which
+ * lets `setup` create the endpoint and routes events to triggers.
+ *
  * Wire it in the consuming app, e.g.:
  *   wireHTTPRoutes({ routes: { stripe: { webhook: {
  *     method: 'post', route: '/webhooks/stripe',
