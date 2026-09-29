@@ -39,10 +39,13 @@ const findSetting = async (paddle: PaddleService, label: string, previous?: Reco
 export const paddleWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check this deployment's Paddle notification destination",
-  func: async ({ paddle }, { url, label, events, previous }) => {
+  func: async ({ paddle, credentialService }, { url, label, events, previous }) => {
     const setting = await findSetting(paddle, label, previous)
     if (!setting) {
       return { status: events.length === 0 ? 'ok' : 'missing' }
+    }
+    if ((await credentialService?.get<string>('paddleWebhookSecret')) !== setting.endpoint_secret_key) {
+      return { status: 'drifted', reason: 'has a different signing secret stored' }
     }
     const subscribed = setting.subscribed_events.map((event) => event.name)
     if (setting.destination !== url) {
@@ -70,6 +73,7 @@ export const paddleWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, We
       await paddle.request('PATCH', `notification-settings/${existing.id}`, {
         body: { destination: url, subscribed_events: events, active: true },
       })
+      await credentialService.set('paddleWebhookSecret', existing.endpoint_secret_key)
       return { status: 'updated', state: { id: existing.id } }
     }
     const { data } = await paddle.request<{ data: NotificationSetting }>('POST', 'notification-settings', {

@@ -63,10 +63,13 @@ const sameEvents = (a: string[], b: string[]) =>
 export const stripeWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check this deployment's Stripe webhook endpoint",
-  func: async ({ stripe }, { url, label, events, previous }) => {
+  func: async ({ stripe, credentialService }, { url, label, events, previous }) => {
     const endpoint = await findEndpoint(stripe, label, previous)
     if (!endpoint) {
       return { status: 'missing' }
+    }
+    if (!(await credentialService?.get<string>('stripeWebhookSecret'))) {
+      return { status: 'drifted', reason: 'has no signing secret stored' }
     }
     if (endpoint.url !== url) {
       return { status: 'drifted', reason: `points at ${endpoint.url}` }
@@ -89,7 +92,7 @@ export const stripeWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, We
       throw new Error('Storing the Stripe signing secret needs a credentialService')
     }
     const existing = await findEndpoint(stripe, label, previous)
-    if (existing) {
+    if (existing && (await credentialService.get<string>('stripeWebhookSecret'))) {
       await stripe.webhookEndpoints.update(existing.id, {
         url,
         enabled_events: enabledEvents(events),
@@ -97,13 +100,16 @@ export const stripeWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, We
       })
       return { status: 'updated', state: { id: existing.id } }
     }
+    if (existing) {
+      await stripe.webhookEndpoints.del(existing.id)
+    }
     const created = await stripe.webhookEndpoints.create({
       url,
       enabled_events: enabledEvents(events),
       metadata: { [LABEL_KEY]: label },
     })
     await credentialService.set('stripeWebhookSecret', created.secret)
-    return { status: 'created', state: { id: created.id } }
+    return { status: existing ? 'updated' : 'created', state: { id: created.id } }
   },
 })
 

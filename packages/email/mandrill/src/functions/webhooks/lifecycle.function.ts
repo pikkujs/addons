@@ -35,10 +35,13 @@ const findWebhook = async (mandrill: MandrillService, label: string, previous?: 
 export const mandrillWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
   auth: false,
   description: "Check this deployment's Mandrill webhook",
-  func: async ({ mandrill }, { url, label, events, previous }) => {
+  func: async ({ mandrill, credentialService }, { url, label, events, previous }) => {
     const webhook = await findWebhook(mandrill, label, previous)
     if (!webhook) {
       return { status: events.length === 0 ? 'ok' : 'missing' }
+    }
+    if ((await credentialService?.get<string>('mandrillWebhookSecret')) !== webhook.auth_key) {
+      return { status: 'drifted', reason: 'has a different signing secret stored' }
     }
     if (webhook.url !== url) {
       return { status: 'drifted', reason: `points at ${webhook.url}` }
@@ -60,6 +63,7 @@ export const mandrillWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, 
     const existing = await findWebhook(mandrill, label, previous)
     if (existing) {
       await mandrill.request('/webhooks', '/update', { id: existing.id, url, description: label, events })
+      await credentialService.set('mandrillWebhookSecret', existing.auth_key)
       return { status: 'updated', state: { id: existing.id } }
     }
     const created = await mandrill.request<MandrillWebhook>('/webhooks', '/add', { url, description: label, events })
