@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { OcrDocument } from './process.function.js'
 
 // OCR + structured extraction in one call: Mistral runs OCR then fills the

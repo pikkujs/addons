@@ -15,5 +15,8 @@
       "Audio"
     ],
     "icon": "./mistral.svg"
-  }
+  },
+  "forceRequiredServices": [
+    "mistral"
+  ]
 }
