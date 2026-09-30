@@ -5,6 +5,7 @@ import { loadCart } from '../../lib/cart.js'
 import { ensureVariantPrice, pushShippingRate } from '../../lib/stripe-catalog.js'
 import { ensureCustomer } from '../../lib/customer.js'
 import type { FormValue } from '../../lib/form-encode.js'
+import { withEnvironmentId } from '../../lib/environment-id.js'
 
 /**
  * Used when a cart needs a shipping address and the caller did not say which
@@ -97,7 +98,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
   input: CreateCartCheckoutInput,
   output: CreateCartCheckoutOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session: userSession }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner, environmentId }, data, { session: userSession }) => {
     if (data.discount && (data.discount.percentOff == null) === (data.discount.amountOffMinor == null)) {
       throw new BadRequestError('A discount takes exactly one of percentOff or amountOffMinor')
     }
@@ -137,7 +138,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
     }
 
     const orderId = crypto.randomUUID()
-    const metadata = { ...(data.metadata ?? {}), paymentOrderId: orderId }
+    const metadata = { ...(withEnvironmentId(environmentId, data.metadata) ?? {}), paymentOrderId: orderId }
 
     let shipping: Record<string, FormValue> = {}
     if (cart.requiresShipping) {

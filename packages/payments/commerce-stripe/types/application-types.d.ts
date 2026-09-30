@@ -191,6 +191,7 @@ export interface SingletonServices extends CoreSingletonServices<Config> {
   stripeSignature: StripeSignature
   /** Per-account signature verifier (see `STRIPE_WEBHOOK_SECRETS`). */
   stripeSignatureFor: (account?: string | null) => StripeSignature
+  environmentId: string | null
   /**
    * Resolves the session into the entity a purchase belongs to. The addon falls
    * back to a session-derived one, so a parent app only supplies this when its

@@ -35,7 +35,10 @@ export class StripeWebhookVerifier {
    * variant so it works on edge/worker runtimes, which have SubtleCrypto but no
    * node crypto.
    */
-  async verify(rawBody: Buffer, signature: string): Promise<{ id: string; type: string }> {
+  async verify(
+    rawBody: Buffer,
+    signature: string
+  ): Promise<{ id: string; type: string; data?: { object?: { metadata?: Record<string, unknown> | null } } }> {
     if (!this.signingSecret) {
       throw new Error('STRIPE_WEBHOOK_SECRET is not configured')
     }
@@ -43,6 +46,6 @@ export class StripeWebhookVerifier {
       rawBody,
       signature,
       this.signingSecret
-    )) as { id: string; type: string }
+    )) as { id: string; type: string; data?: { object?: { metadata?: Record<string, unknown> | null } } }
   }
 }
