@@ -1,5 +1,5 @@
 import { z } from 'zod'
-import { pikkuSessionlessFunc } from '#pikku'
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
 
 // A document to OCR: either a URL to a PDF/document, or an image (URL or
 // `data:` base64 URI). Mirrors Mistral's DocumentURLChunk / ImageURLChunk.
