@@ -56,7 +56,13 @@ export const ocrExtract = pikkuSessionlessFunc({
     // Mistral returns the annotation as a JSON string; parse to an object.
     let annotation: Record<string, unknown> | null = null
     if (res.documentAnnotation) {
-      annotation = JSON.parse(res.documentAnnotation) as Record<string, unknown>
+      try {
+        annotation = JSON.parse(res.documentAnnotation) as Record<string, unknown>
+      } catch (err) {
+        throw new Error(
+          `Mistral OCR returned a document annotation that is not valid JSON: ${(err as Error).message}`
+        )
+      }
     }
     return { model: res.model, annotation } satisfies Output
   },
