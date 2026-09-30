@@ -10,6 +10,7 @@ export interface SingletonServices extends CoreSingletonServices<Config> {
   stripe: Stripe
   /** Holds STRIPE_WEBHOOK_SECRET so the handler never reads it — see the service. */
   stripeWebhookVerifier: StripeWebhookVerifier
+  instanceId: string | null
 }
 
 export interface Services extends CoreServices<SingletonServices> {}

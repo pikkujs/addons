@@ -3,6 +3,7 @@ import { StripeApi } from './stripe-api.service.js'
 import { StripeSignature } from './stripe-signature.service.js'
 import { SessionPaymentOwner } from './payment-owner.service.js'
 import { BetterAuthPaymentOwner } from './better-auth-owner.service.js'
+import { resolveInstanceId } from './lib/instance-id.js'
 
 const parseMap = (value: string | undefined | null): Record<string, string> => {
   if (!value) return {}
@@ -64,8 +65,11 @@ export const createSingletonServices = pikkuAddonServices(async (_config, existi
   const stripeSignatureFor = (account?: string | null): StripeSignature =>
     (account ? signatureByAccount.get(account) : undefined) ?? defaultSignature
 
+  const instanceId = await resolveInstanceId(variables)
+
   return {
     ...existingServices,
+    instanceId,
     stripeApi: defaultApi,
     stripeApiFor,
     stripeSignature: defaultSignature,

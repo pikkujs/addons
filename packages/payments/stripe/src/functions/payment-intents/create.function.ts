@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { MetadataSchema, PaymentIntentSchema } from '../../stripe.types.js'
 import { fromStripeObject, epochToIso } from '../../stripe.transform.js'
+import { withInstanceId } from '../../instance-id.js'
 
 export const PaymentIntentCreateInput = z.object({
   amount: z.number().describe('Amount to charge in the smallest currency unit (e.g. 500 = $5.00)'),
@@ -26,7 +27,7 @@ export const paymentIntentCreate = pikkuSessionlessFunc({
   node: { displayName: 'Create Payment Intent', category: 'Payment Intents', type: 'action' },
   input: PaymentIntentCreateInput,
   output: PaymentIntentCreateOutput,
-  func: async ({ stripe }, data) => {
+  func: async ({ stripe, instanceId }, data) => {
     const confirm = data.confirm ?? Boolean(data.paymentMethod)
     const result = await stripe.paymentIntents.create(
       {
@@ -44,7 +45,7 @@ export const paymentIntentCreate = pikkuSessionlessFunc({
           : {}),
         ...(data.description ? { description: data.description } : {}),
         ...(data.receiptEmail ? { receipt_email: data.receiptEmail } : {}),
-        ...(data.metadata ? { metadata: data.metadata } : {}),
+        ...(withInstanceId(instanceId, data.metadata) ? { metadata: withInstanceId(instanceId, data.metadata) } : {}),
       },
       data.idempotencyKey ? { idempotencyKey: data.idempotencyKey } : undefined,
     )

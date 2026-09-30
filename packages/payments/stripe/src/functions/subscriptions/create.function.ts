@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { MetadataSchema, SubscriptionSchema } from '../../stripe.types.js'
 import { fromStripeObject, epochToIso } from '../../stripe.transform.js'
+import { withInstanceId } from '../../instance-id.js'
 
 export const SubscriptionCreateInput = z.object({
   customer: z.string().describe('The customer to subscribe (cus_...)'),
@@ -29,7 +30,7 @@ export const subscriptionCreate = pikkuSessionlessFunc({
   node: { displayName: 'Create Subscription', category: 'Subscriptions', type: 'action' },
   input: SubscriptionCreateInput,
   output: SubscriptionCreateOutput,
-  func: async ({ stripe }, data) => {
+  func: async ({ stripe, instanceId }, data) => {
     const result = await stripe.subscriptions.create(
       {
         customer: data.customer,
@@ -38,7 +39,7 @@ export const subscriptionCreate = pikkuSessionlessFunc({
         ...(data.defaultPaymentMethod ? { default_payment_method: data.defaultPaymentMethod } : {}),
         ...(data.paymentBehavior ? { payment_behavior: data.paymentBehavior } : {}),
         ...(data.prorationBehavior ? { proration_behavior: data.prorationBehavior } : {}),
-        ...(data.metadata ? { metadata: data.metadata } : {}),
+        ...(withInstanceId(instanceId, data.metadata) ? { metadata: withInstanceId(instanceId, data.metadata) } : {}),
       },
       data.idempotencyKey ? { idempotencyKey: data.idempotencyKey } : undefined,
     )

@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError } from '@pikku/core/errors'
 import { ensureCustomer } from '../../lib/customer.js'
+import { withInstanceId } from '../../lib/instance-id.js'
 
 export const BankTransferFinancialAddress = z.object({
   type: z.string(),
@@ -89,7 +90,7 @@ export const createBankTransferIntent = pikkuSessionlessFunc({
   input: CreateBankTransferIntentInput,
   output: CreateBankTransferIntentOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner, instanceId }, data, { session }) => {
     const owner = await paymentOwner.resolve(session)
     const stripeApi = stripeApiFor(owner?.stripeAccount)
     const customer = await ensureCustomer(stripeApi, kysely, owner)
@@ -109,7 +110,7 @@ export const createBankTransferIntent = pikkuSessionlessFunc({
           },
         },
       },
-      ...(data.metadata ? { metadata: data.metadata } : {}),
+      ...(withInstanceId(instanceId, data.metadata) ? { metadata: withInstanceId(instanceId, data.metadata) } : {}),
     })
     return mapBankTransferInstructions(intent)
   },

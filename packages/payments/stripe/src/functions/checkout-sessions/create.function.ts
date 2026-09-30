@@ -3,6 +3,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { MetadataSchema } from '../../stripe.types.js'
 import { fromStripeObject } from '../../stripe.transform.js'
+import { withInstanceId } from '../../instance-id.js'
 
 // Inline price definition, so callers can charge a dynamic amount (e.g. a
 // user-chosen top-up) without pre-creating a Price in the dashboard.
@@ -63,7 +64,7 @@ export const checkoutSessionCreate = pikkuSessionlessFunc({
   node: { displayName: 'Create Checkout Session', category: 'Checkout', type: 'action' },
   input: CheckoutSessionCreateInput,
   output: CheckoutSessionCreateOutput,
-  func: async ({ stripe }, data) => {
+  func: async ({ stripe, instanceId }, data) => {
     // Build the line item from an inline priceData or an existing priceId.
     // setup mode takes no line items.
     const lineItem: Stripe.Checkout.SessionCreateParams.LineItem | null = data.priceData
@@ -99,27 +100,31 @@ export const checkoutSessionCreate = pikkuSessionlessFunc({
       ...(data.allowPromotionCodes !== undefined ? { allow_promotion_codes: data.allowPromotionCodes } : {}),
       ...(data.automaticTax ? { automatic_tax: { enabled: true } } : {}),
       // payment_intent_data is only valid in payment mode; subscription_data only in subscription mode.
-      ...(data.mode === 'payment' && data.paymentIntentData
+      ...(data.mode === 'payment' && (data.paymentIntentData || instanceId)
         ? {
             payment_intent_data: {
-              ...(data.paymentIntentData.metadata ? { metadata: data.paymentIntentData.metadata } : {}),
-              ...(data.paymentIntentData.setupFutureUsage
+              ...(withInstanceId(instanceId, data.paymentIntentData?.metadata)
+                ? { metadata: withInstanceId(instanceId, data.paymentIntentData?.metadata) }
+                : {}),
+              ...(data.paymentIntentData?.setupFutureUsage
                 ? { setup_future_usage: data.paymentIntentData.setupFutureUsage }
                 : {}),
             },
           }
         : {}),
-      ...(data.mode === 'subscription' && data.subscriptionData
+      ...(data.mode === 'subscription' && (data.subscriptionData || instanceId)
         ? {
             subscription_data: {
-              ...(data.subscriptionData.metadata ? { metadata: data.subscriptionData.metadata } : {}),
-              ...(data.subscriptionData.trialPeriodDays !== undefined
+              ...(withInstanceId(instanceId, data.subscriptionData?.metadata)
+                ? { metadata: withInstanceId(instanceId, data.subscriptionData?.metadata) }
+                : {}),
+              ...(data.subscriptionData?.trialPeriodDays !== undefined
                 ? { trial_period_days: data.subscriptionData.trialPeriodDays }
                 : {}),
             },
           }
         : {}),
-      ...(data.metadata ? { metadata: data.metadata } : {}),
+      ...(withInstanceId(instanceId, data.metadata) ? { metadata: withInstanceId(instanceId, data.metadata) } : {}),
     })
     return CheckoutSessionCreateOutput.parse(fromStripeObject(result))
   },

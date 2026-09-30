@@ -1,6 +1,7 @@
 import Stripe from 'stripe'
 import { pikkuAddonServices } from '#pikku/addon/setup'
 import { StripeWebhookVerifier } from './stripe-webhook-verifier.service.js'
+import { resolveInstanceId } from './instance-id.js'
 
 export const createSingletonServices = pikkuAddonServices(async (config, { secrets, variables }) => {
   const apiKey = (await secrets.getSecret('STRIPE_SECRET_KEY')).reveal()
@@ -24,5 +25,7 @@ export const createSingletonServices = pikkuAddonServices(async (config, { secre
     .catch(() => null)
   const stripeWebhookVerifier = new StripeWebhookVerifier(stripe, signingSecret)
 
-  return { stripe, stripeWebhookVerifier }
+  const instanceId = await resolveInstanceId(variables)
+
+  return { stripe, stripeWebhookVerifier, instanceId }
 })
