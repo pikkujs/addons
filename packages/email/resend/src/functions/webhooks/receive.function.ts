@@ -21,12 +21,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
 
 /**
  * The `receive` step of a Resend webhook source. Verifies the Svix signature (`svix-id`, `svix-timestamp`, `svix-signature`), refuses deliveries more than five minutes old, and names the event after `type` (`email.delivered`, `email.bounced`, ...), keyed by `svix-id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'resend',
- *     receive: ref('resend:resendWebhookReceive'),
- *   })
  */
 export const resendWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

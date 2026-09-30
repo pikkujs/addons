@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Strapi webhook source. Strapi signs nothing, so the webhook is given an `Authorization` header, compared here with the configured token. The event is named after `event` (`entry.create`, `entry.publish`, `media.update`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'strapi',
- *     receive: ref('strapi:strapiWebhookReceive'),
- *   })
  */
 export const strapiWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

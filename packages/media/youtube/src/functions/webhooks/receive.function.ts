@@ -3,13 +3,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 /**
  * The `receive` step of a YouTube webhook source. Answers the PubSubHubbub verification GET (`hub.challenge`), verifies `X-Hub-Signature` (`sha1=...`) over the Atom body, and emits a `video` event per entry with its video and channel id.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'youtube',
- *     method: ['get',  'post'],
- *     receive: ref('youtube:youtubeWebhookReceive'),
- *   })
  */
 export const youtubeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

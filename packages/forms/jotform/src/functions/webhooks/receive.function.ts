@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Jotform webhook source. Jotform signs nothing, so the webhook URL carries a token of your choosing (`/webhooks/jotform?token=...`), compared here. Each submission becomes a `submission` event keyed by its `submissionID`, with the answers parsed from `rawRequest`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'jotform',
- *     receive: ref('jotform:jotformWebhookReceive'),
- *   })
  */
 export const jotformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

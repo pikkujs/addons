@@ -12,13 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a WhatsApp webhook source. Answers Meta's verification GET (`hub.mode=subscribe`, `hub.verify_token`, `hub.challenge`), verifies `X-Hub-Signature-256` over the raw body, and turns each change into an event named after its `field` (`messages`, `message_template_status_update`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'whatsapp',
- *     method: ['get',  'post'],
- *     receive: ref('whatsapp:whatsappWebhookReceive'),
- *   })
  */
 export const whatsappWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

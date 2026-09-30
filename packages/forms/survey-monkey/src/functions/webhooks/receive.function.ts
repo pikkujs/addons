@@ -12,13 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a SurveyMonkey webhook source. Answers the HEAD request SurveyMonkey checks the URL with, then verifies `Sm-Signature` over the raw body and names the event after `event_type` (`response_completed`, `collector_created`, ...), keyed by `event_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'survey-monkey',
- *     method: ['head', 'post'],
- *     receive: ref('survey-monkey:surveyMonkeyWebhookReceive'),
- *   })
  */
 export const surveyMonkeyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a monday.com webhook source. Answers the `challenge` monday.com posts when a webhook is created. monday.com signs nothing for board webhooks, so the URL carries a token of your choosing (`/webhooks/monday-com?token=...`). The event is named after `event.type` (`create_pulse`, `update_column_value`, ...), keyed by `event.triggerUuid`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'monday-com',
- *     receive: ref('monday-com:mondayComWebhookReceive'),
- *   })
  */
 export const mondayComWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

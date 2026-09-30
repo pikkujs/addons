@@ -12,13 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Trello webhook source. Answers the HEAD request Trello checks the callback URL with, verifies `X-Trello-Webhook` over the body and the registered callback URL (the `TRELLO_WEBHOOK_URL` variable), and names the event after the action's `type` (`createCard`, `updateCard`, ...), keyed by the action's `id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'trello',
- *     method: ['head',  'post'],
- *     receive: ref('trello:trelloWebhookReceive'),
- *   })
  */
 export const trelloWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

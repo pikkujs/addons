@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Webflow webhook source. Verifies `X-Webflow-Signature` over `timestamp:body`, refuses deliveries more than five minutes old, and names the event after `triggerType` (`form_submission`, `collection_item_created`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'webflow',
- *     receive: ref('webflow:webflowWebhookReceive'),
- *   })
  */
 export const webflowWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

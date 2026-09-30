@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a ClickUp webhook source. Verifies `X-Signature` over the raw body and names the event after `event` (`taskCreated`, `taskUpdated`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'clickup',
- *     receive: ref('clickup:clickupWebhookReceive'),
- *   })
  */
 export const clickupWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

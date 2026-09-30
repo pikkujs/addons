@@ -6,13 +6,6 @@ const parseForm = (raw: string): Record<string, string> =>
 
 /**
  * The `receive` step of a Mailchimp webhook source. Answers the GET Mailchimp checks the URL with. Mailchimp signs nothing, so the webhook URL carries a token of your choosing (`/webhooks/mailchimp?token=...`), compared here. The event is named after `type` (`subscribe`, `unsubscribe`, `profile`, `upemail`, `cleaned`, `campaign`), with the form's `data[...]` fields in the data.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'mailchimp',
- *     method: ['get',  'post'],
- *     receive: ref('mailchimp:mailchimpWebhookReceive'),
- *   })
  */
 export const mailchimpWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

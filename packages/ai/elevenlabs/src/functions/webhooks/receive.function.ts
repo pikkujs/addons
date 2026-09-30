@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a ElevenLabs webhook source. Verifies `ElevenLabs-Signature` (`t=...,v0=...`) over `t.body`, refuses deliveries more than thirty minutes old, and names the event after `type` (`post_call_transcription`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'elevenlabs',
- *     receive: ref('elevenlabs:elevenlabsWebhookReceive'),
- *   })
  */
 export const elevenlabsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

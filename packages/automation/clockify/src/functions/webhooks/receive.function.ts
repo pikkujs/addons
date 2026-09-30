@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Clockify webhook source. Compares `Clockify-Signature` with the webhook's token and names the event after `Clockify-Webhook-Event-Type` (`NEW_TIME_ENTRY`, `TIMER_STOPPED`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'clockify',
- *     receive: ref('clockify:clockifyWebhookReceive'),
- *   })
  */
 export const clockifyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

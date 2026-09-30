@@ -3,12 +3,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 /**
  * The `receive` step of a Google Calendar webhook source. Google push channels send the change in headers with no body: it compares `X-Goog-Channel-Token` with the token given when the channel was opened and names the event after `X-Goog-Resource-State` (`sync` when the channel opens, then `exists`, `not_exists`, ...), keyed by channel and message number. The consumer lists changes to see what.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'google-calendar',
- *     receive: ref('google-calendar:googleCalendarWebhookReceive'),
- *   })
  */
 export const googleCalendarWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

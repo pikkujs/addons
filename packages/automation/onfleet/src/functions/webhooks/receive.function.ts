@@ -12,13 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Onfleet webhook source. Answers the `?check=` GET Onfleet validates the URL with, verifies `X-Onfleet-Signature` over the raw body, and names the event after `triggerName` (`taskCompleted`, `taskArrival`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'onfleet',
- *     method: ['get',  'post'],
- *     receive: ref('onfleet:onfleetWebhookReceive'),
- *   })
  */
 export const onfleetWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -15,15 +15,6 @@ import type {
  * The webhook source steps for Stripe. `setup` creates the endpoint and stores
  * its signing secret in the credential store as `stripeWebhookSecret`, so
  * nobody copies it from the dashboard and a new one needs no deploy.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'stripe',
- *     receive: ref('stripe:stripeWebhookReceive'),
- *     check: ref('stripe:stripeWebhookCheck'),
- *     setup: ref('stripe:stripeWebhookSetup'),
- *     teardown: ref('stripe:stripeWebhookTeardown'),
- *   })
  */
 export const stripeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a GitLab webhook source. Compares `X-Gitlab-Token` with the configured token and names the event after the payload's `object_kind` (`push`, `merge_request`, `issue`, `note`, `pipeline`, ...), keyed by `X-Gitlab-Event-UUID`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'gitlab',
- *     receive: ref('gitlab:gitlabWebhookReceive'),
- *   })
  */
 export const gitlabWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

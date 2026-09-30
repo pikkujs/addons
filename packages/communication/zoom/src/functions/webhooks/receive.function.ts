@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Zoom webhook source. Answers Zoom's `endpoint.url_validation` challenge, verifies `x-zm-signature` (`v0=...`) over `v0:timestamp:body`, refuses deliveries more than five minutes old, and names the event after `event` (`meeting.started`, `recording.completed`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'zoom',
- *     receive: ref('zoom:zoomWebhookReceive'),
- *   })
  */
 export const zoomWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

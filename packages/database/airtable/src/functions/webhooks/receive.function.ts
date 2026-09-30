@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Airtable webhook source. Verifies `X-Airtable-Content-MAC` over the raw body. Airtable's notification only says a base changed: it becomes a `changed` event, and the consumer lists the webhook's payloads to see what.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'airtable',
- *     receive: ref('airtable:airtableWebhookReceive'),
- *   })
  */
 export const airtableWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Taiga webhook source. Verifies `X-TAIGA-WEBHOOK-SIGNATURE` over the raw body and names the event `<type>.<action>` (`userstory.create`, `issue.change`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'taiga',
- *     receive: ref('taiga:taigaWebhookReceive'),
- *   })
  */
 export const taigaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

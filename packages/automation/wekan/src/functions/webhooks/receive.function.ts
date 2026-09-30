@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Wekan webhook source. Wekan signs nothing, so the outgoing webhook URL carries a token of your choosing (`/webhooks/wekan?token=...`). The event is named after the activity's `description` (`act-createCard`, `act-moveCard`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'wekan',
- *     receive: ref('wekan:wekanWebhookReceive'),
- *   })
  */
 export const wekanWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

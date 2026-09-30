@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Shopify webhook source. Verifies `X-Shopify-Hmac-Sha256` over the raw body and names the event after `X-Shopify-Topic` (`orders/create`, `products/update`, ...), keyed by `X-Shopify-Webhook-Id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'shopify',
- *     receive: ref('shopify:shopifyWebhookReceive'),
- *   })
  */
 export const shopifyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

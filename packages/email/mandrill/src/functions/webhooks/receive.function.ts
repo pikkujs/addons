@@ -14,13 +14,6 @@ const parseForm = (raw: string): Record<string, string> =>
 
 /**
  * The `receive` step of a Mandrill webhook source. Verifies `X-Mandrill-Signature` over the registered URL (the `MANDRILL_WEBHOOK_URL` variable) and the posted `mandrill_events`. Mandrill batches events, so each becomes its own event, named after `event` (`send`, `open`, `hard_bounce`, ...). Answers the HEAD request Mandrill checks the URL with when the webhook is added.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'mandrill',
- *     method: ['head', 'post'],
- *     receive: ref('mandrill:mandrillWebhookReceive'),
- *   })
  */
 export const mandrillWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

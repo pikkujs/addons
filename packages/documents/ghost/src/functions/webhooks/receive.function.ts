@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Ghost webhook source. Verifies `X-Ghost-Signature` (`sha256=..., t=...`) over `body + t`. Ghost leaves the event out of the payload, so the webhook URL names it (`/webhooks/ghost?event=post.published`).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'ghost',
- *     receive: ref('ghost:ghostWebhookReceive'),
- *   })
  */
 export const ghostWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
