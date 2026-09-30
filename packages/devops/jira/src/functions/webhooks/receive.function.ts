@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Jira webhook source. Verifies `X-Hub-Signature` over the raw body and names the event after `webhookEvent` (`jira:issue_created`, `comment_created`, ...), keyed by `X-Atlassian-Webhook-Identifier`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'jira',
- *     receive: ref('jira:jiraWebhookReceive'),
- *   })
  */
 export const jiraWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

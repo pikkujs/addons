@@ -10,12 +10,7 @@ import { applyStripeEvent, type StripeEvent } from '../../lib/apply-stripe-event
  * `STRIPE_WEBHOOK_SECRETS`), or the default one, and names each event after its
  * Stripe `type`, keyed by its id.
  *
- * Wire it in the consuming app, with `applyStripeWebhookEvent` as the trigger
- * for the events this addon handles:
- *   wireTriggerWebhookSource({
- *     name: 'stripe',
- *     receive: ref('shop:receiveStripeWebhook'),
- *   })
+ * Wire `applyStripeWebhookEvent` as the trigger for the events this addon handles.
  */
 export const receiveStripeWebhook = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

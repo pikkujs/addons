@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Kit webhook source. Kit signs nothing and leaves the event name out of the payload, so the webhook URL carries both: a token of your choosing and the event it was registered for (`/webhooks/convertkit?token=...&event=subscriber.subscriber_activate`).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'convertkit',
- *     receive: ref('convertkit:convertkitWebhookReceive'),
- *   })
  */
 export const convertkitWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

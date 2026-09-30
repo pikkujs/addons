@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Sentry webhook source. Verifies `Sentry-Hook-Signature` over the raw body and names the event `<resource>.<action>` (`issue.created`, `error.created`, `event_alert.triggered`, ...), keyed by `Request-ID`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'sentry',
- *     receive: ref('sentry:sentryWebhookReceive'),
- *   })
  */
 export const sentryWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

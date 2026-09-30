@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Telegram webhook source. Compares `X-Telegram-Bot-Api-Secret-Token` with the `secret_token` set with `setWebhook`, and names the event after the kind of update (`message`, `callback_query`, `edited_message`, ...), keyed by `update_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'telegram',
- *     receive: ref('telegram:telegramWebhookReceive'),
- *   })
  */
 export const telegramWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

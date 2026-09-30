@@ -27,19 +27,18 @@ payment intents, setup intents, Connect (marketplaces), and webhook handling.
 
 ## Webhooks
 
-The addon ships the steps of a Stripe webhook source. `receive` verifies the
-signature against the raw body and names each event after its Stripe type;
-`setup` creates the endpoint for this deployment and stores its signing secret
-in the credential store (`stripeWebhookSecret`), which `teardown` removes:
+The addon declares a Stripe webhook source. `receive` verifies the signature
+against the raw body and names each event after its Stripe type; `setup`
+creates the endpoint for this deployment and stores its signing secret in the
+credential store (`stripeWebhookSecret`), which `teardown` removes.
+
+Wiring the addon mounts the source at `/webhooks/<namespace>`, named after the
+addon's namespace. It stays off until it is turned on
+(`admin:triggerSourceEnable`, or the console); only then is it registered with
+Stripe. The app wires a trigger per event it wants:
 
 ```typescript
-wireTriggerWebhookSource({
-  name: 'stripe',
-  receive: ref('stripe:stripeWebhookReceive'),
-  check: ref('stripe:stripeWebhookCheck'),
-  setup: ref('stripe:stripeWebhookSetup'),
-  teardown: ref('stripe:stripeWebhookTeardown'),
-})
+wireAddon({ name: 'stripe', package: '@pikku/addon-stripe' })
 
 wireTrigger({ name: 'stripe:invoice.paid', func: onInvoicePaid })
 ```

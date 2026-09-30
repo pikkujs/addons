@@ -26,11 +26,6 @@ compare; request bodies are form-encoded in-package.
 ```ts
 wireAddon({ name: 'shop', package: '@pikku/addon-commerce-stripe' })
 
-wireTriggerWebhookSource({
-  name: 'stripe',
-  receive: ref('shop:receiveStripeWebhook'),
-})
-
 for (const event of [
   'checkout.session.completed',
   'checkout.session.async_payment_succeeded',
@@ -41,9 +36,13 @@ for (const event of [
   'charge.dispute.created',
   'charge.dispute.closed',
 ]) {
-  wireTrigger({ name: `stripe:${event}`, func: ref('shop:applyStripeWebhookEvent') })
+  wireTrigger({ name: `shop:${event}`, func: ref('shop:applyStripeWebhookEvent') })
 }
 ```
+
+The addon declares its webhook source, so wiring the addon mounts it at
+`/webhooks/shop`, named after the addon's namespace. It stays off until it is
+turned on (`admin:triggerSourceEnable`, or the console).
 
 ## Who a purchase belongs to
 

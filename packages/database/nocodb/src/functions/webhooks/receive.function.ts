@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a NocoDB webhook source. NocoDB signs nothing, so the webhook is given an `X-Webhook-Token` header, compared here. The event is named after `type` (`records.after.insert`, `records.after.update`, ...), keyed by `id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'nocodb',
- *     receive: ref('nocodb:nocodbWebhookReceive'),
- *   })
  */
 export const nocodbWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a MailerLite webhook source. Verifies `Signature` over the raw body. Batched deliveries become one event each; every event is named after its `type` (`subscriber.created`, `campaign.sent`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'mailer-lite',
- *     receive: ref('mailer-lite:mailerLiteWebhookReceive'),
- *   })
  */
 export const mailerLiteWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

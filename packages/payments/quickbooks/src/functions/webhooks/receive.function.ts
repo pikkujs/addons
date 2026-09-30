@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a QuickBooks webhook source. Verifies `intuit-signature` over the raw body. The CloudEvents format becomes one event per entry, named after its `type` (`qbo.invoice.created.v1`). The legacy format becomes one event per changed entity, named `<Entity>.<Operation>` (`Invoice.Create`), with the company's `realmId` in the data.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'quickbooks',
- *     receive: ref('quickbooks:quickbooksWebhookReceive'),
- *   })
  */
 export const quickbooksWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

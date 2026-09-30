@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Wise webhook source. Verifies `X-Signature-SHA256` against Wise's public key and names the event after `event_type` (`transfers#state-change`, `balances#credit`, ...), keyed by `X-Delivery-Id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'wise',
- *     receive: ref('wise:wiseWebhookReceive'),
- *   })
  */
 export const wiseWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

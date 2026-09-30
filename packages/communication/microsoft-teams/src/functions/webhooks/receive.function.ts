@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Microsoft Teams webhook source. Answers Microsoft Graph's `validationToken` handshake, compares each notification's `clientState` with the configured secret, and names it after its `changeType` (`created`, `updated`, `deleted`), keyed by subscription and resource. Graph only says what changed: the consumer reads the resource.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'microsoft-teams',
- *     receive: ref('microsoft-teams:microsoftTeamsWebhookReceive'),
- *   })
  */
 export const microsoftTeamsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

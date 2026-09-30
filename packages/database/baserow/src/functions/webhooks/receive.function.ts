@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Baserow webhook source. Baserow signs nothing, so the webhook is given an `X-Webhook-Token` header, compared here. The event is named after `event_type` (`rows.created`, `rows.updated`, `rows.deleted`), keyed by `event_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'baserow',
- *     receive: ref('baserow:baserowWebhookReceive'),
- *   })
  */
 export const baserowWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

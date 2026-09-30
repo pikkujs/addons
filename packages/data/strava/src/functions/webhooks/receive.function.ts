@@ -12,13 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Strava webhook source. Answers the subscription validation GET (`hub.verify_token`, `hub.challenge`). Strava signs no events, so a delivery is only a trigger to fetch the object from the API: it is named `<object_type>.<aspect_type>` (`activity.create`, `athlete.update`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'strava',
- *     method: ['get',  'post'],
- *     receive: ref('strava:stravaWebhookReceive'),
- *   })
  */
 export const stravaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

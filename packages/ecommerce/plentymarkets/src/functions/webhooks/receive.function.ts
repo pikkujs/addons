@@ -7,12 +7,6 @@ import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
  * nothing, so there is nothing to verify: an event is only a cue to resync the record from PlentyMarkets, so a forged
  * one at worst triggers a redundant resync. The event is named after its
  * `type` (`order.updated`, ...), keyed by PlentyMarkets' own `id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'plentymarkets',
- *     receive: ref('plentymarkets:plentymarketsWebhookReceive'),
- *   })
  */
 export const plentymarketsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Linear webhook source. Verifies `Linear-Signature` over the raw body, refuses deliveries more than a minute old, and names the event after the resource `type` (`Issue`, `Comment`, `Project`, ...), keyed by `Linear-Delivery`. The `action` (`create`, `update`, `remove`) is in the data.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'linear',
- *     receive: ref('linear:linearWebhookReceive'),
- *   })
  */
 export const linearWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

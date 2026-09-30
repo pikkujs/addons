@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a SendGrid webhook source. Verifies the Event Webhook signature against its verification key. SendGrid batches events, so each becomes its own event, named after `event` (`delivered`, `open`, `bounce`, ...) and keyed by `sg_event_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'sendgrid',
- *     receive: ref('sendgrid:sendgridWebhookReceive'),
- *   })
  */
 export const sendgridWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

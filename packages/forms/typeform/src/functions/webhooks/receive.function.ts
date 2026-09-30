@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Typeform webhook source. Verifies `Typeform-Signature` over the raw body and names the event after `event_type` (`form_response`), keyed by `event_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'typeform',
- *     receive: ref('typeform:typeformWebhookReceive'),
- *   })
  */
 export const typeformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

@@ -14,12 +14,6 @@ const parseForm = (raw: string): Record<string, string> =>
 
 /**
  * The `receive` step of a Formstack webhook source. Compares the payload's `HandshakeKey` with the configured key. Each submission, sent as JSON or form fields, becomes a `submission` event keyed by its `UniqueID`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'formstack',
- *     receive: ref('formstack:formstackWebhookReceive'),
- *   })
  */
 export const formstackWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

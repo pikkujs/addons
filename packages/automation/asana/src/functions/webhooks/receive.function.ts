@@ -13,12 +13,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Asana webhook source. Asana makes a handshake while `asanaWebhookCreate` creates the webhook: it is accepted only when its `?h=` matches the nonce that call is holding, and its `X-Hook-Secret` is stored as `asanaWebhookSecret` and echoed. Every delivery after that is checked against `X-Hook-Signature`. One webhook per app: a second one replaces the secret. Asana batches events, so each becomes its own event named `<resource_type>.<action>` (`task.added`, `task.changed`, ...).
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'asana',
- *     receive: ref('asana:asanaWebhookReceive'),
- *   })
  */
 export const asanaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

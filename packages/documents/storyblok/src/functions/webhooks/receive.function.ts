@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Storyblok webhook source. Verifies `Webhook-Signature` over the raw body and names the event `<action>` (`published`, `unpublished`, `deleted`, ...), as Storyblok sends it.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'storyblok',
- *     receive: ref('storyblok:storyblokWebhookReceive'),
- *   })
  */
 export const storyblokWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

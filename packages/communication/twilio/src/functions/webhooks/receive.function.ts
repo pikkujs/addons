@@ -6,12 +6,6 @@ const parseForm = (raw: string): Record<string, string> =>
 
 /**
  * The `receive` step of a Twilio webhook source. Verifies `X-Twilio-Signature` over the configured URL (the `TWILIO_WEBHOOK_URL` variable) and the sorted form parameters. A status callback becomes an event named after its status (`MessageStatus`/`CallStatus`: `delivered`, `completed`, ...); an inbound message becomes `message`, keyed by its SID.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'twilio',
- *     receive: ref('twilio:twilioWebhookReceive'),
- *   })
  */
 export const twilioWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

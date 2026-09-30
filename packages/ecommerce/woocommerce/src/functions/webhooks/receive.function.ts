@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a WooCommerce webhook source. Verifies `X-WC-Webhook-Signature` over the raw body and names the event after `X-WC-Webhook-Topic` (`order.created`, `product.updated`, ...), keyed by `X-WC-Webhook-Delivery-ID`. The unsigned ping WooCommerce sends when the webhook is saved is acknowledged and dropped.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'woocommerce',
- *     receive: ref('woocommerce:woocommerceWebhookReceive'),
- *   })
  */
 export const woocommerceWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

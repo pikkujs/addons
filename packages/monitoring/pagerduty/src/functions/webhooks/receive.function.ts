@@ -21,12 +21,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
 
 /**
  * The `receive` step of a PagerDuty webhook source. Verifies `X-PagerDuty-Signature` (any of its `v1=` signatures, during a rotation) over the raw body and names the event after `event.event_type` (`incident.triggered`, `incident.resolved`, ...), keyed by `event.id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'pagerduty',
- *     receive: ref('pagerduty:pagerdutyWebhookReceive'),
- *   })
  */
 export const pagerdutyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

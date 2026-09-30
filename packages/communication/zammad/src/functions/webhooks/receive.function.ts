@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Zammad webhook source. Verifies `X-Hub-Signature` over the raw body. Zammad webhooks fire from triggers, so the event is named after `X-Zammad-Trigger`, keyed by `X-Zammad-Delivery`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'zammad',
- *     receive: ref('zammad:zammadWebhookReceive'),
- *   })
  */
 export const zammadWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

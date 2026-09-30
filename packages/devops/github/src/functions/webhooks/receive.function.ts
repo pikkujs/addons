@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a GitHub webhook source. Verifies `X-Hub-Signature-256` over the raw body and names the event after `X-GitHub-Event` (`push`, `issues`, `pull_request`, ...), keyed by `X-GitHub-Delivery`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'github',
- *     receive: ref('github:githubWebhookReceive'),
- *   })
  */
 export const githubWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

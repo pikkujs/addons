@@ -12,12 +12,6 @@ const parseJson = (raw: string): any => {
 
 /**
  * The `receive` step of a Zendesk webhook source. Verifies `X-Zendesk-Webhook-Signature` over `timestamp + body` and names the event after `type` (`zen:event-type:ticket.created`, ...), keyed by `id`. Payloads from a trigger or automation carry no `type` and are named `trigger`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'zendesk',
- *     receive: ref('zendesk:zendeskWebhookReceive'),
- *   })
  */
 export const zendeskWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,

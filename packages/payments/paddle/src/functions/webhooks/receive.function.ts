@@ -21,12 +21,6 @@ const anyVerifies = (signatures: string[], verify: (signature: string) => void) 
 
 /**
  * The `receive` step of a Paddle webhook source. Verifies `Paddle-Signature` (`ts=...;h1=...`, any of several `h1` during a key rotation) over `ts:body`, refuses deliveries more than five minutes old, and names the event after `event_type` (`transaction.completed`, `subscription.updated`, ...), keyed by `event_id`.
- *
- * Wire it in the consuming app:
- *   wireTriggerWebhookSource({
- *     name: 'paddle',
- *     receive: ref('paddle:paddleWebhookReceive'),
- *   })
  */
 export const paddleWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
