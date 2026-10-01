@@ -1,5 +1,26 @@
 # @pikku/addon-google-analytics
 
+## 0.1.7
+
+### Patch Changes
+
+- 01f6d60: An OAuth2 credential no longer restates its app secret
+  
+  Every one of these declared a `defineSecret` holding `{ clientId, clientSecret }` for the id its credential already named in `oauth2.appCredentialSecretId`, byte-identical each time — and `gmail`, `google-analytics` and `google-cloud-storage` never declared one at all, so a deployment was never asked for the app credentials their connect flow needs.
+  
+  `@pikku/core` now derives that secret from the credential, typed as `OAuth2AppCredential`, which is the shape the runtime has always read it as. The declarations are deleted; the secret is still there.
+  
+  The three Google credentials also drop the `OAuth2` suffix from their display name, so the console's connect list reads `Gmail` rather than `Gmail OAuth2`.
+  
+  This needs a `@pikku/core` that derives OAuth2 app secrets.
+- 01f6d60: Google Analytics reporting and Google Cloud Storage resolve their credential through the wire
+  
+  Both built their API client once per deployment from the singleton `credentials` service, so every request ran against whatever account the deployment itself had connected. They now build per wire and read through `wire.getCredential`, which resolves by the credential's declared type — so a wiring that overrides `googleAnalyticsOAuth` or `googleCloudStorageOAuth` to `{ mode: 'wire' }` gets one account per user, and one left at its `singleton` default keeps today's behaviour.
+  
+  Google Analytics keeps its Measurement Protocol client as a singleton service: that one reads a plain secret and has no per-user dimension.
+  
+  This needs a `@pikku/core` with type-driven credential resolution.
+
 ## 0.1.6
 
 ### Patch Changes
