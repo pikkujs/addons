@@ -1,5 +1,12 @@
 # @pikku/addon-plentymarkets
 
+## 0.2.4
+
+### Patch Changes
+
+- 6d22988: `createPayment` accepts `order`, `properties` and `updateOrderPaymentStatus`,
+  matching the legacy `/payments` shape, and `mopId` is now optional.
+
 ## 0.2.3
 
 ### Patch Changes
