@@ -100,6 +100,15 @@
         }
       }
     },
+    "microsoftTeamsWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d22c9141",
+          "outputHash": "b3b47860"
+        }
+      }
+    },
     "taskCreate": {
       "latest": 1,
       "versions": {

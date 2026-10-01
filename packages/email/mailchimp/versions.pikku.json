@@ -64,6 +64,15 @@
         }
       }
     },
+    "mailchimpWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ca777149",
+          "outputHash": "f28fa8b5"
+        }
+      }
+    },
     "memberCreate": {
       "latest": 1,
       "versions": {

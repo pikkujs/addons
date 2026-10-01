@@ -3,7 +3,7 @@ import { fileURLToPath } from 'node:url'
 import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
 import type { PaymentDatabase } from '@pikku/addon-commerce-stripe/types'
-import { SessionPaymentOwner } from '@pikku/addon-commerce-stripe'
+import { SessionPaymentOwner, applyStripeWebhookEvent, receiveStripeWebhook } from '@pikku/addon-commerce-stripe'
 import type { PaymentOwner } from '@pikku/addon-commerce-stripe'
 
 const MIGRATIONS = fileURLToPath(new URL('../../db/sqlite/', import.meta.url))
@@ -220,3 +220,27 @@ export const signatureServices = <T>(stripeSignature: T) => ({
   stripeSignature,
   stripeSignatureFor: () => stripeSignature,
 })
+
+/**
+ * What the webhook source does with one delivery: `receiveStripeWebhook`
+ * verifies it, then the trigger `applyStripeWebhookEvent` applies each event.
+ */
+export const deliverWebhook = async (services: any, body: string, signature: string | null) => {
+  const received = await receiveStripeWebhook.func(
+    services,
+    {
+      body: new TextEncoder().encode(body),
+      headers: signature ? { 'stripe-signature': signature } : {},
+      query: {},
+      method: 'post',
+      url: '/webhooks/stripe',
+    },
+    {} as any
+  )
+  if (!('events' in received)) {
+    throw new Error('expected events')
+  }
+  const [event] = received.events
+  const { processed } = await applyStripeWebhookEvent.func(services, event!.data as any, {} as any)
+  return { received: true, eventId: event!.id!, type: event!.name, processed }
+}

@@ -369,6 +369,15 @@
           "outputHash": "873c6907"
         }
       }
+    },
+    "trelloWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a300c40f",
+          "outputHash": "09e11068"
+        }
+      }
     }
   }
 }

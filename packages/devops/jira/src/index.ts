@@ -472,3 +472,4 @@ export { dynamicModulesResourceRemoveModulesDelete } from './functions/dynamicMo
 export { appIssueFieldValueUpdateResourceUpdateIssueFieldsPut } from './functions/appIssueFieldValueUpdateResourceUpdateIssueFieldsPut.function.js'
 export { migrationResourceUpdateEntityPropertiesValuePut } from './functions/migrationResourceUpdateEntityPropertiesValuePut.function.js'
 export { migrationResourceWorkflowRuleSearchPost } from './functions/migrationResourceWorkflowRuleSearchPost.function.js'
+export { jiraWebhookReceive } from './functions/webhooks/receive.function.js'

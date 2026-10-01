@@ -1,6 +1,24 @@
 {
   "manifestVersion": 1,
   "contracts": {
+    "asanaWebhookCreate": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "57f5adf5",
+          "outputHash": "cf9250b5"
+        }
+      }
+    },
+    "asanaWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "ad084ad6",
+          "outputHash": "61d7bd89"
+        }
+      }
+    },
     "projectCreate": {
       "latest": 1,
       "versions": {

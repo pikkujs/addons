@@ -8,66 +8,11 @@ import {
   ensureCustomer,
   ensureVariantPrice,
   fulfillOrder,
-  handleStripeWebhook,
   loadCart,
   saveProduct,
   setCartItem,
 } from '@pikku/addon-commerce-stripe'
 import { createLogger, createServices, createTestDb, seedCartOrder, seedProduct, signatureServices } from './harness.js'
-
-test('a request whose raw body cannot be read is refused, not verified against nothing', async () => {
-  const services = {
-    kysely: createTestDb(),
-    logger: createLogger(),
-    ...signatureServices(new StripeSignature('whsec_test')),
-  } as any
-  const http = {
-    http: {
-      request: {
-        header: () => 't=1,v1=abc',
-        headers: () => ({}),
-      },
-    },
-  }
-
-  await assert.rejects(
-    () => handleStripeWebhook.func(services, {}, http as any),
-    /Cannot read the raw request body/
-  )
-})
-
-test('the signature header is read from headers() when header() gives nothing', async () => {
-  const kysely = createTestDb()
-  const body = JSON.stringify({ id: 'evt_1', type: 'invoice.paid', data: { object: {} } })
-  const timestamp = Math.floor(Date.now() / 1000)
-  const key = await crypto.subtle.importKey(
-    'raw',
-    new TextEncoder().encode('whsec_test'),
-    { name: 'HMAC', hash: 'SHA-256' },
-    false,
-    ['sign']
-  )
-  const mac = await crypto.subtle.sign('HMAC', key, new TextEncoder().encode(`${timestamp}.${body}`))
-  const signature = `t=${timestamp},v1=${Array.from(new Uint8Array(mac))
-    .map((b) => b.toString(16).padStart(2, '0'))
-    .join('')}`
-
-  const result = await handleStripeWebhook.func(
-    { kysely, logger: createLogger(), ...signatureServices(new StripeSignature('whsec_test')) } as any,
-    {},
-    {
-      http: {
-        request: {
-          header: () => null,
-          headers: () => ({ 'stripe-signature': signature }),
-          arrayBuffer: async () => new TextEncoder().encode(body).buffer,
-        },
-      },
-    } as any
-  )
-
-  assert.equal(result?.eventId, 'evt_1')
-})
 
 test('loading an unknown cart is refused rather than returning an empty one', async () => {
   const kysely = createTestDb()

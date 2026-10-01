@@ -28,6 +28,15 @@
         }
       }
     },
+    "clickupWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81e0ce9c",
+          "outputHash": "bf76233d"
+        }
+      }
+    },
     "commentCreate": {
       "latest": 1,
       "versions": {

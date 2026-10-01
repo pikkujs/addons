@@ -9,7 +9,7 @@ export class JenkinsService {
   private baseUrl: string
 
   constructor(private creds: JenkinsSecrets) {
-    this.baseUrl = creds.baseUrl.replace(/\/$/, '')
+    this.baseUrl = creds.baseUrl.replace(/\/*$/, '/')
   }
 
   async request<T>(
@@ -17,7 +17,7 @@ export class JenkinsService {
     endpoint: string,
     options?: RequestOptions
   ): Promise<T> {
-    const url = new URL(endpoint, this.baseUrl)
+    const url = new URL(endpoint.replace(/^\/+/, ''), this.baseUrl)
 
     if (options?.qs) {
       for (const [key, value] of Object.entries(options.qs)) {

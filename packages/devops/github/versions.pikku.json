@@ -2989,6 +2989,15 @@
         }
       }
     },
+    "githubWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "972c1233",
+          "outputHash": "34e95f90"
+        }
+      }
+    },
     "gitignoreGetAllTemplates": {
       "latest": 1,
       "versions": {

@@ -262,6 +262,15 @@
         }
       }
     },
+    "googleDriveWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "5b1610ab",
+          "outputHash": "926b3938"
+        }
+      }
+    },
     "permissionsCreate": {
       "latest": 1,
       "versions": {

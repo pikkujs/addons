@@ -274,3 +274,4 @@ export { integrationsEndpoint } from './functions/integrationsEndpoint.function.
 export { actionTriggerButton } from './functions/actionTriggerButton.function.js'
 export { internalGetOperation } from './functions/internalGetOperation.function.js'
 export { internalPostOperation } from './functions/internalPostOperation.function.js'
+export { nocodbWebhookReceive } from './functions/webhooks/receive.function.js'

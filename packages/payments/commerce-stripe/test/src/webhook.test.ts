@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { test } from 'node:test'
-import { StripeSignature, handleStripeWebhook } from '@pikku/addon-commerce-stripe'
-import { createLogger, createTestDb, seedCartOrder, seedProduct, signatureServices } from './harness.js'
+import { StripeSignature } from '@pikku/addon-commerce-stripe'
+import { createLogger, createTestDb, deliverWebhook, seedCartOrder, seedProduct, signatureServices } from './harness.js'
 
 const SECRET = 'whsec_test'
 
@@ -21,17 +21,6 @@ const signed = async (body: string, secret = SECRET) => {
   return `t=${timestamp},v1=${hex}`
 }
 
-/** The slice of pikku's http interaction the receiver actually touches. */
-const httpFor = (body: string, signature: string | null) => ({
-  http: {
-    request: {
-      header: (name: string) => (name === 'stripe-signature' ? signature : null),
-      headers: () => (signature ? { 'stripe-signature': signature } : {}),
-      arrayBuffer: async () => new TextEncoder().encode(body).buffer,
-    },
-  },
-})
-
 const deliver = async (
   kysely: ReturnType<typeof createTestDb>,
   event: Record<string, unknown>,
@@ -48,7 +37,7 @@ const deliver = async (
       options.secret === undefined ? SECRET : options.secret
     )),
   } as any
-  const result = await handleStripeWebhook.func(services, {}, httpFor(body, signature) as any)
+  const result = await deliverWebhook(services, body, signature)
   return { result, logger }
 }
 

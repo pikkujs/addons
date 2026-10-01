@@ -135,6 +135,15 @@
           "outputHash": "d7bbdab0"
         }
       }
+    },
+    "woocommerceWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "65ec249e",
+          "outputHash": "b290b1c0"
+        }
+      }
     }
   }
 }

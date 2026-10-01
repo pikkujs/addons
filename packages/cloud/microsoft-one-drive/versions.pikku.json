@@ -144,6 +144,15 @@
           "outputHash": "874af150"
         }
       }
+    },
+    "microsoftOneDriveWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "a67d1858",
+          "outputHash": "115cb4d4"
+        }
+      }
     }
   }
 }

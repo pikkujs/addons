@@ -63,6 +63,15 @@
           "outputHash": "4a53c6b0"
         }
       }
+    },
+    "linearWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "d6ccc53b",
+          "outputHash": "dcc18ae4"
+        }
+      }
     }
   }
 }

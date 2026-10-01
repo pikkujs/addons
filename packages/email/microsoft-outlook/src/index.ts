@@ -588,3 +588,4 @@ export { userContactDeletePhotoContent } from './functions/userContactDeletePhot
 export { userContactGetCount } from './functions/userContactGetCount.function.js'
 export { userContactDelta } from './functions/userContactDelta.function.js'
 export { userSendMail } from './functions/userSendMail.function.js'
+export { microsoftOutlookWebhookReceive } from './functions/webhooks/receive.function.js'
