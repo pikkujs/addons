@@ -2,6 +2,7 @@ import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
 import { settleCheckoutSession } from '../../lib/settle-order.js'
+import { isForeignEnvironment } from '../../lib/environment-id.js'
 import type { Kysely } from 'kysely'
 import type { PaymentDatabase } from '../../../types/application-types.js'
 
@@ -40,7 +41,7 @@ const HANDLED = new Set([
 type StripeEvent = {
   id: string
   type: string
-  data: { object: Record<string, unknown> }
+  data: { object: Record<string, unknown> & { metadata?: Record<string, unknown> | null } }
 }
 
 const asString = (value: unknown): string | null => (typeof value === 'string' ? value : null)
@@ -66,7 +67,7 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
   input: HandleStripeWebhookInput,
   output: HandleStripeWebhookOutput,
   tags: ['addon'],
-  func: async ({ stripeSignatureFor, kysely, logger }, _payload, { http }) => {
+  func: async ({ stripeSignatureFor, kysely, environmentId, logger }, _payload, { http }) => {
     const request = http?.request
     // Which account's endpoint received this: configured on the URL by the host
     // app (e.g. `/webhooks/stripe?account=cc-eu`). Absent, the default secret.
@@ -97,6 +98,11 @@ export const handleStripeWebhook = pikkuSessionlessFunc({
 
     const event = JSON.parse(body) as StripeEvent
     const now = new Date().toISOString()
+
+    if (isForeignEnvironment(environmentId, event.data.object)) {
+      logger.debug(`stripe webhook: ${event.type} (${event.id}) belongs to another environment`)
+      return { received: true, eventId: event.id, type: event.type, processed: false }
+    }
 
     if (!HANDLED.has(event.type)) {
       // Not recorded either: the event row exists to make a retry a no-op, and

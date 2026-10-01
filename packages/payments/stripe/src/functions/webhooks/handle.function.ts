@@ -1,6 +1,7 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
+import { isForeignEnvironment } from '../../environment-id.js'
 
 /**
  * Queue topic that verified Stripe events are published onto. The consuming
@@ -19,7 +20,7 @@ export const StripeWebhookOutput = z.object({
   received: z.boolean().describe('Always true once the event is verified and enqueued'),
   eventId: z.string().describe('The verified Stripe event id (evt_...)'),
   type: z.string().describe('The Stripe event type that was enqueued'),
-  jobId: z.string().describe('The queue job id the event was published as'),
+  jobId: z.string().nullable().describe('The queue job id the event was published as, or null when the event belongs to another environment and was acknowledged without being enqueued'),
 })
 
 /**
@@ -41,7 +42,7 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
     'Verify a Stripe webhook signature against the raw body and enqueue the verified event onto the stripe-webhook-event queue for the consuming app to process.',
   input: StripeWebhookInput,
   output: StripeWebhookOutput,
-  func: async ({ stripeWebhookVerifier, queueService, logger }, _payload, { http }) => {
+  func: async ({ stripeWebhookVerifier, queueService, environmentId, logger }, _payload, { http }) => {
     if (!queueService) {
       logger.error('stripe webhook: queueService is not configured on the host app')
       throw new Error('queueService is required to process Stripe webhooks')
@@ -68,12 +69,20 @@ export const stripeWebhookHandler = pikkuSessionlessFunc({
       throw new BadRequestError('Cannot read raw request body for signature verification')
     }
 
-    let event: { id: string; type: string }
+    let event: Awaited<ReturnType<typeof stripeWebhookVerifier.verify>>
     try {
       event = await stripeWebhookVerifier.verify(rawBody, signature)
     } catch (e: any) {
       logger.warn(`stripe webhook signature verification failed: ${e?.message}`)
       throw new UnauthorizedError('Invalid Stripe webhook signature')
+    }
+
+    // Stripe delivers every event on an account to every endpoint on it, so
+    // environments sharing an account see each other's events. Acknowledge them
+    // with a 2xx — a failure would be retried and eventually disable the endpoint.
+    if (isForeignEnvironment(environmentId, event.data?.object)) {
+      logger.debug(`stripe webhook: ${event.type} (${event.id}) belongs to another environment`)
+      return { received: true, eventId: event.id, type: event.type, jobId: null }
     }
 
     // Publish the verified event. The consumer dedupes on event.id, so a
