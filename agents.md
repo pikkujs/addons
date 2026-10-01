@@ -95,6 +95,17 @@ pikku new addon my-util --category Utility --test false
 
 The shell scripts `scripts/create-package.sh` and `scripts/create-test-harness.sh` are older alternatives. Prefer `pikku new addon` for new packages.
 
+## Webhook Sources
+
+An addon that receives a provider's webhooks wires `wireTriggerWebhookSource` in `src/<name>.webhook-source.ts`:
+
+- Declare how deliveries are signed with `verify` and say where the secret comes from in `credentialDescription`. That declares the `<name>WebhookSecret` credential (camelCased), so there is no `defineCredential`, no `*-webhook.secret.ts`, and nothing in `services.ts` holds the secret.
+- Use a declared form (`hmac`, `token`, `publicKey`) when the provider signs the raw body in one header. Otherwise write a function from the helpers in `@pikku/core/hmac` (`hmacDigest`, `verifyHmacSignature`, `verifyPublicKeySignature`, `timingSafeStringEqual`).
+- `receive` only parses the request into events or answers a handshake. It never checks a signature.
+- A handshake that hands over the secret stores it with `credentialService.set('<name>WebhookSecret', …)`.
+
+The forms and the bodiless-request rules are in the `pikku-wiring` skill's `references/trigger.md`.
+
 ## Docker/Container Setup
 - Uses **podman**, not Docker
 - Podman socket: `unix:///var/folders/9w/m7jglq897r98pc5hmwrqb_cc0000gn/T/podman/podman-machine-default-api.sock`
