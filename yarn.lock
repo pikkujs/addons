@@ -2595,11 +2595,11 @@ __metadata:
   resolution: "@pikku/addon-agile-crm@workspace:packages/crm/agile-crm"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2609,12 +2609,12 @@ __metadata:
   resolution: "@pikku/addon-ai-whisper-asr@workspace:packages/ai/whisper-asr"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2624,12 +2624,12 @@ __metadata:
   resolution: "@pikku/addon-airtable@workspace:packages/database/airtable"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2639,11 +2639,11 @@ __metadata:
   resolution: "@pikku/addon-airtop@workspace:packages/automation/airtop"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2653,11 +2653,11 @@ __metadata:
   resolution: "@pikku/addon-amqp@workspace:packages/communication/amqp"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2667,11 +2667,11 @@ __metadata:
   resolution: "@pikku/addon-asana@workspace:packages/automation/asana"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2681,11 +2681,11 @@ __metadata:
   resolution: "@pikku/addon-assemblyai@workspace:packages/ai/assemblyai"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2695,11 +2695,11 @@ __metadata:
   resolution: "@pikku/addon-automizy@workspace:packages/email/automizy"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2709,11 +2709,11 @@ __metadata:
   resolution: "@pikku/addon-autopilot@workspace:packages/crm/autopilot"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2723,11 +2723,11 @@ __metadata:
   resolution: "@pikku/addon-aws-comprehend@workspace:packages/ai/aws-comprehend"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2737,11 +2737,11 @@ __metadata:
   resolution: "@pikku/addon-aws-lambda@workspace:packages/cloud/aws-lambda"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2751,11 +2751,11 @@ __metadata:
   resolution: "@pikku/addon-aws-s3@workspace:packages/cloud/aws-s3"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2765,11 +2765,11 @@ __metadata:
   resolution: "@pikku/addon-aws-ses@workspace:packages/email/aws-ses"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2779,11 +2779,11 @@ __metadata:
   resolution: "@pikku/addon-aws-sns@workspace:packages/communication/aws-sns"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2793,11 +2793,11 @@ __metadata:
   resolution: "@pikku/addon-aws-sqs@workspace:packages/communication/aws-sqs"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2807,11 +2807,11 @@ __metadata:
   resolution: "@pikku/addon-aws-transcribe@workspace:packages/ai/aws-transcribe"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2821,11 +2821,11 @@ __metadata:
   resolution: "@pikku/addon-bamboo-hr@workspace:packages/crm/bamboo-hr"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2835,11 +2835,11 @@ __metadata:
   resolution: "@pikku/addon-bannerbear@workspace:packages/media/bannerbear"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2849,13 +2849,13 @@ __metadata:
   resolution: "@pikku/addon-barcode@workspace:packages/data/barcode"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     bwip-js: "npm:^4.8.0"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2865,11 +2865,11 @@ __metadata:
   resolution: "@pikku/addon-baserow@workspace:packages/database/baserow"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2879,12 +2879,12 @@ __metadata:
   resolution: "@pikku/addon-binary@workspace:packages/data/binary"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2894,11 +2894,11 @@ __metadata:
   resolution: "@pikku/addon-bitly@workspace:packages/automation/bitly"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2908,11 +2908,11 @@ __metadata:
   resolution: "@pikku/addon-bitwarden@workspace:packages/infrastructure/bitwarden"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2922,11 +2922,11 @@ __metadata:
   resolution: "@pikku/addon-clearbit@workspace:packages/crm/clearbit"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2936,11 +2936,11 @@ __metadata:
   resolution: "@pikku/addon-clickup@workspace:packages/automation/clickup"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2950,11 +2950,11 @@ __metadata:
   resolution: "@pikku/addon-clockify@workspace:packages/automation/clockify"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2964,12 +2964,12 @@ __metadata:
   resolution: "@pikku/addon-cloudflare@workspace:packages/infrastructure/cloudflare"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2979,11 +2979,11 @@ __metadata:
   resolution: "@pikku/addon-coingecko@workspace:packages/crypto/coingecko"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -2993,13 +2993,13 @@ __metadata:
   resolution: "@pikku/addon-commerce-stripe@workspace:packages/payments/commerce-stripe"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@pikku/kysely": "npm:^0.13.31"
     "@typescript/native": "npm:typescript@^7.0.2"
     kysely: "npm:^0.29.5"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     kysely: ^0.29.0
     zod: ^4
   languageName: unknown
@@ -3010,13 +3010,13 @@ __metadata:
   resolution: "@pikku/addon-compression@workspace:packages/data/compression"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     fflate: "npm:^0.8"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3026,11 +3026,11 @@ __metadata:
   resolution: "@pikku/addon-convertkit@workspace:packages/email/convertkit"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3040,11 +3040,11 @@ __metadata:
   resolution: "@pikku/addon-copper@workspace:packages/crm/copper"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3054,11 +3054,11 @@ __metadata:
   resolution: "@pikku/addon-cortex@workspace:packages/monitoring/cortex"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3068,11 +3068,11 @@ __metadata:
   resolution: "@pikku/addon-cratedb@workspace:packages/database/cratedb"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3082,11 +3082,11 @@ __metadata:
   resolution: "@pikku/addon-deepl@workspace:packages/ai/deepl"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3096,11 +3096,11 @@ __metadata:
   resolution: "@pikku/addon-dhl@workspace:packages/data/dhl"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3110,11 +3110,11 @@ __metadata:
   resolution: "@pikku/addon-discord@workspace:packages/communication/discord"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3124,11 +3124,11 @@ __metadata:
   resolution: "@pikku/addon-discourse@workspace:packages/communication/discourse"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3138,12 +3138,12 @@ __metadata:
   resolution: "@pikku/addon-docraptor@workspace:packages/documents/docraptor"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3153,11 +3153,11 @@ __metadata:
   resolution: "@pikku/addon-dropbox@workspace:packages/cloud/dropbox"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3167,11 +3167,11 @@ __metadata:
   resolution: "@pikku/addon-dropcontact@workspace:packages/crm/dropcontact"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3181,13 +3181,13 @@ __metadata:
   resolution: "@pikku/addon-edit-image@workspace:packages/data/edit-image"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     sharp: "npm:^0.33"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3197,11 +3197,11 @@ __metadata:
   resolution: "@pikku/addon-egoi@workspace:packages/email/egoi"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3211,11 +3211,11 @@ __metadata:
   resolution: "@pikku/addon-elasticsearch@workspace:packages/database/elasticsearch"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3225,11 +3225,11 @@ __metadata:
   resolution: "@pikku/addon-elevenlabs@workspace:packages/ai/elevenlabs"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3239,13 +3239,13 @@ __metadata:
   resolution: "@pikku/addon-email-send@workspace:packages/email/email-send"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/nodemailer": "npm:^6"
     "@typescript/native": "npm:typescript@^7.0.2"
     nodemailer: "npm:^6"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3255,11 +3255,11 @@ __metadata:
   resolution: "@pikku/addon-emelia@workspace:packages/email/emelia"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3269,11 +3269,11 @@ __metadata:
   resolution: "@pikku/addon-erpnext@workspace:packages/crm/erpnext"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3283,12 +3283,12 @@ __metadata:
   resolution: "@pikku/addon-execution@workspace:packages/devops/execution"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3298,11 +3298,11 @@ __metadata:
   resolution: "@pikku/addon-facebook-graph-api@workspace:packages/communication/facebook-graph-api"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3312,11 +3312,11 @@ __metadata:
   resolution: "@pikku/addon-filemaker@workspace:packages/database/filemaker"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3326,12 +3326,12 @@ __metadata:
   resolution: "@pikku/addon-flyio@workspace:packages/cloud/flyio"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3341,11 +3341,11 @@ __metadata:
   resolution: "@pikku/addon-formstack@workspace:packages/forms/formstack"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3355,11 +3355,11 @@ __metadata:
   resolution: "@pikku/addon-freshdesk@workspace:packages/crm/freshdesk"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3369,11 +3369,11 @@ __metadata:
   resolution: "@pikku/addon-ftp@workspace:packages/infrastructure/ftp"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3383,11 +3383,11 @@ __metadata:
   resolution: "@pikku/addon-g-suite-admin@workspace:packages/cloud/g-suite-admin"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3397,11 +3397,11 @@ __metadata:
   resolution: "@pikku/addon-ghost@workspace:packages/documents/ghost"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3411,12 +3411,12 @@ __metadata:
   resolution: "@pikku/addon-git@workspace:packages/devops/git"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     simple-git: "npm:^3"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3426,12 +3426,12 @@ __metadata:
   resolution: "@pikku/addon-github@workspace:packages/devops/github"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3441,11 +3441,11 @@ __metadata:
   resolution: "@pikku/addon-gitlab@workspace:packages/devops/gitlab"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3455,12 +3455,12 @@ __metadata:
   resolution: "@pikku/addon-gmail@workspace:packages/email/gmail"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3470,11 +3470,11 @@ __metadata:
   resolution: "@pikku/addon-google-analytics@workspace:packages/analytics/google-analytics"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3484,11 +3484,11 @@ __metadata:
   resolution: "@pikku/addon-google-big-query@workspace:packages/database/google-big-query"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3498,11 +3498,11 @@ __metadata:
   resolution: "@pikku/addon-google-books@workspace:packages/media/google-books"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3512,11 +3512,11 @@ __metadata:
   resolution: "@pikku/addon-google-calendar@workspace:packages/data/google-calendar"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3526,11 +3526,11 @@ __metadata:
   resolution: "@pikku/addon-google-cloud-natural-language@workspace:packages/ai/google-cloud-natural-language"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3540,12 +3540,12 @@ __metadata:
   resolution: "@pikku/addon-google-cloud-storage@workspace:packages/cloud/google-cloud-storage"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3555,11 +3555,11 @@ __metadata:
   resolution: "@pikku/addon-google-contacts@workspace:packages/crm/google-contacts"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3569,11 +3569,11 @@ __metadata:
   resolution: "@pikku/addon-google-docs@workspace:packages/data/google-docs"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3583,11 +3583,11 @@ __metadata:
   resolution: "@pikku/addon-google-drive@workspace:packages/data/google-drive"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3597,11 +3597,11 @@ __metadata:
   resolution: "@pikku/addon-google-firebase-cloud-firestore@workspace:packages/cloud/google-firebase-cloud-firestore"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3611,11 +3611,11 @@ __metadata:
   resolution: "@pikku/addon-google-firebase-realtime-database@workspace:packages/database/google-firebase-realtime-database"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3625,12 +3625,12 @@ __metadata:
   resolution: "@pikku/addon-google-sheets@workspace:packages/data/google-sheets"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3640,11 +3640,11 @@ __metadata:
   resolution: "@pikku/addon-google-slides@workspace:packages/documents/google-slides"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3654,11 +3654,11 @@ __metadata:
   resolution: "@pikku/addon-google-tasks@workspace:packages/automation/google-tasks"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3668,11 +3668,11 @@ __metadata:
   resolution: "@pikku/addon-gotify@workspace:packages/communication/gotify"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3682,11 +3682,11 @@ __metadata:
   resolution: "@pikku/addon-grafana@workspace:packages/monitoring/grafana"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3696,11 +3696,11 @@ __metadata:
   resolution: "@pikku/addon-grist@workspace:packages/database/grist"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3710,11 +3710,11 @@ __metadata:
   resolution: "@pikku/addon-hackernews@workspace:packages/data/hackernews"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3724,11 +3724,11 @@ __metadata:
   resolution: "@pikku/addon-harvest@workspace:packages/automation/harvest"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3738,12 +3738,12 @@ __metadata:
   resolution: "@pikku/addon-html-extract@workspace:packages/data/html-extract"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     cheerio: "npm:^1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3753,13 +3753,13 @@ __metadata:
   resolution: "@pikku/addon-html@workspace:packages/data/html"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     html-to-text: "npm:^9"
     node-html-markdown: "npm:^1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3769,11 +3769,11 @@ __metadata:
   resolution: "@pikku/addon-hubspot@workspace:packages/crm/hubspot"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3783,12 +3783,12 @@ __metadata:
   resolution: "@pikku/addon-human-design@workspace:packages/esoteric/human-design"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     sweph: "npm:^2.10.3-4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3798,11 +3798,11 @@ __metadata:
   resolution: "@pikku/addon-humantic-ai@workspace:packages/ai/humantic-ai"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3812,11 +3812,11 @@ __metadata:
   resolution: "@pikku/addon-hunter@workspace:packages/crm/hunter"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3826,12 +3826,12 @@ __metadata:
   resolution: "@pikku/addon-icalendar@workspace:packages/data/icalendar"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     ical-generator: "npm:^8"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3841,14 +3841,14 @@ __metadata:
   resolution: "@pikku/addon-imap@workspace:packages/email/imap"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/mailparser": "npm:^3.4.5"
     "@typescript/native": "npm:typescript@^7.0.2"
     imapflow: "npm:^1.0.171"
     mailparser: "npm:^3.7.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3858,11 +3858,11 @@ __metadata:
   resolution: "@pikku/addon-iterable@workspace:packages/email/iterable"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3872,12 +3872,12 @@ __metadata:
   resolution: "@pikku/addon-jenkins@workspace:packages/devops/jenkins"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3887,12 +3887,12 @@ __metadata:
   resolution: "@pikku/addon-jira@workspace:packages/devops/jira"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3902,11 +3902,11 @@ __metadata:
   resolution: "@pikku/addon-jotform@workspace:packages/forms/jotform"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3916,12 +3916,12 @@ __metadata:
   resolution: "@pikku/addon-kafka@workspace:packages/infrastructure/kafka"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     kafkajs: "npm:^2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3931,11 +3931,11 @@ __metadata:
   resolution: "@pikku/addon-keap@workspace:packages/crm/keap"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3945,12 +3945,12 @@ __metadata:
   resolution: "@pikku/addon-ldap@workspace:packages/infrastructure/ldap"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     ldapts: "npm:^7"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3960,11 +3960,11 @@ __metadata:
   resolution: "@pikku/addon-lemlist@workspace:packages/email/lemlist"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3974,11 +3974,11 @@ __metadata:
   resolution: "@pikku/addon-linear@workspace:packages/devops/linear"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -3988,11 +3988,11 @@ __metadata:
   resolution: "@pikku/addon-lingvanex@workspace:packages/ai/lingvanex"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4002,11 +4002,11 @@ __metadata:
   resolution: "@pikku/addon-linkedin@workspace:packages/communication/linkedin"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4016,11 +4016,11 @@ __metadata:
   resolution: "@pikku/addon-mailcheck@workspace:packages/email/mailcheck"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4030,11 +4030,11 @@ __metadata:
   resolution: "@pikku/addon-mailchimp@workspace:packages/email/mailchimp"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4044,11 +4044,11 @@ __metadata:
   resolution: "@pikku/addon-mailer-lite@workspace:packages/email/mailer-lite"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4058,12 +4058,12 @@ __metadata:
   resolution: "@pikku/addon-mailgun@workspace:packages/email/mailgun"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4073,11 +4073,11 @@ __metadata:
   resolution: "@pikku/addon-mailjet@workspace:packages/email/mailjet"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4087,11 +4087,11 @@ __metadata:
   resolution: "@pikku/addon-mandrill@workspace:packages/email/mandrill"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4101,13 +4101,13 @@ __metadata:
   resolution: "@pikku/addon-markdown@workspace:packages/data/markdown"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     marked: "npm:^15"
     node-html-markdown: "npm:^1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4117,12 +4117,12 @@ __metadata:
   resolution: "@pikku/addon-math@workspace:packages/data/math"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     mathjs: "npm:^15"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4132,11 +4132,11 @@ __metadata:
   resolution: "@pikku/addon-matrix@workspace:packages/communication/matrix"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4146,11 +4146,11 @@ __metadata:
   resolution: "@pikku/addon-mattermost@workspace:packages/communication/mattermost"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4160,11 +4160,11 @@ __metadata:
   resolution: "@pikku/addon-mautic@workspace:packages/crm/mautic"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4174,11 +4174,11 @@ __metadata:
   resolution: "@pikku/addon-meta-conversions@workspace:packages/analytics/meta-conversions"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4188,11 +4188,11 @@ __metadata:
   resolution: "@pikku/addon-metabase@workspace:packages/analytics/metabase"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4202,11 +4202,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-excel@workspace:packages/documents/microsoft-excel"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4216,11 +4216,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-one-drive@workspace:packages/cloud/microsoft-one-drive"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4230,11 +4230,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-outlook@workspace:packages/email/microsoft-outlook"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4244,11 +4244,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-sql@workspace:packages/database/microsoft-sql"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4258,11 +4258,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-teams@workspace:packages/communication/microsoft-teams"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4272,11 +4272,11 @@ __metadata:
   resolution: "@pikku/addon-microsoft-to-do@workspace:packages/automation/microsoft-to-do"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4286,11 +4286,11 @@ __metadata:
   resolution: "@pikku/addon-mindee@workspace:packages/ai/mindee"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4300,11 +4300,11 @@ __metadata:
   resolution: "@pikku/addon-mocean@workspace:packages/communication/mocean"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4314,11 +4314,11 @@ __metadata:
   resolution: "@pikku/addon-monday-com@workspace:packages/automation/monday-com"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4328,13 +4328,13 @@ __metadata:
   resolution: "@pikku/addon-mongodb@workspace:packages/database/mongodb"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     mongodb: "npm:^6"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4344,11 +4344,11 @@ __metadata:
   resolution: "@pikku/addon-mqtt@workspace:packages/communication/mqtt"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4358,11 +4358,11 @@ __metadata:
   resolution: "@pikku/addon-msg91@workspace:packages/communication/msg91"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4372,12 +4372,12 @@ __metadata:
   resolution: "@pikku/addon-mysql@workspace:packages/database/mysql"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     mysql2: "npm:^3.11.5"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4387,11 +4387,11 @@ __metadata:
   resolution: "@pikku/addon-nasa@workspace:packages/data/nasa"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4401,11 +4401,11 @@ __metadata:
   resolution: "@pikku/addon-nextcloud@workspace:packages/cloud/nextcloud"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4415,11 +4415,11 @@ __metadata:
   resolution: "@pikku/addon-nocodb@workspace:packages/database/nocodb"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4429,11 +4429,11 @@ __metadata:
   resolution: "@pikku/addon-notion@workspace:packages/data/notion"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4443,11 +4443,11 @@ __metadata:
   resolution: "@pikku/addon-odoo@workspace:packages/crm/odoo"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4458,12 +4458,12 @@ __metadata:
   dependencies:
     "@ai-sdk/openai": "npm:^1"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     ai: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4473,11 +4473,11 @@ __metadata:
   resolution: "@pikku/addon-onfleet@workspace:packages/automation/onfleet"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4487,11 +4487,11 @@ __metadata:
   resolution: "@pikku/addon-open-thesaurus@workspace:packages/esoteric/open-thesaurus"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4501,11 +4501,11 @@ __metadata:
   resolution: "@pikku/addon-open-weather-map@workspace:packages/data/open-weather-map"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4515,12 +4515,12 @@ __metadata:
   resolution: "@pikku/addon-openai@workspace:packages/ai/openai"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     openai: "npm:^6.9.1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4530,11 +4530,11 @@ __metadata:
   resolution: "@pikku/addon-orbit@workspace:packages/crm/orbit"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4544,12 +4544,12 @@ __metadata:
   resolution: "@pikku/addon-paddle@workspace:packages/payments/paddle"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4559,11 +4559,11 @@ __metadata:
   resolution: "@pikku/addon-pagerduty@workspace:packages/monitoring/pagerduty"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4573,11 +4573,11 @@ __metadata:
   resolution: "@pikku/addon-peekalink@workspace:packages/data/peekalink"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4587,11 +4587,11 @@ __metadata:
   resolution: "@pikku/addon-phantombuster@workspace:packages/automation/phantombuster"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4601,11 +4601,11 @@ __metadata:
   resolution: "@pikku/addon-philips-hue@workspace:packages/infrastructure/philips-hue"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4615,11 +4615,11 @@ __metadata:
   resolution: "@pikku/addon-pinecone@workspace:packages/database/pinecone"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4629,11 +4629,11 @@ __metadata:
   resolution: "@pikku/addon-plentymarkets@workspace:packages/ecommerce/plentymarkets"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4643,11 +4643,11 @@ __metadata:
   resolution: "@pikku/addon-postbin@workspace:packages/data/postbin"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4657,13 +4657,13 @@ __metadata:
   resolution: "@pikku/addon-postgres@workspace:packages/database/postgres"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/pg": "npm:^8.11.10"
     "@typescript/native": "npm:typescript@^7.0.2"
     pg: "npm:^8.13.1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4673,11 +4673,11 @@ __metadata:
   resolution: "@pikku/addon-posthog@workspace:packages/analytics/posthog"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4687,11 +4687,11 @@ __metadata:
   resolution: "@pikku/addon-pushbullet@workspace:packages/communication/pushbullet"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4701,11 +4701,11 @@ __metadata:
   resolution: "@pikku/addon-pushover@workspace:packages/communication/pushover"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4715,11 +4715,11 @@ __metadata:
   resolution: "@pikku/addon-qdrant@workspace:packages/database/qdrant"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4729,7 +4729,7 @@ __metadata:
   resolution: "@pikku/addon-qrcode@workspace:packages/data/qrcode"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@types/qrcode": "npm:^1.5.6"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -4738,7 +4738,7 @@ __metadata:
     sharp: "npm:^0.34.5"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4748,11 +4748,11 @@ __metadata:
   resolution: "@pikku/addon-quest-db@workspace:packages/database/quest-db"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4762,11 +4762,11 @@ __metadata:
   resolution: "@pikku/addon-quickbase@workspace:packages/database/quickbase"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4776,11 +4776,11 @@ __metadata:
   resolution: "@pikku/addon-quickbooks@workspace:packages/payments/quickbooks"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4790,11 +4790,11 @@ __metadata:
   resolution: "@pikku/addon-quickchart@workspace:packages/media/quickchart"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4804,11 +4804,11 @@ __metadata:
   resolution: "@pikku/addon-rabbitmq@workspace:packages/communication/rabbitmq"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4818,11 +4818,11 @@ __metadata:
   resolution: "@pikku/addon-raindrop@workspace:packages/automation/raindrop"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4832,13 +4832,13 @@ __metadata:
   resolution: "@pikku/addon-read-pdf@workspace:packages/data/read-pdf"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     pdfjs-dist: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4848,11 +4848,11 @@ __metadata:
   resolution: "@pikku/addon-reddit@workspace:packages/communication/reddit"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4862,12 +4862,12 @@ __metadata:
   resolution: "@pikku/addon-redis@workspace:packages/cache/redis"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     ioredis: "npm:^5.8.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4877,11 +4877,11 @@ __metadata:
   resolution: "@pikku/addon-resend@workspace:packages/email/resend"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4891,11 +4891,11 @@ __metadata:
   resolution: "@pikku/addon-rocketchat@workspace:packages/communication/rocketchat"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4905,12 +4905,12 @@ __metadata:
   resolution: "@pikku/addon-rss-feed@workspace:packages/data/rss-feed"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     rss-parser: "npm:^3"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4921,12 +4921,12 @@ __metadata:
   dependencies:
     "@aws-sdk/client-s3": "npm:^3"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4936,11 +4936,11 @@ __metadata:
   resolution: "@pikku/addon-salesforce@workspace:packages/crm/salesforce"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4950,11 +4950,11 @@ __metadata:
   resolution: "@pikku/addon-security-scorecard@workspace:packages/monitoring/security-scorecard"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4964,12 +4964,12 @@ __metadata:
   resolution: "@pikku/addon-segment@workspace:packages/analytics/segment"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4979,11 +4979,11 @@ __metadata:
   resolution: "@pikku/addon-sendgrid@workspace:packages/email/sendgrid"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -4993,11 +4993,11 @@ __metadata:
   resolution: "@pikku/addon-sendy@workspace:packages/email/sendy"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5007,11 +5007,11 @@ __metadata:
   resolution: "@pikku/addon-sentry@workspace:packages/monitoring/sentry"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5021,11 +5021,11 @@ __metadata:
   resolution: "@pikku/addon-servicenow@workspace:packages/crm/servicenow"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5035,11 +5035,11 @@ __metadata:
   resolution: "@pikku/addon-shopify@workspace:packages/ecommerce/shopify"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5049,11 +5049,11 @@ __metadata:
   resolution: "@pikku/addon-signl4@workspace:packages/monitoring/signl4"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5063,11 +5063,11 @@ __metadata:
   resolution: "@pikku/addon-slack@workspace:packages/communication/slack"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5077,11 +5077,11 @@ __metadata:
   resolution: "@pikku/addon-snowflake@workspace:packages/database/snowflake"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5091,11 +5091,11 @@ __metadata:
   resolution: "@pikku/addon-spotify@workspace:packages/media/spotify"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5105,14 +5105,14 @@ __metadata:
   resolution: "@pikku/addon-spreadsheet@workspace:packages/data/spreadsheet"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     csv-parse: "npm:^5"
     xlsx: "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5122,14 +5122,14 @@ __metadata:
   resolution: "@pikku/addon-ssh@workspace:packages/infrastructure/ssh"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@types/ssh2": "npm:^1"
     "@typescript/native": "npm:typescript@^7.0.2"
     ssh2: "npm:^1"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5139,11 +5139,11 @@ __metadata:
   resolution: "@pikku/addon-storyblok@workspace:packages/documents/storyblok"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5153,11 +5153,11 @@ __metadata:
   resolution: "@pikku/addon-strapi@workspace:packages/documents/strapi"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5167,11 +5167,11 @@ __metadata:
   resolution: "@pikku/addon-strava@workspace:packages/data/strava"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5181,13 +5181,13 @@ __metadata:
   resolution: "@pikku/addon-stripe@workspace:packages/payments/stripe"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     stripe: "npm:^17.0.0"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5197,12 +5197,12 @@ __metadata:
   resolution: "@pikku/addon-supabase@workspace:packages/database/supabase"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@supabase/supabase-js": "npm:^2.47.10"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5212,11 +5212,11 @@ __metadata:
   resolution: "@pikku/addon-survey-monkey@workspace:packages/forms/survey-monkey"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5226,11 +5226,11 @@ __metadata:
   resolution: "@pikku/addon-taiga@workspace:packages/automation/taiga"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5240,11 +5240,11 @@ __metadata:
   resolution: "@pikku/addon-tapfiliate@workspace:packages/crm/tapfiliate"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5254,11 +5254,11 @@ __metadata:
   resolution: "@pikku/addon-telegram@workspace:packages/communication/telegram"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5268,11 +5268,11 @@ __metadata:
   resolution: "@pikku/addon-the-hive@workspace:packages/monitoring/the-hive"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5282,11 +5282,11 @@ __metadata:
   resolution: "@pikku/addon-timescale-db@workspace:packages/database/timescale-db"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5296,11 +5296,11 @@ __metadata:
   resolution: "@pikku/addon-todoist@workspace:packages/automation/todoist"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5310,11 +5310,11 @@ __metadata:
   resolution: "@pikku/addon-totp@workspace:packages/automation/totp"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5324,11 +5324,11 @@ __metadata:
   resolution: "@pikku/addon-trello@workspace:packages/automation/trello"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5338,12 +5338,12 @@ __metadata:
   resolution: "@pikku/addon-twilio@workspace:packages/communication/twilio"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5353,11 +5353,11 @@ __metadata:
   resolution: "@pikku/addon-twist@workspace:packages/communication/twist"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5367,11 +5367,11 @@ __metadata:
   resolution: "@pikku/addon-twitter@workspace:packages/communication/twitter"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5381,11 +5381,11 @@ __metadata:
   resolution: "@pikku/addon-typeform@workspace:packages/forms/typeform"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5395,11 +5395,11 @@ __metadata:
   resolution: "@pikku/addon-typesafe@workspace:packages/ai/typesafe"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5409,11 +5409,11 @@ __metadata:
   resolution: "@pikku/addon-uplead@workspace:packages/crm/uplead"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5423,11 +5423,11 @@ __metadata:
   resolution: "@pikku/addon-uproc@workspace:packages/data/uproc"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5437,11 +5437,11 @@ __metadata:
   resolution: "@pikku/addon-uptimerobot@workspace:packages/monitoring/uptimerobot"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5451,11 +5451,11 @@ __metadata:
   resolution: "@pikku/addon-url-scan-io@workspace:packages/monitoring/url-scan-io"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5465,11 +5465,11 @@ __metadata:
   resolution: "@pikku/addon-venafi-tls-protect-cloud@workspace:packages/infrastructure/venafi-tls-protect-cloud"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5479,11 +5479,11 @@ __metadata:
   resolution: "@pikku/addon-vero@workspace:packages/crm/vero"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5493,11 +5493,11 @@ __metadata:
   resolution: "@pikku/addon-vonage@workspace:packages/communication/vonage"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5507,11 +5507,11 @@ __metadata:
   resolution: "@pikku/addon-webflow@workspace:packages/cloud/webflow"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5521,11 +5521,11 @@ __metadata:
   resolution: "@pikku/addon-wekan@workspace:packages/automation/wekan"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5535,7 +5535,7 @@ __metadata:
   resolution: "@pikku/addon-whatsapp-baileys@workspace:packages/communication/whatsapp-baileys"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@types/qrcode-terminal": "npm:^0"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -5544,7 +5544,7 @@ __metadata:
     tsx: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     "@whiskeysockets/baileys": ^7.0.0-rc.9
     qrcode-terminal: ">=0.12"
     zod: ^4
@@ -5556,13 +5556,13 @@ __metadata:
   resolution: "@pikku/addon-whatsapp@workspace:packages/communication/whatsapp"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5572,11 +5572,11 @@ __metadata:
   resolution: "@pikku/addon-wikipedia@workspace:packages/data/wikipedia"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5586,11 +5586,11 @@ __metadata:
   resolution: "@pikku/addon-wise@workspace:packages/payments/wise"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5600,11 +5600,11 @@ __metadata:
   resolution: "@pikku/addon-woocommerce@workspace:packages/ecommerce/woocommerce"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5614,11 +5614,11 @@ __metadata:
   resolution: "@pikku/addon-wordpress@workspace:packages/documents/wordpress"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5628,13 +5628,13 @@ __metadata:
   resolution: "@pikku/addon-xml@workspace:packages/data/xml"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/xml2js": "npm:^0.4"
     "@typescript/native": "npm:typescript@^7.0.2"
     xml2js: "npm:^0.6"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5644,11 +5644,11 @@ __metadata:
   resolution: "@pikku/addon-yourls@workspace:packages/automation/yourls"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5658,12 +5658,12 @@ __metadata:
   resolution: "@pikku/addon-youtube@workspace:packages/media/youtube"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5673,11 +5673,11 @@ __metadata:
   resolution: "@pikku/addon-zammad@workspace:packages/communication/zammad"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5687,11 +5687,11 @@ __metadata:
   resolution: "@pikku/addon-zapier@workspace:packages/automation/zapier"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5701,11 +5701,11 @@ __metadata:
   resolution: "@pikku/addon-zendesk@workspace:packages/communication/zendesk"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5715,11 +5715,11 @@ __metadata:
   resolution: "@pikku/addon-zoom@workspace:packages/communication/zoom"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5729,11 +5729,11 @@ __metadata:
   resolution: "@pikku/addon-zulip@workspace:packages/communication/zulip"
   dependencies:
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@typescript/native": "npm:typescript@^7.0.2"
     zod: "npm:^4"
   peerDependencies:
-    "@pikku/core": ^0.12.133
+    "@pikku/core": ^0.12.134
     zod: ^4
   languageName: unknown
   linkType: soft
@@ -5850,9 +5850,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pikku/core@npm:^0.12.133":
-  version: 0.12.133
-  resolution: "@pikku/core@npm:0.12.133"
+"@pikku/core@npm:^0.12.134":
+  version: 0.12.134
+  resolution: "@pikku/core@npm:0.12.134"
   dependencies:
     "@standard-schema/spec": "npm:^1.1.0"
     "@types/json-schema": "npm:^7.0.15"
@@ -5860,7 +5860,7 @@ __metadata:
     json-schema: "npm:^0.4.0"
     path-to-regexp: "npm:^8.4.2"
     picoquery: "npm:^2.5.0"
-  checksum: 10/255e5dcd3cd08ba535ae9c878805f22eaf46b15731049f07ad61623fd4a5ab61e12a31511a2d30b40c2ba5c8bac89a3c2227831b41af1491992cf1b3e28871ed
+  checksum: 10/44091d278daeeab81e9380e33e1b579fee6262086cbcff67a665bf6cbabd1cabb45ccc4a3dd562bd87796e39fb0dbba8dc8fe0987381841f80a75e55aa4a1282
   languageName: node
   linkType: hard
 
@@ -6029,7 +6029,7 @@ __metadata:
   dependencies:
     "@pikku/addon-agile-crm": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6043,7 +6043,7 @@ __metadata:
   dependencies:
     "@pikku/addon-airtop": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6057,7 +6057,7 @@ __metadata:
   dependencies:
     "@pikku/addon-amqp": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6071,7 +6071,7 @@ __metadata:
   dependencies:
     "@pikku/addon-asana": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6085,7 +6085,7 @@ __metadata:
   dependencies:
     "@pikku/addon-automizy": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6099,7 +6099,7 @@ __metadata:
   dependencies:
     "@pikku/addon-autopilot": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6113,7 +6113,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-comprehend": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6127,7 +6127,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-lambda": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6141,7 +6141,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-s3": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6155,7 +6155,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-ses": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6169,7 +6169,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-sns": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6183,7 +6183,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-sqs": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6197,7 +6197,7 @@ __metadata:
   dependencies:
     "@pikku/addon-aws-transcribe": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6211,7 +6211,7 @@ __metadata:
   dependencies:
     "@pikku/addon-bamboo-hr": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6225,7 +6225,7 @@ __metadata:
   dependencies:
     "@pikku/addon-bannerbear": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6239,7 +6239,7 @@ __metadata:
   dependencies:
     "@pikku/addon-barcode": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6253,7 +6253,7 @@ __metadata:
   dependencies:
     "@pikku/addon-baserow": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6267,7 +6267,7 @@ __metadata:
   dependencies:
     "@pikku/addon-binary": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6281,7 +6281,7 @@ __metadata:
   dependencies:
     "@pikku/addon-bitly": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6295,7 +6295,7 @@ __metadata:
   dependencies:
     "@pikku/addon-bitwarden": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6309,7 +6309,7 @@ __metadata:
   dependencies:
     "@pikku/addon-clearbit": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6323,7 +6323,7 @@ __metadata:
   dependencies:
     "@pikku/addon-clickup": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6337,7 +6337,7 @@ __metadata:
   dependencies:
     "@pikku/addon-clockify": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6351,7 +6351,7 @@ __metadata:
   dependencies:
     "@pikku/addon-coingecko": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6379,7 +6379,7 @@ __metadata:
   dependencies:
     "@pikku/addon-compression": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6393,7 +6393,7 @@ __metadata:
   dependencies:
     "@pikku/addon-convertkit": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6407,7 +6407,7 @@ __metadata:
   dependencies:
     "@pikku/addon-copper": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6421,7 +6421,7 @@ __metadata:
   dependencies:
     "@pikku/addon-cortex": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6435,7 +6435,7 @@ __metadata:
   dependencies:
     "@pikku/addon-cratedb": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6449,7 +6449,7 @@ __metadata:
   dependencies:
     "@pikku/addon-dhl": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6463,7 +6463,7 @@ __metadata:
   dependencies:
     "@pikku/addon-discourse": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6477,7 +6477,7 @@ __metadata:
   dependencies:
     "@pikku/addon-dropbox": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6491,7 +6491,7 @@ __metadata:
   dependencies:
     "@pikku/addon-dropcontact": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6505,7 +6505,7 @@ __metadata:
   dependencies:
     "@pikku/addon-edit-image": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6519,7 +6519,7 @@ __metadata:
   dependencies:
     "@pikku/addon-egoi": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6533,7 +6533,7 @@ __metadata:
   dependencies:
     "@pikku/addon-elasticsearch": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6547,7 +6547,7 @@ __metadata:
   dependencies:
     "@pikku/addon-elevenlabs": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6561,7 +6561,7 @@ __metadata:
   dependencies:
     "@pikku/addon-email-send": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -6576,7 +6576,7 @@ __metadata:
   dependencies:
     "@pikku/addon-emelia": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6590,7 +6590,7 @@ __metadata:
   dependencies:
     "@pikku/addon-erpnext": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6604,7 +6604,7 @@ __metadata:
   dependencies:
     "@pikku/addon-execution": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6618,7 +6618,7 @@ __metadata:
   dependencies:
     "@pikku/addon-facebook-graph-api": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6632,7 +6632,7 @@ __metadata:
   dependencies:
     "@pikku/addon-filemaker": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6646,7 +6646,7 @@ __metadata:
   dependencies:
     "@pikku/addon-flyio": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6660,7 +6660,7 @@ __metadata:
   dependencies:
     "@pikku/addon-freshdesk": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6674,7 +6674,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ftp": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6688,7 +6688,7 @@ __metadata:
   dependencies:
     "@pikku/addon-g-suite-admin": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6702,7 +6702,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ghost": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6716,7 +6716,7 @@ __metadata:
   dependencies:
     "@pikku/addon-git": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6730,7 +6730,7 @@ __metadata:
   dependencies:
     "@pikku/addon-github": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6744,7 +6744,7 @@ __metadata:
   dependencies:
     "@pikku/addon-gitlab": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6758,7 +6758,7 @@ __metadata:
   dependencies:
     "@pikku/addon-gmail": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6772,7 +6772,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-big-query": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6786,7 +6786,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-books": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6800,7 +6800,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-calendar": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6814,7 +6814,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-cloud-natural-language": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6828,7 +6828,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-contacts": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6842,7 +6842,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-docs": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6856,7 +6856,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-drive": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6870,7 +6870,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-firebase-cloud-firestore": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6884,7 +6884,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-firebase-realtime-database": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6898,7 +6898,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-sheets": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6912,7 +6912,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-slides": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6926,7 +6926,7 @@ __metadata:
   dependencies:
     "@pikku/addon-google-tasks": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6940,7 +6940,7 @@ __metadata:
   dependencies:
     "@pikku/addon-gotify": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6954,7 +6954,7 @@ __metadata:
   dependencies:
     "@pikku/addon-grafana": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -6969,7 +6969,7 @@ __metadata:
   dependencies:
     "@pikku/addon-grist": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6983,7 +6983,7 @@ __metadata:
   dependencies:
     "@pikku/addon-hackernews": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -6997,7 +6997,7 @@ __metadata:
   dependencies:
     "@pikku/addon-harvest": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7011,7 +7011,7 @@ __metadata:
   dependencies:
     "@pikku/addon-html-extract": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7025,7 +7025,7 @@ __metadata:
   dependencies:
     "@pikku/addon-html": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7039,7 +7039,7 @@ __metadata:
   dependencies:
     "@pikku/addon-human-design": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7053,7 +7053,7 @@ __metadata:
   dependencies:
     "@pikku/addon-humantic-ai": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7067,7 +7067,7 @@ __metadata:
   dependencies:
     "@pikku/addon-hunter": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7081,7 +7081,7 @@ __metadata:
   dependencies:
     "@pikku/addon-icalendar": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7095,7 +7095,7 @@ __metadata:
   dependencies:
     "@pikku/addon-imap": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -7110,7 +7110,7 @@ __metadata:
   dependencies:
     "@pikku/addon-iterable": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7124,7 +7124,7 @@ __metadata:
   dependencies:
     "@pikku/addon-jenkins": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -7139,7 +7139,7 @@ __metadata:
   dependencies:
     "@pikku/addon-jira": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7153,7 +7153,7 @@ __metadata:
   dependencies:
     "@pikku/addon-kafka": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@testcontainers/redpanda": "npm:^11.12.0"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -7169,7 +7169,7 @@ __metadata:
   dependencies:
     "@pikku/addon-keap": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7183,7 +7183,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ldap": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -7198,7 +7198,7 @@ __metadata:
   dependencies:
     "@pikku/addon-lemlist": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7212,7 +7212,7 @@ __metadata:
   dependencies:
     "@pikku/addon-linear": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7226,7 +7226,7 @@ __metadata:
   dependencies:
     "@pikku/addon-lingvanex": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7240,7 +7240,7 @@ __metadata:
   dependencies:
     "@pikku/addon-linkedin": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7254,7 +7254,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mailcheck": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7268,7 +7268,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mailchimp": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7282,7 +7282,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mailer-lite": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7296,7 +7296,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mailjet": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7310,7 +7310,7 @@ __metadata:
   dependencies:
     "@pikku/addon-markdown": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7324,7 +7324,7 @@ __metadata:
   dependencies:
     "@pikku/addon-math": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7338,7 +7338,7 @@ __metadata:
   dependencies:
     "@pikku/addon-matrix": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7352,7 +7352,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mattermost": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7366,7 +7366,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mautic": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7380,7 +7380,7 @@ __metadata:
   dependencies:
     "@pikku/addon-metabase": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -7395,7 +7395,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-excel": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7409,7 +7409,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-one-drive": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7423,7 +7423,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-outlook": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7437,7 +7437,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-sql": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7451,7 +7451,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-teams": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7465,7 +7465,7 @@ __metadata:
   dependencies:
     "@pikku/addon-microsoft-to-do": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7479,7 +7479,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mindee": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7493,7 +7493,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mocean": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7507,7 +7507,7 @@ __metadata:
   dependencies:
     "@pikku/addon-monday-com": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7521,7 +7521,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mongodb": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@testcontainers/mongodb": "npm:^10"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -7537,7 +7537,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mqtt": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7551,7 +7551,7 @@ __metadata:
   dependencies:
     "@pikku/addon-msg91": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7565,7 +7565,7 @@ __metadata:
   dependencies:
     "@pikku/addon-mysql": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@testcontainers/mysql": "npm:^10"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -7582,7 +7582,7 @@ __metadata:
   dependencies:
     "@pikku/addon-nasa": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7596,7 +7596,7 @@ __metadata:
   dependencies:
     "@pikku/addon-nextcloud": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7610,7 +7610,7 @@ __metadata:
   dependencies:
     "@pikku/addon-nocodb": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7624,7 +7624,7 @@ __metadata:
   dependencies:
     "@pikku/addon-notion": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7638,7 +7638,7 @@ __metadata:
   dependencies:
     "@pikku/addon-odoo": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7652,7 +7652,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ollama": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7666,7 +7666,7 @@ __metadata:
   dependencies:
     "@pikku/addon-onfleet": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7680,7 +7680,7 @@ __metadata:
   dependencies:
     "@pikku/addon-open-thesaurus": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7694,7 +7694,7 @@ __metadata:
   dependencies:
     "@pikku/addon-open-weather-map": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7708,7 +7708,7 @@ __metadata:
   dependencies:
     "@pikku/addon-orbit": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7722,7 +7722,7 @@ __metadata:
   dependencies:
     "@pikku/addon-peekalink": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7736,7 +7736,7 @@ __metadata:
   dependencies:
     "@pikku/addon-phantombuster": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7750,7 +7750,7 @@ __metadata:
   dependencies:
     "@pikku/addon-philips-hue": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7765,7 +7765,7 @@ __metadata:
     "@pikku/addon-openai": "workspace:*"
     "@pikku/addon-pinecone": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7779,7 +7779,7 @@ __metadata:
   dependencies:
     "@pikku/addon-plentymarkets": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7793,7 +7793,7 @@ __metadata:
   dependencies:
     "@pikku/addon-postbin": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7807,7 +7807,7 @@ __metadata:
   dependencies:
     "@pikku/addon-postgres": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@testcontainers/postgresql": "npm:^10"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -7824,7 +7824,7 @@ __metadata:
   dependencies:
     "@pikku/addon-pushbullet": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7838,7 +7838,7 @@ __metadata:
   dependencies:
     "@pikku/addon-pushover": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7853,7 +7853,7 @@ __metadata:
     "@pikku/addon-openai": "workspace:*"
     "@pikku/addon-qdrant": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7867,7 +7867,7 @@ __metadata:
   dependencies:
     "@pikku/addon-qrcode": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7881,7 +7881,7 @@ __metadata:
   dependencies:
     "@pikku/addon-quest-db": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7895,7 +7895,7 @@ __metadata:
   dependencies:
     "@pikku/addon-quickbase": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7909,7 +7909,7 @@ __metadata:
   dependencies:
     "@pikku/addon-quickbooks": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7923,7 +7923,7 @@ __metadata:
   dependencies:
     "@pikku/addon-quickchart": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7937,7 +7937,7 @@ __metadata:
   dependencies:
     "@pikku/addon-rabbitmq": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7951,7 +7951,7 @@ __metadata:
   dependencies:
     "@pikku/addon-raindrop": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7965,7 +7965,7 @@ __metadata:
   dependencies:
     "@pikku/addon-read-pdf": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     pdfkit: "npm:^0.16"
@@ -7980,7 +7980,7 @@ __metadata:
   dependencies:
     "@pikku/addon-reddit": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -7994,7 +7994,7 @@ __metadata:
   dependencies:
     "@pikku/addon-redis": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@testcontainers/redis": "npm:^10"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -8011,7 +8011,7 @@ __metadata:
   dependencies:
     "@pikku/addon-resend": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8025,7 +8025,7 @@ __metadata:
   dependencies:
     "@pikku/addon-rocketchat": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8039,7 +8039,7 @@ __metadata:
   dependencies:
     "@pikku/addon-rss-feed": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8053,7 +8053,7 @@ __metadata:
   dependencies:
     "@pikku/addon-s3": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -8068,7 +8068,7 @@ __metadata:
   dependencies:
     "@pikku/addon-salesforce": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8082,7 +8082,7 @@ __metadata:
   dependencies:
     "@pikku/addon-security-scorecard": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8096,7 +8096,7 @@ __metadata:
   dependencies:
     "@pikku/addon-sendy": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8110,7 +8110,7 @@ __metadata:
   dependencies:
     "@pikku/addon-servicenow": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8124,7 +8124,7 @@ __metadata:
   dependencies:
     "@pikku/addon-shopify": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8138,7 +8138,7 @@ __metadata:
   dependencies:
     "@pikku/addon-signl4": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8152,7 +8152,7 @@ __metadata:
   dependencies:
     "@pikku/addon-slack": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8166,7 +8166,7 @@ __metadata:
   dependencies:
     "@pikku/addon-snowflake": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8180,7 +8180,7 @@ __metadata:
   dependencies:
     "@pikku/addon-spotify": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8194,7 +8194,7 @@ __metadata:
   dependencies:
     "@pikku/addon-spreadsheet": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8208,7 +8208,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ssh": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -8223,7 +8223,7 @@ __metadata:
   dependencies:
     "@pikku/addon-storyblok": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8237,7 +8237,7 @@ __metadata:
   dependencies:
     "@pikku/addon-strapi": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8251,7 +8251,7 @@ __metadata:
   dependencies:
     "@pikku/addon-strava": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8265,7 +8265,7 @@ __metadata:
   dependencies:
     "@pikku/addon-stripe": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -8280,7 +8280,7 @@ __metadata:
   dependencies:
     "@pikku/addon-supabase": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@supabase/supabase-js": "npm:^2"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
@@ -8297,7 +8297,7 @@ __metadata:
   dependencies:
     "@pikku/addon-taiga": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8311,7 +8311,7 @@ __metadata:
   dependencies:
     "@pikku/addon-tapfiliate": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8325,7 +8325,7 @@ __metadata:
   dependencies:
     "@pikku/addon-telegram": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8339,7 +8339,7 @@ __metadata:
   dependencies:
     "@pikku/addon-the-hive": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8353,7 +8353,7 @@ __metadata:
   dependencies:
     "@pikku/addon-timescale-db": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8367,7 +8367,7 @@ __metadata:
   dependencies:
     "@pikku/addon-todoist": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8381,7 +8381,7 @@ __metadata:
   dependencies:
     "@pikku/addon-totp": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8395,7 +8395,7 @@ __metadata:
   dependencies:
     "@pikku/addon-trello": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8409,7 +8409,7 @@ __metadata:
   dependencies:
     "@pikku/addon-twist": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8423,7 +8423,7 @@ __metadata:
   dependencies:
     "@pikku/addon-twitter": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8437,7 +8437,7 @@ __metadata:
   dependencies:
     "@pikku/addon-typesafe": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8451,7 +8451,7 @@ __metadata:
   dependencies:
     "@pikku/addon-uplead": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8465,7 +8465,7 @@ __metadata:
   dependencies:
     "@pikku/addon-uproc": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8479,7 +8479,7 @@ __metadata:
   dependencies:
     "@pikku/addon-url-scan-io": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8493,7 +8493,7 @@ __metadata:
   dependencies:
     "@pikku/addon-venafi-tls-protect-cloud": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8507,7 +8507,7 @@ __metadata:
   dependencies:
     "@pikku/addon-vero": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8521,7 +8521,7 @@ __metadata:
   dependencies:
     "@pikku/addon-vonage": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8535,7 +8535,7 @@ __metadata:
   dependencies:
     "@pikku/addon-webflow": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8549,7 +8549,7 @@ __metadata:
   dependencies:
     "@pikku/addon-wekan": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8563,7 +8563,7 @@ __metadata:
   dependencies:
     "@pikku/addon-ai-whisper-asr": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     testcontainers: "npm:^10"
@@ -8578,7 +8578,7 @@ __metadata:
   dependencies:
     "@pikku/addon-wikipedia": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8592,7 +8592,7 @@ __metadata:
   dependencies:
     "@pikku/addon-wise": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8606,7 +8606,7 @@ __metadata:
   dependencies:
     "@pikku/addon-woocommerce": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8620,7 +8620,7 @@ __metadata:
   dependencies:
     "@pikku/addon-wordpress": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8634,7 +8634,7 @@ __metadata:
   dependencies:
     "@pikku/addon-xml": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8648,7 +8648,7 @@ __metadata:
   dependencies:
     "@pikku/addon-yourls": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8662,7 +8662,7 @@ __metadata:
   dependencies:
     "@pikku/addon-youtube": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8676,7 +8676,7 @@ __metadata:
   dependencies:
     "@pikku/addon-zammad": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8690,7 +8690,7 @@ __metadata:
   dependencies:
     "@pikku/addon-zendesk": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8704,7 +8704,7 @@ __metadata:
   dependencies:
     "@pikku/addon-zoom": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
@@ -8718,7 +8718,7 @@ __metadata:
   dependencies:
     "@pikku/addon-zulip": "workspace:*"
     "@pikku/cli": "npm:^0.12.177"
-    "@pikku/core": "npm:^0.12.133"
+    "@pikku/core": "npm:^0.12.134"
     "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
     tsx: "npm:^4"
