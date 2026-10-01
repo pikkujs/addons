@@ -11,18 +11,16 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Onfleet webhook source. Answers the `?check=` GET Onfleet validates the URL with, verifies `X-Onfleet-Signature` over the raw body, and names the event after `triggerName` (`taskCompleted`, `taskArrival`, ...).
+ * The `receive` step of a Onfleet webhook source. Answers the `?check=` GET Onfleet validates the URL with and names the event after `triggerName` (`taskCompleted`, `taskArrival`, ...).
  */
 export const onfleetWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Onfleet webhook and read it into trigger events',
-  func: async ({ onfleetWebhookSecret }, { body, headers, method, query }) => {
-    const signing = await onfleetWebhookSecret.load()
+  description: 'Read a Onfleet webhook into trigger events',
+  func: async (_services, { body, headers, method, query }) => {
     if (method.toLowerCase() === 'get') {
       return { respond: { status: 200, body: query.check ?? '' } }
     }
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['x-onfleet-signature'], 'sha512', raw, 'hex', 'hex')
     const data = parseJson(raw)
     return {
       events: [{ name: data.triggerName, id: `${data.taskId}:${data.triggerName}:${data.time}`, data }],

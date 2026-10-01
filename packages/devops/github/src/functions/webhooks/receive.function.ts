@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a GitHub webhook source. Verifies `X-Hub-Signature-256` over the raw body and names the event after `X-GitHub-Event` (`push`, `issues`, `pull_request`, ...), keyed by `X-GitHub-Delivery`.
+ * The `receive` step of a GitHub webhook source. Names the event after `X-GitHub-Event` (`push`, `issues`, `pull_request`, ...), keyed by `X-GitHub-Delivery`.
  */
 export const githubWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a GitHub webhook and read it into trigger events',
-  func: async ({ githubWebhookSecret }, { body, headers }) => {
-    const signing = await githubWebhookSecret.load()
+  description: 'Read a GitHub webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-hub-signature-256']?.replace(/^sha256=/, ''),
-      'sha256',
-      raw,
-      'hex'
-    )
     const name = headers['x-github-event']
     if (!name) {
       throw new BadRequestError('Missing X-GitHub-Event header')

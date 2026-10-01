@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Mailgun webhook source. Verifies the payload's `signature` (HMAC of `timestamp + token`) and names the event the way Mailgun's webhook settings do (`delivered`, `opened`, `clicked`, `permanent_fail`, `temporary_fail`, `unsubscribed`, `complained`), keyed by the event's `id`.
+ * The `receive` step of a Mailgun webhook source. Names the event the way Mailgun's webhook settings do (`delivered`, `opened`, `clicked`, `permanent_fail`, `temporary_fail`, `unsubscribed`, `complained`), keyed by the event's `id`.
  */
 export const mailgunWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Mailgun webhook and read it into trigger events',
-  func: async ({ mailgunWebhookSecret }, { body }) => {
-    const signing = await mailgunWebhookSecret.load()
-    const { signature, 'event-data': event } = parseJson(new TextDecoder().decode(body))
-    signing.verifyHmac(
-      signature?.signature,
-      'sha256',
-      `${signature?.timestamp}${signature?.token}`,
-      'hex'
-    )
+  description: 'Read a Mailgun webhook into trigger events',
+  func: async (_services, { body }) => {
+    const { 'event-data': event } = parseJson(new TextDecoder().decode(body))
     const name =
       event.event === 'failed'
         ? event.severity === 'permanent'

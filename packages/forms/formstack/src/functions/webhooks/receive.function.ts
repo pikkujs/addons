@@ -17,14 +17,12 @@ const parseForm = (raw: string): Record<string, string> =>
  */
 export const formstackWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Formstack webhook and read it into trigger events',
-  func: async ({ formstackWebhookSecret }, { body, headers }) => {
-    const signing = await formstackWebhookSecret.load()
+  description: 'Read a Formstack webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    const { HandshakeKey, ...data } = headers['content-type']?.includes('json')
+    const { HandshakeKey: _, ...data } = headers['content-type']?.includes('json')
       ? parseJson(raw)
       : parseForm(raw)
-    signing.verifyToken(HandshakeKey)
     return { events: [{ name: 'submission', id: data.UniqueID, data }] }
   },
 })

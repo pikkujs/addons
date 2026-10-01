@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Wise webhook source. Verifies `X-Signature-SHA256` against Wise's public key and names the event after `event_type` (`transfers#state-change`, `balances#credit`, ...), keyed by `X-Delivery-Id`.
+ * The `receive` step of a Wise webhook source. Names the event after `event_type` (`transfers#state-change`, `balances#credit`, ...), keyed by `X-Delivery-Id`.
  */
 export const wiseWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Wise webhook and read it into trigger events',
-  func: async ({ wiseWebhookSecret }, { body, headers }) => {
-    const signing = await wiseWebhookSecret.load()
+  description: 'Read a Wise webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyPublicKey(headers['x-signature-sha256'], raw)
     const data = parseJson(raw)
     return {
       events: [{ name: String(data.event_type), id: headers['x-delivery-id'], data }],

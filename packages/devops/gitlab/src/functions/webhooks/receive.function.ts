@@ -15,10 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const gitlabWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a GitLab webhook and read it into trigger events',
-  func: async ({ gitlabWebhookSecret }, { body, headers }) => {
-    const signing = await gitlabWebhookSecret.load()
-    signing.verifyToken(headers['x-gitlab-token'])
+  description: 'Read a GitLab webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const data = parseJson(new TextDecoder().decode(body))
     if (typeof data.object_kind !== 'string') {
       throw new BadRequestError("GitLab webhook is missing 'object_kind'")

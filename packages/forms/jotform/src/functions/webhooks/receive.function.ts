@@ -11,14 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Jotform webhook source. Jotform signs nothing, so the webhook URL carries a token of your choosing (`/webhooks/jotform?token=...`), compared here. Each submission becomes a `submission` event keyed by its `submissionID`, with the answers parsed from `rawRequest`.
+ * The `receive` step of a Jotform webhook source. Jotform signs nothing, so the webhook URL carries a token of your choosing (`/webhooks/jotform?token=...`). Each submission becomes a `submission` event keyed by its `submissionID`, with the answers parsed from `rawRequest`.
  */
 export const jotformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Jotform webhook and read it into trigger events',
-  func: async ({ jotformWebhookSecret }, { body, headers, query }) => {
-    const signing = await jotformWebhookSecret.load()
-    signing.verifyToken(query.token)
+  description: 'Read a Jotform webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const form = await new Response(body.slice(), {
       headers: { 'content-type': headers['content-type'] ?? '' },
     }).formData()

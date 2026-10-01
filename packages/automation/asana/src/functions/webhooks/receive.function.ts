@@ -12,12 +12,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Asana webhook source. Asana makes a handshake while `asanaWebhookCreate` creates the webhook: it is accepted only when its `?h=` matches the nonce that call is holding, and its `X-Hook-Secret` is stored as `asanaWebhookSecret` and echoed. Every delivery after that is checked against `X-Hook-Signature`. One webhook per app: a second one replaces the secret. Asana batches events, so each becomes its own event named `<resource_type>.<action>` (`task.added`, `task.changed`, ...).
+ * The `receive` step of a Asana webhook source. Asana makes a handshake while `asanaWebhookCreate` creates the webhook: it is accepted only when its `?h=` matches the nonce that call is holding, and its `X-Hook-Secret` is stored as `asanaWebhookSecret` and echoed. One webhook per app: a second one replaces the secret. Asana batches events, so each becomes its own event named `<resource_type>.<action>` (`task.added`, `task.changed`, ...).
  */
 export const asanaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Asana webhook and read it into trigger events',
-  func: async ({ asanaWebhookSecret, credentialService }, { body, headers, query }) => {
+  description: 'Read a Asana webhook into trigger events',
+  func: async ({ credentialService }, { body, headers, query }) => {
     const handshake = headers['x-hook-secret']
     if (handshake) {
       const pending = await credentialService?.get<string>('asanaWebhookPending')
@@ -28,9 +28,7 @@ export const asanaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookR
       await credentialService!.set('asanaWebhookSecret', handshake)
       return { respond: { status: 200, headers: { 'x-hook-secret': handshake } } }
     }
-    const signing = await asanaWebhookSecret.load()
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['x-hook-signature'], 'sha256', raw, 'hex')
     return {
       events: (parseJson(raw).events ?? []).map((event: any) => ({
         name: `${event.resource?.resource_type}.${event.action}`,

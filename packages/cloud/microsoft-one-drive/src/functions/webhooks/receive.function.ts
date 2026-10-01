@@ -15,9 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const microsoftOneDriveWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Microsoft OneDrive webhook and read it into trigger events',
-  func: async ({ microsoftOneDriveWebhookSecret }, { body, query }) => {
-    const signing = await microsoftOneDriveWebhookSecret.load()
+  description: 'Read a Microsoft OneDrive webhook into trigger events',
+  func: async (_services, { body, query }) => {
     if (query.validationToken) {
       return {
         respond: {
@@ -28,9 +27,6 @@ export const microsoftOneDriveWebhookReceive = pikkuSessionlessFunc<WebhookReque
       }
     }
     const { value = [] } = parseJson(new TextDecoder().decode(body))
-    for (const notification of value) {
-      signing.verifyToken(notification.clientState)
-    }
     return {
       events: value.map((notification: any) => ({
         name: notification.changeType,

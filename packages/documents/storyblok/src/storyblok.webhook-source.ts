@@ -3,5 +3,14 @@ import { storyblokWebhookReceive } from './functions/webhooks/receive.function.j
 
 wireTriggerWebhookSource({
   name: 'storyblok',
+  verify: {
+    hmac: {
+      header: 'webhook-signature',
+      algorithm: 'sha1',
+      encoding: 'hex',
+    },
+  },
+  credentialDescription:
+    "The webhook's secret",
   receive: storyblokWebhookReceive,
 })

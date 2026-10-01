@@ -15,10 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const telegramWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Telegram webhook and read it into trigger events',
-  func: async ({ telegramWebhookSecret }, { body, headers }) => {
-    const signing = await telegramWebhookSecret.load()
-    signing.verifyToken(headers['x-telegram-bot-api-secret-token'])
+  description: 'Read a Telegram webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const { update_id, ...update } = parseJson(new TextDecoder().decode(body))
     const name = Object.keys(update)[0] ?? ''
     return { events: [{ name, id: String(update_id), data: update[name] }] }

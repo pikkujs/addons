@@ -15,10 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const clockifyWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Clockify webhook and read it into trigger events',
-  func: async ({ clockifyWebhookSecret }, { body, headers }) => {
-    const signing = await clockifyWebhookSecret.load()
-    signing.verifyToken(headers['clockify-signature'])
+  description: 'Read a Clockify webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     return {
       events: [
         {

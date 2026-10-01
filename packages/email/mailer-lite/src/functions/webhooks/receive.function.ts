@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a MailerLite webhook source. Verifies `Signature` over the raw body. Batched deliveries become one event each; every event is named after its `type` (`subscriber.created`, `campaign.sent`, ...).
+ * The `receive` step of a MailerLite webhook source. Batched deliveries become one event each; every event is named after its `type` (`subscriber.created`, `campaign.sent`, ...).
  */
 export const mailerLiteWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a MailerLite webhook and read it into trigger events',
-  func: async ({ mailerLiteWebhookSecret }, { body, headers }) => {
-    const signing = await mailerLiteWebhookSecret.load()
+  description: 'Read a MailerLite webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: (data.events ?? [data]).map((event: any) => ({

@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Linear webhook source. Verifies `Linear-Signature` over the raw body, refuses deliveries more than a minute old, and names the event after the resource `type` (`Issue`, `Comment`, `Project`, ...), keyed by `Linear-Delivery`. The `action` (`create`, `update`, `remove`) is in the data.
+ * The `receive` step of a Linear webhook source. Refuses deliveries more than a minute old and names the event after the resource `type` (`Issue`, `Comment`, `Project`, ...), keyed by `Linear-Delivery`. The `action` (`create`, `update`, `remove`) is in the data.
  */
 export const linearWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Linear webhook and read it into trigger events',
-  func: async ({ linearWebhookSecret }, { body, headers }) => {
-    const signing = await linearWebhookSecret.load()
+  description: 'Read a Linear webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['linear-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     if (Math.abs(Date.now() - Number(data.webhookTimestamp)) > 60_000) {
       throw new UnauthorizedError('Stale Linear webhook')

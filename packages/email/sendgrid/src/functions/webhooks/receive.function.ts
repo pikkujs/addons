@@ -11,18 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a SendGrid webhook source. Verifies the Event Webhook signature against its verification key. SendGrid batches events, so each becomes its own event, named after `event` (`delivered`, `open`, `bounce`, ...) and keyed by `sg_event_id`.
+ * The `receive` step of a SendGrid webhook source. SendGrid batches events, so each becomes its own event, named after `event` (`delivered`, `open`, `bounce`, ...) and keyed by `sg_event_id`.
  */
 export const sendgridWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a SendGrid webhook and read it into trigger events',
-  func: async ({ sendgridWebhookSecret }, { body, headers }) => {
-    const signing = await sendgridWebhookSecret.load()
+  description: 'Read a SendGrid webhook into trigger events',
+  func: async (_services, { body }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyPublicKey(
-      headers['x-twilio-email-event-webhook-signature'],
-      `${headers['x-twilio-email-event-webhook-timestamp']}${raw}`
-    )
     return {
       events: parseJson(raw).map((event: any) => ({
         name: event.event,

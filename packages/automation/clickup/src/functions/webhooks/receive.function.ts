@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a ClickUp webhook source. Verifies `X-Signature` over the raw body and names the event after `event` (`taskCreated`, `taskUpdated`, ...).
+ * The `receive` step of a ClickUp webhook source. Names the event after `event` (`taskCreated`, `taskUpdated`, ...).
  */
 export const clickupWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a ClickUp webhook and read it into trigger events',
-  func: async ({ clickupWebhookSecret }, { body, headers }) => {
-    const signing = await clickupWebhookSecret.load()
+  description: 'Read a ClickUp webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['x-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: [

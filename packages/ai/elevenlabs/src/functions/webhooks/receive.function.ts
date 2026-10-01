@@ -1,5 +1,5 @@
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
+import { BadRequestError } from '@pikku/core/errors'
 import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 const parseJson = (raw: string): any => {
@@ -11,21 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a ElevenLabs webhook source. Verifies `ElevenLabs-Signature` (`t=...,v0=...`) over `t.body`, refuses deliveries more than thirty minutes old, and names the event after `type` (`post_call_transcription`, ...).
+ * The `receive` step of a ElevenLabs webhook source. Names the event after `type` (`post_call_transcription`, ...).
  */
 export const elevenlabsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a ElevenLabs webhook and read it into trigger events',
-  func: async ({ elevenlabsWebhookSecret }, { body, headers }) => {
-    const signing = await elevenlabsWebhookSecret.load()
+  description: 'Read a ElevenLabs webhook into trigger events',
+  func: async (_services, { body }) => {
     const raw = new TextDecoder().decode(body)
-    const fields = Object.fromEntries(
-      (headers['elevenlabs-signature'] ?? '').split(',').map((field) => field.split('='))
-    )
-    if (!fields.t || Math.abs(Date.now() / 1000 - Number(fields.t)) > 1800) {
-      throw new UnauthorizedError('Stale or unsigned ElevenLabs webhook')
-    }
-    signing.verifyHmac(fields.v0, 'sha256', `${fields.t}.${raw}`, 'hex')
     const data = parseJson(raw)
     return { events: [{ name: data.type, data: data.data ?? data }] }
   },

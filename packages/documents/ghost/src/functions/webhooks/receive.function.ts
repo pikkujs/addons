@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Ghost webhook source. Verifies `X-Ghost-Signature` (`sha256=..., t=...`) over `body + t`. Ghost leaves the event out of the payload, so the webhook URL names it (`/webhooks/ghost?event=post.published`).
+ * The `receive` step of a Ghost webhook source. Ghost leaves the event out of the payload, so the webhook URL names it (`/webhooks/ghost?event=post.published`).
  */
 export const ghostWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Ghost webhook and read it into trigger events',
-  func: async ({ ghostWebhookSecret }, { body, headers, query }) => {
-    const signing = await ghostWebhookSecret.load()
+  description: 'Read a Ghost webhook into trigger events',
+  func: async (_services, { body, query }) => {
     const raw = new TextDecoder().decode(body)
-    const fields = Object.fromEntries(
-      (headers['x-ghost-signature'] ?? '')
-        .split(', ')
-        .map((field) => field.split('='))
-    )
-    signing.verifyHmac(fields.sha256, 'sha256', `${raw}${fields.t}`, 'hex')
     return { events: [{ name: query.event ?? '', data: parseJson(raw) }] }
   },
 })
