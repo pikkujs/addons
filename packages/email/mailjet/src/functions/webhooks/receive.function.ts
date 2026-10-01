@@ -11,14 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Mailjet webhook source. Mailjet signs nothing, so the event URL carries a token of your choosing (`/webhooks/mailjet?token=...`), compared here. Grouped deliveries become one event each, named after `event` (`sent`, `open`, `bounce`, ...).
+ * The `receive` step of a Mailjet webhook source. Mailjet signs nothing, so the event URL carries a token of your choosing (`/webhooks/mailjet?token=...`). Grouped deliveries become one event each, named after `event` (`sent`, `open`, `bounce`, ...).
  */
 export const mailjetWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Mailjet webhook and read it into trigger events',
-  func: async ({ mailjetWebhookSecret }, { body, query }) => {
-    const signing = await mailjetWebhookSecret.load()
-    signing.verifyToken(query.token)
+  description: 'Read a Mailjet webhook into trigger events',
+  func: async (_services, { body }) => {
     const data = parseJson(new TextDecoder().decode(body))
     return {
       events: [data].flat().map((event: any) => ({

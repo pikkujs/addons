@@ -11,14 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Strapi webhook source. Strapi signs nothing, so the webhook is given an `Authorization` header, compared here with the configured token. The event is named after `event` (`entry.create`, `entry.publish`, `media.update`, ...).
+ * The `receive` step of a Strapi webhook source. Strapi signs nothing, so the webhook is given an `Authorization` header. The event is named after `event` (`entry.create`, `entry.publish`, `media.update`, ...).
  */
 export const strapiWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Strapi webhook and read it into trigger events',
-  func: async ({ strapiWebhookSecret }, { body, headers }) => {
-    const signing = await strapiWebhookSecret.load()
-    signing.verifyToken(headers['authorization'])
+  description: 'Read a Strapi webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.event, data }] }
   },

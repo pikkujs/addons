@@ -11,14 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Baserow webhook source. Baserow signs nothing, so the webhook is given an `X-Webhook-Token` header, compared here. The event is named after `event_type` (`rows.created`, `rows.updated`, `rows.deleted`), keyed by `event_id`.
+ * The `receive` step of a Baserow webhook source. Baserow signs nothing, so the webhook is given an `X-Webhook-Token` header. The event is named after `event_type` (`rows.created`, `rows.updated`, `rows.deleted`), keyed by `event_id`.
  */
 export const baserowWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Baserow webhook and read it into trigger events',
-  func: async ({ baserowWebhookSecret }, { body, headers }) => {
-    const signing = await baserowWebhookSecret.load()
-    signing.verifyToken(headers['x-webhook-token'])
+  description: 'Read a Baserow webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.event_type, id: data.event_id, data }] }
   },

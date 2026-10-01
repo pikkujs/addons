@@ -1,5 +1,6 @@
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import { BadRequestError } from '@pikku/core/errors'
+import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
+import { timingSafeStringEqual } from '@pikku/core/hmac'
 import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 const parseJson = (raw: string): any => {
@@ -15,11 +16,14 @@ const parseJson = (raw: string): any => {
  */
 export const stravaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Strava webhook and read it into trigger events',
-  func: async ({ stravaWebhookSecret }, { body, method, query }) => {
-    const signing = await stravaWebhookSecret.load()
+  description: 'Read a Strava webhook into trigger events',
+  func: async ({ credentialService }, { body, method, query }) => {
     if (method.toLowerCase() === 'get') {
-      signing.verifyToken(query['hub.verify_token'])
+      const secret = await credentialService?.get<string>('stravaWebhookSecret')
+      const token = query['hub.verify_token']
+      if (typeof secret !== 'string' || !secret || !token || !timingSafeStringEqual(token, secret)) {
+        throw new UnauthorizedError('Invalid Strava webhook verify token')
+      }
       return { respond: { status: 200, body: { 'hub.challenge': query['hub.challenge'] } } }
     }
     const data = parseJson(new TextDecoder().decode(body))

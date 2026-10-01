@@ -11,14 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a NocoDB webhook source. NocoDB signs nothing, so the webhook is given an `X-Webhook-Token` header, compared here. The event is named after `type` (`records.after.insert`, `records.after.update`, ...), keyed by `id`.
+ * The `receive` step of a NocoDB webhook source. NocoDB signs nothing, so the webhook is given an `X-Webhook-Token` header. The event is named after `type` (`records.after.insert`, `records.after.update`, ...), keyed by `id`.
  */
 export const nocodbWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a NocoDB webhook and read it into trigger events',
-  func: async ({ nocodbWebhookSecret }, { body, headers }) => {
-    const signing = await nocodbWebhookSecret.load()
-    signing.verifyToken(headers['x-webhook-token'])
+  description: 'Read a NocoDB webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.type, id: data.id, data }] }
   },

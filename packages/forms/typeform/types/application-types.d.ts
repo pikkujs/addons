@@ -1,4 +1,3 @@
-import type { WebhookSigningSecret } from '@pikku/core/hmac'
 import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
 import type { TypeformService } from '../src/typeform-api.service.js'
 
@@ -7,7 +6,6 @@ export interface Config extends CoreConfig {}
 export interface UserSession extends CoreUserSession {}
 
 export interface SingletonServices extends CoreSingletonServices<Config> {
-  typeformWebhookSecret: WebhookSigningSecret
   typeform: TypeformService
 }
 

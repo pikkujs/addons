@@ -11,13 +11,12 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a WhatsApp webhook source. Answers Meta's verification GET (`hub.mode=subscribe`, `hub.verify_token`, `hub.challenge`), verifies `X-Hub-Signature-256` over the raw body, and turns each change into an event named after its `field` (`messages`, `message_template_status_update`, ...).
+ * The `receive` step of a WhatsApp webhook source. Answers Meta's verification GET (`hub.mode=subscribe`, `hub.verify_token`, `hub.challenge`) and turns each change into an event named after its `field` (`messages`, `message_template_status_update`, ...).
  */
 export const whatsappWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a WhatsApp webhook and read it into trigger events',
-  func: async ({ whatsappWebhookSecret, variables }, { body, headers, method, query }) => {
-    const signing = await whatsappWebhookSecret.load()
+  description: 'Read a WhatsApp webhook into trigger events',
+  func: async ({ variables }, { body, headers, method, query }) => {
     if (method.toLowerCase() === 'get') {
       const verifyToken = await variables.get('WHATSAPP_WEBHOOK_VERIFY_TOKEN')
       if (query['hub.mode'] !== 'subscribe' || !verifyToken || query['hub.verify_token'] !== verifyToken) {
@@ -26,12 +25,6 @@ export const whatsappWebhookReceive = pikkuSessionlessFunc<WebhookRequest, Webho
       return { respond: { status: 200, body: query['hub.challenge'] } }
     }
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-hub-signature-256']?.replace(/^sha256=/, ''),
-      'sha256',
-      raw,
-      'hex'
-    )
     return {
       events: (parseJson(raw).entry ?? []).flatMap((entry: any) =>
         (entry.changes ?? []).map((change: any) => ({

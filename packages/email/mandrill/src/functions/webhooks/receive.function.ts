@@ -13,22 +13,16 @@ const parseForm = (raw: string): Record<string, string> =>
   Object.fromEntries(new URLSearchParams(raw))
 
 /**
- * The `receive` step of a Mandrill webhook source. Verifies `X-Mandrill-Signature` over the registered URL (the `MANDRILL_WEBHOOK_URL` variable) and the posted `mandrill_events`. Mandrill batches events, so each becomes its own event, named after `event` (`send`, `open`, `hard_bounce`, ...). Answers the HEAD request Mandrill checks the URL with when the webhook is added.
+ * The `receive` step of a Mandrill webhook source. Mandrill batches events, so each becomes its own event, named after `event` (`send`, `open`, `hard_bounce`, ...). Answers the HEAD request Mandrill checks the URL with when the webhook is added.
  */
 export const mandrillWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Mandrill webhook and read it into trigger events',
-  func: async ({ mandrillWebhookSecret, variables }, { body, headers, method }) => {
-    const signing = await mandrillWebhookSecret.load()
+  description: 'Read a Mandrill webhook into trigger events',
+  func: async ({ variables }, { body, method }) => {
     if (method.toLowerCase() === 'head') {
       return { respond: { status: 200 } }
     }
     const form = parseForm(new TextDecoder().decode(body))
-    const url = (await variables.get('MANDRILL_WEBHOOK_URL')) ?? ''
-    const signed = Object.keys(form)
-      .sort()
-      .reduce((payload, key) => payload + key + form[key], url)
-    signing.verifyHmac(headers['x-mandrill-signature'], 'sha1', signed, 'base64')
     return {
       events: parseJson(form.mandrill_events ?? '[]').map((event: any) => ({
         name: event.event ?? event.type,

@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Zammad webhook source. Verifies `X-Hub-Signature` over the raw body. Zammad webhooks fire from triggers, so the event is named after `X-Zammad-Trigger`, keyed by `X-Zammad-Delivery`.
+ * The `receive` step of a Zammad webhook source. Zammad webhooks fire from triggers, so the event is named after `X-Zammad-Trigger`, keyed by `X-Zammad-Delivery`.
  */
 export const zammadWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Zammad webhook and read it into trigger events',
-  func: async ({ zammadWebhookSecret }, { body, headers }) => {
-    const signing = await zammadWebhookSecret.load()
+  description: 'Read a Zammad webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-hub-signature']?.replace(/^sha1=/, ''),
-      'sha1',
-      raw,
-      'hex'
-    )
     return {
       events: [
         {

@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Storyblok webhook source. Verifies `Webhook-Signature` over the raw body and names the event `<action>` (`published`, `unpublished`, `deleted`, ...), as Storyblok sends it.
+ * The `receive` step of a Storyblok webhook source. Names the event `<action>` (`published`, `unpublished`, `deleted`, ...), as Storyblok sends it.
  */
 export const storyblokWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Storyblok webhook and read it into trigger events',
-  func: async ({ storyblokWebhookSecret }, { body, headers }) => {
-    const signing = await storyblokWebhookSecret.load()
+  description: 'Read a Storyblok webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['webhook-signature'], 'sha1', raw, 'hex')
     const data = parseJson(raw)
     return { events: [{ name: data.action, data }] }
   },

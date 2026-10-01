@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Sentry webhook source. Verifies `Sentry-Hook-Signature` over the raw body and names the event `<resource>.<action>` (`issue.created`, `error.created`, `event_alert.triggered`, ...), keyed by `Request-ID`.
+ * The `receive` step of a Sentry webhook source. Names the event `<resource>.<action>` (`issue.created`, `error.created`, `event_alert.triggered`, ...), keyed by `Request-ID`.
  */
 export const sentryWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Sentry webhook and read it into trigger events',
-  func: async ({ sentryWebhookSecret }, { body, headers }) => {
-    const signing = await sentryWebhookSecret.load()
+  description: 'Read a Sentry webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['sentry-hook-signature'], 'sha256', raw, 'hex')
     const data = parseJson(raw)
     return {
       events: [

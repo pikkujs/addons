@@ -15,14 +15,12 @@ const parseJson = (raw: string): any => {
  */
 export const mondayComWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a monday.com webhook and read it into trigger events',
-  func: async ({ mondayComWebhookSecret }, { body, query }) => {
-    const signing = await mondayComWebhookSecret.load()
+  description: 'Read a monday.com webhook into trigger events',
+  func: async (_services, { body }) => {
     const data = parseJson(new TextDecoder().decode(body))
     if (data.challenge) {
       return { respond: { status: 200, body: { challenge: data.challenge } } }
     }
-    signing.verifyToken(query.token)
     return {
       events: [{ name: data.event.type, id: data.event.triggerUuid, data: data.event }],
     }

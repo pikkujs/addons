@@ -15,10 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const convertkitWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Kit webhook and read it into trigger events',
-  func: async ({ convertkitWebhookSecret }, { body, query }) => {
-    const signing = await convertkitWebhookSecret.load()
-    signing.verifyToken(query.token)
+  description: 'Read a Kit webhook into trigger events',
+  func: async (_services, { body, query }) => {
     return {
       events: [{ name: query.event ?? '', data: parseJson(new TextDecoder().decode(body)) }],
     }

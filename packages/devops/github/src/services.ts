@@ -1,7 +1,6 @@
-import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { UnauthorizedError } from '@pikku/core/errors'
 import { GithubService } from './github-api.service.js'
-import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -18,10 +17,3 @@ export const createWireServices = pikkuAddonWireServices(
   }
 )
 
-export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
-  githubWebhookSecret: WebhookSigningSecret.fromCredential(
-    'GitHub',
-    credentialService,
-    'githubWebhookSecret'
-  ),
-}))

@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Typeform webhook source. Verifies `Typeform-Signature` over the raw body and names the event after `event_type` (`form_response`), keyed by `event_id`.
+ * The `receive` step of a Typeform webhook source. Names the event after `event_type` (`form_response`), keyed by `event_id`.
  */
 export const typeformWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Typeform webhook and read it into trigger events',
-  func: async ({ typeformWebhookSecret }, { body, headers }) => {
-    const signing = await typeformWebhookSecret.load()
+  description: 'Read a Typeform webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['typeform-signature']?.replace(/^sha256=/, ''),
-      'sha256',
-      raw,
-      'base64'
-    )
     const data = parseJson(raw)
     return { events: [{ name: data.event_type, id: data.event_id, data }] }
   },

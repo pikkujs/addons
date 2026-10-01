@@ -11,19 +11,16 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Trello webhook source. Answers the HEAD request Trello checks the callback URL with, verifies `X-Trello-Webhook` over the body and the registered callback URL (the `TRELLO_WEBHOOK_URL` variable), and names the event after the action's `type` (`createCard`, `updateCard`, ...), keyed by the action's `id`.
+ * The `receive` step of a Trello webhook source. Answers the HEAD request Trello checks the callback URL with and names the event after the action's `type` (`createCard`, `updateCard`, ...), keyed by the action's `id`.
  */
 export const trelloWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Trello webhook and read it into trigger events',
-  func: async ({ trelloWebhookSecret, variables }, { body, headers, method }) => {
-    const signing = await trelloWebhookSecret.load()
+  description: 'Read a Trello webhook into trigger events',
+  func: async ({ variables }, { body, method }) => {
     if (method.toLowerCase() === 'head') {
       return { respond: { status: 200 } }
     }
     const raw = new TextDecoder().decode(body)
-    const url = (await variables.get('TRELLO_WEBHOOK_URL')) ?? ''
-    signing.verifyHmac(headers['x-trello-webhook'], 'sha1', raw + url, 'base64')
     const data = parseJson(raw)
     return { events: [{ name: data.action.type, id: data.action.id, data }] }
   },

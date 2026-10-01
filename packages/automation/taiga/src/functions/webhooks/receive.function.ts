@@ -11,15 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Taiga webhook source. Verifies `X-TAIGA-WEBHOOK-SIGNATURE` over the raw body and names the event `<type>.<action>` (`userstory.create`, `issue.change`, ...).
+ * The `receive` step of a Taiga webhook source. Names the event `<type>.<action>` (`userstory.create`, `issue.change`, ...).
  */
 export const taigaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Taiga webhook and read it into trigger events',
-  func: async ({ taigaWebhookSecret }, { body, headers }) => {
-    const signing = await taigaWebhookSecret.load()
+  description: 'Read a Taiga webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(headers['x-taiga-webhook-signature'], 'sha1', raw, 'hex')
     const data = parseJson(raw)
     return { events: [{ name: `${data.type}.${data.action}`, data }] }
   },

@@ -1,7 +1,6 @@
-import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { UnauthorizedError } from '@pikku/core/errors'
 import { GoogleDriveService } from './google-drive-api.service.js'
-import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -17,11 +16,3 @@ export const createWireServices = pikkuAddonWireServices(
     return { googleDrive }
   }
 )
-
-export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
-  googleDriveWebhookSecret: WebhookSigningSecret.fromCredential(
-    'Google Drive',
-    credentialService,
-    'googleDriveWebhookSecret'
-  ),
-}))

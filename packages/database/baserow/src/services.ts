@@ -1,6 +1,5 @@
-import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { BaserowService } from './baserow-api.service.js'
-import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -16,11 +15,3 @@ export const createWireServices = pikkuAddonWireServices(
     return { baserow }
   }
 )
-
-export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
-  baserowWebhookSecret: WebhookSigningSecret.fromCredential(
-    'Baserow',
-    credentialService,
-    'baserowWebhookSecret'
-  ),
-}))

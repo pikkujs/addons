@@ -3,5 +3,12 @@ import { googleDriveWebhookReceive } from './functions/webhooks/receive.function
 
 wireTriggerWebhookSource({
   name: 'google-drive',
+  verify: {
+    token: {
+      header: 'x-goog-channel-token',
+    },
+  },
+  credentialDescription:
+    "The token given when the push channel was opened",
   receive: googleDriveWebhookReceive,
 })

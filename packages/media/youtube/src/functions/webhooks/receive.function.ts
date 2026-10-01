@@ -2,23 +2,16 @@ import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 
 /**
- * The `receive` step of a YouTube webhook source. Answers the PubSubHubbub verification GET (`hub.challenge`), verifies `X-Hub-Signature` (`sha1=...`) over the Atom body, and emits a `video` event per entry with its video and channel id.
+ * The `receive` step of a YouTube webhook source. Answers the PubSubHubbub verification GET (`hub.challenge`) and emits a `video` event per entry with its video and channel id.
  */
 export const youtubeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a YouTube webhook and read it into trigger events',
-  func: async ({ youtubeWebhookSecret }, { body, headers, method, query }) => {
-    const signing = await youtubeWebhookSecret.load()
+  description: 'Read a YouTube webhook into trigger events',
+  func: async (_services, { body, headers, method, query }) => {
     if (method.toLowerCase() === 'get') {
       return { respond: { status: 200, body: query['hub.challenge'] ?? '' } }
     }
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-hub-signature']?.replace(/^sha1=/, ''),
-      'sha1',
-      raw,
-      'hex'
-    )
     const tag = (entry: string, name: string) =>
       entry.match(new RegExp(`<${name}>([^<]*)</${name}>`))?.[1]
     return {

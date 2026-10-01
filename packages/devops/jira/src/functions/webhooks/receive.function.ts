@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Jira webhook source. Verifies `X-Hub-Signature` over the raw body and names the event after `webhookEvent` (`jira:issue_created`, `comment_created`, ...), keyed by `X-Atlassian-Webhook-Identifier`.
+ * The `receive` step of a Jira webhook source. Names the event after `webhookEvent` (`jira:issue_created`, `comment_created`, ...), keyed by `X-Atlassian-Webhook-Identifier`.
  */
 export const jiraWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Jira webhook and read it into trigger events',
-  func: async ({ jiraWebhookSecret }, { body, headers }) => {
-    const signing = await jiraWebhookSecret.load()
+  description: 'Read a Jira webhook into trigger events',
+  func: async (_services, { body, headers }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-hub-signature']?.replace(/^sha256=/, ''),
-      'sha256',
-      raw,
-      'hex'
-    )
     const data = parseJson(raw)
     return {
       events: [

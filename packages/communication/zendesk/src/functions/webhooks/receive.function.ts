@@ -11,20 +11,13 @@ const parseJson = (raw: string): any => {
 }
 
 /**
- * The `receive` step of a Zendesk webhook source. Verifies `X-Zendesk-Webhook-Signature` over `timestamp + body` and names the event after `type` (`zen:event-type:ticket.created`, ...), keyed by `id`. Payloads from a trigger or automation carry no `type` and are named `trigger`.
+ * The `receive` step of a Zendesk webhook source. Names the event after `type` (`zen:event-type:ticket.created`, ...), keyed by `id`. Payloads from a trigger or automation carry no `type` and are named `trigger`.
  */
 export const zendeskWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Zendesk webhook and read it into trigger events',
-  func: async ({ zendeskWebhookSecret }, { body, headers }) => {
-    const signing = await zendeskWebhookSecret.load()
+  description: 'Read a Zendesk webhook into trigger events',
+  func: async (_services, { body }) => {
     const raw = new TextDecoder().decode(body)
-    signing.verifyHmac(
-      headers['x-zendesk-webhook-signature'],
-      'sha256',
-      `${headers['x-zendesk-webhook-signature-timestamp']}${raw}`,
-      'base64'
-    )
     const data = parseJson(raw)
     return { events: [{ name: data.type ?? 'trigger', id: data.id, data }] }
   },

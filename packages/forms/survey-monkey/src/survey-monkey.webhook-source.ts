@@ -3,5 +3,14 @@ import { surveyMonkeyWebhookReceive } from './functions/webhooks/receive.functio
 
 wireTriggerWebhookSource({
   name: 'survey-monkey',
+  verify: {
+    hmac: {
+      header: 'sm-signature',
+      algorithm: 'sha1',
+      encoding: 'base64',
+    },
+  },
+  credentialDescription:
+    "The key SurveyMonkey signs webhooks with: '<client_id>&<client_secret>'",
   receive: surveyMonkeyWebhookReceive,
 })

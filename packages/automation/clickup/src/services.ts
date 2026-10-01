@@ -1,6 +1,5 @@
-import { WebhookSigningSecret } from '@pikku/core/hmac'
 import { ClickupService } from './clickup-api.service.js'
-import { pikkuAddonServices, pikkuAddonWireServices } from '#pikku/addon/setup'
+import { pikkuAddonWireServices } from '#pikku/addon/setup'
 
 export const createWireServices = pikkuAddonWireServices(
   async ({ variables }, wire) => {
@@ -16,11 +15,3 @@ export const createWireServices = pikkuAddonWireServices(
     return { clickup }
   }
 )
-
-export const createSingletonServices = pikkuAddonServices(async (_config, { credentialService }) => ({
-  clickupWebhookSecret: WebhookSigningSecret.fromCredential(
-    'ClickUp',
-    credentialService,
-    'clickupWebhookSecret'
-  ),
-}))

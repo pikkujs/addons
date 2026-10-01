@@ -15,10 +15,8 @@ const parseJson = (raw: string): any => {
  */
 export const wekanWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
   auth: false,
-  description: 'Verify a Wekan webhook and read it into trigger events',
-  func: async ({ wekanWebhookSecret }, { body, query }) => {
-    const signing = await wekanWebhookSecret.load()
-    signing.verifyToken(query.token)
+  description: 'Read a Wekan webhook into trigger events',
+  func: async (_services, { body }) => {
     const data = parseJson(new TextDecoder().decode(body))
     return { events: [{ name: data.description ?? '', data }] }
   },
