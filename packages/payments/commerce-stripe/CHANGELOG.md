@@ -1,5 +1,28 @@
 # @pikku/addon-commerce-stripe
 
+## 0.2.0
+
+### Minor Changes
+
+- ed97575: Each addon with a webhook source now declares it, so an app gets the source by
+  wiring the addon: no `wireTriggerWebhookSource` in the app. The source is named
+  and routed after the addon's namespace (`/webhooks/<namespace>`), and stays off
+  until it is turned on.
+- ed97575: Webhook source lifecycle steps (`check`, `setup`, `teardown`) for Stripe,
+  Shopify, Paddle, Telegram, PagerDuty, SendGrid and Mandrill, so
+  `pikku webhooks setup` registers the endpoint and stores the signing secret the
+  provider issues in the credential store (`teardown` removes it). Stripe's
+  signing secret moves from the `STRIPE_WEBHOOK_SECRET` secret to the
+  `stripeWebhookSecret` credential. Stripe gets `stripeWebhookReceive`; commerce-stripe gets
+  `receiveStripeWebhook` and `applyStripeWebhookEvent` as the trigger that
+  applies events to its tables; PlentyMarkets gets `plentymarketsWebhookReceive`.
+  
+  Breaking: the HTTP handlers they replace are removed — `stripeWebhookHandler`
+  and `STRIPE_WEBHOOK_QUEUE`, `handleStripeWebhook`, and
+  `plentymarketsWebhookHandler`, `PLENTYMARKETS_WEBHOOK_QUEUE` and
+  `plentymarketsHTTPRoutes`. Wire the webhook source and triggers instead (see
+  the READMEs).
+
 ## 0.1.2
 
 ### Patch Changes

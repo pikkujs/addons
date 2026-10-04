@@ -1,0 +1,12 @@
+{
+  "payment_cart": {},
+  "payment_cart_item": {},
+  "payment_customer": {},
+  "payment_order": {},
+  "payment_order_item": {},
+  "payment_product": {},
+  "payment_refund": {},
+  "payment_shipping_rate": {},
+  "payment_variant": {},
+  "payment_webhook_event": {}
+}
