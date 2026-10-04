@@ -3,6 +3,7 @@ import { surveyMonkeyWebhookReceive } from './functions/webhooks/receive.functio
 
 wireTriggerWebhookSource({
   name: 'survey-monkey',
+  method: ['head', 'post'],
   verify: {
     hmac: {
       header: 'sm-signature',

@@ -3,6 +3,7 @@ import { youtubeWebhookReceive } from './functions/webhooks/receive.function.js'
 
 wireTriggerWebhookSource({
   name: 'youtube',
+  method: ['get', 'post'],
   verify: {
     hmac: {
       header: 'x-hub-signature',

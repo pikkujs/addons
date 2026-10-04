@@ -1,11 +1,12 @@
 import { wireTriggerWebhookSource } from '#pikku/addon/trigger'
+import { parseJson } from '#pikku/addon/utils'
 import { verifyHmacSignature } from '@pikku/core/hmac'
 import { mailgunWebhookReceive } from './functions/webhooks/receive.function.js'
 
 wireTriggerWebhookSource({
   name: 'mailgun',
   verify: ({ body }, secret) => {
-    const { signature } = JSON.parse(new TextDecoder().decode(body))
+    const { signature } = parseJson(body)
     return verifyHmacSignature(
       secret,
       signature?.signature,

@@ -1,32 +1,20 @@
-import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import { BadRequestError } from '@pikku/core/errors'
-import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
-
-const parseJson = (raw: string): any => {
-  try {
-    return JSON.parse(raw)
-  } catch {
-    throw new BadRequestError('Microsoft Teams webhook body is not valid JSON')
-  }
-}
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
+import { parseJson } from '#pikku/addon/utils'
 
 /**
  * The `receive` step of a Microsoft Teams webhook source. Answers Microsoft Graph's `validationToken` handshake, compares each notification's `clientState` with the configured secret, and names it after its `changeType` (`created`, `updated`, `deleted`), keyed by subscription and resource. Graph only says what changed: the consumer reads the resource.
  */
-export const microsoftTeamsWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const microsoftTeamsWebhookReceive = pikkuWebhookReceive({
   description: 'Read a Microsoft Teams webhook into trigger events',
-  func: async (_services, { body, query }) => {
+  func: async (_services, { body, query }, { http }) => {
     if (query.validationToken) {
-      return {
-        respond: {
-          status: 200,
-          body: query.validationToken,
-          headers: { 'content-type': 'text/plain' },
-        },
-      }
+      http.response
+        .status(200)
+        .header('content-type', 'text/plain')
+        .arrayBuffer(query.validationToken)
+      return
     }
-    const { value = [] } = parseJson(new TextDecoder().decode(body))
+    const { value = [] } = parseJson(body)
     return {
       events: value.map((notification: any) => ({
         name: notification.changeType,

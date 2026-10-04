@@ -1,15 +1,14 @@
-import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
 
 /**
  * The `receive` step of a YouTube webhook source. Answers the PubSubHubbub verification GET (`hub.challenge`) and emits a `video` event per entry with its video and channel id.
  */
-export const youtubeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const youtubeWebhookReceive = pikkuWebhookReceive({
   description: 'Read a YouTube webhook into trigger events',
-  func: async (_services, { body, headers, method, query }) => {
+  func: async (_services, { body, headers, method, query }, { http }) => {
     if (method.toLowerCase() === 'get') {
-      return { respond: { status: 200, body: query['hub.challenge'] ?? '' } }
+      http.response.status(200).arrayBuffer(query['hub.challenge'] ?? '')
+      return
     }
     const raw = new TextDecoder().decode(body)
     const tag = (entry: string, name: string) =>

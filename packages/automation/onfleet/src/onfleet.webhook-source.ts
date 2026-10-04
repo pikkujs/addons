@@ -3,6 +3,7 @@ import { onfleetWebhookReceive } from './functions/webhooks/receive.function.js'
 
 wireTriggerWebhookSource({
   name: 'onfleet',
+  method: ['get', 'post'],
   verify: {
     hmac: {
       header: 'x-onfleet-signature',

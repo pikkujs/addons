@@ -1,32 +1,24 @@
-import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import { BadRequestError, UnauthorizedError } from '@pikku/core/errors'
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
+import { parseJson } from '#pikku/addon/utils'
+import { UnauthorizedError } from '@pikku/core/errors'
 import { timingSafeStringEqual } from '@pikku/core/hmac'
-import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
-
-const parseJson = (raw: string): any => {
-  try {
-    return JSON.parse(raw)
-  } catch {
-    throw new BadRequestError('Strava webhook body is not valid JSON')
-  }
-}
 
 /**
  * The `receive` step of a Strava webhook source. Answers the subscription validation GET (`hub.verify_token`, `hub.challenge`). Strava signs no events, so a delivery is only a trigger to fetch the object from the API: it is named `<object_type>.<aspect_type>` (`activity.create`, `athlete.update`, ...).
  */
-export const stravaWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const stravaWebhookReceive = pikkuWebhookReceive({
   description: 'Read a Strava webhook into trigger events',
-  func: async ({ credentialService }, { body, method, query }) => {
+  func: async ({ credentialService }, { body, method, query }, { http }) => {
     if (method.toLowerCase() === 'get') {
       const secret = await credentialService?.get<string>('stravaWebhookSecret')
       const token = query['hub.verify_token']
       if (typeof secret !== 'string' || !secret || !token || !timingSafeStringEqual(token, secret)) {
         throw new UnauthorizedError('Invalid Strava webhook verify token')
       }
-      return { respond: { status: 200, body: { 'hub.challenge': query['hub.challenge'] } } }
+      http.response.status(200).json({ 'hub.challenge': query['hub.challenge'] })
+      return
     }
-    const data = parseJson(new TextDecoder().decode(body))
+    const data = parseJson(body)
     return {
       events: [
         {

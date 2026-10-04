@@ -3,6 +3,7 @@ import { whatsappWebhookReceive } from './functions/webhooks/receive.function.js
 
 wireTriggerWebhookSource({
   name: 'whatsapp',
+  method: ['get', 'post'],
   verify: {
     hmac: {
       header: 'x-hub-signature-256',

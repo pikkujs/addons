@@ -1,11 +1,10 @@
 import type Stripe from 'stripe'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
 import { UnauthorizedError } from '@pikku/core/errors'
 import type {
   WebhookCheckResult,
   WebhookLifecycleInput,
-  WebhookReceiveResult,
-  WebhookRequest,
   WebhookSetupResult,
   WebhookTeardownInput,
   WebhookTeardownResult,
@@ -16,8 +15,7 @@ import type {
  * its signing secret in the credential store as `stripeWebhookSecret`, so
  * nobody copies it from the dashboard and a new one needs no deploy.
  */
-export const stripeWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const stripeWebhookReceive = pikkuWebhookReceive({
   description: 'Verify a Stripe webhook and read it into trigger events',
   func: async ({ stripeWebhookVerifier }, { body, headers }) => {
     const signature = headers['stripe-signature']

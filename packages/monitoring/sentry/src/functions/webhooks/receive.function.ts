@@ -1,24 +1,13 @@
-import { pikkuSessionlessFunc } from '#pikku/addon/function'
-import { BadRequestError } from '@pikku/core/errors'
-import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
-
-const parseJson = (raw: string): any => {
-  try {
-    return JSON.parse(raw)
-  } catch {
-    throw new BadRequestError('Sentry webhook body is not valid JSON')
-  }
-}
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
+import { parseJson } from '#pikku/addon/utils'
 
 /**
  * The `receive` step of a Sentry webhook source. Names the event `<resource>.<action>` (`issue.created`, `error.created`, `event_alert.triggered`, ...), keyed by `Request-ID`.
  */
-export const sentryWebhookReceive = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const sentryWebhookReceive = pikkuWebhookReceive({
   description: 'Read a Sentry webhook into trigger events',
   func: async (_services, { body, headers }) => {
-    const raw = new TextDecoder().decode(body)
-    const data = parseJson(raw)
+    const data = parseJson(body)
     return {
       events: [
         {

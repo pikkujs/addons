@@ -4,6 +4,7 @@ import { mandrillWebhookReceive } from './functions/webhooks/receive.function.js
 
 wireTriggerWebhookSource({
   name: 'mandrill',
+  method: ['head', 'post'],
   verify: async ({ body, headers }, secret, { variables }) => {
     const form = Object.fromEntries(new URLSearchParams(new TextDecoder().decode(body)))
     const url = (await variables.get('MANDRILL_WEBHOOK_URL')) ?? ''

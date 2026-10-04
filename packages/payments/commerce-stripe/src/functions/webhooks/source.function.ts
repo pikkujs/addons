@@ -1,7 +1,8 @@
 import { z } from 'zod'
 import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import { pikkuWebhookReceive } from '#pikku/addon/trigger'
+import { parseJson } from '#pikku/addon/utils'
 import { UnauthorizedError } from '@pikku/core/errors'
-import type { WebhookReceiveResult, WebhookRequest } from '@pikku/core/trigger'
 import { applyStripeEvent, type StripeEvent } from '../../lib/apply-stripe-event.js'
 
 /**
@@ -12,8 +13,7 @@ import { applyStripeEvent, type StripeEvent } from '../../lib/apply-stripe-event
  *
  * Wire `applyStripeWebhookEvent` as the trigger for the events this addon handles.
  */
-export const receiveStripeWebhook = pikkuSessionlessFunc<WebhookRequest, WebhookReceiveResult>({
-  auth: false,
+export const receiveStripeWebhook = pikkuWebhookReceive({
   description: 'Verify a Stripe webhook and read it into trigger events',
   func: async ({ stripeSignatureFor }, { body, headers, query }) => {
     const stripeSignature = stripeSignatureFor(query.account ?? null)
@@ -30,7 +30,7 @@ export const receiveStripeWebhook = pikkuSessionlessFunc<WebhookRequest, Webhook
     } catch {
       throw new UnauthorizedError('Invalid Stripe webhook signature')
     }
-    const event = JSON.parse(raw) as StripeEvent
+    const event = parseJson<StripeEvent>(raw)
     return { events: [{ name: event.type, id: event.id, data: event }] }
   },
 })
