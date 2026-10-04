@@ -46,6 +46,15 @@
         }
       }
     },
+    "clockifyWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "b40e0af4",
+          "outputHash": "dbe3d3df"
+        }
+      }
+    },
     "projectCreate": {
       "latest": 1,
       "versions": {

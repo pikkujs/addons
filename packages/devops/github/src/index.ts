@@ -809,3 +809,4 @@ export { activityListReposStarredByUser } from './functions/activityListReposSta
 export { activityListReposWatchedByUser } from './functions/activityListReposWatchedByUser.function.js'
 export { metaGetAllVersions } from './functions/metaGetAllVersions.function.js'
 export { metaGetZen } from './functions/metaGetZen.function.js'
+export { githubWebhookReceive } from './functions/webhooks/receive.function.js'

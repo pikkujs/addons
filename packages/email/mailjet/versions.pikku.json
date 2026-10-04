@@ -19,6 +19,15 @@
         }
       }
     },
+    "mailjetWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8424cf8d",
+          "outputHash": "5b4c4f1d"
+        }
+      }
+    },
     "smsSend": {
       "latest": 1,
       "versions": {

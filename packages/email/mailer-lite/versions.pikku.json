@@ -19,6 +19,15 @@
         }
       }
     },
+    "mailerLiteWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "c7badc69",
+          "outputHash": "66d67c51"
+        }
+      }
+    },
     "subscriberCreate": {
       "latest": 1,
       "versions": {

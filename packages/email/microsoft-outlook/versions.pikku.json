@@ -667,6 +667,15 @@
         }
       }
     },
+    "microsoftOutlookWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "8ecf731f",
+          "outputHash": "1b8788fe"
+        }
+      }
+    },
     "placeAsBuildingCheckInGetCount": {
       "latest": 1,
       "versions": {

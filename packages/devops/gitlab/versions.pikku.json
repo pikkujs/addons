@@ -46,6 +46,15 @@
         }
       }
     },
+    "gitlabWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "205654d3",
+          "outputHash": "16ab75ee"
+        }
+      }
+    },
     "issueCreate": {
       "latest": 1,
       "versions": {

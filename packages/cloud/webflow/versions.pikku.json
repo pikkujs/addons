@@ -45,6 +45,15 @@
           "outputHash": "bd24ca9f"
         }
       }
+    },
+    "webflowWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "abe84231",
+          "outputHash": "3c9aac9f"
+        }
+      }
     }
   }
 }

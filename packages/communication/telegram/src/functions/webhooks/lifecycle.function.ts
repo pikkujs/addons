@@ -1,0 +1,79 @@
+import { pikkuSessionlessFunc } from '#pikku/addon/function'
+import type {
+  WebhookCheckResult,
+  WebhookLifecycleInput,
+  WebhookSetupResult,
+  WebhookTeardownInput,
+  WebhookTeardownResult,
+} from '@pikku/core/trigger'
+
+type WebhookInfo = { url: string; allowed_updates?: string[] }
+
+const sameSet = (a: string[], b: string[]) =>
+  a.length === b.length && a.every((item) => b.includes(item))
+
+/**
+ * The lifecycle steps of a Telegram webhook source. A bot has exactly one
+ * webhook, so `setup` points it at this deployment, replacing whatever it
+ * pointed at, with a fresh `secret_token` that it stores in the credential store as
+ * `telegramWebhookSecret`. Events are the update kinds (`message`,
+ * `callback_query`, ...); none means Telegram's default set.
+ *
+ * Wire them next to `telegramWebhookReceive`:
+ *   check: ref('telegram:telegramWebhookCheck'),
+ *   setup: ref('telegram:telegramWebhookSetup'),
+ *   teardown: ref('telegram:telegramWebhookTeardown'),
+ */
+export const telegramWebhookCheck = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookCheckResult>({
+  auth: false,
+  description: "Check the bot's Telegram webhook",
+  func: async ({ telegram, credentialService }, { url, events }) => {
+    const info = await telegram.request<WebhookInfo>('getWebhookInfo')
+    if (!info.url) {
+      return { status: 'missing' }
+    }
+    if (!(await credentialService?.get<string>('telegramWebhookSecret'))) {
+      return { status: 'drifted', reason: 'has no secret token stored' }
+    }
+    if (info.url !== url) {
+      return { status: 'drifted', reason: `points at ${info.url}` }
+    }
+    if (events.length > 0 && !sameSet(info.allowed_updates ?? [], events)) {
+      return { status: 'drifted', reason: `allows ${(info.allowed_updates ?? []).join(', ') || 'the default updates'}` }
+    }
+    return { status: 'ok' }
+  },
+})
+
+export const telegramWebhookSetup = pikkuSessionlessFunc<WebhookLifecycleInput, WebhookSetupResult>({
+  auth: false,
+  description: "Point the bot's Telegram webhook at this deployment",
+  func: async ({ telegram, credentialService }, { url, events }) => {
+    if (!credentialService) {
+      throw new Error('Storing the Telegram signing secret needs a credentialService')
+    }
+    const previous = await telegram.request<WebhookInfo>('getWebhookInfo')
+    const secret =
+      (await credentialService.get<string>('telegramWebhookSecret')) ??
+      crypto.randomUUID().replaceAll('-', '')
+    await telegram.request('setWebhook', {
+      body: { url, secret_token: secret, allowed_updates: events },
+    })
+    await credentialService.set('telegramWebhookSecret', secret)
+    return { status: previous.url ? 'updated' : 'created', state: { url } }
+  },
+})
+
+export const telegramWebhookTeardown = pikkuSessionlessFunc<WebhookTeardownInput, WebhookTeardownResult>({
+  auth: false,
+  description: "Remove the bot's Telegram webhook if it points at this deployment",
+  func: async ({ telegram, credentialService }, { previous }) => {
+    const info = await telegram.request<WebhookInfo>('getWebhookInfo')
+    if (!info.url || info.url !== previous?.url) {
+      return { status: 'absent' }
+    }
+    await telegram.request('deleteWebhook')
+    await credentialService?.delete('telegramWebhookSecret')
+    return { status: 'deleted' }
+  },
+})

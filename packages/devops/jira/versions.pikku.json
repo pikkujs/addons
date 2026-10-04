@@ -3187,6 +3187,15 @@
         }
       }
     },
+    "jiraWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "9e473e26",
+          "outputHash": "bab4e83d"
+        }
+      }
+    },
     "linkIssues": {
       "latest": 1,
       "versions": {

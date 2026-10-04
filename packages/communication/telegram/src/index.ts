@@ -31,3 +31,5 @@ export { fileGet } from './functions/file/get.function.js'
 
 // Telegram triggers
 export { onUpdate } from './functions/trigger/on-update.trigger.js'
+export { telegramWebhookReceive } from './functions/webhooks/receive.function.js'
+export { telegramWebhookCheck, telegramWebhookSetup, telegramWebhookTeardown } from './functions/webhooks/lifecycle.function.js'

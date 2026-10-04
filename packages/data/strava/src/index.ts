@@ -6,3 +6,4 @@ export { activityGetComments } from './functions/activityGetComments.function.js
 export { activityGetKudos } from './functions/activityGetKudos.function.js'
 export { activityGetLaps } from './functions/activityGetLaps.function.js'
 export { activityGetZones } from './functions/activityGetZones.function.js'
+export { stravaWebhookReceive } from './functions/webhooks/receive.function.js'
