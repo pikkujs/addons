@@ -1,5 +1,14 @@
 # @pikku/addon-cloudflare
 
+## 0.1.7
+
+### Patch Changes
+
+- ed97575: Keep the API base path when resolving a request path. `new URL('/mail/send',
+  'https://api.sendgrid.com/v3')` resolves to `https://api.sendgrid.com/mail/send`,
+  so every SendGrid and Cloudflare call dropped its `/v3` or `/client/v4`, and a
+  Jenkins served under a path lost it.
+
 ## 0.1.6
 
 ### Patch Changes

@@ -1,5 +1,23 @@
 # @pikku/addon-survey-monkey
 
+## 0.2.0
+
+### Minor Changes
+
+- ed97575: Each addon with a webhook source now declares it, so an app gets the source by
+  wiring the addon: no `wireTriggerWebhookSource` in the app. The source is named
+  and routed after the addon's namespace (`/webhooks/<namespace>`), and stays off
+  until it is turned on.
+- ed97575: Add a webhook source to 53 addons, for `wireTriggerWebhookSource`. Each
+  declares how the provider signs deliveries with `verify`, which pikku checks
+  against the `<provider>WebhookSecret` singleton credential on every request,
+  so a new secret takes effect without a deploy, and its `receive` only parses.
+  Each answers the provider's URL handshake where it has one (Zoom, WhatsApp, Strava,
+  Microsoft Graph, YouTube, Onfleet, Asana, monday.com, Trello) and returns
+  events named after the provider's own event names. Asana also gets
+  `asanaWebhookCreate`: its handshake is accepted only with the nonce that call
+  holds, and the secret it brings is stored as the credential.
+
 ## 0.1.6
 
 ### Patch Changes
