@@ -18,7 +18,7 @@ export const createWireServices = pikkuAddonWireServices(
       throw new Error('GOOGLE_CLOUD_STORAGE_PROJECT_ID variable is required')
     }
     const googleCloudStorage = new GoogleCloudStorageService(projectId, {
-      getCredential,
+      getCredential: async <T = unknown>(name: string) => (await getCredential(name)) as T | null,
     })
 
     return { googleCloudStorage }
