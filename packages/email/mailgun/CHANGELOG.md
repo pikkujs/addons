@@ -1,5 +1,11 @@
 # @pikku/addon-mailgun
 
+## 0.2.1
+
+### Patch Changes
+
+- 0c0e9d0: send() forwards EmailAttachment entries as multipart attachment/inline parts instead of dropping them.
+
 ## 0.2.0
 
 ### Minor Changes
