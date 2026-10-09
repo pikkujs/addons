@@ -13,6 +13,7 @@ export const PaymentIntentCreateInput = z.object({
   captureMethod: z.enum(['automatic', 'automatic_async', 'manual']).optional().describe('Set manual to authorize now and capture later (auth-then-capture). Defaults to automatic'),
   setupFutureUsage: z.enum(['on_session', 'off_session']).optional().describe('Save the payment method for future use. off_session lets you charge it later without the customer present'),
   automaticPaymentMethods: z.boolean().optional().describe('Enable Stripe-managed automatic payment methods (recommended for Payment Element). Ignored when a paymentMethod is supplied'),
+  paymentMethodTypes: z.array(z.string()).optional().describe('Payment method types the intent may use (card, sepa_debit, customer_balance, ...). Omit to let Stripe choose'),
   description: z.string().optional().describe('An arbitrary string attached to the payment intent, shown in the dashboard'),
   receiptEmail: z.string().optional().describe('Email address to send the receipt to'),
   idempotencyKey: z.string().optional().describe('Idempotency key so a retried create does not double-charge'),
@@ -42,6 +43,7 @@ export const paymentIntentCreate = pikkuSessionlessFunc({
         ...(data.automaticPaymentMethods && !data.paymentMethod
           ? { automatic_payment_methods: { enabled: true } }
           : {}),
+        ...(data.paymentMethodTypes ? { payment_method_types: data.paymentMethodTypes } : {}),
         ...(data.description ? { description: data.description } : {}),
         ...(data.receiptEmail ? { receipt_email: data.receiptEmail } : {}),
         ...(data.metadata ? { metadata: data.metadata } : {}),

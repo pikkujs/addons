@@ -6,6 +6,7 @@ import { toStripeParams, fromStripeObject, epochToIso } from '../../stripe.trans
 export const ChargeListInput = z.object({
   limit: z.number().optional().describe('A limit on the number of objects to be returned. Limit can range between 1 and 100, and the default is 10'),
   customer: z.string().optional().describe('Only return charges for the customer specified by this customer ID'),
+  paymentIntent: z.string().optional().describe('Only return charges that were created by the PaymentIntent specified by this ID (pi_...)'),
   startingAfter: z.string().optional().describe('A cursor for use in pagination. startingAfter is an object ID that defines your place in the list'),
   endingBefore: z.string().optional().describe('A cursor for use in pagination. endingBefore is an object ID that defines your place in the list'),
 })

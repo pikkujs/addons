@@ -23,4 +23,5 @@ defineSecret({
   description: 'Signing secret used to verify inbound Stripe webhook signatures',
   secretId: 'STRIPE_WEBHOOK_SECRET',
   schema: stripeWebhookSecretSchema,
+  optional: true,
 })

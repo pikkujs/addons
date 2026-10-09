@@ -20,7 +20,7 @@ export const createSingletonServices = pikkuAddonServices(async (config, { secre
   // missing signing secret disables the receiver rather than failing boot.
   const signingSecret = await secrets
     .getSecret('STRIPE_WEBHOOK_SECRET')
-    .then((s) => s.reveal())
+    .then((s) => s?.reveal() ?? null)
     .catch(() => null)
   const stripeWebhookVerifier = new StripeWebhookVerifier(stripe, signingSecret)
 

@@ -46,6 +46,13 @@ export const PaymentIntentSchema = z.object({
   customer: z.string().nullable().describe('ID of the customer this payment intent is for'),
   paymentMethod: z.string().nullable().describe('ID of the payment method used in this payment intent'),
   clientSecret: z.string().nullable().describe('The client secret used to complete this payment on the client (Stripe Elements / Payment Element). Treat it like a secret — anyone with it can complete the payment'),
+  latestCharge: z.string().nullish().describe('ID of the latest charge created by this payment intent'),
+  nextAction: z.record(z.string(), z.unknown()).nullish().describe('Action the customer must take next (e.g. displayBankTransferInstructions for a bank transfer)'),
+  lastPaymentError: z.object({
+    code: z.string().nullish(),
+    declineCode: z.string().nullish(),
+    message: z.string().nullish(),
+  }).nullish().describe('The error from the last failed payment attempt'),
   created: z.string().datetime().describe('Time at which the object was created, as an ISO-8601 string'),
   livemode: z.boolean().describe('True if the object exists in live mode'),
   metadata: MetadataSchema,
@@ -202,3 +209,18 @@ export const PayoutSchema = z.object({
   metadata: MetadataSchema,
 })
 export type Payout = z.infer<typeof PayoutSchema>
+
+// PaymentMethod — a saved card / SEPA debit / bank transfer method. The type-specific
+// detail objects (card, sepaDebit) are passed through camelCased.
+export const PaymentMethodSchema = z.object({
+  id: z.string().describe('Unique identifier for the object (pm_...)'),
+  object: z.literal('payment_method').describe('String representing the object\'s type'),
+  type: z.string().describe('The type of the payment method: card, sepa_debit, ...'),
+  customer: z.string().nullable().describe('The customer this payment method is attached to, if any'),
+  card: z.record(z.string(), z.unknown()).nullish().describe('Card details: brand, last4, expMonth, expYear, country, ...'),
+  sepaDebit: z.record(z.string(), z.unknown()).nullish().describe('SEPA debit details: last4, bankCode, country, ...'),
+  created: z.string().datetime().describe('Time at which the object was created, as an ISO-8601 string'),
+  livemode: z.boolean().describe('True if the object exists in live mode'),
+  metadata: MetadataSchema,
+})
+export type PaymentMethod = z.infer<typeof PaymentMethodSchema>
