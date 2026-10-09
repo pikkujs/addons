@@ -181,7 +181,11 @@ export class MailgunService implements EmailService {
 
     const files = (input.attachments ?? []).map((a) => ({
       field: (a.disposition === 'inline' ? 'inline' : 'attachment') as 'attachment' | 'inline',
-      filename: a.filename ?? a.contentId ?? 'attachment',
+      // Inline parts are referenced as cid:<filename>, so name them by contentId.
+      filename:
+        a.disposition === 'inline'
+          ? (a.contentId ?? a.filename ?? 'attachment')
+          : (a.filename ?? a.contentId ?? 'attachment'),
       contentType: a.contentType,
       content: a.content,
     }))
