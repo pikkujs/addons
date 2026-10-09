@@ -5,6 +5,7 @@ import type { MailgunSecrets } from './mailgun.secret.js'
 export interface RequestOptions {
   body?: Record<string, string | string[]>
   qs?: Record<string, string | number | boolean | undefined>
+  files?: Array<{ field: 'attachment' | 'inline'; filename: string; contentType?: string; content: Uint8Array | string }>
 }
 
 const toCsv = (value?: string | string[]): string | undefined => {
@@ -63,7 +64,25 @@ export class MailgunService implements EmailService {
     }
 
     let body: BodyInit | undefined
-    if (options?.body && method !== 'GET') {
+    if (options?.files?.length && method !== 'GET') {
+      const form = new FormData()
+      for (const [key, value] of Object.entries(options.body ?? {})) {
+        for (const v of Array.isArray(value) ? value : [value]) form.append(key, v)
+      }
+      for (const file of options.files) {
+        // A string is base64 (see EmailAttachment.content in @pikku/core).
+        const bytes =
+          typeof file.content === 'string'
+            ? new Uint8Array(Buffer.from(file.content, 'base64'))
+            : file.content
+        form.append(
+          file.field,
+          new Blob([bytes as BlobPart], { type: file.contentType ?? 'application/octet-stream' }),
+          file.filename
+        )
+      }
+      body = form // fetch sets the multipart boundary header itself
+    } else if (options?.body && method !== 'GET') {
       const formData = new URLSearchParams()
       for (const [key, value] of Object.entries(options.body)) {
         if (Array.isArray(value)) {
@@ -160,11 +179,18 @@ export class MailgunService implements EmailService {
       if (html) body.html = html
     }
 
+    const files = (input.attachments ?? []).map((a) => ({
+      field: (a.disposition === 'inline' ? 'inline' : 'attachment') as 'attachment' | 'inline',
+      filename: a.filename ?? a.contentId ?? 'attachment',
+      contentType: a.contentType,
+      content: a.content,
+    }))
+
     const sendingDomain = await this.getSendingDomain()
     const result = await this.request<{ id: string; message: string }>(
       'POST',
       `/${sendingDomain}/messages`,
-      { body }
+      { body, files }
     )
 
     return { messageId: result.id }
