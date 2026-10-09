@@ -76,7 +76,12 @@ export { paymentIntentCreate } from './functions/payment-intents/create.function
 export { paymentIntentGet } from './functions/payment-intents/get.function.js'
 export { paymentIntentConfirm } from './functions/payment-intents/confirm.function.js'
 export { paymentIntentCapture } from './functions/payment-intents/capture.function.js'
+export { paymentIntentUpdate } from './functions/payment-intents/update.function.js'
 export { paymentIntentCancel } from './functions/payment-intents/cancel.function.js'
+
+// Stripe functions - Payment Methods
+export { paymentMethodGet } from './functions/payment-methods/get.function.js'
+export { paymentMethodDetach } from './functions/payment-methods/detach.function.js'
 
 // Stripe functions - Setup Intents (save a card without charging)
 export { setupIntentCreate } from './functions/setup-intents/create.function.js'

@@ -24,4 +24,5 @@ defineCredential({
   description: 'Signing secret used to verify inbound Stripe webhook signatures',
   type: 'singleton',
   schema: stripeWebhookSecretSchema,
+  optional: true,
 })
