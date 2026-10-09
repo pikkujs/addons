@@ -126,6 +126,15 @@
           "outputHash": "adf5fd22"
         }
       }
+    },
+    "wiseWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "dfe78b5b",
+          "outputHash": "f59511ea"
+        }
+      }
     }
   }
 }

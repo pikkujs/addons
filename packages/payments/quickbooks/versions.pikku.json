@@ -235,6 +235,15 @@
         }
       }
     },
+    "quickbooksWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "f6a15d70",
+          "outputHash": "1b53bddd"
+        }
+      }
+    },
     "transactionGetReport": {
       "latest": 1,
       "versions": {

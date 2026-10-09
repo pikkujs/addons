@@ -3,6 +3,7 @@ import { pikkuSessionlessFunc } from '#pikku/addon/function'
 import { BadRequestError } from '@pikku/core/errors'
 import type { FormValue } from '../../lib/form-encode.js'
 import { ensureCustomer } from '../../lib/customer.js'
+import { withEnvironmentId } from '../../lib/environment-id.js'
 
 export const CreateCheckoutInput = z.object({
   priceId: z
@@ -58,7 +59,7 @@ export const createCheckout = pikkuSessionlessFunc({
   input: CreateCheckoutInput,
   output: CreateCheckoutOutput,
   tags: ['addon'],
-  func: async ({ stripeApiFor, kysely, paymentOwner }, data, { session: userSession }) => {
+  func: async ({ stripeApiFor, kysely, paymentOwner, environmentId }, data, { session: userSession }) => {
     if (!data.priceId && !data.priceData) {
       throw new BadRequestError('Provide either priceId or priceData')
     }
@@ -78,7 +79,7 @@ export const createCheckout = pikkuSessionlessFunc({
         }
       : { price: data.priceId, quantity: data.quantity ?? 1 }
 
-    const metadata = { ...(data.metadata ?? {}), paymentOrderId: orderId }
+    const metadata = { ...(withEnvironmentId(environmentId, data.metadata) ?? {}), paymentOrderId: orderId }
 
     const owner = await paymentOwner.resolve(userSession)
     const stripeApi = stripeApiFor(owner?.stripeAccount)

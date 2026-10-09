@@ -72,6 +72,15 @@
           "outputHash": "af53edd2"
         }
       }
+    },
+    "stravaWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "1b949504",
+          "outputHash": "c3731dc2"
+        }
+      }
     }
   }
 }

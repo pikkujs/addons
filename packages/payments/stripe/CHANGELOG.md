@@ -1,5 +1,40 @@
 # @pikku/addon-stripe
 
+## 0.2.0
+
+### Minor Changes
+
+- ed97575: Each addon with a webhook source now declares it, so an app gets the source by
+  wiring the addon: no `wireTriggerWebhookSource` in the app. The source is named
+  and routed after the addon's namespace (`/webhooks/<namespace>`), and stays off
+  until it is turned on.
+- ed97575: Webhook source lifecycle steps (`check`, `setup`, `teardown`) for Stripe,
+  Shopify, Paddle, Telegram, PagerDuty, SendGrid and Mandrill, so
+  `pikku webhooks setup` registers the endpoint and stores the signing secret the
+  provider issues in the credential store (`teardown` removes it). Stripe's
+  signing secret moves from the `STRIPE_WEBHOOK_SECRET` secret to the
+  `stripeWebhookSecret` credential. Stripe gets `stripeWebhookReceive`; commerce-stripe gets
+  `receiveStripeWebhook` and `applyStripeWebhookEvent` as the trigger that
+  applies events to its tables; PlentyMarkets gets `plentymarketsWebhookReceive`.
+  
+  Breaking: the HTTP handlers they replace are removed — `stripeWebhookHandler`
+  and `STRIPE_WEBHOOK_QUEUE`, `handleStripeWebhook`, and
+  `plentymarketsWebhookHandler`, `PLENTYMARKETS_WEBHOOK_QUEUE` and
+  `plentymarketsHTTPRoutes`. Wire the webhook source and triggers instead (see
+  the READMEs).
+
+## 0.1.9
+
+### Patch Changes
+
+- d80ae67: Tag what the addon creates in Stripe with an `environmentId` (from the
+  `ENVIRONMENT_ID` variable, falling back to `FABRIC_STAGE_ID`) on checkout
+  sessions, payment intents and subscriptions, and acknowledge-and-ignore webhook
+  events tagged with a different `environmentId`. Stripe fans every event out to
+  every endpoint on an account, so environments that share an account no longer act
+  on each other's events. Events with no `environmentId` are processed as before,
+  and with no environment id configured nothing changes.
+
 ## 0.1.8
 
 ### Patch Changes

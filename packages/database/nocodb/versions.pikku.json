@@ -1693,6 +1693,15 @@
         }
       }
     },
+    "nocodbWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "15bc69c3",
+          "outputHash": "4e33356e"
+        }
+      }
+    },
     "notificationDelete": {
       "latest": 1,
       "versions": {

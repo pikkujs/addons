@@ -27,8 +27,9 @@ set -uo pipefail
 # checkout asks for versions that were never published, npm 404s, and the ingest
 # reports them as failures.
 #
-# `--reconcile` additionally skips any package whose name npm has never served —
-# a package added here but not yet released is not a registry gap. `--all` and an
+# `--reconcile` additionally skips any spec whose exact version npm does not
+# serve — a package added here but not yet released, or bumped here but never
+# published, is not a registry gap. `--all` and an
 # explicit package list do not skip: naming a package is asking for it.
 #
 # Every registry in registry-targets.sh (staging and production) is reconciled,
@@ -75,24 +76,22 @@ read_specs() {
   done <<< "$1"
 }
 
-# A package whose NAME has never existed on npm is not a registry gap: it is a
-# package this repo has added but not yet released. `--reconcile` exists to make
-# the registry match what npm actually serves, so those are skipped rather than
-# retried — notify-registry.sh spends ~8 minutes of backoff per package riding
-# out propagation lag, and no amount of waiting publishes something for the
-# first time. Left in, one unreleased package fails the scheduled reconcile
-# every day for as long as it stays unreleased (@pikku/addon-stripe-commerce did
-# exactly that from 2026-09-02, ~16 minutes a night, and the red run then hides
-# whatever else breaks).
+# `--reconcile` makes the registry match what npm actually serves, so a spec
+# whose exact version npm does not have is skipped rather than retried. That
+# covers a package this repo has added but not yet released, and one whose
+# version bump is in the checkout but was never published: a Version Packages PR
+# merged while changesets were still pending makes changesets/action open a new
+# release PR instead of publishing, stranding the bumps in main (run
+# 37148955266 asked for google-analytics@0.1.7 while npm had 0.1.6, ~48 minutes
+# of retries, then failed).
 #
-# This is deliberately about the NAME, not the version. A name npm has never
-# heard of cannot be lag. A known name at an unpublished version IS the lag case
-# the retry budget is for, and still gets it.
-never_published() {
-  local name="$1" out
-  out=$(npm view "$name" version 2>&1) && return 1
+# Propagation lag after a real publish is the notify step's job, not this
+# one's; it has its own retry budget.
+not_on_npm() {
+  local spec="$1" out
+  out=$(npm view "$spec" version 2>&1) && return 1
   case "$out" in
-    *E404*|*'is not in this registry'*|*'404 Not Found'*) return 0 ;;
+    *E404*|*'is not in this registry'*|*'404 Not Found'*|*'No match found for version'*) return 0 ;;
     *) return 1 ;;
   esac
 }
@@ -115,16 +114,16 @@ backfill_target() {
 
       local kept=() unreleased=() spec_name
       for spec_name in "${specs[@]}"; do
-        if never_published "${spec_name%@*}"; then
-          unreleased+=("${spec_name%@*}")
+        if not_on_npm "$spec_name"; then
+          unreleased+=("$spec_name")
         else
           kept+=("$spec_name")
         fi
       done
       if [ ${#unreleased[@]} -gt 0 ]; then
-        echo "Skipping ${#unreleased[@]} package(s) never published to npm:"
+        echo "Skipping ${#unreleased[@]} spec(s) not published to npm:"
         printf '  - %s\n' "${unreleased[@]}"
-        echo "  Release them and the next reconcile picks them up."
+        echo "  Publish them and the next reconcile picks them up."
         echo
       fi
       specs=("${kept[@]+"${kept[@]}"}")

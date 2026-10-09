@@ -26,7 +26,7 @@ export const createWireServices = pikkuAddonWireServices(
     }
     const propertyId = await variables.get('GOOGLE_ANALYTICS_PROPERTY_ID')
     const googleAnalyticsReporting = propertyId
-      ? new GoogleAnalyticsReportingService(propertyId, { getCredential })
+      ? new GoogleAnalyticsReportingService(propertyId, { getCredential: async <T = unknown>(name: string) => (await getCredential(name)) as T | null })
       : undefined
 
     return { googleAnalyticsReporting }

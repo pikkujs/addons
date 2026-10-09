@@ -96,6 +96,8 @@ export { payoutCreate } from './functions/payouts/create.function.js'
 
 // Stripe functions - Webhooks
 export {
-  stripeWebhookHandler,
-  STRIPE_WEBHOOK_QUEUE,
-} from './functions/webhooks/handle.function.js'
+  stripeWebhookReceive,
+  stripeWebhookCheck,
+  stripeWebhookSetup,
+  stripeWebhookTeardown,
+} from './functions/webhooks/source.function.js'

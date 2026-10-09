@@ -45,6 +45,15 @@
           "outputHash": "d0d4c3e9"
         }
       }
+    },
+    "storyblokWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "eeb84778",
+          "outputHash": "5062efd1"
+        }
+      }
     }
   }
 }

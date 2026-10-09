@@ -16,3 +16,4 @@ export const createWireServices = pikkuAddonWireServices(
     return { github }
   }
 )
+

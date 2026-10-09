@@ -27,7 +27,7 @@ export class ShopifyService {
     }
   }
 
-  private async request<T>(
+  async request<T>(
     method: string,
     endpoint: string,
     body?: unknown

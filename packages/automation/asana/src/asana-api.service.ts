@@ -2,6 +2,11 @@ import { BadRequestError, ConflictError, ForbiddenError, InternalServerError, Me
 import type { TypedVariablesService } from '#pikku/addon/variables/pikku-variables.gen.js'
 
 const ROUTES: Record<string, { path: string[], query: string[], headers: string[], errors?: Record<number, string> }> = {
+  "POST /webhooks": {
+    "path": [],
+    "query": [],
+    "headers": []
+  },
   "GET /tasks": {
     "path": [],
     "query": [

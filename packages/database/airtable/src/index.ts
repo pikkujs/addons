@@ -10,3 +10,4 @@ export { getRecord, GetRecordInput, GetRecordOutput } from './functions/records/
 export { createRecord, CreateRecordInput, CreateRecordOutput } from './functions/records/create-record.function.js'
 export { updateRecord, UpdateRecordInput, UpdateRecordOutput } from './functions/records/update-record.function.js'
 export { deleteRecord, DeleteRecordInput, DeleteRecordOutput } from './functions/records/delete-record.function.js'
+export { airtableWebhookReceive } from './functions/webhooks/receive.function.js'

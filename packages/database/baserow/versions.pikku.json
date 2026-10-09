@@ -1,6 +1,15 @@
 {
   "manifestVersion": 1,
   "contracts": {
+    "baserowWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "16bbb4b3",
+          "outputHash": "f49cb45d"
+        }
+      }
+    },
     "rowBatchCreate": {
       "latest": 1,
       "versions": {

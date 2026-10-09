@@ -676,6 +676,15 @@
         }
       }
     },
+    "youtubeWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "04ec145f",
+          "outputHash": "17025a70"
+        }
+      }
+    },
     "youtubeYoutubeV3UpdateCommentThreads": {
       "latest": 1,
       "versions": {

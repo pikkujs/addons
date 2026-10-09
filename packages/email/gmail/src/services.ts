@@ -12,7 +12,7 @@ export const createWireServices = pikkuAddonWireServices(
     if (!getCredential) {
       throw new Error('Credential resolution is not available in this runtime')
     }
-    const gmail = new GmailService({ getCredential })
+    const gmail = new GmailService({ getCredential: async <T = unknown>(name: string) => (await getCredential(name)) as T | null })
 
     return { gmail }
   }

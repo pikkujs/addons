@@ -1,5 +1,37 @@
 # @pikku/addon-microsoft-one-drive
 
+## 0.1.0
+
+### Minor Changes
+
+- ed97575: Each addon with a webhook source now declares it, so an app gets the source by
+  wiring the addon: no `wireTriggerWebhookSource` in the app. The source is named
+  and routed after the addon's namespace (`/webhooks/<namespace>`), and stays off
+  until it is turned on.
+- ed97575: Add a webhook source to 53 addons, for `wireTriggerWebhookSource`. Each
+  declares how the provider signs deliveries with `verify`, which pikku checks
+  against the `<provider>WebhookSecret` singleton credential on every request,
+  so a new secret takes effect without a deploy, and its `receive` only parses.
+  Each answers the provider's URL handshake where it has one (Zoom, WhatsApp, Strava,
+  Microsoft Graph, YouTube, Onfleet, Asana, monday.com, Trello) and returns
+  events named after the provider's own event names. Asana also gets
+  `asanaWebhookCreate`: its handshake is accepted only with the nonce that call
+  holds, and the secret it brings is stored as the credential.
+
+## 0.0.9
+
+### Patch Changes
+
+- 01f6d60: An OAuth2 credential no longer restates its app secret
+  
+  Every one of these declared a `defineSecret` holding `{ clientId, clientSecret }` for the id its credential already named in `oauth2.appCredentialSecretId`, byte-identical each time — and `gmail`, `google-analytics` and `google-cloud-storage` never declared one at all, so a deployment was never asked for the app credentials their connect flow needs.
+  
+  `@pikku/core` now derives that secret from the credential, typed as `OAuth2AppCredential`, which is the shape the runtime has always read it as. The declarations are deleted; the secret is still there.
+  
+  The three Google credentials also drop the `OAuth2` suffix from their display name, so the console's connect list reads `Gmail` rather than `Gmail OAuth2`.
+  
+  This needs a `@pikku/core` that derives OAuth2 app secrets.
+
 ## 0.0.8
 
 ### Patch Changes

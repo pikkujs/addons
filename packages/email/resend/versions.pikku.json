@@ -9,6 +9,15 @@
           "outputHash": "15e4f8d3"
         }
       }
+    },
+    "resendWebhookReceive": {
+      "latest": 1,
+      "versions": {
+        "1": {
+          "inputHash": "81001dff",
+          "outputHash": "0269a806"
+        }
+      }
     }
   }
 }
