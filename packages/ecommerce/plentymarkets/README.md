@@ -15,7 +15,7 @@ Plentymarkets e-commerce: orders, items, stock, warehouses, payments, and contac
 
 ## Secrets
 
-`PLENTYMARKETS_CREDENTIALS` — fields: baseUrl, accessToken, apiVersion
+`PLENTYMARKETS_CREDENTIALS` — fields: baseUrl, apiVersion, and either accessToken or username + password (the addon logs in via `/rest/login`, caches the token and renews it 60s before expiry)
 
 ## Dependencies
 

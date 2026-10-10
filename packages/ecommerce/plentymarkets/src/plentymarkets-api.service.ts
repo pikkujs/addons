@@ -37,21 +37,77 @@ interface PaginatedResponse<T> {
   entries: T[]
 }
 
+// Renew a login token this many seconds before it expires (Rails LOGIN_RENEW_BUFFER).
+const LOGIN_RENEW_BUFFER_SECONDS = 60
+
 export class PlentymarketsService {
   private baseUrl: string
   private headers: Record<string, string>
   private waitUntil: number = 0
+  private accessToken: string | undefined
+  private tokenExpiresAt: number = Infinity
+  private loginInFlight: Promise<void> | undefined
+  private readonly username: string | undefined
+  private readonly password: string | undefined
 
   constructor(secrets: PlentymarketsSecrets) {
     this.baseUrl = `${secrets.baseUrl.replace(/\/$/, '')}/rest`
-    this.headers = {
-      'Content-Type': 'application/json',
-      Authorization: `Bearer ${secrets.accessToken}`,
+    this.accessToken = secrets.accessToken
+    this.username = secrets.username
+    this.password = secrets.password
+    if (!this.accessToken && !(this.username && this.password)) {
+      throw new Error(
+        'PlentyMarkets credentials need an accessToken or a username and password'
+      )
     }
+    // Without an access token the first request logs in.
+    if (!this.accessToken) this.tokenExpiresAt = 0
+    this.headers = { 'Content-Type': 'application/json' }
     if (secrets.apiVersion) {
       this.headers['Accept'] =
         `application/x.plentymarkets.${secrets.apiVersion}+json`
     }
+  }
+
+  private canLogin(): boolean {
+    return Boolean(this.username && this.password)
+  }
+
+  // POST /rest/login with the API user; the token is cached until shortly before it
+  // expires, like the Rails client. Concurrent callers share one login.
+  private async login(): Promise<void> {
+    if (!this.loginInFlight) {
+      this.loginInFlight = (async () => {
+        const response = await fetch(`${this.baseUrl}/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            username: this.username,
+            password: this.password,
+          }),
+        })
+        if (!response.ok) {
+          throw new Error(
+            `PlentyMarkets login failed: ${response.status} - ${await response.text()}`
+          )
+        }
+        const result = (await response.json()) as {
+          accessToken: string
+          expiresIn: number
+        }
+        this.accessToken = result.accessToken
+        this.tokenExpiresAt =
+          Date.now() + (result.expiresIn - LOGIN_RENEW_BUFFER_SECONDS) * 1000
+      })().finally(() => {
+        this.loginInFlight = undefined
+      })
+    }
+    return this.loginInFlight
+  }
+
+  private async authHeaders(): Promise<Record<string, string>> {
+    if (this.canLogin() && Date.now() >= this.tokenExpiresAt) await this.login()
+    return { ...this.headers, Authorization: `Bearer ${this.accessToken}` }
   }
 
   private async request<T>(
@@ -90,11 +146,20 @@ export class PlentymarketsService {
         )
       }
 
-      const response = await fetch(url.toString(), {
+      let response = await fetch(url.toString(), {
         method,
-        headers: this.headers,
+        headers: await this.authHeaders(),
         body: body ? JSON.stringify(body) : undefined,
       })
+      // A token revoked before its expiry: log in again once and retry.
+      if (response.status === 401 && this.canLogin()) {
+        await this.login()
+        response = await fetch(url.toString(), {
+          method,
+          headers: await this.authHeaders(),
+          body: body ? JSON.stringify(body) : undefined,
+        })
+      }
 
       this.checkThrottle(response)
 

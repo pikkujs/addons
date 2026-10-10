@@ -5,7 +5,15 @@ export const plentymarketsSecretsSchema = z.object({
   baseUrl: z
     .string()
     .describe('Base URL (e.g., https://p12345.my.plentysystems.com)'),
-  accessToken: z.string().describe('Bearer access token'),
+  accessToken: z
+    .string()
+    .optional()
+    .describe('Bearer access token (alternative to username and password)'),
+  username: z
+    .string()
+    .optional()
+    .describe('API user; with password, the addon logs in via /rest/login'),
+  password: z.string().optional().describe('API user password'),
   apiVersion: z
     .string()
     .optional()
