@@ -133,7 +133,7 @@ export class MailgunService implements EmailService {
     const sendingDomain = await this.getSendingDomain()
     return this.request<{ id: string; message: string }>(
       'POST',
-      `/${sendingDomain}/messages`,
+      `${sendingDomain}/messages`,
       { body }
     )
   }
@@ -189,7 +189,7 @@ export class MailgunService implements EmailService {
     const sendingDomain = await this.getSendingDomain()
     const result = await this.request<{ id: string; message: string }>(
       'POST',
-      `/${sendingDomain}/messages`,
+      `${sendingDomain}/messages`,
       { body, files }
     )
 
