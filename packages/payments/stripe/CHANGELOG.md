@@ -1,5 +1,16 @@
 # @pikku/addon-stripe
 
+## 0.3.0
+
+### Minor Changes
+
+- 7c37fe5: Add paymentIntentUpdate, paymentMethodGet and paymentMethodDetach; chargeList filters by paymentIntent; paymentMethodTypes accepted on paymentIntentCreate and setupIntentCreate; payment intent output exposes latestCharge, nextAction and lastPaymentError.
+
+### Patch Changes
+
+- 7c37fe5: Mark `STRIPE_WEBHOOK_SECRET` optional. An app that never wires `stripeWebhookHandler` has no
+  webhook to sign, and a required declaration made deploy gates ask for a secret it would never use.
+
 ## 0.2.0
 
 ### Minor Changes
