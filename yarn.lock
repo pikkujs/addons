@@ -4674,7 +4674,9 @@ __metadata:
   dependencies:
     "@pikku/cli": "npm:^0.12.180"
     "@pikku/core": "npm:^0.12.136"
+    "@types/node": "npm:^24"
     "@typescript/native": "npm:typescript@^7.0.2"
+    tsx: "npm:^4"
     zod: "npm:^4"
   peerDependencies:
     "@pikku/core": ^0.12.136
@@ -5404,6 +5406,21 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@pikku/addon-unleash@workspace:packages/devops/unleash":
+  version: 0.0.0-use.local
+  resolution: "@pikku/addon-unleash@workspace:packages/devops/unleash"
+  dependencies:
+    "@pikku/cli": "npm:^0.12.111"
+    "@pikku/core": "npm:^0.12.89"
+    tsx: "npm:^4"
+    typescript: "npm:^5.7.2"
+    zod: "npm:^4"
+  peerDependencies:
+    "@pikku/core": ^0.12.89
+    zod: ^4
+  languageName: unknown
+  linkType: soft
+
 "@pikku/addon-uplead@workspace:*, @pikku/addon-uplead@workspace:packages/crm/uplead":
   version: 0.0.0-use.local
   resolution: "@pikku/addon-uplead@workspace:packages/crm/uplead"
@@ -5748,6 +5765,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/ai-vercel@npm:^0.12.15":
+  version: 0.12.15
+  resolution: "@pikku/ai-vercel@npm:0.12.15"
+  peerDependencies:
+    "@pikku/core": ^0.12.138
+    ai: ^7.0.0
+  checksum: 10/3be3640af7ea8eac8aa2af6abc08ba68988cf8c9762f951688edc1e7919f98c9c5b1c20348cbd4fddad96d40efd21167ed83cf83c10d91e9fa9b2cab7a513553
+  languageName: node
+  linkType: hard
+
 "@pikku/better-auth@npm:^0.12.53":
   version: 0.12.53
   resolution: "@pikku/better-auth@npm:0.12.53"
@@ -5756,6 +5783,17 @@ __metadata:
     better-auth: ^1.7.5
     zod: ^4
   checksum: 10/71f07270ac45c33f08ac54f623b28cf1572fb66ee38546757f533eb7c32eab0c1e0cdcf0330f95ea5eb46b1db0e103f9a98c7850125d4002308a7b281792ab6d
+  languageName: node
+  linkType: hard
+
+"@pikku/better-auth@npm:^0.12.54":
+  version: 0.12.54
+  resolution: "@pikku/better-auth@npm:0.12.54"
+  peerDependencies:
+    "@pikku/core": ^0.12.138
+    better-auth: ^1.7.5
+    zod: ^4
+  checksum: 10/fc177d8007c9ef92be05de0e55f342a834d04378d6ed50ec1829b5c1ea486ae3750f90eb270a401160739b6c40bd21e7202a3214a22ab3558da56bba5043e0ac
   languageName: node
   linkType: hard
 
@@ -5769,6 +5807,76 @@ __metadata:
     "@pikku/modelcontextprotocol":
       optional: true
   checksum: 10/fadb3a8f3181971b1a66576bfbe28b6e73ce7598c488ac92f0de46f9e89785b37a4f2e7ece13b9cbaaf07b5713fb68fd1c362087b321c13948905c2099cd8cd6
+  languageName: node
+  linkType: hard
+
+"@pikku/cli@npm:^0.12.111":
+  version: 0.12.184
+  resolution: "@pikku/cli@npm:0.12.184"
+  dependencies:
+    "@ai-sdk/openai": "npm:^4.0.42"
+    "@ai-sdk/openai-compatible": "npm:^3.0.30"
+    "@electric-sql/pglite": "npm:0.5.8"
+    "@electric-sql/pglite-pgvector": "npm:0.0.9"
+    "@jridgewell/trace-mapping": "npm:^0.3.31"
+    "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.4"
+    "@pikku/ai-vercel": "npm:^0.12.15"
+    "@pikku/better-auth": "npm:^0.12.54"
+    "@pikku/bun-server": "npm:^0.12.13"
+    "@pikku/code-edit": "npm:^0.12.4"
+    "@pikku/deploy": "npm:^0.12.15"
+    "@pikku/deploy-cloudflare": "npm:^0.12.20"
+    "@pikku/deploy-standalone": "npm:^0.12.25"
+    "@pikku/fetch": "npm:^0.12.12"
+    "@pikku/inspector": "npm:^0.12.103"
+    "@pikku/knowledge": "npm:^0.12.18"
+    "@pikku/kysely": "npm:^0.13.35"
+    "@pikku/migrator-sql": "npm:^0.12.7"
+    "@pikku/n8n-import": "npm:^0.0.8"
+    "@pikku/node-http-server": "npm:^0.12.19"
+    "@pikku/openapi-parser": "npm:^0.12.23"
+    "@pikku/schedule": "npm:^0.12.9"
+    "@pikku/skills": "npm:^0.12.52"
+    "@pikku/websocket": "npm:^0.12.5"
+    "@types/cookie": "npm:^1.0.0"
+    "@types/json-schema": "npm:^7.0.15"
+    ai: "npm:^7.0.66"
+    chalk: "npm:^6.0.0"
+    chokidar: "npm:^5.0.0"
+    esbuild: "npm:~0.28.2"
+    giget: "npm:^3.3.1"
+    istanbul-lib-instrument: "npm:^6.0.3"
+    kysely: "npm:^0.29.5"
+    mysql2: "npm:^3.24.5"
+    open: "npm:^11.0.1"
+    openapi-types: "npm:^12.1.3"
+    path-to-regexp: "npm:^8.4.2"
+    pg: "npm:^8.23.0"
+    semver: "npm:^7.8.5"
+    sqlite-vec: "npm:0.1.9"
+    tinyglobby: "npm:^0.2.17"
+    ts-json-schema-generator: "npm:2.9.1-next.18"
+    tsx: "npm:^4.23.12"
+    yaml: "npm:^2.9.0"
+    zod: "npm:^4.4.3"
+  peerDependencies:
+    "@pikku/core": ^0.12.139
+    "@pikku/playwright": ^0.12.86
+    "@pikku/ws": ^0.12.10
+    better-auth: ^1.7.5
+    ws: ^8.21.3
+  peerDependenciesMeta:
+    "@pikku/playwright":
+      optional: true
+    "@pikku/ws":
+      optional: true
+    better-auth:
+      optional: true
+    ws:
+      optional: true
+  bin:
+    pikku: dist/bin/pikku.js
+  checksum: 10/4772c68c82b4214f5e1f17b82bc63ab71faabef32a7c50ad5020ab67e9e812e74d69cd9a79e04d3b5186c7d580613635eb76cda45bb8a0562e55dfcd1b1a9885
   languageName: node
   linkType: hard
 
@@ -5851,6 +5959,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/code-edit@npm:^0.12.4":
+  version: 0.12.4
+  resolution: "@pikku/code-edit@npm:0.12.4"
+  dependencies:
+    typescript: "npm:^6.0.3"
+  checksum: 10/2307c47faf5d8ca3f839840a2d718bfff3a6cad1d9ed243f3e6ec103c21987e2debb99066c9e57628841f8a66227290bc14f5ab67d1f76b7b798e51b0874ad2f
+  languageName: node
+  linkType: hard
+
 "@pikku/core@npm:^0.12.136":
   version: 0.12.136
   resolution: "@pikku/core@npm:0.12.136"
@@ -5865,12 +5982,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/core@npm:^0.12.89":
+  version: 0.12.139
+  resolution: "@pikku/core@npm:0.12.139"
+  dependencies:
+    "@standard-schema/spec": "npm:^1.1.0"
+    "@types/json-schema": "npm:^7.0.15"
+    cookie: "npm:^2.0.1"
+    json-schema: "npm:^0.4.0"
+    path-to-regexp: "npm:^8.4.2"
+    picoquery: "npm:^2.5.0"
+  checksum: 10/25b9cfcf7b25e47c96edf5003f02992aa93614c85e476d808a299b7ee3b1f83e82a0f94e57fe87aa9e4882f6d51203a67f55dfc4d55bae066f64d629c15ff557
+  languageName: node
+  linkType: hard
+
 "@pikku/deploy-cloudflare@npm:^0.12.19":
   version: 0.12.19
   resolution: "@pikku/deploy-cloudflare@npm:0.12.19"
   dependencies:
     "@pikku/deploy": "npm:^0.12.9"
   checksum: 10/0fdb12f6fee2a2b970bdb2ab67a8e8e052e883252bbddeb02ad80ce4927f3c53f5433cabd6b7f20277fc97e1877d424145766d96ced25a7e0c2dede6c6f0c25d
+  languageName: node
+  linkType: hard
+
+"@pikku/deploy-cloudflare@npm:^0.12.20":
+  version: 0.12.20
+  resolution: "@pikku/deploy-cloudflare@npm:0.12.20"
+  dependencies:
+    "@pikku/deploy": "npm:^0.12.15"
+  checksum: 10/36acb3668bf04b5b775e4e0a868f43f912b3c3ea0e3365efdfe7761f29ba1d427611697bd8bba028147c35da0bd7596f1f4cef4a696a73e76cfb65ff029921c0
   languageName: node
   linkType: hard
 
@@ -5884,10 +6024,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/deploy-standalone@npm:^0.12.25":
+  version: 0.12.25
+  resolution: "@pikku/deploy-standalone@npm:0.12.25"
+  dependencies:
+    "@pikku/deploy": "npm:^0.12.14"
+    "@pikku/migrator-sql": "npm:^0.12.6"
+  checksum: 10/37dd9a47f07c8f12d06b4c5b5d9e1deca815bcfac28cd5794c4c5605fefd85bbd44434cbd33926cbc582efc50087b91af6efcce74742b14a2b70f11c357d4c7d
+  languageName: node
+  linkType: hard
+
 "@pikku/deploy@npm:^0.12.12, @pikku/deploy@npm:^0.12.13":
   version: 0.12.13
   resolution: "@pikku/deploy@npm:0.12.13"
   checksum: 10/404c0fe2696f8112f947286864c246ea338354d1c8301abdca95c8f730628f01d0e136a1dae804c62cd3747e919402b09000174fd12adc43feed3e09f566dc08
+  languageName: node
+  linkType: hard
+
+"@pikku/deploy@npm:^0.12.14, @pikku/deploy@npm:^0.12.15":
+  version: 0.12.15
+  resolution: "@pikku/deploy@npm:0.12.15"
+  dependencies:
+    semver: "npm:^7.8.5"
+  checksum: 10/06b900a4860e0a81fef1b3d1b931baaedeeed282ebe6d0b4950f46754b47c66b439404ecffb46f5ab7de36c02c2546028734d3a130e0c06a13038a620dd69670
   languageName: node
   linkType: hard
 
@@ -5922,12 +6081,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/inspector@npm:^0.12.103":
+  version: 0.12.103
+  resolution: "@pikku/inspector@npm:0.12.103"
+  dependencies:
+    "@openapi-contrib/json-schema-to-openapi-schema": "npm:^4.3.4"
+    openapi-types: "npm:^12.1.3"
+    path-to-regexp: "npm:^8.4.2"
+    ts-json-schema-generator: "npm:2.9.1-next.18"
+    tsx: "npm:^4.23.12"
+    typescript: "npm:^6.0.3"
+    zod: "npm:^4.4.3"
+  peerDependencies:
+    "@pikku/core": ^0.12.139
+  checksum: 10/19663091eec7e8ead5a6e3dea9913c288aab4699b4d9ed045e923aba31949141842732b2c7e667cc64d8ddf5136dba38bcf19002a63bd95eadf8006faa614386
+  languageName: node
+  linkType: hard
+
 "@pikku/knowledge@npm:^0.12.17":
   version: 0.12.17
   resolution: "@pikku/knowledge@npm:0.12.17"
   dependencies:
     zod: "npm:^4.4.3"
   checksum: 10/78bc6d266d93802c89fe4d829e06ceb4c2e70876090fcbc4f6a7b043f492086dbd9e8f365533d93adfb07318ec846d1bb3d5b5e457053dd82ac1fcc47b21030f
+  languageName: node
+  linkType: hard
+
+"@pikku/knowledge@npm:^0.12.18":
+  version: 0.12.18
+  resolution: "@pikku/knowledge@npm:0.12.18"
+  dependencies:
+    zod: "npm:^4.4.3"
+  checksum: 10/c8e47db54fa9f0c237f5f71befb1cb91c8ca977851c1b3d5cc380b38944b5f2d4b468bdd11717c5b044bbf540efddb6f9b8c50015cf5d877523d6f8417e53880
   languageName: node
   linkType: hard
 
@@ -5954,6 +6139,19 @@ __metadata:
   bin:
     pikku-kysely-pure: dist/bin/pikku-kysely-pure.js
   checksum: 10/4e95397c8690f5c53a71c1913903b1f8441b26062e902508e36921944ca27703e35605ed6cf9bab06b8cce03fd4f8db9ff4efb0280f5ad1ce9baaaa1142cca2f
+  languageName: node
+  linkType: hard
+
+"@pikku/kysely@npm:^0.13.35":
+  version: 0.13.35
+  resolution: "@pikku/kysely@npm:0.13.35"
+  dependencies:
+    kysely: "npm:^0.29.5"
+  peerDependencies:
+    "@pikku/core": ^0.12.138
+  bin:
+    pikku-kysely-pure: dist/bin/pikku-kysely-pure.js
+  checksum: 10/a405f112c25a9fd557d8f816b96fda4227f4cd01c45b47ee0462961e2f12525c834af1f41542805cecf55902c1268b173930b00c26d22f4ca313e5aeac3ae56e
   languageName: node
   linkType: hard
 
@@ -5995,6 +6193,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/node-http-server@npm:^0.12.19":
+  version: 0.12.19
+  resolution: "@pikku/node-http-server@npm:0.12.19"
+  peerDependencies:
+    "@pikku/core": ^0.12.139
+    "@pikku/modelcontextprotocol": ^0.12.14
+  peerDependenciesMeta:
+    "@pikku/modelcontextprotocol":
+      optional: true
+  checksum: 10/c9c7927b79d146e818519f74c88e4221992dc41cbab68748d2b1ae4efa8c10a56f2d97858faf144d7154efce97fc3b5520bb931f9c18b100dfcaf06f5b46385c
+  languageName: node
+  linkType: hard
+
 "@pikku/openapi-parser@npm:^0.12.23":
   version: 0.12.23
   resolution: "@pikku/openapi-parser@npm:0.12.23"
@@ -6024,10 +6235,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@pikku/schedule@npm:^0.12.9":
+  version: 0.12.9
+  resolution: "@pikku/schedule@npm:0.12.9"
+  dependencies:
+    cron: "npm:^4.4.0"
+    cron-schedule: "npm:^6.0.0"
+  peerDependencies:
+    "@pikku/core": ^0.12.138
+  checksum: 10/98fee426b511890649527b0721240a7ade251526b38055274c42b232f5056115609bb24df8b5a66d93785599330dca18783c656abfb0a22914d9a71cf343b7ba
+  languageName: node
+  linkType: hard
+
 "@pikku/skills@npm:^0.12.49":
   version: 0.12.49
   resolution: "@pikku/skills@npm:0.12.49"
   checksum: 10/3f182f4e91ca344ea009c025bf190b21555c17004d457438c5c1b3b83b95e0047f299cb01d0b4fd1d3f56d5bba6b542941103bcd00f587f562ed72f3657d27e3
+  languageName: node
+  linkType: hard
+
+"@pikku/skills@npm:^0.12.52":
+  version: 0.12.52
+  resolution: "@pikku/skills@npm:0.12.52"
+  checksum: 10/c4da1b3a4f2670d8f81e205306e177c7b1c44226de0003e3db8d2d33ab986558ccc972169dfe828d17bb652517c99d74edcf47522d90b4a040492e1d3d809689
   languageName: node
   linkType: hard
 
@@ -15023,6 +15253,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typescript@npm:^5.7.2":
+  version: 5.9.3
+  resolution: "typescript@npm:5.9.3"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10/c089d9d3da2729fd4ac517f9b0e0485914c4b3c26f80dc0cffcb5de1719a17951e92425d55db59515c1a7ddab65808466debb864d0d56dcf43f27007d0709594
+  languageName: node
+  linkType: hard
+
 "typescript@patch:typescript@npm%3A>=5.9 <7#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^6.0.3#optional!builtin<compat/typescript>":
   version: 6.0.3
   resolution: "typescript@patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"
@@ -15030,6 +15270,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 10/22b67a18dafedf9b1468b64ca20d9aa02ea61d449b65413d8aa6552aeb63f52ef369e86beb25b6b4c91a803d9726ee5c196f391a9b64201263263410a4223ee6
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^5.7.2#optional!builtin<compat/typescript>":
+  version: 5.9.3
+  resolution: "typescript@patch:typescript@npm%3A5.9.3#optional!builtin<compat/typescript>::version=5.9.3&hash=5786d5"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 10/696e1b017bc2635f4e0c94eb4435357701008e2f272f553d06e35b494b8ddc60aa221145e286c28ace0c89ee32827a28c2040e3a69bdc108b1a5dc8fb40b72e3
   languageName: node
   linkType: hard
 
