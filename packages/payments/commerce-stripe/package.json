@@ -50,7 +50,7 @@
     "build": "tsc && cp -r .pikku types db dist/",
     "pikku": "pikku all && pikku db export",
     "ncu": "npx npm-check-updates",
-    "prepublishOnly": "yarn build"
+    "prepublishOnly": "bun run build"
   },
   "peerDependencies": {
     "@pikku/core": "^0.12.136",

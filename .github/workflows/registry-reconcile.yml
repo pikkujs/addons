@@ -28,22 +28,17 @@ on:
 
 concurrency: ${{ github.workflow }}
 
-env:
-  YARN_ENABLE_IMMUTABLE_INSTALLS: false
-
 jobs:
   reconcile:
     name: Reconcile
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
-      - run: corepack enable
-        shell: bash
       - uses: actions/setup-node@v7
         with:
           node-version: 22
 
-      # No `yarn install` needed: the reconcile path only reads package.json
+      # No `bun install` needed: the reconcile path only reads package.json
       # versions and calls the registry over HTTP.
       # `--reconcile` only ingests versions the catalogue is MISSING, so it cannot
       # repair an entry stored at the right version with the wrong contents — a

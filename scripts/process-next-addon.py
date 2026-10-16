@@ -431,7 +431,7 @@ def process_addon(api: dict, cache: dict) -> tuple[str, dict]:
         print("SKIP (no test)")
         return addon_name, {**result, "status": "skip", "stage": "build", "note": "no test harness"}
 
-    # No symlink needed — yarn install handles link:.. resolution
+    # No symlink needed — bun install handles workspace:* resolution
 
     ok, out = run([PIKKU_CLI, "all"], cwd=str(test_dir), timeout=120)
     if not ok:
@@ -493,7 +493,7 @@ def process_addon(api: dict, cache: dict) -> tuple[str, dict]:
     print(f"    {error_msg}")
 
     if "ERR_MODULE_NOT_FOUND" in out or "Cannot find package" in out:
-        print("    → module_not_found (run yarn install)")
+        print("    → module_not_found (run bun install)")
         return addon_name, {**result, "status": "skip", "stage": "test", "note": "module_not_found"}
     elif "RPC function not found" in out or "Function not found" in out:
         print("    → wiring_error")
@@ -792,7 +792,7 @@ def main():
         show_status(cache)
         return
 
-    # Skip yarn install in batch mode — run it once before launching shards
+    # Skip bun install in batch mode — run it once before launching shards
     # New packages are resolved via workspace:* symlinks
 
     # Phase D: Test each

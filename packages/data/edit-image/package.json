@@ -27,7 +27,7 @@
     "prebuild": "pikku all",
     "build": "tsc && cp -r .pikku types dist/",
     "pikku": "pikku all",
-    "test": "cd test && yarn test"
+    "test": "cd test && bun run test"
   },
   "dependencies": {
     "sharp": "^0.33"

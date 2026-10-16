@@ -157,4 +157,4 @@ for (const { file, raw } of manifests) {
 console.log(
   `\n${DRY ? 'Would update' : 'Updated'} ${changedDeps} dependencies across ${changedFiles} package.json files.`
 )
-if (!DRY && changedFiles) console.log('Next: yarn install')
+if (!DRY && changedFiles) console.log('Next: bun install')

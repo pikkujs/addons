@@ -28,7 +28,7 @@
     "build": "tsc && cp -r .pikku types dist/",
     "pikku": "pikku all",
     "ncu": "npx npm-check-updates",
-    "test": "cd test && yarn test"
+    "test": "cd test && bun run test"
   },
   "dependencies": {
     "sweph": "^2.10.3-4"
