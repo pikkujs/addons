@@ -88,7 +88,7 @@ pikku new addon my-util --category Utility --test false
 2. Update the API service with the real base URL, auth, and methods
 3. Create function files in `src/functions/` for each operation
 4. Export functions in `src/index.ts`
-5. Build: `yarn install && yarn pikku && yarn build`
+5. Build: `bun install && bun run pikku && bun run build`
 6. Write tests in `test/src/<name>-tests.function.ts`
 
 ### Legacy scripts (still available)
@@ -115,7 +115,7 @@ The forms and the bodiless-request rules are in the `pikku-wiring` skill's `refe
 - Tests use `LocalContent` service - can point `localFileUploadPath` at a fixtures directory to avoid file write/delete in tests
 - Test functions use `pikkuSessionlessFunc`
 - Tests run via: `node --import tsx --test src/**/*.test.ts`
-- `yarn test` in test package directory (includes `pretest: pikku all`)
+- `bun run test` in test package directory (includes `pretest: pikku all`)
 
 ## Git
 - Remote: `github.com:pikkujs/addons.git`
