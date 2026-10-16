@@ -274,6 +274,115 @@ test('retries on 5xx and succeeds on second attempt', async () => {
   }
 })
 
+const loginServer = (opts: { expiresIn?: number; revokeFirst?: boolean } = {}) => {
+  const state = { logins: 0, auths: [] as string[], loginBodies: [] as unknown[] }
+  const server = http.createServer((req, res) => {
+    let raw = ''
+    req.on('data', (c) => (raw += c))
+    req.on('end', () => {
+      res.setHeader('Content-Type', 'application/json')
+      if (req.url === '/rest/login') {
+        state.logins++
+        state.loginBodies.push(JSON.parse(raw))
+        res.end(
+          JSON.stringify({
+            accessToken: `token-${state.logins}`,
+            refreshToken: 'r',
+            expiresIn: opts.expiresIn ?? 86400,
+          })
+        )
+        return
+      }
+      state.auths.push(String(req.headers.authorization))
+      if (opts.revokeFirst && state.auths.length === 1) {
+        res.writeHead(401)
+        res.end(JSON.stringify({ error: 'Unauthorized' }))
+        return
+      }
+      res.end(JSON.stringify([]))
+    })
+  })
+  return { server, state }
+}
+
+test('logs in with username and password and reuses the token', async () => {
+  const { server, state } = loginServer()
+  const baseUrl = await startServer(server)
+  try {
+    const service = new PlentymarketsService({
+      baseUrl,
+      username: 'api-user',
+      password: 'secret',
+    })
+    await service.listWarehouses()
+    await service.listWarehouses()
+    assert.equal(state.logins, 1)
+    assert.deepEqual(state.loginBodies[0], {
+      username: 'api-user',
+      password: 'secret',
+    })
+    assert.deepEqual(state.auths, ['Bearer token-1', 'Bearer token-1'])
+  } finally {
+    await stopServer(server)
+  }
+})
+
+test('renews the login token inside the 60s renew buffer', async () => {
+  const { server, state } = loginServer({ expiresIn: 30 })
+  const baseUrl = await startServer(server)
+  try {
+    const service = new PlentymarketsService({
+      baseUrl,
+      username: 'u',
+      password: 'p',
+    })
+    await service.listWarehouses()
+    await service.listWarehouses()
+    assert.equal(state.logins, 2)
+    assert.deepEqual(state.auths, ['Bearer token-1', 'Bearer token-2'])
+  } finally {
+    await stopServer(server)
+  }
+})
+
+test('logs in again once when a request is answered with 401', async () => {
+  const { server, state } = loginServer({ revokeFirst: true })
+  const baseUrl = await startServer(server)
+  try {
+    const service = new PlentymarketsService({
+      baseUrl,
+      username: 'u',
+      password: 'p',
+    })
+    const result = await service.listWarehouses()
+    assert.deepEqual(result, [])
+    assert.equal(state.logins, 2)
+    assert.deepEqual(state.auths, ['Bearer token-1', 'Bearer token-2'])
+  } finally {
+    await stopServer(server)
+  }
+})
+
+test('a static accessToken never calls /rest/login', async () => {
+  const { server, state } = loginServer()
+  const baseUrl = await startServer(server)
+  try {
+    const service = new PlentymarketsService({ baseUrl, accessToken: 'tok' })
+    await service.listWarehouses()
+    assert.equal(state.logins, 0)
+    assert.deepEqual(state.auths, ['Bearer tok'])
+  } finally {
+    await stopServer(server)
+  }
+})
+
+test('rejects credentials with neither a token nor a username and password', () => {
+  assert.throws(
+    () => new PlentymarketsService({ baseUrl: 'http://localhost' }),
+    /accessToken or a username and password/
+  )
+})
+
 test('does not retry on 4xx', async () => {
   let attempt = 0
   const server = http.createServer((req, res) => {
