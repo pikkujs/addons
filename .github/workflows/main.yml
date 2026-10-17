@@ -8,49 +8,6 @@ on:
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
-  discover:
-    name: Discover changed addons
-    runs-on: ubuntu-latest
-    outputs:
-      matrix: ${{ steps.find.outputs.matrix }}
-      has_addons: ${{ steps.find.outputs.has_addons }}
-    steps:
-      - uses: actions/checkout@v7
-      - uses: actions/setup-node@v7
-        with:
-          node-version: 22
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version: 1.4.2
-      - run: bun install
-      - id: find
-        run: |
-          # Get packages with pending changesets
-          npx changeset status --output cs-status.json 2>/dev/null || true
-
-          # Map package names to directories
-          addons=$(node -e "
-            const fs = require('fs');
-            if (!fs.existsSync('cs-status.json')) process.exit(0);
-            const status = JSON.parse(fs.readFileSync('cs-status.json', 'utf8'));
-            const names = new Set(status.releases.map(r => r.name));
-            const { execSync } = require('child_process');
-            const dirs = execSync('find packages -maxdepth 3 -name package.json -not -path \"*/test/*\" -not -path \"*/node_modules/*\"', { encoding: 'utf8' })
-              .trim().split('\n');
-            for (const dir of dirs) {
-              const pkg = JSON.parse(fs.readFileSync(dir, 'utf8'));
-              if (names.has(pkg.name)) {
-                console.log(dir.replace('/package.json', ''));
-              }
-            }
-          ")
-
-          matrix=$(echo "$addons" | grep -v '^$' | sort | jq -R -s -c 'split("\n") | map(select(length > 0)) | {addon: .}')
-          has_addons=$(echo "$addons" | grep -v '^$' | wc -l | tr -d ' ')
-          echo "matrix=$matrix" >> "$GITHUB_OUTPUT"
-          echo "has_addons=$([[ $has_addons -gt 0 ]] && echo true || echo false)" >> "$GITHUB_OUTPUT"
-          echo "Changed addons: $has_addons"
-
   # check-changesets:
   #   name: Verify changesets for changed packages
   #   runs-on: ubuntu-latest
@@ -128,14 +85,12 @@ jobs:
   #
   #         echo "All changed packages have changesets ✓"
 
+  # One job for every changed addon: installing once and building in parallel
+  # across the runner's cores beats a matrix job per addon, which spent most of
+  # its time on its own `bun install`.
   build:
-    name: Build (${{ matrix.addon }})
-    needs: [discover]
-    if: needs.discover.outputs.has_addons == 'true'
+    name: Build changed addons
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix: ${{ fromJson(needs.discover.outputs.matrix) }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
@@ -144,15 +99,18 @@ jobs:
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.2
+      - uses: actions/cache@v4
+        with:
+          path: ~/.bun/install/cache
+          key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
+          restore-keys: bun-${{ runner.os }}-
       - run: bun install
-      - run: cd ${{ matrix.addon }} && npx pikku all
-      - run: cd ${{ matrix.addon }} && npx tsc --noEmit
+      - run: scripts/build-addons.sh --changed
 
   release:
     name: Release
     runs-on: ubuntu-latest
-    needs: [discover, build]
-    if: always() && !failure() && !cancelled()
+    needs: [build]
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
