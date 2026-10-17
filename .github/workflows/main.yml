@@ -113,9 +113,14 @@ jobs:
     needs: [build]
     steps:
       - uses: actions/checkout@v7
+      # registry-url makes setup-node write an .npmrc that reads NODE_AUTH_TOKEN.
+      # `changeset publish` shells out to `npm publish` under bun, and
+      # changesets/action@v2 writes no .npmrc of its own, so without this every
+      # publish fails with ENEEDAUTH.
       - uses: actions/setup-node@v7
         with:
           node-version: 22
+          registry-url: https://registry.npmjs.org
       - uses: oven-sh/setup-bun@v2
         with:
           bun-version: 1.4.2
@@ -131,8 +136,7 @@ jobs:
           push-git-tags: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           HUSKY: '0'
 
       # notify-registry.sh ingests into every environment listed in
