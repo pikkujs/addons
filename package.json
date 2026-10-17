@@ -11,6 +11,7 @@
     "test": "bun run --filter '*' test",
     "ncu": "bun run --filter '*' ncu",
     "clean": "bun run --filter '*' clean",
+    "update-pikku": "node scripts/update-pikku-versions.mjs && bun install",
     "changeset": "npx changeset",
     "release": "bun run build && npx changeset publish"
   },
