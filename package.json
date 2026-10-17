@@ -5,8 +5,8 @@
     "packages/**"
   ],
   "scripts": {
-    "pikku": "bun run --filter '*' --filter '!@pikku/test-*' pikku",
-    "build": "bun run --filter '*' --filter '!@pikku/test-*' build",
+    "pikku": "scripts/foreach-addon.sh --all -- bun run pikku",
+    "build": "scripts/foreach-addon.sh --all -- bun run build",
     "tsc": "bun run --filter '*' tsc",
     "test": "bun run --filter '*' test",
     "ncu": "bun run --filter '*' ncu",
