@@ -105,7 +105,7 @@ jobs:
           key: bun-${{ runner.os }}-${{ hashFiles('bun.lock') }}
           restore-keys: bun-${{ runner.os }}-
       - run: bun install
-      - run: scripts/build-addons.sh --changed
+      - run: scripts/foreach-addon.sh --changed -- sh -c 'npx pikku all && npx tsc --noEmit'
 
   release:
     name: Release
@@ -120,7 +120,6 @@ jobs:
         with:
           bun-version: 1.4.2
       - run: bun install
-      - run: bun run pikku
 
       - name: Create Release Pull Request or Publish
         id: changesets

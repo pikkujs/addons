@@ -1,16 +1,25 @@
 #!/usr/bin/env bash
-# Codegen and type-check addons in parallel, one per CPU core.
+# Run a command in each addon, in parallel, one addon per CPU core.
 #
 # Usage:
-#   scripts/build-addons.sh --changed        # addons with a pending changeset (what CI runs)
-#   scripts/build-addons.sh --all            # every addon
-#   scripts/build-addons.sh <addon-dir>...   # e.g. packages/payments/stripe
+#   scripts/foreach-addon.sh --changed -- <command...>   # addons with a pending changeset
+#   scripts/foreach-addon.sh --all -- <command...>       # every addon
+#   scripts/foreach-addon.sh <addon-dir>... -- <command...>
 #
-# JOBS overrides the parallelism (default: number of cores). Every addon is
-# built even after a failure; the failures are listed at the end and the
-# script exits non-zero if there were any.
+# e.g. scripts/foreach-addon.sh --changed -- sh -c 'npx pikku all && npx tsc --noEmit'
+#
+# The command runs inside each addon's directory. JOBS overrides the
+# parallelism (default: number of cores); `bun run --filter` has no such limit
+# and starting every addon at once exhausts the CI runner. Every addon runs
+# even after a failure; each one's output is grouped in the Actions log, the
+# failures are listed at the end, and the script exits non-zero if any failed.
 set -uo pipefail
 cd "$(dirname "$0")/.."
+
+usage() {
+  echo "usage: $0 --changed | --all | <addon-dir>... -- <command...>" >&2
+  exit 2
+}
 
 all_addons() {
   find packages -mindepth 3 -maxdepth 3 -name package.json -not -path '*/node_modules/*' \
@@ -35,27 +44,36 @@ changed_addons() {
   rm -f "$status"
 }
 
-case "${1:-}" in
+selection=()
+while [ $# -gt 0 ] && [ "$1" != "--" ]; do
+  selection+=("$1")
+  shift
+done
+[ $# -gt 1 ] || usage
+shift
+[ ${#selection[@]} -gt 0 ] || usage
+
+case "${selection[0]}" in
   --changed) addons=$(changed_addons) ;;
   --all) addons=$(all_addons) ;;
-  '') echo "usage: $0 --changed | --all | <addon-dir>..." >&2; exit 2 ;;
-  *) addons=$(printf '%s\n' "$@") ;;
+  *) addons=$(printf '%s\n' "${selection[@]}") ;;
 esac
 
 if [ -z "$addons" ]; then
-  echo "No addons to build."
+  echo "No addons selected."
   exit 0
 fi
 
 JOBS=${JOBS:-$(nproc 2>/dev/null || sysctl -n hw.ncpu)}
 LOGS=$(mktemp -d)
+CMD=$(printf '%q ' "$@")
 total=$(echo "$addons" | wc -l | tr -d ' ')
-echo "Building $total addon(s), $JOBS at a time"
+echo "Running '$*' in $total addon(s), $JOBS at a time"
 
-build_one() {
+run_one() {
   local dir=$1 log="$LOGS/$(echo "$1" | tr / _)"
   local start=$SECONDS
-  if (cd "$dir" && npx pikku all && npx tsc --noEmit) >"$log.log" 2>&1; then
+  if (cd "$dir" && eval "$CMD") >"$log.log" 2>&1; then
     echo "$((SECONDS - start))" >"$log.ok"
     echo "✓ $dir"
   else
@@ -63,12 +81,11 @@ build_one() {
     echo "✗ $dir"
   fi
 }
-export -f build_one
-export LOGS
+export -f run_one
+export LOGS CMD
 
-echo "$addons" | xargs -P "$JOBS" -I{} bash -c 'build_one "$1"' _ {}
+echo "$addons" | xargs -P "$JOBS" -I{} bash -c 'run_one "$1"' _ {}
 
-# Full output per addon, collapsed into a group in the Actions log.
 failed=()
 while IFS= read -r dir; do
   log="$LOGS/$(echo "$dir" | tr / _)"
@@ -84,8 +101,8 @@ done <<<"$addons"
 rm -rf "$LOGS"
 
 if [ ${#failed[@]} -gt 0 ]; then
-  echo "::error::${#failed[@]} of $total addon(s) failed to build:"
+  echo "::error::${#failed[@]} of $total addon(s) failed:"
   printf '  - %s\n' "${failed[@]}"
   exit 1
 fi
-echo "All $total addon(s) built ✓"
+echo "All $total addon(s) passed ✓"
