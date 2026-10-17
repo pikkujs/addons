@@ -1,5 +1,11 @@
 # @pikku/addon-open-thesaurus
 
+## 0.0.8
+
+### Patch Changes
+
+- f406207: Bump @pikku/cli to 0.12.189, @pikku/core to 0.12.142 and @pikku/kysely to 0.13.37.
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @pikku/addon-whatsapp-baileys
 
+## 0.1.5
+
+### Patch Changes
+
+- f406207: Bump @pikku/cli to 0.12.189, @pikku/core to 0.12.142 and @pikku/kysely to 0.13.37.
+
 ## 0.1.4
 
 ### Patch Changes
