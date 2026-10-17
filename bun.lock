@@ -13,7 +13,7 @@
     },
     "packages/ai/assemblyai": {
       "name": "@pikku/addon-assemblyai",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -27,7 +27,7 @@
     },
     "packages/ai/aws-comprehend": {
       "name": "@pikku/addon-aws-comprehend",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -55,7 +55,7 @@
     },
     "packages/ai/aws-transcribe": {
       "name": "@pikku/addon-aws-transcribe",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -83,7 +83,7 @@
     },
     "packages/ai/deepl": {
       "name": "@pikku/addon-deepl",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -97,7 +97,7 @@
     },
     "packages/ai/elevenlabs": {
       "name": "@pikku/addon-elevenlabs",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -125,7 +125,7 @@
     },
     "packages/ai/google-cloud-natural-language": {
       "name": "@pikku/addon-google-cloud-natural-language",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -153,7 +153,7 @@
     },
     "packages/ai/humantic-ai": {
       "name": "@pikku/addon-humantic-ai",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -181,7 +181,7 @@
     },
     "packages/ai/lingvanex": {
       "name": "@pikku/addon-lingvanex",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -209,7 +209,7 @@
     },
     "packages/ai/mindee": {
       "name": "@pikku/addon-mindee",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -237,7 +237,7 @@
     },
     "packages/ai/ollama": {
       "name": "@pikku/addon-ollama",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "@ai-sdk/openai": "^1",
         "ai": "^4",
@@ -269,7 +269,7 @@
     },
     "packages/ai/openai": {
       "name": "@pikku/addon-openai",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "dependencies": {
         "openai": "^6.9.1",
       },
@@ -286,7 +286,7 @@
     },
     "packages/ai/typesafe": {
       "name": "@pikku/addon-typesafe",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -314,7 +314,7 @@
     },
     "packages/ai/whisper-asr": {
       "name": "@pikku/addon-ai-whisper-asr",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -344,7 +344,7 @@
     },
     "packages/analytics/google-analytics": {
       "name": "@pikku/addon-google-analytics",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -358,7 +358,7 @@
     },
     "packages/analytics/meta-conversions": {
       "name": "@pikku/addon-meta-conversions",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -372,7 +372,7 @@
     },
     "packages/analytics/metabase": {
       "name": "@pikku/addon-metabase",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -401,7 +401,7 @@
     },
     "packages/analytics/posthog": {
       "name": "@pikku/addon-posthog",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -415,7 +415,7 @@
     },
     "packages/analytics/segment": {
       "name": "@pikku/addon-segment",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -430,7 +430,7 @@
     },
     "packages/automation/airtop": {
       "name": "@pikku/addon-airtop",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -458,7 +458,7 @@
     },
     "packages/automation/asana": {
       "name": "@pikku/addon-asana",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -486,7 +486,7 @@
     },
     "packages/automation/bitly": {
       "name": "@pikku/addon-bitly",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -514,7 +514,7 @@
     },
     "packages/automation/clickup": {
       "name": "@pikku/addon-clickup",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -542,7 +542,7 @@
     },
     "packages/automation/clockify": {
       "name": "@pikku/addon-clockify",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -570,7 +570,7 @@
     },
     "packages/automation/google-tasks": {
       "name": "@pikku/addon-google-tasks",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -598,7 +598,7 @@
     },
     "packages/automation/harvest": {
       "name": "@pikku/addon-harvest",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -626,7 +626,7 @@
     },
     "packages/automation/microsoft-to-do": {
       "name": "@pikku/addon-microsoft-to-do",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -654,7 +654,7 @@
     },
     "packages/automation/monday-com": {
       "name": "@pikku/addon-monday-com",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -682,7 +682,7 @@
     },
     "packages/automation/onfleet": {
       "name": "@pikku/addon-onfleet",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -710,7 +710,7 @@
     },
     "packages/automation/phantombuster": {
       "name": "@pikku/addon-phantombuster",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -738,7 +738,7 @@
     },
     "packages/automation/raindrop": {
       "name": "@pikku/addon-raindrop",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -766,7 +766,7 @@
     },
     "packages/automation/taiga": {
       "name": "@pikku/addon-taiga",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -794,7 +794,7 @@
     },
     "packages/automation/todoist": {
       "name": "@pikku/addon-todoist",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -822,7 +822,7 @@
     },
     "packages/automation/totp": {
       "name": "@pikku/addon-totp",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -850,7 +850,7 @@
     },
     "packages/automation/trello": {
       "name": "@pikku/addon-trello",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -878,7 +878,7 @@
     },
     "packages/automation/wekan": {
       "name": "@pikku/addon-wekan",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -906,7 +906,7 @@
     },
     "packages/automation/yourls": {
       "name": "@pikku/addon-yourls",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -934,7 +934,7 @@
     },
     "packages/automation/zapier": {
       "name": "@pikku/addon-zapier",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -948,7 +948,7 @@
     },
     "packages/cache/redis": {
       "name": "@pikku/addon-redis",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "ioredis": "^5.8.2",
       },
@@ -982,7 +982,7 @@
     },
     "packages/cloud/aws-lambda": {
       "name": "@pikku/addon-aws-lambda",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1010,7 +1010,7 @@
     },
     "packages/cloud/aws-s3": {
       "name": "@pikku/addon-aws-s3",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1038,7 +1038,7 @@
     },
     "packages/cloud/dropbox": {
       "name": "@pikku/addon-dropbox",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1066,7 +1066,7 @@
     },
     "packages/cloud/flyio": {
       "name": "@pikku/addon-flyio",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1095,7 +1095,7 @@
     },
     "packages/cloud/g-suite-admin": {
       "name": "@pikku/addon-g-suite-admin",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1123,7 +1123,7 @@
     },
     "packages/cloud/google-cloud-storage": {
       "name": "@pikku/addon-google-cloud-storage",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1138,7 +1138,7 @@
     },
     "packages/cloud/google-firebase-cloud-firestore": {
       "name": "@pikku/addon-google-firebase-cloud-firestore",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1166,7 +1166,7 @@
     },
     "packages/cloud/microsoft-one-drive": {
       "name": "@pikku/addon-microsoft-one-drive",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1194,7 +1194,7 @@
     },
     "packages/cloud/nextcloud": {
       "name": "@pikku/addon-nextcloud",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1222,7 +1222,7 @@
     },
     "packages/cloud/s3": {
       "name": "@pikku/addon-s3",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "@aws-sdk/client-s3": "^3",
       },
@@ -1255,7 +1255,7 @@
     },
     "packages/cloud/webflow": {
       "name": "@pikku/addon-webflow",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1283,7 +1283,7 @@
     },
     "packages/communication/amqp": {
       "name": "@pikku/addon-amqp",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1311,7 +1311,7 @@
     },
     "packages/communication/aws-sns": {
       "name": "@pikku/addon-aws-sns",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1339,7 +1339,7 @@
     },
     "packages/communication/aws-sqs": {
       "name": "@pikku/addon-aws-sqs",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1367,7 +1367,7 @@
     },
     "packages/communication/discord": {
       "name": "@pikku/addon-discord",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1381,7 +1381,7 @@
     },
     "packages/communication/discourse": {
       "name": "@pikku/addon-discourse",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1409,7 +1409,7 @@
     },
     "packages/communication/facebook-graph-api": {
       "name": "@pikku/addon-facebook-graph-api",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1437,7 +1437,7 @@
     },
     "packages/communication/gotify": {
       "name": "@pikku/addon-gotify",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1465,7 +1465,7 @@
     },
     "packages/communication/linkedin": {
       "name": "@pikku/addon-linkedin",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1493,7 +1493,7 @@
     },
     "packages/communication/matrix": {
       "name": "@pikku/addon-matrix",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1521,7 +1521,7 @@
     },
     "packages/communication/mattermost": {
       "name": "@pikku/addon-mattermost",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1549,7 +1549,7 @@
     },
     "packages/communication/microsoft-teams": {
       "name": "@pikku/addon-microsoft-teams",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1577,7 +1577,7 @@
     },
     "packages/communication/mocean": {
       "name": "@pikku/addon-mocean",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1605,7 +1605,7 @@
     },
     "packages/communication/mqtt": {
       "name": "@pikku/addon-mqtt",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1633,7 +1633,7 @@
     },
     "packages/communication/msg91": {
       "name": "@pikku/addon-msg91",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1661,7 +1661,7 @@
     },
     "packages/communication/pushbullet": {
       "name": "@pikku/addon-pushbullet",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1689,7 +1689,7 @@
     },
     "packages/communication/pushover": {
       "name": "@pikku/addon-pushover",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1717,7 +1717,7 @@
     },
     "packages/communication/rabbitmq": {
       "name": "@pikku/addon-rabbitmq",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1745,7 +1745,7 @@
     },
     "packages/communication/reddit": {
       "name": "@pikku/addon-reddit",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1773,7 +1773,7 @@
     },
     "packages/communication/rocketchat": {
       "name": "@pikku/addon-rocketchat",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1801,7 +1801,7 @@
     },
     "packages/communication/slack": {
       "name": "@pikku/addon-slack",
-      "version": "0.1.9",
+      "version": "0.1.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1829,7 +1829,7 @@
     },
     "packages/communication/telegram": {
       "name": "@pikku/addon-telegram",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1857,7 +1857,7 @@
     },
     "packages/communication/twilio": {
       "name": "@pikku/addon-twilio",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1872,7 +1872,7 @@
     },
     "packages/communication/twist": {
       "name": "@pikku/addon-twist",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1900,7 +1900,7 @@
     },
     "packages/communication/twitter": {
       "name": "@pikku/addon-twitter",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1928,7 +1928,7 @@
     },
     "packages/communication/vonage": {
       "name": "@pikku/addon-vonage",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1956,7 +1956,7 @@
     },
     "packages/communication/whatsapp": {
       "name": "@pikku/addon-whatsapp",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1972,7 +1972,7 @@
     },
     "packages/communication/whatsapp-baileys": {
       "name": "@pikku/addon-whatsapp-baileys",
-      "version": "0.1.4",
+      "version": "0.1.5",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -1993,7 +1993,7 @@
     },
     "packages/communication/zammad": {
       "name": "@pikku/addon-zammad",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2021,7 +2021,7 @@
     },
     "packages/communication/zendesk": {
       "name": "@pikku/addon-zendesk",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2049,7 +2049,7 @@
     },
     "packages/communication/zoom": {
       "name": "@pikku/addon-zoom",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2077,7 +2077,7 @@
     },
     "packages/communication/zulip": {
       "name": "@pikku/addon-zulip",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2105,7 +2105,7 @@
     },
     "packages/crm/agile-crm": {
       "name": "@pikku/addon-agile-crm",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2133,7 +2133,7 @@
     },
     "packages/crm/autopilot": {
       "name": "@pikku/addon-autopilot",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2161,7 +2161,7 @@
     },
     "packages/crm/bamboo-hr": {
       "name": "@pikku/addon-bamboo-hr",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2189,7 +2189,7 @@
     },
     "packages/crm/clearbit": {
       "name": "@pikku/addon-clearbit",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2217,7 +2217,7 @@
     },
     "packages/crm/copper": {
       "name": "@pikku/addon-copper",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2245,7 +2245,7 @@
     },
     "packages/crm/dropcontact": {
       "name": "@pikku/addon-dropcontact",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2273,7 +2273,7 @@
     },
     "packages/crm/erpnext": {
       "name": "@pikku/addon-erpnext",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2301,7 +2301,7 @@
     },
     "packages/crm/freshdesk": {
       "name": "@pikku/addon-freshdesk",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2329,7 +2329,7 @@
     },
     "packages/crm/google-contacts": {
       "name": "@pikku/addon-google-contacts",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2357,7 +2357,7 @@
     },
     "packages/crm/hubspot": {
       "name": "@pikku/addon-hubspot",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2371,7 +2371,7 @@
     },
     "packages/crm/hunter": {
       "name": "@pikku/addon-hunter",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2399,7 +2399,7 @@
     },
     "packages/crm/keap": {
       "name": "@pikku/addon-keap",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2427,7 +2427,7 @@
     },
     "packages/crm/mautic": {
       "name": "@pikku/addon-mautic",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2455,7 +2455,7 @@
     },
     "packages/crm/odoo": {
       "name": "@pikku/addon-odoo",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2483,7 +2483,7 @@
     },
     "packages/crm/orbit": {
       "name": "@pikku/addon-orbit",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2511,7 +2511,7 @@
     },
     "packages/crm/salesforce": {
       "name": "@pikku/addon-salesforce",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2539,7 +2539,7 @@
     },
     "packages/crm/servicenow": {
       "name": "@pikku/addon-servicenow",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2567,7 +2567,7 @@
     },
     "packages/crm/tapfiliate": {
       "name": "@pikku/addon-tapfiliate",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2595,7 +2595,7 @@
     },
     "packages/crm/uplead": {
       "name": "@pikku/addon-uplead",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2623,7 +2623,7 @@
     },
     "packages/crm/vero": {
       "name": "@pikku/addon-vero",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2651,7 +2651,7 @@
     },
     "packages/crypto/coingecko": {
       "name": "@pikku/addon-coingecko",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2679,7 +2679,7 @@
     },
     "packages/data/barcode": {
       "name": "@pikku/addon-barcode",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "bwip-js": "^4.8.0",
       },
@@ -2711,7 +2711,7 @@
     },
     "packages/data/binary": {
       "name": "@pikku/addon-binary",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2740,7 +2740,7 @@
     },
     "packages/data/compression": {
       "name": "@pikku/addon-compression",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "fflate": "^0.8",
       },
@@ -2772,7 +2772,7 @@
     },
     "packages/data/dhl": {
       "name": "@pikku/addon-dhl",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2800,7 +2800,7 @@
     },
     "packages/data/edit-image": {
       "name": "@pikku/addon-edit-image",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "sharp": "^0.33",
       },
@@ -2832,7 +2832,7 @@
     },
     "packages/data/google-calendar": {
       "name": "@pikku/addon-google-calendar",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2860,7 +2860,7 @@
     },
     "packages/data/google-docs": {
       "name": "@pikku/addon-google-docs",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2888,7 +2888,7 @@
     },
     "packages/data/google-drive": {
       "name": "@pikku/addon-google-drive",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2916,7 +2916,7 @@
     },
     "packages/data/google-sheets": {
       "name": "@pikku/addon-google-sheets",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2945,7 +2945,7 @@
     },
     "packages/data/hackernews": {
       "name": "@pikku/addon-hackernews",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -2973,7 +2973,7 @@
     },
     "packages/data/html": {
       "name": "@pikku/addon-html",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "html-to-text": "^9",
         "node-html-markdown": "^1",
@@ -2991,7 +2991,7 @@
     },
     "packages/data/html-extract": {
       "name": "@pikku/addon-html-extract",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "cheerio": "^1",
       },
@@ -3036,7 +3036,7 @@
     },
     "packages/data/icalendar": {
       "name": "@pikku/addon-icalendar",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "ical-generator": "^8",
       },
@@ -3067,7 +3067,7 @@
     },
     "packages/data/markdown": {
       "name": "@pikku/addon-markdown",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "marked": "^15",
         "node-html-markdown": "^1",
@@ -3099,7 +3099,7 @@
     },
     "packages/data/math": {
       "name": "@pikku/addon-math",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "dependencies": {
         "mathjs": "^15",
       },
@@ -3130,7 +3130,7 @@
     },
     "packages/data/nasa": {
       "name": "@pikku/addon-nasa",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3158,7 +3158,7 @@
     },
     "packages/data/notion": {
       "name": "@pikku/addon-notion",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3186,7 +3186,7 @@
     },
     "packages/data/open-weather-map": {
       "name": "@pikku/addon-open-weather-map",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3214,7 +3214,7 @@
     },
     "packages/data/peekalink": {
       "name": "@pikku/addon-peekalink",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3242,7 +3242,7 @@
     },
     "packages/data/postbin": {
       "name": "@pikku/addon-postbin",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3270,7 +3270,7 @@
     },
     "packages/data/qrcode": {
       "name": "@pikku/addon-qrcode",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "jsqr": "^1.4.0",
         "qrcode": "^1.5.4",
@@ -3305,7 +3305,7 @@
     },
     "packages/data/read-pdf": {
       "name": "@pikku/addon-read-pdf",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "pdfjs-dist": "^4",
       },
@@ -3338,7 +3338,7 @@
     },
     "packages/data/rss-feed": {
       "name": "@pikku/addon-rss-feed",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "rss-parser": "^3",
       },
@@ -3369,7 +3369,7 @@
     },
     "packages/data/spreadsheet": {
       "name": "@pikku/addon-spreadsheet",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "csv-parse": "^5",
         "xlsx": "https://cdn.sheetjs.com/xlsx-0.20.3/xlsx-0.20.3.tgz",
@@ -3402,7 +3402,7 @@
     },
     "packages/data/strava": {
       "name": "@pikku/addon-strava",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3430,7 +3430,7 @@
     },
     "packages/data/uproc": {
       "name": "@pikku/addon-uproc",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3458,7 +3458,7 @@
     },
     "packages/data/wikipedia": {
       "name": "@pikku/addon-wikipedia",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3486,7 +3486,7 @@
     },
     "packages/data/xml": {
       "name": "@pikku/addon-xml",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "xml2js": "^0.6",
       },
@@ -3518,7 +3518,7 @@
     },
     "packages/database/airtable": {
       "name": "@pikku/addon-airtable",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3533,7 +3533,7 @@
     },
     "packages/database/baserow": {
       "name": "@pikku/addon-baserow",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3561,7 +3561,7 @@
     },
     "packages/database/cratedb": {
       "name": "@pikku/addon-cratedb",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3589,7 +3589,7 @@
     },
     "packages/database/elasticsearch": {
       "name": "@pikku/addon-elasticsearch",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3617,7 +3617,7 @@
     },
     "packages/database/filemaker": {
       "name": "@pikku/addon-filemaker",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3645,7 +3645,7 @@
     },
     "packages/database/google-big-query": {
       "name": "@pikku/addon-google-big-query",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3673,7 +3673,7 @@
     },
     "packages/database/google-firebase-realtime-database": {
       "name": "@pikku/addon-google-firebase-realtime-database",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3701,7 +3701,7 @@
     },
     "packages/database/grist": {
       "name": "@pikku/addon-grist",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3729,7 +3729,7 @@
     },
     "packages/database/microsoft-sql": {
       "name": "@pikku/addon-microsoft-sql",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3757,7 +3757,7 @@
     },
     "packages/database/mongodb": {
       "name": "@pikku/addon-mongodb",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "mongodb": "^6",
       },
@@ -3791,7 +3791,7 @@
     },
     "packages/database/mysql": {
       "name": "@pikku/addon-mysql",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "mysql2": "^3.11.5",
       },
@@ -3825,7 +3825,7 @@
     },
     "packages/database/nocodb": {
       "name": "@pikku/addon-nocodb",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3853,7 +3853,7 @@
     },
     "packages/database/pinecone": {
       "name": "@pikku/addon-pinecone",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3882,7 +3882,7 @@
     },
     "packages/database/postgres": {
       "name": "@pikku/addon-postgres",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "pg": "^8.13.1",
       },
@@ -3917,7 +3917,7 @@
     },
     "packages/database/qdrant": {
       "name": "@pikku/addon-qdrant",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3946,7 +3946,7 @@
     },
     "packages/database/quest-db": {
       "name": "@pikku/addon-quest-db",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -3974,7 +3974,7 @@
     },
     "packages/database/quickbase": {
       "name": "@pikku/addon-quickbase",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4002,7 +4002,7 @@
     },
     "packages/database/snowflake": {
       "name": "@pikku/addon-snowflake",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4030,7 +4030,7 @@
     },
     "packages/database/supabase": {
       "name": "@pikku/addon-supabase",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "dependencies": {
         "@supabase/supabase-js": "^2.47.10",
       },
@@ -4064,7 +4064,7 @@
     },
     "packages/database/timescale-db": {
       "name": "@pikku/addon-timescale-db",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4092,7 +4092,7 @@
     },
     "packages/devops/execution": {
       "name": "@pikku/addon-execution",
-      "version": "0.2.4",
+      "version": "0.2.5",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4121,7 +4121,7 @@
     },
     "packages/devops/git": {
       "name": "@pikku/addon-git",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "simple-git": "^3",
       },
@@ -4152,7 +4152,7 @@
     },
     "packages/devops/github": {
       "name": "@pikku/addon-github",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4181,7 +4181,7 @@
     },
     "packages/devops/gitlab": {
       "name": "@pikku/addon-gitlab",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4209,7 +4209,7 @@
     },
     "packages/devops/jenkins": {
       "name": "@pikku/addon-jenkins",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4239,7 +4239,7 @@
     },
     "packages/devops/jira": {
       "name": "@pikku/addon-jira",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4268,7 +4268,7 @@
     },
     "packages/devops/linear": {
       "name": "@pikku/addon-linear",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4296,7 +4296,7 @@
     },
     "packages/documents/docraptor": {
       "name": "@pikku/addon-docraptor",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4311,7 +4311,7 @@
     },
     "packages/documents/ghost": {
       "name": "@pikku/addon-ghost",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4339,7 +4339,7 @@
     },
     "packages/documents/google-slides": {
       "name": "@pikku/addon-google-slides",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4367,7 +4367,7 @@
     },
     "packages/documents/microsoft-excel": {
       "name": "@pikku/addon-microsoft-excel",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4395,7 +4395,7 @@
     },
     "packages/documents/storyblok": {
       "name": "@pikku/addon-storyblok",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4423,7 +4423,7 @@
     },
     "packages/documents/strapi": {
       "name": "@pikku/addon-strapi",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4451,7 +4451,7 @@
     },
     "packages/documents/wordpress": {
       "name": "@pikku/addon-wordpress",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4479,7 +4479,7 @@
     },
     "packages/ecommerce/plentymarkets": {
       "name": "@pikku/addon-plentymarkets",
-      "version": "0.3.0",
+      "version": "0.4.0",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4507,7 +4507,7 @@
     },
     "packages/ecommerce/shopify": {
       "name": "@pikku/addon-shopify",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4535,7 +4535,7 @@
     },
     "packages/ecommerce/woocommerce": {
       "name": "@pikku/addon-woocommerce",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4563,7 +4563,7 @@
     },
     "packages/email/automizy": {
       "name": "@pikku/addon-automizy",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4591,7 +4591,7 @@
     },
     "packages/email/aws-ses": {
       "name": "@pikku/addon-aws-ses",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4619,7 +4619,7 @@
     },
     "packages/email/convertkit": {
       "name": "@pikku/addon-convertkit",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4647,7 +4647,7 @@
     },
     "packages/email/egoi": {
       "name": "@pikku/addon-egoi",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4675,7 +4675,7 @@
     },
     "packages/email/email-send": {
       "name": "@pikku/addon-email-send",
-      "version": "0.1.8",
+      "version": "0.1.9",
       "dependencies": {
         "nodemailer": "^6",
       },
@@ -4708,7 +4708,7 @@
     },
     "packages/email/emelia": {
       "name": "@pikku/addon-emelia",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4736,7 +4736,7 @@
     },
     "packages/email/gmail": {
       "name": "@pikku/addon-gmail",
-      "version": "0.1.8",
+      "version": "0.1.9",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4765,7 +4765,7 @@
     },
     "packages/email/imap": {
       "name": "@pikku/addon-imap",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "imapflow": "^1.0.171",
         "mailparser": "^3.7.2",
@@ -4799,7 +4799,7 @@
     },
     "packages/email/iterable": {
       "name": "@pikku/addon-iterable",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4827,7 +4827,7 @@
     },
     "packages/email/lemlist": {
       "name": "@pikku/addon-lemlist",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4855,7 +4855,7 @@
     },
     "packages/email/mailcheck": {
       "name": "@pikku/addon-mailcheck",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4883,7 +4883,7 @@
     },
     "packages/email/mailchimp": {
       "name": "@pikku/addon-mailchimp",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4911,7 +4911,7 @@
     },
     "packages/email/mailer-lite": {
       "name": "@pikku/addon-mailer-lite",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4939,7 +4939,7 @@
     },
     "packages/email/mailgun": {
       "name": "@pikku/addon-mailgun",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4954,7 +4954,7 @@
     },
     "packages/email/mailjet": {
       "name": "@pikku/addon-mailjet",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4982,7 +4982,7 @@
     },
     "packages/email/mandrill": {
       "name": "@pikku/addon-mandrill",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -4996,7 +4996,7 @@
     },
     "packages/email/microsoft-outlook": {
       "name": "@pikku/addon-microsoft-outlook",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5024,7 +5024,7 @@
     },
     "packages/email/resend": {
       "name": "@pikku/addon-resend",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5052,7 +5052,7 @@
     },
     "packages/email/sendgrid": {
       "name": "@pikku/addon-sendgrid",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5066,7 +5066,7 @@
     },
     "packages/email/sendy": {
       "name": "@pikku/addon-sendy",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5094,7 +5094,7 @@
     },
     "packages/esoteric/human-design": {
       "name": "@pikku/addon-human-design",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "sweph": "^2.10.3-4",
       },
@@ -5125,7 +5125,7 @@
     },
     "packages/esoteric/open-thesaurus": {
       "name": "@pikku/addon-open-thesaurus",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5153,7 +5153,7 @@
     },
     "packages/forms/formstack": {
       "name": "@pikku/addon-formstack",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5167,7 +5167,7 @@
     },
     "packages/forms/jotform": {
       "name": "@pikku/addon-jotform",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5181,7 +5181,7 @@
     },
     "packages/forms/survey-monkey": {
       "name": "@pikku/addon-survey-monkey",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5195,7 +5195,7 @@
     },
     "packages/forms/typeform": {
       "name": "@pikku/addon-typeform",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5209,7 +5209,7 @@
     },
     "packages/infrastructure/bitwarden": {
       "name": "@pikku/addon-bitwarden",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5237,7 +5237,7 @@
     },
     "packages/infrastructure/cloudflare": {
       "name": "@pikku/addon-cloudflare",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5252,7 +5252,7 @@
     },
     "packages/infrastructure/ftp": {
       "name": "@pikku/addon-ftp",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5280,7 +5280,7 @@
     },
     "packages/infrastructure/kafka": {
       "name": "@pikku/addon-kafka",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "kafkajs": "^2",
       },
@@ -5313,7 +5313,7 @@
     },
     "packages/infrastructure/ldap": {
       "name": "@pikku/addon-ldap",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "dependencies": {
         "ldapts": "^7",
       },
@@ -5345,7 +5345,7 @@
     },
     "packages/infrastructure/philips-hue": {
       "name": "@pikku/addon-philips-hue",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5373,7 +5373,7 @@
     },
     "packages/infrastructure/ssh": {
       "name": "@pikku/addon-ssh",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "dependencies": {
         "ssh2": "^1",
       },
@@ -5407,7 +5407,7 @@
     },
     "packages/infrastructure/venafi-tls-protect-cloud": {
       "name": "@pikku/addon-venafi-tls-protect-cloud",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5435,7 +5435,7 @@
     },
     "packages/media/bannerbear": {
       "name": "@pikku/addon-bannerbear",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5463,7 +5463,7 @@
     },
     "packages/media/google-books": {
       "name": "@pikku/addon-google-books",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5491,7 +5491,7 @@
     },
     "packages/media/quickchart": {
       "name": "@pikku/addon-quickchart",
-      "version": "0.1.7",
+      "version": "0.1.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5519,7 +5519,7 @@
     },
     "packages/media/spotify": {
       "name": "@pikku/addon-spotify",
-      "version": "0.0.9",
+      "version": "0.0.10",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5547,7 +5547,7 @@
     },
     "packages/media/youtube": {
       "name": "@pikku/addon-youtube",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5576,7 +5576,7 @@
     },
     "packages/monitoring/cortex": {
       "name": "@pikku/addon-cortex",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5604,7 +5604,7 @@
     },
     "packages/monitoring/grafana": {
       "name": "@pikku/addon-grafana",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5633,7 +5633,7 @@
     },
     "packages/monitoring/pagerduty": {
       "name": "@pikku/addon-pagerduty",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5647,7 +5647,7 @@
     },
     "packages/monitoring/security-scorecard": {
       "name": "@pikku/addon-security-scorecard",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5675,7 +5675,7 @@
     },
     "packages/monitoring/sentry": {
       "name": "@pikku/addon-sentry",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5689,7 +5689,7 @@
     },
     "packages/monitoring/signl4": {
       "name": "@pikku/addon-signl4",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5717,7 +5717,7 @@
     },
     "packages/monitoring/the-hive": {
       "name": "@pikku/addon-the-hive",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5745,7 +5745,7 @@
     },
     "packages/monitoring/uptimerobot": {
       "name": "@pikku/addon-uptimerobot",
-      "version": "0.1.6",
+      "version": "0.1.7",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5759,7 +5759,7 @@
     },
     "packages/monitoring/url-scan-io": {
       "name": "@pikku/addon-url-scan-io",
-      "version": "0.0.7",
+      "version": "0.0.8",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5787,7 +5787,7 @@
     },
     "packages/payments/commerce-stripe": {
       "name": "@pikku/addon-commerce-stripe",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "dependencies": {
         "@pikku/kysely": "^0.13.37",
       },
@@ -5820,7 +5820,7 @@
     },
     "packages/payments/paddle": {
       "name": "@pikku/addon-paddle",
-      "version": "0.2.0",
+      "version": "0.2.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5835,7 +5835,7 @@
     },
     "packages/payments/quickbooks": {
       "name": "@pikku/addon-quickbooks",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",
@@ -5863,7 +5863,7 @@
     },
     "packages/payments/stripe": {
       "name": "@pikku/addon-stripe",
-      "version": "0.3.0",
+      "version": "0.3.1",
       "dependencies": {
         "stripe": "^17.0.0",
       },
@@ -5896,7 +5896,7 @@
     },
     "packages/payments/wise": {
       "name": "@pikku/addon-wise",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "devDependencies": {
         "@pikku/cli": "^0.12.190",
         "@pikku/core": "^0.12.142",

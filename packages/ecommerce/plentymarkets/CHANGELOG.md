@@ -1,5 +1,15 @@
 # @pikku/addon-plentymarkets
 
+## 0.4.0
+
+### Minor Changes
+
+- 9fd49c0: Accept `username` and `password` in `PLENTYMARKETS_CREDENTIALS` as an alternative to a static `accessToken`. The addon logs in via `/rest/login`, caches the token and renews it shortly before it expires (retrying once on a 401), like the Rails client.
+
+### Patch Changes
+
+- f406207: Bump @pikku/cli to 0.12.189, @pikku/core to 0.12.142 and @pikku/kysely to 0.13.37.
+
 ## 0.3.0
 
 ### Minor Changes
