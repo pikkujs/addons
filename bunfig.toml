@@ -1,0 +1,6 @@
+# Hoist dependencies into the root node_modules, as yarn's node-modules linker
+# did. Bun's default isolated layout leaves the root node_modules/.bin empty,
+# so `npx pikku` (which resolves from the workspace root) finds nothing, and
+# generated code can't import transitive deps such as @standard-schema/spec.
+[install]
+linker = "hoisted"
