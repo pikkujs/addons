@@ -5,6 +5,7 @@
  */
 import type {
   FailureRow,
+  FunctionMetricsRow,
   LogFacets,
   LogRecord,
   LogsQuery,
@@ -17,6 +18,9 @@ import type {
   TelemetryAttributes,
   TelemetryScope,
   TelemetryStore,
+  TenantFilter,
+  WireRunRow,
+  WireTypeRow,
 } from '@pikku/core/telemetry-store'
 import {
   encodeGauges,
@@ -756,11 +760,25 @@ export class GreptimeTelemetryStore implements TelemetryStore {
 
   async logs(scope: TelemetryScope, q: LogsQuery): Promise<LogRecord[]> {
     sql.requireScope(scope)
-    return this.read(
+    const records = await this.read(
       (schema) => sql.logsQuery(scope, q, schema),
       [],
       (rows) => rows.map((row) => this.logRecord(row))
     )
+    const traceIds = [
+      ...new Set(records.flatMap((r) => (r.traceId ? [r.traceId] : []))),
+    ]
+    if (traceIds.length === 0) return records
+    const durations = await this.read(
+      (schema) => sql.rootDurationsQuery(scope, traceIds, schema),
+      new Map<string, number>(),
+      (rows) =>
+        new Map(rows.map((row) => [String(row.trace_id), num(row.duration_ms)]))
+    )
+    return records.map((r) => {
+      const durationMs = r.traceId ? durations.get(r.traceId) : undefined
+      return durationMs === undefined ? r : { ...r, durationMs }
+    })
   }
 
   async logFacets(
@@ -816,6 +834,10 @@ export class GreptimeTelemetryStore implements TelemetryStore {
           count: num(row.n),
           last: numOrNull(row.last_ms),
           sampleTraceId: str(row.sample_trace) ?? null,
+          firstSeen: numOrNull(row.first_ms),
+          httpPath: str(row.http_path) ?? null,
+          httpMethod: str(row.http_method) ?? null,
+          httpStatus: numOrNull(row.http_status),
         }))
     )
   }
@@ -886,7 +908,13 @@ export class GreptimeTelemetryStore implements TelemetryStore {
 
   async metricsSummary(
     scope: TelemetryScope,
-    q: { since: number; until: number; buckets?: number }
+    q: {
+      since: number
+      until: number
+      buckets?: number
+      functionId?: string
+      tenant?: TenantFilter
+    }
   ): Promise<MetricsSummaryRow> {
     sql.requireScope(scope)
     const width = sql.bucketWidth(q.since, q.until, q.buckets ?? 30)
@@ -934,8 +962,35 @@ export class GreptimeTelemetryStore implements TelemetryStore {
     }
   }
 
-  async trace(scope: TelemetryScope, traceId: string): Promise<SpanRecord[]> {
+  async trace(
+    scope: TelemetryScope,
+    traceId: string,
+    q?: { tenant?: TenantFilter }
+  ): Promise<SpanRecord[]> {
     sql.requireScope(scope)
+    const spans = await this.traceSpans(scope, traceId)
+    const keys = (
+      [
+        ['org', 'pikku.org.id'],
+        ['user', 'pikku.user.id'],
+      ] as const
+    ).filter(([field]) => q?.tenant?.[field] !== undefined)
+    const visible = keys.every(
+      ([field, key]) =>
+        spans.some((s) => s.attributes[key] !== undefined) &&
+        spans.every(
+          (s) =>
+            s.attributes[key] === undefined ||
+            s.attributes[key] === q!.tenant![field]
+        )
+    )
+    return visible ? spans : []
+  }
+
+  private async traceSpans(
+    scope: TelemetryScope,
+    traceId: string
+  ): Promise<SpanRecord[]> {
     return this.read(
       (schema) => sql.traceQuery(scope, traceId, schema),
       [],
@@ -976,6 +1031,112 @@ export class GreptimeTelemetryStore implements TelemetryStore {
           return span
         })
     )
+  }
+
+  async functionMetrics(
+    scope: TelemetryScope,
+    q: {
+      since: number
+      until: number
+      buckets?: number
+      limit?: number
+      tenant?: TenantFilter
+    }
+  ): Promise<FunctionMetricsRow[]> {
+    sql.requireScope(scope)
+    const width = sql.bucketWidth(q.since, q.until, q.buckets ?? 30)
+    const summary = await this.read(
+      (schema) => sql.functionMetricsQuery(scope, q, schema),
+      [] as Row[],
+      (rows) => rows
+    )
+    if (summary.length === 0) return []
+    const buckets = await this.read(
+      (schema) =>
+        sql.functionBucketsQuery(
+          scope,
+          { ...q, functions: [...new Set(summary.map((r) => String(r.fn)))] },
+          schema
+        ),
+      [] as Row[],
+      (rows) => rows
+    )
+    const key = (fn: unknown, wire: unknown) =>
+      JSON.stringify([String(fn), str(wire) ?? null])
+    return summary.map((row) => ({
+      functionId: String(row.fn),
+      wireType: str(row.wire) ?? null,
+      requests: num(row.requests),
+      errors: num(row.errors),
+      avgMs: numOrNull(row.avg_ms),
+      lastRun: numOrNull(row.last_ms),
+      buckets: buckets
+        .filter((b) => key(b.fn, b.wire) === key(row.fn, row.wire))
+        .map((b) => ({
+          at: q.since + num(b.bucket) * width,
+          requests: num(b.requests),
+          errors: num(b.errors),
+        })),
+    }))
+  }
+
+  async wireTypes(
+    scope: TelemetryScope,
+    q: { since: number; until?: number; tenant?: TenantFilter }
+  ): Promise<WireTypeRow[]> {
+    sql.requireScope(scope)
+    return this.read(
+      (schema) => sql.wireTypesQuery(scope, q, schema),
+      [],
+      (rows) =>
+        rows.map((row) => ({
+          wireType: String(row.wire),
+          requests: num(row.requests),
+        }))
+    )
+  }
+
+  async wireRuns(
+    scope: TelemetryScope,
+    q: { wireType: string; since: number; limit?: number }
+  ): Promise<WireRunRow[]> {
+    sql.requireScope(scope)
+    const summary = await this.read(
+      (schema) => sql.wireRunsSummaryQuery(scope, q, schema),
+      [] as Row[],
+      (rows) => rows
+    )
+    if (summary.length === 0) return []
+    const recent = await this.read(
+      (schema) =>
+        sql.wireRunsRecentQuery(
+          scope,
+          {
+            wireType: q.wireType,
+            since: q.since,
+            names: summary.map((r) => String(r.name)),
+            perName: 10,
+          },
+          schema
+        ),
+      [] as Row[],
+      (rows) => rows
+    )
+    return summary.map((row) => ({
+      name: String(row.name),
+      wireType: q.wireType,
+      completed: num(row.completed),
+      failed: num(row.failed),
+      lastRun: numOrNull(row.last_ms),
+      recent: recent
+        .filter((r) => String(r.name) === String(row.name))
+        .map((r) => ({
+          at: num(r.at_ms),
+          outcome: String(r.status).endsWith('ERROR') ? 'failed' : 'completed',
+          durationMs: numOrNull(r.duration_ms),
+          error: str(r.message) ?? null,
+        })),
+    }))
   }
 
   async queueJobs(

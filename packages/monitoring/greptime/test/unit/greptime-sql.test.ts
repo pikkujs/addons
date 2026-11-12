@@ -216,7 +216,7 @@ describe('traces', () => {
   test('failures group by function, wire and message', () => {
     assert.equal(
       q.failuresQuery(scope, { since: 1000 }, schema),
-      `SELECT coalesce("span_attributes.pikku.function.id", span_name) AS fn, "span_attributes.pikku.wire.type" AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max((CAST(timestamp AS BIGINT) / 1000000)) AS last_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace FROM opentelemetry_traces WHERE ${SPAN_SCOPE} AND (parent_span_id IS NULL OR parent_span_id = '') AND span_status_code = 'STATUS_CODE_ERROR' AND timestamp >= to_timestamp_millis(1000) GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT 50`
+      `SELECT coalesce("span_attributes.pikku.function.id", span_name) AS fn, "span_attributes.pikku.wire.type" AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max((CAST(timestamp AS BIGINT) / 1000000)) AS last_ms, min((CAST(timestamp AS BIGINT) / 1000000)) AS first_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_path, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_method, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_status FROM opentelemetry_traces WHERE ${SPAN_SCOPE} AND (parent_span_id IS NULL OR parent_span_id = '') AND span_status_code = 'STATUS_CODE_ERROR' AND timestamp >= to_timestamp_millis(1000) GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT 50`
     )
   })
   test('a column that has not appeared yet is NULL, not an error', () => {
