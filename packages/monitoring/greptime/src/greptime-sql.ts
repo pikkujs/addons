@@ -16,6 +16,7 @@ import type {
   LogsQuery,
   Severity,
   TelemetryScope,
+  TenantFilter,
 } from '@pikku/core/telemetry-store'
 
 export const LOGS_TABLE = 'opentelemetry_logs'
@@ -118,6 +119,17 @@ export const requireScope = (scope: TelemetryScope): TelemetryScope => {
 const logJson = (column: string, key: string) =>
   `json_get_string(${column}, ${lit(`$[${JSON.stringify(key)}]`)})`
 
+const TENANT_KEYS = [
+  ['org', 'pikku.org.id'],
+  ['user', 'pikku.user.id'],
+] as const
+
+const logTenant = (tenant: TenantFilter | undefined): string[] =>
+  TENANT_KEYS.filter(([field]) => tenant?.[field] !== undefined).map(
+    ([field, key]) =>
+      `${logJson('log_attributes', key)} = ${lit(tenant![field]!)}`
+  )
+
 const LOG_FUNCTION = logJson('log_attributes', 'pikku.function.id')
 const LOG_WIRE_TYPE = logJson('log_attributes', 'pikku.wire.type')
 const LOG_WIRE_ID = logJson('log_attributes', 'pikku.wire.id')
@@ -178,6 +190,7 @@ const logFilters = (q: LogsQuery): string[] => {
   }
   if (q.wireId !== undefined) where.push(`${LOG_WIRE_ID} = ${lit(q.wireId)}`)
   if (q.source !== undefined) where.push(`${LOG_SOURCE} = ${lit(q.source)}`)
+  where.push(...logTenant(q.tenant))
   return where
 }
 
@@ -297,6 +310,21 @@ const spanScope = (scope: TelemetryScope, schema: Schema): string | null => {
 const functionOf = (schema: Schema) =>
   `coalesce(${spanAttr(schema, 'pikku.function.id')}, span_name)`
 
+/** A key with no column yet reads as NULL, so a tenant filter matches nothing. */
+const spanTenant = (
+  schema: Schema,
+  tenant: TenantFilter | undefined
+): string =>
+  TENANT_KEYS.filter(([field]) => tenant?.[field] !== undefined)
+    .map(
+      ([field, key]) =>
+        ` AND ${spanAttr(schema, key)} = ${lit(tenant![field]!)}`
+    )
+    .join('')
+
+const onlyFunction = (schema: Schema, functionId: string | undefined) =>
+  functionId === undefined ? '' : ` AND ${functionOf(schema)} = ${lit(functionId)}`
+
 export const failuresQuery = (
   scope: TelemetryScope,
   q: { since: number; limit?: number },
@@ -304,7 +332,7 @@ export const failuresQuery = (
 ): string | null => {
   const scoped = spanScope(scope, schema)
   if (!scoped) return null
-  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max(${msOf('timestamp')}) AS last_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${IS_ERROR} AND timestamp >= ${tsMs(q.since)} GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT ${limitOf(q.limit, 50)}`
+  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max(${msOf('timestamp')}) AS last_ms, min(${msOf('timestamp')}) AS first_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace, first_value(${spanAttr(schema, 'pikku.http.path')} ORDER BY timestamp DESC) AS http_path, first_value(${spanAttr(schema, 'pikku.http.method')} ORDER BY timestamp DESC) AS http_method, first_value(${spanAttr(schema, 'http.response.status_code')} ORDER BY timestamp DESC) AS http_status FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${IS_ERROR} AND timestamp >= ${tsMs(q.since)} GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT ${limitOf(q.limit, 50)}`
 }
 
 /**
@@ -324,35 +352,42 @@ const window = (since: number, until: number) =>
 
 const errorCount = `sum(CASE WHEN ${IS_ERROR} THEN 1 ELSE 0 END)`
 
+export interface SummaryFilter {
+  since: number
+  until: number
+  functionId?: string
+  tenant?: TenantFilter
+}
+
 export const summaryTotalsQuery = (
   scope: TelemetryScope,
-  q: { since: number; until: number },
+  q: SummaryFilter,
   schema: Schema
 ): string | null => {
   const scoped = spanScope(scope, schema)
   if (!scoped) return null
-  return `SELECT count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(duration_nano) / 1000000.0 AS max_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}`
+  return `SELECT count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(duration_nano) / 1000000.0 AS max_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}${onlyFunction(schema, q.functionId)}${spanTenant(schema, q.tenant)}`
 }
 
 export const summaryTrafficQuery = (
   scope: TelemetryScope,
-  q: { since: number; until: number; buckets?: number },
+  q: SummaryFilter & { buckets?: number },
   schema: Schema
 ): string | null => {
   const scoped = spanScope(scope, schema)
   if (!scoped) return null
   const width = bucketWidth(q.since, q.until, q.buckets ?? 30)
-  return `SELECT (${msOf('timestamp')} - ${int(q.since)}) / ${int(width)} AS bucket, count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(duration_nano) / 1000000.0 AS max_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)} GROUP BY 1 ORDER BY 1`
+  return `SELECT (${msOf('timestamp')} - ${int(q.since)}) / ${int(width)} AS bucket, count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(duration_nano) / 1000000.0 AS max_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}${onlyFunction(schema, q.functionId)}${spanTenant(schema, q.tenant)} GROUP BY 1 ORDER BY 1`
 }
 
 export const summaryFunctionsQuery = (
   scope: TelemetryScope,
-  q: { since: number; until: number },
+  q: SummaryFilter,
   schema: Schema
 ): string | null => {
   const scoped = spanScope(scope, schema)
   if (!scoped) return null
-  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(${msOf('timestamp')}) AS last_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)} GROUP BY 1, 2 ORDER BY requests DESC, fn ASC`
+  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(${msOf('timestamp')}) AS last_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}${onlyFunction(schema, q.functionId)}${spanTenant(schema, q.tenant)} GROUP BY 1, 2 ORDER BY requests DESC, fn ASC`
 }
 
 /** The attribute columns of a span, as `[column, key]`. */
@@ -630,3 +665,69 @@ export const tombstonesQuery = () =>
 /** Bytes on disk per table; the metrics' logical tables report 0 (the physical table holds them). */
 export const diskUsageQuery = (database: string): string =>
   `SELECT table_name, coalesce(data_length, 0) + coalesce(index_length, 0) AS bytes FROM information_schema.tables WHERE table_schema = ${lit(database)}`
+
+export const functionMetricsQuery = (
+  scope: TelemetryScope,
+  q: SummaryFilter & { limit?: number },
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped) return null
+  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, count(*) AS requests, ${errorCount} AS errors, avg(duration_nano) / 1000000.0 AS avg_ms, max(${msOf('timestamp')}) AS last_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}${spanTenant(schema, q.tenant)} GROUP BY 1, 2 ORDER BY requests DESC, fn ASC LIMIT ${limitOf(q.limit, 200)}`
+}
+
+/** The non-empty buckets of each of `functions`, one row per function, wire and bucket. */
+export const functionBucketsQuery = (
+  scope: TelemetryScope,
+  q: SummaryFilter & { buckets?: number; functions: string[] },
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped || q.functions.length === 0) return null
+  const width = bucketWidth(q.since, q.until, q.buckets ?? 30)
+  return `SELECT ${functionOf(schema)} AS fn, ${spanAttr(schema, 'pikku.wire.type')} AS wire, (${msOf('timestamp')} - ${int(q.since)}) / ${int(width)} AS bucket, count(*) AS requests, ${errorCount} AS errors FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND ${window(q.since, q.until)}${spanTenant(schema, q.tenant)} AND ${functionOf(schema)} IN (${q.functions.map(lit).join(', ')}) GROUP BY 1, 2, 3 ORDER BY 1, 2, 3`
+}
+
+export const wireTypesQuery = (
+  scope: TelemetryScope,
+  q: { since: number; until?: number; tenant?: TenantFilter },
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped) return null
+  const upper = q.until === undefined ? '' : ` AND timestamp < ${tsMs(q.until)}`
+  return `SELECT coalesce(${spanAttr(schema, 'pikku.wire.type')}, 'unknown') AS wire, count(*) AS requests FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND timestamp >= ${tsMs(q.since)}${upper}${spanTenant(schema, q.tenant)} GROUP BY 1 ORDER BY requests DESC, wire ASC`
+}
+
+const wireRoot = (schema: Schema, wireType: string) =>
+  `${ROOT} AND ${spanAttr(schema, 'pikku.wire.type')} = ${lit(wireType)}`
+
+export const wireRunsSummaryQuery = (
+  scope: TelemetryScope,
+  q: { wireType: string; since: number; limit?: number },
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped) return null
+  return `SELECT ${functionOf(schema)} AS name, sum(CASE WHEN ${IS_ERROR} THEN 0 ELSE 1 END) AS completed, ${errorCount} AS failed, max(${msOf('timestamp')}) AS last_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${wireRoot(schema, q.wireType)} AND timestamp >= ${tsMs(q.since)} GROUP BY 1 ORDER BY last_ms DESC, name ASC LIMIT ${limitOf(q.limit, 50)}`
+}
+
+export const wireRunsRecentQuery = (
+  scope: TelemetryScope,
+  q: { wireType: string; since: number; names: string[]; perName: number },
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped || q.names.length === 0) return null
+  return `SELECT name, at_ms, status, duration_ms, message FROM (SELECT ${functionOf(schema)} AS name, ${msOf('timestamp')} AS at_ms, span_status_code AS status, duration_nano / 1000000.0 AS duration_ms, span_status_message AS message, row_number() OVER (PARTITION BY ${functionOf(schema)} ORDER BY timestamp DESC, span_id DESC) AS rn FROM ${TRACES_TABLE} WHERE ${scoped} AND ${wireRoot(schema, q.wireType)} AND timestamp >= ${tsMs(q.since)} AND ${functionOf(schema)} IN (${q.names.map(lit).join(', ')})) ranked WHERE rn <= ${int(q.perName)} ORDER BY name, at_ms DESC`
+}
+
+export const rootDurationsQuery = (
+  scope: TelemetryScope,
+  traceIds: string[],
+  schema: Schema
+): string | null => {
+  const scoped = spanScope(scope, schema)
+  if (!scoped || traceIds.length === 0) return null
+  return `SELECT trace_id, max(duration_nano) / 1000000.0 AS duration_ms FROM ${TRACES_TABLE} WHERE ${scoped} AND ${ROOT} AND trace_id IN (${traceIds.map(lit).join(', ')}) GROUP BY 1`
+}
