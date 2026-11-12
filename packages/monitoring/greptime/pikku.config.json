@@ -5,7 +5,7 @@
   "addon": {
     "displayName": "GreptimeDB Telemetry",
     "description": "Stores and serves logs, traces and metrics for Pikku Studio from GreptimeDB",
-    "categories": ["monitoring"],
+    "categories": ["monitoring", "database"],
     "icon": "./greptime.svg"
   }
 }

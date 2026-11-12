@@ -143,6 +143,18 @@ const STRING_SPAN_KEYS = new Set([
 const SERVICE_NAME = 'pikku-studio-telemetry'
 
 type Row = Record<string, unknown>
+
+/** The parts of a `/v1/sql` answer this store reads; either half may be absent. */
+type SqlResponse = {
+  error?: unknown
+  code?: unknown
+  output?: {
+    records?: {
+      schema: { column_schemas: { name: string }[] }
+      rows: unknown[][]
+    }
+  }[]
+}
 type SpanKind = 'string' | 'int' | 'double' | 'boolean'
 
 const num = (value: unknown): number => {
@@ -325,9 +337,13 @@ export class GreptimeTelemetryStore implements TelemetryStore {
         body: new URLSearchParams({ sql: statement }),
       }
     )
-    let body: any
+    let body: SqlResponse
     try {
-      body = JSON.parse(text)
+      const parsed: unknown = JSON.parse(text)
+      body =
+        parsed !== null && typeof parsed === 'object'
+          ? (parsed as SqlResponse)
+          : {}
     } catch {
       throw new TelemetryQueryError(
         `GreptimeDB answered ${status} with something that is not JSON`,
@@ -336,16 +352,14 @@ export class GreptimeTelemetryStore implements TelemetryStore {
     }
     if (status !== 200) {
       throw new TelemetryQueryError(
-        String(body?.error ?? text).slice(0, 300),
-        typeof body?.code === 'number' ? body.code : undefined
+        String(body.error ?? text).slice(0, 300),
+        typeof body.code === 'number' ? body.code : undefined
       )
     }
-    const records = body?.output?.[0]?.records
+    const records = body.output?.[0]?.records
     if (!records) return []
-    const names: string[] = records.schema.column_schemas.map(
-      (column: { name: string }) => column.name
-    )
-    return (records.rows as unknown[][]).map((cells) => {
+    const names = records.schema.column_schemas.map((column) => column.name)
+    return records.rows.map((cells) => {
       const row: Row = {}
       names.forEach((name, index) => (row[name] = cells[index]))
       return row
