@@ -1,33 +1,33 @@
-import { readdirSync, readFileSync } from 'node:fs'
-import { fileURLToPath } from 'node:url'
 import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
+import { applyPikkuSchemas } from '@pikku/kysely'
 import type { PaymentDatabase } from '@pikku/addon-commerce-stripe/types'
 import { SessionPaymentOwner, applyStripeWebhookEvent, receiveStripeWebhook } from '@pikku/addon-commerce-stripe'
 import type { PaymentOwner } from '@pikku/addon-commerce-stripe'
-
-const MIGRATIONS = fileURLToPath(new URL('../../db/sqlite/', import.meta.url))
+import { tables } from '../../db/tables.js'
 
 /**
- * A real database on the addon's own shipped schema, so a test proves the SQL
- * and the Kysely types agree rather than proving a mock agrees with itself.
- * The CamelCasePlugin is how a consumer maps the snake_case columns onto the
- * camelCase `PaymentDatabase` interface, so it belongs here too.
+ * The schema is created once from the addon's own `db/tables.ts`, the file a
+ * consumer's `pikku db generate` plans from, and every test database starts as a
+ * copy of it. A test then proves the declaration and the Kysely types agree
+ * rather than proving a mock agrees with itself.
  */
-export const applyMigrations = (sqlite: SQLite.Database) => {
-  for (const file of readdirSync(MIGRATIONS).filter((f) => f.endsWith('.sql')).sort()) {
-    sqlite.exec(readFileSync(MIGRATIONS + file, 'utf8'))
-  }
-}
-
-export const createTestDb = () => {
+const schema = await (async () => {
   const sqlite = new SQLite(':memory:')
-  applyMigrations(sqlite)
-  return new Kysely<PaymentDatabase>({
-    dialect: new SqliteDialect({ database: sqlite }),
+  await applyPikkuSchemas(new Kysely<any>({ dialect: new SqliteDialect({ database: sqlite }) }), [
+    { name: 'payment', tables },
+  ])
+  return sqlite.serialize()
+})()
+
+export const createSqlite = () => new SQLite(schema)
+
+/** The CamelCasePlugin is how a consumer maps the snake_case columns onto the camelCase `PaymentDatabase` interface. */
+export const createTestDb = () =>
+  new Kysely<PaymentDatabase>({
+    dialect: new SqliteDialect({ database: createSqlite() }),
     plugins: [new CamelCasePlugin()],
   })
-}
 
 export const createLogger = () => ({
   warned: [] as string[],

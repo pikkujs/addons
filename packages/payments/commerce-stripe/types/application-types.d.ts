@@ -5,16 +5,14 @@ import type { StripeSignature } from '../src/stripe-signature.service.js'
 import type { PaymentOwner } from '../src/payment-owner.service.js'
 
 /**
- * The tables this addon ships, declared in `db/sqlite` and `db/postgres` and
- * published to consumers by `pikku db export`.
+ * The tables this addon ships, declared in `db/tables.ts` and published to
+ * consumers by `pikku db export`.
  *
- * Both dialect files are byte-identical: every column stays inside the subset
- * SQLite and Postgres share, so there is one schema rather than two that drift.
  * Money is an integer in the currency's minor unit — never a float, and never
  * assumed to be 1/100, since JPY and KRW are zero-decimal and KWD is three.
  *
- * Booleans are INTEGER 0/1 for the same reason: SQLite has no boolean type, so
- * a shared column definition cannot use one.
+ * Booleans are INTEGER 0/1 for the same reason: the declaration stays inside
+ * the types every engine shares.
  *
  * The catalogue is local and authoritative. `stripeProductId`, `stripePriceId`
  * and `stripeShippingRateId` are write-through mirrors — the same function that

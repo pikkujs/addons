@@ -1,0 +1,20 @@
+import type {
+  CoreConfig,
+  CoreServices,
+  CoreSingletonServices,
+  CoreUserSession,
+} from '@pikku/core/types'
+import type { Kysely } from 'kysely'
+import type { KyselyPikkuDB } from '@pikku/kysely'
+
+export interface Config extends CoreConfig {
+  sqliteDb?: string
+}
+
+export interface SingletonServices extends CoreSingletonServices<Config> {
+  kysely: Kysely<KyselyPikkuDB>
+}
+
+export interface Services extends CoreServices<SingletonServices> {}
+
+export interface UserSession extends CoreUserSession {}
