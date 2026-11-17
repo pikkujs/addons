@@ -1,6 +1,5 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import SQLite from 'better-sqlite3'
 import { CamelCasePlugin, Kysely, SqliteDialect } from 'kysely'
 import {
   BetterAuthPaymentOwner,
@@ -8,7 +7,7 @@ import {
   setCartItem,
   StripeSignature,
 } from '@pikku/addon-commerce-stripe'
-import { applyMigrations, createServices, deliverWebhook, seedProduct, signatureServices } from './harness.js'
+import { createServices, createSqlite, deliverWebhook, seedProduct, signatureServices } from './harness.js'
 
 const SECRET = 'whsec_test'
 
@@ -18,8 +17,7 @@ const SECRET = 'whsec_test'
  * runs, and the only one in which the seam between them can be proved.
  */
 const createAppDb = () => {
-  const sqlite = new SQLite(':memory:')
-  applyMigrations(sqlite)
+  const sqlite = createSqlite()
   sqlite.exec(`
     CREATE TABLE user (id TEXT PRIMARY KEY, email TEXT, stripe_customer_id TEXT);
     CREATE TABLE subscription (

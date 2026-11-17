@@ -1,0 +1,3 @@
+{ "srcDirectories": ["./src", "./types"], "tsconfig": "./tsconfig.json",
+  "schema": { "supportsImportAttributes": true },
+  "backends": { "api": { "filter": {} } } }

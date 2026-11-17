@@ -28,13 +28,13 @@ export const getOwnedStripeResource = async <T extends StripeOwnedResource>(
     throw new NotFoundError('No such Stripe resource')
   }
 
-  const account = owner.stripeAccount ?? null
+  const account = owner.stripeAccount ?? ''
   const rows = await kysely
     .selectFrom('paymentCustomer')
     .select(['stripeCustomerId'])
     .where('ownerType', '=', owner.type)
     .where('ownerId', '=', owner.id)
-    .where('stripeAccount', account ? '=' : 'is', account)
+    .where('stripeAccount', '=', account)
     .execute()
   const customerIds = new Set(rows.map((row) => row.stripeCustomerId))
   // Mirrors ensureCustomer: the owner's own customer is adopted on the default

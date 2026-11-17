@@ -1,20 +1,18 @@
 import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
-import type { Kysely } from 'kysely'
+import type { Generated, Kysely } from 'kysely'
 import type { StripeApi } from '../src/stripe-api.service.js'
 import type { StripeSignature } from '../src/stripe-signature.service.js'
 import type { PaymentOwner } from '../src/payment-owner.service.js'
 
 /**
- * The tables this addon ships, declared in `db/sqlite` and `db/postgres` and
- * published to consumers by `pikku db export`.
+ * The tables this addon ships, declared in `db/tables.ts` and published to
+ * consumers by `pikku db export`.
  *
- * Both dialect files are byte-identical: every column stays inside the subset
- * SQLite and Postgres share, so there is one schema rather than two that drift.
  * Money is an integer in the currency's minor unit — never a float, and never
  * assumed to be 1/100, since JPY and KRW are zero-decimal and KWD is three.
  *
- * Booleans are INTEGER 0/1 for the same reason: SQLite has no boolean type, so
- * a shared column definition cannot use one.
+ * Booleans are INTEGER 0/1 for the same reason: the declaration stays inside
+ * the types every engine shares.
  *
  * The catalogue is local and authoritative. `stripeProductId`, `stripePriceId`
  * and `stripeShippingRateId` are write-through mirrors — the same function that
@@ -33,8 +31,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     stripeCustomerId: string
     email: string | null
-    /** Which Stripe account this customer belongs to; null = default. */
-    stripeAccount: string | null
+    /** Which Stripe account this customer belongs to; '' = default. */
+    stripeAccount: Generated<string>
     createdAt: string
   }
   paymentProduct: {
@@ -85,8 +83,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     email: string | null
     status: 'open' | 'converted' | 'abandoned'
-    /** Which Stripe account this cart belongs to; null = default. */
-    stripeAccount: string | null
+    /** Which Stripe account this cart belongs to; '' = default. */
+    stripeAccount: Generated<string>
     createdAt: string
     updatedAt: string
   }
@@ -103,8 +101,8 @@ export interface PaymentDatabase {
     customerId: string | null
     cartId: string | null
     email: string | null
-    /** Which Stripe account this order was created on; null = default. */
-    stripeAccount: string | null
+    /** Which Stripe account this order was created on; '' = default. */
+    stripeAccount: Generated<string>
     stripeCheckoutSessionId: string | null
     stripePaymentIntentId: string | null
     amountMinor: number

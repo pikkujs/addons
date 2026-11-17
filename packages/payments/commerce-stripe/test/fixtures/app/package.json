@@ -1,0 +1,2 @@
+{ "name": "scratch-app", "type": "module", "private": true,
+  "imports": { "#pikku/*.js": "./.pikku/*.ts", "#pikku/*": "./.pikku/*/index.ts" } }

@@ -32,7 +32,7 @@ export const ensureCustomer = async (
 
   // The Stripe account is part of the customer's identity: the same owner on
   // two accounts is two Stripe customers, never one.
-  const account = owner?.stripeAccount ?? null
+  const account = owner?.stripeAccount ?? ''
 
   // A guest row may only be claimed on an email the caller did not choose:
   // either the buyer is anonymous, in which case the email is all there is to
@@ -46,7 +46,7 @@ export const ensureCustomer = async (
         .select(['id', 'stripeCustomerId'])
         .where('ownerType', '=', owner.type)
         .where('ownerId', '=', owner.id)
-        .where('stripeAccount', account ? '=' : 'is', account)
+        .where('stripeAccount', '=', account)
         .executeTakeFirst()
     : undefined
 
@@ -58,7 +58,7 @@ export const ensureCustomer = async (
           .select(['id', 'stripeCustomerId'])
           .where('email', '=', adoptableEmail)
           .where('ownerId', 'is', null)
-          .where('stripeAccount', account ? '=' : 'is', account)
+          .where('stripeAccount', '=', account)
           .executeTakeFirst()
       : undefined)
 

@@ -47,7 +47,7 @@
   ],
   "scripts": {
     "prebuild": "pikku all && pikku db export",
-    "build": "tsc && cp -r .pikku types db dist/",
+    "build": "tsc && cp -r .pikku types dist/",
     "pikku": "pikku all && pikku db export",
     "ncu": "npx npm-check-updates",
     "prepublishOnly": "bun run build"
