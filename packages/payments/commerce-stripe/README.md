@@ -46,8 +46,7 @@ turned on (`admin:triggerSourceEnable`, or the console).
 
 The tables are declared in `db/tables.ts` and created by your app's
 `pikku db generate`. Every table starts with `payment_`, so wire the addon as
-`payment`: another name is refused. `stripe_account` is `''` for the default
-account, never null.
+`payment`: another name is refused.
 
 ## Who a purchase belongs to
 

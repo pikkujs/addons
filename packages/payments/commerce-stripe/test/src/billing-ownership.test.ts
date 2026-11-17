@@ -18,8 +18,8 @@ const setup = async () => {
   await kysely
     .insertInto('paymentCustomer')
     .values([
-      { id: 'c1', ownerType: 'user', ownerId: 'ada', stripeCustomerId: 'cus_ada', email: null, stripeAccount: '', createdAt: '2026-09-01' },
-      { id: 'c2', ownerType: 'user', ownerId: 'bob', stripeCustomerId: 'cus_bob', email: null, stripeAccount: '', createdAt: '2026-09-01' },
+      { id: 'c1', ownerType: 'user', ownerId: 'ada', stripeCustomerId: 'cus_ada', email: null, stripeAccount: null, createdAt: '2026-09-01' },
+      { id: 'c2', ownerType: 'user', ownerId: 'bob', stripeCustomerId: 'cus_bob', email: null, stripeAccount: null, createdAt: '2026-09-01' },
     ])
     .execute()
   return createServices(kysely, {

@@ -72,19 +72,19 @@ test('an app with an empty database creates all ten tables from the declaration'
   }
 })
 
-test('a database made by the old SQL keeps its tables and is told what stripe_account needs', () => {
+test('a database made by the old SQL keeps all ten tables: nothing is created, altered or dropped', () => {
   const dir = app(true)
   try {
     assert.equal(pikku(dir, 'all').status, 0)
     pikku(dir, 'db', 'migrate')
     const result = generate(dir)
+    assert.equal(result.status, 0, result.output)
+    assert.match(result.output, /app-tables is already covered by existing migrations/)
     assert.ok(!migrations(dir).some((f) => f.endsWith('-app-tables.sql')))
-    const refused = result.output.split('\n').filter((l) => /differs from the migrations/.test(l))
-    assert.deepEqual(
-      refused.map((l) => l.trim().split(' ')[0]),
-      ['payment_cart.stripe_account', 'payment_customer.stripe_account', 'payment_order.stripe_account']
-    )
-    assert.doesNotMatch(result.output, /createTable|create table "payment_/i)
+    assert.doesNotMatch(result.output, /differs from the migrations|refused/)
+    // The runtime tables are a separate migration, written beside the adopted ones.
+    assert.equal(pikku(dir, 'db', 'migrate').status, 0)
+    assert.equal(pikku(dir, 'db', 'check').status, 0)
   } finally {
     rmSync(dir, { recursive: true, force: true })
   }

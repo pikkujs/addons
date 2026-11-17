@@ -8,7 +8,7 @@ import { defineTables } from '@pikku/core/db'
  * Booleans are integer 0/1 and timestamps are ISO-8601 text, so the same
  * columns read the same on SQLite, Postgres and MySQL.
  *
- * `stripe_account` is the Stripe account a row belongs to; '' is the default
+ * `stripe_account` is the Stripe account a row belongs to; null is the default
  * account.
  */
 export const tables = defineTables({
@@ -24,7 +24,7 @@ export const tables = defineTables({
         format: 'email',
         classification: 'fake:email',
       },
-      stripeAccount: { type: 'text', required: true, default: '' },
+      stripeAccount: { type: 'text' },
       createdAt: { type: 'text', required: true },
     },
     indexes: [
@@ -118,7 +118,7 @@ export const tables = defineTables({
         required: true,
         enum: ['open', 'converted', 'abandoned'],
       },
-      stripeAccount: { type: 'text', required: true, default: '' },
+      stripeAccount: { type: 'text' },
       createdAt: { type: 'text', required: true },
       updatedAt: { type: 'text', required: true },
     },
@@ -155,7 +155,7 @@ export const tables = defineTables({
         format: 'email',
         classification: 'fake:email',
       },
-      stripeAccount: { type: 'text', required: true, default: '' },
+      stripeAccount: { type: 'text' },
       stripeCheckoutSessionId: { type: 'text', security: 'pii' },
       stripePaymentIntentId: { type: 'text', security: 'pii' },
       amountMinor: { type: 'integer', required: true },

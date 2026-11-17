@@ -240,7 +240,7 @@ export const createCartCheckout = pikkuSessionlessFunc({
         customerId: customer?.id ?? null,
         cartId: cart.id,
         email: data.email ?? null,
-        stripeAccount: owner?.stripeAccount ?? '',
+        stripeAccount: owner?.stripeAccount ?? null,
         stripeCheckoutSessionId: session.id,
         stripePaymentIntentId: null,
         amountMinor:

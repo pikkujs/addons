@@ -1,5 +1,5 @@
 import type { CoreConfig, CoreServices, CoreSingletonServices, CoreUserSession } from '@pikku/core/types'
-import type { Generated, Kysely } from 'kysely'
+import type { Kysely } from 'kysely'
 import type { StripeApi } from '../src/stripe-api.service.js'
 import type { StripeSignature } from '../src/stripe-signature.service.js'
 import type { PaymentOwner } from '../src/payment-owner.service.js'
@@ -31,8 +31,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     stripeCustomerId: string
     email: string | null
-    /** Which Stripe account this customer belongs to; '' = default. */
-    stripeAccount: Generated<string>
+    /** Which Stripe account this customer belongs to; null = default. */
+    stripeAccount: string | null
     createdAt: string
   }
   paymentProduct: {
@@ -83,8 +83,8 @@ export interface PaymentDatabase {
     ownerId: string | null
     email: string | null
     status: 'open' | 'converted' | 'abandoned'
-    /** Which Stripe account this cart belongs to; '' = default. */
-    stripeAccount: Generated<string>
+    /** Which Stripe account this cart belongs to; null = default. */
+    stripeAccount: string | null
     createdAt: string
     updatedAt: string
   }
@@ -101,8 +101,8 @@ export interface PaymentDatabase {
     customerId: string | null
     cartId: string | null
     email: string | null
-    /** Which Stripe account this order was created on; '' = default. */
-    stripeAccount: Generated<string>
+    /** Which Stripe account this order was created on; null = default. */
+    stripeAccount: string | null
     stripeCheckoutSessionId: string | null
     stripePaymentIntentId: string | null
     amountMinor: number

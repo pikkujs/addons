@@ -66,19 +66,14 @@ const shape = (sqlite: SQLite.Database) => {
   )
 }
 
-test('the declaration creates the tables the old SQL created, apart from stripe_account', () => {
+test('the declaration creates the tables the old SQL created, apart from the owner index', () => {
   const declared = shape(createSqlite())
   const legacy = shape(legacySqlite())
   assert.equal(Object.keys(declared).length, 10)
   assert.deepEqual(Object.keys(declared), Object.keys(legacy))
 
-  // The one deliberate change: stripe_account is required, '' is the default
-  // account, and the owner index is a plain unique index over its columns.
-  for (const table of ['payment_customer', 'payment_cart', 'payment_order']) {
-    const column = legacy[table].columns.find((c) => c.name === 'stripe_account')!
-    assert.equal(column.notnull, 0)
-    Object.assign(column, { notnull: 1, dflt: "''" })
-  }
+  // The one deliberate change: the owner index was over an expression,
+  // COALESCE(stripe_account, ''), and is a plain unique index over the column.
   const owner = legacy.payment_customer.indexes.find((i) => i.name === 'payment_customer_owner_unique')!
   assert.deepEqual(owner.columns, ['owner_type', 'owner_id', null])
   owner.columns = ['owner_type', 'owner_id', 'stripe_account']
@@ -86,20 +81,28 @@ test('the declaration creates the tables the old SQL created, apart from stripe_
   assert.deepEqual(declared, legacy)
 })
 
-test("the default account is '' and is unique per owner", () => {
+test('the unique indexes that include stripe_account do not enforce uniqueness while it is null', () => {
+  const unique = Object.entries(shape(createSqlite())).flatMap(([table, { indexes }]) =>
+    indexes.filter((i) => i.unique && i.columns.includes('stripe_account')).map((i) => `${table}.${i.name}`)
+  )
+  assert.deepEqual(unique, ['payment_customer.payment_customer_owner_unique'])
+
   const sqlite = createSqlite()
-  const insert = (id: string, account?: string) =>
+  const insert = (id: string, account: string | null) =>
     sqlite
       .prepare(
-        `insert into payment_customer (id, owner_type, owner_id, stripe_customer_id, created_at${account === undefined ? '' : ', stripe_account'})
-         values (?, 'user', 'ada', ?, 'now'${account === undefined ? '' : ', ?'})`
+        `insert into payment_customer (id, owner_type, owner_id, stripe_customer_id, stripe_account, created_at)
+         values (?, 'user', 'ada', ?, ?, 'now')`
       )
-      .run(...(account === undefined ? [id, `cus_${id}`] : [id, `cus_${id}`, account]))
-  insert('a')
-  assert.equal(sqlite.prepare(`select stripe_account as a from payment_customer`).get()?.['a' as never], '')
-  assert.throws(() => insert('b'), /UNIQUE/)
-  assert.throws(() => insert('c', ''), /UNIQUE/)
-  insert('d', 'eu')
+      .run(id, `cus_${id}`, account)
+
+  // NULLs are distinct in a unique index, so the default account (null) can
+  // hold the same owner twice. The old COALESCE index refused the second.
+  insert('a', null)
+  insert('b', null)
+  // A named account is still one customer per owner.
+  insert('c', 'eu')
+  assert.throws(() => insert('d', 'eu'), /UNIQUE/)
 })
 
 test('the declaration follows the rules for an addon', () => {
