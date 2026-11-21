@@ -216,7 +216,7 @@ describe('traces', () => {
   test('failures group by function, wire and message', () => {
     assert.equal(
       q.failuresQuery(scope, { since: 1000 }, schema),
-      `SELECT coalesce("span_attributes.pikku.function.id", span_name) AS fn, "span_attributes.pikku.wire.type" AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max((CAST(timestamp AS BIGINT) / 1000000)) AS last_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace FROM opentelemetry_traces WHERE ${SPAN_SCOPE} AND (parent_span_id IS NULL OR parent_span_id = '') AND span_status_code = 'STATUS_CODE_ERROR' AND timestamp >= to_timestamp_millis(1000) GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT 50`
+      `SELECT coalesce("span_attributes.pikku.function.id", span_name) AS fn, "span_attributes.pikku.wire.type" AS wire, coalesce(span_status_message, '') AS message, count(*) AS n, max((CAST(timestamp AS BIGINT) / 1000000)) AS last_ms, min((CAST(timestamp AS BIGINT) / 1000000)) AS first_ms, first_value(trace_id ORDER BY timestamp DESC) AS sample_trace, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_path, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_method, first_value(CAST(NULL AS VARCHAR) ORDER BY timestamp DESC) AS http_status FROM opentelemetry_traces WHERE ${SPAN_SCOPE} AND (parent_span_id IS NULL OR parent_span_id = '') AND span_status_code = 'STATUS_CODE_ERROR' AND timestamp >= to_timestamp_millis(1000) GROUP BY 1, 2, 3 ORDER BY n DESC, last_ms DESC LIMIT 50`
     )
   })
   test('a column that has not appeared yet is NULL, not an error', () => {
@@ -467,5 +467,92 @@ describe('reserved metric names and attributes', () => {
     for (const key of ['region', 'http.route', 'jobs', 'project']) {
       assert.equal(q.reservedMetricAttribute(key), false, key)
     }
+  })
+})
+
+describe('function, wire type and run views', () => {
+  const window = { since: 1000, until: 61_000 }
+  const hostile = "a\\b'c"
+
+  test('function metrics group by function and wire, ties by function id', () => {
+    const text = q.functionMetricsQuery(scope, window, schema)!
+    assert.match(text, /GROUP BY 1, 2 ORDER BY requests DESC, fn ASC LIMIT 200$/)
+    assert.ok(text.includes(SPAN_SCOPE))
+    assert.ok(text.includes('timestamp >= to_timestamp_millis(1000)'))
+    assert.ok(text.includes('timestamp < to_timestamp_millis(61000)'))
+    assert.ok(
+      q.functionMetricsQuery(scope, { ...window, limit: 5 }, schema)!.endsWith('LIMIT 5')
+    )
+  })
+
+  test('a tenant filter adds one condition per key, quoted', () => {
+    const text = q.functionMetricsQuery(
+      scope,
+      { ...window, tenant: { org: hostile, user: 'u1' } },
+      schema
+    )!
+    assert.ok(text.includes(`'a\\b''c'`))
+    assert.ok(text.includes("'u1'"))
+  })
+
+  test('function buckets are only the named functions, quoted', () => {
+    const text = q.functionBucketsQuery(
+      scope,
+      { ...window, buckets: 6, functions: ['ok', hostile] },
+      schema
+    )!
+    assert.ok(text.includes(`IN ('ok', 'a\\b''c')`))
+    assert.ok(text.includes('/ 10000 AS bucket'))
+    assert.match(text, /GROUP BY 1, 2, 3 ORDER BY 1, 2, 3$/)
+    assert.equal(q.functionBucketsQuery(scope, { ...window, functions: [] }, schema), null)
+  })
+
+  test('wire types count root spans, no wire type is unknown, until is optional', () => {
+    const open = q.wireTypesQuery(scope, { since: 5 }, schema)!
+    assert.ok(open.includes("coalesce("))
+    assert.ok(open.includes("'unknown'"))
+    assert.ok(!open.includes('timestamp <'))
+    assert.match(open, /ORDER BY requests DESC, wire ASC$/)
+    assert.ok(
+      q.wireTypesQuery(scope, { since: 5, until: 9 }, schema)!.includes(
+        'timestamp < to_timestamp_millis(9)'
+      )
+    )
+  })
+
+  test('wire runs read one wire type, newest first, ties by name', () => {
+    const text = q.wireRunsSummaryQuery(scope, { wireType: hostile, since: 7 }, schema)!
+    assert.ok(text.includes(`= 'a\\b''c'`))
+    assert.match(text, /GROUP BY 1 ORDER BY last_ms DESC, name ASC LIMIT 50$/)
+  })
+
+  test('the newest runs of each function rank by time then span id descending', () => {
+    const text = q.wireRunsRecentQuery(
+      scope,
+      { wireType: 'scheduler', since: 7, names: ['x', hostile], perName: 10 },
+      schema
+    )!
+    assert.ok(text.includes('ORDER BY timestamp DESC, span_id DESC'))
+    assert.ok(text.includes(`IN ('x', 'a\\b''c')`))
+    assert.match(text, /WHERE rn <= 10 ORDER BY name, at_ms DESC$/)
+    assert.equal(
+      q.wireRunsRecentQuery(scope, { wireType: 'scheduler', since: 7, names: [], perName: 10 }, schema),
+      null
+    )
+  })
+
+  test('root durations take the longest root span of each trace', () => {
+    const text = q.rootDurationsQuery(scope, ['t1', hostile], schema)!
+    assert.ok(text.includes('max(duration_nano) / 1000000.0 AS duration_ms'))
+    assert.ok(text.includes(`IN ('t1', 'a\\b''c')`))
+    assert.equal(q.rootDurationsQuery(scope, [], schema), null)
+  })
+
+  test('without the resource columns none of the views can match', () => {
+    const bare: Schema = { ...schema, traces: new Set() }
+    assert.equal(q.functionMetricsQuery(scope, window, bare), null)
+    assert.equal(q.wireTypesQuery(scope, { since: 1 }, bare), null)
+    assert.equal(q.wireRunsSummaryQuery(scope, { wireType: 'queue', since: 1 }, bare), null)
+    assert.equal(q.rootDurationsQuery(scope, ['t'], bare), null)
   })
 })
